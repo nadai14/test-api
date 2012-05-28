@@ -52,6 +52,24 @@ answers
 
 rake db:migrate 
  
+各リレーションを設定
+
+enq
+	has_many :enq_pages
+enq_pages
+	belongs_to :enq
+	has_many :enq_questions
+enq_questions
+	belongs_to :enq_page
+	belongs_to :question
+	has_many :answers
+questions
+	has_many :enq_questions
+	has_many :choices
+choice
+	belongs_to :question
+answers
+	belongs_to :enq_questions
  
  
  
