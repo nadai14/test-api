@@ -1,0 +1,70 @@
+10
+
+dir
+0
+https://nadai14@github.com/nadai14/test-api.git/drecom/test
+https://nadai14@github.com/nadai14/test-api.git
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+
+
+
+
+
+
+
+
+
+
+
+b7455b79-956c-e55c-b62c-ce57b7db7bff
+
+unit
+dir
+
+
+
+add
+
+test_helper.rb
+file
+
+
+
+add
+
+performance
+dir
+
+
+
+add
+
+functional
+dir
+
+
+
+add
+
+integration
+dir
+
+
+
+add
+
+fixtures
+dir
+
+
+
+add
+

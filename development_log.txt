@@ -1,0 +1,53 @@
+﻿ユーザの作成
+開発用、テスト用、実装用それぞれ
+mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
+ on drecom_development.* to 'drecom'@'localhost' identified by 'drecom';
+mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
+ on drecom_test.* to 'drecom'@'localhost' identified by 'drecom';
+mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
+ on drecom_production.* to 'drecom'@'localhost' identified by 'drecom';
+
+ drecom のプロジェクト作成
+C:\Users\koji16\Desktop\drecom_github>rails _2.3.8_ -d mysql drecom
+ 
+ database.yml でユーザの指定とパスワードの指定
+ 
+rake db:create でデータベースを作成
+
+各テーブルのモデルを作成 
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Enq
+ enq_id:integer title:string description:string css:string movie:string update_name:string update_date:date 
+ 
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model EnqPage
+enq_id:integer page_id:integer face:string description:string update_name:string update_date:date 
+ 
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model EnqQuestion
+ enq_id:integer no:integer question_id:integer update_name:string update_date:date
+
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Question
+ question_id:integer kind:string title:string content:string answer_content:string
+ answer_description:string update_name:string update_date:date
+ 
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Choice
+ question_id:integer choice_id:integer content:string update_name:string update_date:date
+
+C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Answer
+ enq_id:integer no:string answer:string update_name:string update_date:date question_id:integer
+ choice_id:integer content:string update_name:string update_date:date
+ 
+各々のマイグレーションファイルを、DB設計書のとおりに記述し直す。
+enq
+	null => false の追加、　enq_id のindex化とユニーク制約
+enq_pages
+	null => false の追加、　enq_id,page_id,face のindex化とユニーク制約
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,70 @@
+10
+
+dir
+0
+https://nadai14@github.com/nadai14/test-api.git/drecom/app/models
+https://nadai14@github.com/nadai14/test-api.git
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+
+
+
+
+
+
+
+
+
+
+
+b7455b79-956c-e55c-b62c-ce57b7db7bff
+
+answer.rb
+file
+
+
+
+add
+
+enq_page.rb
+file
+
+
+
+add
+
+enq.rb
+file
+
+
+
+add
+
+question.rb
+file
+
+
+
+add
+
+choice.rb
+file
+
+
+
+add
+
+enq_question.rb
+file
+
+
+
+add
+
