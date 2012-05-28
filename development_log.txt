@@ -40,8 +40,17 @@ enq
 	null => false の追加、　enq_id のindex化とユニーク制約
 enq_pages
 	null => false の追加、　enq_id,page_id,face のindex化とユニーク制約
+enq_questions
+	null => false の追加、　enq_id,no のindex化とユニーク制約、　question_id のindex化
+questions
+	null => false の追加、　question_id のindex化とユニーク制約
+choice
+	null => false の追加、　question_id,choice_id のindex化とユニーク制約
+answers
+	null => false の追加、　enq_id,page_id,no のindex化とユニーク制約
  
- 
+
+rake db:migrate 
  
  
  

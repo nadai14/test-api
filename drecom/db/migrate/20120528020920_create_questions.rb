@@ -1,8 +1,8 @@
 class CreateQuestions < ActiveRecord::Migration
   def self.up
     create_table :questions do |t|
-      t.integer :question_id,	null => false
-      t.string :kind,			null => false
+      t.integer :question_id,	:null => false
+      t.string :kind,			:null => false
       t.string :title
       t.string :content
       t.string :answer_content

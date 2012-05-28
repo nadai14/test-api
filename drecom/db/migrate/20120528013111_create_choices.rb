@@ -1,9 +1,9 @@
 class CreateChoices < ActiveRecord::Migration
   def self.up
     create_table :choices do |t|
-      t.integer :question_id,	null => false
-      t.integer :choice_id,		null => false
-      t.string :content,		null => false
+      t.integer :question_id,	:null => false
+      t.integer :choice_id,		:null => false
+      t.string :content,		:null => false
       t.string :update_name
       t.date :update_date
 

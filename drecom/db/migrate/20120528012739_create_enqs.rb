@@ -1,7 +1,7 @@
 class CreateEnqs < ActiveRecord::Migration
   def self.up
     create_table :enqs do |t|
-      t.integer :enq_id,	null => false
+      t.integer :enq_id,	:null => false
       t.string :title
       t.string :description
       t.string :css

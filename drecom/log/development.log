@@ -1,0 +1,221 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (77.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (30.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `title` varchar(255), `description` varchar(255), `css` varchar(255), `movie` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enqs`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enqs_on_enq_id` ON `enqs` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012739')[0m
+Migrating to CreateEnqQuestions (20120528012922)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_enq_id` ON `enq_questions` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_no` ON `enq_questions` (`no`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [4;35;1mSQL (19.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012922')[0m
+Migrating to CreateChoices (20120528013111)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (37.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `enqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `title` varchar(255), `description` varchar(255), `css` varchar(255), `movie` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enqs`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enqs_on_enq_id` ON `enqs` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012739')[0m
+Migrating to CreateEnqQuestions (20120528012922)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_enq_id` ON `enq_questions` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_no` ON `enq_questions` (`no`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012922')[0m
+Migrating to CreateChoices (20120528013111)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `choice_id` int(11) NOT NULL, `content` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_question_id` ON `choices` (`question_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_choice_id` ON `choices` (`choice_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528013111')[0m
+Migrating to CreateAnswers (20120528013242)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` varchar(255) NOT NULL, `answer` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `title` varchar(255), `description` varchar(255), `css` varchar(255), `movie` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enqs`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enqs_on_enq_id` ON `enqs` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012739')[0m
+Migrating to CreateEnqQuestions (20120528012922)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_enq_id` ON `enq_questions` (`enq_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_no` ON `enq_questions` (`no`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012922')[0m
+Migrating to CreateChoices (20120528013111)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `choice_id` int(11) NOT NULL, `content` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_question_id` ON `choices` (`question_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_choice_id` ON `choices` (`choice_id`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528013111')[0m
+Migrating to CreateAnswers (20120528013242)
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE `answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` varchar(255) NOT NULL, `answer` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_answers_on_enq_id` ON `answers` (`enq_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_answers_on_no` ON `answers` (`no`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528013242')[0m
+Migrating to CreateQuestions (20120528020920)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (57.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqPages (20120528012407)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) NOT NULL, `description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id` ON `enq_pages` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_page_id` ON `enq_pages` (`page_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_pages_on_face` ON `enq_pages` (`face`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012407')[0m
+Migrating to CreateEnqs (20120528012739)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE `enqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `title` varchar(255), `description` varchar(255), `css` varchar(255), `movie` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `enqs`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enqs_on_enq_id` ON `enqs` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012739')[0m
+Migrating to CreateEnqQuestions (20120528012922)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_enq_id` ON `enq_questions` (`enq_id`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_enq_questions_on_no` ON `enq_questions` (`no`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528012922')[0m
+Migrating to CreateChoices (20120528013111)
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `choice_id` int(11) NOT NULL, `content` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_question_id` ON `choices` (`question_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_choices_on_choice_id` ON `choices` (`choice_id`)[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528013111')[0m
+Migrating to CreateAnswers (20120528013242)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE `answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `no` varchar(255) NOT NULL, `answer` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_answers_on_enq_id` ON `answers` (`enq_id`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_answers_on_no` ON `answers` (`no`)[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528013242')[0m
+Migrating to CreateQuestions (20120528020920)
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `kind` varchar(255) NOT NULL, `title` varchar(255), `content` varchar(255), `answer_content` varchar(255), `answer_description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCREATE UNIQUE INDEX `index_questions_on_question_id` ON `questions` (`question_id`)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20120528020920')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `enq_pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_pages`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `enq_questions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `enq_questions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `enqs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enqs`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
