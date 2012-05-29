@@ -1,6 +1,6 @@
 class EnqsController < ApplicationController
   def get
-    @enqs = Enq.all
+    @enqs = Enq.find(params[:enq_id])
 
     respond_to do |format|
       format.json  { render :json => @enqs }	# get.json.erb

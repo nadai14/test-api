@@ -1,19 +1,37 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+アンケート1:
   enq_id: 1
-  title: MyString
-  description: MyString
-  css: MyString
-  movie: MyString
-  update_name: MyString
-  update_date: 2012-05-28
+  title: test1
+  description: test1です
+  css: css1
+  movie: movie1
+  update_name: 石川
+  update_date: 2012-05-29
 
-two:
-  enq_id: 1
-  title: MyString
-  description: MyString
-  css: MyString
-  movie: MyString
-  update_name: MyString
-  update_date: 2012-05-28
+アンケート2:
+  enq_id: 2
+  title: test2
+  description: test2です
+  css: css2
+  movie: movie2
+  update_name: 石川
+  update_date: 2012-05-29
+
+アンケート3:
+  enq_id: 3
+  title: test3
+  description: test3です
+  css: css3
+  movie: movie3
+  update_name: 石川
+  update_date: 2012-05-29
+
+アンケート4:
+  enq_id: 4
+  title: test4
+  description: test4です
+  css: css4
+  movie: movie4
+  update_name: 石川
+  update_date: 2012-05-29

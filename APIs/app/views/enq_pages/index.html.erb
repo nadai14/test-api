@@ -1,2 +1,17 @@
 <h1>EnqPages#index</h1>
-<p>Find me in app/views/enq_pages/index.html.erb</p>
+
+
+<% form_for(@enq) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :enq_id %><br />
+    <%= f.text_field :enq_id %>
+  </p>
+  <p>
+    <%= f.label :page_id %><br />
+    <%= f.text_field :page_id %>
+  </p>
+  <p>
+    <%= f.submit 'Get' %>
+  </p>
+<% end %>

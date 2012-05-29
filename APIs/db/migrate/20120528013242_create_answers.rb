@@ -10,8 +10,8 @@ class CreateAnswers < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index	:answers,	:enq_id,	:unique => true
-	  add_index	:answers,	:no,		:unique => true
+	  add_index	:answers,	:enq_id
+	  add_index	:answers,	:no
   end
 
   def self.down

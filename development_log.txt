@@ -95,7 +95,40 @@ $ruby script/generate controller Answers send index show
 $ruby script/generate controller Top index
 
  
+ここで、DB構築に間違いを発見
+ユニーク制約が、複合キーによるものだと判明なので
+
+enq_pages
+	enq_id,page_id,face のユニーク制約解除
+enq_questions
+	enq_id,no のユニーク制約解除
+choice
+	question_id,choice_id のユニーク制約解除
+answers
+	enq_id,page_id,no のユニーク制約解除
+	
+加えて、
+enq_pages
+	interval:integer の追加
+ 
+test用に fixture ファイルを作成
+
+
+controller enq.get にアンケート情報取得機能を実装
+
+controller enq.page にアンケートページ情報取得機能を実装中
+ include でテーブルをまたいで情報を取得できる
+ 
+ model enq_page と question に追記
+ enq_pages
+	belongs_to :enq
+	has_many :enq_questions,	:dependent => :destroy
+	has_many :questions,	:through => enq_questions
+ questions
+	belongs_to :enq
+	has_many :enq_questions,	:dependent => :destroy
+	has_many :questions,	:through => enq_questions
  
  
- 
- 
+サーバテスト用の enq, enq_page インデックスを作成
+

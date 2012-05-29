@@ -1,24 +1,12 @@
-﻿<h1>Listing enqs</h1>
+﻿<h1>Enqs#index</h1>
 
-<table>
-  <tr>
-    <th>アンケートID</th>
-    <th>タイトル</th>
-	<th>説明</th>
-	<th>CSS</th>
-	<th>動画</th>
-	<th></th>
-	<th></th>
-    <th></th>
-  </tr>
-
-<% @enqs.each do |e| %>
-  <tr>
-    <td><%= e.enq_id %></td>
-	<td><%= e.title %></td>
-	<td><%= e.description %></td>
-	<td><%= e.css %></td>
-	<td><%= e.movie %></td>
-  </tr>
+<% form_for(@enq) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :enq_id %><br />
+    <%= f.text_field :enq_id %>
+  </p>
+  <p>
+    <%= f.submit 'Get' %>
+  </p>
 <% end %>
-</table>

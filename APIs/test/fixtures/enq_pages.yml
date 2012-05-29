@@ -1,17 +1,73 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+アンケートページ1:
   enq_id: 1
   page_id: 1
-  face: MyString
-  description: MyString
-  update_name: MyString
+  face: iOS
+  description: iOSです1
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-29
+
+アンケートページ2:
+  enq_id: 1
+  page_id: 2
+  face: iOS
+  description: iOSです2
+  interval: 5
+  update_name: 石川
   update_date: 2012-05-28
 
-two:
-  enq_id: 1
-  page_id: 1
-  face: MyString
-  description: MyString
-  update_name: MyString
+アンケートページ3:
+  enq_id: 2
+  page_id: 3
+  face: PC
+  description: PCです1
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-28
+
+アンケートページ4:
+  enq_id: 2
+  page_id: 4
+  face: PC
+  description: PCです2
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-28
+
+アンケートページ5:
+  enq_id: 3
+  page_id: 5
+  face: Android
+  description: Androidです1
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-28
+
+アンケートページ6:
+  enq_id: 3
+  page_id: 6
+  face: Android
+  description: Androidです2
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-28
+
+アンケートページ7:
+  enq_id: 3
+  page_id: 7
+  face: Android
+  description: Androidです3
+  interval: 5
+  update_name: 石川
+  update_date: 2012-05-28
+
+アンケートページ8:
+  enq_id: 4
+  page_id: 8
+  face: iOS
+  description: iOSです3
+  interval: 5
+  update_name: 石川
   update_date: 2012-05-28

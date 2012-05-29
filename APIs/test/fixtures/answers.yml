@@ -1,15 +1,36 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+‰ñ“š1:
   enq_id: 1
-  no: MyString
-  answer: MyString
-  update_name: MyString
-  update_date: 2012-05-28
+  no: 1
+  answer: ‰ñ“š1
+  update_name: Îì
+  update_date: 2012-05-29
 
-two:
-  enq_id: 1
-  no: MyString
-  answer: MyString
-  update_name: MyString
-  update_date: 2012-05-28
+‰ñ“š2:
+  enq_id: 2
+  no: 2
+  answer: ‰ñ“š2
+  update_name: Îì
+  update_date: 2012-05-29
+
+‰ñ“š3:
+  enq_id: 3
+  no: 3
+  answer: ‰ñ“š3
+  update_name: Îì
+  update_date: 2012-05-29
+
+‰ñ“š4:
+  enq_id: 4
+  no: 4
+  answer: ‰ñ“š4
+  update_name: Îì
+  update_date: 2012-05-29
+
+‰ñ“š5:
+  enq_id: 3
+  no: 5
+  answer: ‰ñ“š5
+  update_name: Îì
+  update_date: 2012-05-29

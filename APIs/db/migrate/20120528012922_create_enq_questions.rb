@@ -10,8 +10,8 @@ class CreateEnqQuestions < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index	:enq_questions,	:enq_id,	:unique => true
-	  add_index	:enq_questions,	:no,		:unique => true
+	  add_index	:enq_questions,	:enq_id
+	  add_index	:enq_questions,	:no
 	  add_index	:enq_questions,	:question_id
   end
 
