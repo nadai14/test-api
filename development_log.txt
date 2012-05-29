@@ -8,30 +8,30 @@ mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,tri
  on drecom_production.* to 'drecom'@'localhost' identified by 'drecom';
 
  drecom のプロジェクト作成
-C:\Users\koji16\Desktop\drecom_github>rails _2.3.8_ -d mysql drecom
+$rails _2.3.8_ -d mysql drecom
  
  database.yml でユーザの指定とパスワードの指定
  
 rake db:create でデータベースを作成
 
 各テーブルのモデルを作成 
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Enq
+$ruby script\generate model Enq
  enq_id:integer title:string description:string css:string movie:string update_name:string update_date:date 
  
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model EnqPage
+$ruby script\generate model EnqPage
 enq_id:integer page_id:integer face:string description:string update_name:string update_date:date 
  
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model EnqQuestion
+$ruby script\generate model EnqQuestion
  enq_id:integer no:integer question_id:integer update_name:string update_date:date
 
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Question
+$ruby script\generate model Question
  question_id:integer kind:string title:string content:string answer_content:string
  answer_description:string update_name:string update_date:date
  
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Choice
+$ruby script\generate model Choice
  question_id:integer choice_id:integer content:string update_name:string update_date:date
 
-C:\Users\koji16\Desktop\drecom_github\drecom>ruby script\generate model Answer
+$ruby script\generate model Answer
  enq_id:integer no:string answer:string update_name:string update_date:date question_id:integer
  choice_id:integer content:string update_name:string update_date:date
  
@@ -50,7 +50,7 @@ answers
 	null => false の追加、　enq_id,page_id,no のindex化とユニーク制約
  
 
-rake db:migrate 
+$rake db:migrate 
  
 各リレーションを設定
 
@@ -72,7 +72,28 @@ answers
 	belongs_to :enq_questions
  
  
- 
+json のインストール
+(windowsの場合、devkitvars にパスを入れるのを忘れない)
+$gem install json
+json-1.7.3 を取得。バージョンが高すぎる可能性があるので、必要に応じて下げる
+参考：http://www.nilab.info/z3/20110124_z01.html
+では、1.8.7環境で、json-1.5.0 もしくは
+参考：http://d.hatena.ne.jp/MonteCut/20110219
+のように、json-1.4.6
+そして、一応jsonエラーの参考
+参考：http://d.hatena.ne.jp/otn/20110302/p1
+
+
+コントローラの作成
+アンケート情報取得
+$ruby script/generate controller Enq get index show
+アンケート情報取得
+$ruby script/generate controller EnqPage get index show
+回答データの送信
+$ruby script/generate controller Answer send index show
+トップページ
+$ruby script/generate controller Top index
+
  
  
  
