@@ -1,8 +1,17 @@
 class EnqsController < ApplicationController
   def get
-  end
+    @enqs = Enq.all
+
+    respond_to do |format|
+      format.json  { render :json => @enqs }	# get.json.erb
+    end  end
 
   def index
+    @enqs = Enq.all
+
+    respond_to do |format|
+      format.html	# index.html.erb
+    end
   end
 
   def show

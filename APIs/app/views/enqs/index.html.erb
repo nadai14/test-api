@@ -1,2 +1,24 @@
-<h1>Enqs#index</h1>
-<p>Find me in app/views/enqs/index.html.erb</p>
+﻿<h1>Listing enqs</h1>
+
+<table>
+  <tr>
+    <th>アンケートID</th>
+    <th>タイトル</th>
+	<th>説明</th>
+	<th>CSS</th>
+	<th>動画</th>
+	<th></th>
+	<th></th>
+    <th></th>
+  </tr>
+
+<% @enqs.each do |e| %>
+  <tr>
+    <td><%= e.enq_id %></td>
+	<td><%= e.title %></td>
+	<td><%= e.description %></td>
+	<td><%= e.css %></td>
+	<td><%= e.movie %></td>
+  </tr>
+<% end %>
+</table>
