@@ -86,11 +86,11 @@ json-1.7.3 を取得。バージョンが高すぎる可能性があるので、
 
 コントローラの作成
 アンケート情報取得
-$ruby script/generate controller Enq get index show
+$ruby script/generate controller Enqs get index show
 アンケート情報取得
-$ruby script/generate controller EnqPage get index show
+$ruby script/generate controller EnqPages get index show
 回答データの送信
-$ruby script/generate controller Answer send index show
+$ruby script/generate controller Answers send index show
 トップページ
 $ruby script/generate controller Top index
 
