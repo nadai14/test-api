@@ -536,3 +536,47 @@ Migrating to CreateQuestions (20120528020920)
   [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
   [4;35;1mSQL (2.0ms)[0m   [0mdescribe `questions`[0m
   [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-29 15:24:03) [GET]
+
+ActionController::RoutingError (No route matches "/enq" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-29 15:24:09) [GET]
+Rendering enqs/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/enqs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mEnq Create (1.0ms)[0m   [0;1mINSERT INTO `enqs` (`movie`, `enq_id`, `title`, `update_date`, `created_at`, `update_name`, `updated_at`, `description`, `css`) VALUES(NULL, 1, 'test1', NULL, '2012-05-29 06:36:38', NULL, '2012-05-29 06:36:38', 'test1です', 'css1')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mEnq Create (0.0ms)[0m   [0;1mMysql::Error: Duplicate entry '1' for key 'index_enqs_on_enq_id': INSERT INTO `enqs` (`update_date`, `created_at`, `enq_id`, `title`, `description`, `updated_at`, `movie`, `css`, `update_name`) VALUES('2012-05-29', '2012-05-29 06:41:00', 1, 'test1', 'test1です', '2012-05-29 06:41:00', 'movie1', 'css1', '石川')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mROLLBACK[0m
