@@ -1,14 +1,14 @@
 ﻿ユーザの作成
 開発用、テスト用、実装用それぞれ
 mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
- on drecom_development.* to 'drecom'@'localhost' identified by 'drecom';
+ on dapi_development.* to 'dapi'@'localhost' identified by 'dapi';
 mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
- on drecom_test.* to 'drecom'@'localhost' identified by 'drecom';
+ on dapi_test.* to 'dapi'@'localhost' identified by 'dapi';
 mysql> grant select,insert,update,delete,alter,create,drop,index,lock tables,trigger
- on drecom_production.* to 'drecom'@'localhost' identified by 'drecom';
+ on dapi_production.* to 'dapi'@'localhost' identified by 'dapi';
 
- drecom のプロジェクト作成
-$rails _2.3.8_ -d mysql drecom
+ dapi のプロジェクト作成
+$rails _2.3.8_ -d mysql dapi
  
  database.yml でユーザの指定とパスワードの指定
  
