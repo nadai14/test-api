@@ -1,77 +1,0 @@
-10
-
-dir
-0
-https://nadai14@github.com/nadai14/test-api.git/drecom/config
-https://nadai14@github.com/nadai14/test-api.git
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-
-
-
-b7455b79-956c-e55c-b62c-ce57b7db7bff
-
-locales
-dir
-
-
-
-add
-
-routes.rb
-file
-
-
-
-add
-
-database.yml
-file
-
-
-
-add
-
-boot.rb
-file
-
-
-
-add
-
-environment.rb
-file
-
-
-
-add
-
-initializers
-dir
-
-
-
-add
-
-environments
-dir
-
-
-
-add
-

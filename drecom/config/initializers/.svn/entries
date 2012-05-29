@@ -1,70 +1,0 @@
-10
-
-dir
-0
-https://nadai14@github.com/nadai14/test-api.git/drecom/config/initializers
-https://nadai14@github.com/nadai14/test-api.git
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-
-
-
-b7455b79-956c-e55c-b62c-ce57b7db7bff
-
-inflections.rb
-file
-
-
-
-add
-
-session_store.rb
-file
-
-
-
-add
-
-cookie_verification_secret.rb
-file
-
-
-
-add
-
-backtrace_silencers.rb
-file
-
-
-
-add
-
-new_rails_defaults.rb
-file
-
-
-
-add
-
-mime_types.rb
-file
-
-
-
-add
-
