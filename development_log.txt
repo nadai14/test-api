@@ -177,6 +177,8 @@ questions
 	has_many :choices
 
 
+ここで一旦レビュー待ち
+
 回答送信機能を作成
 answer_controller を作成
 
@@ -185,3 +187,9 @@ answer_controller を作成
 		:condition => [{@enq_id = answers.enq_id}, {@page_id = answers.page_id}],
 		:select => {enq_id, page_id, answer})
 
+とりあえずできたかどうかは分からないが、それを試すためにも、RSpecのModel構築再開
+		
+
+		
+		
+		

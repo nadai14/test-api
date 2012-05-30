@@ -1,51 +1,51 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-İ–â1:
+è¨­å•1:
   question_id: 1
-  kind: İ–âí—Ş1
-  title: İ–âƒ^ƒCƒgƒ‹1
-  content: İ–â“à—e1
-  answer_content: ³‰ğ“à—e1
-  answer_description: ³‰ğà–¾1
-  update_name: Îì
+  kind: è¨­å•ç¨®é¡1
+  title: è¨­å•ã‚¿ã‚¤ãƒˆãƒ«1
+  content: è¨­å•å†…å®¹1
+  answer_content: æ­£è§£å†…å®¹1
+  answer_description: æ­£è§£èª¬æ˜1
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-İ–â2:
+è¨­å•2:
   question_id: 2
-  kind: İ–âí—Ş2
-  title: İ–âƒ^ƒCƒgƒ‹2
-  content: İ–â“à—e2
-  answer_content: ³‰ğ“à—e2
-  answer_description: ³‰ğà–¾2
-  update_name: Îì
+  kind: è¨­å•ç¨®é¡2
+  title: è¨­å•ã‚¿ã‚¤ãƒˆãƒ«2
+  content: è¨­å•å†…å®¹2
+  answer_content: æ­£è§£å†…å®¹2
+  answer_description: æ­£è§£èª¬æ˜2
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-İ–â3:
+è¨­å•3:
   question_id: 3
-  kind: İ–âí—Ş3
-  title: İ–âƒ^ƒCƒgƒ‹3
-  content: İ–â“à—e3
-  answer_content: ³‰ğ“à—e3
-  answer_description: ³‰ğà–¾3
-  update_name: Îì
+  kind: è¨­å•ç¨®é¡3
+  title: è¨­å•ã‚¿ã‚¤ãƒˆãƒ«3
+  content: è¨­å•å†…å®¹3
+  answer_content: æ­£è§£å†…å®¹3
+  answer_description: æ­£è§£èª¬æ˜3
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-İ–â4:
+è¨­å•4:
   question_id: 4
-  kind: İ–âí—Ş4
-  title: İ–âƒ^ƒCƒgƒ‹4
-  content: İ–â“à—e4
-  answer_content: ³‰ğ“à—e4
-  answer_description: ³‰ğà–¾4
-  update_name: Îì
+  kind: è¨­å•ç¨®é¡4
+  title: è¨­å•ã‚¿ã‚¤ãƒˆãƒ«4
+  content: è¨­å•å†…å®¹4
+  answer_content: æ­£è§£å†…å®¹4
+  answer_description: æ­£è§£èª¬æ˜4
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-İ–â5:
+è¨­å•5:
   question_id: 5
-  kind: İ–âí—Ş5
-  title: İ–âƒ^ƒCƒgƒ‹5
-  content: İ–â“à—e5
-  answer_content: ³‰ğ“à—e5
-  answer_description: ³‰ğà–¾5
-  update_name: Îì
+  kind: è¨­å•ç¨®é¡5
+  title: è¨­å•ã‚¿ã‚¤ãƒˆãƒ«5
+  content: è¨­å•å†…å®¹5
+  answer_content: æ­£è§£å†…å®¹5
+  answer_description: æ­£è§£èª¬æ˜5
+  update_name: çŸ³å·
   update_date: 2012-05-29

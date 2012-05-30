@@ -1,36 +1,36 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-‘I‘ğˆ1:
+é¸æŠè‚¢1:
   question_id: 1
   choice_id: 1
-  content: ‘I‘ğˆ“à—e1
-  update_name: Îì
+  content: é¸æŠè‚¢å†…å®¹1
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-‘I‘ğˆ2:
+é¸æŠè‚¢2:
   question_id: 2
   choice_id: 2
-  content: ‘I‘ğˆ“à—e2
-  update_name: Îì
+  content: é¸æŠè‚¢å†…å®¹2
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-‘I‘ğˆ3:
+é¸æŠè‚¢3:
   question_id: 3
   choice_id: 3
-  content: ‘I‘ğˆ“à—e3
-  update_name: Îì
+  content: é¸æŠè‚¢å†…å®¹3
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-‘I‘ğˆ4:
+é¸æŠè‚¢4:
   question_id: 4
   choice_id: 4
-  content: ‘I‘ğˆ“à—e4
-  update_name: Îì
+  content: é¸æŠè‚¢å†…å®¹4
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-‘I‘ğˆ5:
+é¸æŠè‚¢5:
   question_id: 5
   choice_id: 5
-  content: ‘I‘ğˆ“à—e5
-  update_name: Îì
+  content: é¸æŠè‚¢å†…å®¹5
+  update_name: çŸ³å·
   update_date: 2012-05-29

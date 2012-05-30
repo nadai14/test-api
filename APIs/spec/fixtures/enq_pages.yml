@@ -1,73 +1,73 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-ƒAƒ“ƒP[ƒgƒy[ƒW1:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸1:
   enq_id: 1
   page_id: 1
   face: iOS
-  description: iOS‚Å‚·1
+  description: iOSã§ã™1
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-29
 
-ƒAƒ“ƒP[ƒgƒy[ƒW2:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸2:
   enq_id: 1
   page_id: 2
   face: iOS
-  description: iOS‚Å‚·2
+  description: iOSã§ã™2
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW3:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸3:
   enq_id: 2
   page_id: 3
   face: PC
-  description: PC‚Å‚·1
+  description: PCã§ã™1
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW4:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸4:
   enq_id: 2
   page_id: 4
   face: PC
-  description: PC‚Å‚·2
+  description: PCã§ã™2
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW5:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸5:
   enq_id: 3
   page_id: 5
   face: Android
-  description: Android‚Å‚·1
+  description: Androidã§ã™1
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW6:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸6:
   enq_id: 3
   page_id: 6
   face: Android
-  description: Android‚Å‚·2
+  description: Androidã§ã™2
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW7:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸7:
   enq_id: 3
   page_id: 7
   face: Android
-  description: Android‚Å‚·3
+  description: Androidã§ã™3
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
 
-ƒAƒ“ƒP[ƒgƒy[ƒW8:
+ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆãƒšãƒ¼ã‚¸8:
   enq_id: 4
   page_id: 8
   face: iOS
-  description: iOS‚Å‚·3
+  description: iOSã§ã™3
   interval: 5
-  update_name: Îì
+  update_name: çŸ³å·
   update_date: 2012-05-28
