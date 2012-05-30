@@ -1,0 +1,38 @@
+<p>
+  <b>Enq:</b>
+  <%=h @enq_page.enq_id %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @enq_page.page_id %>
+</p>
+
+<p>
+  <b>Face:</b>
+  <%=h @enq_page.face %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @enq_page.description %>
+</p>
+
+<p>
+  <b>Interval:</b>
+  <%=h @enq_page.interval %>
+</p>
+
+<p>
+  <b>Update name:</b>
+  <%=h @enq_page.update_name %>
+</p>
+
+<p>
+  <b>Update date:</b>
+  <%=h @enq_page.update_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_enq_page_path(@enq_page) %> |
+<%= link_to 'Back', enq_pages_path %>

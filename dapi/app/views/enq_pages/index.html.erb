@@ -1,0 +1,32 @@
+<h1>Listing enq_pages</h1>
+
+<table>
+  <tr>
+    <th>Enq</th>
+    <th>Page</th>
+    <th>Face</th>
+    <th>Description</th>
+    <th>Interval</th>
+    <th>Update name</th>
+    <th>Update date</th>
+  </tr>
+
+<% @enq_pages.each do |enq_page| %>
+  <tr>
+    <td><%=h enq_page.enq_id %></td>
+    <td><%=h enq_page.page_id %></td>
+    <td><%=h enq_page.face %></td>
+    <td><%=h enq_page.description %></td>
+    <td><%=h enq_page.interval %></td>
+    <td><%=h enq_page.update_name %></td>
+    <td><%=h enq_page.update_date %></td>
+    <td><%= link_to 'Show', enq_page %></td>
+    <td><%= link_to 'Edit', edit_enq_page_path(enq_page) %></td>
+    <td><%= link_to 'Destroy', enq_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New enq_page', new_enq_page_path %>

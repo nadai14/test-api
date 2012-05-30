@@ -1,0 +1,48 @@
+<p>
+  <b>Enq:</b>
+  <%=h @enq.enq_id %>
+</p>
+
+<p>
+  <b>Page:</b>
+  <%=h @enq.page_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @enq.status %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @enq.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @enq.description %>
+</p>
+
+<p>
+  <b>Css:</b>
+  <%=h @enq.css %>
+</p>
+
+<p>
+  <b>Movie:</b>
+  <%=h @enq.movie %>
+</p>
+
+<p>
+  <b>Update name:</b>
+  <%=h @enq.update_name %>
+</p>
+
+<p>
+  <b>Update date:</b>
+  <%=h @enq.update_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_enq_path(@enq) %> |
+<%= link_to 'Back', enqs_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>Question:</b>
+  <%=h @choice.question_id %>
+</p>
+
+<p>
+  <b>Choice:</b>
+  <%=h @choice.choice_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @choice.content %>
+</p>
+
+<p>
+  <b>Update name:</b>
+  <%=h @choice.update_name %>
+</p>
+
+<p>
+  <b>Update date:</b>
+  <%=h @choice.update_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_choice_path(@choice) %> |
+<%= link_to 'Back', choices_path %>

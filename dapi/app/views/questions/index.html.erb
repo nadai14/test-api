@@ -1,0 +1,36 @@
+<h1>Listing questions</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Kind</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Required</th>
+    <th>Answer content</th>
+    <th>Answer description</th>
+    <th>Update name</th>
+    <th>Update date</th>
+  </tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <td><%=h question.question_id %></td>
+    <td><%=h question.kind %></td>
+    <td><%=h question.title %></td>
+    <td><%=h question.content %></td>
+    <td><%=h question.required %></td>
+    <td><%=h question.answer_content %></td>
+    <td><%=h question.answer_description %></td>
+    <td><%=h question.update_name %></td>
+    <td><%=h question.update_date %></td>
+    <td><%= link_to 'Show', question %></td>
+    <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New question', new_question_path %>

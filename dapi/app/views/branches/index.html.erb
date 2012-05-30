@@ -1,0 +1,30 @@
+<h1>Listing branches</h1>
+
+<table>
+  <tr>
+    <th>Enq</th>
+    <th>Num</th>
+    <th>Answer</th>
+    <th>Page</th>
+    <th>Update name</th>
+    <th>Update date</th>
+  </tr>
+
+<% @branches.each do |branche| %>
+  <tr>
+    <td><%=h branche.enq_id %></td>
+    <td><%=h branche.num %></td>
+    <td><%=h branche.answer %></td>
+    <td><%=h branche.page_id %></td>
+    <td><%=h branche.update_name %></td>
+    <td><%=h branche.update_date %></td>
+    <td><%= link_to 'Show', branche %></td>
+    <td><%= link_to 'Edit', edit_branche_path(branche) %></td>
+    <td><%= link_to 'Destroy', branche, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New branche', new_branche_path %>

@@ -1,0 +1,28 @@
+<h1>Listing enq_questions</h1>
+
+<table>
+  <tr>
+    <th>Enq</th>
+    <th>Num</th>
+    <th>Question</th>
+    <th>Update name</th>
+    <th>Update date</th>
+  </tr>
+
+<% @enq_questions.each do |enq_question| %>
+  <tr>
+    <td><%=h enq_question.enq_id %></td>
+    <td><%=h enq_question.num %></td>
+    <td><%=h enq_question.question_id %></td>
+    <td><%=h enq_question.update_name %></td>
+    <td><%=h enq_question.update_date %></td>
+    <td><%= link_to 'Show', enq_question %></td>
+    <td><%= link_to 'Edit', edit_enq_question_path(enq_question) %></td>
+    <td><%= link_to 'Destroy', enq_question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New enq_question', new_enq_question_path %>

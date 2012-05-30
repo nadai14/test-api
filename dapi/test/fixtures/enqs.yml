@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  enq_id: 1
+  page_id: 1
+  status: 1
+  title: MyString
+  description: MyString
+  css: MyString
+  movie: MyString
+  update_name: MyString
+  update_date: 2012-05-30
+
+two:
+  enq_id: 1
+  page_id: 1
+  status: 1
+  title: MyString
+  description: MyString
+  css: MyString
+  movie: MyString
+  update_name: MyString
+  update_date: 2012-05-30
