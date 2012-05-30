@@ -1,10 +1,10 @@
 ﻿<h1>Enqs#index</h1>
 
-<% form_for(@enq) do |f| %>
+<% form_tag @enq, :action => 'get' do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :enq_id %><br />
-    <%= f.text_field :enq_id %>
+    <%= f.text_field :enq_id => @enq_id %>
   </p>
   <p>
     <%= f.submit 'Get' %>

@@ -131,4 +131,30 @@ controller enq.page にアンケートページ情報取得機能を実装中
  
  
 サーバテスト用の enq, enq_page インデックスを作成
+まだエラーがあるが、先にRSpecでリレーションを確認する
+
+RSpecのインストール
+gem install rspec
+rspec の 2.10.1 がインストールされた
+
+RSpec の色づけ
+gem install win32console
+
+RSpec-rails のインストール
+gem install rspec-rails
+1.8.7 は　
+gem install rdoc-data
+rdoc-data --install
+が必要らしいので実行
+
+やはりプラグインが必要らしい。最新版がよくわからないので、とりあえずここと同じようにダウンロード
+http://d.hatena.ne.jp/shunsuk/20090120/1232454257
+
+ruby script/plugin install http://rspec.rubyforge.org/svn/tags/REL_1_1_3/rspec
+ruby script/plugin install http://rspec.rubyforge.org/svn/tags/REL_1_1_3/rspec_on_rails
+
+RSpecのテストに必要なファイルを作成
+ruby script/generate rspec
+
+
 
