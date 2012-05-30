@@ -11,8 +11,8 @@ class CreateChoices < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index :choices, :question_id, :unique => true
-	  add_index :choices, :choice_id, :unique => true
+	  add_index :choices, :question_id
+	  add_index :choices, :choice_id
   end
 
   def self.down

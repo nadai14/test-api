@@ -11,8 +11,9 @@
 
 ActiveRecord::Schema.define(:version => 20120530085313) do
 
-  create_table "answers", :primary_key => "enq_id", :force => true do |t|
+  create_table "answers", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
+    t.integer  "enq_id",                    :null => false
     t.integer  "num",                       :null => false
     t.string   "answer"
     t.string   "update_name"
@@ -21,11 +22,12 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
     t.datetime "updated_at"
   end
 
-  add_index "answers", ["enq_id"], :name => "index_answers_on_enq_id", :unique => true
-  add_index "answers", ["num"], :name => "index_answers_on_num", :unique => true
+  add_index "answers", ["enq_id"], :name => "index_answers_on_enq_id"
+  add_index "answers", ["num"], :name => "index_answers_on_num"
 
-  create_table "branches", :primary_key => "enq_id", :force => true do |t|
+  create_table "branches", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
+    t.integer  "enq_id",                    :null => false
     t.integer  "num",                       :null => false
     t.string   "answer",                    :null => false
     t.integer  "page_id",                   :null => false
@@ -35,13 +37,14 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
     t.datetime "updated_at"
   end
 
-  add_index "branches", ["answer"], :name => "index_branches_on_answer", :unique => true
-  add_index "branches", ["enq_id"], :name => "index_branches_on_enq_id", :unique => true
-  add_index "branches", ["num"], :name => "index_branches_on_num", :unique => true
+  add_index "branches", ["answer"], :name => "index_branches_on_answer"
+  add_index "branches", ["enq_id"], :name => "index_branches_on_enq_id"
+  add_index "branches", ["num"], :name => "index_branches_on_num"
   add_index "branches", ["page_id"], :name => "index_branches_on_page_id"
 
-  create_table "choices", :primary_key => "question_id", :force => true do |t|
+  create_table "choices", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
+    t.integer  "question_id",               :null => false
     t.integer  "choice_id",                 :null => false
     t.string   "content",                   :null => false
     t.string   "update_name"
@@ -50,11 +53,12 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
     t.datetime "updated_at"
   end
 
-  add_index "choices", ["choice_id"], :name => "index_choices_on_choice_id", :unique => true
-  add_index "choices", ["question_id"], :name => "index_choices_on_question_id", :unique => true
+  add_index "choices", ["choice_id"], :name => "index_choices_on_choice_id"
+  add_index "choices", ["question_id"], :name => "index_choices_on_question_id"
 
-  create_table "enq_pages", :primary_key => "enq_id", :force => true do |t|
+  create_table "enq_pages", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
+    t.integer  "enq_id",                    :null => false
     t.integer  "page_id",                   :null => false
     t.string   "face",                      :null => false
     t.string   "description"
@@ -65,12 +69,13 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
     t.datetime "updated_at"
   end
 
-  add_index "enq_pages", ["enq_id"], :name => "index_enq_pages_on_enq_id", :unique => true
-  add_index "enq_pages", ["face"], :name => "index_enq_pages_on_face", :unique => true
-  add_index "enq_pages", ["page_id"], :name => "index_enq_pages_on_page_id", :unique => true
+  add_index "enq_pages", ["enq_id"], :name => "index_enq_pages_on_enq_id"
+  add_index "enq_pages", ["face"], :name => "index_enq_pages_on_face"
+  add_index "enq_pages", ["page_id"], :name => "index_enq_pages_on_page_id"
 
-  create_table "enq_questions", :primary_key => "enq_id", :force => true do |t|
+  create_table "enq_questions", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
+    t.integer  "enq_id",                    :null => false
     t.integer  "num",                       :null => false
     t.integer  "question_id",               :null => false
     t.string   "update_name"
@@ -79,8 +84,8 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
     t.datetime "updated_at"
   end
 
-  add_index "enq_questions", ["enq_id"], :name => "index_enq_questions_on_enq_id", :unique => true
-  add_index "enq_questions", ["num"], :name => "index_enq_questions_on_num", :unique => true
+  add_index "enq_questions", ["enq_id"], :name => "index_enq_questions_on_enq_id"
+  add_index "enq_questions", ["num"], :name => "index_enq_questions_on_num"
   add_index "enq_questions", ["question_id"], :name => "index_enq_questions_on_question_id"
 
   create_table "enqs", :force => true do |t|

@@ -58,17 +58,17 @@ end
 enq
 	PKのUUID化、 null => false の追加、　enq_id のindex化とユニーク制約
 enq_pages
-	PKのUUID化、 null => false の追加、　enq_id,page_id,face のindex化とユニーク制約
+	PKのUUID化、 null => false の追加、　enq_id,page_id,face のindex化
 enq_questions
-	PKのUUID化、 null => false の追加、　enq_id,num のindex化とユニーク制約、　question_id のindex化
+	PKのUUID化、 null => false の追加、　enq_id,num,question_id のindex化
 branches
-	PKのUUID化、 null => false の追加、 enq_id,num,answerのindex化とユニーク制約、 page_id のindex化
+	PKのUUID化、 null => false の追加、 enq_id,num,answer,page_id のindex化
 questions
 	PKのUUID化、 null => false の追加、　question_id のindex化とユニーク制約
 choice
-	PKのUUID化、 null => false の追加、　question_id,choice_id のindex化とユニーク制約
+	PKのUUID化、 null => false の追加、　question_id,choice_id のindex化
 answers
-	PKのUUID化、 null => false の追加、　enq_id,num のindex化とユニーク制約
+	PKのUUID化、 null => false の追加、　enq_id,num のindex化
  
 
 $rake db:migrate 
@@ -82,8 +82,11 @@ enq_pages
 	has_many :enq_questions
 enq_questions
 	belongs_to :enq_page
-	belongs_to :question 外部キー
+	belongs_to :question, :foreign_key => 'question_id'
 	has_many :answers
+	has_many :branches
+branches
+	belongs_to :enq_question, :foreign_key => 'page_id'
 questions
 	has_many :enq_questions
 	has_many :choices
@@ -91,3 +94,7 @@ choice
 	belongs_to :question
 answers
 	belongs_to :enq_questions
+	
+public/index.html の削除
+	
+	

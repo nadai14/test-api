@@ -12,9 +12,9 @@ class CreateBranches < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index :branches, :enq_id, :unique => true
-	  add_index :branches, :num, :unique => true
-	  add_index :branches, :answer, :unique => true
+	  add_index :branches, :enq_id
+	  add_index :branches, :num
+	  add_index :branches, :answer
 	  add_index :branches, :page_id
   end
 

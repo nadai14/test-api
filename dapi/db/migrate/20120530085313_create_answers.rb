@@ -11,8 +11,8 @@ class CreateAnswers < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index :answers, :enq_id, :unique => true
-	  add_index :answers, :num, :unique => true
+	  add_index :answers, :enq_id
+	  add_index :answers, :num
   end
 
   def self.down

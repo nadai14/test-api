@@ -13,9 +13,9 @@ class CreateEnqPages < ActiveRecord::Migration
       t.timestamps
     end
 	
-	  add_index :enq_pages, :enq_id, :unique => true
-	  add_index :enq_pages, :page_id, :unique => true
-	  add_index :enq_pages, :face, :unique => true
+	  add_index :enq_pages, :enq_id
+	  add_index :enq_pages, :page_id
+	  add_index :enq_pages, :face
   end
 
   def self.down
