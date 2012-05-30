@@ -3,6 +3,7 @@ class EnqPagesController < ApplicationController
   	# get each parameter
   	@enq_id = params[:enq_id]
   	@page_id = params[:page_id]
+	@key = params[:key]
   	
   	@enq_pages = EnqPage.find(:all, include => [:enq_question, {:question => :choice}])
   	
