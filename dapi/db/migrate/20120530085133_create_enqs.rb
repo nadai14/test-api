@@ -1,7 +1,8 @@
 class CreateEnqs < ActiveRecord::Migration
   def self.up
-    create_table :enqs, id => false do |t|
-	  t.string :uuid,		:limit => 36,	:primary => true
+    #create_table :enqs, :id => false do |t|
+	#  t.string :uuid,		:limit => 36,	:primary => true
+	create_table :enqs do |t|
       t.integer :enq_id,	:null => false
       t.integer :page_id,	:null => false
       t.integer :status,	:null => false

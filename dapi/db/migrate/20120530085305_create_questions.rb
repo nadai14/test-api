@@ -1,7 +1,8 @@
 class CreateQuestions < ActiveRecord::Migration
   def self.up
-    create_table :questions, :id => false do |t|
-	  t.string :uuid,		:limit => 36,	:primary => true
+    #create_table :questions, :id => false do |t|
+	#  t.string :uuid,		:limit => 36,	:primary => true
+	create_table :questions do |t|
       t.integer :question_id,	:null => false
       t.string :kind,			:null => false
       t.string :title

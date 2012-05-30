@@ -11,10 +11,9 @@
 
 ActiveRecord::Schema.define(:version => 20120530085313) do
 
-  create_table "answers", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "enq_id",                    :null => false
-    t.integer  "num",                       :null => false
+  create_table "answers", :force => true do |t|
+    t.integer  "enq_id",      :null => false
+    t.integer  "num",         :null => false
     t.string   "answer"
     t.string   "update_name"
     t.date     "update_date"
@@ -25,12 +24,11 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
   add_index "answers", ["enq_id"], :name => "index_answers_on_enq_id"
   add_index "answers", ["num"], :name => "index_answers_on_num"
 
-  create_table "branches", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "enq_id",                    :null => false
-    t.integer  "num",                       :null => false
-    t.string   "answer",                    :null => false
-    t.integer  "page_id",                   :null => false
+  create_table "branches", :force => true do |t|
+    t.integer  "enq_id",      :null => false
+    t.integer  "num",         :null => false
+    t.string   "answer",      :null => false
+    t.integer  "page_id",     :null => false
     t.string   "update_name"
     t.date     "update_date"
     t.datetime "created_at"
@@ -42,11 +40,10 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
   add_index "branches", ["num"], :name => "index_branches_on_num"
   add_index "branches", ["page_id"], :name => "index_branches_on_page_id"
 
-  create_table "choices", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "question_id",               :null => false
-    t.integer  "choice_id",                 :null => false
-    t.string   "content",                   :null => false
+  create_table "choices", :force => true do |t|
+    t.integer  "question_id", :null => false
+    t.integer  "choice_id",   :null => false
+    t.string   "content",     :null => false
     t.string   "update_name"
     t.date     "update_date"
     t.datetime "created_at"
@@ -56,11 +53,10 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
   add_index "choices", ["choice_id"], :name => "index_choices_on_choice_id"
   add_index "choices", ["question_id"], :name => "index_choices_on_question_id"
 
-  create_table "enq_pages", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "enq_id",                    :null => false
-    t.integer  "page_id",                   :null => false
-    t.string   "face",                      :null => false
+  create_table "enq_pages", :force => true do |t|
+    t.integer  "enq_id",      :null => false
+    t.integer  "page_id",     :null => false
+    t.string   "face",        :null => false
     t.string   "description"
     t.integer  "interval"
     t.string   "update_name"
@@ -73,11 +69,10 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
   add_index "enq_pages", ["face"], :name => "index_enq_pages_on_face"
   add_index "enq_pages", ["page_id"], :name => "index_enq_pages_on_page_id"
 
-  create_table "enq_questions", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "enq_id",                    :null => false
-    t.integer  "num",                       :null => false
-    t.integer  "question_id",               :null => false
+  create_table "enq_questions", :force => true do |t|
+    t.integer  "enq_id",      :null => false
+    t.integer  "num",         :null => false
+    t.integer  "question_id", :null => false
     t.string   "update_name"
     t.date     "update_date"
     t.datetime "created_at"
@@ -89,10 +84,9 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
   add_index "enq_questions", ["question_id"], :name => "index_enq_questions_on_question_id"
 
   create_table "enqs", :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "enq_id",                    :null => false
-    t.integer  "page_id",                   :null => false
-    t.integer  "status",                    :null => false
+    t.integer  "enq_id",      :null => false
+    t.integer  "page_id",     :null => false
+    t.integer  "status",      :null => false
     t.string   "title"
     t.string   "description"
     t.string   "css"
@@ -105,9 +99,9 @@ ActiveRecord::Schema.define(:version => 20120530085313) do
 
   add_index "enqs", ["enq_id"], :name => "index_enqs_on_enq_id", :unique => true
 
-  create_table "questions", :primary_key => "question_id", :force => true do |t|
-    t.string   "uuid",               :limit => 36
-    t.string   "kind",                             :null => false
+  create_table "questions", :force => true do |t|
+    t.integer  "question_id",        :null => false
+    t.string   "kind",               :null => false
     t.string   "title"
     t.string   "content"
     t.boolean  "required"

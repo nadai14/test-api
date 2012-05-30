@@ -1,4 +1,14 @@
 class AnswersController < ApplicationController
+  # GET /answers/1
+  # GET /answers/1.xml
+  def send
+    @answers = Answer.all
+
+    respond_to do |format|
+      format.json  { render :json => @answers }
+    end
+  end
+
   # GET /answers
   # GET /answers.xml
   def index

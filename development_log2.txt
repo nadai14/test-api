@@ -41,6 +41,7 @@ $ruby script/generate scaffold Answer
  
 主キーに uuid を利用する準備
 gem install uuidtools
+uuidtools(2.1.2) 
 
 lib/uuid_helper.rb
 ---------------------------------------------------
@@ -97,4 +98,7 @@ answers
 	
 public/index.html の削除
 	
+uuid で採番しようとするが失敗。とりあえず、自動生成のidに戻す
+バージョンが高すぎたのかもしれない。機能を実装してからもう一度チャレンジする。
+
 	
