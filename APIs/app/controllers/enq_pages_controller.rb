@@ -8,6 +8,7 @@ class EnqPagesController < ApplicationController
   	
   	respond_to do |format|
   	  format.json { render :json => @enq_pages }	# get.json.erb
+	end
   end
 
   def index

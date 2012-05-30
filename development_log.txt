@@ -156,5 +156,26 @@ ruby script/plugin install http://rspec.rubyforge.org/svn/tags/REL_1_1_3/rspec_o
 RSpecのテストに必要なファイルを作成
 ruby script/generate rspec
 
+RSpec でのテスト用にモデルを作成、fixture フォルダを rspec フォルダ下にコピペする
+とりあえず、Enq のモデルのみを作成
+
+テスト用のDBの準備
+rake db:create RAILS_ENV='test'
+rake db:teset:prepare
+
+
+RDocテストの際にリレーションがおかしいことを指摘されたので、もとに戻す
+
+ model enq_page と question の修正
+enq_pages
+	belongs_to :enq
+	has_many :enq_questions
+questions
+	has_many :enq_questions
+	has_many :choices
+
+
+
+
 
 

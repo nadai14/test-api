@@ -1,0 +1,51 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+設問1:
+  question_id: 1
+  kind: 設問種類1
+  title: 設問タイトル1
+  content: 設問内容1
+  answer_content: 正解内容1
+  answer_description: 正解説明1
+  update_name: 石川
+  update_date: 2012-05-29
+
+設問2:
+  question_id: 2
+  kind: 設問種類2
+  title: 設問タイトル2
+  content: 設問内容2
+  answer_content: 正解内容2
+  answer_description: 正解説明2
+  update_name: 石川
+  update_date: 2012-05-29
+
+設問3:
+  question_id: 3
+  kind: 設問種類3
+  title: 設問タイトル3
+  content: 設問内容3
+  answer_content: 正解内容3
+  answer_description: 正解説明3
+  update_name: 石川
+  update_date: 2012-05-29
+
+設問4:
+  question_id: 4
+  kind: 設問種類4
+  title: 設問タイトル4
+  content: 設問内容4
+  answer_content: 正解内容4
+  answer_description: 正解説明4
+  update_name: 石川
+  update_date: 2012-05-29
+
+設問5:
+  question_id: 5
+  kind: 設問種類5
+  title: 設問タイトル5
+  content: 設問内容5
+  answer_content: 正解内容5
+  answer_description: 正解説明5
+  update_name: 石川
+  update_date: 2012-05-29
