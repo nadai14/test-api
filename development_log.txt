@@ -96,7 +96,7 @@ $ruby script/generate controller Top index
 
  
 ここで、DB構築に間違いを発見
-ユニーク制約が、複合キーによるものだと判明なので
+ユニーク制約が、複合キーによるものだと判明。なので
 
 enq_pages
 	enq_id,page_id,face のユニーク制約解除
@@ -117,7 +117,8 @@ test用に fixture ファイルを作成
 controller enq.get にアンケート情報取得機能を実装
 
 controller enq.page にアンケートページ情報取得機能を実装中
- include でテーブルをまたいで情報を取得できる
+ include でテーブルをまたいで情報を取得できるとの情報
+ 参考：http://d.hatena.ne.jp/kiyo560808/20100630/1277883678
  
  model enq_page と question に追記
  enq_pages
@@ -132,6 +133,7 @@ controller enq.page にアンケートページ情報取得機能を実装中
  
 サーバテスト用の enq, enq_page インデックスを作成
 まだエラーがあるが、先にRSpecでリレーションを確認する
+参考：http://jp.rubyist.net/magazine/?0021-Rspec
 
 RSpecのインストール
 gem install rspec
