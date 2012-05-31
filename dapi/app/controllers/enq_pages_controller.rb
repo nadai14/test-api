@@ -5,7 +5,9 @@ class EnqPagesController < ApplicationController
     @enq_id = params[:enq_id]
     @page_id = params[:id]
   
-    @enq_pages = Enq.find(params[:id])
+    @enq_pages = Enq.find(@enq_id,
+		:include => {"enq_question","question","choice","answer"}
+		)
 
     respond_to do |format|
       format.json  { render :json => @enq_pages }
@@ -26,12 +28,34 @@ class EnqPagesController < ApplicationController
   # GET /enq_pages/1
   # GET /enq_pages/1.xml
   def show
-    @enq_page = EnqPage.find(params[:id])
+    @enq_id = params[:enq_id]
+    @page_id = params[:id]
 
+#   @enq_pages = Enq.find(:all,
+#		:include => ["enq_pages","enq_questions"],
+#		:conditions => {:enq_id => 1}#params[:enq_id]},
+#		)
+		
+#	@enq_pages = Question.find(:all,
+#		:include => ["enq_questions","choices"],
+#		:conditions => {:question_id => 1}#params[@question_id]},
+#		)
+
+	
+	@enq_pages = EnqPage.find(:all,
+		:include => [{:enq => [{:enq_question => [:question => :choice]}, :answer]}, :branch],
+		:conditions => {:enq.page_id => params[:id], :enq.id => 1}#params[:enq_id]}
+		)
+				
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @enq_page }
+      format.json  { render :json => @enq_pages }
     end
+#    @enq_page = EnqPage.find(params[:id])
+
+#    respond_to do |format|
+#      format.html # show.html.erb
+#      format.xml  { render :xml => @enq_page }
+#    end
   end
 
   # GET /enq_pages/new

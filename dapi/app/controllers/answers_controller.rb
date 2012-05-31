@@ -1,7 +1,7 @@
 class AnswersController < ApplicationController
   # GET /answers/1
   # GET /answers/1.xml
-  def send
+  def post
     @answers = Answer.new
 
     respond_to do |format|
@@ -34,12 +34,21 @@ class AnswersController < ApplicationController
   # GET /answers/new
   # GET /answers/new.xml
   def new
-    @answer = Answer.new
+    begin
+      @answers = Answer.new
+	rescue
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @answer }
-    end
+	else
+      respond_to do |format|
+        format.json  { render :json => @answers }
+      end 
+  
+#    @answer = Answer.new
+
+#    respond_to do |format|
+#      format.html # new.html.erb
+#      format.xml  { render :xml => @answer }
+#    end
   end
 
   # GET /answers/1/edit

@@ -91,7 +91,7 @@ branches
 questions
 	has_many :enq_questions
 	has_many :choices
-choice
+choices
 	belongs_to :question
 answers
 	belongs_to :enq_questions
@@ -106,10 +106,63 @@ uuid で採番しようとするが失敗。とりあえず、自動生成のid�
 このままだと、ただのshowを呼び出しているだけみたいなので、ルートを追加する
 
 
+アンケートページ取得で、概念ER図のままのリレーションだったので、情報取得がうまくいっていなかったことが判明
+全体的に修正を行う
+
+enq
+	has_many :enq_pages
+	has_many :enq_questions
+	has_many :answers
+enq_pages
+	belongs_to :enq
+	has_many :branche
+enq_questions
+	belongs_to :enq
+	belongs_to :question, :foreign_key => 'question_id'
+	has_many :branches
+	has_many :answers
+branches
+	belongs_to :enq
+	belongs_to :enq_page
+	belongs_to :enq_question, :foreign_key => 'page_id'
+	belongs_to :answer
+questions
+	has_many :enq_questions
+	has_many :choices
+choices
+	belongs_to :question
+answers
+	belongs_to :enq
+	belongs_to :enq_questions
 
 
+RoR では、すでに post, get についてはコントローラにメソッドを追加することはできるが
+それ以外の自分でつけた名称のものは何らかの操作が必要な模様
 
 
+回答送信機能にエラーメッセージを追加する
+	
+	
+アンケートページ情報取得機能の実装
+複数のテーブルの情報を取ってくる方法
+http://d.hatena.ne.jp/kiyo560808/20100630/1277883678
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 

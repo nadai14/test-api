@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :enq_pages
 
+#  map.resources :answers, :collection => {:answers => :send}
+
   map.resources :answers
 
   map.resources :choices
@@ -11,6 +13,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :branches
 
   map.resources :enq_questions
+
+  map.resources :enq_pages, :collection => {:enq_pages => :get}
 
   map.resources :enq_pages
 
