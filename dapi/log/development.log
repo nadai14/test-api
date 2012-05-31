@@ -5669,3 +5669,1393 @@ ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_
 Rendered rescues/_trace (65.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 16:13:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/enqs/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:13:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branch' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:13:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mBranch Load (0.0ms)[0m   [0mMysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:14:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2012-05-31 16:16:31) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:38: syntax error, unexpected '}', expecting tASSOC
+...stion => :choices], :branches}, :answers]}],
+                              ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:40: syntax error, unexpected ')', expecting kEND):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:17:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (1.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (0.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mBranch Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'branches.enq_question_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_question_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_question_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_question_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:45:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mBranch Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `branches`[0m
+  [4;36;1mEnqPage Load Including Associations (0.0ms)[0m   [0;1mMysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7, `branches`.`id` AS t6_r0, `branches`.`enq_id` AS t6_r1, `branches`.`num` AS t6_r2, `branches`.`answer` AS t6_r3, `branches`.`page_id` AS t6_r4, `branches`.`update_name` AS t6_r5, `branches`.`update_date` AS t6_r6, `branches`.`created_at` AS t6_r7, `branches`.`updated_at` AS t6_r8 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id LEFT OUTER JOIN `branches` ON branches.enq_page_id = enq_pages.id WHERE (page_id = '1' or enq_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7, `branches`.`id` AS t6_r0, `branches`.`enq_id` AS t6_r1, `branches`.`num` AS t6_r2, `branches`.`answer` AS t6_r3, `branches`.`page_id` AS t6_r4, `branches`.`update_name` AS t6_r5, `branches`.`update_date` AS t6_r6, `branches`.`created_at` AS t6_r7, `branches`.`updated_at` AS t6_r8 FROM `enq_pages`  LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id  LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id  LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id  LEFT OUTER JOIN `choices` ON choices.question_id = questions.id  LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id  LEFT OUTER JOIN `branches` ON branches.enq_page_id = enq_pages.id WHERE (page_id = '1' or enq_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 16:52:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 12ms (View: 3, DB: 3) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 16:54:34) [GET]
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/answers
+Rendering answers/new
+Completed in 30ms (View: 20, DB: 3) | 200 OK [http://localhost/answers/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2012-05-31 16:54:44) [POST]
+  Parameters: {"answer"=>{"answer"=>"a", "enq_id"=>"1", "update_date(1i)"=>"2012", "num"=>"1", "update_date(3i)"=>"31", "update_date(2i)"=>"5", "update_name"=>"a"}, "commit"=>"Create", "authenticity_token"=>"7P/XeartDuwXK8NduqL7uRq8RsviOa/POTAV+EUcDf4="}
+  [4;36;1mAnswer Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAnswer Create (1.0ms)[0m   [0;1mINSERT INTO `answers` (`updated_at`, `answer`, `enq_id`, `update_date`, `created_at`, `num`, `update_name`) VALUES('2012-05-31 07:54:44', 'a', 1, '2012-05-31', '2012-05-31 07:54:44', 1, 'a')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Completed in 19ms (View: 3, DB: 6) | 201 Created [http://localhost/answers]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 16:54:57) [GET]
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://localhost/answers]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 16:54:59) [GET]
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;35;1mAnswer Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 18ms (View: 9, DB: 5) | 200 OK [http://localhost/answers]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 16:55:05) [GET]
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/answers
+Rendering answers/new
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://localhost/answers/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2012-05-31 16:55:12) [POST]
+  Parameters: {"answer"=>{"answer"=>"d", "enq_id"=>"2", "update_date(1i)"=>"2012", "num"=>"2", "update_date(3i)"=>"31", "update_date(2i)"=>"5", "update_name"=>"d"}, "commit"=>"Create", "authenticity_token"=>"7P/XeartDuwXK8NduqL7uRq8RsviOa/POTAV+EUcDf4="}
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAnswer Create (1.0ms)[0m   [0mINSERT INTO `answers` (`updated_at`, `answer`, `enq_id`, `update_date`, `created_at`, `num`, `update_name`) VALUES('2012-05-31 07:55:12', 'd', 2, '2012-05-31', '2012-05-31 07:55:12', 2, 'd')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 15ms (View: 2, DB: 4) | 201 Created [http://localhost/answers]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 16:55:41) [GET]
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 22ms (View: 11, DB: 4) | 200 OK [http://localhost/answers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:57:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mBranch Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `branches`[0m
+  [4;36;1mEnqPage Load Including Associations (0.0ms)[0m   [0;1mMysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7, `branches`.`id` AS t6_r0, `branches`.`enq_id` AS t6_r1, `branches`.`num` AS t6_r2, `branches`.`answer` AS t6_r3, `branches`.`page_id` AS t6_r4, `branches`.`update_name` AS t6_r5, `branches`.`update_date` AS t6_r6, `branches`.`created_at` AS t6_r7, `branches`.`updated_at` AS t6_r8 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id LEFT OUTER JOIN `branches` ON branches.enq_page_id = enq_pages.id WHERE (page_id = '1' or enq_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7, `branches`.`id` AS t6_r0, `branches`.`enq_id` AS t6_r1, `branches`.`num` AS t6_r2, `branches`.`answer` AS t6_r3, `branches`.`page_id` AS t6_r4, `branches`.`update_name` AS t6_r5, `branches`.`update_date` AS t6_r6, `branches`.`created_at` AS t6_r7, `branches`.`updated_at` AS t6_r8 FROM `enq_pages`  LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id  LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id  LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id  LEFT OUTER JOIN `choices` ON choices.question_id = questions.id  LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id  LEFT OUTER JOIN `branches` ON branches.enq_page_id = enq_pages.id WHERE (page_id = '1' or enq_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:59:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT enq_id FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mBranch Load (0.0ms)[0m   [0mMysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = NULL) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = NULL) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:59:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (1.0ms)[0m   [0;1mSELECT enq_id FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (0.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (1.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 56ms (View: 1, DB: 18) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:59:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (1.0ms)[0m   [0;1mSELECT enq_id, page_id FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (0.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (1.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 54ms (View: 1, DB: 17) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:00:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mEnqPage Load Including Associations (0.0ms)[0m   [0;1mMysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id WHERE (page_id = '1' or enq_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'page_id' in where clause is ambiguous: SELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages`  LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id  LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id  LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id  LEFT OUTER JOIN `choices` ON choices.question_id = questions.id  LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id WHERE (page_id = '1' or enq_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:00:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT enq_id, page_id, description FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 55ms (View: 2, DB: 13) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:13:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mEnqPage Load Including Associations (1.0ms)[0m   [0mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 49ms (View: 3, DB: 14) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 17:19:42) [GET]
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/enqs]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#get (for 127.0.0.1 at 2012-05-31 17:19:44) [GET]
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = NULL) LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+  app/controllers/enqs_controller.rb:16:in `get'
+  app/controllers/enqs_controller.rb:10:in `get'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:20:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mEnqPage Load Including Associations (1.0ms)[0m   [0mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 49ms (View: 3, DB: 13) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:21:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mEnqPage Load Including Associations (1.0ms)[0m   [0;1mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 81ms (View: 3, DB: 12) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#get (for 127.0.0.1 at 2012-05-31 17:21:36) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Enq without an ID):
+  app/controllers/enq_pages_controller.rb:8:in `get'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-31 17:21:44) [GET]
+
+ActionController::RoutingError (No route matches "/enq_pages/1/get/1" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#get (for 127.0.0.1 at 2012-05-31 17:21:51) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Enq without an ID):
+  app/controllers/enq_pages_controller.rb:8:in `get'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#get (for 127.0.0.1 at 2012-05-31 17:25:51) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Enq without an ID):
+  app/controllers/enq_pages_controller.rb:8:in `get'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:25:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mEnqPage Load Including Associations (1.0ms)[0m   [0mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 59ms (View: 3, DB: 13) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 17:34:34) [GET]
+  [4;36;1mEnqPage Load (1.0ms)[0m   [0;1mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 51ms (View: 21, DB: 3) | 200 OK [http://localhost/enq_pages]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:34:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mEnqPage Load Including Associations (0.0ms)[0m   [0;1mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 66ms (View: 12, DB: 14) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:34:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mEnqPage Load Including Associations (1.0ms)[0m   [0mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 91ms (View: 3, DB: 14) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:35:13) [GET]
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (20.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:35:47) [GET]
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 17:36:01) [GET]
+  Parameters: {"id"=>"get"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+  app/controllers/enqs_controller.rb:46:in `show'
+  app/controllers/enqs_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#get (for 127.0.0.1 at 2012-05-31 17:36:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 14ms (View: 5, DB: 2) | 200 OK [http://localhost/enqs/get/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#get (for 127.0.0.1 at 2012-05-31 17:37:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 15ms (View: 4, DB: 3) | 200 OK [http://localhost/enqs/get/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 17:37:24) [GET]
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://localhost/enq_pages]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:37:32) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant EnqPageController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 17:38:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mChoice Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+  [4;35;1mEnqPage Load Including Associations (1.0ms)[0m   [0mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 49ms (View: 3, DB: 12) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:38:47) [GET]
+  Parameters: {"id"=>"2"}
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:39:02) [GET]
+  Parameters: {"id"=>"2"}
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 17:39:06) [GET]
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+ERROR: compiling _run_erb_app47views47enqs47index46html46erb RAISED compile error
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:27: syntax error, unexpected ')', expecting tASSOC
+...enqs", :action => "get", enq ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47enqs47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing enqs</h1>\n\n<table>\n  <tr>\n    <th>Enq</th>\n    <th>Page</th>\n    <th>Status</th>\n    <th>Title</th>\n    <th>Description</th>\n    <th>Css</th>\n    <th>Movie</th>\n    <th>Update name</th>\n    <th>Update date</th>\n  </tr>\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  @enqs.each do |enq| ; @output_buffer.concat "\n  <tr>\n    <td>"
+
+; @output_buffer.concat((h enq.enq_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.page_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.status ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.title ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.description ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.css ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.movie ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.update_name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.update_date ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Get', :controller => "enqs", :action => "get", enq ).to_s); @output_buffer.concat "</td>\t\n    <td>"
+; @output_buffer.concat(( link_to 'Show', enq ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_enq_path(enq) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', enq, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New enq', new_enq_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:41:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:26:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:27: syntax error, unexpected ')', expecting tASSOC
+...enqs", :action => "get", enq ).to_s); @output_buffer.concat ...
+                              ^) on line #27 of app/views/enqs/index.html.erb:
+24:     <td><%=h enq.movie %></td>
+25:     <td><%=h enq.update_name %></td>
+26:     <td><%=h enq.update_date %></td>
+27:     <td><%= link_to 'Get', :controller => "enqs", :action => "get", enq %></td>	
+28:     <td><%= link_to 'Show', enq %></td>
+29:     <td><%= link_to 'Edit', edit_enq_path(enq) %></td>
+30:     <td><%= link_to 'Destroy', enq, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/enqs/index.html.erb:41:in `compile!'
+    app/controllers/enqs_controller.rb:26:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 17:39:33) [GET]
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+ERROR: compiling _run_erb_app47views47enqs47index46html46erb RAISED compile error
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:27: syntax error, unexpected ')', expecting tASSOC
+...enqs", :action => "get", enq ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47enqs47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing enqs</h1>\n\n<table>\n  <tr>\n    <th>Enq</th>\n    <th>Page</th>\n    <th>Status</th>\n    <th>Title</th>\n    <th>Description</th>\n    <th>Css</th>\n    <th>Movie</th>\n    <th>Update name</th>\n    <th>Update date</th>\n  </tr>\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  @enqs.each do |enq| ; @output_buffer.concat "\n  <tr>\n    <td>"
+
+; @output_buffer.concat((h enq.enq_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.page_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.status ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.title ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.description ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.css ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.movie ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.update_name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h enq.update_date ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Get', :controller => "enqs", :action => "get", enq ).to_s); @output_buffer.concat "</td>\t\n    <td>"
+; @output_buffer.concat(( link_to 'Show', enq ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_enq_path(enq) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', enq, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New enq', new_enq_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:41:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:26:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/index.html.erb:27: syntax error, unexpected ')', expecting tASSOC
+...enqs", :action => "get", enq ).to_s); @output_buffer.concat ...
+                              ^) on line #27 of app/views/enqs/index.html.erb:
+24:     <td><%=h enq.movie %></td>
+25:     <td><%=h enq.update_name %></td>
+26:     <td><%=h enq.update_date %></td>
+27:     <td><%= link_to 'Get', :controller => "enqs", :action => "get", enq %></td>	
+28:     <td><%= link_to 'Show', enq %></td>
+29:     <td><%= link_to 'Edit', edit_enq_path(enq) %></td>
+30:     <td><%= link_to 'Destroy', enq, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/enqs/index.html.erb:41:in `compile!'
+    app/controllers/enqs_controller.rb:26:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:39:39) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (20.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:41:32) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant EnqController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:41:38) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant EnqPageController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#get (for 127.0.0.1 at 2012-05-31 17:42:21) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant EnqPageController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 18:01:43) [GET]
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/enq_pages]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 18:01:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mEnqPage Load Including Associations (1.0ms)[0m   [0;1mSELECT `enq_pages`.`id` AS t0_r0, `enq_pages`.`enq_id` AS t0_r1, `enq_pages`.`page_id` AS t0_r2, `enq_pages`.`face` AS t0_r3, `enq_pages`.`description` AS t0_r4, `enq_pages`.`interval` AS t0_r5, `enq_pages`.`update_name` AS t0_r6, `enq_pages`.`update_date` AS t0_r7, `enq_pages`.`created_at` AS t0_r8, `enq_pages`.`updated_at` AS t0_r9, `enqs`.`id` AS t1_r0, `enqs`.`enq_id` AS t1_r1, `enqs`.`page_id` AS t1_r2, `enqs`.`status` AS t1_r3, `enqs`.`title` AS t1_r4, `enqs`.`description` AS t1_r5, `enqs`.`css` AS t1_r6, `enqs`.`movie` AS t1_r7, `enqs`.`update_name` AS t1_r8, `enqs`.`update_date` AS t1_r9, `enqs`.`created_at` AS t1_r10, `enqs`.`updated_at` AS t1_r11, `enq_questions`.`id` AS t2_r0, `enq_questions`.`enq_id` AS t2_r1, `enq_questions`.`num` AS t2_r2, `enq_questions`.`question_id` AS t2_r3, `enq_questions`.`update_name` AS t2_r4, `enq_questions`.`update_date` AS t2_r5, `enq_questions`.`created_at` AS t2_r6, `enq_questions`.`updated_at` AS t2_r7, `questions`.`id` AS t3_r0, `questions`.`question_id` AS t3_r1, `questions`.`kind` AS t3_r2, `questions`.`title` AS t3_r3, `questions`.`content` AS t3_r4, `questions`.`required` AS t3_r5, `questions`.`answer_content` AS t3_r6, `questions`.`answer_description` AS t3_r7, `questions`.`update_name` AS t3_r8, `questions`.`update_date` AS t3_r9, `questions`.`created_at` AS t3_r10, `questions`.`updated_at` AS t3_r11, `choices`.`id` AS t4_r0, `choices`.`question_id` AS t4_r1, `choices`.`choice_id` AS t4_r2, `choices`.`content` AS t4_r3, `choices`.`update_name` AS t4_r4, `choices`.`update_date` AS t4_r5, `choices`.`created_at` AS t4_r6, `choices`.`updated_at` AS t4_r7, `answers`.`id` AS t5_r0, `answers`.`enq_id` AS t5_r1, `answers`.`num` AS t5_r2, `answers`.`answer` AS t5_r3, `answers`.`update_name` AS t5_r4, `answers`.`update_date` AS t5_r5, `answers`.`created_at` AS t5_r6, `answers`.`updated_at` AS t5_r7 FROM `enq_pages` LEFT OUTER JOIN `enqs` ON `enqs`.id = `enq_pages`.enq_id LEFT OUTER JOIN `enq_questions` ON enq_questions.enq_id = enqs.id LEFT OUTER JOIN `questions` ON `questions`.id = `enq_questions`.question_id LEFT OUTER JOIN `choices` ON choices.question_id = questions.id LEFT OUTER JOIN `answers` ON answers.enq_id = enqs.id [0m
+Completed in 64ms (View: 4, DB: 13) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 18:02:04) [GET]
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/enqs/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 18:02:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+
+NoMethodError (undefined method `errors' for false:FalseClass):
+  app/controllers/enqs_controller.rb:48:in `show'
+  app/controllers/enqs_controller.rb:42:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2012-05-31 18:02:48) [GET]
+  Parameters: {"id"=>"2"}
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:45: syntax error, unexpected '}', expecting tASSOC
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:49: syntax error, unexpected kEND, expecting '}'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:119: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 18:03:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 13ms (View: 3, DB: 4) | 200 OK [http://localhost/enqs/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2012-05-31 18:05:27) [GET]
+  Parameters: {"id"=>"2"}
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:50: syntax error, unexpected ',', expecting tASSOC
+... => @enqs.errors, @enq_result, @err_msg]}
+                              ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:121: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 18:05:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://localhost/enqs/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 18:05:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 14ms (View: 4, DB: 4) | 200 OK [http://localhost/enqs/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 18:10:48) [GET]
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/answers
+Rendering answers/new
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/answers/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2012-05-31 18:10:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7P/XeartDuwXK8NduqL7uRq8RsviOa/POTAV+EUcDf4=", "answer"=>{"enq_id"=>"a", "update_date(1i)"=>"2012", "update_date(2i)"=>"5", "update_name"=>"s", "update_date(3i)"=>"31", "num"=>"s", "answer"=>"s"}}
+  [4;35;1mAnswer Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO `answers` (`enq_id`, `update_date`, `updated_at`, `update_name`, `created_at`, `num`, `answer`) VALUES(0, '2012-05-31', '2012-05-31 09:10:57', 's', '2012-05-31 09:10:57', 0, 's')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 19ms (View: 2, DB: 5) | 201 Created [http://localhost/answers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 18:11:06) [GET]
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 28ms (View: 18, DB: 2) | 200 OK [http://localhost/answers]

@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :enq_pages
 
-#  map.resources :answers, :collection => {:answers => :send}
+  map.resources :answers, :collection => {:post => :post}
 
   map.resources :answers
 
@@ -13,11 +13,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :enq_questions
 
-  map.resources :enq_pages, :collection => {:enq_pages => :get}
+  map.connect 'enq_pages/get/:id', :controller => 'enq_page', :action => 'get'
 
   map.resources :enq_pages
 
-  map.resources :enqs, :collection => {:enqs => :get}
+  map.connect 'enqs/get/:id', :controller => 'enq', :action => 'get'
+  #map.resources :enqs, :member => {:get => :get}
   #map.resources :enqs, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
   
   map.resources :enqs

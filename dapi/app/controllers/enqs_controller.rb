@@ -9,11 +9,14 @@ class EnqsController < ApplicationController
 
     respond_to do |format|
       if @enqs
+	    @enq_result = true		
         #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
-        format.json  { render :json => @enqs }
+        format.json  { render :json => [@enqs, @enq_result] }
       else
+	    @enq_result = false
+		@err_msg = 'get errot'
         #format.html { render :action => "index" }
-        format.json  { render :json => @enqs.errors }
+        format.json  { render :json => [@enqs.errors, @enq_result, @err_msg]}
       end
     end
   end
@@ -39,11 +42,14 @@ class EnqsController < ApplicationController
 
     respond_to do |format|
       if @enqs
+	    @enq_result = true		
         #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
-        format.json  { render :json => @enqs }
+        format.json  { render :json => [@enqs, @enq_result] }
       else
+	    @enq_result = false
+		@err_msg = 'get errot'
         #format.html { render :action => "index" }
-        format.json  { render :json => @enqs.errors }
+        format.json  { render :json => [@enqs.errors, @enq_result, @err_msg]}
       end
     end
 

@@ -2,20 +2,24 @@ class EnqPagesController < ApplicationController
   # GET /enq_pages/1
   # GET /enq_pages/1.json
   def get
-    @enq_id = params[:enq_id]
-    @page_id = params[:id]
-  
-    @enq_pages = Enq.find(@enq_id,
-		:include => {"enq_question","question","choice","answer"}
-		)
-
+    @enq_pages = EnqPage.find(:all,
+	  :include => [{:enq => [{:enq_questions => [:question => :choices]}, :answers]}],#, :branches],
+	  #:conditions => ["page_id = ? or enq_id = ?", params[:id], 1],#params[:enq_id]],
+	  :select => "enq_id, page_id, description, enq_questions.num, interval, questions.kind, questions.title, questions.content,
+					questions.required, choices.choice_id, choices.content, branches.answer, branches.page_id, questions.answer_content,
+					questions.answer_description"
+	  )
+	
     respond_to do |format|
       if @enq_pages
+	    @enq_page_result = true		
         #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
-        format.json  { render :json => @enq_pages }
+        format.json  { render :json => [@enq_pages, @enq_page_result] }
       else
+	    @enq_page_result = false
+		@err_msg = 'get errot'
         #format.html { render :action => "index" }
-        format.json  { render :json => @enq_pages.errors }
+        format.json  { render :json => [@enq_pages.errors, @enq_page_result, @err_msg]}
       end
     end
   end
@@ -35,17 +39,23 @@ class EnqPagesController < ApplicationController
   # GET /enq_pages/1.xml
   def show
     @enq_pages = EnqPage.find(:all,
-	  :include => [{:enq => [{:enq_questions => [:question => :choices]}, :answers]}, :branches],
-	  :conditions => ["page_id = ? or enq_id = ?", params[:id], 1]#params[:enq_id]]
+	  :include => [{:enq => [{:enq_questions => [:question => :choices]}, :answers]}],#, :branches],
+	  #:conditions => ["page_id = ? or enq_id = ?", params[:id], 1],#params[:enq_id]],
+	  :select => "enq_id, page_id, description, enq_questions.num, interval, questions.kind, questions.title, questions.content,
+					questions.required, choices.choice_id, choices.content, branches.answer, branches.page_id, questions.answer_content,
+					questions.answer_description"
 	  )
 	
     respond_to do |format|
       if @enq_pages
+	    @enq_page_result = true		
         #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
-        format.json  { render :json => @enq_pages }
+        format.json  { render :json => [@enq_pages, @enq_page_result] }
       else
+	    @enq_page_result = false
+		@err_msg = 'get errot'
         #format.html { render :action => "index" }
-        format.json  { render :json => @enq_pages.errors }
+        format.json  { render :json => [@enq_pages.errors, @enq_page_result, @err_msg]}
       end
     end
 	
