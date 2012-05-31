@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :enq_pages
 
   map.resources :enqs, :collection => {:enqs => :get}
+  #map.resources :enqs, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
   
   map.resources :enqs
   
