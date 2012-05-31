@@ -63,28 +63,13 @@ class AnswersController < ApplicationController
 
     respond_to do |format|
       if @answer.save
-	    @answer_result = true
-        #format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
-        format.json  { render :json => [@answer, @answer_result], :status => :created, :location => @answer }
+        format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
+        format.xml  { render :xml => @answer, :status => :created, :location => @answer }
       else
-	    @answer_result = false
-		@err_msg = 'error post'
-        #format.html { render :action => "new" }
-        format.json  { render :json => [@answer.errors, @answer_result, @err_msg], :status => :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
       end
     end
-
-#    @answer = Answer.new(params[:answer])
-#
-#    respond_to do |format|
-#      if @answer.save
-#        format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
-#        format.xml  { render :xml => @answer, :status => :created, :location => @answer }
-#      else
-#        format.html { render :action => "new" }
-#        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
-#      end
-#    end
   end
 
   # PUT /answers/1

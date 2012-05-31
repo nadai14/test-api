@@ -153,7 +153,7 @@ Branch のスペリングミスに気づく
 $ruby script/generate scaffold Branch
  enq_id:integer num:integer answer:string page_id:integer update_name:string update_date:date 	
 	
-	
+interval はそのままでは検索できない
 	
 	
 	

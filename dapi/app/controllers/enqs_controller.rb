@@ -35,30 +35,12 @@ class EnqsController < ApplicationController
   # GET /enqs/1
   # GET /enqs/1.xml
   def show
-    @enqs = Enq.find(:first,
-	  :select => "page_id, css, movie, title, description",
-	  :conditions => ["id = ?", params[:id]]
-	  )
+    @enq = Enq.find(params[:id])
 
     respond_to do |format|
-      if @enqs
-	    @enq_result = true		
-        #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
-        format.json  { render :json => [@enqs, @enq_result] }
-      else
-	    @enq_result = false
-		@err_msg = 'get errot'
-        #format.html { render :action => "index" }
-        format.json  { render :json => [@enqs.errors, @enq_result, @err_msg]}
-      end
+      format.html # show.html.erb
+      format.xml  { render :xml => @enq }
     end
-
-#    @enq = Enq.find(params[:id])
-#
-#    respond_to do |format|
-#      format.html # show.html.erb
-#      format.xml  { render :xml => @enq }
-#    end
   end
 
   # GET /enqs/new

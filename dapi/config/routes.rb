@@ -13,11 +13,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :enq_questions
 
-  map.connect 'enq_pages/get/:id', :controller => 'enq_page', :action => 'get'
+  map.connect 'enq_pages/get/:id(.:format)?', :controller => 'enq_page', :action => 'get'
 
   map.resources :enq_pages
 
-  map.connect 'enqs/get/:id', :controller => 'enq', :action => 'get'
+  map.connect 'enqs/get/:id(.:format)?', :controller => 'enq', :action => 'get'
   #map.resources :enqs, :member => {:get => :get}
   #map.resources :enqs, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
   
