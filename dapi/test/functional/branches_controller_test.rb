@@ -12,15 +12,15 @@ class BranchesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create branche" do
-    assert_difference('Branche.count') do
-      post :create, :branche => { }
+  test "should create branch" do
+    assert_difference('Branch.count') do
+      post :create, :branch => { }
     end
 
-    assert_redirected_to branche_path(assigns(:branche))
+    assert_redirected_to branch_path(assigns(:branch))
   end
 
-  test "should show branche" do
+  test "should show branch" do
     get :show, :id => branches(:one).to_param
     assert_response :success
   end
@@ -30,13 +30,13 @@ class BranchesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update branche" do
-    put :update, :id => branches(:one).to_param, :branche => { }
-    assert_redirected_to branche_path(assigns(:branche))
+  test "should update branch" do
+    put :update, :id => branches(:one).to_param, :branch => { }
+    assert_redirected_to branch_path(assigns(:branch))
   end
 
-  test "should destroy branche" do
-    assert_difference('Branche.count', -1) do
+  test "should destroy branch" do
+    assert_difference('Branch.count', -1) do
       delete :destroy, :id => branches(:one).to_param
     end
 

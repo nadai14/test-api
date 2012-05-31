@@ -2,7 +2,7 @@ class BranchesController < ApplicationController
   # GET /branches
   # GET /branches.xml
   def index
-    @branches = Branche.all
+    @branches = Branch.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,42 +13,42 @@ class BranchesController < ApplicationController
   # GET /branches/1
   # GET /branches/1.xml
   def show
-    @branche = Branche.find(params[:id])
+    @branch = Branch.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @branche }
+      format.xml  { render :xml => @branch }
     end
   end
 
   # GET /branches/new
   # GET /branches/new.xml
   def new
-    @branche = Branche.new
+    @branch = Branch.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @branche }
+      format.xml  { render :xml => @branch }
     end
   end
 
   # GET /branches/1/edit
   def edit
-    @branche = Branche.find(params[:id])
+    @branch = Branch.find(params[:id])
   end
 
   # POST /branches
   # POST /branches.xml
   def create
-    @branche = Branche.new(params[:branche])
+    @branch = Branch.new(params[:branch])
 
     respond_to do |format|
-      if @branche.save
-        format.html { redirect_to(@branche, :notice => 'Branche was successfully created.') }
-        format.xml  { render :xml => @branche, :status => :created, :location => @branche }
+      if @branch.save
+        format.html { redirect_to(@branch, :notice => 'Branch was successfully created.') }
+        format.xml  { render :xml => @branch, :status => :created, :location => @branch }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @branche.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @branch.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -56,15 +56,15 @@ class BranchesController < ApplicationController
   # PUT /branches/1
   # PUT /branches/1.xml
   def update
-    @branche = Branche.find(params[:id])
+    @branch = Branch.find(params[:id])
 
     respond_to do |format|
-      if @branche.update_attributes(params[:branche])
-        format.html { redirect_to(@branche, :notice => 'Branche was successfully updated.') }
+      if @branch.update_attributes(params[:branch])
+        format.html { redirect_to(@branch, :notice => 'Branch was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @branche.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @branch.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -72,8 +72,8 @@ class BranchesController < ApplicationController
   # DELETE /branches/1
   # DELETE /branches/1.xml
   def destroy
-    @branche = Branche.find(params[:id])
-    @branche.destroy
+    @branch = Branch.find(params[:id])
+    @branch.destroy
 
     respond_to do |format|
       format.html { redirect_to(branches_url) }

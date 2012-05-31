@@ -5525,3 +5525,147 @@ ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_
 Rendered rescues/_trace (78.0ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:07:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (1.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (0.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (1.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 85ms (View: 13, DB: 16) | 200 OK [http://localhost/enq_pages/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 16:07:28) [GET]
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://localhost/enq_pages]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BranchesController#index (for 127.0.0.1 at 2012-05-31 16:08:31) [GET]
+  [4;36;1mBranche Load (0.0ms)[0m   [0;1mSELECT * FROM `branches` [0m
+Rendering template within layouts/branches
+Rendering branches/index
+  [4;35;1mBranche Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `branches`[0m
+
+ActionView::TemplateError (undefined method `edit_branche_path' for #<ActionView::Base:0x8466120>) on line #22 of app/views/branches/index.html.erb:
+19:     <td><%=h branche.update_name %></td>
+20:     <td><%=h branche.update_date %></td>
+21:     <td><%= link_to 'Show', branche %></td>
+22:     <td><%= link_to 'Edit', edit_branche_path(branche) %></td>
+23:     <td><%= link_to 'Destroy', branche, :confirm => 'Are you sure?', :method => :delete %></td>
+24:   </tr>
+25: <% end %>
+
+    app/views/branches/index.html.erb:22
+    app/views/branches/index.html.erb:13:in `each'
+    app/views/branches/index.html.erb:13
+    app/controllers/branches_controller.rb:7:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BranchesController#index (for 127.0.0.1 at 2012-05-31 16:11:43) [GET]
+
+LoadError (Expected C:/Users/koji16/Desktop/test-api/dapi/app/models/branch.rb to define Branch):
+  app/controllers/branches_controller.rb:5:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BranchesController#index (for 127.0.0.1 at 2012-05-31 16:12:11) [GET]
+  [4;36;1mBranch Load (0.0ms)[0m   [0;1mSELECT * FROM `branches` [0m
+Rendering template within layouts/branches
+Rendering branches/index
+  [4;35;1mBranch Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `branches`[0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/branches]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 16:12:16) [GET]
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 36ms (View: 15, DB: 2) | 200 OK [http://localhost/enq_pages]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:12:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (1.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (1.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mBranch Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
