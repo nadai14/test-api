@@ -2,10 +2,16 @@ class AnswersController < ApplicationController
   # GET /answers/1
   # GET /answers/1.xml
   def post
-    @answers = Answer.new
+    @answer = Answer.new(params[:answer])
 
     respond_to do |format|
-      format.json  { render :json => @answers }
+      if @answer.save
+        #format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
+        format.json  { render :json => @answer, :status => :created, :location => @answer }
+      else
+        #format.html { render :action => "new" }
+        format.json  { render :json => @answer.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
@@ -34,21 +40,12 @@ class AnswersController < ApplicationController
   # GET /answers/new
   # GET /answers/new.xml
   def new
-    begin
-      @answers = Answer.new
-	rescue
+    @answer = Answer.new
 
-	else
-      respond_to do |format|
-        format.json  { render :json => @answers }
-      end 
-  
-#    @answer = Answer.new
-
-#    respond_to do |format|
-#      format.html # new.html.erb
-#      format.xml  { render :xml => @answer }
-#    end
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @answer }
+    end
   end
 
   # GET /answers/1/edit

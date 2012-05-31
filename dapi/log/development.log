@@ -3929,3 +3929,1528 @@ ActiveRecord::RecordNotFound (Couldn't find Enq with ID=get):
 Rendered rescues/_trace (27.0ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:14:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=> params[:id]) or (enq_id = 1))' at line 1: SELECT * FROM `enq_pages` WHERE ((page_id => params[:id]) or (enq_id = 1)) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=> params[:id]) or (enq_id = 1))' at line 1: SELECT * FROM `enq_pages` WHERE ((page_id => params[:id]) or (enq_id = 1)) ):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2012-05-31 14:16:03) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: syntax error, unexpected tASSOC, expecting ')'
+		:conditions => [(:page_id => params[:id]) or (:enq_id = 1)...
+		                            ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: syntax error, unexpected kOR, expecting ']'
+... [(:page_id => params[:id]) or (:enq_id = 1)]#params[:enq_id...
+                              ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: syntax error, unexpected '=', expecting ')'
+... => params[:id]) or (:enq_id = 1)]#params[:enq_id])"]
+                              ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2012-05-31 14:16:48) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: syntax error, unexpected kOR, expecting ']'
+... [{:page_id => params[:id]} or {:enq_id = 1}]#params[:enq_id...
+                              ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: odd number list for Hash
+... => params[:id]} or {:enq_id = 1}]#params[:enq_id]}]
+                              ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:47: syntax error, unexpected '=', expecting '}'
+... => params[:id]} or {:enq_id = 1}]#params[:enq_id]}]
+                              ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:19:01) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (undefined local variable or method `param' for #<EnqPagesController:0x8809e00>):
+  app/controllers/enq_pages_controller.rb:47:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:19:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (28.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+
+ActiveRecord::ConfigurationError (Association named 'enq_question' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:20:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+
+ActiveRecord::ConfigurationError (Association named 'choice' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:20:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+
+ActiveRecord::ConfigurationError (Association named 'answer' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:20:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (1.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branch' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:20:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branches' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:21:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branchs' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:21:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branches' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:45:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:21:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (1.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 66ms (View: 13, DB: 17) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:21:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 85ms (View: 2, DB: 17) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:24:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:34:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:25:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 87ms (View: 2, DB: 14) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:25:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (1.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branch' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:34:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:25:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:34:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:26:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:34:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:27:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:34:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:28:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:31:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:28:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 66ms (View: 2, DB: 16) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:29:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+
+ActiveRecord::ConfigurationError (Association named 'enqs' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:31:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:30:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+Completed in 24ms (View: 2, DB: 4) | 200 OK [http://localhost/enq_pages/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:31:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:31:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:32:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+ActiveRecord::ConfigurationError (Association named 'branche' was not found; perhaps you misspelled it?):
+  app/controllers/enq_pages_controller.rb:31:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-31 14:34:18) [GET]
+
+ActionController::RoutingError (No route matches "/brances" with {:method=>:get}):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BranchesController#index (for 127.0.0.1 at 2012-05-31 14:34:24) [GET]
+  [4;35;1mBranche Load (1.0ms)[0m   [0mSELECT * FROM `branches` [0m
+Rendering template within layouts/branches
+Rendering branches/index
+  [4;36;1mBranche Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `branches`[0m
+
+ActionView::TemplateError (undefined method `edit_branche_path' for #<ActionView::Base:0x8570400>) on line #22 of app/views/branches/index.html.erb:
+19:     <td><%=h branche.update_name %></td>
+20:     <td><%=h branche.update_date %></td>
+21:     <td><%= link_to 'Show', branche %></td>
+22:     <td><%= link_to 'Edit', edit_branche_path(branche) %></td>
+23:     <td><%= link_to 'Destroy', branche, :confirm => 'Are you sure?', :method => :delete %></td>
+24:   </tr>
+25: <% end %>
+
+    app/views/branches/index.html.erb:22
+    app/views/branches/index.html.erb:13:in `each'
+    app/views/branches/index.html.erb:13
+    app/controllers/branches_controller.rb:7:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (77.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:34:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:31:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 14:53:24) [GET]
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 59ms (View: 50, DB: 4) | 200 OK [http://localhost/enqs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 14:53:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Rendering template within layouts/enqs
+Rendering enqs/show
+
+ActionView::TemplateError (undefined method `enq_id' for nil:NilClass) on line #3 of app/views/enqs/show.html.erb:
+1: <p>
+2:   <b>Enq:</b>
+3:   <%=h @enq.enq_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/enqs/show.html.erb:3
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 14:53:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 14:54:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (0.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (1.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (1.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/show
+
+ActionView::TemplateError (undefined method `enq_id' for nil:NilClass) on line #3 of app/views/enq_pages/show.html.erb:
+1: <p>
+2:   <b>Enq:</b>
+3:   <%=h @enq_page.enq_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/enq_pages/show.html.erb:3
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 15:16:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (1.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (0.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (0.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/show
+
+ActionView::TemplateError (undefined method `enq_id' for nil:NilClass) on line #3 of app/views/enq_pages/show.html.erb:
+1: <p>
+2:   <b>Enq:</b>
+3:   <%=h @enq_page.enq_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/enq_pages/show.html.erb:3
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:16:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/enqs/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#new (for 127.0.0.1 at 2012-05-31 15:16:34) [GET]
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Rendering template within layouts/enqs
+Rendering enqs/new
+Completed in 40ms (View: 30, DB: 4) | 200 OK [http://localhost/enqs/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#create (for 127.0.0.1 at 2012-05-31 15:16:45) [POST]
+  Parameters: {"authenticity_token"=>"7P/XeartDuwXK8NduqL7uRq8RsviOa/POTAV+EUcDf4=", "commit"=>"Create", "enq"=>{"title"=>"2", "update_date(2i)"=>"5", "update_date(1i)"=>"2012", "update_date(3i)"=>"31", "update_name"=>"2", "movie"=>"2", "description"=>"2", "enq_id"=>"2", "page_id"=>"2", "css"=>"2", "status"=>"2"}}
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEnq Create (0.0ms)[0m   [0mINSERT INTO `enqs` (`title`, `created_at`, `update_name`, `update_date`, `updated_at`, `enq_id`, `description`, `movie`, `page_id`, `css`, `status`) VALUES('2', '2012-05-31 06:16:45', '2', '2012-05-31', '2012-05-31 06:16:45', 2, '2', '2', 2, '2', 2)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/enqs/2
+Completed in 15ms (DB: 4) | 302 Found [http://localhost/enqs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:16:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/enqs/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:16:55) [GET]
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 21ms (View: 12, DB: 5) | 200 OK [http://localhost/enqs]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:16:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 13ms (View: 3, DB: 3) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:16:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 14ms (View: 4, DB: 3) | 200 OK [http://localhost/enqs/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:17:02) [GET]
+  Parameters: {"id"=>"get"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/enqs/get]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:17:05) [GET]
+  Parameters: {"id"=>"get"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/enqs/get]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:17:11) [GET]
+  Parameters: {"id"=>"get"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://localhost/enqs/get]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:17:28) [GET]
+  Parameters: {"id"=>"get"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 7ms (View: 1, DB: 2) | 200 OK [http://localhost/enqs/get]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:18:12) [GET]
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://localhost/enqs]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:18:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+Rendering template within layouts/enqs
+Rendering enqs/show
+
+ActionView::TemplateError (undefined method `enq_id' for nil:NilClass) on line #3 of app/views/enqs/show.html.erb:
+1: <p>
+2:   <b>Enq:</b>
+3:   <%=h @enq.enq_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/enqs/show.html.erb:3
+    app/controllers/enqs_controller.rb:41:in `show'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:18:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+Rendering template within layouts/enqs
+Rendering enqs/show
+
+ActionView::TemplateError (undefined method `enq_id' for nil:NilClass) on line #3 of app/views/enqs/show.html.erb:
+1: <p>
+2:   <b>Enq:</b>
+3:   <%=h @enq.enq_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/enqs/show.html.erb:3
+    app/controllers/enqs_controller.rb:41:in `show'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:19:11) [GET]
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/enqs]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:19:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 14ms (View: 4, DB: 3) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:19:15) [GET]
+  Parameters: {"id"=>"get"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/enqs/get]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 15:19:58) [GET]
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 22ms (View: 14, DB: 3) | 200 OK [http://localhost/answers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 15:19:59) [GET]
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Completed in 12ms (View: 2, DB: 2) | 200 OK [http://localhost/answers/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 15:20:13) [GET]
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 10ms (View: 2, DB: 3) | 200 OK [http://localhost/answers/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#index (for 127.0.0.1 at 2012-05-31 15:20:50) [GET]
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM `answers` [0m
+Rendering template within layouts/answers
+Rendering answers/index
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/answers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 15:20:51) [GET]
+  [4;36;1mAnswer Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/answers
+Rendering answers/new
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/answers/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AnswersController#new (for 127.0.0.1 at 2012-05-31 15:21:35) [GET]
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+Rendering template within layouts/answers
+Rendering answers/new
+Completed in 16ms (View: 9, DB: 4) | 200 OK [http://localhost/answers/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:26:33) [GET]
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 16ms (View: 8, DB: 5) | 200 OK [http://localhost/enqs]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:26:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://localhost/enqs/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:26:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 48ms (View: 5, DB: 3) | 200 OK [http://localhost/enqs/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-31 15:29:08) [GET]
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:14: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+        format.json  { head :ok, render :json => @enqs }
+                                         ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:31:20) [GET]
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;35;1mEnq Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 19ms (View: 9, DB: 3) | 200 OK [http://localhost/enqs]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-31 15:31:35) [GET]
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:40: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+        format.json  { head :ok, render :json => @enq_pages }
+                                         ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-05-31 15:31:56) [GET]
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:40: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+        format.json  { render :json => @enq_pages, head :ok  }
+                                                         ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:41:34) [GET]
+  Parameters: {"id"=>"get"}
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+Completed in 26ms (View: 3, DB: 1) | 200 OK [http://localhost/enqs/get]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:41:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 16ms (View: 5, DB: 4) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#index (for 127.0.0.1 at 2012-05-31 15:46:04) [GET]
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` [0m
+Rendering template within layouts/enqs
+Rendering enqs/index
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 60ms (View: 49, DB: 4) | 200 OK [http://localhost/enqs]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:46:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 15ms (View: 5, DB: 3) | 200 OK [http://localhost/enqs/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:46:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+Completed in 15ms (View: 4, DB: 2) | 200 OK [http://localhost/enqs/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:46:15) [GET]
+  Parameters: {"id"=>"get"}
+  [4;35;1mEnq Load (1.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+  app/controllers/enqs_controller.rb:46:in `show'
+  app/controllers/enqs_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2012-05-31 15:48:00) [GET]
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enq_pages_controller.rb:123: syntax error, unexpected $end, expecting kEND):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#new (for 127.0.0.1 at 2012-05-31 15:49:39) [GET]
+  [4;36;1mEnqPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/new
+Completed in 40ms (View: 25, DB: 3) | 200 OK [http://localhost/enq_pages/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#index (for 127.0.0.1 at 2012-05-31 15:49:51) [GET]
+  [4;35;1mEnqPage Load (1.0ms)[0m   [0mSELECT * FROM `enq_pages` [0m
+Rendering template within layouts/enq_pages
+Rendering enq_pages/index
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+Completed in 21ms (View: 12, DB: 5) | 200 OK [http://localhost/enq_pages]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 15:49:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEnqPage Load (0.0ms)[0m   [0mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;36;1mEnqPage Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+  [4;36;1mEnq Load (0.0ms)[0m   [0;1mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;35;1mEnqQuestion Load (1.0ms)[0m   [0mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;36;1mEnqQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_questions`[0m
+  [4;35;1mQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;35;1mChoice Load (0.0ms)[0m   [0mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;36;1mChoice Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;36;1mAnswer Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `answers`[0m
+
+NameError (uninitialized constant EnqPage::Branch):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:50:18) [GET]
+  Parameters: {"id"=>"get"}
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+  app/controllers/enqs_controller.rb:46:in `show'
+  app/controllers/enqs_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:50:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mEnq Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `enqs`[0m
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://localhost/enqs/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqsController#show (for 127.0.0.1 at 2012-05-31 15:51:38) [GET]
+  Parameters: {"id"=>"get"}
+  [4;36;1mEnq Load (1.0ms)[0m   [0;1mSELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = 'get') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+  app/controllers/enqs_controller.rb:46:in `show'
+  app/controllers/enqs_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

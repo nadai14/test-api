@@ -10,7 +10,13 @@ class EnqPagesController < ApplicationController
 		)
 
     respond_to do |format|
-      format.json  { render :json => @enq_pages }
+      if @enq_pages
+        #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
+        format.json  { render :json => @enq_pages }
+      else
+        #format.html { render :action => "index" }
+        format.json  { render :json => @enq_pages.errors }
+      end
     end
   end
   
@@ -28,28 +34,21 @@ class EnqPagesController < ApplicationController
   # GET /enq_pages/1
   # GET /enq_pages/1.xml
   def show
-    @enq_id = params[:enq_id]
-    @page_id = params[:id]
-
-#   @enq_pages = Enq.find(:all,
-#		:include => ["enq_pages","enq_questions"],
-#		:conditions => {:enq_id => 1}#params[:enq_id]},
-#		)
-		
-#	@enq_pages = Question.find(:all,
-#		:include => ["enq_questions","choices"],
-#		:conditions => {:question_id => 1}#params[@question_id]},
-#		)
-
+    @enq_pages = EnqPage.find(:all,
+	  :include => [{:enq => [{:enq_questions => [:question => :choices]}, :answers]}, :branches],
+	  :conditions => ["page_id = ? or enq_id = ?", params[:id], 1]#params[:enq_id]]
+	  )
 	
-	@enq_pages = EnqPage.find(:all,
-		:include => [{:enq => [{:enq_question => [:question => :choice]}, :answer]}, :branch],
-		:conditions => {:enq.page_id => params[:id], :enq.id => 1}#params[:enq_id]}
-		)
-				
     respond_to do |format|
-      format.json  { render :json => @enq_pages }
+      if @enq_pages
+        #format.html { redirect_to(@enqs, :notice => 'Enq was successfully created.') }
+        format.json  { render :json => @enq_pages }
+      else
+        #format.html { render :action => "index" }
+        format.json  { render :json => @enq_pages.errors }
+      end
     end
+	
 #    @enq_page = EnqPage.find(params[:id])
 
 #    respond_to do |format|
