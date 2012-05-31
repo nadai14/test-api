@@ -148,8 +148,10 @@ RoR では、すでに post, get についてはコントローラにメソッ�
 http://d.hatena.ne.jp/kiyo560808/20100630/1277883678
 
 	
+Branch のスペリングミスに気づく
 	
-	
+$ruby script/generate scaffold Branch
+ enq_id:integer num:integer answer:string page_id:integer update_name:string update_date:date 	
 	
 	
 	

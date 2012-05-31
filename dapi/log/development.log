@@ -5454,3 +5454,74 @@ The error occurred while evaluating nil.errors):
 Rendered rescues/_trace (64.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (26.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEnqs (20120530085133)
+Migrating to CreateEnqPages (20120530085142)
+Migrating to CreateEnqQuestions (20120530085157)
+Migrating to CreateBranches (20120530085258)
+Migrating to CreateQuestions (20120530085305)
+Migrating to CreateChoices (20120530085309)
+Migrating to CreateAnswers (20120530085313)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `answers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `answers`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `branches`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `branches`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `branches`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enq_pages`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `enq_pages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `enq_pages`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `enq_questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `enq_questions`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `enqs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `enqs`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnqPagesController#show (for 127.0.0.1 at 2012-05-31 16:00:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEnqPage Load (0.0ms)[0m   [0;1mSELECT * FROM `enq_pages` WHERE (page_id = '1' or enq_id = 1) [0m
+  [4;35;1mEnqPage Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_pages`[0m
+  [4;36;1mEnq Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `enqs`[0m
+  [4;35;1mEnq Load (0.0ms)[0m   [0mSELECT * FROM `enqs` WHERE (`enqs`.`id` = 1) [0m
+  [4;36;1mEnqQuestion Load (0.0ms)[0m   [0;1mSELECT `enq_questions`.* FROM `enq_questions` WHERE (`enq_questions`.enq_id = 1) [0m
+  [4;35;1mEnqQuestion Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `enq_questions`[0m
+  [4;36;1mQuestion Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mChoice Load (0.0ms)[0m   [0;1mSELECT `choices`.* FROM `choices` WHERE (`choices`.question_id = 1) [0m
+  [4;35;1mChoice Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mAnswer Load (1.0ms)[0m   [0;1mSELECT `answers`.* FROM `answers` WHERE (`answers`.enq_id = 1) [0m
+  [4;35;1mAnswer Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `answers`[0m
+  [4;36;1mBranch Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'branches.enq_page_id' in 'where clause': SELECT `branches`.* FROM `branches` WHERE (`branches`.enq_page_id = 1) ):
+  app/controllers/enq_pages_controller.rb:37:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
