@@ -20,6 +20,7 @@
     <td><%=h enq_page.interval %></td>
     <td><%=h enq_page.update_name %></td>
     <td><%=h enq_page.update_date %></td>
+    <td><%= link_to 'Get', enq_page, :action => 'get', :controller => 'enq_page'%></td>
     <td><%= link_to 'Show', enq_page %></td>
     <td><%= link_to 'Edit', edit_enq_page_path(enq_page) %></td>
     <td><%= link_to 'Destroy', enq_page, :confirm => 'Are you sure?', :method => :delete %></td>

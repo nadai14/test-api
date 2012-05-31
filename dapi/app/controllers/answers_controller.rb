@@ -2,7 +2,7 @@ class AnswersController < ApplicationController
   # GET /answers/1
   # GET /answers/1.xml
   def send
-    @answers = Answer.all
+    @answers = Answer.new
 
     respond_to do |format|
       format.json  { render :json => @answers }

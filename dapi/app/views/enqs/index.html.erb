@@ -24,7 +24,7 @@
     <td><%=h enq.movie %></td>
     <td><%=h enq.update_name %></td>
     <td><%=h enq.update_date %></td>
-    <td><%= link_to 'Get', enq, :method => :get %></td>	
+    <td><%= link_to 'Get', :controller => "enqs", :action => "get" %></td>	
     <td><%= link_to 'Show', enq %></td>
     <td><%= link_to 'Edit', edit_enq_path(enq) %></td>
     <td><%= link_to 'Destroy', enq, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,23 +1,23 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :enq_pages
 
   map.resources :answers
 
   map.resources :choices
-
+  
   map.resources :questions
 
   map.resources :branches
 
   map.resources :enq_questions
 
-  map.resources :enq_questions
-
   map.resources :enq_pages
 
+  map.resources :enqs, :collection => {:enqs => :get}
+  
   map.resources :enqs
-
-  map.root :controller => 'enq', :action => 'index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

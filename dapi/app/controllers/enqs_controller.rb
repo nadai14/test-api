@@ -9,18 +9,6 @@ class EnqsController < ApplicationController
     end
   end
 
-  # GET /enq_pages/1
-  # GET /enq_pages/1.json
-  def get_pages
-    @page_id = params[:page_id]
-  
-    @enq_pages = Enq.find(params[:id])
-
-    respond_to do |format|
-      format.json  { render :json => @enq_pages }
-    end
-  end
-  
   # GET /enqs
   # GET /enqs.xml
   def index
