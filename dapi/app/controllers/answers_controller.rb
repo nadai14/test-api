@@ -1,5 +1,23 @@
-
 class AnswersController < ApplicationController
+  # POST /answers/1
+  # POST /answers/1.xml
+  def post
+    @answer = Answer.new(params[:answer])
+
+    respond_to do |format|
+      if @answer.save
+	    @answer_result = true
+        format.html { redirect_to(@answer, :notice => 'Answer was successfully postted.') }
+        format.json  { render :json => [@answer, @answer_result], :status => :created, :location => @answer }
+      else
+	    @answer_result = false
+		@err_msg = 'error post'
+        format.html { render :action => "new" }
+        format.json  { render :json => [@answer.errors, @answer_result, @err_msg], :status => :unprocessable_entity }
+      end
+    end
+  end
+
   # GET /answers
   # GET /answers.json
   def index
