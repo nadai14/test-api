@@ -7,22 +7,25 @@
     <th>Content</th>
     <th>Update name</th>
     <th>Update date</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @choices.each do |choice| %>
   <tr>
-    <td><%=h choice.question_id %></td>
-    <td><%=h choice.choice_id %></td>
-    <td><%=h choice.content %></td>
-    <td><%=h choice.update_name %></td>
-    <td><%=h choice.update_date %></td>
+    <td><%= choice.question_id %></td>
+    <td><%= choice.choice_id %></td>
+    <td><%= choice.content %></td>
+    <td><%= choice.update_name %></td>
+    <td><%= choice.update_date %></td>
     <td><%= link_to 'Show', choice %></td>
     <td><%= link_to 'Edit', edit_choice_path(choice) %></td>
-    <td><%= link_to 'Destroy', choice, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', choice, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New choice', new_choice_path %>
+<%= link_to 'New Choice', new_choice_path %>

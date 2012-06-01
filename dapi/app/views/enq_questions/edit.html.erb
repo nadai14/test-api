@@ -1,32 +1,6 @@
 <h1>Editing enq_question</h1>
 
-<% form_for(@enq_question) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :enq_id %><br />
-    <%= f.text_field :enq_id %>
-  </p>
-  <p>
-    <%= f.label :num %><br />
-    <%= f.text_field :num %>
-  </p>
-  <p>
-    <%= f.label :question_id %><br />
-    <%= f.text_field :question_id %>
-  </p>
-  <p>
-    <%= f.label :update_name %><br />
-    <%= f.text_field :update_name %>
-  </p>
-  <p>
-    <%= f.label :update_date %><br />
-    <%= f.date_select :update_date %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @enq_question %> |
 <%= link_to 'Back', enq_questions_path %>

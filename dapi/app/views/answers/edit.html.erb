@@ -1,32 +1,6 @@
 <h1>Editing answer</h1>
 
-<% form_for(@answer) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :enq_id %><br />
-    <%= f.text_field :enq_id %>
-  </p>
-  <p>
-    <%= f.label :num %><br />
-    <%= f.text_field :num %>
-  </p>
-  <p>
-    <%= f.label :answer %><br />
-    <%= f.text_field :answer %>
-  </p>
-  <p>
-    <%= f.label :update_name %><br />
-    <%= f.text_field :update_name %>
-  </p>
-  <p>
-    <%= f.label :update_date %><br />
-    <%= f.date_select :update_date %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @answer %> |
 <%= link_to 'Back', answers_path %>

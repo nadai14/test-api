@@ -11,26 +11,29 @@
     <th>Answer description</th>
     <th>Update name</th>
     <th>Update date</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @questions.each do |question| %>
   <tr>
-    <td><%=h question.question_id %></td>
-    <td><%=h question.kind %></td>
-    <td><%=h question.title %></td>
-    <td><%=h question.content %></td>
-    <td><%=h question.required %></td>
-    <td><%=h question.answer_content %></td>
-    <td><%=h question.answer_description %></td>
-    <td><%=h question.update_name %></td>
-    <td><%=h question.update_date %></td>
+    <td><%= question.question_id %></td>
+    <td><%= question.kind %></td>
+    <td><%= question.title %></td>
+    <td><%= question.content %></td>
+    <td><%= question.required %></td>
+    <td><%= question.answer_content %></td>
+    <td><%= question.answer_description %></td>
+    <td><%= question.update_name %></td>
+    <td><%= question.update_date %></td>
     <td><%= link_to 'Show', question %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New question', new_question_path %>
+<%= link_to 'New Question', new_question_path %>

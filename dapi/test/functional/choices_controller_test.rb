@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ChoicesControllerTest < ActionController::TestCase
+  setup do
+    @choice = choices(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -14,30 +18,30 @@ class ChoicesControllerTest < ActionController::TestCase
 
   test "should create choice" do
     assert_difference('Choice.count') do
-      post :create, :choice => { }
+      post :create, choice: { choice_id: @choice.choice_id, content: @choice.content, question_id: @choice.question_id, update_date: @choice.update_date, update_name: @choice.update_name }
     end
 
     assert_redirected_to choice_path(assigns(:choice))
   end
 
   test "should show choice" do
-    get :show, :id => choices(:one).to_param
+    get :show, id: @choice
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => choices(:one).to_param
+    get :edit, id: @choice
     assert_response :success
   end
 
   test "should update choice" do
-    put :update, :id => choices(:one).to_param, :choice => { }
+    put :update, id: @choice, choice: { choice_id: @choice.choice_id, content: @choice.content, question_id: @choice.question_id, update_date: @choice.update_date, update_name: @choice.update_name }
     assert_redirected_to choice_path(assigns(:choice))
   end
 
   test "should destroy choice" do
     assert_difference('Choice.count', -1) do
-      delete :destroy, :id => choices(:one).to_param
+      delete :destroy, id: @choice
     end
 
     assert_redirected_to choices_path

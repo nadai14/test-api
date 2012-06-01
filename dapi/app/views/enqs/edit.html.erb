@@ -1,48 +1,6 @@
 <h1>Editing enq</h1>
 
-<% form_for(@enq) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :enq_id %><br />
-    <%= f.text_field :enq_id %>
-  </p>
-  <p>
-    <%= f.label :page_id %><br />
-    <%= f.text_field :page_id %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.label :css %><br />
-    <%= f.text_field :css %>
-  </p>
-  <p>
-    <%= f.label :movie %><br />
-    <%= f.text_field :movie %>
-  </p>
-  <p>
-    <%= f.label :update_name %><br />
-    <%= f.text_field :update_name %>
-  </p>
-  <p>
-    <%= f.label :update_date %><br />
-    <%= f.date_select :update_date %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @enq %> |
 <%= link_to 'Back', enqs_path %>

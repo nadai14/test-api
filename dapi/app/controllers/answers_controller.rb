@@ -1,53 +1,35 @@
+
 class AnswersController < ApplicationController
-  # POST /answers/1
-  # POST /answers/1.xml
-  def post
-    @answer = Answer.new(params[:answer])
-
-    respond_to do |format|
-      if @answer.save
-	    @answer_result = true
-        #format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
-        format.json  { render :json => [@answer, @answer_result], :status => :created, :location => @answer }
-      else
-	    @answer_result = false
-		@err_msg = 'error post'
-        #format.html { render :action => "new" }
-        format.json  { render :json => [@answer.errors, @answer_result, @err_msg], :status => :unprocessable_entity }
-      end
-    end
-  end
-
   # GET /answers
-  # GET /answers.xml
+  # GET /answers.json
   def index
     @answers = Answer.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @answers }
+      format.json { render json: @answers }
     end
   end
 
   # GET /answers/1
-  # GET /answers/1.xml
+  # GET /answers/1.json
   def show
     @answer = Answer.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @answer }
+      format.json { render json: @answer }
     end
   end
 
   # GET /answers/new
-  # GET /answers/new.xml
+  # GET /answers/new.json
   def new
     @answer = Answer.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @answer }
+      format.json { render json: @answer }
     end
   end
 
@@ -57,46 +39,46 @@ class AnswersController < ApplicationController
   end
 
   # POST /answers
-  # POST /answers.xml
+  # POST /answers.json
   def create
     @answer = Answer.new(params[:answer])
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
-        format.xml  { render :xml => @answer, :status => :created, :location => @answer }
+        format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
+        format.json { render json: @answer, status: :created, location: @answer }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PUT /answers/1
-  # PUT /answers/1.xml
+  # PUT /answers/1.json
   def update
     @answer = Answer.find(params[:id])
 
     respond_to do |format|
       if @answer.update_attributes(params[:answer])
-        format.html { redirect_to(@answer, :notice => 'Answer was successfully updated.') }
-        format.xml  { head :ok }
+        format.html { redirect_to @answer, notice: 'Answer was successfully updated.' }
+        format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.json { render json: @answer.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /answers/1
-  # DELETE /answers/1.xml
+  # DELETE /answers/1.json
   def destroy
     @answer = Answer.find(params[:id])
     @answer.destroy
 
     respond_to do |format|
-      format.html { redirect_to(answers_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to answers_url }
+      format.json { head :no_content }
     end
   end
 end

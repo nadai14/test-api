@@ -1,6 +1,3 @@
 class EnqQuestion < ActiveRecord::Base
-	belongs_to :enq
-	belongs_to :question, :foreign_key => 'question_id'
-	has_many :branches
-	has_many :answers
+  attr_accessible :enq_id, :num, :question_id, :update_date, :update_name
 end

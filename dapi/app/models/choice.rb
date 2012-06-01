@@ -1,3 +1,3 @@
 class Choice < ActiveRecord::Base
-	belongs_to :question
+  attr_accessible :choice_id, :content, :question_id, :update_date, :update_name
 end

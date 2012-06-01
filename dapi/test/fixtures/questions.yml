@@ -1,4 +1,4 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
   question_id: 1
@@ -9,7 +9,7 @@ one:
   answer_content: MyString
   answer_description: MyString
   update_name: MyString
-  update_date: 2012-05-30
+  update_date: 2012-06-01
 
 two:
   question_id: 1
@@ -20,4 +20,4 @@ two:
   answer_content: MyString
   answer_description: MyString
   update_name: MyString
-  update_date: 2012-05-30
+  update_date: 2012-06-01

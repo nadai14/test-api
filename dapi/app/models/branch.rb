@@ -1,6 +1,3 @@
 class Branch < ActiveRecord::Base
-	belongs_to :enq
-	belongs_to :enq_page
-	belongs_to :enq_question, :foreign_key => 'page_id'
-	belongs_to :answer
+  attr_accessible :answer, :enq_id, :next_page_id, :num, :update_date, :update_name
 end

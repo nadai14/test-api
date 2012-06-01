@@ -1,4 +1,3 @@
 class Answer < ActiveRecord::Base
-	belongs_to :enq
-	belongs_to :enq_questions
+  attr_accessible :answer, :enq_id, :num, :update_date, :update_name
 end

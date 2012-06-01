@@ -1,36 +1,43 @@
+<p id="notice"><%= notice %></p>
+
 <p>
   <b>Enq:</b>
-  <%=h @enq_page.enq_id %>
+  <%= @enq_page.enq_id %>
 </p>
 
 <p>
   <b>Page:</b>
-  <%=h @enq_page.page_id %>
+  <%= @enq_page.page_id %>
 </p>
 
 <p>
   <b>Face:</b>
-  <%=h @enq_page.face %>
+  <%= @enq_page.face %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%=h @enq_page.description %>
+  <%= @enq_page.description %>
 </p>
 
 <p>
-  <b>Interval:</b>
-  <%=h @enq_page.interval %>
+  <b>Wait until:</b>
+  <%= @enq_page.wait_until %>
+</p>
+
+<p>
+  <b>Next page:</b>
+  <%= @enq_page.next_page_id %>
 </p>
 
 <p>
   <b>Update name:</b>
-  <%=h @enq_page.update_name %>
+  <%= @enq_page.update_name %>
 </p>
 
 <p>
   <b>Update date:</b>
-  <%=h @enq_page.update_date %>
+  <%= @enq_page.update_date %>
 </p>
 
 

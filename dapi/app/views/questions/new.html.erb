@@ -1,47 +1,5 @@
 <h1>New question</h1>
 
-<% form_for(@question) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :question_id %><br />
-    <%= f.text_field :question_id %>
-  </p>
-  <p>
-    <%= f.label :kind %><br />
-    <%= f.text_field :kind %>
-  </p>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </p>
-  <p>
-    <%= f.label :required %><br />
-    <%= f.check_box :required %>
-  </p>
-  <p>
-    <%= f.label :answer_content %><br />
-    <%= f.text_field :answer_content %>
-  </p>
-  <p>
-    <%= f.label :answer_description %><br />
-    <%= f.text_field :answer_description %>
-  </p>
-  <p>
-    <%= f.label :update_name %><br />
-    <%= f.text_field :update_name %>
-  </p>
-  <p>
-    <%= f.label :update_date %><br />
-    <%= f.date_select :update_date %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', questions_path %>
