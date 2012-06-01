@@ -1,7 +1,10 @@
 Dapi::Application.routes.draw do
-  get "enq_pages/getEnqPage"
 
   resources :answers
+    collection do
+	  post 'sendAnswer'
+	end
+  end
 
   resources :choices
 
