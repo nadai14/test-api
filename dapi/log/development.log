@@ -1174,3 +1174,933 @@ Served asset /questions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:25:31 +0900
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/new" for 127.0.0.1 at 2012-06-01 14:41:43 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/models/enq.rb:3: syntax error, unexpected ':', expecting keyword_end
+  has_many: enq_pages
+           ^
+C:/Users/koji16/Desktop/test-api/dapi/app/models/enq.rb:4: syntax error, unexpected ':', expecting keyword_end
+  has_many: enq_questions
+           ^
+C:/Users/koji16/Desktop/test-api/dapi/app/models/enq.rb:5: syntax error, unexpected ':', expecting keyword_end
+  has_many: answers
+           ^):
+  app/controllers/enqs_controller.rb:2:in `<top (required)>'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/enqs/new" for 127.0.0.1 at 2012-06-01 14:45:43 +0900
+Processing by EnqsController#new as HTML
+  Rendered enqs/_form.html.erb (6.0ms)
+  Rendered enqs/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 50ms (Views: 35.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:43 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:43 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:43 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enq_questions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /answers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:45:44 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/enqs" for 127.0.0.1 at 2012-06-01 14:46:56 +0900
+Processing by EnqsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YML+SpChWz/It4Z+8mQMDqK0GR2LDJ+9+8AfcLRmb2w=", "enq"=>{"enq_id"=>"2", "first_page_id"=>"1", "status"=>"2", "title"=>"a", "description"=>"あ", "css"=>"あ", "movie"=>"あ", "thumbnail"=>"あ", "update_name"=>"a", "update_date(1i)"=>"2012", "update_date(2i)"=>"6", "update_date(3i)"=>"1"}, "commit"=>"Create Enq"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `enqs` (`created_at`, `css`, `description`, `enq_id`, `first_page_id`, `movie`, `status`, `thumbnail`, `title`, `update_date`, `update_name`, `updated_at`) VALUES ('2012-06-01 05:46:56', 'あ', 'あ', 2, 1, 'あ', 2, 'あ', 'a', '2012-06-01', 'a', '2012-06-01 05:46:56')[0m
+  [1m[35m (3.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/enqs/2
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/enqs/2" for 127.0.0.1 at 2012-06-01 14:46:56 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 2 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (undefined local variable or method `enq' for #<#<Class:0x3eed358>:0x2cd0000>):
+    50:   <%= @enq.update_date %>
+    51: </p>
+    52: 
+    53: <%= link_to 'Destroy', enq, confirm: 'Are you sure?', method: :delete %>
+    54: <%= link_to 'Edit', edit_enq_path(@enq) %> |
+    55: <%= link_to 'Back', enqs_path %>
+  app/views/enqs/show.html.erb:53:in `_app_views_enqs_show_html_erb___696209889_23488032'
+  app/controllers/enqs_controller.rb:41:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/enqs/2" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 2 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:10 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:11 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Processing by EnqsController#index as HTML
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` [0m
+  Rendered enqs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:24 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /choices.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:25 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/new" for 127.0.0.1 at 2012-06-01 14:47:29 +0900
+Processing by EnqsController#new as HTML
+  Rendered enqs/_form.html.erb (6.0ms)
+  Rendered enqs/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /answers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:30 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:31 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/enqs" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Processing by EnqsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YML+SpChWz/It4Z+8mQMDqK0GR2LDJ+9+8AfcLRmb2w=", "enq"=>{"enq_id"=>"4", "first_page_id"=>"2", "status"=>"2", "title"=>"2", "description"=>"あ", "css"=>"a", "movie"=>"2", "thumbnail"=>"あ", "update_name"=>"a", "update_date(1i)"=>"2012", "update_date(2i)"=>"6", "update_date(3i)"=>"1"}, "commit"=>"Create Enq"}
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `enqs` (`created_at`, `css`, `description`, `enq_id`, `first_page_id`, `movie`, `status`, `thumbnail`, `title`, `update_date`, `update_name`, `updated_at`) VALUES ('2012-06-01 05:47:45', 'a', 'あ', 4, 2, '2', 2, 'あ', '2', '2012-06-01', 'a', '2012-06-01 05:47:45')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/enqs/3
+Completed 302 Found in 17ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:45 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:46 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-01 14:47:48 +0900
+Processing by EnqsController#index as HTML
+  Rendered enqs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /enqs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:49 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:50 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:50 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:50 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/enqs/1" for 127.0.0.1 at 2012-06-01 14:47:58 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 1 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:58 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:58 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:47:59 +0900
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/enqs/1" for 127.0.0.1 at 2012-06-01 14:48:07 +0900
+Processing by EnqsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YML+SpChWz/It4Z+8mQMDqK0GR2LDJ+9+8AfcLRmb2w=", "id"=>"1"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM `enqs` WHERE (`enqs`.`id` = 1)[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/enqs
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-01 14:48:07 +0900
+Processing by EnqsController#index as HTML
+  Rendered enqs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:07 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enq_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:48:08 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/1" for 127.0.0.1 at 2012-06-01 14:53:21 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Enq with id=1):
+  app/controllers/enqs_controller.rb:39:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (16.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/enqs/2" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 2 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /enq_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:28 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:29 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/enqs/2" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Processing by EnqsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YML+SpChWz/It4Z+8mQMDqK0GR2LDJ+9+8AfcLRmb2w=", "id"=>"2"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM `enqs` WHERE (`enqs`.`id` = 2)[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/enqs
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Processing by EnqsController#index as HTML
+  Rendered enqs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /enq_questions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:37 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
+Served asset /application.js - 304 Not Modified (0ms)

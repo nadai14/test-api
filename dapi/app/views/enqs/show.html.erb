@@ -50,6 +50,6 @@
   <%= @enq.update_date %>
 </p>
 
-
+<%= link_to 'Destroy', @enq, confirm: 'Are you sure?', method: :delete %>
 <%= link_to 'Edit', edit_enq_path(@enq) %> |
 <%= link_to 'Back', enqs_path %>
