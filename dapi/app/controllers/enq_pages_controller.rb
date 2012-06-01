@@ -1,5 +1,29 @@
-
 class EnqPagesController < ApplicationController
+  # GET /enq_pages/1
+  # GET /enq_pages/1.json
+  def getEnqPage
+    @enq_pages = EnqPage.find(:first,
+	  :include => [{:enq => [{:enq_questions => [:question => :choices]}, :answers]}, :branches],
+	  :conditions => ["page_id = ? or enq_id = ?", params[:id], 1],
+	  :select => "enq_id, page_id, description, enq_questions.num, interval, questions.kind, questions.title, questions.content,
+					questions.required, choices.choice_id, choices.content, branches.answer, branches.page_id, questions.answer_content,
+					questions.answer_description"
+	  )
+
+    respond_to do |format|
+      if @enq_page
+	    @enq_page_result = true		
+        format.html  { render :html => @enq_page }
+        format.json  { render :json => [@enq_page, @enq_page_result] }
+      else
+	    @enq_page_result = false
+		@err_msg = 'get errot'
+        format.html  { render :action => "index" }
+        format.json  { render :json => [@enq_page.errors, @enq_page_result, @err_msg]}
+      end
+    end
+  end
+  
   # GET /enq_pages
   # GET /enq_pages.json
   def index

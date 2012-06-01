@@ -2104,3 +2104,2174 @@ Served asset /questions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 14:53:38 +0900
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-06-01 16:32:03 +0900
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Processing by EnqsController#index as HTML
+  Rendered enqs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /answers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /choices.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /answers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:09 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:10 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:10 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:10 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:10 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/enqs/1" for 127.0.0.1 at 2012-06-01 16:32:12 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Enq with id=1):
+  app/controllers/enqs_controller.rb:39:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/enqs/" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Processing by EnqsController#index as HTML
+  Rendered enqs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /choices.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:17 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /questions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 16:32:18 +0900
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:09:24 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1
+ERROR: compiling _app_views_enqs_show_html_erb___696209889_32647440 RAISED C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/show.html.erb:53: syntax error, unexpected tIVAR, expecting ')'
+...append= ( link_to 'getEnq' @enq, method: :getEnq );@output_b...
+...                               ^
+Function body:           def _app_views_enqs_show_html_erb___696209889_32647440(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "enqs/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Enq:</b>
+  ');@output_buffer.append= ( @enq.enq_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>First page:</b>
+  ');@output_buffer.append= ( @enq.first_page_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Status:</b>
+  ');@output_buffer.append= ( @enq.status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Title:</b>
+  ');@output_buffer.append= ( @enq.title );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Description:</b>
+  ');@output_buffer.append= ( @enq.description );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Css:</b>
+  ');@output_buffer.append= ( @enq.css );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Movie:</b>
+  ');@output_buffer.append= ( @enq.movie );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Thumbnail:</b>
+  ');@output_buffer.append= ( @enq.thumbnail );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Update name:</b>
+  ');@output_buffer.append= ( @enq.update_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Update date:</b>
+  ');@output_buffer.append= ( @enq.update_date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.append= ( link_to 'getEnq' @enq, method: :getEnq );@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Destroy', @enq, confirm: 'Are you sure?', method: :delete );@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Edit', edit_enq_path(@enq) );@output_buffer.safe_concat(' |
+');@output_buffer.append= ( link_to 'Back', enqs_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:297:in `module_eval'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:297:in `compile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:232:in `compile!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:144:in `block in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:125:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:143:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:18:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:110:in `_render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:88:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/Ruby193/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:41:in `show'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/base.rb:167:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:414:in `_run__739629089__process_action__102674622__callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/base.rb:121:in `process'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:45:in `process'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal.rb:203:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal.rb:246:in `block in action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:73:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:36:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:68:in `block in call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:56:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:600:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/flash.rb:238:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/query_cache.rb:64:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `_run__108789736__call__806240854__callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/logger.rb:26:in `call_app'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/logger.rb:16:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/static.rb:62:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/engine.rb:479:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/application.rb:220:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered enqs/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/show.html.erb:53: syntax error, unexpected tIVAR, expecting ')'
+...append= ( link_to 'getEnq' @enq, method: :getEnq );@output_b...
+...                               ^):
+    50:   <%= @enq.update_date %>
+    51: </p>
+    52: 
+    53: <%= link_to 'getEnq' @enq, method: :getEnq %>
+    54: <%= link_to 'Destroy', @enq, confirm: 'Are you sure?', method: :delete %>
+    55: <%= link_to 'Edit', edit_enq_path(@enq) %> |
+    56: <%= link_to 'Back', enqs_path %>
+  app/controllers/enqs_controller.rb:41:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /branches.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:55 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /choices.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:09:56 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/enqs/3" for 127.0.0.1 at 2012-06-01 17:09:58 +0900
+
+ActionController::RoutingError (No route matches [POST] "/enqs/3"):
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:15:06 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 13.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:06 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:06 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:06 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:06 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:15:07 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/enqs/3" for 127.0.0.1 at 2012-06-01 17:15:09 +0900
+
+ActionController::RoutingError (No route matches [POST] "/enqs/3"):
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/enqs/3" for 127.0.0.1 at 2012-06-01 17:15:18 +0900
+
+ActionController::RoutingError (No route matches [POST] "/enqs/3"):
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:08 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:09 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:16:10 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:10 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:11 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:16:20 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:20 +0900
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /answers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:16:21 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/3/getEnqs" for 127.0.0.1 at 2012-06-01 17:17:06 +0900
+
+AbstractController::ActionNotFound (The action 'getEnqs' could not be found for EnqsController):
+  actionpack (3.2.4) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.4) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.4) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.4) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.4) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__108789736__call__806240854__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:17:17 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT page_id, css, movie, title, description FROM `enqs` WHERE (id = '3') LIMIT 1
+Mysql2::Error: Unknown column 'page_id' in 'field list': SELECT  page_id, css, movie, title, description FROM `enqs`  WHERE (id = '3') LIMIT 1
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'page_id' in 'field list': SELECT  page_id, css, movie, title, description FROM `enqs`  WHERE (id = '3') LIMIT 1):
+  app/controllers/enqs_controller.rb:6:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:19:00 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT fitst_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '3') LIMIT 1[0m
+Mysql2::Error: Unknown column 'fitst_page_id' in 'field list': SELECT  fitst_page_id, css, movie, thumbnail, title, description FROM `enqs`  WHERE (id = '3') LIMIT 1
+Completed 500 Internal Server Error in 18ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'fitst_page_id' in 'field list': SELECT  fitst_page_id, css, movie, thumbnail, title, description FROM `enqs`  WHERE (id = '3') LIMIT 1):
+  app/controllers/enqs_controller.rb:6:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:19:10 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '3') LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `enq_id' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Enq:</b>
+    5:   <%= @enq.enq_id %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/enqs/show.html.erb:5:in `_app_views_enqs_show_html_erb___696209889_15972384'
+  app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+  app/controllers/enqs_controller.rb:11:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:19:57 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '3') LIMIT 1[0m
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:23:07 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '3') LIMIT 1
+Completed 406 Not Acceptable in 15ms (Views: 0.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/enqs/3/getEnq" for 127.0.0.1 at 2012-06-01 17:23:23 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '3') LIMIT 1[0m
+Completed 406 Not Acceptable in 15ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/enqs/3" for 127.0.0.1 at 2012-06-01 17:23:47 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 3 LIMIT 1
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/enqs/new" for 127.0.0.1 at 2012-06-01 17:24:02 +0900
+Processing by EnqsController#new as HTML
+  Rendered enqs/_form.html.erb (22.0ms)
+  Rendered enqs/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /questions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:03 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:04 +0900
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/enqs" for 127.0.0.1 at 2012-06-01 17:24:16 +0900
+Processing by EnqsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YML+SpChWz/It4Z+8mQMDqK0GR2LDJ+9+8AfcLRmb2w=", "enq"=>{"enq_id"=>"3", "first_page_id"=>"2", "status"=>"4", "title"=>"d", "description"=>"d", "css"=>"d", "movie"=>"d", "thumbnail"=>"d", "update_name"=>"d", "update_date(1i)"=>"2017", "update_date(2i)"=>"6", "update_date(3i)"=>"1"}, "commit"=>"Create Enq"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `enqs` (`created_at`, `css`, `description`, `enq_id`, `first_page_id`, `movie`, `status`, `thumbnail`, `title`, `update_date`, `update_name`, `updated_at`) VALUES ('2012-06-01 08:24:16', 'd', 'd', 3, 2, 'd', 4, 'd', 'd', '2017-06-01', 'd', '2012-06-01 08:24:16')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/enqs/4
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:24:16 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:24:31 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1[0m
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 28.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:41 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:24:42 +0900
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:28:27 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (32.0ms)
+Compiled enq.css  (26ms)  (pid 5460)
+Compiled application.css  (43ms)  (pid 5460)
+Compiled enq.js  (128ms)  (pid 5460)
+Compiled application.js  (177ms)  (pid 5460)
+Completed 200 OK in 580ms (Views: 543.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /answers.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /branches.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/enq.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /enq.css - 200 OK (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /choices.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /enq_pages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /enq_questions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /enqs.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /jquery.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:28 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /answers.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /branches.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /enq.js - 200 OK (2ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /enq_pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /enq_questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /questions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:28:29 +0900
+Served asset /application.js - 304 Not Modified (58ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:33:23 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1[0m
+  Rendered enqs/show.html.erb within layouts/application (33.0ms)
+Compiled application.css  (2ms)  (pid 4468)
+Compiled application.js  (3ms)  (pid 4468)
+Completed 200 OK in 336ms (Views: 311.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /enq_pages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /branches.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /enq_questions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /choices.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /answers.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /enqs.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /questions.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /jquery.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:24 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /branches.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /choices.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /enq_pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /enq_questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /enqs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:25 +0900
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/enqs/4" for 127.0.0.1 at 2012-06-01 17:33:28 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT `enqs`.* FROM `enqs` WHERE `enqs`.`id` = 4 LIMIT 1
+  Rendered enqs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /enqs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:29 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:30 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:30 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:30 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:33:30 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:33:49 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1
+  Rendered enqs/getEnq.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /enq_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:53 +0900
+Served asset /branches.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:34:54 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:37:28 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+  Rendered enqs/getEnq.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (undefined method `first_page_id' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>First page:</b>
+    5:   <%= @enq.first_page_id %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/enqs/getEnq.html.erb:5:in `_app_views_enqs_get_nq_html_erb__37570021_22283868'
+  app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+  app/controllers/enqs_controller.rb:11:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:38:39 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1
+  Rendered enqs/getEnq.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (missing attribute: update_name):
+    27: 
+    28: <p>
+    29:   <b>Update name:</b>
+    30:   <%= @enq.update_name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/enqs/getEnq.html.erb:30:in `_app_views_enqs_get_nq_html_erb__37570021_22283868'
+  app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+  app/controllers/enqs_controller.rb:11:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:38:55 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+  Rendered enqs/getEnq.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `join' for nil:NilClass):
+    25:   <%= @enq.title %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Destroy', @enq, confirm: 'Are you sure?', method: :delete %>
+    29: <%= link_to 'Edit', edit_enq_path(@enq) %> |
+    30: <%= link_to 'Back', enqs_path %>
+  app/views/enqs/getEnq.html.erb:28:in `_app_views_enqs_get_nq_html_erb__37570021_22285992'
+  app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+  app/controllers/enqs_controller.rb:11:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1
+  Rendered enqs/getEnq.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /branches.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /questions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:19 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:39:20 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+  Rendered enqs/getEnq.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Served asset /choices.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:21 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /enqs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:22 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:23 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:41:23 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:42:51 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1
+ERROR: compiling _app_views_enqs_get_nq_html_erb__37570021_22327044 RAISED C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+');@output_buffer.append= ( if @err_msg );@output_buffer.safe_concat('
+                                         ^
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_enqs_get_nq_html_erb__37570021_22327044(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "enqs/getEnq";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<p>
+  <b>First page:</b>
+  ');@output_buffer.append= ( @enq.first_page_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Css:</b>
+  ');@output_buffer.append= ( @enq.css );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Movie:</b>
+  ');@output_buffer.append= ( @enq.movie );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Thumbnail:</b>
+  ');@output_buffer.append= ( @enq.thumbnail );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Title:</b>
+  ');@output_buffer.append= ( @enq.title );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+<p>
+  <b>Result:</b>
+  ');@output_buffer.append= ( @enq_result );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.append= ( if @err_msg );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('<p>
+  <b>Error_message:</b>
+  ');@output_buffer.append= ( @enq_result );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.safe_concat('
+');@output_buffer.append= ( link_to 'Back', enqs_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:297:in `module_eval'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:297:in `compile'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:232:in `compile!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:144:in `block in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:125:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/template.rb:143:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/template_renderer.rb:18:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:110:in `_render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:88:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/Ruby193/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/mime_responds.rb:196:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:11:in `getEnq'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/base.rb:167:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:414:in `_run__960186934__process_action__590409933__callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/notifications.rb:123:in `instrument'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/base.rb:121:in `process'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/abstract_controller/rendering.rb:45:in `process'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal.rb:203:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_controller/metal.rb:246:in `block in action'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:73:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:36:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:68:in `block in call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:56:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/journey-1.0.3/lib/journey/router.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/routing/route_set.rb:600:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/flash.rb:238:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/query_cache.rb:64:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `_run__433704947__call__1028840905__callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/logger.rb:26:in `call_app'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/logger.rb:16:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/activesupport-3.2.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/static.rb:62:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/engine.rb:479:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/application.rb:220:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/railties-3.2.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered enqs/getEnq.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:33: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+');@output_buffer.append= ( if @err_msg );@output_buffer.safe_concat('
+                                         ^
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/koji16/Desktop/test-api/dapi/app/views/enqs/getEnq.html.erb:44: syntax error, unexpected keyword_end, expecting ')'):
+    30:   <%= @enq_result %>
+    31: </p>
+    32: 
+    33: <%= if @err_msg %>
+    34: <p>
+    35:   <b>Error_message:</b>
+    36:   <%= @enq_result %>
+  app/controllers/enqs_controller.rb:14:in `block (2 levels) in getEnq'
+  app/controllers/enqs_controller.rb:11:in `getEnq'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+  Rendered enqs/getEnq.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:36 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 17:44:37 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/enqs/4/getEnq" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Processing by EnqsController#getEnq as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT first_page_id, css, movie, thumbnail, title, description FROM `enqs` WHERE (id = '4') LIMIT 1[0m
+  Rendered enqs/getEnq.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 265ms (Views: 241.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /enq_questions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /choices.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /branches.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /answers.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:21 +0900
+Served asset /enq_pages.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /enqs.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /questions.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /jquery.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /answers.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /branches.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /choices.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /enq_questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /enqs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-01 18:03:22 +0900
+Served asset /application.js - 304 Not Modified (72ms)

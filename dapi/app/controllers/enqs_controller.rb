@@ -1,23 +1,23 @@
 
 class EnqsController < ApplicationController
-  # GET /enqs/1
-  # GET /enqs/1.json
-  def getEnqs
-    @enqs = Enq.find(:first,
-	  :select => "page_id, css, movie, title, description",
+  # GET /enqs/1/getEnq
+  # GET /enqs/1/getEnq.json
+  def getEnq
+    @enq = Enq.find(:first,
+	  :select => "first_page_id, css, movie, thumbnail, title, description",
 	  :conditions => ["id = ?", params[:id]]
 	  )
 
     respond_to do |format|
-      if @enqs
+      if @enq
 	    @enq_result = true		
-        format.html  { render :action => "show" }
-        format.json  { render :json => [@enqs, @enq_result] }
+        format.html  { render :html => @enq }
+        format.json  { render :json => [@enq, @enq_result] }
       else
 	    @enq_result = false
 		@err_msg = 'get errot'
         format.html  { render :action => "index" }
-        format.json  { render :json => [@enqs.errors, @enq_result, @err_msg]}
+        format.json  { render :json => [@enq.errors, @enq_result, @err_msg]}
       end
     end
   end

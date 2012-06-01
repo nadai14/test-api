@@ -1,4 +1,6 @@
 Dapi::Application.routes.draw do
+  get "enq_pages/getEnqPage"
+
   resources :answers
 
   resources :choices
@@ -9,9 +11,17 @@ Dapi::Application.routes.draw do
 
   resources :enq_questions
 
-  resources :enq_pages
+  resources :enq_pages do
+    collection do
+	  get 'getEnqPage'
+	end
+  end
 
-  resources :enqs
+  resources :enqs do
+	member do
+	  get 'getEnq'
+	end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
