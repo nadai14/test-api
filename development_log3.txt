@@ -64,8 +64,8 @@ http://d.hatena.ne.jp/emerald00/20111231/1325288027
 
 各テーブルのモデルを作成 
 $rails generate scaffold enq
- enq_id:integer page_id:integer first_page_id:integer status:integer title:string
- description:string css:string movie:string thumbnail:string update_name:string update_date:date
+ enq_id:integer first_page_id:integer status:integer title:string description:string
+ css:string movie:string thumbnail:string update_name:string update_date:date
  
 $rails generate scaffold enq_page
  enq_id:integer page_id:integer face:string description:string wait_until:time
@@ -87,3 +87,47 @@ $rails generate scaffold choice
 $rails generate scaffold answer
  enq_id:integer num:integer answer:string update_name:string update_date:date
 
+ 
+UUID のヘルパーを用意する
+lib/uuid_helper.rb
+---------------------------------------------------
+require 'rubygems'
+require 'uuidtools'
+
+module UUIDHelper
+  def before_create()
+    self.uuid = UUID.timestamp_create().to_s
+  end
+end
+----------------------------------------------------
+
+RoRで複合キーを管理する
+http://www.oiax.jp/rails/zakkan/composite_primary_keys_1.html
+
+GemFileに以下を追記
+~
+gem 'jquery-rails'
+
+gem "composite_primary_keys", "~> 5.0.4"
+
+[$gem install composite_primary_keys -v '5.0.6']
+そして、bundle install
+
+
+外部キーの追加
+http://codenote.net/ruby/rails/1094.html
+ 
+各マイグレーションファイルに、DB設計書に沿ったカラムを記述
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,8 +1,8 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
-      t.integer :question_id
-      t.string :kind
+      t.integer :question_id,		null: false
+      t.string :kind,				null: false
       t.string :title
       t.string :content
       t.boolean :required
@@ -13,5 +13,7 @@ class CreateQuestions < ActiveRecord::Migration
 
       t.timestamps
     end
+	
+	add_index	:questions,	:question_id,	unique: true
   end
 end

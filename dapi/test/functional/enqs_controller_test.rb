@@ -18,7 +18,7 @@ class EnqsControllerTest < ActionController::TestCase
 
   test "should create enq" do
     assert_difference('Enq.count') do
-      post :create, enq: { css: @enq.css, description: @enq.description, enq_id: @enq.enq_id, first_page_id: @enq.first_page_id, movie: @enq.movie, page_id: @enq.page_id, status: @enq.status, thumbnail: @enq.thumbnail, title: @enq.title, update_date: @enq.update_date, update_name: @enq.update_name }
+      post :create, enq: { css: @enq.css, description: @enq.description, enq_id: @enq.enq_id, first_page_id: @enq.first_page_id, movie: @enq.movie, status: @enq.status, thumbnail: @enq.thumbnail, title: @enq.title, update_date: @enq.update_date, update_name: @enq.update_name }
     end
 
     assert_redirected_to enq_path(assigns(:enq))
@@ -35,7 +35,7 @@ class EnqsControllerTest < ActionController::TestCase
   end
 
   test "should update enq" do
-    put :update, id: @enq, enq: { css: @enq.css, description: @enq.description, enq_id: @enq.enq_id, first_page_id: @enq.first_page_id, movie: @enq.movie, page_id: @enq.page_id, status: @enq.status, thumbnail: @enq.thumbnail, title: @enq.title, update_date: @enq.update_date, update_name: @enq.update_name }
+    put :update, id: @enq, enq: { css: @enq.css, description: @enq.description, enq_id: @enq.enq_id, first_page_id: @enq.first_page_id, movie: @enq.movie, status: @enq.status, thumbnail: @enq.thumbnail, title: @enq.title, update_date: @enq.update_date, update_name: @enq.update_name }
     assert_redirected_to enq_path(assigns(:enq))
   end
 

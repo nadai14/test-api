@@ -5,3 +5,102 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateEnqPages (20120601032823)
+  [1m[35m (4.0ms)[0m  CREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) DEFAULT 'PC' NOT NULL, `description` varchar(255), `wait_until` time, `next_page_id` int(11), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (8.0ms)[0m  [1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id_and_page_id_and_face` ON `enq_pages` (`enq_id`, `page_id`, `face`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601032823')
+Migrating to CreateEnqQuestions (20120601033028)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (59.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num` ON `enq_questions` (`enq_id`, `num`)
+  [1m[36m (18.0ms)[0m  [1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033028')
+Migrating to CreateBranches (20120601033158)
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE `branches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `answer` varchar(255) NOT NULL, `next_page_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num_and_answer` ON `enq_questions` (`enq_id`, `num`, `answer`)
+Mysql2::Error: Key column 'answer' doesn't exist in table: CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num_and_answer` ON `enq_questions` (`enq_id`, `num`, `answer`)
+Connecting to database specified by database.yml
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (58.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateEnqPages (20120601032823)
+  [1m[35m (6.0ms)[0m  CREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) DEFAULT 'PC' NOT NULL, `description` varchar(255), `wait_until` time, `next_page_id` int(11), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (16.0ms)[0m  [1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id_and_page_id_and_face` ON `enq_pages` (`enq_id`, `page_id`, `face`)[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601032823')
+Migrating to CreateEnqQuestions (20120601033028)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num` ON `enq_questions` (`enq_id`, `num`)
+  [1m[36m (11.0ms)[0m  [1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033028')
+Migrating to CreateBranches (20120601033158)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `branches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `answer` varchar(255) NOT NULL, `next_page_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num_and_answer` ON `enq_questions` (`enq_id`, `num`, `answer`)
+Mysql2::Error: Key column 'answer' doesn't exist in table: CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num_and_answer` ON `enq_questions` (`enq_id`, `num`, `answer`)
+Connecting to database specified by database.yml
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateEnqPages (20120601032823)
+  [1m[35m (4.0ms)[0m  CREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) DEFAULT 'PC' NOT NULL, `description` varchar(255), `wait_until` time, `next_page_id` int(11), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (8.0ms)[0m  [1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id_and_page_id_and_face` ON `enq_pages` (`enq_id`, `page_id`, `face`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601032823')
+Migrating to CreateEnqQuestions (20120601033028)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num` ON `enq_questions` (`enq_id`, `num`)
+  [1m[36m (8.0ms)[0m  [1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033028')
+Migrating to CreateBranches (20120601033158)
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE `branches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `answer` varchar(255) NOT NULL, `next_page_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX `index_branches_on_enq_id_and_num_and_answer` ON `branches` (`enq_id`, `num`, `answer`)
+  [1m[36m (8.0ms)[0m  [1mCREATE INDEX `index_branches_on_next_page_id` ON `branches` (`next_page_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033158')
+Migrating to CreateQuestions (20120601033403)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `kind` varchar(255) NOT NULL, `title` varchar(255), `content` varchar(255), `required` tinyint(1), `answer_content` varchar(255), `answer_description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (6.0ms)[0m  CREATE UNIQUE INDEX `index_questions_on_question_id` ON `questions` (`question_id`)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120601033403')[0m
+Migrating to CreateChoices (20120601033532)
+  [1m[35m (16.0ms)[0m  CREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `choice_id` int(11) NOT NULL, `content` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql2::Error: Table 'dapi_development.enq_choices' doesn't exist: SHOW KEYS FROM `enq_choices`
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateEnqPages (20120601032823)
+  [1m[35m (64.0ms)[0m  CREATE TABLE `enq_pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `page_id` int(11) NOT NULL, `face` varchar(255) DEFAULT 'PC' NOT NULL, `description` varchar(255), `wait_until` time, `next_page_id` int(11), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (17.0ms)[0m  [1mCREATE UNIQUE INDEX `index_enq_pages_on_enq_id_and_page_id_and_face` ON `enq_pages` (`enq_id`, `page_id`, `face`)[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601032823')
+Migrating to CreateEnqQuestions (20120601033028)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `enq_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `question_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX `index_enq_questions_on_enq_id_and_num` ON `enq_questions` (`enq_id`, `num`)
+  [1m[36m (10.0ms)[0m  [1mCREATE INDEX `index_enq_questions_on_question_id` ON `enq_questions` (`question_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033028')
+Migrating to CreateBranches (20120601033158)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `branches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` int(11) NOT NULL, `answer` varchar(255) NOT NULL, `next_page_id` int(11) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX `index_branches_on_enq_id_and_num_and_answer` ON `branches` (`enq_id`, `num`, `answer`)
+  [1m[36m (7.0ms)[0m  [1mCREATE INDEX `index_branches_on_next_page_id` ON `branches` (`next_page_id`)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033158')
+Migrating to CreateQuestions (20120601033403)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `kind` varchar(255) NOT NULL, `title` varchar(255), `content` varchar(255), `required` tinyint(1), `answer_content` varchar(255), `answer_description` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX `index_questions_on_question_id` ON `questions` (`question_id`)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120601033403')[0m
+Migrating to CreateChoices (20120601033532)
+  [1m[35m (4.0ms)[0m  CREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) NOT NULL, `choice_id` int(11) NOT NULL, `content` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (7.0ms)[0m  [1mCREATE UNIQUE INDEX `index_choices_on_question_id_and_choice_id` ON `choices` (`question_id`, `choice_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601033532')
+Migrating to CreateAnswers (20120601033647)
+  [1m[36m (47.0ms)[0m  [1mCREATE TABLE `answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `num` varchar(255) NOT NULL, `answer` varchar(255) NOT NULL, `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (46.0ms)[0m  CREATE UNIQUE INDEX `index_answers_on_enq_id_and_num` ON `answers` (`enq_id`, `num`)
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120601033647')[0m
+Migrating to CreateEnqs (20120601035448)
+  [1m[35m (4.0ms)[0m  CREATE TABLE `enqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `enq_id` int(11) NOT NULL, `first_page_id` int(11) DEFAULT 1 NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `title` varchar(255), `description` varchar(255), `css` varchar(255), `movie` varchar(255), `thumbnail` varchar(255), `update_name` varchar(255), `update_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (8.0ms)[0m  [1mCREATE UNIQUE INDEX `index_enqs_on_enq_id` ON `enqs` (`enq_id`)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120601035448')
+  [1m[36m (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m

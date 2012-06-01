@@ -2,7 +2,6 @@
 
 one:
   enq_id: 1
-  page_id: 1
   first_page_id: 1
   status: 1
   title: MyString
@@ -15,7 +14,6 @@ one:
 
 two:
   enq_id: 1
-  page_id: 1
   first_page_id: 1
   status: 1
   title: MyString
