@@ -1,8 +1,10 @@
 RewardApi::Application.routes.draw do
 
-  resources :enqs, :only => ['show'] do
-    resources :pages, :controller => 'enq_pages', :only => ['index', 'show'] do
-      resources :answers, :controller => 'answers', :only => ['create']
+  scope "api/v1" do
+    resources :enqs, :only => ['show'] do
+      resources :pages, :controller => 'enq_pages', :only => ['index', 'show'] do
+        resources :answers, :controller => 'answers', :only => ['create']
+      end
     end
   end
 
