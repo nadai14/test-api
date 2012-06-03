@@ -11,17 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603090708) do
+ActiveRecord::Schema.define(:version => 20120603151938) do
 
   create_table "enq_faces", :id => false, :force => true do |t|
     t.string   "uuid",          :limit => 36
     t.string   "enq_id"
-    t.integer  "face"
+    t.string   "face"
     t.string   "first_page_id"
     t.time     "wait_until"
     t.string   "css"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
+  end
+
+  create_table "enq_pages", :id => false, :force => true do |t|
+    t.string   "uuid",         :limit => 36
+    t.string   "enq_face_id"
+    t.text     "description"
+    t.string   "next_page_id"
+    t.integer  "wait_until"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "enqs", :id => false, :force => true do |t|

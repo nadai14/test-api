@@ -2,14 +2,14 @@
 
 one:
   enq_id: MyString
-  face: 1
+  face: TO
   first_page_id: MyString
   wait_until: 2012-06-03 18:07:08
   css: MyString
 
 two:
   enq_id: MyString
-  face: 1
+  face: PC
   first_page_id: MyString
   wait_until: 2012-06-03 18:07:08
   css: MyString
