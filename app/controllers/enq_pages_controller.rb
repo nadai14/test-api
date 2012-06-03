@@ -2,7 +2,7 @@
 
 class EnqPagesController < ApplicationController
 
-  def index
+  def first
     a = EnqFace.all
     render :json => a.to_json
   end
