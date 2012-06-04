@@ -1,6 +1,8 @@
 Dapi::Application.routes.draw do
 
-  resources :answers
+  resources :enq_faces
+
+  resources :answers do
     collection do
 	  post 'sendAnswer'
 	end

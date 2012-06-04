@@ -3,21 +3,18 @@ class EnqsController < ApplicationController
   # GET /enqs/1/getEnq
   # GET /enqs/1/getEnq.json
   def getEnq
-    @enq = Enq.find(:first,
-	  :select => "first_page_id, css, movie, thumbnail, title, description",
-	  :conditions => ["id = ?", params[:id]]
+    enq = Enq.find_by_uuid(params[:id],
+	  joins=>"INNER JOIN faces ON enqs.face = enq_faces.face AND enqs.id = enq_faces.enq_id"
 	  )
 
     respond_to do |format|
-      if @enq
-	    @enq_result = true		
-        format.html  { render :html => @enq }
-        format.json  { render :json => [@enq, @enq_result] }
+      if enq
+	    enq_result = true
+        format.json  { render :json => [enq, enq_result] }
       else
-	    @enq_result = false
-		@err_msg = 'get errot'
-        format.html  { render :action => "index" }
-        format.json  { render :json => [@enq.errors, @enq_result, @err_msg]}
+	    enq_result = false
+		err_msg = 'get errot'
+        format.json  { render :json => [enq.errors, enq_result, err_msg]}
       end
     end
   end

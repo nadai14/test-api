@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Enq:</b>
+  <%= @enq_face.enq_id %>
+</p>
+
+<p>
+  <b>Face:</b>
+  <%= @enq_face.face %>
+</p>
+
+<p>
+  <b>First page:</b>
+  <%= @enq_face.first_page_id %>
+</p>
+
+<p>
+  <b>Wait until:</b>
+  <%= @enq_face.wait_until %>
+</p>
+
+<p>
+  <b>Css:</b>
+  <%= @enq_face.css %>
+</p>
+
+<p>
+  <b>Update name:</b>
+  <%= @enq_face.update_name %>
+</p>
+
+<p>
+  <b>Update date:</b>
+  <%= @enq_face.update_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_enq_face_path(@enq_face) %> |
+<%= link_to 'Back', enq_faces_path %>

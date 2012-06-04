@@ -1,6 +1,8 @@
 class CreateBranches < ActiveRecord::Migration
   def change
-    create_table :branches do |t|
+    #create_table :branches, :id => false do |t|
+	#  t.string :uuid,	:limit => 36,	:primary => true
+	create_table :branches do |t|
       t.integer :enq_id,		null: false
       t.integer :num,			null: false
       t.string :answer,			null: false
