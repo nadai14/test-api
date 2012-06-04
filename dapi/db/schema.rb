@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120601035448) do
+ActiveRecord::Schema.define(:version => 20120604073954) do
 
   create_table "answers", :force => true do |t|
     t.integer  "enq_id",      :null => false
@@ -50,6 +50,20 @@ ActiveRecord::Schema.define(:version => 20120601035448) do
   end
 
   add_index "choices", ["question_id", "choice_id"], :name => "index_choices_on_question_id_and_choice_id", :unique => true
+
+  create_table "enq_faces", :force => true do |t|
+    t.integer  "enq_id",                       :null => false
+    t.string   "face",                         :null => false
+    t.integer  "first_page_id", :default => 1, :null => false
+    t.time     "wait_until"
+    t.string   "css"
+    t.string   "update_name"
+    t.date     "update_date"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "enq_faces", ["enq_id", "face"], :name => "index_enq_faces_on_enq_id_and_face", :unique => true
 
   create_table "enq_pages", :force => true do |t|
     t.integer  "enq_id",                         :null => false

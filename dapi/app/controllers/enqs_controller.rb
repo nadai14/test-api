@@ -33,12 +33,24 @@ class EnqsController < ApplicationController
   # GET /enqs/1
   # GET /enqs/1.json
   def show
-    @enq = Enq.find(params[:id])
+    #enq = Enq.find_by_uuid(params[:id])
+	enq_face = 'iOS'
+	
+	enq = Enq.find_by_id(params[:id],
+						:include => :enq_faces,
+						:conditions => ["enq_faces.face = ?", enq_face]
+						)
+	render :json => enq.to_json(:include => :enq_faces,
+								:render => [enq.id, enq.enq_faces.first_page_id, enq.enq_faces.wait_until,
+								enq.enq_faces.css, enq.movie, enq.thumbnail, enq.title, enq.description]
+								)
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @enq }
-    end
+#    @enq = Enq.find(params[:id])
+#
+#    respond_to do |format|
+#      format.html # show.html.erb
+#      format.json { render json: @enq }
+#    end
   end
 
   # GET /enqs/new
