@@ -1,5 +1,11 @@
 Dapi::Application.routes.draw do
 
+  scope "api/v1" do
+    get 'enqs/:id/:enq_face' => 'enqs#getEnq'
+	
+	resources :enqs, :only => ['getEnq']
+  end
+
   resources :enq_faces
 
   resources :answers do

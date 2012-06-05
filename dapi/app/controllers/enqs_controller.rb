@@ -1,22 +1,21 @@
+# coding: utf-8
 
 class EnqsController < ApplicationController
   # GET /enqs/1/getEnq
   # GET /enqs/1/getEnq.json
   def getEnq
-    enq = Enq.find_by_uuid(params[:id],
-	  joins=>"INNER JOIN faces ON enqs.face = enq_faces.face AND enqs.id = enq_faces.enq_id"
-	  )
-
-    respond_to do |format|
-      if enq
-	    enq_result = true
-        format.json  { render :json => [enq, enq_result] }
-      else
-	    enq_result = false
-		err_msg = 'get errot'
-        format.json  { render :json => [enq.errors, enq_result, err_msg]}
-      end
-    end
+	enq_face = params[:enq_face]
+	message = "<p>友達にシェアしよう！</p>"
+	
+    #enq = Enq.find_by_uuid(params[:id]),
+	enq = Enq.find_by_id(params[:id],
+						:include => :enq_faces,
+						:conditions => ["enq_faces.face = ?", enq_face]
+						)
+	render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
+								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
+								),
+					message.to_json]
   end
 
   # GET /enqs
@@ -33,16 +32,18 @@ class EnqsController < ApplicationController
   # GET /enqs/1
   # GET /enqs/1.json
   def show
-    #enq = Enq.find_by_uuid(params[:id])
-	enq_face = 'iOS'
+	enq_face = params[:enq_face]
+	message = "<p>友達にシェアしよう！</p>"
 	
+    #enq = Enq.find_by_uuid(params[:id]),
 	enq = Enq.find_by_id(params[:id],
 						:include => :enq_faces,
 						:conditions => ["enq_faces.face = ?", enq_face]
 						)
-	render :json => enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
+	render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
 								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
-								)
+								),
+					message]
 
 #    @enq = Enq.find(params[:id])
 #
