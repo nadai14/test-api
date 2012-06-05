@@ -148,7 +148,15 @@ $rails g controller enqs getEnq
   end
 
 
-  
+レンダリング時に他のテーブルの値を渡すには
+ 	enq = Enq.find_by_id(params[:id],
+						:include => :enq_faces,
+						:conditions => ["enq_faces.face = ?", enq_face]
+						)
+	render :json => enq.to_json(:include => :enq_faces,
+								:render => [enq.id, enq.enq_faces.first_page_id, enq.enq_faces.wait_until,
+								enq.enq_faces.css, enq.movie, enq.thumbnail, enq.title, enq.description]
+								) 
   
   
   

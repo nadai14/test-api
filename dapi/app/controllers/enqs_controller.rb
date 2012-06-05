@@ -40,9 +40,8 @@ class EnqsController < ApplicationController
 						:include => :enq_faces,
 						:conditions => ["enq_faces.face = ?", enq_face]
 						)
-	render :json => enq.to_json(:include => :enq_faces,
-								:render => [enq.id, enq.enq_faces.first_page_id, enq.enq_faces.wait_until,
-								enq.enq_faces.css, enq.movie, enq.thumbnail, enq.title, enq.description]
+	render :json => enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
+								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
 								)
 
 #    @enq = Enq.find(params[:id])

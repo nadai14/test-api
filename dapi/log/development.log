@@ -10399,3 +10399,561 @@ Processing by EnqsController#show as HTML
   [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
   [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
 Completed 200 OK in 34ms (Views: 0.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-04 18:30:02 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 34ms
+
+NameError (undefined local variable or method `id' for #<EnqsController:0x3fef9a0>):
+  app/controllers/enqs_controller.rb:44:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-05 10:05:48 +0900
+Processing by EnqsController#index as HTML
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT `enqs`.* FROM `enqs` [0m
+  Rendered enqs/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 1125ms (Views: 1077.1ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /answers.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /branches.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /choices.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /enq_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_faces.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /enq_faces.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /enq_questions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /enqs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:49 +0900
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /jquery.js - 304 Not Modified (57ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /answers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /choices.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enq_faces.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /enq_faces.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /enq_pages.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /enq_questions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /enqs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /application.js - 304 Not Modified (57ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:05:50 +0900
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:24:50 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')[0m
+  [1m[35mEnqFace Load (0.0ms)[0m  SELECT `enq_faces`.* FROM `enq_faces` WHERE `enq_faces`.`enq_id` = 6
+Completed 500 Internal Server Error in 153ms
+
+NoMethodError (undefined method `first_page_id' for #<ActiveRecord::Relation:0x41c68b0>):
+  app/controllers/enqs_controller.rb:44:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:25:03 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 76ms (Views: 0.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:29:55 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 34ms (Views: 0.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:31:26 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 45ms (Views: 0.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/enq_faces" for 127.0.0.1 at 2012-06-05 10:48:19 +0900
+Processing by EnqFacesController#index as HTML
+  [1m[36mEnqFace Load (1.0ms)[0m  [1mSELECT `enq_faces`.* FROM `enq_faces` [0m
+  Rendered enq_faces/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:19 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:19 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:19 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:19 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_faces.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_faces.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_faces.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:20 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:21 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:21 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enq_faces/new" for 127.0.0.1 at 2012-06-05 10:48:22 +0900
+Processing by EnqFacesController#new as HTML
+  Rendered enq_faces/_form.html.erb (143.0ms)
+  Rendered enq_faces/new.html.erb within layouts/application (266.0ms)
+Completed 200 OK in 300ms (Views: 299.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:22 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:22 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /enq_faces.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:23 +0900
+Served asset /branches.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /enq_faces.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-05 10:48:24 +0900
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/enq_faces" for 127.0.0.1 at 2012-06-05 10:48:43 +0900
+Processing by EnqFacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7erf/l7M4JmYZOtjx48fi8HTjZ76MPvDayxzadP+to=", "enq_face"=>{"enq_id"=>"6", "face"=>"iOS", "first_page_id"=>"2", "wait_until(1i)"=>"2012", "wait_until(2i)"=>"6", "wait_until(3i)"=>"5", "wait_until(4i)"=>"01", "wait_until(5i)"=>"48", "css"=>"b", "update_name"=>"b", "update_date(1i)"=>"2012", "update_date(2i)"=>"6", "update_date(3i)"=>"5"}, "commit"=>"Create Enq face"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `enq_faces` (`created_at`, `css`, `enq_id`, `face`, `first_page_id`, `update_date`, `update_name`, `updated_at`, `wait_until`) VALUES ('2012-06-05 01:48:43', 'b', 6, 'iOS', 2, '2012-06-05', 'b', '2012-06-05 01:48:43', '2012-06-05 01:48:00')[0m
+Mysql2::Error: Duplicate entry '6-iOS' for key 'index_enq_faces_on_enq_id_and_face': INSERT INTO `enq_faces` (`created_at`, `css`, `enq_id`, `face`, `first_page_id`, `update_date`, `update_name`, `updated_at`, `wait_until`) VALUES ('2012-06-05 01:48:43', 'b', 6, 'iOS', 2, '2012-06-05', 'b', '2012-06-05 01:48:43', '2012-06-05 01:48:00')
+  [1m[35m (2.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 31ms
+
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry '6-iOS' for key 'index_enq_faces_on_enq_id_and_face': INSERT INTO `enq_faces` (`created_at`, `css`, `enq_id`, `face`, `first_page_id`, `update_date`, `update_name`, `updated_at`, `wait_until`) VALUES ('2012-06-05 01:48:43', 'b', 6, 'iOS', 2, '2012-06-05', 'b', '2012-06-05 01:48:43', '2012-06-05 01:48:00')):
+  app/controllers/enq_faces_controller.rb:47:in `block in create'
+  app/controllers/enq_faces_controller.rb:46:in `create'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started POST "/enq_faces" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Processing by EnqFacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7erf/l7M4JmYZOtjx48fi8HTjZ76MPvDayxzadP+to=", "enq_face"=>{"enq_id"=>"6", "face"=>"test", "first_page_id"=>"2", "wait_until(1i)"=>"2012", "wait_until(2i)"=>"6", "wait_until(3i)"=>"5", "wait_until(4i)"=>"01", "wait_until(5i)"=>"48", "css"=>"b", "update_name"=>"b", "update_date(1i)"=>"2012", "update_date(2i)"=>"6", "update_date(3i)"=>"5"}, "commit"=>"Create Enq face"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `enq_faces` (`created_at`, `css`, `enq_id`, `face`, `first_page_id`, `update_date`, `update_name`, `updated_at`, `wait_until`) VALUES ('2012-06-05 01:50:17', 'b', 6, 'test', 2, '2012-06-05', 'b', '2012-06-05 01:50:17', '2012-06-05 01:48:00')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/enq_faces/3
+Completed 302 Found in 19ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/enq_faces/3" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Processing by EnqFacesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEnqFace Load (0.0ms)[0m  SELECT `enq_faces`.* FROM `enq_faces` WHERE `enq_faces`.`id` = 3 LIMIT 1
+  Rendered enq_faces/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Served asset /answers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:17 +0900
+Served asset /enq_faces.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enq_faces.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:18 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:19 +0900
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/enq_faces" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Processing by EnqFacesController#index as HTML
+  Rendered enq_faces/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/branches.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /branches.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/answers.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /answers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /choices.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /enq_faces.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /enq_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /enq_questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /enqs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:21 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/answers.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /answers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/branches.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /branches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/choices.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /choices.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_faces.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /enq_faces.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_pages.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /enq_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enq_questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /enq_questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enqs.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /enqs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-05 10:50:22 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:50:25 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 5ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/enqs/6" for 127.0.0.1 at 2012-06-05 10:50:37 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'test') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'test')
+Completed 200 OK in 44ms (Views: 1.0ms | ActiveRecord: 9.0ms)
