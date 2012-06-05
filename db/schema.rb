@@ -15,35 +15,37 @@ ActiveRecord::Schema.define(:version => 20120603151938) do
 
   create_table "enq_faces", :id => false, :force => true do |t|
     t.string   "uuid",          :limit => 36
-    t.string   "enq_id"
-    t.string   "face"
+    t.string   "enq_id",                      :null => false
+    t.string   "face",                        :null => false
+    t.integer  "point",                       :null => false
     t.string   "first_page_id"
-    t.time     "wait_until"
+    t.integer  "wait_until"
     t.string   "css"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
   end
 
   create_table "enq_pages", :id => false, :force => true do |t|
     t.string   "uuid",         :limit => 36
-    t.string   "enq_face_id"
+    t.string   "enq_face_id",                :null => false
     t.text     "description"
     t.string   "next_page_id"
     t.integer  "wait_until"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
   end
 
   create_table "enqs", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
-    t.integer  "status"
+    t.integer  "status",                    :default => 0, :null => false
+    t.datetime "closed_at"
     t.string   "title"
     t.text     "description"
     t.text     "message"
     t.string   "movie"
     t.string   "thumbnail"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
   end
 
 end

@@ -8,4 +8,4 @@
 
 enq = Enq.create(status: 0, title: 'title', description: 'desc', message: 'msg', movie: 'movie', thumbnail: 'thumbnail')
 
-EnqFace.create(enq_id: enq.uuid, face: 'TO', first_page_id: 'page1', wait_until: '10:00:00', css: 'css')
+EnqFace.create(enq_id: enq.uuid, face: 'TO', point: 10, first_page_id: 'page1', wait_until: '10:00:00', css: 'css')
