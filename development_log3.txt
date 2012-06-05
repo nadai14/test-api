@@ -166,9 +166,9 @@ application_controller.rb
 routes.rb のお手本
 http://www.rubylife.jp/rails/controller/index6.html
   
-
-
-
+ActiveRecord の find(id) はnilを返さない
+http://d.hatena.ne.jp/koseki2/20070627/findnil
+http://higelog.brassworks.jp/?p=71
 
  
  
