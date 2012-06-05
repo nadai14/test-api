@@ -163,7 +163,8 @@ $rails g controller enqs getEnq
 共通的な例外処理をまとめる　rescue_from
 application_controller.rb
 
-  
+routes.rb のお手本
+http://www.rubylife.jp/rails/controller/index6.html
   
 
 
