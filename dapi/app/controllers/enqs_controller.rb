@@ -7,15 +7,20 @@ class EnqsController < ApplicationController
 	enq_face = params[:enq_face]
 	message = "<p>友達にシェアしよう！</p>"
 	
-    #enq = Enq.find_by_uuid(params[:id]),
-	enq = Enq.find_by_id(params[:id],
-						:include => :enq_faces,
-						:conditions => ["enq_faces.face = ?", enq_face]
-						)
-	render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
-								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
-								),
-					message.to_json]
+	begin
+      #enq = Enq.find_by_uuid(params[:id]),
+	  enq = Enq.find_by_id(params[:id],
+							:include => :enq_faces,
+							:conditions => ["enq_faces.face = ?", enq_face]
+							)
+	rescue
+	
+	else
+	  render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
+									:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
+									),
+						message.to_json]
+	end
   end
 
   # GET /enqs
@@ -32,25 +37,12 @@ class EnqsController < ApplicationController
   # GET /enqs/1
   # GET /enqs/1.json
   def show
-	enq_face = params[:enq_face]
-	message = "<p>友達にシェアしよう！</p>"
-	
-    #enq = Enq.find_by_uuid(params[:id]),
-	enq = Enq.find_by_id(params[:id],
-						:include => :enq_faces,
-						:conditions => ["enq_faces.face = ?", enq_face]
-						)
-	render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description],
-								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
-								),
-					message]
+    @enq = Enq.find(params[:id])
 
-#    @enq = Enq.find(params[:id])
-#
-#    respond_to do |format|
-#      format.html # show.html.erb
-#      format.json { render json: @enq }
-#    end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @enq }
+    end
   end
 
   # GET /enqs/new

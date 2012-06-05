@@ -157,6 +157,12 @@ $rails g controller enqs getEnq
 								:include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
 								)
   
+日本語を書くときは先頭に
+#coding: utf-8
+
+共通的な例外処理をまとめる　rescue_from
+application_controller.rb
+
   
   
 
