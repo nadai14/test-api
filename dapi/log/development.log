@@ -14034,3 +14034,619 @@ ActionView::MissingTemplate (Missing template shared/not_found with {:locale=>[:
 
 
   Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-06-06 10:18:35 +0900
+Served asset /rails.png - 304 Not Modified (19ms)
+
+
+Started GET "/enqs" for 127.0.0.1 at 2012-06-06 10:18:35 +0900
+
+ActionController::RoutingError (No route matches [GET] "/enqs"):
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:18:43 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:33: syntax error, unexpected $end, expecting keyword_end):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:19:17 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 179ms (Views: 0.0ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:19:59 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:16: syntax error, unexpected modifier_rescue, expecting keyword_then or ';' or '\n'):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:20:13 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:16: syntax error, unexpected modifier_rescue, expecting keyword_then or ';' or '\n'):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:49:55 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:40: syntax error, unexpected $end, expecting keyword_end):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 10:50:27 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 45ms (Views: 0.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:21:45 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:20: syntax error, unexpected modifier_unless, expecting keyword_then or ';' or '\n'
+    rescue unless enq then
+                 ^
+C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:47: syntax error, unexpected $end):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:27:10 +0900
+
+SyntaxError (C:/Users/koji16/Desktop/test-api/dapi/app/controllers/enqs_controller.rb:47: syntax error, unexpected $end):
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.4) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.4) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.4) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/flash.rb:238:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.4) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `_run__275405261__call__496025108__callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.4) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:27:24 +0900
+
+ActionController::RoutingError (undefined local variable or method `with' for EnqsController:Class):
+  app/controllers/enqs_controller.rb:43:in `<class:EnqsController>'
+  app/controllers/enqs_controller.rb:3:in `<top (required)>'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:27:37 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 32ms (Views: 1.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:49:34 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 33ms (Views: 1.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:51:07 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 34ms
+
+NameError (uninitialized constant EnqsController::UnauthorizedException):
+  app/controllers/enqs_controller.rb:29:in `rescue in show'
+  app/controllers/enqs_controller.rb:8:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:54:07 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 46ms
+
+NameError (uninitialized constant EnqsController::UnauthorizedException):
+  app/controllers/enqs_controller.rb:29:in `rescue in show'
+  app/controllers/enqs_controller.rb:8:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:54:18 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 7ms
+
+NameError (uninitialized constant EnqsController::UnauthorizedException):
+  app/controllers/enqs_controller.rb:29:in `rescue in show'
+  app/controllers/enqs_controller.rb:8:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:55:01 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 55ms
+
+NameError (undefined local variable or method `　　　　　　enq' for #<EnqsController:0x41cbec0>):
+  app/controllers/enqs_controller.rb:16:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:55:35 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 100ms
+
+ActionView::MissingTemplate (Missing template shared/forbidden_enq with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/koji16/Desktop/test-api/dapi/app/views"
+  * "C:/Users/koji16/Desktop/test-api/dapi"
+  * "C:/"
+):
+  app/controllers/enqs_controller.rb:26:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:55:53 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 32ms (Views: 0.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:56:01 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 34ms
+
+ActionView::MissingTemplate (Missing template shared/forbidden_enq with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/koji16/Desktop/test-api/dapi/app/views"
+  * "C:/Users/koji16/Desktop/test-api/dapi"
+  * "C:/"
+):
+  app/controllers/enqs_controller.rb:26:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:57:13 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 500 Internal Server Error in 36ms
+
+ActionView::MissingTemplate (Missing template shared/Unauthorized with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/koji16/Desktop/test-api/dapi/app/views"
+  * "C:/Users/koji16/Desktop/test-api/dapi"
+  * "C:/"
+):
+  app/controllers/enqs_controller.rb:35:in `rescue in show'
+  app/controllers/enqs_controller.rb:8:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/api/v1/enqs/6?face=iOS" for 127.0.0.1 at 2012-06-06 11:57:30 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"iOS", "id"=>"6"}
+  [1m[36mEnq Load (0.0ms)[0m  [1mSELECT DISTINCT `enqs`.id FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND (enq_faces.face = 'iOS') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT `enqs`.`id` AS t0_r0, `enqs`.`enq_id` AS t0_r1, `enqs`.`first_page_id` AS t0_r2, `enqs`.`status` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`css` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`id` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`first_page_id` AS t1_r3, `enq_faces`.`wait_until` AS t1_r4, `enq_faces`.`css` AS t1_r5, `enq_faces`.`update_name` AS t1_r6, `enq_faces`.`update_date` AS t1_r7, `enq_faces`.`created_at` AS t1_r8, `enq_faces`.`updated_at` AS t1_r9 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`id` WHERE `enqs`.`id` = 6 AND `enqs`.`id` IN (6) AND (enq_faces.face = 'iOS')
+Completed 200 OK in 33ms (Views: 0.0ms | ActiveRecord: 8.0ms)
