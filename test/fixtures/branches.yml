@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  enq_question_id: MyString
+  answer: MyString
+  next_page_id: MyString
+  wait_until: 1
+
+two:
+  enq_question_id: MyString
+  answer: MyString
+  next_page_id: MyString
+  wait_until: 1

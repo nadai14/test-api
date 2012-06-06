@@ -3,7 +3,7 @@ class CreateEnqs < ActiveRecord::Migration
     create_table :enqs, :id => false do |t|
       t.string :uuid, :limit => 36, :primary => true
       t.integer :status, :null => false, :default => 0
-      t.timestamp :closed_at
+      t.timestamp :closing_at
       t.string :title
       t.text :description
       t.text :message
