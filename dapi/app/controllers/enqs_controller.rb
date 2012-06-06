@@ -16,15 +16,11 @@ class EnqsController < ApplicationController
 	unless enq then
 	  # 404 例外を投げる
 	  raise NotFoundException.new "testnf"
-      msg = "<html><body><h1>Hello</h1><p>#{params[:id]}</p></body></html>"
-	  render :text => msg
 	end
 	# アンケートの状態が入稿前、もしくは終了だった時
 	if enq.status === 0 or enq.status === 9
 	  # 403 例外を投げる
       raise ForbiddenException.new "testf"
-      msg = "<html><body><h1>Hello</h1><p>#{params[:id]}</p></body></html>"
-	  render :text => msg
 	end
 
 	# 例外がないときはレンダリング
