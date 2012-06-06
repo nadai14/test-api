@@ -56,15 +56,16 @@ ActiveRecord::Schema.define(:version => 20120604073954) do
 
   create_table "enq_faces", :id => false, :force => true do |t|
     t.string   "uuid",          :limit => 36
-    t.integer  "enq_id",                                     :null => false
-    t.string   "face",                                       :null => false
-    t.integer  "first_page_id",               :default => 1, :null => false
+    t.string   "enq_id",                      :null => false
+    t.string   "face",                        :null => false
+    t.integer  "point",                       :null => false
+    t.integer  "first_page_id"
     t.time     "wait_until"
     t.string   "css"
     t.string   "update_name"
     t.date     "update_date"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   add_index "enq_faces", ["enq_id", "face"], :name => "index_enq_faces_on_enq_id_and_face", :unique => true
@@ -100,22 +101,20 @@ ActiveRecord::Schema.define(:version => 20120604073954) do
   add_index "enq_questions", ["question_id"], :name => "index_enq_questions_on_question_id"
 
   create_table "enqs", :id => false, :force => true do |t|
-    t.string   "uuid",          :limit => 36
-    t.integer  "enq_id",                                     :null => false
-    t.integer  "first_page_id",               :default => 1, :null => false
-    t.integer  "status",                      :default => 0, :null => false
+    t.string   "uuid",        :limit => 36
+    t.integer  "status",                    :default => 0, :null => false
+    t.date     "opening_at"
+    t.date     "closing_at"
     t.string   "title"
     t.string   "description"
-    t.string   "css"
+    t.string   "message"
     t.string   "movie"
     t.string   "thumbnail"
     t.string   "update_name"
     t.date     "update_date"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
-
-  add_index "enqs", ["enq_id"], :name => "index_enqs_on_enq_id", :unique => true
 
   create_table "questions", :id => false, :force => true do |t|
     t.string   "uuid",               :limit => 36
