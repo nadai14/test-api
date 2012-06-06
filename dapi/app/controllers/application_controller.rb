@@ -1,9 +1,9 @@
 module ApiController
   class ApiException < Exception
-#    def initialize(msg)
-#      @message = msg
-#    end
-#    attr_reader :message
+    def initialize(msg)
+      @message = msg
+    end
+    attr_reader :message
   end
 
   class UnauthorizedException < ApiException; end

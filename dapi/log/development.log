@@ -15463,3 +15463,35 @@ Processing by EnqsController#show as HTML
   [1m[35mEnq Load (0.0ms)[0m  SELECT DISTINCT `enqs`.uuid FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`uuid` WHERE `enqs`.`uuid` = '2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f' AND (enq_faces.face = 'TO') LIMIT 1
   [1m[36mSQL (1.0ms)[0m  [1mSELECT `enqs`.`uuid` AS t0_r0, `enqs`.`status` AS t0_r1, `enqs`.`opening_at` AS t0_r2, `enqs`.`closing_at` AS t0_r3, `enqs`.`title` AS t0_r4, `enqs`.`description` AS t0_r5, `enqs`.`message` AS t0_r6, `enqs`.`movie` AS t0_r7, `enqs`.`thumbnail` AS t0_r8, `enqs`.`update_name` AS t0_r9, `enqs`.`update_date` AS t0_r10, `enqs`.`created_at` AS t0_r11, `enqs`.`updated_at` AS t0_r12, `enq_faces`.`uuid` AS t1_r0, `enq_faces`.`enq_id` AS t1_r1, `enq_faces`.`face` AS t1_r2, `enq_faces`.`point` AS t1_r3, `enq_faces`.`first_page_id` AS t1_r4, `enq_faces`.`wait_until` AS t1_r5, `enq_faces`.`css` AS t1_r6, `enq_faces`.`update_name` AS t1_r7, `enq_faces`.`update_date` AS t1_r8, `enq_faces`.`created_at` AS t1_r9, `enq_faces`.`updated_at` AS t1_r10 FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`uuid` WHERE `enqs`.`uuid` = '2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f' AND `enqs`.`uuid` IN ('2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f') AND (enq_faces.face = 'TO')[0m
 Completed 200 OK in 7ms (Views: 0.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/enqs/2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f?face=T" for 127.0.0.1 at 2012-06-06 15:06:24 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"T", "uuid"=>"2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f"}
+  [1m[35mEnq Load (1.0ms)[0m  SELECT DISTINCT `enqs`.uuid FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`uuid` WHERE `enqs`.`uuid` = '2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f' AND (enq_faces.face = 'T') LIMIT 1
+Completed 404 Not Found in 30ms (Views: 0.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/enqs/2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f?face=T" for 127.0.0.1 at 2012-06-06 15:11:11 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"T", "uuid"=>"2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f"}
+  [1m[36mEnq Load (1.0ms)[0m  [1mSELECT DISTINCT `enqs`.uuid FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`uuid` WHERE `enqs`.`uuid` = '2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f' AND (enq_faces.face = 'T') LIMIT 1[0m
+Completed 500 Internal Server Error in 16ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/application_controller.rb:3:in `initialize'
+  app/controllers/enqs_controller.rb:18:in `exception'
+  app/controllers/enqs_controller.rb:18:in `raise'
+  app/controllers/enqs_controller.rb:18:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/api/v1/enqs/2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f?face=T" for 127.0.0.1 at 2012-06-06 15:14:02 +0900
+Processing by EnqsController#show as HTML
+  Parameters: {"face"=>"T", "uuid"=>"2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f"}
+  [1m[35mEnq Load (0.0ms)[0m  SELECT DISTINCT `enqs`.uuid FROM `enqs` LEFT OUTER JOIN `enq_faces` ON `enq_faces`.`enq_id` = `enqs`.`uuid` WHERE `enqs`.`uuid` = '2f6a88b7-0d67-41dd-9a4a-1281a14c4d8f' AND (enq_faces.face = 'T') LIMIT 1
+Completed 404 Not Found in 20ms (Views: 0.0ms | ActiveRecord: 6.0ms)
