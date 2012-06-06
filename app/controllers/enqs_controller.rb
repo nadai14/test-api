@@ -29,7 +29,7 @@ class EnqsController < ApplicationController
       raise UnauthorizedException.new "testu"
     else
       # 例外がないときはレンダリング
-      render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,conversion_tag,second_picture,second_point,client_url],
+      render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,:conversion_tag,:second_picture,:second_point,:client_url],
                                    :include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
                                    ),
                        session_id.to_json]
