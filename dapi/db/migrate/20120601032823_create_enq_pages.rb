@@ -1,8 +1,7 @@
 class CreateEnqPages < ActiveRecord::Migration
   def change
-    #create_table :enq_pages, :id => false do |t|
-	#  t.string :uuid, :limit => 36, :primary => true
-    create_table :enq_pages do |t|
+    create_table :enq_pages, :id => false do |t|
+	  t.string :uuid, :limit => 36, :primary => true
       t.integer :enq_id,	null: false
       t.integer :page_id,	null: false
       t.string :face,		null: false,	:default => 'PC'

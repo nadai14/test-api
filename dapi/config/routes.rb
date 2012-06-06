@@ -2,7 +2,7 @@
 Dapi::Application.routes.draw do
   scope "api/v1" do
     # アンケート情報取得URL
-    get 'enqs/:id' => 'enqs#show'
+    get 'enqs/:uuid' => 'enqs#show'
 	
 	# 動作はshowのみ
     resources :enqs, :only => ['show']

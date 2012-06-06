@@ -1,7 +1,5 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
-    #create_table :questions, :id => false do |t|
-	#  t.string :uuid, :limit => 36, :primary => true
     create_table :questions, :id => false do |t|
 	  t.string :uuid,	:limit => 36,	:primary => true
       t.integer :question_id,		null: false
