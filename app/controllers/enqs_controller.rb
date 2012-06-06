@@ -7,6 +7,7 @@ class EnqsController < ApplicationController
   def show
     begin
       enq_face = params[:face]
+	  session_id = 'test'
 
       enq = Enq.find_by_uuid(params[:uuid],
 	                         :include => :enq_faces,		# アンケートフェイスからの情報を取得
@@ -18,19 +19,20 @@ class EnqsController < ApplicationController
 	    # NotFoundException 例外を投げる
 	    raise NotFoundException.new "testnf"
 	  end
-	  # アンケートの状態が入稿前、もしくは終了だった時
-	  if enq.status === 0 or enq.status === 9
+	  # アンケートの状態が入稿前、もしくは終了、または終了日時を過ぎていた時
+	  if enq.status == 0 or enq.status == 9 or (enqs.closing_at != null and enqs.closing_at > Time.now)
 	    # ForbiddenException 例外を投げる
         raise ForbiddenException.new "testf"
 	  end
 	rescue UnauthorizedException
 	  # 認証されていないときは UnauthorizedException 例外を投げる
-	  raise UnauthorizedException
+	  raise UnauthorizedException.new "testu"
     else
 	  # 例外がないときはレンダリング
-      render :json => enq.to_json(:only => [:id,:movie,:thumbnail,:title,:description,:message],
+      render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,conversion_tag,second_picture,second_point,client_url],
 	                              :include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
-								  )
+								  ),
+					   session_id.to_json]
 	end
   end
 end
