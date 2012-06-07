@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
     unless session_id then
       cookies[:session_id] = {:value => UUIDTools::UUID.random_create.to_s, :domein => 'ponkan.jp'}
       session_id = cookies[:session_id]
-	end
-	session_id
+    end
+    session_id
   end
 end
