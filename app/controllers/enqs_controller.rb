@@ -19,14 +19,10 @@ class EnqsController < ApplicationController
       raise ForbiddenException.new BEFORE_OPENING if enq.status == 0
       raise ForbiddenException.new AFTER_CLOSING if enq.status == 9 or (enqs.closing_at != null and enqs.closing_at > Time.now)
 
-      # セッションIDの取得
-      session_id = self.cookies_session_id
-
       # 例外がないときはレンダリング
-      render :json => [enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,:conversion_tag,:second_picture,:second_point,:client_url],
+      render :json => enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,:conversion_tag,:second_picture,:second_point,:client_url],
                                    :include => {:enq_faces => {:only => [:first_page_id,:wait_until,:css]}}
-                                   ),
-                       session_id.to_json]
+                                   )
     end
   end
 end

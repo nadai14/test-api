@@ -45,14 +45,4 @@ class ApplicationController < ActionController::Base
   def data_incompleted(e)
     render :status => 409, :json => {:message => e.message} # 409 is strange
   end
-
-  
-  def cookies_session_id
-    session_id = cookies[:session_id]
-    unless session_id then
-      cookies[:session_id] = {:value => UUIDTools::UUID.random_create.to_s, :domein => 'ponkan.jp', :secure => true}
-      session_id = cookies[:session_id]
-    end
-    session_id
-  end
 end
