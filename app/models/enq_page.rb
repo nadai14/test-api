@@ -6,4 +6,5 @@ class EnqPage < ActiveRecord::Base
   belongs_to :enq_face
   belongs_to :enq_page
   has_one :enq_page, :foreign_key => 'next_page_id'
+  has_many :enq_questions
 end

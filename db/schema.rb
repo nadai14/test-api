@@ -11,7 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603151938) do
+ActiveRecord::Schema.define(:version => 20120606152918) do
+
+  create_table "answers", :id => false, :force => true do |t|
+    t.string   "uuid",            :limit => 36
+    t.string   "enq_question_id",               :null => false
+    t.string   "session_id",                    :null => false
+    t.string   "user_agent",                    :null => false
+    t.text     "answer",                        :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
+  end
+
+  create_table "branches", :id => false, :force => true do |t|
+    t.string   "uuid",            :limit => 36
+    t.string   "enq_question_id",               :null => false
+    t.string   "answer",                        :null => false
+    t.string   "next_page_id",                  :null => false
+    t.integer  "wait_until"
+    t.string   "updated_by"
+    t.datetime "updated_at"
+  end
+
+  create_table "choices", :id => false, :force => true do |t|
+    t.string   "uuid",        :limit => 36
+    t.string   "question_id",               :null => false
+    t.string   "content",                   :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
+  end
 
   create_table "enq_faces", :id => false, :force => true do |t|
     t.string   "uuid",          :limit => 36
@@ -35,15 +63,37 @@ ActiveRecord::Schema.define(:version => 20120603151938) do
     t.datetime "updated_at"
   end
 
+  create_table "enq_questions", :id => false, :force => true do |t|
+    t.string   "uuid",        :limit => 36
+    t.string   "enq_page_id",               :null => false
+    t.integer  "num",                       :null => false
+    t.string   "seq",                       :null => false
+    t.string   "question_id",               :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
+  end
+
   create_table "enqs", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
     t.integer  "status",                    :default => 0, :null => false
-    t.datetime "closed_at"
+    t.datetime "closing_at"
     t.string   "title"
     t.text     "description"
     t.text     "message"
     t.string   "movie"
     t.string   "thumbnail"
+    t.string   "updated_by"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :id => false, :force => true do |t|
+    t.string   "uuid",               :limit => 36
+    t.string   "kind",                             :null => false
+    t.string   "title"
+    t.text     "content"
+    t.boolean  "required",                         :null => false
+    t.text     "answer_content"
+    t.text     "answer_description"
     t.string   "updated_by"
     t.datetime "updated_at"
   end
