@@ -13,11 +13,7 @@ class EnqsController < ApplicationController
                              :conditions => ["enq_faces.face = ?", enq_face]	# フェイスを条件として検索する
                             )
 
-      # 指定した条件でアンケートが見つからなかった時 NotFoundException を投げる
-      raise NotFoundException.new ENQ_DOES_NOT_EXIST unless enq
-      # アンケートの状態が入稿前、もしくは終了、または終了日時を過ぎていた時、ForbiddenException を投げる
-	  raise ForbiddenException.new BEFORE_OPENING if enq.status == 0
-	  raise ForbiddenException.new AFTER_CLOSING if enq.status == 9 or (enqs.closing_at != null and enqs.closing_at > Time.now)
+
 
 	  # セッションIDの取得
 	  session_id = cookies[:session_id]
@@ -29,9 +25,5 @@ class EnqsController < ApplicationController
                                    ),
                        session_id.to_json]
     end
-  end
-  
-  def cookie
-    session_id = cookies[:session_id]
   end
 end
