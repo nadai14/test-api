@@ -29,13 +29,4 @@ class EnqsController < ApplicationController
                        session_id.to_json]
     end
   end
-
-  def cookies_session_id
-    session_id = cookies[:session_id]
-    unless session_id then
-      cookies[:session_id] = {:value => UUIDTools::UUID.random_create.to_s}
-	  session_id = cookies[:session_id]
-	end
-	session_id
-  end
 end
