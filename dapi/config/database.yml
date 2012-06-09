@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dapi_development
+  database: ponkichi_development
   pool: 5
-  username: dapi
-  password: dapi
+  username: moviereward
+  password: frontendsystem
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -25,18 +25,18 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dapi_test
+  database: ponkichi_test
   pool: 5
-  username: dapi
-  password: dapi
+  username: moviereward
+  password: frontendsystem
   host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dapi_production
+  database: ponkichi
   pool: 5
-  username: dapi
-  password: dapi
+  username: moviereward
+  password: frontendsystem
   host: localhost
