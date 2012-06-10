@@ -2,17 +2,24 @@
 require 'spec_helper'
 
 describe EnqsController do
+  fixtures :enqs, :enq_faces
+
   describe "アンケート情報取得機能テスト" do
 	context "ルートが正しく設定されているか" do
 	  describe :routes do
 		subject{{:get => "/api/v1/enqs/1"}}
 		it{should route_to(controller: "enqs", action: "show", id: "1")}
 	  end
+	  
+	  before{get :show, {id: "enq1", face: "TO"}}
+	  
+	  describe :response do
+		subject{response}
+		it{should be_success}
+	  end
 	end
 
 	context "UUIDとフェイスから値を取得する" do
-	  fixtures :enqs, :enq_faces
-	  
 	  describe "レスポンスは正しく返ってきているか" do
 		before do
 		  @enq = Enq.find(:first)
@@ -21,7 +28,8 @@ describe EnqsController do
 
 		it 'レスポンスフォマットの確認' do
 		  get :show,{id: @enq.id, face: @face}
-		  response.body.should be_json
+		  response.should be_success
+		  #response.body.should be_json
 		  @responses = response.body
 		end
 
