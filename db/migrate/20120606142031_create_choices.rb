@@ -3,6 +3,7 @@ class CreateChoices < ActiveRecord::Migration
     create_table :choices, :id => false do |t|
       t.string :uuid, :limit => 36, :primary => true
       t.string :question_id, :null => false
+      t.integer :order, :null => false
       t.string :content, :null => false
 
       t.string :updated_by

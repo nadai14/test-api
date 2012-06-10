@@ -7,7 +7,7 @@ describe EnqsController do
 
   describe "アンケート情報取得機能テスト" do
 	before do
-	  request.env['HTTP_X_REQUESTED_WITH'] = 'ponkan-movie-reward'
+	  request.env['HTTP_X_REQUESTED_WITH'] = 'ponkan-moviereward'
 	end
   
 	context "ルートが正しく設定されているか" do

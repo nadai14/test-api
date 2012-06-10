@@ -1,7 +1,8 @@
 class Enq < ActiveRecord::Base
   include Extensions::UUID
 
-  attr_accessible :description, :message, :movie, :status, :thumbnail, :title, :closing_at, :updated_by, :updated_at
+  attr_accessible :status, :updated_by
 
-  has_many :enq_faces
+  has_many :campaigns
+  has_many :enq_face
 end

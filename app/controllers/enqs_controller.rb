@@ -17,7 +17,7 @@ class EnqsController < ApplicationController
       raise NotFoundException.new ENQ_DOES_NOT_EXIST unless enq
       # アンケートの状態が入稿前、もしくは終了、または終了日時を過ぎていた時、ForbiddenException を投げる
       raise ForbiddenException.new BEFORE_OPENING if enq.status == 0
-      raise ForbiddenException.new AFTER_CLOSING if enq.status == 9 or (enqs.closing_at != null and enqs.closing_at > Time.now)
+      raise ForbiddenException.new AFTER_CLOSING if enq.status == 9 or (enq.closing_at? and enq.closing_at > Time.now)
 
       # 例外がないときはレンダリング
       render :json => enq.to_json(:only => [:id,:movie,:thumbnail,:point,:title,:description,:message,:conversion_tag,:second_picture,:second_point,:client_url],

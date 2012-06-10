@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120606152918) do
+ActiveRecord::Schema.define(:version => 20120609152534) do
 
   create_table "answers", :id => false, :force => true do |t|
     t.string   "uuid",            :limit => 36
@@ -33,9 +33,30 @@ ActiveRecord::Schema.define(:version => 20120606152918) do
     t.datetime "updated_at"
   end
 
+  create_table "campaigns", :id => false, :force => true do |t|
+    t.string   "uuid",           :limit => 36
+    t.string   "enq_id"
+    t.integer  "status",                       :default => 0, :null => false
+    t.string   "platform",                                    :null => false
+    t.integer  "point",                                       :null => false
+    t.datetime "opening_at"
+    t.datetime "closing_at"
+    t.string   "movie"
+    t.string   "thumbnail"
+    t.text     "message"
+    t.text     "conversion_tag"
+    t.string   "second_picture"
+    t.string   "banner_title"
+    t.integer  "second_point"
+    t.string   "client_url"
+    t.string   "created_by"
+    t.string   "updated_by"
+  end
+
   create_table "choices", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
     t.string   "question_id",               :null => false
+    t.integer  "order",                     :null => false
     t.string   "content",                   :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
@@ -45,10 +66,11 @@ ActiveRecord::Schema.define(:version => 20120606152918) do
     t.string   "uuid",          :limit => 36
     t.string   "enq_id",                      :null => false
     t.string   "face",                        :null => false
-    t.integer  "point",                       :null => false
     t.string   "first_page_id"
     t.integer  "wait_until"
     t.string   "css"
+    t.string   "title"
+    t.text     "description"
     t.string   "updated_by"
     t.datetime "updated_at"
   end
@@ -74,24 +96,18 @@ ActiveRecord::Schema.define(:version => 20120606152918) do
   end
 
   create_table "enqs", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.integer  "status",                    :default => 0, :null => false
-    t.datetime "closing_at"
-    t.string   "title"
-    t.text     "description"
-    t.text     "message"
-    t.string   "movie"
-    t.string   "thumbnail"
+    t.string   "uuid",       :limit => 36
+    t.integer  "status",                   :default => 0, :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
   end
 
   create_table "questions", :id => false, :force => true do |t|
     t.string   "uuid",               :limit => 36
-    t.string   "kind",                             :null => false
+    t.string   "kind",                                                :null => false
     t.string   "title"
     t.text     "content"
-    t.boolean  "required",                         :null => false
+    t.boolean  "required",                         :default => false, :null => false
     t.text     "answer_content"
     t.text     "answer_description"
     t.string   "updated_by"
