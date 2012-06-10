@@ -1,9 +1,9 @@
 RewardApi::Application.routes.draw do
 
   scope "api/v1" do
-    get 'enqs/:enq_id/pages/first' => 'enq_pages#first'
+    get 'enqs/:enq_id/pages/first' => 'enq_pages#first', :format => :json 
 
-    resources :enqs, :only => ['show'] do
+    resources :enqs, :only => ['show'], :format => :json do
       resources :pages, :controller => 'enq_pages', :only => ['show'] do
         resources :answers, :controller => 'answers', :only => ['create']
       end

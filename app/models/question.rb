@@ -4,5 +4,5 @@ class Question < ActiveRecord::Base
   attr_accessible :answer_content, :answer_description, :content, :kind, :required, :title, :updated_by, :updated_at
 
   has_many :choices
-  belongs_to :enq_question
+  has_many :enq_question
 end
