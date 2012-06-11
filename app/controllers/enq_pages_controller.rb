@@ -8,6 +8,7 @@ class EnqPagesController < ApplicationController
   end
 
   def show
+    puts "gets #{params[:id]}, #{params[:enq_id]}, #{params[:face]}"
     page = EnqPage.find_by_uuid(params[:id])
     raise NotFoundException.new PAGE_DOES_NOT_EXIST unless page
     raise NotFoundException.new ID_MISS_MATCH unless page.enq_face.enq_id == params[:enq_id]

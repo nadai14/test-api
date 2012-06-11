@@ -7,7 +7,7 @@ describe EnqsController do
 
   describe "アンケート情報取得機能テスト" do
 	before do
-	  request.env['HTTP_X_REQUESTED_WITH'] = 'ponkan-moviereward'
+	  request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
 	end
   
 	context "ルートが正しく設定されているか" do
@@ -26,11 +26,7 @@ describe EnqsController do
 
 	context "UUIDとフェイスから値を取得する" do
 	  describe "レスポンスは正しく返ってきているか" do
-		before do
-		  @enq = enqs(:one)
-		  @face = 'TO'
-		  get :show,{id: @enq.uuid, face: @face}
-		end
+		before {get :show,{id: enqs(:status1), face: "PC"}}
 
 		it 'レスポンスフォーマットの確認' do
 		  response.content_type.should == Mime::JSON
