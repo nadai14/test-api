@@ -1,0 +1,52 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+campaign1:
+  uuid: campaign1
+  enq_id: enq1
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2012-12-12 12:12:12
+  closing_at: 2012-12-31 12:12:12
+  movie: movie1
+  thumbnail: tumbnail1
+  message: キャンペーン1メッセージ
+  conversion_tag: cnvtag1
+  second_picture: 画像1
+  banner_title: banner1
+  second_point: 10
+  client_url: http://client.com
+
+campaign2:
+  uuid: campaign2
+  enq_id: enq1
+  status: 1
+  platform: mixi
+  point: 20
+  opening_at: 2012-12-12 12:12:12
+  closing_at: 2013-1-31 12:12:12
+  movie: movie2
+  thumbnail: tumbnail2
+  message: キャンペーン2メッセージ
+  conversion_tag: cnvtag2
+  second_picture: 画像2
+  banner_title: banner2
+  second_point: 20
+  client_url: http://client.com
+
+campaign3:
+  uuid: campaign3
+  enq_id: enq1
+  status: 1
+  platform: mixi
+  point: 30
+  opening_at: 2012-11-12 12:12:12
+  closing_at: 2012-12-12 12:12:12
+  movie: movie3
+  thumbnail: tumbnail3
+  message: キャンペーン3メッセージ
+  conversion_tag: cnvtag3
+  second_picture: 画像3
+  banner_title: banner3
+  second_point: 30
+  client_url: http://client.com

@@ -1,23 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+status1:
   uuid: enq1
   status: 1
-  point: 1
-  closing_at: 2012-04-06 14:00:00
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
 
-two:
+status0:
   uuid: enq2
-  status: 1
-  point: 1
-  closing_at: 2012-08-06 14:00:00
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
+  status: 0
+
+status9:
+  uuid: enq3
+  status: 9

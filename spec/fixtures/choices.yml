@@ -1,9 +1,55 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  question_id: MyString
-  content: MyString
+q1choice1:
+  uuid: choice1
+  question_id: question1
+  order: 1
+  content: 問題1選択肢1
 
-two:
-  question_id: MyString
-  content: MyString
+q1choice2:
+  uuid: choice2
+  question_id: question1
+  order: 2
+  content: 問題1選択肢2
+
+q1choice3:
+  uuid: choice3
+  question_id: question1
+  order: 3
+  content: 問題1選択肢3
+
+q2choice1:
+  uuid: choice4
+  question_id: question2
+  order: 1
+  content: 問題2選択肢1
+
+q2choice2:
+  uuid: choice5
+  question_id: question2
+  order: 2
+  content: 問題2選択肢2
+
+q2choice3:
+  uuid: choice6
+  question_id: question2
+  order: 3
+  content: 問題2選択肢3
+
+q3choice1:
+  uuid: choice7
+  question_id: question3
+  order: 1
+  content: 問題3選択肢1
+
+q3choice2:
+  uuid: choice8
+  question_id: question3
+  order: 2
+  content: 問題3選択肢2
+
+q3choice3:
+  uuid: choice9
+  question_id: question3
+  order: 3
+  content: 問題3選択肢3

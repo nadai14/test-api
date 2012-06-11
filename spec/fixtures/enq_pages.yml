@@ -1,13 +1,36 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_face_id: MyString
-  description: MyText
-  next_page_id: MyString
+e1TOpage1:
+  uuid: enqpage1
+  enq_face_id: enqface1
+  description: アンケ1TOページ1
+  next_page_id: enqpage2
   wait_until: 1
 
-two:
-  enq_face_id: MyString
-  description: MyText
-  next_page_id: MyString
+e1TOpage2:
+  uuid: enqpage2
+  enq_face_id: enqface1
+  description: アンケ1TOページ2
+  next_page_id: enqpage3
+  wait_until: 1
+
+e1TOpage3:
+  uuid: enqpage3
+  enq_face_id: enqface1
+  description: アンケ1TOページ3
+  next_page_id: 
+  wait_until: 1
+
+e1PCpage1:
+  uuid: enqpage4
+  enq_face_id: enqface2
+  description: アンケ1PCページ1
+  next_page_id: enqpage5
+  wait_until: 1
+
+e1PCpage2:
+  uuid: enqpage5
+  enq_face_id: enqface2
+  description: アンケ1PCページ2
+  next_page_id: 
   wait_until: 1

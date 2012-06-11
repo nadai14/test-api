@@ -3,6 +3,8 @@ require 'spec_helper'
 
 describe EnqPagesController do
   describe "アンケートページ情報取得機能テスト" do
+	fixtures :enqs, :enq_faces, :enq_pages, :enq_questions, :choices, :branches, :questions, :answers, :campaigns
+  
 	before do
 	  request.env['HTTP_X_REQUESTED_WITH'] = 'ponkan-moviereward'
 	end
@@ -25,46 +27,34 @@ describe EnqPagesController do
 
 	context "UUIDとフェイスから値を取得する" do
 	  describe "レスポンスは正しく返ってきているか" do
-		Enq.all.each do |e|
-		  enq_face = EnqFace.find(:all,
-								:include => :enq_pages,
-								:conditions => ["enq_id = ?", e.id])
-		  enq_face.each do |ef|
-			ef.enq_pages.each do |ep|
-			  before do
-				get :show,{enq_id: ef.enq_id, id: ep.id, face: ef.face, format: :json}
-			  end
+		before{get :show,{id: enq_pages(:e1TOpage1).uuid, enq_id: enq_faces(:enq1TO).enq_id, face: enq_faces(:enq1TO).face}}
+		
+		it 'レスポンスフォーマットの確認' do
+		  response.content_type.should == Mime::JSON
+		  puts "response: #{response.body}"
+		end
 
-			  it 'レスポンスフォーマットの確認' do
-				response.content_type.should == Mime::JSON
-				puts "response: #{response.body}"
-				
-			  end
-
-			  it 'レスポンスの値の確認' do
-				response.body.should have_json("/api/v1/enq_pages/enq_id") 
-				response.body.should have_json("/api/v1/enq_pages/uuid") 
-				response.body.should have_json("/api/v1/enq_pages/description") 
-				response.body.should have_json("/api/v1/enq_pages/question_num") 
-				response.body.should have_json("/api/v1/enq_pages/question_cnt") 
-				response.body.should have_json("/api/v1/enq_pages/question/num") 
-				response.body.should have_json("/api/v1/enq_pages/question/seq") 
-				response.body.should have_json("/api/v1/enq_pages/question/kind") 
-				response.body.should have_json("/api/v1/enq_pages/question/title") 
-				response.body.should have_json("/api/v1/enq_pages/question/content") 
-				response.body.should have_json("/api/v1/enq_pages/question/required") 
-				response.body.should have_json("/api/v1/enq_pages/question/choice/uuid") 
-				response.body.should have_json("/api/v1/enq_pages/question/choice/content") 
-				response.body.should have_json("/api/v1/enq_pages/question/branch/answer") 
-				response.body.should have_json("/api/v1/enq_pages/question/branch/next_page_id") 
-				response.body.should have_json("/api/v1/enq_pages/question/branch/wait_until") 
-				response.body.should have_json("/api/v1/enq_pages/question/answer/content") 
-				response.body.should have_json("/api/v1/enq_pages/question/branch/description") 
-				response.body.should have_json("/api/v1/enq_pages/next_page_id") 
-				response.body.should have_json("/api/v1/enq_pages/wait_until") 
-			  end
-			end
-		  end
+		it 'レスポンスの値の確認' do
+		  response.body.should have_json("/api/v1/enq_pages/enq_id") 
+		  response.body.should have_json("/api/v1/enq_pages/uuid") 
+		  response.body.should have_json("/api/v1/enq_pages/description") 
+		  response.body.should have_json("/api/v1/enq_pages/question_num") 
+		  response.body.should have_json("/api/v1/enq_pages/question_cnt") 
+		  response.body.should have_json("/api/v1/enq_pages/question/num") 
+		  response.body.should have_json("/api/v1/enq_pages/question/seq") 
+		  response.body.should have_json("/api/v1/enq_pages/question/kind") 
+		  response.body.should have_json("/api/v1/enq_pages/question/title") 
+		  response.body.should have_json("/api/v1/enq_pages/question/content") 
+		  response.body.should have_json("/api/v1/enq_pages/question/required") 
+		  response.body.should have_json("/api/v1/enq_pages/question/choice/uuid") 
+		  response.body.should have_json("/api/v1/enq_pages/question/choice/content") 
+		  response.body.should have_json("/api/v1/enq_pages/question/branch/answer") 
+		  response.body.should have_json("/api/v1/enq_pages/question/branch/next_page_id") 
+		  response.body.should have_json("/api/v1/enq_pages/question/branch/wait_until") 
+		  response.body.should have_json("/api/v1/enq_pages/question/answer/content") 
+		  response.body.should have_json("/api/v1/enq_pages/question/branch/description") 
+		  response.body.should have_json("/api/v1/enq_pages/next_page_id") 
+		  response.body.should have_json("/api/v1/enq_pages/wait_until") 
 		end
 	  end
 	end

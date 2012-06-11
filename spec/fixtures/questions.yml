@@ -1,17 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  kind: MyString
-  title: MyString
-  content: MyText
+question1:
+  uuid: question1
+  kind: radio
+  title: 問題1
+  content: 問題1本文
   required: false
-  answer_content: MyText
-  answer_description: MyText
+  answer_content: 問題1正解
+  answer_description: 問題1解説
 
-two:
-  kind: MyString
-  title: MyString
-  content: MyText
+question2:
+  uuid: question2
+  kind: select
+  title: 問題2
+  content: 問題2本文
+  required: true
+  answer_content: 問題2正解
+  answer_description: 問題2解説
+
+question3:
+  uuid: question3
+  kind: check
+  title: 問題3
+  content: 問題3本文
+  required: true
+  answer_content: 問題3正解
+  answer_description: 問題3解説
+
+question4:
+  uuid: question4
+  kind: text
+  title: 問題4
+  content: 問題4本文
   required: false
-  answer_content: MyText
-  answer_description: MyText
+  answer_content: 問題4正解
+  answer_description: 問題4解説
+
+question5:
+  uuid: question5
+  kind: textarea
+  title: 問題5
+  content: 問題5本文
+  required: false
+  answer_content: 問題5正解
+  answer_description: 問題5解説
