@@ -13,10 +13,10 @@ describe EnqsController do
 	context "ルートが正しく設定されているか" do
 	  describe :routes do
 		subject{{:get => "/api/v1/enqs/1"}}
-		it{should route_to(controller: "enqs", action: "show", id: "1")}
+		it{should route_to(controller: "enqs", action: "show", id: "1", format: :json)}
 	  end
 	  
-	  before{get :show, {id: "enq1", face: "TO"}}
+	  before{get :show, {id: "enq1", face: "TO", format: :json}}
 	  
 	  describe :response do
 		subject{response}
@@ -26,7 +26,7 @@ describe EnqsController do
 
 	context "UUIDとフェイスから値を取得する" do
 	  describe "レスポンスは正しく返ってきているか" do
-		before {get :show,{id: enqs(:status1), face: "PC"}}
+		before {get :show,{id: enqs(:status1), face: "PC", format: :json}}
 
 		it 'レスポンスフォーマットの確認' do
 		  response.content_type.should == Mime::JSON

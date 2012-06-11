@@ -28,7 +28,7 @@ describe EnqPagesController do
 	context "UUIDとフェイスから値を取得する" do
 	  describe "レスポンスは正しく返ってきているか" do
 		before do
-		  get :show,{id: "enqpage1", enq_id: "enq1", face: "TO"}
+		  get :show,{id: "enqpage1", enq_id: "enq1", face: "TO", format: :json}
 		end
 		
 		it 'レスポンスフォーマットの確認' do
