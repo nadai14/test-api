@@ -13,6 +13,7 @@ module ApiController
   class ForbiddenException < ApiException; end
   class DataIncompletedException < ApiException; end
 
+  CAMPAIGN_DOES_NOT_EXIST = "キャンペーンIDが存在しない"
   ENQ_DOES_NOT_EXIST = "アンケートIDが存在しない"
   PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
   ID_MISS_MATCH = "アンケートIDとページIDが矛盾している"
