@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status: 
+  platform: MyString
+  point: 
+  opening_at: 2012-06-10 00:25:34
+  closing_at: 2012-06-10 00:25:34
+  movie: MyString
+  thumbnail: MyString
+  message: MyText
+  conversion_tag: MyText
+  second_picture: MyString
+  banner_title: MyString
+  second_point: 
+  client_url: MyString
+  created_by: MyString
+  updated_by: MyString
+
+two:
+  status: 
+  platform: MyString
+  point: 
+  opening_at: 2012-06-10 00:25:34
+  closing_at: 2012-06-10 00:25:34
+  movie: MyString
+  thumbnail: MyString
+  message: MyText
+  conversion_tag: MyText
+  second_picture: MyString
+  banner_title: MyString
+  second_point: 
+  client_url: MyString
+  created_by: MyString
+  updated_by: MyString
