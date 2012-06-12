@@ -29,7 +29,7 @@ describe CampaignsController do
       describe "レスポンスは正しく返ってきているか" do
         before do
           request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-          get :show,{id: campaigns(:success_confirm), face: "PC", format: :json}
+          get :show,{id: campaigns(:success_confirm).id, face: "PC", format: :json}
         end
 
         it 'レスポンスフォーマットの確認' do
@@ -43,11 +43,74 @@ describe CampaignsController do
             response.body.should have_json("/#{key}") 
           end
         end
-        
+
         it 'レスポンスの表示(目検用)' do
-          puts "目検用response_body: #{response.body}"
+          puts "response_body: #{response.body}"
         end
       end
+          
+      describe "要素が nil の時" do
+        before do
+          request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
+		end
+		
+	    context "PCからアクセスした場合" do
+          before do
+		    @campaign = campaigns(:nullable).point
+		    get :show,{id: campaigns(:nullable).id, face: "PC", format: :json}
+	      end
+
+          context "デフォルト値が設定されていると" do
+		    def_css = "/css/sp/themes/default/style.css"
+		    def_title = ""
+		    def_desc = "<p></p>#{@campaign}<p></p>"
+			message = "<p></p>"
+			it 'デフォルト値を返しているか' do
+			  response.body.should include(def_css)
+			  response.body.should include(def_title)
+			  response.body.should include(def_desc)
+			  response.body.should include(message)
+			end
+          end
+            
+          context "デフォルト値が設定されていないと" do
+			it '要素を返していないか' do
+			  [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
+                response.body.should_not have_json("/#{key}") 
+			  end
+			end          
+          end
+		end
+
+	    context "スマートフォンからアクセスした場合" do
+          before do
+		    @campaign = campaigns(:nullable).point
+		    get :show,{id: campaigns(:nullable).id, face: "TO", format: :json}
+		  end
+
+          context "デフォルト値が設定されていると" do
+		    def_css = "/css/sp/themes/default/style.css"
+		    def_title = ""
+		    def_desc = "<p></p>#{@campaign}<p></p>"
+			message = "<p></p>"
+			it 'デフォルト値を返しているか' do
+			  response.body.should include(def_css)
+			  response.body.should include(def_title)
+			  response.body.should include(def_desc)
+			  response.body.should include(message)
+			end
+          end
+            
+          context "デフォルト値が設定されていないと" do
+ 			it '要素を返していないか' do
+			  [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
+                response.body.should_not have_json("/#{key}") 
+			  end
+			end
+          end
+		end
+
+	  end
       
       describe "異常系は動作しているか" do
         context "認可されていない時" do
@@ -75,7 +138,7 @@ describe CampaignsController do
         context "status == 0 状態が入稿前の時" do
           before{get :show, {id: campaigns(:status0).id, face: "TO", format: :json}}
         
-          it 'status 403(ForbiddenException を返す)' do
+          it 'status 403(ForbiddenException)　を返す' do
             response.status.should == 403
           end
         end
