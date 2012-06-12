@@ -1,13 +1,57 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_page_id: MyString
+e1TOquestion1:
+  uuid: enqquestion1
+  enq_page_id: enqpage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: question1
 
-two:
-  enq_page_id: MyString
+e1TOquestion2:
+  uuid: enqquestion2
+  enq_page_id: enqpage1
+  num: 2
+  seq: Q2
+  question_id: question2
+
+e1TOquestion3:
+  uuid: enqquestion3
+  enq_page_id: enqpage2
+  num: 3
+  seq: Q3
+  question_id: question4
+
+e1TOquestion4:
+  uuid: enqquestion4
+  enq_page_id: enqpage3
+  num: 4
+  seq: Q4
+  question_id: question5
+
+e1PCquestion1:
+  uuid: enqquestion5
+  enq_page_id: enqpage4
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: question1
+
+e1PCquestion2:
+  uuid: enqquestion6
+  enq_page_id: enqpage4
+  num: 2
+  seq: Q2
+  question_id: question2
+
+e1PCquestion3:
+  uuid: enqquestion7
+  enq_page_id: enqpage5
+  num: 3
+  seq: Q3
+  question_id: question4
+
+e1PCquestion4:
+  uuid: enqquestion8
+  enq_page_id: enqpage5
+  num: 4
+  seq: Q4
+  question_id: question5
