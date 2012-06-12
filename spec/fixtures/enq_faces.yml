@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 enq1TO:
-  uuid: enqface1
+  uuid: enq1TO
   enq_id: enq1
   face: TO
   first_page_id: enqpage1
@@ -11,7 +11,7 @@ enq1TO:
   description: アンケート1説明TO
 
 enq1PC:
-  uuid: enqface2
+  uuid: enq1PC
   enq_id: enq1
   face: PC
   first_page_id: enqpage1
@@ -21,7 +21,7 @@ enq1PC:
   description: アンケート1説明PC
 
 enq2TO:
-  uuid: enqface3
+  uuid: enq2TO
   enq_id: enq2
   face: TO
   first_page_id: enqpage2
@@ -31,7 +31,7 @@ enq2TO:
   description: アンケート2説明TO
 
 enq2PC:
-  uuid: enqface4
+  uuid: enq2PC
   enq_id: enq2
   face: PC
   first_page_id: enqpage2
@@ -41,7 +41,7 @@ enq2PC:
   description: アンケート2説明PC
 
 enq3TO:
-  uuid: enqface5
+  uuid: enq3TO
   enq_id: enq3
   face: TO
   first_page_id: enqpage3
@@ -51,7 +51,7 @@ enq3TO:
   description: アンケート3説明TO
 
 enq3PC:
-  uuid: enqface6
+  uuid: enq3PC
   enq_id: enq3
   face: PC
   first_page_id: enqpage3

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-campaign1:
+success_confirm:
   uuid: campaign1
   enq_id: enq1
   status: 1
   platform: mixi
   point: 10
-  opening_at: 2012-12-12 12:12:12
-  closing_at: 2012-12-31 12:12:12
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
   movie: movie1
   thumbnail: tumbnail1
   message: キャンペーン1メッセージ
@@ -17,14 +17,14 @@ campaign1:
   second_point: 10
   client_url: http://client.com
 
-campaign2:
+status0:
   uuid: campaign2
   enq_id: enq1
-  status: 1
-  platform: mixi
+  status: 0
+  platform: gree
   point: 20
-  opening_at: 2012-12-12 12:12:12
-  closing_at: 2013-1-31 12:12:12
+  opening_at: 2100-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
   movie: movie2
   thumbnail: tumbnail2
   message: キャンペーン2メッセージ
@@ -34,14 +34,14 @@ campaign2:
   second_point: 20
   client_url: http://client.com
 
-campaign3:
+status9:
   uuid: campaign3
   enq_id: enq1
-  status: 1
+  status: 9
   platform: mixi
   point: 30
-  opening_at: 2012-11-12 12:12:12
-  closing_at: 2012-12-12 12:12:12
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
   movie: movie3
   thumbnail: tumbnail3
   message: キャンペーン3メッセージ
@@ -49,4 +49,21 @@ campaign3:
   second_picture: 画像3
   banner_title: banner3
   second_point: 30
+  client_url: http://client.com
+
+closed:
+  uuid: campaign4
+  enq_id: enq1
+  status: 1
+  platform: gree
+  point: 40
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  movie: movie4
+  thumbnail: tumbnail4
+  message: キャンペーン4メッセージ
+  conversion_tag: cnvtag4
+  second_picture: 画像4
+  banner_title: banner4
+  second_point: 40
   client_url: http://client.com
