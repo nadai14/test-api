@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+enq1TO:
+  uuid: enq1TO
+  enq_id: enq1
+  face: TO
+  first_page_id: enqpage1
+  wait_until: 2012-06-03 18:07:08
+  css: css1
+  title: アンケート1TO
+  description: アンケート1説明TO
+
+enq1PC:
+  uuid: enq1PC
+  enq_id: enq1
+  face: PC
+  first_page_id: enqpage1
+  wait_until: 2012-06-03 18:07:08
+  css: css2
+  title: アンケート1PC
+  description: アンケート1説明PC
+
+enq2TO:
+  uuid: enq2TO
+  enq_id: enq2
+  face: TO
+  first_page_id: enqpage2
+  wait_until: 2012-06-03 18:07:08
+  css: css3
+  title: アンケート2TO
+  description: アンケート2説明TO
+
+enq2PC:
+  uuid: enq2PC
+  enq_id: enq2
+  face: PC
+  first_page_id: enqpage2
+  wait_until: 2012-06-03 18:07:08
+  css: css4
+  title: アンケート2PC
+  description: アンケート2説明PC
+
+enq3TO:
+  uuid: enq3TO
+  enq_id: enq3
+  face: TO
+  first_page_id: enqpage3
+  wait_until: 2012-06-03 18:07:08
+  css: css5
+  title: アンケート3TO
+  description: アンケート3説明TO
+
+enq3PC:
+  uuid: enq3PC
+  enq_id: enq3
+  face: PC
+  first_page_id: enqpage3
+  wait_until: 2012-06-03 18:07:08
+  css: css6
+  title: アンケート3PC
+  description: アンケート3説明PC

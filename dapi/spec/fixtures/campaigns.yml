@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+success_confirm:
+  uuid: campaign1
+  enq_id: enq1
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: movie1
+  thumbnail: tumbnail1
+  message: キャンペーン1メッセージ
+  conversion_tag: cnvtag1
+  second_picture: 画像1
+  banner_title: banner1
+  second_point: 10
+  client_url: http://client.com
+
+status0:
+  uuid: campaign2
+  enq_id: enq1
+  status: 0
+  platform: gree
+  point: 20
+  opening_at: 2100-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: movie2
+  thumbnail: tumbnail2
+  message: キャンペーン2メッセージ
+  conversion_tag: cnvtag2
+  second_picture: 画像2
+  banner_title: banner2
+  second_point: 20
+  client_url: http://client.com
+
+status9:
+  uuid: campaign3
+  enq_id: enq1
+  status: 9
+  platform: mixi
+  point: 30
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: movie3
+  thumbnail: tumbnail3
+  message: キャンペーン3メッセージ
+  conversion_tag: cnvtag3
+  second_picture: 画像3
+  banner_title: banner3
+  second_point: 30
+  client_url: http://client.com
+
+closed:
+  uuid: campaign4
+  enq_id: enq1
+  status: 1
+  platform: gree
+  point: 40
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  movie: movie4
+  thumbnail: tumbnail4
+  message: キャンペーン4メッセージ
+  conversion_tag: cnvtag4
+  second_picture: 画像4
+  banner_title: banner4
+  second_point: 40
+  client_url: http://client.com
