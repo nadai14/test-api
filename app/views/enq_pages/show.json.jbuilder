@@ -1,4 +1,4 @@
-json.(@page, *extract_nil(@page, :uuid, :description))
+json.(@page, *extract_nil(@page, :uuid, :description, :next_page_id, :wait_until))
 json.enq_id @page.enq_face.enq_id
 json.question_cnt @page.enq_questions.size
 
