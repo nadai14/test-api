@@ -4,7 +4,7 @@ sc_TO:
   uuid: EnqTOSuccessConfirm
   enq_id: EnqStatus1
   face: TO
-  first_page_id: enqpageTO1page1
+  first_page_id: EnqTOSuccessConfirmPage1
   wait_until: 30
   css: css1
   title: アンケート1TO
@@ -14,7 +14,7 @@ sc_PC:
   uuid: EnqPCSuccessConfirm
   enq_id: EnqStatus1
   face: PC
-  first_page_id: enqpagePC1page1
+  first_page_id: EnqPCSuccessConfirmPage1
   wait_until: 30
   css: css2
   title: アンケート1PC
