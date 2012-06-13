@@ -1,4 +1,4 @@
-json.(@campaign, :mid, :point, :platform)
+json.(@campaign, :mid, :point, :platform, :enq_id)
 json.(@campaign, *extract_nil(@campaign, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
 json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
 
