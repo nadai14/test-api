@@ -61,10 +61,10 @@ describe CampaignsController do
           end
 
           context "デフォルト値が設定されていると" do
-            def_css = "/css/sp/themes/default/style.css"
+            def_css = "/css/pc/themes/default/style.css"
             def_title = ""
-            def_desc = "<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{@campaign}ポイントプレゼント</p>"
-            message = "<p>アンケートは終了です。ありがとうございました。</p>"
+            def_desc = '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
+            message = '<p>アンケートは終了です。ありがとうございました。</p>'
             it 'デフォルト値を返しているか' do
               response.body.should include(def_css)
               response.body.should include(def_title)
@@ -91,8 +91,8 @@ describe CampaignsController do
           context "デフォルト値が設定されていると" do
             def_css = "/css/sp/themes/default/style.css"
             def_title = ""
-            def_desc = "<p>動画を見ながらアンケートに答えて#{@campaign}ポイントをもらおう</p>"
-            message = "<p>アンケートは終了です。ありがとうございました。</p>"
+            def_desc = '<p>動画を見ながらアンケートに答えて#{point}ポイントもらおう</p>'
+            message = '<p>アンケートは終了です。ありがとうございました。</p>'
             it 'デフォルト値を返しているか' do
               response.body.should include(def_css)
               response.body.should include(def_title)
