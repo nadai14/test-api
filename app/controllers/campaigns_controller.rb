@@ -3,7 +3,7 @@
 class CampaignsController < ApplicationController
 
   def show
-    @campaign = Campaign.find_by_uuid(params[:id], {
+    @campaign = Campaign.find_by_mid(params[:id], {
       :include => {:enq => :enq_faces}, 
       :conditions => ["enq_faces.face = ?", params[:face]]})
 

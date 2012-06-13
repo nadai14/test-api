@@ -1,4 +1,4 @@
-json.(@campaign, :uuid, :point, :platform)
+json.(@campaign, :mid, :point, :platform)
 json.movie @campaign.movie unless @campaign.movie.nil?
 json.thumbnail @campaign.thumbnail unless @campaign.thumbnail.nil?
 json.conversion_tag @campaign.conversion_tag unless @campaign.conversion_tag.nil?
