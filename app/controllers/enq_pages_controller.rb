@@ -5,8 +5,8 @@ class EnqPagesController < ApplicationController
   def show
     @page = params[:id] != 'first' ? find_by_id(params[:id]) : first(params[:enq_id], params[:face])
 
-    raise NotFoundException.new PAGE_DOES_NOT_EXIST unless @page
-    raise NotFoundException.new ID_MISS_MATCH unless @page.enq_face.enq_id == params[:enq_id]
+    raise NotFoundException.new PAGE_DOES_NOT_EXIST if @page.nil?
+    raise NotFoundException.new ID_MISS_MATCH if @page.enq_face.enq_id != params[:enq_id]
     raise DataIncompletedException.new IMVALID_QUESTION if @page.enq_questions.any? {|eq| eq.question.needs_choices? && eq.question.choices.empty?}
   end
 
