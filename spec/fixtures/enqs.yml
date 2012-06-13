@@ -1,13 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 status1:
-  uuid: enq1
+  uuid: EnqStatus1
   status: 1
 
 status0:
-  uuid: enq2
+  uuid: EnqStatus0
   status: 0
 
 status9:
-  uuid: enq3
+  uuid: EnqStatus9
   status: 9
+  
+nullable:
+  uuid: EnqNullable
+  status: 1

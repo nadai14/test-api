@@ -52,65 +52,65 @@ describe CampaignsController do
       describe "要素が nil の時" do
         before do
           request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-		end
-		
-	    context "PCからアクセスした場合" do
+        end
+        
+        context "PCからアクセスした場合" do
           before do
-		    @campaign = campaigns(:nullable).point
-		    get :show,{id: campaigns(:nullable).id, face: "PC", format: :json}
-	      end
+            @campaign = campaigns(:nullable).point
+            get :show,{id: campaigns(:nullable).id, face: "PC", format: :json}
+          end
 
           context "デフォルト値が設定されていると" do
-		    def_css = "/css/sp/themes/default/style.css"
-		    def_title = ""
-		    def_desc = "<p></p>#{@campaign}<p></p>"
-			message = "<p></p>"
-			it 'デフォルト値を返しているか' do
-			  response.body.should include(def_css)
-			  response.body.should include(def_title)
-			  response.body.should include(def_desc)
-			  response.body.should include(message)
-			end
+            def_css = "/css/sp/themes/default/style.css"
+            def_title = ""
+            def_desc = "<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{@campaign}ポイントプレゼント</p>"
+            message = "<p>アンケートは終了です。ありがとうございました。</p>"
+            it 'デフォルト値を返しているか' do
+              response.body.should include(def_css)
+              response.body.should include(def_title)
+              response.body.should include(def_desc)
+              response.body.should include(message)
+            end
           end
             
           context "デフォルト値が設定されていないと" do
-			it '要素を返していないか' do
-			  [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
+            it '要素を返していないか' do
+              [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
                 response.body.should_not have_json("/#{key}") 
-			  end
-			end          
+              end
+            end          
           end
-		end
+        end
 
-	    context "スマートフォンからアクセスした場合" do
+        context "スマートフォンからアクセスした場合" do
           before do
-		    @campaign = campaigns(:nullable).point
-		    get :show,{id: campaigns(:nullable).id, face: "TO", format: :json}
-		  end
+            @campaign = campaigns(:nullable).point
+            get :show,{id: campaigns(:nullable).id, face: "TO", format: :json}
+          end
 
           context "デフォルト値が設定されていると" do
-		    def_css = "/css/sp/themes/default/style.css"
-		    def_title = ""
-		    def_desc = "<p></p>#{@campaign}<p></p>"
-			message = "<p></p>"
-			it 'デフォルト値を返しているか' do
-			  response.body.should include(def_css)
-			  response.body.should include(def_title)
-			  response.body.should include(def_desc)
-			  response.body.should include(message)
-			end
+            def_css = "/css/sp/themes/default/style.css"
+            def_title = ""
+            def_desc = "<p>動画を見ながらアンケートに答えて#{@campaign}ポイントをもらおう</p>"
+            message = "<p>アンケートは終了です。ありがとうございました。</p>"
+            it 'デフォルト値を返しているか' do
+              response.body.should include(def_css)
+              response.body.should include(def_title)
+              response.body.should include(def_desc)
+              response.body.should include(message)
+            end
           end
             
           context "デフォルト値が設定されていないと" do
- 			it '要素を返していないか' do
-			  [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
+             it '要素を返していないか' do
+              [:wait_until, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
                 response.body.should_not have_json("/#{key}") 
-			  end
-			end
+              end
+            end
           end
-		end
+        end
 
-	  end
+      end
       
       describe "異常系は動作しているか" do
         context "認可されていない時" do
