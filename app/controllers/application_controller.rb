@@ -17,6 +17,7 @@ module ApiController
   ENQ_DOES_NOT_EXIST = "アンケートIDが存在しない"
   PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
   ID_MISS_MATCH = "アンケートIDとページIDが矛盾している"
+  IMVALID_QUESTION = "設問と選択肢が矛盾している"
   BEFORE_OPENING = "状態が入稿前"
   AFTER_CLOSING = "状態が終了"
 

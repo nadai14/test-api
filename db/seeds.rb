@@ -63,3 +63,7 @@ enq1_pc_q2 = EnqQuestion.create(enq_page_id: enq1_pc_page1.uuid, num: 2, seq: 'Q
 enq1_pc_q3 = EnqQuestion.create(enq_page_id: enq1_pc_page2.uuid, num: 3, seq: 'Q3', question_id: q4.uuid)
 enq1_pc_q4 = EnqQuestion.create(enq_page_id: enq1_pc_page2.uuid, num: 4, seq: 'Q4', question_id: q5.uuid)
 
+
+branche1 = Branch.create(enq_question_id: enq1_to_q1.uuid, answer: '分岐1', next_page_id: enq1_to_page2.uuid)
+branche2 = Branch.create(enq_question_id: enq1_to_q1.uuid, answer: '分岐2', next_page_id: enq1_to_page3.uuid, wait_until: 10)
+
