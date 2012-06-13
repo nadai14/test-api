@@ -66,10 +66,10 @@ describe CampaignsController do
             def_desc = '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
             message = '<p>アンケートは終了です。ありがとうございました。</p>'
             it 'デフォルト値を返しているか' do
-              response.body.should include(def_css)
-              response.body.should include(def_title)
-              response.body.should include(def_desc)
-              response.body.should include(message)
+              response.body.should include(def_css).to_s.encode("UTF-8", "ISO-2022-JP")
+              response.body.should include(def_title).to_s.encode("UTF-8", "ISO-2022-JP")
+              response.body.should include(def_desc).to_s.encode("UTF-8", "ISO-2022-JP")
+              response.body.should include(message).to_s.encode("UTF-8", "ISO-2022-JP")
             end
           end
             

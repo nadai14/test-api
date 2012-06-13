@@ -1,21 +1,27 @@
-﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# 動作確認データ
 status1:
   uuid: EnqStatus1
   status: 1
 
+# アンケートを作成中
 status0:
   uuid: EnqStatus0
   status: 0
 
+# アンケート作成完了
 status9:
   uuid: EnqStatus9
   status: 9
-  
+
+# nil動作確認用
 nullable:
   uuid: EnqNullable
   status: 1
   
+# 養命酒
 youmei_shu:
   uuid: YoumeiShuEnqID
   status: 1

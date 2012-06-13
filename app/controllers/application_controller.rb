@@ -13,11 +13,12 @@ module ApiController
   class ForbiddenException < ApiException; end
   class DataIncompletedException < ApiException; end
 
-  ENQ_DOES_NOT_EXIST = "ENQ_DOES_NOT_EXIST:アンケートIDが存在しない"
-  PAGE_DOES_NOT_EXIST = "PAGE_DOES_NOT_EXIST:ページIDが存在しない"
-  ID_MISS_MATCH = "ID_MISS_MATCH:アンケートIDとページIDが矛盾している"
-  BEFORE_OPENING = "BEFORE_OPENING:状態が入稿前"
-  AFTER_CLOSING = "AFTER_CLOSING:状態が終了"
+  CAMPAIGN_DOES_NOT_EXIST = "キャンペーンIDが存在しない"
+  ENQ_DOES_NOT_EXIST = "アンケートIDが存在しない"
+  PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
+  ID_MISS_MATCH = "アンケートIDとページIDが矛盾している"
+  BEFORE_OPENING = "状態が入稿前"
+  AFTER_CLOSING = "状態が終了"
 
 end
 

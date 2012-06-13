@@ -1,13 +1,143 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_page_id: MyString
+scTOquestion1:
+  uuid: SuccessConfirmTOQuestion1
+  enq_page_id: EnqTOSuccessConfirmPage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionRadio
 
-two:
-  enq_page_id: MyString
+scTOquestion2:
+  uuid: SuccessConfirmTOQuestion2
+  enq_page_id: EnqTOSuccessConfirmPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scTOquestion3:
+  uuid: SuccessConfirmTOQuestion3
+  enq_page_id: EnqTOSuccessConfirmPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scTOquestion4-1:
+  uuid: SuccessConfirmTOQuestion4-1
+  enq_page_id: EnqTOSuccessConfirmPage4-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scTOquestion4-2:
+  uuid: SuccessConfirmTOQuestion4-2
+  enq_page_id: EnqTOSuccessConfirmPage4-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+scPCquestion1:
+  uuid: SuccessConfirmPCQuestion1
+  enq_page_id: EnqPCSuccessConfirmPage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionRadio
+
+scPCquestion2:
+  uuid: SuccessConfirmPCQuestion2
+  enq_page_id: EnqPCSuccessConfirmPage1
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scPCquestion3:
+  uuid: SuccessConfirmPCQuestion3
+  enq_page_id: EnqPCSuccessConfirmPage2
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scPCquestion4-1:
+  uuid: SuccessConfirmPCQuestion4-1
+  enq_page_id: EnqPCSuccessConfirmPage3-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scPCquestion4-2:
+  uuid: SuccessConfirmPCQuestion4-2
+  enq_page_id: EnqPCSuccessConfirmPage3-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+youmei_shu_question1:
+  uuid: YoumeiShuEnqQuestion1
+  enq_page_id: YoumeiShuEnqPage1
+  num: 1
+  seq: Q1
+  question_id: YoumeiShuQuestion1
+
+youmei_shu_question2:
+  uuid: YoumeiShuEnqQuestion2
+  enq_page_id: YoumeiShuEnqPage2
+  num: 2
+  seq: Q2
+  question_id: YoumeiShuQuestion2
+
+youmei_shu_question3:
+  uuid: YoumeiShuEnqQuestion3
+  enq_page_id: YoumeiShuEnqPage3
+  num: 3
+  seq: Q3
+  question_id: YoumeiShuQuestion3
+
+youmei_shu_question4:
+  uuid: YoumeiShuEnqQuestion4
+  enq_page_id: YoumeiShuEnqPage4
+  num: 4
+  seq: Q4
+  question_id: YoumeiShuQuestion4
+
+youmei_shu_question5:
+  uuid: YoumeiShuEnqQuestion5
+  enq_page_id: YoumeiShuEnqPage5
+  num: 5
+  seq: Q5
+  question_id: YoumeiShuQuestion5
+
+youmei_shu_question6:
+  uuid: YoumeiShuEnqQuestion6
+  enq_page_id: YoumeiShuEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YoumeiShuQuestion6
+
+youmei_shu_question7:
+  uuid: YoumeiShuEnqQuestion7
+  enq_page_id: YoumeiShuEnqPage7
+  num: 7
+  seq: Q7
+  question_id: YoumeiShuQuestion7
+
+youmei_shu_question8:
+  uuid: YoumeiShuEnqQuestion8
+  enq_page_id: YoumeiShuEnqPage8
+  num: 8
+  seq: Q8
+  question_id: YoumeiShuQuestion8
+
+youmei_shu_question9:
+  uuid: YoumeiShuEnqQuestion9
+  enq_page_id: YoumeiShuEnqPage9
+  num: 9
+  seq: Q9
+  question_id: YoumeiShuQuestion9
+
+youmei_shu_question10:
+  uuid: YoumeiShuEnqQuestion10
+  enq_page_id: YoumeiShuEnqPage10
+  num: 10
+  seq: Q10
+  question_id: YoumeiShuQuestion10
+
+  

@@ -1,17 +1,24 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+status1:
+  uuid: EnqStatus1
   status: 1
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
 
-two:
+status0:
+  uuid: EnqStatus0
+  status: 0
+
+status9:
+  uuid: EnqStatus9
+  status: 9
+  
+nullable:
+  uuid: EnqNullable
   status: 1
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
+  
+youmei_shu:
+  uuid: YoumeiShuEnqID
+  status: 1
+  
+  
+  

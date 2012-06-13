@@ -1,17 +1,19 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# スマートフォン用の動作確認データ
 sc_TO_page1:
   uuid: EnqTOSuccessConfirmPage1
   enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ1
-  next_page_id: enqpageTO1page2
+  next_page_id: EnqTOSuccessConfirmPage2
   wait_until: 1
 
 sc_TO_page2:
   uuid: EnqTOSuccessConfirmPage2
   enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ2
-  next_page_id: enqpageTO1page3
+  next_page_id: EnqTOSuccessConfirmPage3
   wait_until: 1
 
 sc_TO_page3:
@@ -35,11 +37,12 @@ sc_TO_page4-2:
   next_page_id: 
   wait_until: 1
   
+# PC用の動作確認データ
 sc_PC_page1:
   uuid: EnqPCSuccessConfirmPage1
   enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ1
-  next_page_id: enqpagePC1page2
+  next_page_id: EnqPCSuccessConfirmPage2
   wait_until: 1
 
 sc_PC_page2:
@@ -63,6 +66,35 @@ sc_PC_page3-2:
   next_page_id: 
   wait_until: 1
 
+# スマートフォン用のnil動作確認データ
+nullable_TO_page1:
+  uuid: EnqPageTONullablePage1
+  enq_face_id: EnqTONullable
+  next_page_id: EnqPageTONullablePage2-1
+
+nullable_TO_page2-1:
+  uuid: EnqPageTONullablePage2-1
+  enq_face_id: EnqTONullable
+
+nullable_TO_page2-2:
+  uuid: EnqPageTONullablePage2-2
+  enq_face_id: EnqTONullable
+
+# PC用のnil動作確認データ
+nullable_PC_page1:
+  uuid: EnqPagePCNullablePage1
+  enq_face_id: EnqPCNullable
+  next_page_id: EnqPagePCNullablePage2-1
+
+nullable_PC_page2-1:
+  uuid: EnqPagePCNullablePage2-1
+  enq_face_id: EnqPCNullable
+
+nullable_PC_page2-2:
+  uuid: EnqPagePCNullablePage2-2
+  enq_face_id: EnqPCNullable
+
+# 養命酒
 youmei_shu_page1:
   uuid: YoumeiShuEnqPage1
   enq_face_id: YoumeiShuEnqFaceID

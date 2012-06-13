@@ -1,5 +1,7 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# スマートフォン用の動作確認データ
 scTOpage3to4-1:
   uuid: SuccessConfirmTOPage3to4-1
   enq_question_id: SuccessConfirmTOQuestion3
@@ -14,6 +16,7 @@ scTOpage3to4-2:
   next_page_id: EnqTOSuccessConfirmPage4-2
   wait_until: 1
 
+# PC用の動作確認データ
 scPCpage2to3-1:
   uuid: SuccessConfirmPCPage2to3-1
   enq_question_id: SuccessConfirmPCQuestion2
@@ -28,4 +31,19 @@ scPCpage2to3-2:
   next_page_id: EnqPCSuccessConfirmPage3-2
   wait_until: 1
 
+# スマートフォン用のnil動作確認データ
+nullable_TO:
+  uuid: BranchNullableTO
+  enq_question_id: NullableTOQuestion1
+  answer: Page1to2-2
+  next_page_id: NullableTOQuestion2-2
+
+# PC用のnil動作確認データ
+nullable:
+  uuid: BranchNullablePC
+  enq_question_id: NullablePCQuestion1
+  answer: Page1to2-2
+  next_page_id: NullablePCQuestion2-2
+
+# 養命酒
 

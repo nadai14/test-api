@@ -1,17 +1,118 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  kind: MyString
-  title: MyString
-  content: MyText
+radio:
+  uuid: QuestionRadio
+  kind: radio
+  title: 問題1
+  content: 問題1本文
   required: false
-  answer_content: MyText
-  answer_description: MyText
+  answer_content: 問題1正解
+  answer_description: 問題1解説
 
-two:
-  kind: MyString
-  title: MyString
-  content: MyText
+numeric:
+  uuid: QuestionNumeric
+  kind: numeric
+  title: 問題2
+  content: 問題2本文
+  required: true
+  answer_content: 問題2正解
+  answer_description: 問題2解説
+
+select:
+  uuid: QuestionSelect
+  kind: select
+  title: 問題2
+  content: 問題2本文
+  required: true
+  answer_content: 問題2正解
+  answer_description: 問題2解説
+
+check:
+  uuid: QuestionCheck
+  kind: check
+  title: 問題3
+  content: 問題3本文
+  required: true
+  answer_content: 問題3正解
+  answer_description: 問題3解説
+
+text:
+  uuid: QuestionText
+  kind: text
+  title: 問題4
+  content: 問題4本文
   required: false
-  answer_content: MyText
-  answer_description: MyText
+  answer_content: 問題4正解
+  answer_description: 問題4解説
+
+textarea:
+  uuid: QuestionTextarea
+  kind: textarea
+  title: 問題5
+  content: 問題5本文
+  required: false
+  answer_content: 問題5正解
+  answer_description: 問題5解説
+
+youmei_shu_question1:
+  uuid: YoumeiShuQuestion1
+  kind: radio
+  title: 性別をお答えください。
+  required: true
+
+youmei_shu_question2:
+  uuid: YoumeiShuQuestion2
+  kind: numeric
+  title: 年齢をお答えください。
+  required: true
+
+youmei_shu_question3:
+  uuid: YoumeiShuQuestion3
+  kind: select
+  title: このCMをご覧になって「ハーブの恵み」の香りに興味を持たれましたか？
+  required: true
+
+youmei_shu_question4:
+  uuid: YoumeiShuQuestion4
+  kind: select
+  title: このCMをご覧になって「ハーブの恵み」を飲んでみたいと思いましたか？
+  required: true
+
+youmei_shu_question5:
+  uuid: YoumeiShuQuestion5
+  kind: select
+  title: このCMをご覧になって「ハーブの恵み」を買ってみたいと思いましたか？
+  required: true
+
+youmei_shu_question6:
+  uuid: YoumeiShuQuestion6
+  kind: select
+  title: 「ハーブの恵み スパークリング」を以前からご存知でしたか？
+  required: true
+
+youmei_shu_question7:
+  uuid: YoumeiShuQuestion7
+  kind: select
+  title: 「ハーブの恵み スパークリング」を飲んだことがありますか？
+  required: true
+
+youmei_shu_question8:
+  uuid: YoumeiShuQuestion8
+  kind: select
+  title: 「ハーブの恵み」を以前からご存知でしたか？
+  required: true
+
+youmei_shu_question9:
+  uuid: YoumeiShuQuestion9
+  kind: select
+  title: 「ハーブの恵み」を飲んだことがありますか？
+  required: true
+
+youmei_shu_question10:
+  uuid: YoumeiShuQuestion10
+  kind: select
+  title: 最後に今回の動画を再生したきっかけを教えてください。
+  required: true
+
+  
+  

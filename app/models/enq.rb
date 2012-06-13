@@ -4,5 +4,5 @@ class Enq < ActiveRecord::Base
   attr_accessible :status, :updated_by
 
   has_many :campaigns
-  has_many :enq_face
+  has_many :enq_faces
 end

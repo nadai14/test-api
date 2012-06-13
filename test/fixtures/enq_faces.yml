@@ -1,15 +1,41 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_id: MyString
+sc_TO:
+  uuid: EnqTOSuccessConfirm
+  enq_id: EnqStatus1
   face: TO
-  first_page_id: MyString
-  wait_until: 2012-06-03 18:07:08
-  css: MyString
+  first_page_id: enqpageTO1page1
+  wait_until: 30
+  css: css1
+  title: アンケート1TO
+  description: アンケート1説明TO
 
-two:
-  enq_id: MyString
+sc_PC:
+  uuid: EnqPCSuccessConfirm
+  enq_id: EnqStatus1
   face: PC
-  first_page_id: MyString
-  wait_until: 2012-06-03 18:07:08
-  css: MyString
+  first_page_id: enqpagePC1page1
+  wait_until: 30
+  css: css2
+  title: アンケート1PC
+  description: アンケート1説明PC
+
+nullable_TO:
+  uuid: EnqTONullable
+  enq_id: EnqNullable
+  face: TO
+  
+nullable_PC:
+  uuid: EnqPCNullable
+  enq_id: EnqNullable
+  face: PC
+
+youmei_shu:
+  uuid: YoumeiShuEnqFaceID
+  enq_id: YoumeiShuEnqID
+  face: PC
+  first_page_id: YoumeiShuEnqPage1
+  wait_until: 30
+  title: 動画キャンペーン
+ 
+  

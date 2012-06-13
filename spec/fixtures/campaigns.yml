@@ -1,5 +1,7 @@
-﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+﻿# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# 動作確認用データ
 success_confirm:
   uuid: CampaignSuccessConfirm
   enq_id: EnqStatus1
@@ -8,7 +10,7 @@ success_confirm:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: movie1
+  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
   thumbnail: tumbnail1
   message: キャンペーン1メッセージ
   conversion_tag: cnvtag1
@@ -17,6 +19,7 @@ success_confirm:
   second_point: 10
   client_url: http://client.com
 
+# キャンペーンが入稿前のデータ
 status0:
   uuid: CampaignStatus0
   enq_id: EnqStatus1
@@ -25,7 +28,7 @@ status0:
   point: 20
   opening_at: 2100-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: movie2
+  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
   thumbnail: tumbnail2
   message: キャンペーン2メッセージ
   conversion_tag: cnvtag2
@@ -34,6 +37,7 @@ status0:
   second_point: 20
   client_url: http://client.com
 
+# キャンペーンが終了時のデータ
 status9:
   uuid: CampaignStatus9
   enq_id: EnqStatus1
@@ -42,7 +46,7 @@ status9:
   point: 30
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: movie3
+  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
   thumbnail: tumbnail3
   message: キャンペーン3メッセージ
   conversion_tag: cnvtag3
@@ -51,6 +55,7 @@ status9:
   second_point: 30
   client_url: http://client.com
 
+# キャンペーンが終了日時を過ぎていた時のデータ
 closed:
   uuid: CampaignClosed
   enq_id: EnqStatus1
@@ -59,7 +64,7 @@ closed:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: movie4
+  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
   thumbnail: tumbnail4
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
@@ -68,6 +73,7 @@ closed:
   second_point: 40
   client_url: http://client.com
 
+# nil動作確認用のデータ
 nullable:
   uuid: CampaignNullable
   enq_id: EnqNullable
@@ -75,6 +81,7 @@ nullable:
   platform: gree
   point: 40 
 
+# 養命酒
 youmei_shu:
   uuid: YoumeiShuCampaignID
   enq_id: YoumeiShuEnqID

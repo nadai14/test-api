@@ -1,5 +1,7 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# スマートフォン用の動作確認データ
 scTOquestion1:
   uuid: SuccessConfirmTOQuestion1
   enq_page_id: EnqTOSuccessConfirmPage1
@@ -35,6 +37,7 @@ scTOquestion4-2:
   seq: Q4
   question_id: QuestionCheck
 
+# PC用の動作確認データ
 scPCquestion1:
   uuid: SuccessConfirmPCQuestion1
   enq_page_id: EnqPCSuccessConfirmPage1
@@ -70,6 +73,51 @@ scPCquestion4-2:
   seq: Q4
   question_id: QuestionCheck
 
+# スマートフォン用のnil動作確認データ
+nullableTOuestion1:
+  uuid: NullableTOQuestion1
+  enq_page_id: EnqPageTONullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullableTOuestion2-1:
+  uuid: NullableTOQuestion2-1
+  enq_page_id: EnqPageTONullablePage2-1
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-1
+
+nullableTOuestion2-2:
+  uuid: NullableTOQuestion2-2
+  enq_page_id: EnqPageTONullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-2
+
+# PC用のnil動作確認データ
+nullablePCuestion1:
+  uuid: NullablePCQuestion1
+  enq_page_id: EnqPagePCNullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullablePCuestion2-1:
+  uuid: NullablePCQuestion2-1
+  enq_page_id: EnqPagePCNullablePage2-1
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-1
+
+nullablePCuestion2-2:
+  uuid: NullablePCQuestion2-2
+  enq_page_id: EnqPagePCNullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-2
+
+# 養命酒
 youmei_shu_question1:
   uuid: YoumeiShuEnqQuestion1
   enq_page_id: YoumeiShuEnqPage1
