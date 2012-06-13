@@ -6,7 +6,7 @@ class Campaign < ActiveRecord::Base
   belongs_to :enq
 
   def closed?
-    status == 9 || (!closing_at.nil? && closing_at >= Time.now)
+    status == 9 || (!closing_at.nil? && closing_at <= Time.now)
   end
 
 end
