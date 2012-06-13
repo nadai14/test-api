@@ -5,7 +5,7 @@ json.conversion_tag @campaign.conversion_tag unless @campaign.conversion_tag.nil
 json.second_picture @campaign.second_picture unless @campaign.second_picture.nil?
 json.second_point @campaign.second_point unless @campaign.second_point.nil?
 json.client_url @campaign.client_url unless @campaign.client_url.nil?
-# :message
+json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
 
 # face
 @campaign.enq.enq_faces.first.tap do |face|

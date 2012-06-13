@@ -16,10 +16,14 @@ module CampaignsHelper
 
   def defaultDescription(face)
     if face.face.upcase == "PC" 
-      "<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>"
+      '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
     else
       '<p>動画を見ながらアンケートに答えて#{point}ポイントもらおう</p>'
     end
+  end
+
+  def defaultMessage
+    '<p>アンケートは終了です。ありがとうございました。</p>'
   end
 
 end
