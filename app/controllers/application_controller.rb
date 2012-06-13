@@ -45,6 +45,6 @@ class ApplicationController < ActionController::Base
   end
 
   def data_incompleted(e)
-    render :status => 409, :json => {:message => e.message} # 409 is strange
+    render :status => 500, :json => {:message => e.message}
   end
 end
