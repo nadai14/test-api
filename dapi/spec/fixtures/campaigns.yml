@@ -74,3 +74,16 @@ nullable:
   status: 1
   platform: gree
   point: 40 
+
+youmei_shu:
+  uuid: YoumeiShuCampaignID
+  enq_id: YoumeiShuEnqID
+  status: 1
+  platform: mixi
+  point: 13
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  movie: http://cdn.poncan.jp/js/fixed.swfobject.js
+  client_url: http://cdn.poncan.jp
+  
+  

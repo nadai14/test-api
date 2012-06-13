@@ -1,13 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_question_id: MyString
-  session_id: MyString
-  user_agent: MyString
-  answer: MyText
-
-two:
-  enq_question_id: MyString
-  session_id: MyString
-  user_agent: MyString
-  answer: MyText
+#one:
+#  uuid:
+#  campaign_id:
+#  enq_question_id: MyString
+#  user_id: MyString
+#  user_agent: MyString
+#  answer: MyText

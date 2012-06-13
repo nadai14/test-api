@@ -1,8 +1,8 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+﻿# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 success_confirm:
-  uuid: campaign1
-  enq_id: enq1
+  uuid: CampaignSuccessConfirm
+  enq_id: EnqStatus1
   status: 1
   platform: mixi
   point: 10
@@ -18,8 +18,8 @@ success_confirm:
   client_url: http://client.com
 
 status0:
-  uuid: campaign2
-  enq_id: enq1
+  uuid: CampaignStatus0
+  enq_id: EnqStatus1
   status: 0
   platform: gree
   point: 20
@@ -35,8 +35,8 @@ status0:
   client_url: http://client.com
 
 status9:
-  uuid: campaign3
-  enq_id: enq1
+  uuid: CampaignStatus9
+  enq_id: EnqStatus1
   status: 9
   platform: mixi
   point: 30
@@ -52,8 +52,8 @@ status9:
   client_url: http://client.com
 
 closed:
-  uuid: campaign4
-  enq_id: enq1
+  uuid: CampaignClosed
+  enq_id: EnqStatus1
   status: 1
   platform: gree
   point: 40
@@ -67,3 +67,23 @@ closed:
   banner_title: banner4
   second_point: 40
   client_url: http://client.com
+
+nullable:
+  uuid: CampaignNullable
+  enq_id: EnqNullable
+  status: 1
+  platform: gree
+  point: 40 
+
+youmei_shu:
+  uuid: YoumeiShuCampaignID
+  enq_id: YoumeiShuEnqID
+  status: 1
+  platform: mixi
+  point: 13
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  movie: http://cdn.poncan.jp/js/fixed.swfobject.js
+  client_url: http://cdn.poncan.jp
+  
+  

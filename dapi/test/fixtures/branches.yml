@@ -1,13 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_question_id: MyString
-  answer: MyString
-  next_page_id: MyString
+scTOpage3to4-1:
+  uuid: SuccessConfirmTOPage3to4-1
+  enq_question_id: SuccessConfirmTOQuestion3
+  answer: Page3to4-1
+  next_page_id: EnqTOSuccessConfirmPage4-1
   wait_until: 1
 
-two:
-  enq_question_id: MyString
-  answer: MyString
-  next_page_id: MyString
+scTOpage3to4-2:
+  uuid: SuccessConfirmTOPage3to4-2
+  enq_question_id: SuccessConfirmTOQuestion3
+  answer: Page3to4-2
+  next_page_id: EnqTOSuccessConfirmPage4-2
   wait_until: 1
+
+scPCpage2to3-1:
+  uuid: SuccessConfirmPCPage2to3-1
+  enq_question_id: SuccessConfirmPCQuestion2
+  answer: Page2to3-1
+  next_page_id: EnqPCSuccessConfirmPage3-1
+  wait_until: 1
+
+scPCpage2to3-2:
+  uuid: SuccessConfirmPCPage2to3-2
+  enq_question_id: SuccessConfirmPCQuestion2
+  answer: Page2to3-2
+  next_page_id: EnqPCSuccessConfirmPage3-2
+  wait_until: 1
+
+

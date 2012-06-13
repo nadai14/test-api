@@ -1,55 +1,255 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-q1choice1:
-  uuid: q1choice1
-  question_id: question1
+radio-male:
+  uuid: RadioMale
+  question_id: QuestionRadio
   order: 1
   content: 問題1選択肢1
 
-q1choice2:
-  uuid: q1choice2
-  question_id: question1
+radio-female:
+  uuid: RadioFemale
+  question_id: QuestionRadio
   order: 2
   content: 問題1選択肢2
 
-q1choice3:
-  uuid: q1choice3
-  question_id: question1
+numeric:
+  uuid: ChoiceNumeric
+  question_id: QuestionNumeric
   order: 3
   content: 問題1選択肢3
 
-q2choice1:
-  uuid: q2choice1
-  question_id: question2
+select-choice1:
+  uuid: SelectChoice1
+  question_id: QuestionSelect
   order: 1
   content: 問題2選択肢1
 
-q2choice2:
-  uuid: q2choice2
-  question_id: question2
+check-choice1:
+  uuid: CheckChoice1
+  question_id: QuestionCheck
   order: 2
   content: 問題2選択肢2
 
-q2choice3:
-  uuid: q2choice3
-  question_id: question2
+text:
+  uuid: ChoiceText
+  question_id: QuestionText
   order: 3
   content: 問題2選択肢3
 
-q3choice1:
-  uuid: q3choice1
-  question_id: question3
+textarea:
+  uuid: ChoiceTextarea
+  question_id: QuestionTextarea
   order: 1
   content: 問題3選択肢1
 
-q3choice2:
-  uuid: q3choice2
-  question_id: question3
-  order: 2
-  content: 問題3選択肢2
+youmei_shu_radio_male:
+  uuid: YoumeiShuRadioMale
+  question_id: YoumeiShuQuestion1
+  order: 1
+  content: 男性
 
-q3choice3:
-  uuid: q3choice3
-  question_id: question3
+youmei_shu_radio_female:
+  uuid: YoumeiShuRadioFemale
+  question_id: YoumeiShuQuestion1
+  order: 2
+  content: 女性
+
+youmei_shu_numeric_20:
+  uuid: YoumeiShuNumeric20
+  question_id: YoumeiShuQuestion2
+  order: 1
+  content: 20~29歳
+
+youmei_shu_numeric_30:
+  uuid: YoumeiShuNumeric30
+  question_id: YoumeiShuQuestion2
+  order: 2
+  content: 30~39歳
+
+youmei_shu_numeric_40:
+  uuid: YoumeiShuNumeric40
+  question_id: YoumeiShuQuestion2
   order: 3
-  content: 問題3選択肢3
+  content: 40~49歳
+
+youmei_shu_numeric_50:
+  uuid: YoumeiShuNumeric50
+  question_id: YoumeiShuQuestion2
+  order: 4
+  content: 50~59歳
+
+youmei_shu_numeric_60:
+  uuid: YoumeiShuNumeric60
+  question_id: YoumeiShuQuestion2
+  order: 5
+  content: 60歳以上
+
+youmei_shu_kaori_kyoumi_1:
+  uuid: YoumeiShuKaoriKyoumi1
+  question_id: YoumeiShuQuestion3
+  order: 1
+  content: 非常に興味を持った
+
+youmei_shu_kaori_kyoumi_2:
+  uuid: YoumeiShuKaoriKyoumi2
+  question_id: YoumeiShuQuestion3
+  order: 2
+  content: やや興味を持った
+
+youmei_shu_kaori_kyoumi_3:
+  uuid: YoumeiShuKaoriKyoumi3
+  question_id: YoumeiShuQuestion3
+  order: 3
+  content: どちらともいえない
+
+youmei_shu_kaori_kyoumi_4:
+  uuid: YoumeiShuKaoriKyoumi4
+  question_id: YoumeiShuQuestion3
+  order: 4
+  content: あまり興味は持たなかった
+
+youmei_shu_kaori_kyoumi_5:
+  uuid: YoumeiShuKaoriKyoumi5
+  question_id: YoumeiShuQuestion3
+  order: 5
+  content: 全く興味は持たなかった
+
+youmei_shu_drink_1:
+  uuid: YoumeiShuDrink1
+  question_id: YoumeiShuQuestion4
+  order: 1
+  content: 非常に飲んでみたい
+
+youmei_shu_drink_2:
+  uuid: YoumeiShuDrink2
+  question_id: YoumeiShuQuestion4
+  order: 2
+  content: やや飲んでみたい
+
+youmei_shu_drink_3:
+  uuid: YoumeiShuDrink3
+  question_id: YoumeiShuQuestion4
+  order: 3
+  content: どちらともいえない
+
+youmei_shu_drink_4:
+  uuid: YoumeiShuDrink4
+  question_id: YoumeiShuQuestion4
+  order: 4
+  content: あまり飲んでみたくない
+
+youmei_shu_drink_5:
+  uuid: YoumeiShuDrink5
+  question_id: YoumeiShuQuestion4
+  order: 5
+  content: 全く飲んでみたくない
+
+youmei_shu_buy_1:
+  uuid: YoumeiShuBuy1
+  question_id: YoumeiShuQuestion5
+  order: 1
+  content: 非常に買ってみたい
+
+youmei_shu_buy_2:
+  uuid: YoumeiShuBuy2
+  question_id: YoumeiShuQuestion5
+  order: 2
+  content: やや買ってみたい
+
+youmei_shu_buy_3:
+  uuid: YoumeiShuBuy3
+  question_id: YoumeiShuQuestion5
+  order: 3
+  content: どちらともいえない
+
+youmei_shu_buy_4:
+  uuid: YoumeiShuBuy4
+  question_id: YoumeiShuQuestion5
+  order: 4
+  content: あまり買ってみたくはない
+
+youmei_shu_buy_5:
+  uuid: YoumeiShuBuy5
+  question_id: YoumeiShuQuestion5
+  order: 5
+  content: まったく買ってみたくはない
+
+youmei_shu_sp_know_1:
+  uuid: YoumeiShuSPKnow1
+  question_id: YoumeiShuQuestion6
+  order: 1
+  content: 以前から知っていた
+
+youmei_shu_sp_know_2:
+  uuid: YoumeiShuSPKnow2
+  question_id: YoumeiShuQuestion6
+  order: 2
+  content: 今回はじめて知った
+
+youmei_shu_sp_drank_1:
+  uuid: YoumeiShuSPDrank1
+  question_id: YoumeiShuQuestion7
+  order: 1
+  content: 購入して飲んだことがある
+
+youmei_shu_sp_drank_2:
+  uuid: YoumeiShuSPDrank2
+  question_id: YoumeiShuQuestion7
+  order: 2
+  content: 試飲会や試供品で飲んだことがある
+
+youmei_shu_sp_drank_3:
+  uuid: YoumeiShuSPDrank3
+  question_id: YoumeiShuQuestion7
+  order: 3
+  content: 飲んだことはない
+
+youmei_shu_know_1:
+  uuid: YoumeiShuKnow1
+  question_id: YoumeiShuQuestion8
+  order: 1
+  content: 以前から知っていた
+
+youmei_shu_know_2:
+  uuid: YoumeiShuKnow2
+  question_id: YoumeiShuQuestion8
+  order: 2
+  content: 今回はじめて知った
+
+youmei_shu_drank_1:
+  uuid: YoumeiShuDrank1
+  question_id: YoumeiShuQuestion9
+  order: 1
+  content: 購入して飲んだことがある
+
+youmei_shu_drank_2:
+  uuid: YoumeiShuDrank2
+  question_id: YoumeiShuQuestion9
+  order: 2
+  content: 試飲会や試供品で飲んだことがある
+
+youmei_shu_drank_3:
+  uuid: YoumeiShuDrank3
+  question_id: YoumeiShuQuestion9
+  order: 3
+  content: 飲んだことはない
+
+youmei_shu_watch_1:
+  uuid: YoumeiShuWatch1
+  question_id: YoumeiShuQuestion10
+  order: 1
+  content: 商品が気になったから
+
+youmei_shu_watch_2:
+  uuid: YoumeiShuWatch2
+  question_id: YoumeiShuQuestion10
+  order: 2
+  content: ポイントがついていたから
+
+youmei_shu_watch_3:
+  uuid: YoumeiShuWatch3
+  question_id: YoumeiShuQuestion10
+  order: 3
+  content: 動画が面白そうだったから
+
+  
