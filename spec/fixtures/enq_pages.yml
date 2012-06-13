@@ -1,50 +1,115 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 sc_TO_page1:
-  uuid: enqpageTO1page1
-  enq_face_id: enq1TO
+  uuid: EnqTOSuccessConfirmPage1
+  enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ1
   next_page_id: enqpageTO1page2
   wait_until: 1
 
 sc_TO_page2:
-  uuid: enqpageTO1page2
-  enq_face_id: enq1TO
+  uuid: EnqTOSuccessConfirmPage2
+  enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ2
   next_page_id: enqpageTO1page3
   wait_until: 1
 
 sc_TO_page3:
-  uuid: enqpageTO1page3
-  enq_face_id: enq1TO
+  uuid: EnqTOSuccessConfirmPage3
+  enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ3
-  next_page_id: 
+  next_page_id: EnqTOSuccessConfirmPage4-1
   wait_until: 1
 
 sc_TO_page4-1:
-  uuid: enqpageTO1page2
-  enq_face_id: enq1TO
+  uuid: EnqTOSuccessConfirmPage4-1
+  enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ2
-  next_page_id: enqpageTO1page3
+  next_page_id: 
   wait_until: 1
 
 sc_TO_page4-2:
-  uuid: enqpageTO1page3
-  enq_face_id: enq1TO
+  uuid: EnqTOSuccessConfirmPage4-2
+  enq_face_id: EnqTOSuccessConfirm
   description: アンケ1TOページ3
   next_page_id: 
   wait_until: 1
   
 sc_PC_page1:
-  uuid: enqpagePC1page1
-  enq_face_id: enq1PC
+  uuid: EnqPCSuccessConfirmPage1
+  enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ1
   next_page_id: enqpagePC1page2
   wait_until: 1
 
 sc_PC_page2:
-  uuid: enqpagePC1page2
-  enq_face_id: enq1PC
+  uuid: EnqPCSuccessConfirmPage2
+  enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ2
+  next_page_id: EnqPCSuccessConfirmPage3-1
+  wait_until: 1
+
+sc_PC_page3-1:
+  uuid: EnqPCSuccessConfirmPage3-1
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ3-1
   next_page_id: 
   wait_until: 1
+
+sc_PC_page3-2:
+  uuid: EnqPCSuccessConfirmPage3-2
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ3-2
+  next_page_id: 
+  wait_until: 1
+
+youmei_shu_page1:
+  uuid: YoumeiShuEnqPage1
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage2
+
+youmei_shu_page2:
+  uuid: YoumeiShuEnqPage2
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage3
+
+youmei_shu_page3:
+  uuid: YoumeiShuEnqPage3
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage4
+
+youmei_shu_page5:
+  uuid: YoumeiShuEnqPage5
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage6
+
+youmei_shu_page6:
+  uuid: YoumeiShuEnqPage6
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage7
+
+youmei_shu_page7:
+  uuid: YoumeiShuEnqPage7
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage8
+
+youmei_shu_page8:
+  uuid: YoumeiShuEnqPage8
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage9
+
+youmei_shu_page9:
+  uuid: YoumeiShuEnqPage9
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage10
+
+youmei_shu_page10:
+  uuid: YoumeiShuEnqPage10
+  enq_face_id: YoumeiShuEnqFaceID
+  next_page_id: YoumeiShuEnqPage11
+  
+youmei_shu_page11:
+  uuid: YoumeiShuEnqPage11
+  enq_face_id: YoumeiShuEnqFaceID
+
+

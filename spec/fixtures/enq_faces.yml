@@ -5,7 +5,7 @@ sc_TO:
   enq_id: EnqStatus1
   face: TO
   first_page_id: enqpageTO1page1
-  wait_until: 2012-06-03 18:07:08
+  wait_until: 30
   css: css1
   title: アンケート1TO
   description: アンケート1説明TO
@@ -15,7 +15,7 @@ sc_PC:
   enq_id: EnqStatus1
   face: PC
   first_page_id: enqpagePC1page1
-  wait_until: 2012-06-03 18:07:08
+  wait_until: 30
   css: css2
   title: アンケート1PC
   description: アンケート1説明PC
@@ -29,3 +29,13 @@ nullable_PC:
   uuid: EnqPCNullable
   enq_id: EnqNullable
   face: PC
+
+youmei_shu:
+  uuid: YoumeiShuEnqFaceID
+  enq_id: YoumeiShuEnqID
+  face: PC
+  first_page_id: YoumeiShuEnqPage1
+  wait_until: 30
+  title: 動画キャンペーン
+ 
+  
