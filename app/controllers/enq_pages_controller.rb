@@ -2,11 +2,16 @@
 
 class EnqPagesController < ApplicationController
 
+  def index
+    render :json => EnqFace.all(:include => :enq_pages)
+  end
+
+
   def show
     @page = params[:id] != 'first' ? find_by_id(params[:id]) : first(params[:enq_id], params[:face])
 
     raise NotFoundException.new PAGE_DOES_NOT_EXIST if @page.nil?
-    raise NotFoundException.new ID_MISS_MATCH if @page.enq_face.enq_id != params[:enq_id]
+    raise NotFoundException.new ID_MISS_MATCH_PAGE if @page.enq_face.enq_id != params[:enq_id]
     raise DataIncompletedException.new IMVALID_QUESTION if @page.enq_questions.any? {|eq| eq.question.needs_choices? && eq.question.choices.empty?}
   end
 
