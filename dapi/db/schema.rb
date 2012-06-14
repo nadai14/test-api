@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
   end
 
   create_table "campaigns", :id => false, :force => true do |t|
-    t.string   "uuid",           :limit => 36
+    t.string   "mid",            :limit => 36
     t.string   "enq_id"
     t.integer  "status",                       :default => 0, :null => false
     t.string   "platform",                                    :null => false

@@ -2,22 +2,29 @@
 
 class EnqPagesController < ApplicationController
 
-  def first
-    a = EnqFace.all
-    render :json => a.to_json(:include => :enq_pages)
-  end
-
   def show
-    if params[:id] == 'first'
-      render :json => EnqFace.all.to_json(:include => {:enq_pages => {}, :enq => {:include => :campaigns}})
-    else
+    @page = params[:id] != 'first' ? find_by_id(params[:id]) : first(params[:enq_id], params[:face])
 
-      page = EnqPage.find_by_uuid(params[:id])
-      raise NotFoundException.new PAGE_DOES_NOT_EXIST unless page
-      raise NotFoundException.new ID_MISS_MATCH unless page.enq_face.enq_id == params[:enq_id]
-      raise ForbiddenException.new BEFORE_OPENING if page.enq_face.enq.status == 0
-      raise ForbiddenException.new AFTER_CLOSINGG if page.enq_face.enq.status == 9
-      render :json => page.to_json(:include => {:enq_face => {}, :enq_questions => {:include => :question}})
-    end
+    raise NotFoundException.new PAGE_DOES_NOT_EXIST if @page.nil?
+    raise NotFoundException.new ID_MISS_MATCH if @page.enq_face.enq_id != params[:enq_id]
+    raise DataIncompletedException.new IMVALID_QUESTION if @page.enq_questions.any? {|eq| eq.question.needs_choices? && eq.question.choices.empty?}
   end
+
+  private
+
+  def first(enq_id, face)
+    EnqPage.
+      includes([{:enq_questions => [{:question => :choices}, :branches]}, :enq_face]).
+      order('enq_questions.num, choices.`order`').
+      where('enq_faces.enq_id = ? AND enq_faces.face = ?', enq_id, face).
+      first
+  end
+
+  def find_by_id(id)
+    EnqPage.
+      includes([{:enq_questions => [{:question => :choices}, :branches]}, :enq_face]).
+      order('enq_questions.num, choices.`order`').
+      find_by_uuid(id)
+  end
+
 end

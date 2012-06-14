@@ -1,5 +1,7 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+# 動作確認データ
 radio:
   uuid: QuestionRadio
   kind: radio
@@ -54,6 +56,23 @@ textarea:
   answer_content: 問題5正解
   answer_description: 問題5解説
 
+# nil要素動作確認用
+nullable_q1:
+  uuid: NullableQuestion1
+  kind: text
+  required: false
+ 
+nullable_q2-1:
+  uuid: NullableQuestion2-1
+  kind: text
+  required: false
+ 
+nullable_q2-2:
+  uuid: NullableQuestion2-2
+  kind: text
+  required: false
+
+# 養命酒
 youmei_shu_question1:
   uuid: YoumeiShuQuestion1
   kind: radio
