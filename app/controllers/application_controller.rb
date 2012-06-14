@@ -14,6 +14,7 @@ module ApiController
   class ForbiddenException < ApiException; end
   class DataIncompletedException < ApiException; end
 
+  UNAUTHORIZED = "認可されていない"
   CAMPAIGN_DOES_NOT_EXIST = "キャンペーンIDが存在しない"
   ENQ_DOES_NOT_EXIST = "アンケートIDが存在しない"
   PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
@@ -27,6 +28,21 @@ end
 
 class ApplicationController < ActionController::Base
   include ApiController
+#  before_filter :check_requested_by
+  after_filter :append_header, :if => :development?
+
+  def check_requested_by
+    raise UnauthorizedException.new UNAUTHORIZED unless request.headers["X-Requested-By"] == "poncan-moviereward"
+  end
+
+  def append_header
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = 'X-Requested-By'
+  end
+
+  def development?
+    Rails.env.development?
+  end
 
   rescue_from BadRequestException, :with => :bad_request
   rescue_from UnauthorizedException, :with => :unauthorized
