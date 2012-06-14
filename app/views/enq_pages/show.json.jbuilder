@@ -5,7 +5,7 @@ json.question_cnt @page.enq_questions.size
 json.questions do |json|
   json.array!(@page.enq_questions) do |json, enq_question|
     json.(enq_question, :num, :seq)
-    json.(enq_question.question, :kind, :title, :required)
+    json.(enq_question.question, :kind, :title, :content, :required)
 
     json.choices do |json|
       json.array!(enq_question.question.choices) do |json, choice|
