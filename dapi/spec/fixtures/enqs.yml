@@ -16,6 +16,11 @@ status9:
   uuid: EnqStatus9
   status: 9
 
+# nil動作確認用
+nullable:
+  uuid: EnqNullable
+  status: 1
+
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
@@ -23,20 +28,24 @@ first_page_null:
   status: 1
 
 # キャンペーンの状態が入稿前
+camp_status0:
+  uuid: CampaignStatus0EnqID
+  status: 1
 
 # キャンペーンの状態が終了
+camp_closed:
+  uuid: CampaignClosedEnqID
+  status: 1
 
 # 設問と選択肢が矛盾している
-  
-
-# nil動作確認用
-nullable:
-  uuid: EnqNullable
+incons_question:
+  uuid: InconsistencyQuestionEnqID
   status: 1
-  
+
+ 
 # 養命酒
-youmei_shu:
-  uuid: YoumeiShuEnqID
+yomei_shu:
+  uuid: YomeiShuEnqID
   status: 1
   
   

@@ -6,252 +6,271 @@ radio-male:
   uuid: RadioMale
   question_id: QuestionRadio
   order: 1
-  content: 問題1選択肢1
+  content: 男性
 
 radio-female:
   uuid: RadioFemale
   question_id: QuestionRadio
   order: 2
-  content: 問題1選択肢2
+  content: 女性
 
-numeric:
-  uuid: ChoiceNumeric
+numeric10:
+  uuid: ChoiceNumeric10
+  question_id: QuestionNumeric
+  order: 1
+  content: 10代
+
+numeric20:
+  uuid: ChoiceNumeric20
+  question_id: QuestionNumeric
+  order: 2
+  content: 20代
+
+numeric30:
+  uuid: ChoiceNumeric30
   question_id: QuestionNumeric
   order: 3
-  content: 問題1選択肢3
+  content: 30代
 
 select-choice1:
   uuid: SelectChoice1
   question_id: QuestionSelect
   order: 1
-  content: 問題2選択肢1
+  content: 選択肢1
+
+select-choice1:
+  uuid: SelectChoice1
+  question_id: QuestionSelect
+  order: 2
+  content: 選択肢2
 
 check-choice1:
   uuid: CheckChoice1
   question_id: QuestionCheck
-  order: 2
-  content: 問題2選択肢2
-
-text:
-  uuid: ChoiceText
-  question_id: QuestionText
-  order: 3
-  content: 問題2選択肢3
-
-textarea:
-  uuid: ChoiceTextarea
-  question_id: QuestionTextarea
   order: 1
-  content: 問題3選択肢1
+  content: チェックボックス1
+
+check-choice2:
+  uuid: CheckChoice2
+  question_id: QuestionCheck
+  order: 2
+  content: チェックボックス2
+
+check-choice3:
+  uuid: CheckChoice3
+  question_id: QuestionCheck
+  order: 3
+  content: チェックボックス3
+
 
 # 養命酒
-youmei_shu_radio_male:
-  uuid: YoumeiShuRadioMale
-  question_id: YoumeiShuQuestion1
+yomei_shu_radio_male:
+  uuid: YomeiShuRadioMale
+  question_id: YomeiShuQuestion1
   order: 1
   content: 男性
 
-youmei_shu_radio_female:
-  uuid: YoumeiShuRadioFemale
-  question_id: YoumeiShuQuestion1
+yomei_shu_radio_female:
+  uuid: YomeiShuRadioFemale
+  question_id: YomeiShuQuestion1
   order: 2
   content: 女性
 
-youmei_shu_numeric_20:
-  uuid: YoumeiShuNumeric20
-  question_id: YoumeiShuQuestion2
+yomei_shu_numeric_20:
+  uuid: YomeiShuNumeric20
+  question_id: YomeiShuQuestion2
   order: 1
   content: 20~29歳
 
-youmei_shu_numeric_30:
-  uuid: YoumeiShuNumeric30
-  question_id: YoumeiShuQuestion2
+yomei_shu_numeric_30:
+  uuid: YomeiShuNumeric30
+  question_id: YomeiShuQuestion2
   order: 2
   content: 30~39歳
 
-youmei_shu_numeric_40:
-  uuid: YoumeiShuNumeric40
-  question_id: YoumeiShuQuestion2
+yomei_shu_numeric_40:
+  uuid: YomeiShuNumeric40
+  question_id: YomeiShuQuestion2
   order: 3
   content: 40~49歳
 
-youmei_shu_numeric_50:
-  uuid: YoumeiShuNumeric50
-  question_id: YoumeiShuQuestion2
+yomei_shu_numeric_50:
+  uuid: YomeiShuNumeric50
+  question_id: YomeiShuQuestion2
   order: 4
   content: 50~59歳
 
-youmei_shu_numeric_60:
-  uuid: YoumeiShuNumeric60
-  question_id: YoumeiShuQuestion2
+yomei_shu_numeric_60:
+  uuid: YomeiShuNumeric60
+  question_id: YomeiShuQuestion2
   order: 5
   content: 60歳以上
 
-youmei_shu_kaori_kyoumi_1:
-  uuid: YoumeiShuKaoriKyoumi1
-  question_id: YoumeiShuQuestion3
+yomei_shu_kaori_kyoumi_1:
+  uuid: YomeiShuKaoriKyoumi1
+  question_id: YomeiShuQuestion3
   order: 1
   content: 非常に興味を持った
 
-youmei_shu_kaori_kyoumi_2:
-  uuid: YoumeiShuKaoriKyoumi2
-  question_id: YoumeiShuQuestion3
+yomei_shu_kaori_kyoumi_2:
+  uuid: YomeiShuKaoriKyoumi2
+  question_id: YomeiShuQuestion3
   order: 2
   content: やや興味を持った
 
-youmei_shu_kaori_kyoumi_3:
-  uuid: YoumeiShuKaoriKyoumi3
-  question_id: YoumeiShuQuestion3
+yomei_shu_kaori_kyoumi_3:
+  uuid: YomeiShuKaoriKyoumi3
+  question_id: YomeiShuQuestion3
   order: 3
   content: どちらともいえない
 
-youmei_shu_kaori_kyoumi_4:
-  uuid: YoumeiShuKaoriKyoumi4
-  question_id: YoumeiShuQuestion3
+yomei_shu_kaori_kyoumi_4:
+  uuid: YomeiShuKaoriKyoumi4
+  question_id: YomeiShuQuestion3
   order: 4
   content: あまり興味は持たなかった
 
-youmei_shu_kaori_kyoumi_5:
-  uuid: YoumeiShuKaoriKyoumi5
-  question_id: YoumeiShuQuestion3
+yomei_shu_kaori_kyoumi_5:
+  uuid: YomeiShuKaoriKyoumi5
+  question_id: YomeiShuQuestion3
   order: 5
   content: 全く興味は持たなかった
 
-youmei_shu_drink_1:
-  uuid: YoumeiShuDrink1
-  question_id: YoumeiShuQuestion4
+yomei_shu_drink_1:
+  uuid: YomeiShuDrink1
+  question_id: YomeiShuQuestion4
   order: 1
   content: 非常に飲んでみたい
 
-youmei_shu_drink_2:
-  uuid: YoumeiShuDrink2
-  question_id: YoumeiShuQuestion4
+yomei_shu_drink_2:
+  uuid: YomeiShuDrink2
+  question_id: YomeiShuQuestion4
   order: 2
   content: やや飲んでみたい
 
-youmei_shu_drink_3:
-  uuid: YoumeiShuDrink3
-  question_id: YoumeiShuQuestion4
+yomei_shu_drink_3:
+  uuid: YomeiShuDrink3
+  question_id: YomeiShuQuestion4
   order: 3
   content: どちらともいえない
 
-youmei_shu_drink_4:
-  uuid: YoumeiShuDrink4
-  question_id: YoumeiShuQuestion4
+yomei_shu_drink_4:
+  uuid: YomeiShuDrink4
+  question_id: YomeiShuQuestion4
   order: 4
   content: あまり飲んでみたくない
 
-youmei_shu_drink_5:
-  uuid: YoumeiShuDrink5
-  question_id: YoumeiShuQuestion4
+yomei_shu_drink_5:
+  uuid: YomeiShuDrink5
+  question_id: YomeiShuQuestion4
   order: 5
   content: 全く飲んでみたくない
 
-youmei_shu_buy_1:
-  uuid: YoumeiShuBuy1
-  question_id: YoumeiShuQuestion5
+yomei_shu_buy_1:
+  uuid: YomeiShuBuy1
+  question_id: YomeiShuQuestion5
   order: 1
   content: 非常に買ってみたい
 
-youmei_shu_buy_2:
-  uuid: YoumeiShuBuy2
-  question_id: YoumeiShuQuestion5
+yomei_shu_buy_2:
+  uuid: YomeiShuBuy2
+  question_id: YomeiShuQuestion5
   order: 2
   content: やや買ってみたい
 
-youmei_shu_buy_3:
-  uuid: YoumeiShuBuy3
-  question_id: YoumeiShuQuestion5
+yomei_shu_buy_3:
+  uuid: YomeiShuBuy3
+  question_id: YomeiShuQuestion5
   order: 3
   content: どちらともいえない
 
-youmei_shu_buy_4:
-  uuid: YoumeiShuBuy4
-  question_id: YoumeiShuQuestion5
+yomei_shu_buy_4:
+  uuid: YomeiShuBuy4
+  question_id: YomeiShuQuestion5
   order: 4
   content: あまり買ってみたくはない
 
-youmei_shu_buy_5:
-  uuid: YoumeiShuBuy5
-  question_id: YoumeiShuQuestion5
+yomei_shu_buy_5:
+  uuid: YomeiShuBuy5
+  question_id: YomeiShuQuestion5
   order: 5
   content: まったく買ってみたくはない
 
-youmei_shu_sp_know_1:
-  uuid: YoumeiShuSPKnow1
-  question_id: YoumeiShuQuestion6
+yomei_shu_sp_know_1:
+  uuid: YomeiShuSPKnow1
+  question_id: YomeiShuQuestion6
   order: 1
   content: 以前から知っていた
 
-youmei_shu_sp_know_2:
-  uuid: YoumeiShuSPKnow2
-  question_id: YoumeiShuQuestion6
+yomei_shu_sp_know_2:
+  uuid: YomeiShuSPKnow2
+  question_id: YomeiShuQuestion6
   order: 2
   content: 今回はじめて知った
 
-youmei_shu_sp_drank_1:
-  uuid: YoumeiShuSPDrank1
-  question_id: YoumeiShuQuestion7
+yomei_shu_sp_drank_1:
+  uuid: YomeiShuSPDrank1
+  question_id: YomeiShuQuestion7
   order: 1
   content: 購入して飲んだことがある
 
-youmei_shu_sp_drank_2:
-  uuid: YoumeiShuSPDrank2
-  question_id: YoumeiShuQuestion7
+yomei_shu_sp_drank_2:
+  uuid: YomeiShuSPDrank2
+  question_id: YomeiShuQuestion7
   order: 2
   content: 試飲会や試供品で飲んだことがある
 
-youmei_shu_sp_drank_3:
-  uuid: YoumeiShuSPDrank3
-  question_id: YoumeiShuQuestion7
+yomei_shu_sp_drank_3:
+  uuid: YomeiShuSPDrank3
+  question_id: YomeiShuQuestion7
   order: 3
   content: 飲んだことはない
 
-youmei_shu_know_1:
-  uuid: YoumeiShuKnow1
-  question_id: YoumeiShuQuestion8
+yomei_shu_know_1:
+  uuid: YomeiShuKnow1
+  question_id: YomeiShuQuestion8
   order: 1
   content: 以前から知っていた
 
-youmei_shu_know_2:
-  uuid: YoumeiShuKnow2
-  question_id: YoumeiShuQuestion8
+yomei_shu_know_2:
+  uuid: YomeiShuKnow2
+  question_id: YomeiShuQuestion8
   order: 2
   content: 今回はじめて知った
 
-youmei_shu_drank_1:
-  uuid: YoumeiShuDrank1
-  question_id: YoumeiShuQuestion9
+yomei_shu_drank_1:
+  uuid: YomeiShuDrank1
+  question_id: YomeiShuQuestion9
   order: 1
   content: 購入して飲んだことがある
 
-youmei_shu_drank_2:
-  uuid: YoumeiShuDrank2
-  question_id: YoumeiShuQuestion9
+yomei_shu_drank_2:
+  uuid: YomeiShuDrank2
+  question_id: YomeiShuQuestion9
   order: 2
   content: 試飲会や試供品で飲んだことがある
 
-youmei_shu_drank_3:
-  uuid: YoumeiShuDrank3
-  question_id: YoumeiShuQuestion9
+yomei_shu_drank_3:
+  uuid: YomeiShuDrank3
+  question_id: YomeiShuQuestion9
   order: 3
   content: 飲んだことはない
 
-youmei_shu_watch_1:
-  uuid: YoumeiShuWatch1
-  question_id: YoumeiShuQuestion10
+yomei_shu_watch_1:
+  uuid: YomeiShuWatch1
+  question_id: YomeiShuQuestion10
   order: 1
   content: 商品が気になったから
 
-youmei_shu_watch_2:
-  uuid: YoumeiShuWatch2
-  question_id: YoumeiShuQuestion10
+yomei_shu_watch_2:
+  uuid: YomeiShuWatch2
+  question_id: YomeiShuQuestion10
   order: 2
   content: ポイントがついていたから
 
-youmei_shu_watch_3:
-  uuid: YoumeiShuWatch3
-  question_id: YoumeiShuQuestion10
+yomei_shu_watch_3:
+  uuid: YomeiShuWatch3
+  question_id: YomeiShuQuestion10
   order: 3
   content: 動画が面白そうだったから
 
