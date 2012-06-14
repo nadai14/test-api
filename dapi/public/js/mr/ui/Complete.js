@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Landing.js 124 2012-06-09 10:06:58Z tsuru $
+ * @version      $Id: Complete.js 146 2012-06-11 08:17:50Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-09 19:06:58 +0900 (土, 09 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-11 17:17:50 +0900 (月, 11 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){

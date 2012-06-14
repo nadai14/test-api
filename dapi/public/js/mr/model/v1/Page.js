@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Page.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Page.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -33,7 +33,7 @@
     url: function() {
     	ns.trace(this.typeName + '#url()');
     	
-      return ns.api + '/enqs/' + this.get('enq_id') + '/pages/' + this.get('uuid')
+      return ns.api + '/enqs/' + this.get('enq_id') + '/pages/' + this.get('uuid') + '?v=' + (((1+Math.random())*0x10000)|0).toString(16).substring(1);
     },
     /**
      * fecth method

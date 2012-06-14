@@ -6,20 +6,12 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 124 2012-06-09 10:06:58Z tsuru $
+ * @version      $Id: Questions.js 152 2012-06-11 13:37:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-09 19:06:58 +0900 (土, 09 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-11 22:37:05 +0900 (月, 11 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
-	
-	/**
-	 * 
-	 */
 	ns.Question = ns.v1.Question.extend({
-	
 	});
-	
-	
-	
 })(mr.model);

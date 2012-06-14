@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Enq.js 44 2012-06-03 13:50:11Z tsuru $
+ * @version      $Id: Base.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-03 22:50:11 +0900 (日, 03 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -18,17 +18,8 @@
     /**
      * typeName of this class
      */
-    typeName: ns.typeName('Base'),
-    /**
-     * get 
-     */
-    get: function(attribute) {
-      ns.trace(this.typeName + '#get(\"' + attribute + '\")');
-      
-      return ns.root.model.Base.prototype.get.call(this, attribute);
-    },
-  });
-  
+		typeName: ns.typeName('Base')
+	});
   /**
    * overrides Backbone.sync
    * @see http://documentcloud.github.com/backbone/docs/backbone.html#section-162
@@ -46,7 +37,7 @@
         face: (ns.face) ? 
                 ns.face : 
                 (ua.OS === "iPhone/iPod" || ua.OS === "Android") ? 
-                  'TO' : // TO means SmartPhone
+                  'SP' : // SP means SmartPhone
                   'PC'   // PC means PC/Mac
       }, (options.data || {})),
       /**
@@ -73,8 +64,7 @@
     
     // call original
     var _result = _sync(method, model, _options);
-     
+    //  
     return _result;
   };
-  
 })(mr.model.v1, mr.$, mr.ua);

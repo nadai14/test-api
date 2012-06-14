@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 124 2012-06-09 10:06:58Z tsuru $
+ * @version      $Id: Questions.js 152 2012-06-11 13:37:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-09 19:06:58 +0900 (土, 09 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-11 22:37:05 +0900 (月, 11 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -22,9 +22,20 @@
 		 */
 		model:    ns.Question,
 		/**
+		 * constructor
+		 * @see http://backbonejs.org/#Model-constructor
+		 */
+		initialize: function(){
+			ns.trace(this.typeName + '#initialize()');
+			// bind this
+			_.bindAll(this, "containsQuiz", "getRequired", "containsRequired");
+		},
+		/**
 		 * 
 		 */
 		containsQuiz: function() {
+			ns.trace(this.typeName + '#containsQuiz()');
+			
 			for(var i = 0; i < this.length; ++i) {
 				if(this.at(i).getIsQuiz()) return true;
 			}
@@ -33,11 +44,26 @@
 		/**
 		 * 
 		 */
-		containsRequired: function() {
+		getRequired: function() {
+			ns.trace(this.typeName + '#getRequired()');
+			
+			var _required = [];
 			for(var i = 0; i < this.length; ++i) {
-				if(this.at(i).getIsRequired()) return true;
+				var _question = this.at(i); 
+				if(_question.getIsRequired()) {
+					_required.push(_question);
+				}
 			}
-			return false;
+			return _required;
+		},
+		/**
+		 * 
+		 */
+		containsRequired: function() {
+			ns.trace(this.typeName + '#containsRequired()');
+			
+			var _required = this.getRequired();
+			return (0 < _required.length)  ? true : false;
 		}
 	});
 })(mr.model.v1, mr.$);

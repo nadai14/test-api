@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Ad.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -36,7 +36,7 @@
 				model:      this.model,
 				el:         $(ns.slctr('player'), this.el)
 			});
-			
+			// creative container
 			this.creative = new ns.Creative({ 
 				model:      this.model,
 				el:         $(ns.slctr('creative'), this.el)
@@ -58,16 +58,16 @@
 			}
 			
 			if(this.model.has('complete')) {
-				if(this.model.get('campaign').has('client_url')) {
+				if(this.model.get('campaign').has('second_picture')) {
 					this.player.hide();
-					this.creative.render().show();
+					this.creative.show();
 				}else{
 					this.creative.hide();
-					this.player.render().show();
+					this.player.show();
 				}
 			}else if(this.model.has('campaign')) {
 				this.creative.hide();
-				this.player.render().show();	
+				this.player.show();	
 			}
 			
 			// return this

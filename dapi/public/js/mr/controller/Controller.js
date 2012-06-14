@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version			$Id: Controller.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -40,20 +40,31 @@
 			this.model = options.model;
 			if(this.model.has('ad')) {
 				this.model.get('ad').on('change:playing', function(){
-					var _campaign = this.model.get('campaign');
-					var _page     = this.model.get('page');
-					// starting countdown
-					this.model.get('countdown').set({
-						count: (_page || _campaign).get('wait_until')
-					}).start().on('change', function(){
-						if(this.model.get('countdown').get('finished')) {
+					
+					if(ns.face === 'PC') {
+						
+						var _campaign = this.model.get('campaign');
+						var _page     = this.model.get('page');
+						// starting countdown
+						this.model.get('countdown').set({
+							count: (_page || _campaign).get('wait_until')
+						}).start().on('change', function(){
+							if(this.model.get('countdown').get('finished')) {
+								this.model.updatePageToNext();
+							}
+						}, this);
+							
+					}else{
+						this.model.get('ad').on('change:ended', function(){
 							this.model.updatePageToNext();
-						}
-					}, this);
+						}, this);
+					}
+					
 				}, this);
 			}
 			// start history
 			Backbone.history.start();
+			// this.start();
 		},
 		/**
 		 * start
@@ -64,12 +75,12 @@
 			// @ link http://backbonejs.org/#Router-navigate
 			if(this.model.get('parameter').has('mid')) {
 				if(this.model.get('parameter').get('already') === 1) {
-					this.navigate("already/" + this.model.get('parameter').get('mid'), {trigger: true});
+					this.navigate("already/" + this.model.get('parameter').get('mid'),  { trigger: true });
 				}else{
-					this.navigate("campaign/" + this.model.get('parameter').get('mid'), {trigger: true});	
+					this.navigate("campaign/" + this.model.get('parameter').get('mid'), { trigger: true });	
 				}
 			}else{
-				this.navigate("sorry/100", {trigger: true});
+				this.navigate("sorry", {trigger: true});
 			}
 		},
 		/**

@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Landing.js 124 2012-06-09 10:06:58Z tsuru $
+ * @version      $Id: Thankyou.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-09 19:06:58 +0900 (土, 09 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -53,12 +53,22 @@
 			
 			// render
 			$(this.el).html(this.template({
-				"title":   'おめでとうございます！',
-				"point":   this.model.get('point'),
-				"message": this.model.get('message'),
-				"conversion": this.model.get('conversion')
+				"title":       'おめでとうございます！',
+				"point":       this.model.get('point'),
+				"message":     this.model.get('message'),
+				"client_url":  this.model.has('client_url') ? this.model.get('client_url') : '#' 
 			}));
 			
+			// open client site 
+    	if(this.model.has('client_url')) {
+    		var _url = this.model.get('client_url');
+    		(function(_url) {
+	    		window.setTimeout(function(){
+	    				window.open(_url);
+	    		}, 500);
+				})(_url);
+    	}
+    	
 			// return this
 			return this;
 		}

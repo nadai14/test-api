@@ -42,8 +42,8 @@ Author: Toshiya TSURU
 			
 			.mr-ui-ad .mr-ui-player,
 			.mr-ui-ad .mr-ui-creative {
-				width:  528px;/*before the change 355px*/
-				height: 297px;/*before the change 204px*/
+				width:        528px;/*before the change 355px*/
+				height:       297px;/*before the change 204px*/
 				margin-top:   59.5px;/*add new 動画画面の縦横比にあわせて調整*/
 				margin-left:  10px; /*add new*/
 				background-color:#000;
@@ -98,8 +98,8 @@ Author: Toshiya TSURU
 			 * to avoid css redundancy! BE SMART! 
 			 */
 			.mr-ui-content .mr-ui-content-block {
-				padding-left: 10px;
-				margin-right: 10px;
+				padding-left:  10px;
+				margin-right:  10px;
 			}
 			
 				.mr-ui-content-block .mr-ui-title {
@@ -147,14 +147,16 @@ Author: Toshiya TSURU
 			 * 	for enquate page
 			 */
 			.mr-ui-page {
+				
 			}
 			
 				.mr-ui-page .mr-ui-title {
 				}
 
 				.mr-ui-page .mr-ui-questions {
-					margin-top: 10px;
-					margin-left:10px;
+					margin-top:    10px;
+					margin-left:   10px;
+					margin-bottom: 10px;
 				}
 				
 					.mr-ui-questions .mr-ui-title {
@@ -164,6 +166,11 @@ Author: Toshiya TSURU
 						.mr-ui-questions .mr-ui-title b {
 							color:       #222;
 							font-size:   1em;
+						}
+						
+						.mr-ui-questions .mr-ui-title b.mr-ui-required {
+							color:         #F00;
+							font-weight:   bold;
 						}
 						
 					.mr-ui-questions .mr-ui-description {
@@ -247,17 +254,28 @@ Author: Toshiya TSURU
 	background:       none;
 	cursor:           none;
 }
-				
-.mr-ui-button a {
-	text-shadow:       1px 1px 0 #ddd;
-	display:           block;
-	padding:           5px 0;
-	color:             #444444;
-	text-decoration:   none;
-}
 
 .mr-ui-button-no {
 	background:      -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#bbb));
+}
+
+.mr-ui-result-hide .mr-ui-result {
+	display: none;
+}
+
+.mr-ui-result {
+	display:    inline-block;
+	width:      2em;
+	text-align: center;
+}
+
+.mr-ui-correct {
+	font-weight: bold;
+	color:       #0000FF;
+}
+
+.mr-ui-wrong {
+	color:       #FF0000;
 }
 
 .clear-type {

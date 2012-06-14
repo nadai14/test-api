@@ -4,9 +4,9 @@
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id$
+ * @version      $Id: Next.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate$ by $Author$
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -14,7 +14,7 @@
 		/**
 		 * typeName of this class
 		 */
-		typeName:   ns.typeName('CountDown'), 
+		typeName:   ns.typeName('Next'), 
 		/**
 		 * 
 		 */
@@ -59,21 +59,29 @@
 				if(this.model.get('countdown').get('finished')) {
 					if($(this.el).hasClass(ns.cls('countdown-counting'))) {
 						$(this.el).removeClass(ns.cls('countdown-counting'));
-						$(this.el).attr('disabled', null);
 					}
+					$(this.el).removeAttr('disabled', null);
 				}else{
 					if(!$(this.el).hasClass(ns.cls('countdown-counting'))) {
 						$(this.el).addClass(ns.cls('countdown-counting'));
-						$(this.el).attr('disabled', 'disabled');
 					}
+					$(this.el).attr('disabled', 'disabled');
 				}
 			}
+			
 			// render
 			$(this.el).text(this.model.get('title'));
 			
 			// return this
 			return this;
+		},
+		/**
+		 * 
+		 */
+		startCountDown: function()  {
+			if(this.model.has('countdown')) {
+				this.model.get('countdown').startCountDown();
+			}
 		}
 	});
-		
 })(mr.ui, mr.$);

@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: mr.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -75,7 +75,10 @@ var mr = (function($){
 			
 			// face(force)
 			if('undefined' !== typeof(options.face)) {
-				_root.model.v1.face = options.face;
+				_root.ui.face         = options.face;
+				_root.controller.face = options.face;
+				_root.model.v1.face   = options.face;
+				_root.model.face      = options.face;
 			}
 			
 			// setup view model

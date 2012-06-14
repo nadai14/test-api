@@ -71,8 +71,8 @@ VideoJS.players = {};
 VideoJS.options = {
 
   // Default order of fallback technology
-  techOrder: ["html5","flash"],
-  // techOrder: ["flash","html5"],
+  // techOrder: ["html5","flash"],
+  techOrder: ["flash","html5"],
 
   html5: {},
   flash: { swf: "http://vjs.zencdn.net/c/video-js.swf" },
@@ -441,6 +441,7 @@ _V_.extend({
 // usage: log('inside coolFunc', this, arguments);
 // paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
 _V_.log = function(){
+	/*
   _V_.log.history = _V_.log.history || [];// store logs to an array for reference
   _V_.log.history.push(arguments);
   if(window.console) {
@@ -448,6 +449,7 @@ _V_.log = function(){
     var newarr = [].slice.call(arguments);
     (typeof console.log === 'object' ? _V_.log.apply.call(console.log, console, newarr) : console.log.apply(console, newarr));
   }
+  */
 };
 
 // make it safe to use console.log always

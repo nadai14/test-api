@@ -51,11 +51,12 @@
 							<div class="mr-ui-question mr-ui-template">
 								<div class="mr-ui-title">
 									<b class="clear-type">{{title}}</b>
+									<span class="clear-type mr-ui-required"></span>
 								</div>
 								<div class="mr-ui-description">
 									<p class="clear-type">{{description}}</p>
 								</div>
-								<div class="mr-ui-answer">
+								<div class="mr-ui-answer mr-ui-result-hide">
 									
 								</div>
 							</div>
@@ -107,7 +108,7 @@
 				
 				<!-- ad area -->
 				<div class="mr-ui-ad">
-					<video class="mr-ui-player" width="528" height="297"></video>
+					<video class="mr-ui-player" width="528" height="297" ></video>
 					<div class="mr-ui-creative mr-ui-template">
 						<img src="{{second_picture}}"/>	
 					</div>
@@ -187,8 +188,9 @@
 		<script>
 			$(document).ready(function(){
 				mr.initialize({
-					api: 'http://192.168.1.25:3000/api/v1',
 					// api: '../api/v1',
+					// api: 'http://192.168.1.115/nci-201205/api/v1',
+					api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',
 					el:  'mr-canvas'
 				});
   		});

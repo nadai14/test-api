@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Nav.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Nav.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -41,11 +41,10 @@
         if(this.model.has('countdown')) this.model.get('countdown').on('change', this.render, this);
       }
 		},
-
 		/**
 		 * 
 		 */
-		render: function(){
+		render:      function(){
 			ns.trace(this.typeName + '#render()');
 			
 			// show
@@ -64,14 +63,12 @@
 				          			.append($('<span>').text(this.model.get('page').get('question_cnt'))).html() : 
 				          		this.model.get('parameter').get('already') ? 
 												'アンケートの回答は完了しています。' :
-												this.model.get('ad').get('playing') ? 
+												(this.model.get('ad').get('playing') && (ns.face === 'PC')) ? 
 													this.model.get('countdown').get('count') :
 													'再生ボタンを押して下さい'
 			}));
 			//
 			return this;
 		}
-		
 	});
-		
 })(mr.ui, mr.$);

@@ -5,9 +5,9 @@
  * This class is ViewModel
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id$
+ * @version      $Id: Content.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate$
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $
  *
  */
 (function(ns){
@@ -25,7 +25,8 @@
 			"campaign":  null,
 			"page":      null,
 			"ad":        new Backbone.Model({
-				"playing": false
+				"playing": false,
+				"ended":   false
 			}),
 			"countdown":  new ns.CountDown({
 				
@@ -52,8 +53,10 @@
 			if(this.has('page')) {
 				var _page       = this.get('page');
 				if(_page.has('next_page_id')) {
+					
 					_enq_id       = _page.get('enq_id');
 					_uuid         = _page.get('next_page_id');
+					
 				}else{
 					this.set({
 						"complete": new Backbone.Model({

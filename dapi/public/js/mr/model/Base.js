@@ -6,18 +6,24 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Enq.js 44 2012-06-03 13:50:11Z tsuru $
+ * @version      $Id: Base.js 152 2012-06-11 13:37:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-03 22:50:11 +0900 (日, 03 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-11 22:37:05 +0900 (月, 11 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
-
-  ns.Base = Backbone.Model.extend({
-    /**
-     * 
-     */
-    urlRoot: ns.api,
+	ns.Base = Backbone.Model.extend({
+		/**
+		 * 
+		 */
+		urlRoot: ns.api,
+		/**
+		 * get 
+		 */
+		get: function(attribute) {
+			ns.trace(this.typeName + '#get(\"' + attribute + '\")');
+			
+      return Backbone.Model.prototype.get.call(this, attribute);
+    }
   });
-  
 })(mr.model);

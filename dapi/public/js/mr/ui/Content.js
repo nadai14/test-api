@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Content.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Content.js 160 2012-06-12 14:30:09Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -74,7 +74,7 @@
 			}
 			
 			// hide current
-    	if(this.current) {
+    	if('undefined' !== typeof(this.current)) {
     		this.current.hide();
     	}
       
@@ -88,7 +88,7 @@
 	      	
 				}, this).render();
 				
-	    }else  if(this.model.has('complete')) {
+	    }else if(this.model.has('complete')) {
       	
       	// complete
       	this.current = this.complete  = new ns.Complete({
@@ -100,9 +100,11 @@
 	      		"thankyou":     new Backbone.Model({
 	      			"point":      this.model.get('campaign').get('point'),
 	      			"message":    this.model.get('campaign').get('message'),
-	      			"conversion": this.model.get('campaign').get('conversion_tag')
+	      			"conversion": this.model.get('campaign').get('conversion_tag'),
+	      			"client_url": this.model.get('campaign').get('client_url')
 	      		})
 	      	});
+	      	
 				}, this).render();
 	      
       }else if(this.model.has('page')) {
@@ -112,8 +114,8 @@
       	}
       	// create 
 	     	this.current = this.page = new ns.Page({
-	     		model:      this.model.get('page'),
-	        el:         $(ns.slctr('page') + ns.slctr('template'), this.el).clone().appendTo($(this.el)) 
+	     		model:       this.model.get('page'),
+	        el:          $(ns.slctr('page') + ns.slctr('template'), this.el).clone().appendTo($(this.el)) 
 	      }).on('click:next', function(){
 	      	// move next page
 	      	this.model.updatePageToNext();
@@ -130,5 +132,4 @@
       return this;
     },
   });
-  
 })(mr.ui, mr.$);

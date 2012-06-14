@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Page.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Page.js 161 2012-06-13 00:19:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-13 09:19:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -40,29 +40,47 @@
 			// countdown
 			this.next      = new ns.Next({ 
 				model:       new ns.root.model.Next({
-				              title:     '次へ',
-				             	countdown: new ns.root.model.CountDown({
-				             		count: this.model.get('wait_until')
-				             	})
+				              title:     this.questions.containsQuiz() ? '回答' : '次へ',
+				             	countdown: (ns.face === 'SP') ?
+				             		null :
+				             		new ns.root.model.CountDown({
+				             			count: this.model.get('wait_until')
+				             		})
 				             }),
 				el:          $(ns.slctr('next'), this.el)
-      });
+			});
+			
+			// process next
+			this.next.on('click', function(){
+				// check required
+				if(this.questions.containsRequired()) {
+					var _required = this.questions.getRequired();
+					for(var i = 0; i < _required.length; ++i) {
+						if(!this.questions.hasValue(_required[i])){
+							ns.dialog('この設問は回答必須です。');
+							// return false;
+							return false;
+						}
+					}
+				}
+				// check quiz
+				if(this.questions.containsQuiz() && !this.questions.getIsResultShown()) {
+					//  update nextbutton
+					$(this.next.el).text('次へ');
+					// show result;
+					this.questions.showResult();
+					// return false;
+					return false;
+				}
+				// trigger next
+				this.trigger('click:next');
+			}, this);
 			
 			// bind events
 			if('undefined' !== typeof(this.model)) {
 				this.model.on('change', this.render, this);
 			}
-			this.next.on('click', function(){
-				if(this.model.containsRequired()) {
-					// this quesion rquires anwer
-					this.trigger('click:next');	
-				}else if(this.model.containsQuiz()) {
-					// this is QUIZ
-					
-				}else{
-					this.trigger('click:next');	
-				}
-			}, this);
+			
 		},
 		/**
 		 * render method
@@ -78,11 +96,10 @@
 			// render 
 			$(ns.slctr('title') + ' b', this.el).text(this.model.get('description'));
 			this.questions.render();
-			this.next.render().model.startCountDown();
+			this.next.render().startCountDown();
 			
 			// return
 			return this;
 		}
 	});
-	
-})(mr.ui, mr.$);
+})(mr.ui, mr.$, mr.ua);

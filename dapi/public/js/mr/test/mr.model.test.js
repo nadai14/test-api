@@ -5,9 +5,9 @@
  * 
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.model.test.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: mr.model.test.js 167 2012-06-13 01:58:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-13 10:58:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
  * 
  * @see         http://docs.jquery.com/QUnit
  *
@@ -132,9 +132,9 @@
       		var m = _questions.at(i);
       		equal(m.has('num'),        true);
 	        equal(m.has('seq'),        true);
-	        equal(m.has('kind'),       true);
-	        equal(m.has('title'),      true);
-	        equal(m.has('content'),    true);
+	        // equal(m.has('kind'),       true);
+	        // equal(m.has('title'),      true);
+	        // equal(m.has('content'),    true);
 	        // equal(m.has('required'),  true);
       	}
         start();
