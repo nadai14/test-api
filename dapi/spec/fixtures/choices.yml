@@ -14,23 +14,23 @@ radio-female:
   order: 2
   content: 女性
 
-numeric10:
-  uuid: ChoiceNumeric10
-  question_id: QuestionNumeric
-  order: 1
-  content: 10代
-
-numeric20:
-  uuid: ChoiceNumeric20
-  question_id: QuestionNumeric
-  order: 2
-  content: 20代
-
-numeric30:
-  uuid: ChoiceNumeric30
-  question_id: QuestionNumeric
-  order: 3
-  content: 30代
+#numeric10:
+#  uuid: ChoiceNumeric10
+#  question_id: QuestionNumeric
+#  order: 1
+#  content: 10代
+#
+#numeric20:
+#  uuid: ChoiceNumeric20
+#  question_id: QuestionNumeric
+#  order: 2
+#  content: 20代
+#
+#numeric30:
+#  uuid: ChoiceNumeric30
+#  question_id: QuestionNumeric
+#  order: 3
+#  content: 30代
 
 select-choice1:
   uuid: SelectChoice1

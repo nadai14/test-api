@@ -5,14 +5,14 @@
 scSPpage3to4-1:
   uuid: SuccessConfirmSPPage3to4-1
   enq_question_id: SuccessConfirmSPQuestion3
-  answer: Page3to4-1
+  answer: 選択肢1
   next_page_id: EnqSPSuccessConfirmPage4-1
   wait_until: 1
 
 scSPpage3to4-2:
   uuid: SuccessConfirmSPPage3to4-2
   enq_question_id: SuccessConfirmSPQuestion3
-  answer: Page3to4-2
+  answer: 選択肢2
   next_page_id: EnqSPSuccessConfirmPage4-2
   wait_until: 1
 
@@ -20,14 +20,14 @@ scSPpage3to4-2:
 scPCpage2to3-1:
   uuid: SuccessConfirmPCPage2to3-1
   enq_question_id: SuccessConfirmPCQuestion2
-  answer: Page2to3-1
+  answer: 選択肢1
   next_page_id: EnqPCSuccessConfirmPage3-1
   wait_until: 1
 
 scPCpage2to3-2:
   uuid: SuccessConfirmPCPage2to3-2
   enq_question_id: SuccessConfirmPCQuestion2
-  answer: Page2to3-2
+  answer: 選択肢2
   next_page_id: EnqPCSuccessConfirmPage3-2
   wait_until: 1
 
