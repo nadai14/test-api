@@ -180,74 +180,74 @@ incons_question_PC:
 
 
 # 養命酒
-youmei_shu_question1:
-  uuid: YoumeiShuEnqQuestion1
-  enq_page_id: YoumeiShuEnqPage1
+yomei_shu_question1:
+  uuid: YomeiShuEnqQuestion1
+  enq_page_id: YomeiShuEnqPage1
   num: 1
   seq: Q1
-  question_id: YoumeiShuQuestion1
+  question_id: YomeiShuQuestion1
 
-youmei_shu_question2:
-  uuid: YoumeiShuEnqQuestion2
-  enq_page_id: YoumeiShuEnqPage2
+yomei_shu_question2:
+  uuid: YomeiShuEnqQuestion2
+  enq_page_id: YomeiShuEnqPage2
   num: 2
   seq: Q2
-  question_id: YoumeiShuQuestion2
+  question_id: YomeiShuQuestion2
 
-youmei_shu_question3:
-  uuid: YoumeiShuEnqQuestion3
-  enq_page_id: YoumeiShuEnqPage3
+yomei_shu_question3:
+  uuid: YomeiShuEnqQuestion3
+  enq_page_id: YomeiShuEnqPage3
   num: 3
   seq: Q3
-  question_id: YoumeiShuQuestion3
+  question_id: YomeiShuQuestion3
 
-youmei_shu_question4:
-  uuid: YoumeiShuEnqQuestion4
-  enq_page_id: YoumeiShuEnqPage4
+yomei_shu_question4:
+  uuid: YomeiShuEnqQuestion4
+  enq_page_id: YomeiShuEnqPage4
   num: 4
   seq: Q4
-  question_id: YoumeiShuQuestion4
+  question_id: YomeiShuQuestion4
 
-youmei_shu_question5:
-  uuid: YoumeiShuEnqQuestion5
-  enq_page_id: YoumeiShuEnqPage5
+yomei_shu_question5:
+  uuid: YomeiShuEnqQuestion5
+  enq_page_id: YomeiShuEnqPage5
   num: 5
   seq: Q5
-  question_id: YoumeiShuQuestion5
+  question_id: YomeiShuQuestion5
 
-youmei_shu_question6:
-  uuid: YoumeiShuEnqQuestion6
-  enq_page_id: YoumeiShuEnqPage6
+yomei_shu_question6:
+  uuid: YomeiShuEnqQuestion6
+  enq_page_id: YomeiShuEnqPage6
   num: 6
   seq: Q6
-  question_id: YoumeiShuQuestion6
+  question_id: YomeiShuQuestion6
 
-youmei_shu_question7:
-  uuid: YoumeiShuEnqQuestion7
-  enq_page_id: YoumeiShuEnqPage7
+yomei_shu_question7:
+  uuid: YomeiShuEnqQuestion7
+  enq_page_id: YomeiShuEnqPage7
   num: 7
   seq: Q7
-  question_id: YoumeiShuQuestion7
+  question_id: YomeiShuQuestion7
 
-youmei_shu_question8:
-  uuid: YoumeiShuEnqQuestion8
-  enq_page_id: YoumeiShuEnqPage8
+yomei_shu_question8:
+  uuid: YomeiShuEnqQuestion8
+  enq_page_id: YomeiShuEnqPage8
   num: 8
   seq: Q8
-  question_id: YoumeiShuQuestion8
+  question_id: YomeiShuQuestion8
 
-youmei_shu_question9:
-  uuid: YoumeiShuEnqQuestion9
-  enq_page_id: YoumeiShuEnqPage9
+yomei_shu_question9:
+  uuid: YomeiShuEnqQuestion9
+  enq_page_id: YomeiShuEnqPage9
   num: 9
   seq: Q9
-  question_id: YoumeiShuQuestion9
+  question_id: YomeiShuQuestion9
 
-youmei_shu_question10:
-  uuid: YoumeiShuEnqQuestion10
-  enq_page_id: YoumeiShuEnqPage10
+yomei_shu_question10:
+  uuid: YomeiShuEnqQuestion10
+  enq_page_id: YomeiShuEnqPage10
   num: 10
   seq: Q10
-  question_id: YoumeiShuQuestion10
+  question_id: YomeiShuQuestion10
 
   

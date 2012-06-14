@@ -44,8 +44,8 @@ incons_question:
 
  
 # 養命酒
-youmei_shu:
-  uuid: YoumeiShuEnqID
+yomei_shu:
+  uuid: YomeiShuEnqID
   status: 1
   
   

@@ -121,9 +121,9 @@ incons_question:
 
 
 # 養命酒
-youmei_shu:
-  mid: YoumeiShuCampaignID
-  enq_id: YoumeiShuEnqID
+yomei_shu:
+  mid: YomeiShuCampaignID
+  enq_id: YomeiShuEnqID
   status: 1
   platform: mixi
   point: 13

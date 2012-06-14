@@ -157,53 +157,53 @@ incons_question_PC:
 
 
 # 養命酒
-youmei_shu_page1:
-  uuid: YoumeiShuEnqPage1
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage2
+yomei_shu_page1:
+  uuid: YomeiShuEnqPage1
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage2
 
-youmei_shu_page2:
-  uuid: YoumeiShuEnqPage2
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage3
+yomei_shu_page2:
+  uuid: YomeiShuEnqPage2
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage3
 
-youmei_shu_page3:
-  uuid: YoumeiShuEnqPage3
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage4
+yomei_shu_page3:
+  uuid: YomeiShuEnqPage3
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage4
 
-youmei_shu_page5:
-  uuid: YoumeiShuEnqPage5
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage6
+yomei_shu_page5:
+  uuid: YomeiShuEnqPage5
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage6
 
-youmei_shu_page6:
-  uuid: YoumeiShuEnqPage6
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage7
+yomei_shu_page6:
+  uuid: YomeiShuEnqPage6
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage7
 
-youmei_shu_page7:
-  uuid: YoumeiShuEnqPage7
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage8
+yomei_shu_page7:
+  uuid: YomeiShuEnqPage7
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage8
 
-youmei_shu_page8:
-  uuid: YoumeiShuEnqPage8
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage9
+yomei_shu_page8:
+  uuid: YomeiShuEnqPage8
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage9
 
-youmei_shu_page9:
-  uuid: YoumeiShuEnqPage9
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage10
+yomei_shu_page9:
+  uuid: YomeiShuEnqPage9
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage10
 
-youmei_shu_page10:
-  uuid: YoumeiShuEnqPage10
-  enq_face_id: YoumeiShuEnqFaceID
-  next_page_id: YoumeiShuEnqPage11
+yomei_shu_page10:
+  uuid: YomeiShuEnqPage10
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage11
   
-youmei_shu_page11:
-  uuid: YoumeiShuEnqPage11
-  enq_face_id: YoumeiShuEnqFaceID
+yomei_shu_page11:
+  uuid: YomeiShuEnqPage11
+  enq_face_id: YomeiShuEnqFaceID
 
 

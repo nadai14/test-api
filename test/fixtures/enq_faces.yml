@@ -122,11 +122,11 @@ incons_question_PC:
 
 
 # 養命酒
-youmei_shu:
-  uuid: YoumeiShuEnqFaceID
-  enq_id: YoumeiShuEnqID
+yomei_shu:
+  uuid: YomeiShuEnqFaceID
+  enq_id: YomeiShuEnqID
   face: PC
-  first_page_id: YoumeiShuEnqPage1
+  first_page_id: YomeiShuEnqPage1
   wait_until: 30
   title: 動画キャンペーン
  
