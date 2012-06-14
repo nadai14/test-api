@@ -19,10 +19,12 @@ json.questions do |json|
       end
     end
 
-    unless enq_question.question.answer_content.nil?
-      json.answer do |json|
-        json.content enq_question.question.answer_content
-        json.description enq_question.question.answer_description unless enq_question.question.answer_description.nil?
+    enq_question.question.tap do |q|
+      unless q.answer_content.nil?
+        json.answer do |json|
+          json.content q.answer_content
+          json.description q.answer_description unless q.answer_description.nil?
+        end
       end
     end
   end
