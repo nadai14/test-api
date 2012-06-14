@@ -39,7 +39,7 @@ nullable_SP:
   next_page_id: NullableSPQuestion2-2
 
 # PC用のnil動作確認データ
-nullable:
+nullable_PC:
   uuid: BranchNullablePC
   enq_question_id: NullablePCQuestion1
   answer: Page1to2-2
