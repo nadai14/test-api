@@ -38,8 +38,8 @@ select-choice1:
   order: 1
   content: 選択肢1
 
-select-choice1:
-  uuid: SelectChoice1
+select-choice2:
+  uuid: SelectChoice2
   question_id: QuestionSelect
   order: 2
   content: 選択肢2
