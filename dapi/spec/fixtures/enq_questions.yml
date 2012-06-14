@@ -2,37 +2,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # スマートフォン用の動作確認データ
-scTOquestion1:
-  uuid: SuccessConfirmTOQuestion1
-  enq_page_id: EnqTOSuccessConfirmPage1
+scSPquestion1:
+  uuid: SuccessConfirmSPQuestion1
+  enq_page_id: EnqSPSuccessConfirmPage1
   num: 1
   seq: Q1
   question_id: QuestionRadio
 
-scTOquestion2:
-  uuid: SuccessConfirmTOQuestion2
-  enq_page_id: EnqTOSuccessConfirmPage2
+scSPquestion2:
+  uuid: SuccessConfirmSPQuestion2
+  enq_page_id: EnqSPSuccessConfirmPage2
   num: 2
   seq: Q2
   question_id: QuestionNumeric
 
-scTOquestion3:
-  uuid: SuccessConfirmTOQuestion3
-  enq_page_id: EnqTOSuccessConfirmPage3
+scSPquestion3:
+  uuid: SuccessConfirmSPQuestion3
+  enq_page_id: EnqSPSuccessConfirmPage3
   num: 3
   seq: Q3
   question_id: QuestionSelect
 
-scTOquestion4-1:
-  uuid: SuccessConfirmTOQuestion4-1
-  enq_page_id: EnqTOSuccessConfirmPage4-1
+scSPquestion4-1:
+  uuid: SuccessConfirmSPQuestion4-1
+  enq_page_id: EnqSPSuccessConfirmPage4-1
   num: 4
   seq: Q4
   question_id: QuestionTextarea
 
-scTOquestion4-2:
-  uuid: SuccessConfirmTOQuestion4-2
-  enq_page_id: EnqTOSuccessConfirmPage4-2
+scSPquestion4-2:
+  uuid: SuccessConfirmSPQuestion4-2
+  enq_page_id: EnqSPSuccessConfirmPage4-2
   num: 4
   seq: Q4
   question_id: QuestionCheck
@@ -74,23 +74,23 @@ scPCquestion4-2:
   question_id: QuestionCheck
 
 # スマートフォン用のnil動作確認データ
-nullableTOuestion1:
-  uuid: NullableTOQuestion1
-  enq_page_id: EnqPageTONullablePage1
+nullableSPQuestion1:
+  uuid: NullableSPQuestion1
+  enq_page_id: EnqPageSPNullablePage1
   num: 1
   seq: Q1
   question_id: NullableQuestion1
 
-nullableTOuestion2-1:
-  uuid: NullableTOQuestion2-1
-  enq_page_id: EnqPageTONullablePage2-1
+nullableSPQuestion2-1:
+  uuid: NullableSPQuestion2-1
+  enq_page_id: EnqPageSPNullablePage2-1
   num: 2
   seq: Q2
   question_id: NullableQuestion2-1
 
-nullableTOuestion2-2:
-  uuid: NullableTOQuestion2-2
-  enq_page_id: EnqPageTONullablePage2-2
+nullableSPuestion2-2:
+  uuid: NullableSPQuestion2-2
+  enq_page_id: EnqPageSPNullablePage2-2
   num: 2
   seq: Q2
   question_id: NullableQuestion2-2
@@ -110,7 +110,7 @@ nullablePCuestion2-1:
   seq: Q2
   question_id: NullableQuestion2-1
 
-nullablePCuestion2-2:
+nullablePCQuestion2-2:
   uuid: NullablePCQuestion2-2
   enq_page_id: EnqPagePCNullablePage2-2
   num: 2
@@ -119,9 +119,9 @@ nullablePCuestion2-2:
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_TO:
-  uuid: FirstPageNullEnqQuestionTOID
-  enq_page_id: FirstPageNullEnqPageTOID
+first_page_null_SP:
+  uuid: FirstPageNullEnqQuestionSPID
+  enq_page_id: FirstPageNullEnqPageSPID
   num: 1
   seq: Q1
   question_id: QuestionText
@@ -134,9 +134,9 @@ first_page_null_PC:
   question_id: QuestionText
 
 # キャンペーンの状態が入稿前
-camp_status0_TO:
-  uuid: CampaignStatus0EnqQuestionTOID
-  enq_page_id: CampaignStatus0EnqPageTOID
+camp_status0_SP:
+  uuid: CampaignStatus0EnqQuestionSPID
+  enq_page_id: CampaignStatus0EnqPageSPID
   num: 1
   seq: Q1
   question_id: QuestionText
@@ -149,9 +149,9 @@ camp_status0_PC:
   question_id: QuestionText
 
 # キャンペーンの状態が終了
-camp_closed_TO:
-  uuid: CampaignClosedEnqQuestionTOID
-  enq_page_id: CampaignClosedEnqPageTOID
+camp_closed_SP:
+  uuid: CampaignClosedEnqQuestionSPID
+  enq_page_id: CampaignClosedEnqPageSPID
   num: 1
   seq: Q1
   question_id: QuestionText
@@ -164,9 +164,9 @@ camp_closed_PC:
   question_id: QuestionText
 
 # 設問と選択肢が矛盾している
-incons_question_TO:
-  uuid: InconsistencyQuestionEnqQuestionTOID
-  enq_page_id: InconsistencyQuestionEnqPageTOID
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqQuestionSPID
+  enq_page_id: InconsistencyQuestionEnqPageSPID
   num: 1
   seq: Q1
   question_id: QuestionInconsistency
