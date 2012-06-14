@@ -11,9 +11,9 @@ enq1 = Enq.create(status: 1)
 enq2 = Enq.create(status: 0)
 enq3 = Enq.create(status: 9)
 
-campaign1 = Campaign.create(status: 1, enq_id: enq1.uuid, platform: 'mixi', point: 10, message: 'キャンペーン1メッセージ', movie: 'movie1', thumbnail: 'thumbnail1')
-campaign2 = Campaign.create(status: 1, enq_id: enq1.uuid, platform: 'gree', point: 20, message: 'キャンペーン2メッセージ', movie: 'movie2', thumbnail: 'thumbnail2')
-campaign3 = Campaign.create(status: 1, enq_id: enq2.uuid, platform: 'gree', point: 30, message: 'キャンペーン3メッセージ', movie: 'movie3', thumbnail: 'thumbnail3')
+campaign1 = Campaign.create(mid: "1", status: 1, enq_id: enq1.uuid, platform: 'mixi', point: 10, message: 'キャンペーン1メッセージ', movie: 'movie1', thumbnail: 'thumbnail1')
+campaign2 = Campaign.create(mid: "2", status: 1, enq_id: enq1.uuid, platform: 'gree', point: 20, message: 'キャンペーン2メッセージ', movie: 'movie2', thumbnail: 'thumbnail2')
+campaign3 = Campaign.create(mid: "3", status: 1, enq_id: enq2.uuid, platform: 'gree', point: 30, message: 'キャンペーン3メッセージ', movie: 'movie3', thumbnail: 'thumbnail3')
 
 enq1_face_to = EnqFace.create(enq_id: enq1.uuid, face: 'TO', wait_until: '10:00:00', css: 'css1', title: 'アンケート1TO', description: 'アンケート1説明TO')
 enq1_face_pc = EnqFace.create(enq_id: enq1.uuid, face: 'PC', wait_until: '10:00:00', css: 'css2', title: 'アンケート1PC', description: 'アンケート1説明PC')
@@ -62,4 +62,8 @@ enq1_pc_q1 = EnqQuestion.create(enq_page_id: enq1_pc_page1.uuid, num: 1, seq: 'Q
 enq1_pc_q2 = EnqQuestion.create(enq_page_id: enq1_pc_page1.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
 enq1_pc_q3 = EnqQuestion.create(enq_page_id: enq1_pc_page2.uuid, num: 3, seq: 'Q3', question_id: q4.uuid)
 enq1_pc_q4 = EnqQuestion.create(enq_page_id: enq1_pc_page2.uuid, num: 4, seq: 'Q4', question_id: q5.uuid)
+
+
+branche1 = Branch.create(enq_question_id: enq1_to_q1.uuid, answer: '分岐1', next_page_id: enq1_to_page2.uuid)
+branche2 = Branch.create(enq_question_id: enq1_to_q1.uuid, answer: '分岐2', next_page_id: enq1_to_page3.uuid, wait_until: 10)
 

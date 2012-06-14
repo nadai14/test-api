@@ -17,7 +17,7 @@ describe CampaignsController do
         it{should route_to(controller: "campaigns", action: "show", id: "1", format: :json)}
       end
       
-      before{get :show, {id: campaigns(:success_confirm).id, face: "TO", format: :json}}
+      before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
       
       describe :response do
         subject{response}
@@ -66,10 +66,10 @@ describe CampaignsController do
             def_desc = '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
             message = '<p>アンケートは終了です。ありがとうございました。</p>'
             it 'デフォルト値を返しているか' do
-              response.body.should include(def_css).to_s.encode("UTF-8", "ISO-2022-JP")
-              response.body.should include(def_title).to_s.encode("UTF-8", "ISO-2022-JP")
-              response.body.should include(def_desc).to_s.encode("UTF-8", "ISO-2022-JP")
-              response.body.should include(message).to_s.encode("UTF-8", "ISO-2022-JP")
+              response.body.should include(def_css)
+              response.body.should include(def_title)
+              response.body.should include(def_desc)
+              response.body.should include(message)
             end
           end
             
@@ -85,7 +85,7 @@ describe CampaignsController do
         context "スマートフォンからアクセスした場合" do
           before do
             @campaign = campaigns(:nullable).point
-            get :show,{id: campaigns(:nullable).id, face: "TO", format: :json}
+            get :show,{id: campaigns(:nullable).id, face: "SP", format: :json}
           end
 
           context "デフォルト値が設定されていると" do
@@ -115,7 +115,7 @@ describe CampaignsController do
       describe "異常系は動作しているか" do
         context "認可されていない時" do
           describe :response do
-            before{get :show, {id: campaigns(:success_confirm).id, face: "TO", format: :json}}
+            before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
             
             it 'status 401(UnauthorizedException) を返す' do
               response.status.should == 401
@@ -128,7 +128,7 @@ describe CampaignsController do
         end
         
         context "キャンペーンIDが存在しない時" do
-          before{get :show, {id: "Unknown_id", face: "TO", format: :json}}
+          before{get :show, {id: "Unknown_id", face: "SP", format: :json}}
         
           it 'status 404(NotFoundException) を返す' do
             response.status.should == 404
@@ -136,7 +136,7 @@ describe CampaignsController do
         end
         
         context "status == 0 状態が入稿前の時" do
-          before{get :show, {id: campaigns(:camp_status0).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_status0).id, face: "SP", format: :json}}
         
           it 'status 403(ForbiddenException)　を返す' do
             response.status.should == 403
@@ -144,7 +144,7 @@ describe CampaignsController do
         end
         
         context "status == 1 で状態が終了の時" do
-          before{get :show, {id: campaigns(:camp_status9).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_status9).id, face: "SP", format: :json}}
         
           it 'status 403(ForbiddenException) を返す' do
             response.status.should == 403
@@ -152,7 +152,7 @@ describe CampaignsController do
         end
         
         context "closed_date の時間を超えている" do
-          before{get :show, {id: campaigns(:camp_closed).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_closed).id, face: "SP", format: :json}}
         
           it 'status 403(ForbiddenException) を返す' do
             response.status.should == 403

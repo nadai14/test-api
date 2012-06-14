@@ -2,15 +2,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # スマートフォン用の動作確認データ
-sc_TO:
-  uuid: EnqTOSuccessConfirm
+sc_SP:
+  uuid: EnqSPSuccessConfirm
   enq_id: EnqStatus1
-  face: TO
-  first_page_id: EnqTOSuccessConfirmPage1
+  face: SP
+  first_page_id: EnqSPSuccessConfirmPage1
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
-  title: アンケート1TO
-  description: アンケート1説明TO
+  title: アンケート1SP
+  description: アンケート1説明SP
 
 # PC用の動作確認データ
 sc_PC:
@@ -24,10 +24,10 @@ sc_PC:
   description: アンケート1説明PC
 
 # スマートフォン用のnil動作確認データ
-nullable_TO:
-  uuid: EnqTONullable
+nullable_SP:
+  uuid: EnqSPNullable
   enq_id: EnqNullable
-  face: TO
+  face: SP
   
 # PC用のnil動作確認データ
 nullable_PC:
@@ -37,10 +37,10 @@ nullable_PC:
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_TO:
-  uuid: FirstPageNullEnqFaceTOID
+first_page_null_SP:
+  uuid: FirstPageNullEnqFaceSPID
   enq_id: FirstPageNullEnqID
-  face: TO
+  face: SP
   first_page_id: 
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
@@ -58,11 +58,11 @@ first_page_null_PC:
   description: アンケートの最初のページがNull
 
 # キャンペーンの状態が入稿前
-camp_status0_TO:
-  uuid: CampaignStatus0EnqFaceTOID
+camp_status0_SP:
+  uuid: CampaignStatus0EnqFaceSPID
   enq_id: CampaignStatus0EnqID
-  face: TO
-  first_page_id: CampaignStatus0EnqPageTOID
+  face: SP
+  first_page_id: CampaignStatus0EnqPageSPID
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
   title: キャンペーンの状態が入稿前
@@ -79,11 +79,11 @@ camp_status0_PC:
   description: キャンペーンの状態が入稿前
 
 # キャンペーンの状態が終了
-camp_closed_TO:
-  uuid: CampaignClosedEnqFaceTOID
+camp_closed_SP:
+  uuid: CampaignClosedEnqFaceSPID
   enq_id: CampaignClosedEnqID
-  face: TO
-  first_page_id: CampaignClosedEnqPageTOID
+  face: SP
+  first_page_id: CampaignClosedEnqPageSPID
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
   title: キャンペーンの状態が入稿前
@@ -100,11 +100,11 @@ camp_closed_PC:
   description: キャンペーンの状態が終了
 
 # 設問と選択肢が矛盾している
-incons_question_TO:
-  uuid: InconsistencyQuestionEnqFaceTOID
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqFaceSPID
   enq_id: InconsistencyQuestionEnqID
-  face: TO
-  first_page_id: InconsistencyQuestionEnqPageTOID
+  face: SP
+  first_page_id: InconsistencyQuestionEnqPageSPID
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
   title: 設問と選択肢が矛盾している

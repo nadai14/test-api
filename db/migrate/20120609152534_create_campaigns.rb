@@ -1,7 +1,7 @@
 class CreateCampaigns < ActiveRecord::Migration
   def change
     create_table :campaigns, :id => false do |t|
-      t.string :uuid, :limit => 36, :primary => true
+      t.string :mid, :limit => 36, :primary => true
       t.string :enq_id
       t.integer :status, :null => false, :default => 0
       t.string :platform, :null => false

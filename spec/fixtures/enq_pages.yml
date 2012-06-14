@@ -2,38 +2,38 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # スマートフォン用の動作確認データ
-sc_TO_page1:
-  uuid: EnqTOSuccessConfirmPage1
-  enq_face_id: EnqTOSuccessConfirm
-  description: アンケ1TOページ1
-  next_page_id: EnqTOSuccessConfirmPage2
+sc_SP_page1:
+  uuid: EnqSPSuccessConfirmPage1
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ1
+  next_page_id: EnqSPSuccessConfirmPage2
   wait_until: 1
 
-sc_TO_page2:
-  uuid: EnqTOSuccessConfirmPage2
-  enq_face_id: EnqTOSuccessConfirm
-  description: アンケ1TOページ2
-  next_page_id: EnqTOSuccessConfirmPage3
+sc_SP_page2:
+  uuid: EnqSPSuccessConfirmPage2
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ2
+  next_page_id: EnqSPSuccessConfirmPage3
   wait_until: 1
 
-sc_TO_page3:
-  uuid: EnqTOSuccessConfirmPage3
-  enq_face_id: EnqTOSuccessConfirm
-  description: アンケ1TOページ3
-  next_page_id: EnqTOSuccessConfirmPage4-1
+sc_SP_page3:
+  uuid: EnqSPSuccessConfirmPage3
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ3
+  next_page_id: EnqSPSuccessConfirmPage4-1
   wait_until: 1
 
-sc_TO_page4-1:
-  uuid: EnqTOSuccessConfirmPage4-1
-  enq_face_id: EnqTOSuccessConfirm
-  description: アンケ1TOページ2
+sc_SP_page4-1:
+  uuid: EnqSPSuccessConfirmPage4-1
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ2
   next_page_id: 
   wait_until: 1
 
-sc_TO_page4-2:
-  uuid: EnqTOSuccessConfirmPage4-2
-  enq_face_id: EnqTOSuccessConfirm
-  description: アンケ1TOページ3
+sc_SP_page4-2:
+  uuid: EnqSPSuccessConfirmPage4-2
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ3
   next_page_id: 
   wait_until: 1
   
@@ -67,18 +67,18 @@ sc_PC_page3-2:
   wait_until: 1
 
 # スマートフォン用のnil動作確認データ
-nullable_TO_page1:
-  uuid: EnqPageTONullablePage1
-  enq_face_id: EnqTONullable
-  next_page_id: EnqPageTONullablePage2-1
+nullable_SP_page1:
+  uuid: EnqPageSPNullablePage1
+  enq_face_id: EnqSPNullable
+  next_page_id: EnqPageSPNullablePage2-1
 
-nullable_TO_page2-1:
-  uuid: EnqPageTONullablePage2-1
-  enq_face_id: EnqTONullable
+nullable_SP_page2-1:
+  uuid: EnqPageSPNullablePage2-1
+  enq_face_id: EnqSPNullable
 
-nullable_TO_page2-2:
-  uuid: EnqPageTONullablePage2-2
-  enq_face_id: EnqTONullable
+nullable_SP_page2-2:
+  uuid: EnqPageSPNullablePage2-2
+  enq_face_id: EnqSPNullable
 
 # PC用のnil動作確認データ
 nullable_PC_page1:
@@ -96,9 +96,9 @@ nullable_PC_page2-2:
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_TO:
-  uuid: FirstPageNullEnqPageTOID
-  enq_face_id: FirstPageNullEnqFaceTOID
+first_page_null_SP:
+  uuid: FirstPageNullEnqPageSPID
+  enq_face_id: FirstPageNullEnqFaceSPID
   description: アンケートの最初のページがNull
   next_page_id: 
   wait_until: 1
@@ -111,9 +111,9 @@ first_page_null_PC:
   wait_until: 1
 
 # キャンペーンの状態が入稿前
-camp_status0_TO:
-  uuid: CampaignStatus0EnqPageTOID
-  enq_face_id: CampaignStatus0EnqFaceTOID
+camp_status0_SP:
+  uuid: CampaignStatus0EnqPageSPID
+  enq_face_id: CampaignStatus0EnqFaceSPID
   description: キャンペーンの状態が入稿前
   next_page_id: 
   wait_until: 1
@@ -126,9 +126,9 @@ camp_status0_PC:
   wait_until: 1
 
 # キャンペーンの状態が終了
-camp_closed_TO:
-  uuid: CampaignClosedEnqPageTOID
-  enq_face_id: CampaignClosedEnqFaceTOID
+camp_closed_SP:
+  uuid: CampaignClosedEnqPageSPID
+  enq_face_id: CampaignClosedEnqFaceSPID
   description: キャンペーンの状態が終了
   next_page_id: 
   wait_until: 1
@@ -141,9 +141,9 @@ camp_closed_PC:
   wait_until: 1
 
 # 設問と選択肢が矛盾している
-incons_question_TO:
-  uuid: InconsistencyQuestionEnqPageTOID
-  enq_face_id: InconsistencyQuestionEnqFaceTOID
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqPageSPID
+  enq_face_id: InconsistencyQuestionEnqFaceSPID
   description: 設問と選択肢が矛盾している
   next_page_id: 
   wait_until: 1

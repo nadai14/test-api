@@ -2,41 +2,41 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # スマートフォン用の動作確認データ
-scTOpage3to4-1:
-  uuid: SuccessConfirmTOPage3to4-1
-  enq_question_id: SuccessConfirmTOQuestion3
-  answer: Page3to4-1
-  next_page_id: EnqTOSuccessConfirmPage4-1
+scSPpage3to4-1:
+  uuid: SuccessConfirmSPPage3to4-1
+  enq_question_id: SuccessConfirmSPQuestion3
+  answer: 選択肢1
+  next_page_id: EnqSPSuccessConfirmPage4-1
   wait_until: 1
 
-scTOpage3to4-2:
-  uuid: SuccessConfirmTOPage3to4-2
-  enq_question_id: SuccessConfirmTOQuestion3
-  answer: Page3to4-2
-  next_page_id: EnqTOSuccessConfirmPage4-2
+scSPpage3to4-2:
+  uuid: SuccessConfirmSPPage3to4-2
+  enq_question_id: SuccessConfirmSPQuestion3
+  answer: 選択肢2
+  next_page_id: EnqSPSuccessConfirmPage4-2
   wait_until: 1
 
 # PC用の動作確認データ
 scPCpage2to3-1:
   uuid: SuccessConfirmPCPage2to3-1
   enq_question_id: SuccessConfirmPCQuestion2
-  answer: Page2to3-1
+  answer: 選択肢1
   next_page_id: EnqPCSuccessConfirmPage3-1
   wait_until: 1
 
 scPCpage2to3-2:
   uuid: SuccessConfirmPCPage2to3-2
   enq_question_id: SuccessConfirmPCQuestion2
-  answer: Page2to3-2
+  answer: 選択肢2
   next_page_id: EnqPCSuccessConfirmPage3-2
   wait_until: 1
 
 # スマートフォン用のnil動作確認データ
-nullable_TO:
-  uuid: BranchNullableTO
-  enq_question_id: NullableTOQuestion1
+nullable_SP:
+  uuid: BranchNullableSP
+  enq_question_id: NullableSPQuestion1
   answer: Page1to2-2
-  next_page_id: NullableTOQuestion2-2
+  next_page_id: NullableSPQuestion2-2
 
 # PC用のnil動作確認データ
 nullable:

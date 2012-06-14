@@ -17,6 +17,7 @@ module ApiController
   ENQ_DOES_NOT_EXIST = "アンケートIDが存在しない"
   PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
   ID_MISS_MATCH = "アンケートIDとページIDが矛盾している"
+  IMVALID_QUESTION = "設問と選択肢が矛盾している"
   BEFORE_OPENING = "状態が入稿前"
   AFTER_CLOSING = "状態が終了"
 
@@ -44,6 +45,6 @@ class ApplicationController < ActionController::Base
   end
 
   def data_incompleted(e)
-    render :status => 409, :json => {:message => e.message} # 409 is strange
+    render :status => 500, :json => {:message => e.message}
   end
 end

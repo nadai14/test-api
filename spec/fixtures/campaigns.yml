@@ -11,13 +11,13 @@ success_confirm:
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
   conversion_tag: cnvtag1
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 # nil動作確認用のデータ
 nullable:
@@ -38,13 +38,13 @@ first_page_null:
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
   conversion_tag: cnvtag1
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 # キャンペーンの状態が入稿前
 camp_status0:
@@ -56,13 +56,13 @@ camp_status0:
   opening_at: 2100-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーン2メッセージ
   conversion_tag: cnvtag2
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner2
   second_point: 20
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 # キャンペーンが終了
 # キャンペーンの状態が終了
@@ -75,13 +75,13 @@ camp_status9:
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーン3メッセージ
   conversion_tag: cnvtag3
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner3
   second_point: 30
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 # キャンペーンが終了日時を過ぎている
 camp_closed:
@@ -93,13 +93,13 @@ camp_closed:
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 # 設問と選択肢が矛盾している
 incons_question:
@@ -111,13 +111,13 @@ incons_question:
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
   movie: /video/yomeishu.mov
-  thumbnail: /images/poster-to.jpg
+  thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
-  second_picture: /images/poster-to.jpg
+  second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
-  client_url: http://client.com
+  client_url: http://cdn.poncan.jp
 
 
 # 養命酒
