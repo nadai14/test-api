@@ -3,7 +3,7 @@
 
 # 動作確認用データ
 success_confirm:
-  uuid: CampaignSuccessConfirm
+  mid: CampaignSuccessConfirm
   enq_id: EnqStatus1
   status: 1
   platform: mixi
@@ -21,7 +21,7 @@ success_confirm:
 
 # キャンペーンが入稿前のデータ
 status0:
-  uuid: CampaignStatus0
+  mid: CampaignStatus0
   enq_id: EnqStatus1
   status: 0
   platform: gree
@@ -39,7 +39,7 @@ status0:
 
 # キャンペーンが終了時のデータ
 status9:
-  uuid: CampaignStatus9
+  mid: CampaignStatus9
   enq_id: EnqStatus1
   status: 9
   platform: mixi
@@ -57,7 +57,7 @@ status9:
 
 # キャンペーンが終了日時を過ぎていた時のデータ
 closed:
-  uuid: CampaignClosed
+  mid: CampaignClosed
   enq_id: EnqStatus1
   status: 1
   platform: gree
@@ -75,7 +75,7 @@ closed:
 
 # nil動作確認用のデータ
 nullable:
-  uuid: CampaignNullable
+  mid: CampaignNullable
   enq_id: EnqNullable
   status: 1
   platform: gree
@@ -84,7 +84,7 @@ nullable:
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
-  uuid: FirstPageNullCampaignID
+  mid: FirstPageNullCampaignID
   enq_id: FirstPageNullEnqID
   status: 1
   platform: mixi
@@ -109,7 +109,7 @@ first_page_null:
 
 # 養命酒
 youmei_shu:
-  uuid: YoumeiShuCampaignID
+  mid: YoumeiShuCampaignID
   enq_id: YoumeiShuEnqID
   status: 1
   platform: mixi
