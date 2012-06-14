@@ -20,7 +20,29 @@ status9:
 nullable:
   uuid: EnqNullable
   status: 1
-  
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null:
+  uuid: FirstPageNullEnqID
+  status: 1
+
+# キャンペーンの状態が入稿前
+camp_status0:
+  uuid: CampaignStatus0EnqID
+  status: 1
+
+# キャンペーンの状態が終了
+camp_closed:
+  uuid: CampaignClosedEnqID
+  status: 1
+
+# 設問と選択肢が矛盾している
+incons_question:
+  uuid: InconsistencyQuestionEnqID
+  status: 1
+
+ 
 # 養命酒
 youmei_shu:
   uuid: YoumeiShuEnqID

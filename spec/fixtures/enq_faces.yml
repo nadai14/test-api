@@ -8,7 +8,7 @@ sc_TO:
   face: TO
   first_page_id: EnqTOSuccessConfirmPage1
   wait_until: 30
-  css: css1
+  css: /css/sp/themes/sample-1/style.css
   title: アンケート1TO
   description: アンケート1説明TO
 
@@ -19,7 +19,7 @@ sc_PC:
   face: PC
   first_page_id: EnqPCSuccessConfirmPage1
   wait_until: 30
-  css: css2
+  css: /css/pc/themes/sample-1/style.css
   title: アンケート1PC
   description: アンケート1説明PC
 
@@ -34,6 +34,92 @@ nullable_PC:
   uuid: EnqPCNullable
   enq_id: EnqNullable
   face: PC
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_TO:
+  uuid: FirstPageNullEnqFaceTOID
+  enq_id: FirstPageNullEnqID
+  face: TO
+  first_page_id: 
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqFacePCID
+  enq_id: FirstPageNullEnqID
+  face: PC
+  first_page_id: 
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+# キャンペーンの状態が入稿前
+camp_status0_TO:
+  uuid: CampaignStatus0EnqFaceTOID
+  enq_id: CampaignStatus0EnqID
+  face: TO
+  first_page_id: CampaignStatus0EnqPageTOID
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: キャンペーンの状態が入稿前
+  description: キャンペーンの状態が入稿前
+
+camp_status0_PC:
+  uuid: CampaignStatus0EnqFacePCID
+  enq_id: CampaignStatus0EnqID
+  face: PC
+  first_page_id: CampaignStatus0EnqPagePCID
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: キャンペーンの状態が入稿前
+  description: キャンペーンの状態が入稿前
+
+# キャンペーンの状態が終了
+camp_closed_TO:
+  uuid: CampaignClosedEnqFaceTOID
+  enq_id: CampaignClosedEnqID
+  face: TO
+  first_page_id: CampaignClosedEnqPageTOID
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: キャンペーンの状態が入稿前
+  description: キャンペーンの状態が入稿前
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqFacePCID
+  enq_id: CampaignClosedEnqID
+  face: PC
+  first_page_id: CampaignClosedEnqPagePCID
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: キャンペーンの状態が終了
+  description: キャンペーンの状態が終了
+
+# 設問と選択肢が矛盾している
+incons_question_TO:
+  uuid: InconsistencyQuestionEnqFaceTOID
+  enq_id: InconsistencyQuestionEnqID
+  face: TO
+  first_page_id: InconsistencyQuestionEnqPageTOID
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: 設問と選択肢が矛盾している
+  description: 設問と選択肢が矛盾している
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqFacePCID
+  enq_id: InconsistencyQuestionEnqID
+  face: PC
+  first_page_id: InconsistencyQuestionEnqPagePCID
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: 設問と選択肢が矛盾している
+  description: 設問と選択肢が矛盾している
+
 
 # 養命酒
 youmei_shu:

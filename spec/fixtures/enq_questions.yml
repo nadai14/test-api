@@ -117,6 +117,68 @@ nullablePCuestion2-2:
   seq: Q2
   question_id: NullableQuestion2-2
 
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_TO:
+  uuid: FirstPageNullEnqQuestionTOID
+  enq_page_id: FirstPageNullEnqPageTOID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqQuestionPCID
+  enq_page_id: FirstPageNullEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# キャンペーンの状態が入稿前
+camp_status0_TO:
+  uuid: CampaignStatus0EnqQuestionTOID
+  enq_page_id: CampaignStatus0EnqPageTOID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+camp_status0_PC:
+  uuid: CampaignStatus0EnqQuestionPCID
+  enq_page_id: CampaignStatus0EnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# キャンペーンの状態が終了
+camp_closed_TO:
+  uuid: CampaignClosedEnqQuestionTOID
+  enq_page_id: CampaignClosedEnqPageTOID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqQuestionPCID
+  enq_page_id: CampaignClosedEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# 設問と選択肢が矛盾している
+incons_question_TO:
+  uuid: InconsistencyQuestionEnqQuestionTOID
+  enq_page_id: InconsistencyQuestionEnqPageTOID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqQuestionPCID
+  enq_page_id: InconsistencyQuestionEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+
+
 # 養命酒
 youmei_shu_question1:
   uuid: YoumeiShuEnqQuestion1

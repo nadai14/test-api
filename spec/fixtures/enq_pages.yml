@@ -93,6 +93,68 @@ nullable_PC_page2-1:
 nullable_PC_page2-2:
   uuid: EnqPagePCNullablePage2-2
   enq_face_id: EnqPCNullable
+  
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_TO:
+  uuid: FirstPageNullEnqPageTOID
+  enq_face_id: FirstPageNullEnqFaceTOID
+  description: アンケートの最初のページがNull
+  next_page_id: 
+  wait_until: 1
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqPagePCID
+  enq_face_id: FirstPageNullEnqFacePCID
+  description: アンケートの最初のページがNull
+  next_page_id: 
+  wait_until: 1
+
+# キャンペーンの状態が入稿前
+camp_status0_TO:
+  uuid: CampaignStatus0EnqPageTOID
+  enq_face_id: CampaignStatus0EnqFaceTOID
+  description: キャンペーンの状態が入稿前
+  next_page_id: 
+  wait_until: 1
+
+camp_status0_PC:
+  uuid: CampaignStatus0EnqPagePCID
+  enq_face_id: CampaignStatus0EnqFacePCID
+  description: キャンペーンの状態が入稿前
+  next_page_id: 
+  wait_until: 1
+
+# キャンペーンの状態が終了
+camp_closed_TO:
+  uuid: CampaignClosedEnqPageTOID
+  enq_face_id: CampaignClosedEnqFaceTOID
+  description: キャンペーンの状態が終了
+  next_page_id: 
+  wait_until: 1
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqPagePCID
+  enq_face_id: CampaignClosedEnqFacePCID
+  description: キャンペーンの状態が終了
+  next_page_id: 
+  wait_until: 1
+
+# 設問と選択肢が矛盾している
+incons_question_TO:
+  uuid: InconsistencyQuestionEnqPageTOID
+  enq_face_id: InconsistencyQuestionEnqFaceTOID
+  description: 設問と選択肢が矛盾している
+  next_page_id: 
+  wait_until: 1
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqPagePCID
+  enq_face_id: InconsistencyQuestionEnqFacePCID
+  description: 設問と選択肢が矛盾している
+  next_page_id: 
+  wait_until: 1
+
 
 # 養命酒
 youmei_shu_page1:

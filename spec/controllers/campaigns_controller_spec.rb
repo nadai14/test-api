@@ -25,7 +25,7 @@ describe CampaignsController do
       end
     end
 
-    context "UUIDとフェイスから値を取得する" do
+    context "MIDとフェイスから値を取得する" do
       describe "レスポンスは正しく返ってきているか" do
         before do
           request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
@@ -38,7 +38,7 @@ describe CampaignsController do
         end
 
         it 'カラムの確認' do
-          [:uuid, :enq_id, :platform, :first_page_id, :wait_until, :css, :movie, :thumbnail, :point,
+          [:mid, :enq_id, :platform, :first_page_id, :wait_until, :css, :movie, :thumbnail, :point,
                 :title, :description, :message, :conversion_tag, :second_picture, :second_point, :client_url].each do |key|
             response.body.should have_json("/#{key}") 
           end
@@ -136,7 +136,7 @@ describe CampaignsController do
         end
         
         context "status == 0 状態が入稿前の時" do
-          before{get :show, {id: campaigns(:status0).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_status0).id, face: "TO", format: :json}}
         
           it 'status 403(ForbiddenException)　を返す' do
             response.status.should == 403
@@ -144,7 +144,7 @@ describe CampaignsController do
         end
         
         context "status == 1 で状態が終了の時" do
-          before{get :show, {id: campaigns(:status9).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_status9).id, face: "TO", format: :json}}
         
           it 'status 403(ForbiddenException) を返す' do
             response.status.should == 403
@@ -152,7 +152,7 @@ describe CampaignsController do
         end
         
         context "closed_date の時間を超えている" do
-          before{get :show, {id: campaigns(:closed).id, face: "TO", format: :json}}
+          before{get :show, {id: campaigns(:camp_closed).id, face: "TO", format: :json}}
         
           it 'status 403(ForbiddenException) を返す' do
             response.status.should == 403
