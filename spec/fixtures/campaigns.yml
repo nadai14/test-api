@@ -10,7 +10,7 @@ success_confirm:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーン1メッセージ
   conversion_tag: cnvtag1
@@ -37,7 +37,7 @@ first_page_null:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーンメッセージ
   conversion_tag: cnvtag1
@@ -55,7 +55,7 @@ camp_status0:
   point: 20
   opening_at: 2100-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーン2メッセージ
   conversion_tag: cnvtag2
@@ -74,7 +74,7 @@ camp_status9:
   point: 30
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーン3メッセージ
   conversion_tag: cnvtag3
@@ -92,7 +92,7 @@ camp_closed:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
@@ -110,7 +110,7 @@ incons_question:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: http://demo.sunbi.co.jp/nci/video/long.mp4
+  movie: /video/yomeishu.mov
   thumbnail: /images/poster-to.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
@@ -129,7 +129,7 @@ yomei_shu:
   point: 13
   opening_at: 2012-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: http://cdn.poncan.jp/js/fixed.swfobject.js
+  movie: /video/yomeishu.mov
   client_url: http://cdn.poncan.jp
   
   
