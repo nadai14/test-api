@@ -8,11 +8,11 @@ class AnswersController < ApplicationController
       find_by_uuid(params[:page_id])
     raise NotFoundException.new PAGE_DOES_NOT_EXIST if page.nil?
     raise NotFoundException.new ID_MISS_MATCH_PAGE if page.enq_face.enq_id != params[:enq_id]
-    raise NotFoundException.new ID_MISS_MATCH_CAMPAIGN unless page.enq_face.enq.campaigns.any? {|c| c.uuid == params[:campaign_id]}
+    raise NotFoundException.new ID_MISS_MATCH_CAMPAIGN unless page.enq_face.enq.campaigns.any? {|c| c.mid == params[:campaign_id]}
     answers = params.
       select{|k, v| k.start_with? "answer_"}.                  # Hash#select returns a Hash
       inject({}){|a, (k, v)| a.tap{|o| o[k[7..-1].to_i] = v}}  # Hash#map does not return a Hash!!
-    raise BadRequestException.new REQUIRED_QUESTION unless page.enq_questions.select{|q| q.question.required}.all?{|q| answer.has_key? q.num}
+    raise BadRequestException.new REQUIRED_QUESTION unless page.enq_questions.select{|q| q.question.required}.all?{|q| answers.has_key? q.num}
     (valid, invalid) = answers.partition{|k, v| valid?(k, v, page.enq_questions)}
     valid.each{|k, v| register(k, v, page.enq_questions, params[:campaign_id], params[:uid], request.headers["User-Agent"])}
     raise BadRequestException.new IMVALID_QUESTION unless invalid.empty?

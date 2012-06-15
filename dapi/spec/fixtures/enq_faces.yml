@@ -123,7 +123,7 @@ incons_question_PC:
 
 # 養命酒
 yomei_shu_SP:
-  uuid: YomeiShuSPEnqFaceSPID
+  uuid: YomeiShuSPEnqFaceID
   enq_id: YomeiShuEnqID
   face: SP
   first_page_id: YomeiShuEnqPage1
@@ -131,7 +131,7 @@ yomei_shu_SP:
   title: 動画キャンペーン
  
 yomei_shu_PC:
-  uuid: YomeiShuPCEnqFacePCID
+  uuid: YomeiShuPCEnqFaceID
   enq_id: YomeiShuEnqID
   face: PC
   first_page_id: YomeiShuEnqPage1
@@ -140,7 +140,7 @@ yomei_shu_PC:
  
 # プラスワン
 plus_one_SP:
-  uuid: PlusOneSPEnqFaceSPID
+  uuid: PlusOneSPEnqFaceID
   enq_id: PlusOneEnqID
   face: SP
   first_page_id: PlusOneSPEnqPage1
@@ -150,7 +150,7 @@ plus_one_SP:
   description: 
  
 plus_one_PC:
-  uuid: PlusOnePCEnqFacePCID
+  uuid: PlusOnePCEnqFaceID
   enq_id: PlusOneEnqID
   face: PC
   first_page_id: PlusOnePCEnqPage1

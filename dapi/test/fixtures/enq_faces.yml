@@ -146,8 +146,8 @@ plus_one_SP:
   first_page_id: PlusOneSPEnqPage1
   wait_until: 
   css: /css/sp/themes/plus-1/style.css
-  title: 
-  description: 
+  title: title_SP
+  description: desctiption_SP
  
 plus_one_PC:
   uuid: PlusOnePCEnqFacePCID
@@ -156,6 +156,6 @@ plus_one_PC:
   first_page_id: PlusOnePCEnqPage1
   wait_until: 
   css: /css/pc/themes/plus-1/style.css
-  title: 
-  description: 
+  title: title_PC
+  description: description_PC
  
