@@ -145,7 +145,7 @@ plus_one_SP:
   face: SP
   first_page_id: YomeiShuEnqPage1
   wait_until: 
-  css: /css/pc/themes/plus_one/style.css
+  css: /css/sp/themes/plus-1/style.css
   title: 
   description: 
  
