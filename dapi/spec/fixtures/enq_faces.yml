@@ -155,7 +155,7 @@ plus_one_PC:
   face: PC
   first_page_id: YomeiShuEnqPage1
   wait_until: 
-  css: /css/pc/themes/plus_one/style.css
+  css: /css/pc/themes/plus-1/style.css
   title: 
   description: 
  
