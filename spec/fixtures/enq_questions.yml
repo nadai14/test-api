@@ -180,144 +180,283 @@ incons_question_PC:
 
 
 # 養命酒
-yomei_shu_question1:
-  uuid: YomeiShuEnqQuestion1
-  enq_page_id: YomeiShuEnqPage1
+yomei_shu_sp_question1:
+  uuid: YomeiShuSPEnqQuestion1
+  enq_page_id: YomeiShuSPEnqPage1
   num: 1
   seq: Q1
   question_id: YomeiShuQuestion1
 
-yomei_shu_question2:
-  uuid: YomeiShuEnqQuestion2
-  enq_page_id: YomeiShuEnqPage2
+yomei_shu_sp_question2:
+  uuid: YomeiShuSPEnqQuestion2
+  enq_page_id: YomeiShuSPEnqPage2
   num: 2
   seq: Q2
   question_id: YomeiShuQuestion2
 
-yomei_shu_question3:
-  uuid: YomeiShuEnqQuestion3
-  enq_page_id: YomeiShuEnqPage3
+yomei_shu_sp_question3:
+  uuid: YomeiShuSPEnqQuestion3
+  enq_page_id: YomeiShuSPEnqPage3
   num: 3
   seq: Q3
   question_id: YomeiShuQuestion3
 
-yomei_shu_question4:
-  uuid: YomeiShuEnqQuestion4
-  enq_page_id: YomeiShuEnqPage4
+yomei_shu_sp_question4:
+  uuid: YomeiShuSPEnqQuestion4
+  enq_page_id: YomeiShuSPEnqPage4
   num: 4
   seq: Q4
   question_id: YomeiShuQuestion4
 
-yomei_shu_question5:
-  uuid: YomeiShuEnqQuestion5
-  enq_page_id: YomeiShuEnqPage5
+yomei_shu_sp_question5:
+  uuid: YomeiShuSPEnqQuestion5
+  enq_page_id: YomeiShuSPEnqPage5
   num: 5
   seq: Q5
   question_id: YomeiShuQuestion5
 
-yomei_shu_question6:
-  uuid: YomeiShuEnqQuestion6
-  enq_page_id: YomeiShuEnqPage6
+yomei_shu_sp_question6:
+  uuid: YomeiShuSPEnqQuestion6
+  enq_page_id: YomeiShuSPEnqPage6
   num: 6
   seq: Q6
   question_id: YomeiShuQuestion6
 
-yomei_shu_question7:
-  uuid: YomeiShuEnqQuestion7
-  enq_page_id: YomeiShuEnqPage7
+yomei_shu_sp_question7:
+  uuid: YomeiShuSPEnqQuestion7
+  enq_page_id: YomeiShuSPEnqPage7
   num: 7
   seq: Q7
   question_id: YomeiShuQuestion7
 
-yomei_shu_question8:
-  uuid: YomeiShuEnqQuestion8
-  enq_page_id: YomeiShuEnqPage8
+yomei_shu_sp_question8:
+  uuid: YomeiShuSPEnqQuestion8
+  enq_page_id: YomeiShuSPEnqPage8
   num: 8
   seq: Q8
   question_id: YomeiShuQuestion8
 
-yomei_shu_question9:
-  uuid: YomeiShuEnqQuestion9
-  enq_page_id: YomeiShuEnqPage9
+yomei_shu_sp_question9:
+  uuid: YomeiShuSPEnqQuestion9
+  enq_page_id: YomeiShuSPEnqPage9
   num: 9
   seq: Q9
   question_id: YomeiShuQuestion9
 
-yomei_shu_question10:
-  uuid: YomeiShuEnqQuestion10
-  enq_page_id: YomeiShuEnqPage10
+yomei_shu_sp_question10:
+  uuid: YomeiShuSPEnqQuestion10
+  enq_page_id: YomeiShuSPEnqPage10
+  num: 10
+  seq: Q10
+  question_id: YomeiShuQuestion10
+
+yomei_shu_pc_question1:
+  uuid: YomeiShuPCEnqQuestion1
+  enq_page_id: YomeiShuPCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: YomeiShuQuestion1
+
+yomei_shu_pc_question2:
+  uuid: YomeiShuPCEnqQuestion2
+  enq_page_id: YomeiShuPCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: YomeiShuQuestion2
+
+yomei_shu_pc_question3:
+  uuid: YomeiShuPCEnqQuestion3
+  enq_page_id: YomeiShuPCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: YomeiShuQuestion3
+
+yomei_shu_pc_question4:
+  uuid: YomeiShuPCEnqQuestion4
+  enq_page_id: YomeiShuPCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: YomeiShuQuestion4
+
+yomei_shu_pc_question5:
+  uuid: YomeiShuPCEnqQuestion5
+  enq_page_id: YomeiShuPCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: YomeiShuQuestion5
+
+yomei_shu_pc_question6:
+  uuid: YomeiShuPCEnqQuestion6
+  enq_page_id: YomeiShuPCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YomeiShuQuestion6
+
+yomei_shu_pc_question7:
+  uuid: YomeiShuPCEnqQuestion7
+  enq_page_id: YomeiShuPCEnqPage7
+  num: 7
+  seq: Q7
+  question_id: YomeiShuQuestion7
+
+yomei_shu_pc_question8:
+  uuid: YomeiShuPCEnqQuestion8
+  enq_page_id: YomeiShuPCEnqPage8
+  num: 8
+  seq: Q8
+  question_id: YomeiShuQuestion8
+
+yomei_shu_pc_question9:
+  uuid: YomeiShuPCEnqQuestion9
+  enq_page_id: YomeiShuPCEnqPage9
+  num: 9
+  seq: Q9
+  question_id: YomeiShuQuestion9
+
+yomei_shu_pc_question10:
+  uuid: YomeiShuPCEnqQuestion10
+  enq_page_id: YomeiShuPCEnqPage10
   num: 10
   seq: Q10
   question_id: YomeiShuQuestion10
 
 # プラスワン
-plus_one_question1:
-  uuid: PlusOneEnqQuestion1
-  enq_page_id: PlusOneEnqPage1
+plus_one_sp_question1:
+  uuid: PlusOneSPEnqQuestion1
+  enq_page_id: PlusOneSPEnqPage1
   num: 1
   seq: Q1
   question_id: PlusOneQuestion1
 
-plus_one_question2:
-  uuid: PlusOneEnqQuestion2
-  enq_page_id: PlusOneEnqPage2
+plus_one_sp_question2:
+  uuid: PlusOneSPEnqQuestion2
+  enq_page_id: PlusOneSPEnqPage2
   num: 2
   seq: Q2
   question_id: PlusOneQuestion2
 
-plus_one_question3:
-  uuid: PlusOneEnqQuestion3
-  enq_page_id: PlusOneEnqPage3
+plus_one_sp_question3:
+  uuid: PlusOneSPEnqQuestion3
+  enq_page_id: PlusOneSPEnqPage3
   num: 3
   seq: Q3
   question_id: PlusOneQuestion3
 
-plus_one_question4:
-  uuid: PlusOneEnqQuestion4
-  enq_page_id: PlusOneEnqPage4
+plus_one_sp_question4:
+  uuid: PlusOneSPEnqQuestion4
+  enq_page_id: PlusOneSPEnqPage4
   num: 4
   seq: Q4
   question_id: PlusOneQuestion4
 
-plus_one_question5:
-  uuid: PlusOneEnqQuestion5
-  enq_page_id: PlusOneEnqPage5
+plus_one_sp_question5:
+  uuid: PlusOneSPEnqQuestion5
+  enq_page_id: PlusOneSPEnqPage5
   num: 5
   seq: Q5
   question_id: PlusOneQuestion5
 
-plus_one_question6:
-  uuid: PlusOneEnqQuestion6
-  enq_page_id: PlusOneEnqPage6
+plus_one_sp_question6:
+  uuid: PlusOneSPEnqQuestion6
+  enq_page_id: PlusOneSPEnqPage6
   num: 6
   seq: Q6
   question_id: PlusOneQuestion6
 
-plus_one_question7:
-  uuid: PlusOneEnqQuestion7
-  enq_page_id: PlusOneEnqPage7
+plus_one_sp_question7:
+  uuid: PlusOneSPEnqQuestion7
+  enq_page_id: PlusOneSPEnqPage7
   num: 7
   seq: Q7
   question_id: PlusOneQuestion7
 
-plus_one_question8:
-  uuid: PlusOneEnqQuestion8
-  enq_page_id: PlusOneEnqPage8
+plus_one_sp_question8:
+  uuid: PlusOneSPEnqQuestion8
+  enq_page_id: PlusOneSPEnqPage8
   num: 8
   seq: Q8
   question_id: PlusOneQuestion8
 
-plus_one_question9:
-  uuid: PlusOneEnqQuestion9
-  enq_page_id: PlusOneEnqPage9
+plus_one_sp_question9:
+  uuid: PlusOneSPEnqQuestion9
+  enq_page_id: PlusOneSPEnqPage9
   num: 9
   seq: Q9
   question_id: PlusOneQuestion9
 
-plus_one_question10:
-  uuid: PlusOneEnqQuestion10
-  enq_page_id: PlusOneEnqPage10
+plus_one_sp_question10:
+  uuid: PlusOneSPEnqQuestion10
+  enq_page_id: PlusOneSPEnqPage10
   num: 10
   seq: Q10
   question_id: PlusOneQuestion10
 
+plus_one_pc_question1:
+  uuid: PlusOnPCPEnqQuestion1
+  enq_page_id: PlusOnePCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: PlusOneQuestion1
+
+plus_one_pc_question2:
+  uuid: PlusOnPCPEnqQuestion2
+  enq_page_id: PlusOnePCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: PlusOneQuestion2
+
+plus_one_pc_question3:
+  uuid: PlusOnPCPEnqQuestion3
+  enq_page_id: PlusOnePCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: PlusOneQuestion3
+
+plus_one_pc_question4:
+  uuid: PlusOnPCPEnqQuestion4
+  enq_page_id: PlusOnePCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: PlusOneQuestion4
+
+plus_one_pc_question5:
+  uuid: PlusOnPCPEnqQuestion5
+  enq_page_id: PlusOnePCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: PlusOneQuestion5
+
+plus_one_pc_question6:
+  uuid: PlusOnPCPEnqQuestion6
+  enq_page_id: PlusOnePCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: PlusOneQuestion6
+
+plus_one_pc_question7:
+  uuid: PlusOnPCPEnqQuestion7
+  enq_page_id: PlusOnePCEnqPage7
+  num: 7
+  seq: Q7
+  question_id: PlusOneQuestion7
+
+plus_one_pc_question8:
+  uuid: PlusOnPCPEnqQuestion8
+  enq_page_id: PlusOnePCEnqPage8
+  num: 8
+  seq: Q8
+  question_id: PlusOneQuestion8
+
+plus_one_pc_question9:
+  uuid: PlusOnPCPEnqQuestion9
+  enq_page_id: PlusOnePCEnqPage9
+  num: 9
+  seq: Q9
+  question_id: PlusOneQuestion9
+
+plus_one_pc_question10:
+  uuid: PlusOnPCPEnqQuestion10
+  enq_page_id: PlusOnePCEnqPage10
+  num: 10
+  seq: Q10
+  question_id: PlusOneQuestion10

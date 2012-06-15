@@ -24,7 +24,6 @@ describe EnqPagesController do
         subject{response}
         it{should be_success}
       end
-
 	  
 	  context "/api/v1/enqs/1001/pages/first" do
 		describe :routes do

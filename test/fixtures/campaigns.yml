@@ -136,7 +136,7 @@ yomei_shu:
 # プラスワン
 plus_one:
   mid: PlusOneCampaignID
-  enq_id: PulusOneEnqID
+  enq_id: PlusOneEnqID
   status: 1
   platform: mixi
   point: 10
