@@ -172,6 +172,11 @@ yomei_shu_page3:
   enq_face_id: YomeiShuEnqFaceID
   next_page_id: YomeiShuEnqPage4
 
+yomei_shu_page4:
+  uuid: YomeiShuEnqPage4
+  enq_face_id: YomeiShuEnqFaceID
+  next_page_id: YomeiShuEnqPage5
+
 yomei_shu_page5:
   uuid: YomeiShuEnqPage5
   enq_face_id: YomeiShuEnqFaceID

@@ -14,24 +14,6 @@ radio-female:
   order: 2
   content: 女性
 
-#numeric10:
-#  uuid: ChoiceNumeric10
-#  question_id: QuestionNumeric
-#  order: 1
-#  content: 10代
-#
-#numeric20:
-#  uuid: ChoiceNumeric20
-#  question_id: QuestionNumeric
-#  order: 2
-#  content: 20代
-#
-#numeric30:
-#  uuid: ChoiceNumeric30
-#  question_id: QuestionNumeric
-#  order: 3
-#  content: 30代
-
 select-choice1:
   uuid: SelectChoice1
   question_id: QuestionSelect
@@ -44,6 +26,288 @@ select-choice2:
   order: 2
   content: 選択肢2
 
+select-hokkaido:
+  uuid: SelectHokkaido
+  question_id: QuestionPrefectures
+  order: 1
+  content: 北海道
+
+select-aomori:
+  uuid: SelectAomori
+  question_id: QuestionPrefectures
+  order: 2
+  content: 青森県
+
+select-iwate:
+  uuid: Select
+  question_id: QuestionPrefectures
+  order: 3
+  content: 岩手県
+
+select-miyagi:
+  uuid: SelectMiyagi
+  question_id: QuestionPrefectures
+  order: 4
+  content: 宮城県
+
+select-akita:
+  uuid: SelectAkita
+  question_id: QuestionPrefectures
+  order: 5
+  content: 秋田県
+
+select-yamagata:
+  uuid: SelectYamagata
+  question_id: QuestionPrefectures
+  order: 6
+  content: 山形県
+
+select-hukushima:
+  uuid: SelectHukushima
+  question_id: QuestionPrefectures
+  order: 7
+  content: 福島県
+
+select-ibaraki:
+  uuid: SelectIbaraki
+  question_id: QuestionPrefectures
+  order: 8
+  content: 茨城県
+
+select-tochigi:
+  uuid: SelectTochigi
+  question_id: QuestionPrefectures
+  order: 9
+  content: 栃木県
+
+select-gunma:
+  uuid: SelectGunma
+  question_id: QuestionPrefectures
+  order: 10
+  content: 群馬県
+
+select-saitama:
+  uuid: SelectSaitama
+  question_id: QuestionPrefectures
+  order: 11
+  content: 埼玉県
+
+select-chiba:
+  uuid: SelectChiba
+  question_id: QuestionPrefectures
+  order: 12
+  content: 千葉県
+
+select-tokyo:
+  uuid: SelectTokyo
+  question_id: QuestionPrefectures
+  order: 13
+  content: 東京都
+
+select-kanagawa:
+  uuid: SelectKanagawa
+  question_id: QuestionPrefectures
+  order: 14
+  content: 神奈川県
+
+select-niigata:
+  uuid: SelectNiigata
+  question_id: QuestionPrefectures
+  order: 15
+  content: 新潟県
+
+select-toyama:
+  uuid: SelectToyama
+  question_id: QuestionPrefectures
+  order: 16
+  content: 富山県
+
+select-ishikawa:
+  uuid: SelectIshikawa
+  question_id: QuestionPrefectures
+  order: 17
+  content: 石川県
+
+select-hukui:
+  uuid: SelectHukui
+  question_id: QuestionPrefectures
+  order: 18
+  content: 福井県
+
+select-yamanashi:
+  uuid: SelectYamanashi
+  question_id: QuestionPrefectures
+  order: 19
+  content: 山梨県
+
+select-nagano:
+  uuid: SelectNagano
+  question_id: QuestionPrefectures
+  order: 20
+  content: 長野県
+
+select-gihu:
+  uuid: SelectGihu
+  question_id: QuestionPrefectures
+  order: 21
+  content: 岐阜県
+
+select-shizuoka:
+  uuid: SelectShizuoka
+  question_id: QuestionPrefectures
+  order: 22
+  content: 静岡県
+
+select-aichi:
+  uuid: SelectAichi
+  question_id: QuestionPrefectures
+  order: 23
+  content: 愛知県
+
+select-mie:
+  uuid: SelectMie
+  question_id: QuestionPrefectures
+  order: 24
+  content: 三重県
+
+select-shiga:
+  uuid: SelectShiga
+  question_id: QuestionPrefectures
+  order: 25
+  content: 滋賀県
+
+select-Kyoto:
+  uuid: SelectKyoto
+  question_id: QuestionPrefectures
+  order: 26
+  content: 京都府
+
+select-osaka:
+  uuid: SelectOsaka
+  question_id: QuestionPrefectures
+  order: 27
+  content: 大阪府
+
+select-Hyogo:
+  uuid: SelectHyogo
+  question_id: QuestionPrefectures
+  order: 28
+  content: 兵庫県
+
+select-Nara:
+  uuid: SelectNara
+  question_id: QuestionPrefectures
+  order: 29
+  content: 奈良県
+
+select-yakayama:
+  uuid: SelectWakayama
+  question_id: QuestionPrefectures
+  order: 30
+  content: 和歌山県
+
+select-Tottori:
+  uuid: SelectTottori
+  question_id: QuestionPrefectures
+  order: 31
+  content: 鳥取県
+
+select-shimane:
+  uuid: SelectShimane
+  question_id: QuestionPrefectures
+  order: 32
+  content: 島根県
+
+select-okayama:
+  uuid: SelectOkayama
+  question_id: QuestionPrefectures
+  order: 33
+  content: 岡山県
+
+select-hiroshima:
+  uuid: SelectHiroshima
+  question_id: QuestionPrefectures
+  order: 34
+  content: 広島県
+
+select-yamaguchi:
+  uuid: SelectYamaguchi
+  question_id: QuestionPrefectures
+  order: 35
+  content: 山口県
+
+select-tokushima:
+  uuid: SelectTokushima
+  question_id: QuestionPrefectures
+  order: 36
+  content: 徳島県
+
+select-kagawa:
+  uuid: SelectKagawa
+  question_id: QuestionPrefectures
+  order: 37
+  content: 香川県
+
+select-ehime:
+  uuid: SelectEhime
+  question_id: QuestionPrefectures
+  order: 38
+  content: 愛媛県
+
+select-kouchi:
+  uuid: SelectKouchi
+  question_id: QuestionPrefectures
+  order: 39
+  content: 高知県
+
+select-hukuoka:
+  uuid: SelectHukuoka
+  question_id: QuestionPrefectures
+  order: 40
+  content: 福岡県
+
+select-saga:
+  uuid: SelectSaga
+  question_id: QuestionPrefectures
+  order: 41
+  content: 佐賀県
+
+select-nagasaki:
+  uuid: SelectNagasaki
+  question_id: QuestionPrefectures
+  order: 42
+  content: 長崎県
+
+select-kumamoto:
+  uuid: SelectKumamoto
+  question_id: QuestionPrefectures
+  order: 43
+  content: 熊本県
+
+select-oita:
+  uuid: SelectOita
+  question_id: QuestionPrefectures
+  order: 44
+  content: 大分県
+
+select-miyazaki:
+  uuid: SelectMiyazaki
+  question_id: QuestionPrefectures
+  order: 45
+  content: 宮崎県
+ 
+select-kagoshima:
+  uuid: SelectKagoshima
+  question_id: QuestionPrefectures
+  order: 46
+  content: 鹿児島県
+ 
+select-Okinawa:
+  uuid: SelectOkinawa
+  question_id: QuestionPrefectures
+  order: 47
+  content: 沖縄県
+ 
 check-choice1:
   uuid: CheckChoice1
   question_id: QuestionCheck
@@ -61,7 +325,7 @@ check-choice3:
   question_id: QuestionCheck
   order: 3
   content: チェックボックス3
-
+  
 
 # 養命酒
 yomei_shu_radio_male:

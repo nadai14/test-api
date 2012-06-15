@@ -18,10 +18,18 @@ describe EnqPagesController do
 		end
 	  end
 
+      before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
+      
+      describe :response do
+        subject{response}
+        it{should be_success}
+      end
+
+	  
 	  context "/api/v1/enqs/1001/pages/first" do
 		describe :routes do
 		  subject{{:get => "/api/v1/enqs/1001/pages/first"}}
-		  it{should route_to(controller: "enq_pages", action: "first", enq_id: "1001", format: :json)}
+		  it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "first", format: :json)}
 		end
 	  end
 	end
