@@ -10,5 +10,6 @@ class CreateEnqQuestions < ActiveRecord::Migration
       t.string :updated_by
       t.timestamp :updated_at
     end
+    add_index :enq_questions, [:enq_page_id, :num], :unique => true
   end
 end

@@ -18,7 +18,7 @@ describe EnqPagesController do
 		end
 	  end
 
-      before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
+      before{get :show, {id: enq_pages(:success_confirm).id, enq_id: enqs(), face: "SP", format: :json}}
       
       describe :response do
         subject{response}

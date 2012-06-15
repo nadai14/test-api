@@ -144,11 +144,11 @@ plus_one:
   closing_at: 2100-1-1 0:0:0
   movie: /images/media/plus1_sp.mp4
   thumbnail: /images/poster-sp.jpg
-  message: 
-  conversion_tag: 
+  message: message
+  conversion_tag: conversion_tag
   second_picture: /images/creative-sp.jpg
-  banner_title: 
-  second_point: 
+  banner_title: bunner_title
+  second_point: 1111
   client_url: http://ponkan.jp
   
   

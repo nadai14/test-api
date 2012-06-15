@@ -9,12 +9,6 @@ gem 'sqlite3'
 
 gem 'uuidtools'
 
-group :development, :test do
-  gem "rspec-rails", ">= 2.0.0"
-  gem "cucumber-rails", ">= 0.3.2"
-  gem "webrat", ">= 0.7.2"
-end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -29,7 +23,6 @@ end
 
 gem 'jquery-rails'
 
-gem "composite_primary_keys", "~> 5.0.4"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

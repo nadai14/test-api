@@ -10,5 +10,6 @@ class CreateBranches < ActiveRecord::Migration
       t.string :updated_by
       t.timestamp :updated_at
     end
+    add_index :branches, [:enq_question_id, :answer], :unique => true
   end
 end
