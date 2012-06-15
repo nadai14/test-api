@@ -28,8 +28,8 @@ end
 
 class ApplicationController < ActionController::Base
   include ApiController
+  before_filter :append_header, :if => :development?
   before_filter :check_requested_by
-  after_filter :append_header, :if => :development?
 
   def check_requested_by
     raise UnauthorizedException.new UNAUTHORIZED unless request.headers["X-Requested-By"] == "poncan-moviereward"
