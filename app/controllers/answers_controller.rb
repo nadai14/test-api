@@ -26,7 +26,8 @@ class AnswersController < ApplicationController
     return false if enq_question.nil?
     return false if question.needs_choices? && question.choices.none?{|c| c.content == content}
     return false if question.kind == "numeric" && content =~ /[^0-9]+/
-    return true
+    return false if question.required && content == ""
+    true
   end
 
   def register(num, content, enq_questions, campaign_id, uid, user_agent)
