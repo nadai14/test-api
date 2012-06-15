@@ -69,5 +69,8 @@ class ApplicationController < ActionController::Base
   def data_incompleted(e)
     render :status => 500, :json => {:message => e.message}
   end
-
+    
+  def options
+    render :text => ""
+  end
 end

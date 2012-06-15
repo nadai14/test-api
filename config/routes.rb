@@ -1,6 +1,7 @@
 RewardApi::Application.routes.draw do
 
   scope "api/v1" do
+    match '*path' => 'application#options', :via => :options
     resources :campaigns, :only => ['show'], :format => :json
 
     resources :enqs, :only => [], :format => :json do
