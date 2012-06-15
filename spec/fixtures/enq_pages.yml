@@ -211,4 +211,70 @@ yomei_shu_page11:
   uuid: YomeiShuEnqPage11
   enq_face_id: YomeiShuEnqFaceID
 
+# プラスワン
+plus_one_page1:
+  uuid: PlusOneEnqPage1
+  enq_face_id: PlusOneEnqFaceID
+  description: プロフィール
+  next_page_id: PlusOneEnqPage2
+
+plus_one_page2:
+  uuid: PlusOneEnqPage2
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage3
+
+plus_one_page3:
+  uuid: PlusOneEnqPage3
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage4
+
+plus_one_page4:
+  uuid: PlusOneEnqPage4
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage5
+
+plus_one_page5:
+  uuid: PlusOneEnqPage5
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage6
+
+plus_one_page6:
+  uuid: PlusOneEnqPage6
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage7
+
+plus_one_page7:
+  uuid: PlusOneEnqPage7
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage8
+
+plus_one_page8:
+  uuid: PlusOneEnqPage8
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage9
+
+plus_one_page9:
+  uuid: PlusOneEnqPage9
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage10
+
+plus_one_page10:
+  uuid: PlusOneEnqPage10
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+  next_page_id: PlusOneEnqPage11
+  
+plus_one_page11:
+  uuid: PlusOneEnqPage11
+  enq_face_id: PlusOneEnqFaceID
+  description: 
+
 

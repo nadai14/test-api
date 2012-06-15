@@ -138,4 +138,24 @@ yomei_shu_PC:
   wait_until: 30
   title: 動画キャンペーン
  
+# プラスワン
+plus_one_SP:
+  uuid: PlusOneSPEnqFaceID
+  enq_id: PlusOneEnqID
+  face: SP
+  first_page_id: YomeiShuEnqPage1
+  wait_until: 
+  css: /css/pc/themes/plus_one/style.css
+  title: 
+  description: 
+ 
+plus_one_PC:
+  uuid: PlusOnePCEnqFaceID
+  enq_id: PlusOneEnqID
+  face: PC
+  first_page_id: YomeiShuEnqPage1
+  wait_until: 
+  css: /css/pc/themes/plus-1/style.css
+  title: 
+  description: 
  

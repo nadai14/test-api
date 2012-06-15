@@ -250,4 +250,74 @@ yomei_shu_question10:
   seq: Q10
   question_id: YomeiShuQuestion10
 
-  
+# プラスワン
+plus_one_question1:
+  uuid: PlusOneEnqQuestion1
+  enq_page_id: PlusOneEnqPage1
+  num: 1
+  seq: Q1
+  question_id: PlusOneQuestion1
+
+plus_one_question2:
+  uuid: PlusOneEnqQuestion2
+  enq_page_id: PlusOneEnqPage2
+  num: 2
+  seq: Q2
+  question_id: PlusOneQuestion2
+
+plus_one_question3:
+  uuid: PlusOneEnqQuestion3
+  enq_page_id: PlusOneEnqPage3
+  num: 3
+  seq: Q3
+  question_id: PlusOneQuestion3
+
+plus_one_question4:
+  uuid: PlusOneEnqQuestion4
+  enq_page_id: PlusOneEnqPage4
+  num: 4
+  seq: Q4
+  question_id: PlusOneQuestion4
+
+plus_one_question5:
+  uuid: PlusOneEnqQuestion5
+  enq_page_id: PlusOneEnqPage5
+  num: 5
+  seq: Q5
+  question_id: PlusOneQuestion5
+
+plus_one_question6:
+  uuid: PlusOneEnqQuestion6
+  enq_page_id: PlusOneEnqPage6
+  num: 6
+  seq: Q6
+  question_id: PlusOneQuestion6
+
+plus_one_question7:
+  uuid: PlusOneEnqQuestion7
+  enq_page_id: PlusOneEnqPage7
+  num: 7
+  seq: Q7
+  question_id: PlusOneQuestion7
+
+plus_one_question8:
+  uuid: PlusOneEnqQuestion8
+  enq_page_id: PlusOneEnqPage8
+  num: 8
+  seq: Q8
+  question_id: PlusOneQuestion8
+
+plus_one_question9:
+  uuid: PlusOneEnqQuestion9
+  enq_page_id: PlusOneEnqPage9
+  num: 9
+  seq: Q9
+  question_id: PlusOneQuestion9
+
+plus_one_question10:
+  uuid: PlusOneEnqQuestion10
+  enq_page_id: PlusOneEnqPage10
+  num: 10
+  seq: Q10
+  question_id: PlusOneQuestion10
+

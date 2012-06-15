@@ -538,4 +538,250 @@ yomei_shu_watch_3:
   order: 3
   content: 動画が面白そうだったから
 
-  
+# プラスワン
+plus_one_radio_male:
+  uuid: PlusOneRadioMale
+  question_id: PlusOneQuestion1
+  order: 1
+  content: 男性
+
+plus_one_radio_female:
+  uuid: PlusOneRadioFemale
+  question_id: PlusOneQuestion1
+  order: 2
+  content: 女性
+
+plus_one_numeric_u19:
+  uuid: PlusOneNumericU19
+  question_id: PlusOneQuestion2
+  order: 1
+  content: 19歳以下
+
+plus_one_numeric_20:
+  uuid: PlusOneNumeric20
+  question_id: PlusOneQuestion2
+  order: 2
+  content: 20~29歳
+
+plus_one_numeric_30:
+  uuid: PlusOneNumeric30
+  question_id: PlusOneQuestion2
+  order: 3
+  content: 30~39歳
+
+plus_one_numeric_40:
+  uuid: PlusOneNumeric40
+  question_id: PlusOneQuestion2
+  order: 4
+  content: 40~49歳
+
+plus_one_numeric_50:
+  uuid: PlusOneNumeric50
+  question_id: PlusOneQuestion2
+  order: 5
+  content: 50歳以上
+
+plus_one_scene_1:
+  uuid: PlusOneScene1
+  question_id: PlusOneQuestion3
+  order: 1
+  content: サークル等の仲間内で利用
+
+plus_one_scene_2:
+  uuid: PlusOneScene2
+  question_id: PlusOneQuestion3
+  order: 2
+  content: スポーツチームで利用
+
+plus_one_scene_3:
+  uuid: PlusOneScene3
+  question_id: PlusOneQuestion3
+  order: 3
+  content: 勤務している企業/お店で利用
+
+plus_one_scene_4:
+  uuid: PlusOneScene4
+  question_id: PlusOneQuestion3
+  order: 4
+  content: 家族・友達で利用
+
+plus_one_scene_5:
+  uuid: PlusOneScene5
+  question_id: PlusOneQuestion3
+  order: 5
+  content: プレゼントとして利用
+
+plus_one_cons_1:
+  uuid: PlusOneConsideration1
+  question_id: PlusOneQuestion4
+  order: 1
+  content: デザイン
+
+plus_one_cons_2:
+  uuid: PlusOneConsideration2
+  question_id: PlusOneQuestion4
+  order: 2
+  content: 着心地
+
+plus_one_cons_3:
+  uuid: PlusOneConsideration3
+  question_id: PlusOneQuestion4
+  order: 3
+  content: 耐久性
+
+plus_one_cons_4:
+  uuid: PlusOneConsideration4
+  question_id: PlusOneQuestion4
+  order: 4
+  content: 価格
+
+plus_one_cons_5:
+  uuid: PlusOneConsideration5
+  question_id: PlusOneQuestion4
+  order: 5
+  content: 制作スピード
+
+plus_one_good_1:
+  uuid: PlusOneGood1
+  question_id: PlusOneQuestion5
+  order: 1
+  content: デザインを自由に選べる
+
+plus_one_good_2:
+  uuid: PlusOneGood2
+  question_id: PlusOneQuestion5
+  order: 2
+  content: ウェブから簡単に発注できる
+
+plus_one_good_3:
+  uuid: PlusOneGood3
+  question_id: PlusOneQuestion5
+  order: 3
+  content: 顧客満足度が高い
+
+plus_one_good_4:
+  uuid: PlusOneGood4
+  question_id: PlusOneQuestion5
+  order: 4
+  content: 見積もりが簡単にできる
+
+plus_one_good_5:
+  uuid: PlusOneGood5
+  question_id: PlusOneQuestion5
+  order: 5
+  content: 販売実績が年間150万枚と豊富
+
+plus_one_satis1:
+  uuid: PlusOneSatisfaction1
+  question_id: PlusOneQuestion6
+  order: 1
+  content: 92%
+
+plus_one_satis2:
+  uuid: PlusOneSatisfaction2
+  question_id: PlusOneQuestion6
+  order: 2
+  content: 83%
+
+plus_one_satis3:
+  uuid: PlusOneSatisfaction3
+  question_id: PlusOneQuestion6
+  order: 3
+  content: 71%
+
+plus_one_satis4:
+  uuid: PlusOneSatisfaction4
+  question_id: PlusOneQuestion6
+  order: 4
+  content: 64%
+
+plus_one_satis5:
+  uuid: PlusOneSatisfaction5
+  question_id: PlusOneQuestion6
+  order: 5
+  content: 50%
+
+plus_one_know_1:
+  uuid: PlusOneKnow1
+  question_id: PlusOneQuestion7
+  order: 1
+  content: 知っており、自分で利用したことがある。
+
+plus_one_know_2:
+  uuid: PlusOneKnow2
+  question_id: PlusOneQuestion7
+  order: 2
+  content: 知っており、知人が利用していたことがある。
+
+plus_one_know_3:
+  uuid: PlusOneKnow3
+  question_id: PlusOneQuestion7
+  order: 3
+  content: 知っていたが、利用したことはない。
+
+plus_one_know_4:
+  uuid: PlusOneKnow4
+  question_id: PlusOneQuestion7
+  order: 4
+  content: 知らなかった。
+
+plus_one_kyoumi_1:
+  uuid: PlusOneKyoumi1
+  question_id: PlusOneQuestion8
+  order: 1
+  content: 非常に興味を持った
+
+plus_one_kyoumi_2:
+  uuid: PlusOneKyoumi2
+  question_id: PlusOneQuestion8
+  order: 2
+  content: 少し興味を持った
+
+plus_one_kyoumi_3:
+  uuid: PlusOneKyoumi3
+  question_id: PlusOneQuestion8
+  order: 3
+  content: あまり興味を持たなかった
+
+plus_one_kyoumi_4:
+  uuid: PlusOneKyoumi4
+  question_id: PlusOneQuestion8
+  order: 4
+  content: 全く興味を持たなかった
+
+plus_one_use_1:
+  uuid: PlusOneUse1
+  question_id: PlusOneQuestion9
+  order: 1
+  content: 是非利用したいと思う
+
+plus_one_use_2:
+  uuid: PlusOneUse2
+  question_id: PlusOneQuestion9
+  order: 2
+  content: 機会があれば利用したいと思う
+
+plus_one_use_3:
+  uuid: PlusOneUse3
+  question_id: PlusOneQuestion9
+  order: 3
+  content: 利用したいと思わない
+
+plus_one_watch_1:
+  uuid: PlusOneWatch1
+  question_id: PlusOneQuestion10
+  order: 1
+  content: サービスが魅力的だったから
+
+plus_one_watch_2:
+  uuid: PlusOneWatch2
+  question_id: PlusOneQuestion10
+  order: 2
+  content: ポイントが魅力的だったから
+
+plus_one_watch_3:
+  uuid: PlusOneWatch3
+  question_id: PlusOneQuestion10
+  order: 3
+  content: どちらも魅力的だったから
+
