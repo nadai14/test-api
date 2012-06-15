@@ -6,9 +6,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Footer.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version			$Id: Footer.js 188 2012-06-14 10:24:33Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 19:24:33 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -52,7 +52,9 @@
 			}
 			
 			 if($('img', this.el).exists()) {
+			 	ns.trace($('img', this.el).get(0).readyState);
       	if (_url = $(this.el).css('background-image').match(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig)) {
+      		ns.trace(this.typeName + '#render():' + _url);
     			$(this.el).css('background-image', 'none');
     			$('img', this.el).attr('src', _url);
     			$(this.el).show();
@@ -66,8 +68,13 @@
 			
 			// return
 			return this;
+		},
+		/**
+		 * 
+		 */
+		_render:   function() {
+			
 		}
-		
 	});
 	
 })(mr.ui, mr.$);

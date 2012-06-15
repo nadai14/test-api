@@ -25,6 +25,13 @@ select:
   answer_content: 選択肢問題正解
   answer_description: 選択肢問題の正解です
 
+prefectures:
+  uuid: QuestionPrefectures
+  kind: select
+  title: 都道府県
+  content: 出身地を選択してください
+  required: true
+  
 check:
   uuid: QuestionCheck
   kind: check

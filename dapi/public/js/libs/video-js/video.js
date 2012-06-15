@@ -71,8 +71,8 @@ VideoJS.players = {};
 VideoJS.options = {
 
   // Default order of fallback technology
-  // techOrder: ["html5","flash"],
-  techOrder: ["flash","html5"],
+  techOrder: ["html5","flash"],
+  // techOrder: ["flash","html5"],
 
   html5: {},
   flash: { swf: "http://vjs.zencdn.net/c/video-js.swf" },

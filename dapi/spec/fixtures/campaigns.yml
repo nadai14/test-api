@@ -132,4 +132,23 @@ yomei_shu:
   movie: /video/yomeishu.mov
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
   
+
+# プラスワン
+plus_one:
+  mid: PlusOneCampaignID
+  enq_id: PulusOneEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2012-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /video/plus1_sp.mp4
+  thumbnail: /images/poster-sp.jpg
+  message: 
+  conversion_tag: 
+  second_picture: /images/creative-sp.jpg
+  banner_title: 
+  second_point: 
+  client_url: http://ponkan.jp
+  
   

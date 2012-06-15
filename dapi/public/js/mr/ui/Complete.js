@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 146 2012-06-11 08:17:50Z tsuru $
+ * @version      $Id: Complete.js 179 2012-06-14 08:00:36Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-11 17:17:50 +0900 (月, 11 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 17:00:36 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -37,7 +37,7 @@
 			// countdown
 			this.next      = new ns.Next({ 
 				model:       new ns.root.model.Next({
-				              title:     'ポイントをもらう'
+				              title: 'ポイントをもらう'
 				             }),
 				el:          $(ns.slctr('next'), this.el)
       });
@@ -62,11 +62,14 @@
 			}
 			
 			$(ns.slctr('title') + ' b', this.el).text('アンケートが完了しました。次のボタンを押してポイントを獲得して下さい。');
-			this.next.render();
+			$(this.next.render().el).html(
+				(this.model.has('client_url')) ?
+					$('<p>').append($('<a>').attr('href', this.model.get('client_url')).attr('target', '_blank').text('ポイントをもらう')).html() :
+					'ポイントをもらう'
+			);
 			
 			// return this
 			return this;
 		}
 	});
-	
 })(mr.ui, mr.$);

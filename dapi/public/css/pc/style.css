@@ -62,8 +62,8 @@ Author: Toshiya TSURU
 			width:             548px;
 			height:            40px;
 			/*margin-top:10px;*/
-			-webkit-box-shadow:0 0 10px #c7ad77 inset;
-			box-shadow:        0 0 10px #f4b800 inset;
+			-webkit-box-shadow:0 0 10px #CCCCCC inset;
+			box-shadow:        0 0 10px #333 inset;
 			float:             left;
 		}
 
@@ -71,18 +71,18 @@ Author: Toshiya TSURU
 				margin:          0;
 				line-height:     40px;
 				text-align:      center;
-				color:#f4b800;
+				color:#333;
 				text-shadow: 1px 1px 0 rgba(150, 150, 150, 0.3);
 			}
 
 		.mr-ui-content {
 			width:342px;/*before the change 355px*/
 			height:456px;/*before the change 254px*/
-			background-color: #ebebeb;
-			border:2px solid #f4b800;
-			border-radius: 8px;
-			-webkit-border-radius: 8px;
-			-moz-border-radius:8px;
+			/*background-color: #ebebeb;*/
+			/*border:2px solid #CCCCCC;*/
+			/*border-radius: 8px;*/
+			/*-webkit-border-radius: 8px;*/
+			/*-moz-border-radius:8px;*/
 			margin-top:10px;/*before the change 20px*/
 			margin-right:20px;
 			float:right;
@@ -109,7 +109,7 @@ Author: Toshiya TSURU
 				
 					.mr-ui-content-block .mr-ui-title b {
 						font-size:   1.3em;
-						color:       #f4b800;
+						color:       #333;
 					}
 					
 				.mr-ui-content-block .mr-ui-description {
@@ -118,7 +118,7 @@ Author: Toshiya TSURU
 				
 					.mr-ui-description b {
 						font-size:   1.3em;
-						color:       #f4b800;
+						color:       #333;
 					}
 					
 				.mr-ui-content-block .mr-ui-message {
@@ -239,8 +239,8 @@ Author: Toshiya TSURU
  * * * * * * * * * * * * * * * * * * * */ 
 .mr-ui-button {
 	border-radius:    5px;
-	background-color: #f4b800;
-	background:       -webkit-gradient(linear, left top, left bottom, from(#F8D159), to(#DFA904));
+	background-color: #333;
+	background:       -webkit-gradient(linear, left top, left bottom, from(#E5E4E1), to(#9E9D9A));
 	width:            7em;
 	line-height:      2em;
 	/* font-size:        85%; */

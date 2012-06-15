@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Thankyou.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: Thankyou.js 178 2012-06-14 07:00:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 16:00:26 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -60,6 +60,7 @@
 			}));
 			
 			// open client site 
+			/*
     	if(this.model.has('client_url')) {
     		var _url = this.model.get('client_url');
     		(function(_url) {
@@ -68,7 +69,7 @@
 	    		}, 500);
 				})(_url);
     	}
-    	
+    	*/
 			// return this
 			return this;
 		}

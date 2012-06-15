@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 167 2012-06-13 01:58:51Z tsuru $
+ * @version      $Id: Question.js 187 2012-06-14 10:13:38Z liminghua772 $
  *
- * Last changed: $LastChangedDate: 2012-06-13 10:58:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 19:13:38 +0900 (木, 14 6 2012) $ by $Author: liminghua772 $
  *
  */
 (function(ns, $){
@@ -32,7 +32,7 @@
 			ns.trace(this.typeName + '#initialize()');
 			
 			// bind this
-			_.bindAll(this, "getIsQuiz", "getIsResultShown");
+			_.bindAll(this, "createLabel", "createRadio", "getIsQuiz", "getIsResultShown");
 			
 			// bind events
 			if('undefined' !== typeof(this.model)) {
@@ -76,14 +76,14 @@
 				$container = $(ns.slctr('answer'), this.el)
 				switch(this.model.get('kind').toUpperCase()){
 					case 'RADIO':
-						//this.addSelect($container,this.model);
-						this.addRadio($container,this.model);
+						this.createRadios(this.model.get('choices'), this.model.cid, this.model.getIsQuiz() ? this.model.get('answer').content : null)
+							.appendTo($container);
 						break;
 					case 'CHECKBOX':
-						this.addCheckbox($container,this.model);
+						this.createCheckbox(this.model).appendTo($container);
 						break;
 					case 'SELECT':
-						this.addSelect($container,this.model);
+						this.createSelect(this.model).appendTo($container);
 						break;
 					case 'TEXT':
 						$('<input>')
@@ -133,95 +133,106 @@
 			return _results;
 		},
 		/**
+		 * createLabel() method
+		 */
+		createLabel:	function(label, id){
+			ns.trace(this.typeName + '#createLabel()');
+			
+			return $('<label>').attr('for', id).text(label);
+		},
+		/**
 		 * 
 		 */
-		addLabel:	function(container,model,content,i){
-			ns.trace(this.typeName + '#addLabel()');
+		createRadios:	function(choices, name, answer){
+			ns.trace(this.typeName + '#createRadios()');
 			
-			var answerJson = model.has('answer')?model.get('answer').content:'';
-			if(content == answerJson){
-				$('<label>')
-					.addClass('mr-ui-result')
-					.addClass('mr-ui-correct')
-					.attr('for',   model.cid + '-' + i.toString())
-					.text('○')
-					.appendTo(container);
-			}else{
-				if(answerJson != ''){
-					$('<label>')
-						.addClass('mr-ui-result')
-						.addClass('mr-ui-wrong')
-						.attr('for',   model.cid + '-' + i.toString())
-						.text('×')
-						.appendTo(container);
-					}
-			}
-		},
-		/**
-		 * addRadio
-		 */
-		addRadio:	function(container,model){
-			ns.trace(this.typeName + '#addRadio()');
+			var _$container = $('<p>');
 			
-			if(model.has('choices')) {
-				var options  = model.get('choices');
-				for(var i = 0; i < options.length; ++i) {
-					var option = options[i];
-					
-					$('<input>')
-						.attr('id',    model.cid + '-' + i.toString())
-						.attr('name',  model.cid)
-						.attr('type',  'radio')
-						.attr('value', option.uuid+'-'+option.content)
-						.appendTo($container);
-					$('<label>')
-						.attr('for',   model.cid + '-' + i.toString())
-						.text(option.content)
-						.appendTo($container);
-						
-					this.addLabel($container,model,option.content,i);
-					
-					$('<br>')
-						.appendTo($container);
+			for(var i = 0; i < choices.length; ++i) {
+				var _option = choices[i];
+				var _id     = name + '-' + i.toString();
+				
+				// radio
+				this.createRadio(_option.content, _id, name)
+					.appendTo(_$container);		
+				// label
+				this.createLabel(_option.content, _id)
+					.addClass(ns.cls('label'))
+					.appendTo(_$container);
+				// answer
+				if(answer) {
+					var _corrent = (_option.content === answer); 
+					this.createLabel((_corrent) ? '○' : '×', _id)
+						.addClass(ns.cls('result'))
+						.addClass(ns.cls((_corrent) ? 'correct' : 'wrong'))
+						.appendTo(_$container);	
 				}
+				// LR
+				$('<br>')
+					.appendTo(_$container);
 			}
+			
+			return $(_$container.html());
 		},
 		/**
-		 * addCheckbox
+		 * createRadio
 		 */
-		addCheckbox:	function(container,model){
+		createRadio:	function(value, id, name){
+			ns.trace(this.typeName + '#createRadio()');
+			
+			return $('<input>')
+				.attr('type',  'radio')
+				.attr('id',    id)
+				.attr('name',  name)
+				.attr('value', value);
+		},
+		/**
+		 * createCheckbox
+		 */
+		createCheckbox:	function(model){
 			ns.trace(this.typeName + '#addCheckbox()');
 			
+			var _$container = $('<p>');
 			if(model.has('choices')) {
 				var options  = model.get('choices');
 				for(var i = 0; i < options.length; ++i) {
 					var option = options[i];
+					var _id    = model.cid + '-' + i.toString();
 					
 					$('<input>')
 						.attr('id',    model.cid + '-' + i.toString())
 						.attr('name',  model.cid)
 						.attr('type',  'checkbox')
-						.attr('value', option.uuid+'-'+option.content)
-						.appendTo($container);
-					$('<label>')
-						.attr('for',   model.cid + '-' + i.toString())
-						.text(option.content)
-						.appendTo($container);
+						.attr('value', option.content)
+						.appendTo(_$container);
 						
-					this.addLabel($container,model,option.content,i);
+					// add label
+					this.createLabel(option.content, _id)
+						.appendTo(_$container);
+						
+					if(model.has('answer')) {
+						// add label for answer
+						var _corrent = (model.get('answer').content === option.content); 
+						this.createLabel((_corrent) ? '○' : '×', _id)
+							.addClass(ns.cls('result'))
+							.addClass(ns.cls((_corrent) ? 'correct' : 'wrong'))
+							.appendTo(_$container);	
+					}
 					
 					$('<br>')
-						.appendTo($container);
+						.appendTo(_$container);
 				}
 			}
+			return $(_$container.html());
 		},
 		
 		/**
-		 * addSelect
+		 * createSelect
 		 */
-		addSelect:	function(container,model){
+		createSelect:	function(model){
 			ns.trace(this.typeName + '#addSelect()');
 			
+			var _$container = $('<p>');
 			if(model.has('choices')) {
 				var options  = model.get('choices');				
                 var option = "";
@@ -233,8 +244,9 @@
 					.attr('id',    model.cid)
 					.attr('name',  model.cid)
 					.html(option)
-					.appendTo($container);
+					.appendTo(_$container);
 			}
+			return $(_$container);
 		},
 		/**
 		 * 
@@ -247,7 +259,7 @@
 				case 'RADIO':
 					var radio = $(ns.slctr('answer') + ' :radio:checked');
 					if(radio.length>0){
-						answerUser[0] = radio[0].value.substring(radio[0].value.indexOf('-')+1);
+						answerUser[0] = radio[0].value;//.substring(radio[0].value.indexOf('-')+1);
 					}
 					break;
 				case 'CHECKBOX':
@@ -255,7 +267,7 @@
 					var arrayI = 0;
 					if(checkbox.length>0){
 						for(var i=0; i<checkbox.length; ++i){
-							answerUser[arrayI] = checkbox[i].value.substring(checkbox[i].value.indexOf('-')+1);
+							answerUser[arrayI] = checkbox[i].value;//.substring(checkbox[i].value.indexOf('-')+1);
 							++arrayI;
 						}
 					}
@@ -309,6 +321,7 @@
 					$(ns.slctr('answer') + ' textarea').attr('disabled','disabled');
 					break;
 			}
+			return this;
 		},
 		/**
 		 * getIsQuiz 

@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: mr.js 177 2012-06-14 06:12:48Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -84,6 +84,9 @@ var mr = (function($){
 			// setup view model
 			var _model = new _root.model.Content();
 			
+			// 
+			_root.ui.player         = _model.get('parameter').get('player');
+			
 			// el render
 			if('undefined' !== typeof(options.el)) {
 				var _canvas    = 	new _root.ui.Canvas({
@@ -116,10 +119,8 @@ var mr = (function($){
 	Namespace.prototype.guid         = function() {
 		return (_rndhex()+_rndhex()+"-"+_rndhex()+"-"+_rndhex()+"-"+_rndhex()+"-"+_rndhex()+_rndhex()+_rndhex());
 	} 
-	
 	// user agent
 	Namespace.prototype.ua = ua;
-	
 	/**
 	 * 
 	 * @param {Object} message
@@ -129,7 +130,6 @@ var mr = (function($){
 			console.log(message);
 		}
 	}
-	
 	/**
 	 * 
 	 * @param {Object} message
@@ -137,34 +137,38 @@ var mr = (function($){
 	Namespace.prototype.trace = function(message) {
 		this.log(message);
 	}
-	
 	/**
 	 * alert
 	 */
 	Namespace.prototype.alert = function(message) {
+		this.trace(this.namespace + '#alert("' + message + '")');
+		
 		alert(message);
 	};
-	
 	/**
 	 * 
 	 * @param {Object} message
 	 */
 	Namespace.prototype.typeName = function(className) {
+		this.trace(this.namespace + '#typeName("' + className + '")');
+		
 		return this.namespace + '.' + className;
 	};
-	
-	
 	/**
 	 * getParameters method
 	 * @return hash
 	 */
 	Namespace.prototype.getParameters = function(){
-		var _vars = [];
-		var _hash;
-		var _hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		this.trace(this.namespace + '#getParameters()');
+		
+		var _url    = window.location.href;
+		var _i1     = _url.indexOf('?') + 1;
+		var _i2     = _url.indexOf('#');
+		var _hashes = ((0 <= _i2) ? _url.slice(_i1, _i2) : _url.slice(_i1)).split('&');
+		var _vars   = [];
 		for(var i = 0; i < _hashes.length; i++)
 		{
-			_hash = _hashes[i].split('=');
+			var _hash = _hashes[i].split('=');
 			_vars.push(_hash[0]);
 			_vars[_hash[0]] = _hash[1];
 		}
@@ -175,6 +179,8 @@ var mr = (function($){
 	 * @param {Object} name
 	 */
 	Namespace.prototype.getParameter = function(name){
+		this.trace(this.namespace + '#getParameter("' + name + '")');
+		
 		return this.getParameters()[name];
 	};
 	/**
@@ -182,9 +188,10 @@ var mr = (function($){
    * @param {Object} name
 	 */
 	Namespace.prototype.hasParameter = function(name){
+		this.trace(this.namespace + '#hasParameter("' + name + '")');
+		
 		return ('undefined' !== typeof(this.getParameters()[name]));
 	};
-	
 	// return namespace object
 	Namespace.prototype.$          = $;
 	Namespace.prototype._$_        = _$_;

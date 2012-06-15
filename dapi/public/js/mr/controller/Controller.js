@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version			$Id: Controller.js 177 2012-06-14 06:12:48Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -35,9 +35,18 @@
 		initialize: function(options) {
 			ns.trace(this.typeName + '#initialize()');
 			
+			this.model = options.model;
+			
 			// setup model 
 			var _self = this;
-			this.model = options.model;
+			
+			/**
+			 * error handler
+			 */
+			ns.root.handleError = function(message) {
+				_self.navigate("sorry", {trigger: true});
+			}
+			
 			if(this.model.has('ad')) {
 				this.model.get('ad').on('change:playing', function(){
 					
@@ -75,12 +84,12 @@
 			// @ link http://backbonejs.org/#Router-navigate
 			if(this.model.get('parameter').has('mid')) {
 				if(this.model.get('parameter').get('already') === 1) {
-					this.navigate("already/" + this.model.get('parameter').get('mid'),  { trigger: true });
+					this.navigate("already/" + this.model.get('parameter').get('mid'),  { trigger: true, replace: true });
 				}else{
-					this.navigate("campaign/" + this.model.get('parameter').get('mid'), { trigger: true });	
+					this.navigate("campaign/" + this.model.get('parameter').get('mid'), { trigger: true, replace: true });	
 				}
 			}else{
-				this.navigate("sorry", {trigger: true});
+				this.navigate("sorry", {trigger: true, replace: true});
 			}
 		},
 		/**

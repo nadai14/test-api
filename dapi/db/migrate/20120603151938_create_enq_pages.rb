@@ -10,5 +10,6 @@ class CreateEnqPages < ActiveRecord::Migration
       t.string :updated_by
       t.timestamp :updated_at
     end
+    add_index :enq_pages, :enq_face_id
   end
 end

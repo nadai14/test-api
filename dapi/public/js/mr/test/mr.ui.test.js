@@ -5,9 +5,9 @@
  * 
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.ui.test.js 167 2012-06-13 01:58:51Z tsuru $
+ * @version      $Id: mr.ui.test.js 174 2012-06-14 03:34:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-13 10:58:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 12:34:17 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  * 
  * @see         http://docs.jquery.com/QUnit
  *
@@ -42,7 +42,7 @@
 	/**
 	 * Question
 	 */
-  module(ns.namespace + '.Question', {
+	module(ns.namespace + '.Question', {
 		setup: function() { // 初期化処理
 			_body     = document.getElementsByTagName('body')[0];
 			_el       = document.createElement('div');
@@ -59,43 +59,114 @@
 			}
 		}
 	});
-  /**
-   * getValues()
-   */
-  test('getValues()', function() {
-  	// prepare model
-  	var _question = new ns.root.model.Question({
-  		"kind": 'numeric'
-  	});
-  	// create model
-		var _view = new ns.Question({
-			model: _question,
-			el:    _el
-		}).render();
-		// simulate user innput
-		$('input', _view.el).val('日本語');
-		// test
-		equal(_view.getValues()[0], '日本語');
-		// ok(true, _view.getValues()[0]);
-	});
 	/**
-	 * validation()
+	 * addLabel
 	 */
-  test('validation()', function() {
-  	
-  	var _question = new ns.root.model.Question({
-  		"kind": 'numeric'
-  	});
-  	// create model
+	test('addLabel/addCheckbox/addRadio/addSelect/showResult', function() {
+	/*
+	**addLabel()
+	*/
+		var _question = new ns.root.model.Question({
+			"answer": {content: 'a'},
+		});
+		
 		var _view = new ns.Question({
 			model: _question,
 			el:    _el
-		}).render();
-		// simulate user innput
-		$('input', _view.el).val('aaaa');
-		// test
-		equal(_view.validate()[0], '入力した値は数値ではありません 。');
+		}); /* .render(); */ // render() will call addLabel() inside itself.
+		
+		// LET'S It BE CLEAR. What will be tested?  
+		equal(_view.addLabel($(ns.slctr('answer'), this.el),_question,'a',1));
+		equal(_view.addLabel($(ns.slctr('answer'), this.el),_question,'ab',1));
+	
 	});
 	
+	test('addCheckbox/addRadio/addSelect/showResult', function() {
+	/*
+	**getValues()
+	*/
+	// prepare model
+		var _question = new ns.root.model.Question({
+			"kind": 'text'
+		});
+		// create model
+	var _view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+	// simulate user innput
+	$('input', _view.el).val('日本語');
+	// test
+	equal(_view.getValues()[0], '日本語');
+	
+	/*
+	**validate()
+	*/
+	_question = new ns.root.model.Question({
+			"kind": 'numeric'
+		});
+		// create model
+	_view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+		// simulate user innput
+	//$('input', _view.el).val('aaa');
+		// test
+	equal(_view.validate()[0], '入力した値は数値ではありません 。');
+	
+		$(ns.slctr('answer'), this.el).append('<br>');
+	/*
+	**addCheckbox
+	*/
+		_question = new ns.root.model.Question({
+			"kind": 'checkbox',
+			"choices": new Array({uuid:'1',content: 'Checkbox1'},{uuid:'2',content: 'Checkbox2'},{uuid:'3',content: 'Checkbox3'},{uuid:'4',content: 'Checkbox4'})
+		});
+	_view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+	//equal(_view.addCheckbox($(ns.slctr('answer'), this.el),_question));
+	
+	/*
+	**addRadio()
+	*/
+	_question = new ns.root.model.Question({
+			"kind": 'radio',
+			"choices": new Array({uuid:'1',content: 'Radio1'},{uuid:'2',content: 'Radio2'},{uuid:'3',content: 'Radio3'},{uuid:'4',content: 'Radio4'}),
+		});
+	_view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+	//equal(_view.addRadio($(ns.slctr('answer'), this.el),_question));
+	
+	/*
+	**addSelect()
+	*/
+	_question = new ns.root.model.Question({
+			"kind": 'select',
+			"choices": new Array({uuid:'1',content: 'Select1'},{uuid:'2',content: 'Select2'},{uuid:'3',content: 'Select3'},{uuid:'4',content: 'Select4'}),
+		});
+	_view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+	//equal(_view.addSelect($(ns.slctr('answer'), this.el),_question));
+	
+	/*
+	**showResult()
+	*/
+		_question = new ns.root.model.Question({
+			"kind": 'select'
+		});
+	_view = new ns.Question({
+		model: _question,
+		el:    _el
+	}).render();
+	equal(typeof(_view.showResult()),'undefined');
+	});
+		
 // })(mr.initialize({api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1'}).ui);
 })(mr.ui);

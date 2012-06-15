@@ -13,5 +13,6 @@ class CreateEnqFaces < ActiveRecord::Migration
       t.string :updated_by
       t.timestamp :updated_at
     end
+    add_index :enq_faces, [:enq_id, :face], :unique => true
   end
 end

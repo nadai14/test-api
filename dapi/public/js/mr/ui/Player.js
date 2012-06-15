@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Player.js 161 2012-06-13 00:19:51Z tsuru $
+ * @version      $Id: Player.js 173 2012-06-14 01:24:16Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-13 09:19:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 10:24:16 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -46,24 +46,31 @@
 				$(this.el).attr('controls', 'controls')	;
 			}
 			// video.js
-			var _player = _V_(this.el)
-				.ready(function() {
-					_self.el     = this.tag.parentElement;
-					_self.$el    = $(_self.el);
-					_self.player = this;
-					if('undefined' !== typeof(_self.onReady)){
-						ns.trace('onReady');
-						_self.onReady();
-					}
-					
-					var _video = this.tag;
-					 // seeking event
-					_video.addEventListener('seeking', function(e) {
-						ns.trace('seeking');
-					}, true);
-					_video.addEventListener('seeked', function(e) {
-						ns.trace('seeked');
-					}, true);
+			var _player = _V_(this.el, { 
+				"controls":   true, 
+				"autoplay":   false, 
+				"preload":    "auto",
+				"techOrder": ('undefined' !== typeof(ns.player)) ? [ns.player] : (ua.OS === 'Android') ? ["flash", "html5"] : ["html5", "flash"],
+				"flash": {
+					"swf":    "js/libs/video-js/video-js.swf" 
+				},
+			}).ready(function() {
+				_self.el     = this.tag.parentElement;
+				_self.$el    = $(_self.el);
+				_self.player = this;
+				if('undefined' !== typeof(_self.onReady)){
+					ns.trace('onReady');
+					_self.onReady();
+				}
+				
+				var _video = this.tag;
+				 // seeking event
+				_video.addEventListener('seeking', function(e) {
+					ns.trace('seeking');
+				}, true);
+				_video.addEventListener('seeked', function(e) {
+					ns.trace('seeked');
+			}, true);
 					
 				});
 				_player.addEvent('play', function(e) {
