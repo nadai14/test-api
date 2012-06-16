@@ -88,26 +88,30 @@ describe EnqPagesController do
           describe "question有,choices無,branches有,answer有,next_page_id有" do
             before {get :show, {id: enq_pages(:nullable_PC_page1).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
               arr = JSON.parse(response.body)
               [:description, :wait_until].each do |key|
                 arr.should_not have_key("#{key}") 
               end
+			end
 
-              arr_questions = arr["questions"][0]
-              it 'choicesは空の配列を返しているか' do
-                [:choices].each do |key|
-                  arr_questions.should have_key("#{key}")
-                  arr_questions["#{key}"].should.empty? be_true
-                end
+            it 'choicesは空の配列を返しているか' do
+			  arr_questions = JSON.parse(response.body)["questions"][0]
+              [:choices].each do |key|
+                arr_questions.should have_key("#{key}")
+                arr_questions["#{key}"].should be_empty
               end
+            end
             
-              arr_branches = arr_questions["branches"][0]
+            it 'branchesは不要な要素を返していないか' do
+              arr_branches = JSON.parse(response.body)["questions"][0]["branches"][0]
               [:wait_until].each do |key|
                 arr_branches.should_not have_key("#{key}")
               end
+			end
 
-              arr_answer = arr_questions["answer"][0]
+            it 'answerは不要な要素を返していないか' do
+              arr_answer = JSON.parse(response.body)["questions"][0]["answer"]
               [:description].each do |key|
                 arr_answer.should_not have_key("#{key}")
               end
@@ -117,7 +121,7 @@ describe EnqPagesController do
           describe "question無,next_page_id無" do
             before {get :show, {id: enq_pages(:nullable_PC_page2_1).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
 			  arr = JSON.parse(response.body)
               [:next_page_id].each do |key|
                 arr.should_not have_key("#{key}") 
@@ -134,23 +138,26 @@ describe EnqPagesController do
           describe "question有,choices無,branches無,answer無,next_page_id無" do
             before {get :show, {id: enq_pages(:nullable_PC_page2_2).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
               arr = JSON.parse(response.body)
               [:next_page_id].each do |key|
                 arr.should_not have_key("#{key}") 
               end
+			end
 
-              arr_questions = arr["questions"][0]
-              it 'choicesは空の配列を返しているか' do
-                [:choices].each do |key|
-                  arr_questions.should have_key("#{key}")
-                  arr_questions["#{key}"].should.empty? be_true
-                end
+            it 'choicesは空の配列を返しているか' do
+              arr_questions = JSON.parse(response.body)["questions"][0]
+              [:choices].each do |key|
+                arr_questions.should have_key("#{key}")
+                arr_questions["#{key}"].should be_empty
               end
+            end
             
+            it 'branchesは空の配列を返しているか' do
+              arr_questions = JSON.parse(response.body)["questions"][0]
               [:branches].each do |key|
                 arr_questions.should have_key("#{key}")
-                arr_questions["#{key}"].should.empty? be_true
+                arr_questions["#{key}"].should be_empty
               end
             end
           end
@@ -160,26 +167,30 @@ describe EnqPagesController do
           describe "question有,choices無,branches有,answer有,next_page_id有" do
             before {get :show, {id: enq_pages(:nullable_SP_page1).id, enq_id: enqs(:nullable).id, face: "SP", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
               arr = JSON.parse(response.body)
               [:description, :wait_until].each do |key|
                 arr.should_not have_key("#{key}") 
               end
+			end
 
-              arr_questions = arr["questions"][0]
-              it 'choicesは空の配列を返しているか' do
-                [:choices].each do |key|
-                  arr_questions.should have_key("#{key}")
-                  arr_questions["#{key}"].should.empty? be_true
-                end
+            it 'choicesは空の配列を返しているか' do
+			  arr_questions = JSON.parse(response.body)["questions"][0]
+              [:choices].each do |key|
+                arr_questions.should have_key("#{key}")
+                arr_questions["#{key}"].should be_empty
               end
+            end
             
-              arr_branches = arr_questions["branches"][0]
+            it 'branchesは不要な要素を返していないか' do
+              arr_branches = JSON.parse(response.body)["questions"][0]["branches"][0]
               [:wait_until].each do |key|
                 arr_branches.should_not have_key("#{key}")
               end
+			end
 
-              arr_answer = arr_questions["answer"][0]
+            it 'answerは不要な要素を返していないか' do
+              arr_answer = JSON.parse(response.body)["questions"][0]["answer"]
               [:description].each do |key|
                 arr_answer.should_not have_key("#{key}")
               end
@@ -189,7 +200,7 @@ describe EnqPagesController do
           describe "question無,next_page_id無" do
             before {get :show, {id: enq_pages(:nullable_SP_page2_1).id, enq_id: enqs(:nullable).id, face: "SP", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
 			  arr = JSON.parse(response.body)
               [:next_page_id].each do |key|
                 arr.should_not have_key("#{key}") 
@@ -206,23 +217,26 @@ describe EnqPagesController do
           describe "question有,choices無,branches無,answer無,next_page_id無" do
             before {get :show, {id: enq_pages(:nullable_SP_page2_2).id, enq_id: enqs(:nullable).id, face: "SP", format: :json}}
 
-            it '不要な要素を返していないか' do
+            it 'enq_pagesは不要な要素を返していないか' do
               arr = JSON.parse(response.body)
               [:next_page_id].each do |key|
                 arr.should_not have_key("#{key}") 
               end
+			end
 
-              arr_questions = arr["questions"][0]
-              it 'choicesは空の配列を返しているか' do
-                [:choices].each do |key|
-                  arr_questions.should have_key("#{key}")
-                  arr_questions["#{key}"].should.empty? be_true
-                end
+            it 'choicesは空の配列を返しているか' do
+              arr_questions = JSON.parse(response.body)["questions"][0]
+              [:choices].each do |key|
+                arr_questions.should have_key("#{key}")
+                arr_questions["#{key}"].should be_empty
               end
+            end
             
+            it 'branchesは空の配列を返しているか' do
+              arr_questions = JSON.parse(response.body)["questions"][0]
               [:branches].each do |key|
                 arr_questions.should have_key("#{key}")
-                arr_questions["#{key}"].should.empty? be_true
+                arr_questions["#{key}"].should be_empty
               end
             end
           end
