@@ -10,18 +10,16 @@ class AnswersController < ApplicationController
     raise NotFoundException.new ID_MISS_MATCH_PAGE if page.enq_face.enq_id != params[:enq_id]
     raise NotFoundException.new ID_MISS_MATCH_CAMPAIGN unless page.enq_face.enq.campaigns.any? {|c| c.mid == params[:campaign_id]}
     answers = params.
-      select{|k, v| k.start_with? "answer_"}.                  # Hash#select returns a Hash
-      inject({}){|a, (k, v)| a.tap{|o| o[k[7..-1].to_i] = v}}  # Hash#map does not return a Hash!!
+      select{|k, v| k.start_with? "answer_"}.      
+      each_with_object({}){|(k, v), a| n = k[7..-1].to_i; a[n] = [v, page.enq_questions.find{|q| q.num == n}]}
     raise BadRequestException.new REQUIRED_QUESTION unless page.enq_questions.select{|q| q.question.required}.all?{|q| answers.has_key? q.num}
-    (valid, invalid) = answers.partition{|k, v| valid?(k, v, page.enq_questions)}
-    valid.each{|k, v| register(k, v, page.enq_questions, params[:campaign_id], params[:uid], request.headers["User-Agent"])}
-    raise BadRequestException.new IMVALID_QUESTION unless invalid.empty?
+    raise BadRequestException.new IMVALID_QUESTION unless answers.all?{|k, (v, q)| valid?(k, v, q)}
+    answers.each{|k, (v, q)| register(k, v, q, params[:campaign_id], params[:uid], request.headers["User-Agent"])}
   end
 
   private
 
-  def valid?(num, content, enq_questions)
-    enq_question = enq_questions.find{|q| q.num == num}
+  def valid?(num, content, enq_question)
     question = enq_question.question
     return false if enq_question.nil?
     return false if question.needs_choices? && question.choices.none?{|c| c.content == content}
@@ -30,8 +28,7 @@ class AnswersController < ApplicationController
     true
   end
 
-  def register(num, content, enq_questions, campaign_id, uid, user_agent)
-    enq_question = enq_questions.find{|q| q.num == num}
+  def register(num, content, enq_question, campaign_id, uid, user_agent)
     Answer.create(campaign_id: campaign_id, enq_question_id: enq_question.uuid, user_id: uid, user_agent: user_agent, answer: content)
   end
 
