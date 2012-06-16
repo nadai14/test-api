@@ -1,71 +1,232 @@
 #coding: utf-8
 require 'spec_helper'
 require 'support/custom_machers'
+require 'json/pure' # gem install json_pure
 
 describe EnqPagesController do
   describe "アンケートページ情報取得機能テスト" do
-	fixtures :enqs, :enq_faces, :enq_pages, :enq_questions, :choices, :branches, :questions, :answers, :campaigns
+    fixtures :enqs, :enq_faces, :enq_pages, :enq_questions, :choices, :branches, :questions, :answers, :campaigns
+    render_views
+    
+    before do
+      request.env['X-Requested-By'] = 'poncan-moviereward'
+    end
   
-	before do
-	  request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-	end
-  
-	context "指定されたページヘのルートが正しく設定されているか" do
-	  context "/api/v1/enqs/1001/pages/1" do
-		describe :routes do
-		  subject{{:get => "/api/v1/enqs/1001/pages/1"}}
-		  it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "1", format: :json)}
-		end
-	  end
-
-      before{get :show, {id: enq_pages(:success_confirm).id, enq_id: enqs(), face: "SP", format: :json}}
+    context "指定されたページヘのルートが正しく設定されているか" do
+      context "/api/v1/enqs/1001/pages/1" do
+        describe :routes do
+          subject{{:get => "/api/v1/enqs/1001/pages/1"}}
+          it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "1", format: :json)}
+        end
       
-      describe :response do
-        subject{response}
-        it{should be_success}
+        before{get :show, {id: enq_pages(:sc_SP_page1).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
+      
+        describe :response do
+          subject{response}
+          it{should be_success}
+        end
       end
-	  
-	  context "/api/v1/enqs/1001/pages/first" do
-		describe :routes do
-		  subject{{:get => "/api/v1/enqs/1001/pages/first"}}
-		  it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "first", format: :json)}
-		end
-	  end
-	end
+      
+      context "/api/v1/enqs/1001/pages/first" do
+        describe :routes do
+          subject{{:get => "/api/v1/enqs/1001/pages/first"}}
+          it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "first", format: :json)}
+        end
+      
+        before{get :show, {id: "first", enq_id: enqs(:status1), face: "PC", format: :json}}
+      
+        describe :response do
+          subject{response}
+          it{should be_success}
+        end
+      end
+    end
 
-	context "ページID、アンケートIDとフェイスから値を取得する" do
-	  describe "レスポンスは正しく返ってきているか" do
-		before {get :show,{id: "", enq_id: "enq1", face: "face", format: :json}}
-		
-		it 'レスポンスフォーマットの確認' do
-		  response.content_type.should == Mime::JSON
-		  puts "response: #{response.body}"
-		end
+    context "ページID、アンケートIDとフェイスから値を取得する" do
+      describe "レスポンスは正しく返ってきているか" do
+        before {get :show, {id: enq_pages(:sc_SP_page3).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
+        
+        it 'レスポンスフォーマットの確認' do
+          response.should be_success
+          response.content_type.should == Mime::JSON
+        end
 
-		it 'レスポンスの値の確認' do
-		  puts "#{response.body}"
-#		  response.body.should have_json("/api/v1/enq_pages/enq_id") 
-#		  response.body.should have_json("/api/v1/enq_pages/uuid") 
-#		  response.body.should have_json("/api/v1/enq_pages/description") 
-#		  response.body.should have_json("/api/v1/enq_pages/question_num") 
-#		  response.body.should have_json("/api/v1/enq_pages/question_cnt") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/num") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/seq") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/kind") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/title") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/content") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/required") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/choice/uuid") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/choice/content") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/branch/answer") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/branch/next_page_id") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/branch/wait_until") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/answer/content") 
-#		  response.body.should have_json("/api/v1/enq_pages/question/branch/description") 
-#		  response.body.should have_json("/api/v1/enq_pages/next_page_id") 
-#		  response.body.should have_json("/api/v1/enq_pages/wait_until") 
-		end
-	  end
-	end
+        it 'カラムの確認' do
+          arr = JSON.parse(response.body)
+          [:enq_id, :uuid, :description, :question_cnt, :questions ,:next_page_id, :wait_until].each do |key|
+            arr.should have_key("#{key}") 
+          end
+
+          arr_questions = arr["questions"][0]
+          [:num, :seq, :kind, :title, :content, :required, :choices, :branches, :answer].each do |key|
+            arr_questions.should have_key("#{key}")
+          end
+            
+          arr_choices = arr_questions["choices"][0]
+          [:uuid, :content].each do |key|
+            arr_choices.should have_key("#{key}")
+          end
+
+          arr_branches = arr_questions["branches"][0]
+          [:answer, :next_page_id, :wait_until].each do |key|
+            arr_branches.should have_key("#{key}")
+          end
+
+          arr_answer = arr_questions["answer"]
+          [:content, :description].each do |key|
+            arr_answer.should have_key("#{key}")
+          end
+        end
+
+        it 'レスポンスの表示(目検用)' do
+          puts "response_body: #{response.body}"
+        end
+      end
+      
+      describe "要素が nil の時" do
+        context "PCからアクセスした場合" do
+          describe "question有,choices無,branches有,answer有,next_page有" do
+            before {get :show, {id: enq_pages(:nullable_PC_page1).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
+
+            it '不要な要素を返していないか' do
+              arr = JSON.parse(response.body)
+              [:description, :wait_until].each do |key|
+                arr.should_not have_key("#{key}") 
+              end
+
+              arr_questions = arr["questions"][0]
+              [:required].each do |key|
+                arr_questions.should_not have_key("#{key}")
+              end
+              
+              it 'choicesは空の配列を返しているか' do
+                [:choices].each do |key|
+                  arr_questions.should have_key("#{key}")
+                  arr_questions["#{key}"].should.empty? be_true
+                end
+              end
+            
+              arr_branches = arr_questions["branches"][0]
+              [:wait_until].each do |key|
+                arr_branches.should_not have_key("#{key}")
+              end
+
+              arr_answer = arr_questions["answer"][0]
+              [:description].each do |key|
+                arr_answer.should_not have_key("#{key}")
+              end
+            end
+          end
+
+          describe "question無,next_page_id無" do
+            before {get :show, {id: enq_pages(:nullable_PC_page2_1).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
+
+            it '不要な要素を返していないか' do
+              arr = JSON.parse(response.body)
+              [:next_page_id].each do |key|
+                arr.should_not have_key("#{key}") 
+              end
+
+              it 'questionsは空の配列を返しているか' do
+                [:questions].each do |key|
+                  arr.should have_key("#{key}")
+                  arr["#{key}"].should.empty? be_true
+                end
+              end
+            end
+          end
+          
+          describe "question有,choices無,branches無,answer無,next_page_id無" do
+            before {get :show, {id: enq_pages(:nullable_PC_page2_2).id, enq_id: enqs(:nullable).id, face: "PC", format: :json}}
+
+            it '不要な要素を返していないか' do
+              arr = JSON.parse(response.body)
+              [:next_page_id].each do |key|
+                arr.should_not have_key("#{key}") 
+              end
+
+              arr_questions = arr["questions"][0]
+              [:required].each do |key|
+                arr_questions.should_not have_key("#{key}")
+              end
+              it 'choicesは空の配列を返しているか' do
+                [:choices].each do |key|
+                  arr_questions.should have_key("#{key}")
+                  arr_questions["#{key}"].should.empty? be_true
+                end
+              end
+            
+              [:branches].each do |key|
+                arr_questions.should have_key("#{key}")
+                arr_questions["#{key}"].should.empty? be_true
+              end
+            end
+          end
+        end
+
+        context "スマートフォンからアクセスした場合" do
+#
+#
+# 繰り返し
+#
+#
+        end
+      end
+
+      describe "異常系は動作しているか" do
+        context "認可されていない時" do
+          describe :response do
+            before do
+              request.env['X-Requested-By'] = 'failed_request'
+              get :show, {id: enq_pages(:sc_SP_page1).id, enq_id: enqs(:status1).id, face: "SP", format: :json}
+            end
+            
+            it 'status 401(UnauthorizedException) を返す' do
+              response.status.should == 401
+            end
+          end
+        end
+        
+        context "アンケートIDが存在しない時" do
+          before{get :show, {id: enq_pages(:sc_SP_page1).id, enq_id: "failed_id", face: "SP", format: :json}}
+        
+          it 'status 404(NotFoundException) を返す' do
+            response.status.should == 404
+          end
+        end
+        
+        context "ページIDが存在しない時" do
+          before{get :show, {id: "failed_id", enq_id: enqs(:status1).id, face: "SP", format: :json}}
+        
+          it 'status 404(NotFoundException) を返す' do
+            response.status.should == 404
+          end
+        end
+
+        context "アンケートIDとページIDが矛盾していた時" do
+          before{get :show, {id: enq_pages(:sc_SP_page2), enq_id: enqs(:nullable).id, face: "SP", format: :json}}
+        
+          it 'status 404(NotFoundException) を返す' do
+            response.status.should == 404
+          end
+        end
+
+        context "アンケートの最初のページが nil だった時" do
+          before{get :show, {id: "first", enq_id: enqs(:first_page_null).id, face: "SP", format: :json}}
+        
+          it 'status 404(NotFoundException) を返す' do
+            response.status.should == 404
+          end
+        end
+        
+        context "設問と選択肢が矛盾している時" do
+          before{get :show, {id: enq_pages(:incons_question_SP).id, enq_id: enqs(:incons_question).id, face: "SP", format: :json}}
+        
+          it 'status 500(DataIncompletedException) を返す' do
+            response.status.should == 500
+          end
+        end
+      end
+    end
   end
 end

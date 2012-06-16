@@ -15,16 +15,13 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
 
   create_table "answers", :id => false, :force => true do |t|
     t.string   "uuid",            :limit => 36
-    t.string   "campaign_id",                   :null => false
     t.string   "enq_question_id",               :null => false
-    t.string   "user_id",                       :null => false
+    t.string   "session_id",                    :null => false
     t.string   "user_agent",                    :null => false
     t.text     "answer",                        :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
   end
-
-  add_index "answers", ["campaign_id", "enq_question_id", "user_id"], :name => "index_answers_on_campaign_id_and_enq_question_id_and_user_id", :unique => true
 
   create_table "branches", :id => false, :force => true do |t|
     t.string   "uuid",            :limit => 36
@@ -35,8 +32,6 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "updated_by"
     t.datetime "updated_at"
   end
-
-  add_index "branches", ["enq_question_id", "answer"], :name => "index_branches_on_enq_question_id_and_answer", :unique => true
 
   create_table "campaigns", :id => false, :force => true do |t|
     t.string   "mid",            :limit => 36
@@ -67,8 +62,6 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.datetime "updated_at"
   end
 
-  add_index "choices", ["question_id"], :name => "index_choices_on_question_id"
-
   create_table "enq_faces", :id => false, :force => true do |t|
     t.string   "uuid",          :limit => 36
     t.string   "enq_id",                      :null => false
@@ -82,8 +75,6 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.datetime "updated_at"
   end
 
-  add_index "enq_faces", ["enq_id", "face"], :name => "index_enq_faces_on_enq_id_and_face", :unique => true
-
   create_table "enq_pages", :id => false, :force => true do |t|
     t.string   "uuid",         :limit => 36
     t.string   "enq_face_id",                :null => false
@@ -94,8 +85,6 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.datetime "updated_at"
   end
 
-  add_index "enq_pages", ["enq_face_id"], :name => "index_enq_pages_on_enq_face_id"
-
   create_table "enq_questions", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
     t.string   "enq_page_id",               :null => false
@@ -105,8 +94,6 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "updated_by"
     t.datetime "updated_at"
   end
-
-  add_index "enq_questions", ["enq_page_id", "num"], :name => "index_enq_questions_on_enq_page_id_and_num", :unique => true
 
   create_table "enqs", :id => false, :force => true do |t|
     t.string   "uuid",       :limit => 36
