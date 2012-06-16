@@ -95,10 +95,6 @@ describe EnqPagesController do
               end
 
               arr_questions = arr["questions"][0]
-              [:required].each do |key|
-                arr_questions.should_not have_key("#{key}")
-              end
-              
               it 'choicesは空の配列を返しているか' do
                 [:choices].each do |key|
                   arr_questions.should have_key("#{key}")
@@ -145,9 +141,6 @@ describe EnqPagesController do
               end
 
               arr_questions = arr["questions"][0]
-              [:required].each do |key|
-                arr_questions.should_not have_key("#{key}")
-              end
               it 'choicesは空の配列を返しているか' do
                 [:choices].each do |key|
                   arr_questions.should have_key("#{key}")
@@ -174,10 +167,6 @@ describe EnqPagesController do
               end
 
               arr_questions = arr["questions"][0]
-              [:required].each do |key|
-                arr_questions.should_not have_key("#{key}")
-              end
-              
               it 'choicesは空の配列を返しているか' do
                 [:choices].each do |key|
                   arr_questions.should have_key("#{key}")
@@ -224,9 +213,6 @@ describe EnqPagesController do
               end
 
               arr_questions = arr["questions"][0]
-              [:required].each do |key|
-                arr_questions.should_not have_key("#{key}")
-              end
               it 'choicesは空の配列を返しているか' do
                 [:choices].each do |key|
                   arr_questions.should have_key("#{key}")
