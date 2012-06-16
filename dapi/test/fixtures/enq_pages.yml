@@ -23,14 +23,14 @@ sc_SP_page3:
   next_page_id: EnqSPSuccessConfirmPage4-1
   wait_until: 1
 
-sc_SP_page4-1:
+sc_SP_page4_1:
   uuid: EnqSPSuccessConfirmPage4-1
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ2
   next_page_id: 
   wait_until: 1
 
-sc_SP_page4-2:
+sc_SP_page4_2:
   uuid: EnqSPSuccessConfirmPage4-2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
@@ -52,14 +52,14 @@ sc_PC_page2:
   next_page_id: EnqPCSuccessConfirmPage3-1
   wait_until: 1
 
-sc_PC_page3-1:
+sc_PC_page3_1:
   uuid: EnqPCSuccessConfirmPage3-1
   enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ3-1
   next_page_id: 
   wait_until: 1
 
-sc_PC_page3-2:
+sc_PC_page3_2:
   uuid: EnqPCSuccessConfirmPage3-2
   enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ3-2
@@ -72,11 +72,11 @@ nullable_SP_page1:
   enq_face_id: EnqSPNullable
   next_page_id: EnqPageSPNullablePage2-1
 
-nullable_SP_page2-1:
+nullable_SP_page2_1:
   uuid: EnqPageSPNullablePage2-1
   enq_face_id: EnqSPNullable
 
-nullable_SP_page2-2:
+nullable_SP_page2_2:
   uuid: EnqPageSPNullablePage2-2
   enq_face_id: EnqSPNullable
 
@@ -86,11 +86,11 @@ nullable_PC_page1:
   enq_face_id: EnqPCNullable
   next_page_id: EnqPagePCNullablePage2-1
 
-nullable_PC_page2-1:
+nullable_PC_page2_1:
   uuid: EnqPagePCNullablePage2-1
   enq_face_id: EnqPCNullable
 
-nullable_PC_page2-2:
+nullable_PC_page2_2:
   uuid: EnqPagePCNullablePage2-2
   enq_face_id: EnqPCNullable
   
@@ -160,258 +160,258 @@ incons_question_PC:
 yomei_shu_sp_page1:
   uuid: YomeiShuSPEnqPage1
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage2
 
 yomei_shu_sp_page2:
   uuid: YomeiShuSPEnqPage2
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage3
 
 yomei_shu_sp_page3:
   uuid: YomeiShuSPEnqPage3
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage4
 
 yomei_shu_sp_page4:
   uuid: YomeiShuSPEnqPage4
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage5
 
 yomei_shu_sp_page5:
   uuid: YomeiShuSPEnqPage5
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage6
 
 yomei_shu_sp_page6:
   uuid: YomeiShuSPEnqPage6
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage7
 
 yomei_shu_sp_page7:
   uuid: YomeiShuSPEnqPage7
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage8
 
 yomei_shu_sp_page8:
   uuid: YomeiShuSPEnqPage8
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage9
 
 yomei_shu_sp_page9:
   uuid: YomeiShuSPEnqPage9
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage10
 
 yomei_shu_sp_page10:
   uuid: YomeiShuSPEnqPage10
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuSPEnqPage11
   
 yomei_shu_sp_page11:
   uuid: YomeiShuSPEnqPage11
   enq_face_id: YomeiShuSPEnqFaceID
-  description: 養命酒
+  description: 
 
 yomei_shu_pc_page1:
   uuid: YomeiShuPCEnqPage1
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage2
 
 yomei_shu_pc_page2:
   uuid: YomeiShuPCEnqPage2
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage3
 
 yomei_shu_pc_page3:
   uuid: YomeiShuPCEnqPage3
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage4
 
 yomei_shu_pc_page4:
   uuid: YomeiShuPCEnqPage4
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage5
 
 yomei_shu_pc_page5:
   uuid: YomeiShuPCEnqPage5
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage6
 
 yomei_shu_pc_page6:
   uuid: YomeiShuPCEnqPage6
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage7
 
 yomei_shu_pc_page7:
   uuid: YomeiShuPCEnqPage7
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage8
 
 yomei_shu_pc_page8:
   uuid: YomeiShuPCEnqPage8
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage9
 
 yomei_shu_pc_page9:
   uuid: YomeiShuPCEnqPage9
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage10
 
 yomei_shu_pc_page10:
   uuid: YomeiShuPCEnqPage10
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
   next_page_id: YomeiShuPCEnqPage11
   
 yomei_shu_pc_page11:
   uuid: YomeiShuPCEnqPage11
   enq_face_id: YomeiShuPCEnqFaceID
-  description: 養命酒
+  description: 
 
   
 # プラスワン
 plus_one_sp_page1:
   uuid: PlusOneSPEnqPage1
   enq_face_id: PlusOneSPEnqFaceID
-  description: プロファイル
+  description: 
   next_page_id: PlusOneSPEnqPage2
 
 plus_one_sp_page2:
   uuid: PlusOneSPEnqPage2
   enq_face_id: PlusOneSPEnqFaceID
-  description: プロファイル
+  description: 
   next_page_id: PlusOneSPEnqPage3
 
 plus_one_sp_page3:
   uuid: PlusOneSPEnqPage3
   enq_face_id: PlusOneSPEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOneSPEnqPage4
 
 plus_one_sp_page4:
   uuid: PlusOneSPEnqPage4
   enq_face_id: PlusOneSPEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOneSPEnqPage5
 
 plus_one_sp_page5:
   uuid: PlusOneSPEnqPage5
   enq_face_id: PlusOneSPEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOneSPEnqPage6
 
 plus_one_sp_page6:
   uuid: PlusOneSPEnqPage6
   enq_face_id: PlusOneSPEnqFaceID
-  description: クイズ
+  description: 
   next_page_id: PlusOneSPEnqPage7
 
 plus_one_sp_page7:
   uuid: PlusOneSPEnqPage7
   enq_face_id: PlusOneSPEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOneSPEnqPage8
 
 plus_one_sp_page8:
   uuid: PlusOneSPEnqPage8
   enq_face_id: PlusOneSPEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOneSPEnqPage9
 
 plus_one_sp_page9:
   uuid: PlusOneSPEnqPage9
   enq_face_id: PlusOneSPEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOneSPEnqPage10
 
 plus_one_sp_page10:
   uuid: PlusOneSPEnqPage10
   enq_face_id: PlusOneSPEnqFaceID
-  description: 効果測定
+  description: 
 #  next_page_id: PlusOneSPEnqPage11
 #  
 #plus_one_sp_page11:
 #  uuid: PlusOneSPEnqPage11
 #  enq_face_id: PlusOneSPEnqFaceID
-#  description: 効果測定
+#  description: 
 
 plus_one_pc_page1:
   uuid: PlusOnePCEnqPage1
   enq_face_id: PlusOnePCEnqFaceID
-  description: プロファイル
+  description: 
   next_page_id: PlusOnePCEnqPage2
 
 plus_one_pc_page2:
   uuid: PlusOnePCEnqPage2
   enq_face_id: PlusOnePCEnqFaceID
-  description: プロファイル
+  description: 
   next_page_id: PlusOnePCEnqPage3
 
 plus_one_pc_page3:
   uuid: PlusOnePCEnqPage3
   enq_face_id: PlusOnePCEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOnePCEnqPage4
 
 plus_one_pc_page4:
   uuid: PlusOnePCEnqPage4
   enq_face_id: PlusOnePCEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOnePCEnqPage5
 
 plus_one_pc_page5:
   uuid: PlusOnePCEnqPage5
   enq_face_id: PlusOnePCEnqFaceID
-  description: アンケート
+  description: 
   next_page_id: PlusOnePCEnqPage6
 
 plus_one_pc_page6:
   uuid: PlusOnePCEnqPage6
   enq_face_id: PlusOnePCEnqFaceID
-  description: クイズ
+  description: 
   next_page_id: PlusOnePCEnqPage7
 
 plus_one_pc_page7:
   uuid: PlusOnePCEnqPage7
   enq_face_id: PlusOnePCEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOnePCEnqPage8
 
 plus_one_pc_page8:
   uuid: PlusOnePCEnqPage8
   enq_face_id: PlusOnePCEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOnePCEnqPage9
 
 plus_one_pc_page9:
   uuid: PlusOnePCEnqPage9
   enq_face_id: PlusOnePCEnqFaceID
-  description: 効果測定
+  description: 
   next_page_id: PlusOnePCEnqPage10
 
 plus_one_pc_page10:
   uuid: PlusOnePCEnqPage10
   enq_face_id: PlusOnePCEnqFaceID
-  description: 効果測定
+  description: 
 #  next_page_id: PlusOnePCEnqPage11
 #  
 #plus_one_pc_page11:

@@ -23,14 +23,14 @@ sc_SP_page3:
   next_page_id: EnqSPSuccessConfirmPage4-1
   wait_until: 1
 
-sc_SP_page4-1:
+sc_SP_page4_1:
   uuid: EnqSPSuccessConfirmPage4-1
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ2
   next_page_id: 
   wait_until: 1
 
-sc_SP_page4-2:
+sc_SP_page4_2:
   uuid: EnqSPSuccessConfirmPage4-2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
@@ -52,14 +52,14 @@ sc_PC_page2:
   next_page_id: EnqPCSuccessConfirmPage3-1
   wait_until: 1
 
-sc_PC_page3-1:
+sc_PC_page3_1:
   uuid: EnqPCSuccessConfirmPage3-1
   enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ3-1
   next_page_id: 
   wait_until: 1
 
-sc_PC_page3-2:
+sc_PC_page3_2:
   uuid: EnqPCSuccessConfirmPage3-2
   enq_face_id: EnqPCSuccessConfirm
   description: アンケ1PCページ3-2
@@ -72,11 +72,11 @@ nullable_SP_page1:
   enq_face_id: EnqSPNullable
   next_page_id: EnqPageSPNullablePage2-1
 
-nullable_SP_page2-1:
+nullable_SP_page2_1:
   uuid: EnqPageSPNullablePage2-1
   enq_face_id: EnqSPNullable
 
-nullable_SP_page2-2:
+nullable_SP_page2_2:
   uuid: EnqPageSPNullablePage2-2
   enq_face_id: EnqSPNullable
 
@@ -86,11 +86,11 @@ nullable_PC_page1:
   enq_face_id: EnqPCNullable
   next_page_id: EnqPagePCNullablePage2-1
 
-nullable_PC_page2-1:
+nullable_PC_page2_1:
   uuid: EnqPagePCNullablePage2-1
   enq_face_id: EnqPCNullable
 
-nullable_PC_page2-2:
+nullable_PC_page2_2:
   uuid: EnqPagePCNullablePage2-2
   enq_face_id: EnqPCNullable
   

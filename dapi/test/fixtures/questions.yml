@@ -59,14 +59,14 @@ textarea:
 nullable_q1:
   uuid: NullableQuestion1
   kind: text
-  required: false
+  answer_content: nil要素確認用
  
-nullable_q2-1:
+nullable_q2_1:
   uuid: NullableQuestion2-1
   kind: text
   required: false
  
-nullable_q2-2:
+nullable_q2_2:
   uuid: NullableQuestion2-2
   kind: text
   required: false
