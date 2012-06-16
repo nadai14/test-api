@@ -1,23 +1,25 @@
 #coding: utf-8
 require 'spec_helper'
 require 'support/custom_machers'
+require "json/pure" # gem install json_pure
 
 describe CampaignsController do
   describe "キャンペーン情報取得機能テスト" do
     fixtures :campaigns, :enq_faces, :enqs
     render_views
  
+    before do
+      request.env['X-Requested-By'] = 'poncan-moviereward'
+    end
+
     context "ルートが正しく設定されているか" do
-      before do
-        request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-      end
 
       describe :routes do
         subject{{:get => "/api/v1/campaigns/1"}}
         it{should route_to(controller: "campaigns", action: "show", id: "1", format: :json)}
       end
       
-      before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
+      before{get :show, {id: campaigns(:success_confirm).id, face: "PC", format: :json}}
       
       describe :response do
         subject{response}
@@ -27,10 +29,7 @@ describe CampaignsController do
 
     context "MIDとフェイスから値を取得する" do
       describe "レスポンスは正しく返ってきているか" do
-        before do
-          request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-          get :show,{id: campaigns(:success_confirm).id, face: "PC", format: :json}
-        end
+        before {get :show,{id: campaigns(:success_confirm).id, face: "PC", format: :json}}
 
         it 'レスポンスフォーマットの確認' do
           response.should be_success
@@ -50,21 +49,14 @@ describe CampaignsController do
       end
           
       describe "要素が nil の時" do
-        before do
-          request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
-        end
-        
         context "PCからアクセスした場合" do
-          before do
-            @campaign = campaigns(:nullable).point
-            get :show,{id: campaigns(:nullable).id, face: "PC", format: :json}
-          end
+          before {get :show,{id: campaigns(:nullable).id, face: "PC", format: :json}}
 
           context "デフォルト値が設定されていると" do
             def_css = "/css/pc/themes/default/style.css"
             def_title = ""
-            def_desc = '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
-            message = '<p>アンケートは終了です。ありがとうございました。</p>'
+            def_desc = JSON.utf8_to_json_ascii('<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>')
+            message = JSON.utf8_to_json_ascii('<p>アンケートは終了です。ありがとうございました。</p>')
             it 'デフォルト値を返しているか' do
               response.body.should include(def_css)
               response.body.should include(def_title)
@@ -83,16 +75,13 @@ describe CampaignsController do
         end
 
         context "スマートフォンからアクセスした場合" do
-          before do
-            @campaign = campaigns(:nullable).point
-            get :show,{id: campaigns(:nullable).id, face: "SP", format: :json}
-          end
+          before {get :show,{id: campaigns(:nullable).id, face: "SP", format: :json}}
 
           context "デフォルト値が設定されていると" do
             def_css = "/css/sp/themes/default/style.css"
             def_title = ""
-            def_desc = '<p>動画を見ながらアンケートに答えて#{point}ポイントもらおう</p>'
-            message = '<p>アンケートは終了です。ありがとうございました。</p>'
+            def_desc = JSON.utf8_to_json_ascii('<p>動画を見ながらアンケートに答えて#{point}ポイントもらおう</p>')
+            message = JSON.utf8_to_json_ascii('<p>アンケートは終了です。ありがとうございました。</p>')
             it 'デフォルト値を返しているか' do
               response.body.should include(def_css)
               response.body.should include(def_title)
@@ -115,16 +104,15 @@ describe CampaignsController do
       describe "異常系は動作しているか" do
         context "認可されていない時" do
           describe :response do
-            before{get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}}
+            before do
+			  request.env['X-Requested-By'] = 'failed_request'
+			  get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}
+			end
             
             it 'status 401(UnauthorizedException) を返す' do
               response.status.should == 401
             end
           end
-        end
-        
-        before do
-          request.env['HTTP_X_REQUESTED_WITH'] = 'poncan-moviereward'
         end
         
         context "キャンペーンIDが存在しない時" do
