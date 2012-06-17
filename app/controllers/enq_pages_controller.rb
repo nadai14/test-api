@@ -2,11 +2,6 @@
 
 class EnqPagesController < ApplicationController
 
-  def index
-    render :json => EnqFace.all(:include => :enq_pages)
-  end
-
-
   def show
     @page = params[:id] != 'first' ? find_by_id(params[:id]) : first(params[:enq_id], params[:face])
 
