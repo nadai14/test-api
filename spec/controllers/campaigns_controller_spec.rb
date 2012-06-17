@@ -44,7 +44,7 @@ describe CampaignsController do
         end
 
         it 'レスポンスの表示(目検用)' do
-          puts "response_body: #{response.body}"
+          puts "campaign_response_body: #{response.body}"
         end
       end
           
