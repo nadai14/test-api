@@ -215,12 +215,6 @@ yomei_shu_sp_page10:
   uuid: YomeiShuSPEnqPage10
   enq_face_id: YomeiShuSPEnqFaceID
   description: 
-  next_page_id: YomeiShuSPEnqPage11
-  
-yomei_shu_sp_page11:
-  uuid: YomeiShuSPEnqPage11
-  enq_face_id: YomeiShuSPEnqFaceID
-  description: 
 
 yomei_shu_pc_page1:
   uuid: YomeiShuPCEnqPage1
@@ -280,14 +274,7 @@ yomei_shu_pc_page10:
   uuid: YomeiShuPCEnqPage10
   enq_face_id: YomeiShuPCEnqFaceID
   description: 
-  next_page_id: YomeiShuPCEnqPage11
-  
-yomei_shu_pc_page11:
-  uuid: YomeiShuPCEnqPage11
-  enq_face_id: YomeiShuPCEnqFaceID
-  description: 
 
-  
 # プラスワン
 plus_one_sp_page1:
   uuid: PlusOneSPEnqPage1
@@ -347,12 +334,6 @@ plus_one_sp_page10:
   uuid: PlusOneSPEnqPage10
   enq_face_id: PlusOneSPEnqFaceID
   description: 
-#  next_page_id: PlusOneSPEnqPage11
-#  
-#plus_one_sp_page11:
-#  uuid: PlusOneSPEnqPage11
-#  enq_face_id: PlusOneSPEnqFaceID
-#  description: 
 
 plus_one_pc_page1:
   uuid: PlusOnePCEnqPage1
@@ -412,9 +393,3 @@ plus_one_pc_page10:
   uuid: PlusOnePCEnqPage10
   enq_face_id: PlusOnePCEnqFaceID
   description: 
-#  next_page_id: PlusOnePCEnqPage11
-#  
-#plus_one_pc_page11:
-#  uuid: PlusOnePCEnqPage11
-#  enq_face_id: PlusOnePCEnqFaceID
-#  description: 

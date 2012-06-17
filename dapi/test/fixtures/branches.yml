@@ -1,48 +1,13 @@
-# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-# スマートフォン用の動作確認データ
-scSPpage3to4_1:
-  uuid: SuccessConfirmSPPage3to4-1
-  enq_question_id: SuccessConfirmSPQuestion3
-  answer: 選択肢1
-  next_page_id: EnqSPSuccessConfirmPage4-1
+one:
+  enq_question_id: MyString
+  answer: MyString
+  next_page_id: MyString
   wait_until: 1
 
-scSPpage3to4_2:
-  uuid: SuccessConfirmSPPage3to4-2
-  enq_question_id: SuccessConfirmSPQuestion3
-  answer: 選択肢2
-  next_page_id: EnqSPSuccessConfirmPage4-2
+two:
+  enq_question_id: MyString
+  answer: MyString
+  next_page_id: MyString
   wait_until: 1
-
-# PC用の動作確認データ
-scPCpage2to3_1:
-  uuid: SuccessConfirmPCPage2to3-1
-  enq_question_id: SuccessConfirmPCQuestion2
-  answer: 選択肢1
-  next_page_id: EnqPCSuccessConfirmPage3-1
-  wait_until: 1
-
-scPCpage2to3_2:
-  uuid: SuccessConfirmPCPage2to3-2
-  enq_question_id: SuccessConfirmPCQuestion2
-  answer: 選択肢2
-  next_page_id: EnqPCSuccessConfirmPage3-2
-  wait_until: 1
-
-# スマートフォン用のnil動作確認データ
-nullable_SP:
-  uuid: BranchNullableSP
-  enq_question_id: NullableSPQuestion1
-  answer: Page1to2-2
-  next_page_id: NullableSPQuestion2-2
-
-# PC用のnil動作確認データ
-nullable_PC:
-  uuid: BranchNullablePC
-  enq_question_id: NullablePCQuestion1
-  answer: Page1to2-2
-  next_page_id: NullablePCQuestion2-2
-
-

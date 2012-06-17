@@ -129,9 +129,10 @@ yomei_shu:
   point: 13
   opening_at: 2012-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-sp.jpg
+  second_picture: /images/creative-sp.jpg
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
-  
 
 # プラスワン
 plus_one:
@@ -140,8 +141,8 @@ plus_one:
   status: 1
   platform: mixi
   point: 10
-  opening_at: 2012-1-1 0:0:0
-  closing_at: 2100-1-1 0:0:0
+  opening_at:
+  closing_at:
   movie: /images/media/plus1_sp.mp4
   thumbnail: /images/poster-sp.jpg
   message: 
@@ -150,5 +151,3 @@ plus_one:
   banner_title: 
   second_point: 
   client_url: http://ponkan.jp
-  
-  

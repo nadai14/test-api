@@ -81,13 +81,6 @@ nullableSPQuestion1:
   seq: Q1
   question_id: NullableQuestion1
 
-#nullableSPQuestion2_1:
-#  uuid: NullableSPQuestion2-1
-#  enq_page_id: EnqPageSPNullablePage2-1
-#  num: 2
-#  seq: Q2
-#  question_id: NullableQuestion2-1
-
 nullableSPuestion2_2:
   uuid: NullableSPQuestion2-2
   enq_page_id: EnqPageSPNullablePage2-2
@@ -102,13 +95,6 @@ nullablePCuestion1:
   num: 1
   seq: Q1
   question_id: NullableQuestion1
-
-#nullablePCuestion2_1:
-#  uuid: NullablePCQuestion2-1
-#  enq_page_id: EnqPagePCNullablePage2-1
-#  num: 2
-#  seq: Q2
-#  question_id: NullableQuestion2-1
 
 nullablePCQuestion2_2:
   uuid: NullablePCQuestion2-2

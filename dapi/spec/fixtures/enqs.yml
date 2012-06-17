@@ -42,15 +42,13 @@ incons_question:
   uuid: InconsistencyQuestionEnqID
   status: 1
 
- 
+
 # 養命酒
 yomei_shu:
   uuid: YomeiShuEnqID
   status: 1
-  
+
 # プラスワン
 plus_one:
   uuid: PlusOneEnqID
   status: 1
-   
-  

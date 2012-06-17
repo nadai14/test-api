@@ -44,7 +44,7 @@ describe CampaignsController do
         end
 
         it 'レスポンスの表示(目検用)' do
-          puts "response_body: #{response.body}"
+          puts "campaign_response_body: #{response.body}"
         end
       end
           
@@ -105,9 +105,9 @@ describe CampaignsController do
         context "認可されていない時" do
           describe :response do
             before do
-			  request.env['X-Requested-By'] = 'failed_request'
-			  get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}
-			end
+              request.env['X-Requested-By'] = 'failed_request'
+              get :show, {id: campaigns(:success_confirm).id, face: "SP", format: :json}
+            end
             
             it 'status 401(UnauthorizedException) を返す' do
               response.status.should == 401
