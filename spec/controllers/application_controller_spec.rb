@@ -30,13 +30,13 @@ describe ApplicationController do
 	    end
 	  end
 	  
-#	  context "サーバ内部で異常があった場合" do
-#	    it 'status 500(Internal Server Error) を返すか' do
-#          request.env['X-Requested-By'] = 'poncan-moviereward'
-#		  get :index
-#		  response.status.should == 204
-#		end
-#	  end
+	  context "サーバ内部で異常があった場合" do
+	    it 'status 500(Internal Server Error) を返すか' do
+          request.env['X-Requested-By'] = 'poncan-moviereward'
+		  get :index
+		  response.status.should == 204
+		end
+	  end
 	end
   end
 end

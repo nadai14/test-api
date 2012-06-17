@@ -22,6 +22,7 @@ class AnswersController < ApplicationController
 
   def valid?(num, content, enq_questions)
     enq_question = enq_questions.find{|q| q.num == num}
+	puts "enq_question :: #{enq_question.question}" if enq_question.nil?
     question = enq_question.question
     return false if enq_question.nil?
     return false if question.needs_choices? && question.choices.none?{|c| c.content == content}

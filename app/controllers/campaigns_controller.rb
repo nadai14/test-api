@@ -9,7 +9,7 @@ class CampaignsController < ApplicationController
 
     raise NotFoundException.new CAMPAIGN_DOES_NOT_EXIST unless @campaign
     raise ForbiddenException.new BEFORE_OPENING if @campaign.status == 0 # TODO: delete this line after 6/18
-    raise ForbiddenException.new AFTER_CLOSING if @campaign.closed?
+    raise ForbiddenException.new AFTER_CLOSINGG if @campaign.closed?
   end
 
 end
