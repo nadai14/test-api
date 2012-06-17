@@ -1,13 +1,448 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_page_id: MyString
+# スマートフォン用の動作確認データ
+scSPquestion1:
+  uuid: SuccessConfirmSPQuestion1
+  enq_page_id: EnqSPSuccessConfirmPage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionRadio
 
-two:
-  enq_page_id: MyString
+scSPquestion2:
+  uuid: SuccessConfirmSPQuestion2
+  enq_page_id: EnqSPSuccessConfirmPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scSPquestion3:
+  uuid: SuccessConfirmSPQuestion3
+  enq_page_id: EnqSPSuccessConfirmPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scSPquestion4_1:
+  uuid: SuccessConfirmSPQuestion4-1
+  enq_page_id: EnqSPSuccessConfirmPage4-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scSPquestion4_2:
+  uuid: SuccessConfirmSPQuestion4-2
+  enq_page_id: EnqSPSuccessConfirmPage4-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+# PC用の動作確認データ
+scPCquestion1:
+  uuid: SuccessConfirmPCQuestion1
+  enq_page_id: EnqPCSuccessConfirmPage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionRadio
+
+scPCquestion2:
+  uuid: SuccessConfirmPCQuestion2
+  enq_page_id: EnqPCSuccessConfirmPage1
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scPCquestion3:
+  uuid: SuccessConfirmPCQuestion3
+  enq_page_id: EnqPCSuccessConfirmPage2
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scPCquestion4_1:
+  uuid: SuccessConfirmPCQuestion4-1
+  enq_page_id: EnqPCSuccessConfirmPage3-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scPCquestion4_2:
+  uuid: SuccessConfirmPCQuestion4-2
+  enq_page_id: EnqPCSuccessConfirmPage3-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+# スマートフォン用のnil動作確認データ
+nullableSPQuestion1:
+  uuid: NullableSPQuestion1
+  enq_page_id: EnqPageSPNullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullableSPuestion2_2:
+  uuid: NullableSPQuestion2-2
+  enq_page_id: EnqPageSPNullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-2
+
+# PC用のnil動作確認データ
+nullablePCuestion1:
+  uuid: NullablePCQuestion1
+  enq_page_id: EnqPagePCNullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullablePCQuestion2_2:
+  uuid: NullablePCQuestion2-2
+  enq_page_id: EnqPagePCNullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2-2
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqQuestionSPID
+  enq_page_id: FirstPageNullEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqQuestionPCID
+  enq_page_id: FirstPageNullEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# キャンペーンの状態が入稿前
+camp_status0_SP:
+  uuid: CampaignStatus0EnqQuestionSPID
+  enq_page_id: CampaignStatus0EnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+camp_status0_PC:
+  uuid: CampaignStatus0EnqQuestionPCID
+  enq_page_id: CampaignStatus0EnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqQuestionSPID
+  enq_page_id: CampaignClosedEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqQuestionPCID
+  enq_page_id: CampaignClosedEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqQuestionSPID
+  enq_page_id: InconsistencyQuestionEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqQuestionPCID
+  enq_page_id: InconsistencyQuestionEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+
+
+# 養命酒
+yomei_shu_sp_question1:
+  uuid: YomeiShuSPEnqQuestion1
+  enq_page_id: YomeiShuSPEnqPage1
+  num: 1
+  seq: Q1
+  question_id: YomeiShuQuestion1
+
+yomei_shu_sp_question2:
+  uuid: YomeiShuSPEnqQuestion2
+  enq_page_id: YomeiShuSPEnqPage2
+  num: 2
+  seq: Q2
+  question_id: YomeiShuQuestion2
+
+yomei_shu_sp_question3:
+  uuid: YomeiShuSPEnqQuestion3
+  enq_page_id: YomeiShuSPEnqPage3
+  num: 3
+  seq: Q3
+  question_id: YomeiShuQuestion3
+
+yomei_shu_sp_question4:
+  uuid: YomeiShuSPEnqQuestion4
+  enq_page_id: YomeiShuSPEnqPage4
+  num: 4
+  seq: Q4
+  question_id: YomeiShuQuestion4
+
+yomei_shu_sp_question5:
+  uuid: YomeiShuSPEnqQuestion5
+  enq_page_id: YomeiShuSPEnqPage5
+  num: 5
+  seq: Q5
+  question_id: YomeiShuQuestion5
+
+yomei_shu_sp_question6:
+  uuid: YomeiShuSPEnqQuestion6
+  enq_page_id: YomeiShuSPEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YomeiShuQuestion6
+
+yomei_shu_sp_question7:
+  uuid: YomeiShuSPEnqQuestion7
+  enq_page_id: YomeiShuSPEnqPage7
+  num: 7
+  seq: Q7
+  question_id: YomeiShuQuestion7
+
+yomei_shu_sp_question8:
+  uuid: YomeiShuSPEnqQuestion8
+  enq_page_id: YomeiShuSPEnqPage8
+  num: 8
+  seq: Q8
+  question_id: YomeiShuQuestion8
+
+yomei_shu_sp_question9:
+  uuid: YomeiShuSPEnqQuestion9
+  enq_page_id: YomeiShuSPEnqPage9
+  num: 9
+  seq: Q9
+  question_id: YomeiShuQuestion9
+
+yomei_shu_sp_question10:
+  uuid: YomeiShuSPEnqQuestion10
+  enq_page_id: YomeiShuSPEnqPage10
+  num: 10
+  seq: Q10
+  question_id: YomeiShuQuestion10
+
+yomei_shu_pc_question1:
+  uuid: YomeiShuPCEnqQuestion1
+  enq_page_id: YomeiShuPCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: YomeiShuQuestion1
+
+yomei_shu_pc_question2:
+  uuid: YomeiShuPCEnqQuestion2
+  enq_page_id: YomeiShuPCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: YomeiShuQuestion2
+
+yomei_shu_pc_question3:
+  uuid: YomeiShuPCEnqQuestion3
+  enq_page_id: YomeiShuPCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: YomeiShuQuestion3
+
+yomei_shu_pc_question4:
+  uuid: YomeiShuPCEnqQuestion4
+  enq_page_id: YomeiShuPCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: YomeiShuQuestion4
+
+yomei_shu_pc_question5:
+  uuid: YomeiShuPCEnqQuestion5
+  enq_page_id: YomeiShuPCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: YomeiShuQuestion5
+
+yomei_shu_pc_question6:
+  uuid: YomeiShuPCEnqQuestion6
+  enq_page_id: YomeiShuPCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YomeiShuQuestion6
+
+yomei_shu_pc_question7:
+  uuid: YomeiShuPCEnqQuestion7
+  enq_page_id: YomeiShuPCEnqPage7
+  num: 7
+  seq: Q7
+  question_id: YomeiShuQuestion7
+
+yomei_shu_pc_question8:
+  uuid: YomeiShuPCEnqQuestion8
+  enq_page_id: YomeiShuPCEnqPage8
+  num: 8
+  seq: Q8
+  question_id: YomeiShuQuestion8
+
+yomei_shu_pc_question9:
+  uuid: YomeiShuPCEnqQuestion9
+  enq_page_id: YomeiShuPCEnqPage9
+  num: 9
+  seq: Q9
+  question_id: YomeiShuQuestion9
+
+yomei_shu_pc_question10:
+  uuid: YomeiShuPCEnqQuestion10
+  enq_page_id: YomeiShuPCEnqPage10
+  num: 10
+  seq: Q10
+  question_id: YomeiShuQuestion10
+
+# プラスワン
+plus_one_sp_question1:
+  uuid: PlusOneSPEnqQuestion1
+  enq_page_id: PlusOneSPEnqPage1
+  num: 1
+  seq: Q1
+  question_id: PlusOneQuestion1
+
+plus_one_sp_question2:
+  uuid: PlusOneSPEnqQuestion2
+  enq_page_id: PlusOneSPEnqPage2
+  num: 2
+  seq: Q2
+  question_id: PlusOneQuestion2
+
+plus_one_sp_question3:
+  uuid: PlusOneSPEnqQuestion3
+  enq_page_id: PlusOneSPEnqPage3
+  num: 3
+  seq: Q3
+  question_id: PlusOneQuestion3
+
+plus_one_sp_question4:
+  uuid: PlusOneSPEnqQuestion4
+  enq_page_id: PlusOneSPEnqPage4
+  num: 4
+  seq: Q4
+  question_id: PlusOneQuestion4
+
+plus_one_sp_question5:
+  uuid: PlusOneSPEnqQuestion5
+  enq_page_id: PlusOneSPEnqPage5
+  num: 5
+  seq: Q5
+  question_id: PlusOneQuestion5
+
+plus_one_sp_question6:
+  uuid: PlusOneSPEnqQuestion6
+  enq_page_id: PlusOneSPEnqPage6
+  num: 6
+  seq: Q6
+  question_id: PlusOneQuestion6
+
+plus_one_sp_question7:
+  uuid: PlusOneSPEnqQuestion7
+  enq_page_id: PlusOneSPEnqPage7
+  num: 7
+  seq: Q7
+  question_id: PlusOneQuestion7
+
+plus_one_sp_question8:
+  uuid: PlusOneSPEnqQuestion8
+  enq_page_id: PlusOneSPEnqPage8
+  num: 8
+  seq: Q8
+  question_id: PlusOneQuestion8
+
+plus_one_sp_question9:
+  uuid: PlusOneSPEnqQuestion9
+  enq_page_id: PlusOneSPEnqPage9
+  num: 9
+  seq: Q9
+  question_id: PlusOneQuestion9
+
+plus_one_sp_question10:
+  uuid: PlusOneSPEnqQuestion10
+  enq_page_id: PlusOneSPEnqPage10
+  num: 10
+  seq: Q10
+  question_id: PlusOneQuestion10
+
+plus_one_pc_question1:
+  uuid: PlusOnPCPEnqQuestion1
+  enq_page_id: PlusOnePCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: PlusOneQuestion1
+
+plus_one_pc_question2:
+  uuid: PlusOnPCPEnqQuestion2
+  enq_page_id: PlusOnePCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: PlusOneQuestion2
+
+plus_one_pc_question3:
+  uuid: PlusOnPCPEnqQuestion3
+  enq_page_id: PlusOnePCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: PlusOneQuestion3
+
+plus_one_pc_question4:
+  uuid: PlusOnPCPEnqQuestion4
+  enq_page_id: PlusOnePCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: PlusOneQuestion4
+
+plus_one_pc_question5:
+  uuid: PlusOnPCPEnqQuestion5
+  enq_page_id: PlusOnePCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: PlusOneQuestion5
+
+plus_one_pc_question6:
+  uuid: PlusOnPCPEnqQuestion6
+  enq_page_id: PlusOnePCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: PlusOneQuestion6
+
+plus_one_pc_question7:
+  uuid: PlusOnPCPEnqQuestion7
+  enq_page_id: PlusOnePCEnqPage7
+  num: 7
+  seq: Q7
+  question_id: PlusOneQuestion7
+
+plus_one_pc_question8:
+  uuid: PlusOnPCPEnqQuestion8
+  enq_page_id: PlusOnePCEnqPage8
+  num: 8
+  seq: Q8
+  question_id: PlusOneQuestion8
+
+plus_one_pc_question9:
+  uuid: PlusOnPCPEnqQuestion9
+  enq_page_id: PlusOnePCEnqPage9
+  num: 9
+  seq: Q9
+  question_id: PlusOneQuestion9
+
+plus_one_pc_question10:
+  uuid: PlusOnPCPEnqQuestion10
+  enq_page_id: PlusOnePCEnqPage10
+  num: 10
+  seq: Q10
+  question_id: PlusOneQuestion10
