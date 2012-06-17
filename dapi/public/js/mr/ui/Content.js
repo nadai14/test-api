@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Content.js 196 2012-06-14 14:33:08Z tsuru $
+ * @version      $Id: Content.js 228 2012-06-15 14:13:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 23:33:08 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 23:13:17 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -16,15 +16,15 @@
     /**
      * typeName of this class
      */
-    typeName: ns.typeName('Content'), 
+    typeName:   ns.typeName('Content'), 
     /**
      * 
      */
-    tagName: 'div',
+    tagName:    'div',
     /**
      * 
      */
-    className: ns.cls('content'),
+    className:  ns.cls('content'),
     /**
      * Constructor
      */
@@ -68,6 +68,8 @@
     _render: function(){
       ns.trace(this.typeName + '#_render()');// clear
       
+      var _self = this;
+      
       // show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
@@ -78,7 +80,17 @@
     		this.current.hide();
     	}
       
-      if(this.model.has('thankyou')) {
+      if(this.model.has('sorry')) {
+      	
+      	// complete
+      	this.current = this.sorry  = new ns.Sorry({
+	     		model:       this.model.get('sorry'),
+	        el:          $(ns.slctr('sorry'), this.el)
+	      }).on('click:next', function(){
+	      	
+				}, this).render();
+				
+      } else if(this.model.has('thankyou')) {
       	
       	// complete
       	this.current = this.thankyou  = new ns.Thankyou({
@@ -95,16 +107,18 @@
 	     		model:      this.model.get('complete'),
 	     		el:         $(ns.slctr('complete'), this.el)
 	      }).on('click:next', function(){
-	      	// move next page
-	      	this.model.set({
-	      		"thankyou":     new Backbone.Model({
-	      			"point":      this.model.get('campaign').get('point'),
-	      			"message":    this.model.get('campaign').get('message'),
-	      			"conversion": this.model.get('campaign').get('conversion_tag'),
-	      			"client_url": this.model.get('campaign').get('client_url')
-	      		})
+	      	var _thankyou = (function(){
+	      		// move next page
+		      	_self.model.set({
+		      		"thankyou":     new Backbone.Model({
+		      			"point":      _self.model.get('campaign').get('point'),
+		      			"message":    _self.model.get('campaign').get('message'),
+		      			"conversion": _self.model.get('campaign').get('conversion_tag'),
+		      			"client_url": _self.model.get('campaign').get('client_url')
+		      		})
+		      	});
 	      	});
-	      	
+					_thankyou();
 				}, this).render();
 	      
       }else if(this.model.has('page')) {

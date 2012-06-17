@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Player.js 173 2012-06-14 01:24:16Z tsuru $
+ * @version      $Id: Player.js 225 2012-06-15 11:57:34Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 10:24:16 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 20:57:34 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -82,13 +82,18 @@
 					ns.trace('loadstart');
 				});
 				_player.addEvent('loadedmetadata', function(e) {
-					ns.trace('loadstart');
+					ns.trace('loadedmetadata');
 				});
 				_player.addEvent('progress', function(e) {
 					ns.trace('progress');
 				});
 				_player.addEvent('pause', function(e) {
-					ns.trace('loadstart');
+					ns.trace('pause');
+					if(_player.currentTime() < _player.duration() ) {
+						if(!_self.model.get('ad').get('ended')) { 
+							ns.alert('動画を最後まで再生してアンケートにお答えください');
+						}
+					}
 				});
 				_player.addEvent('durationchange', function(e) {
 					ns.trace('durationchange');

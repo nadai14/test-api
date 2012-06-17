@@ -58,6 +58,7 @@
 			 * .mr-ui-landing
 			 * .mr-ui-page
 			 * .mr-ui-already
+			 * .mr-ui-sorry
 			 * 
 			 * to avoid css redundancy! LETS BE SMART! 
 			 */
@@ -156,8 +157,18 @@
 					text-align:   center;
 				}
 			
-			
-	/*�t�b�^�[*/
+			.mr-ui-sorry {
+				
+			}
+				.mr-ui-sorry .mr-ui-title {
+					text-align:   center;
+				}
+				
+				.mr-ui-sorry .mr-ui-message {
+					text-align:   center;
+				}
+				
+	/* footer */
 	.mr-ui-footer {
 		border-top:      1px solid #ebebeb;
 		padding-top:     0.5em;
@@ -168,7 +179,17 @@
 			vertical-align: top;
 		}
 		
-
+	/* conversion */
+	.mr-ui-conversion {
+		width:  0px;
+		height: 0px;
+	}
+	
+		.mr-ui-conversion img {
+			width:  0px;
+			height: 0px;
+		}
+	
 /* * * * * * * * * * * * * * * * * * * *
  * Assets
  * * * * * * * * * * * * * * * * * * * */ 

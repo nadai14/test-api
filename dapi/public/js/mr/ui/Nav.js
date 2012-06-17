@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Nav.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: Nav.js 220 2012-06-15 09:24:22Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 18:24:22 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -65,7 +65,9 @@
 												'アンケートの回答は完了しています。' :
 												(this.model.get('ad').get('playing') && (ns.face === 'PC')) ? 
 													this.model.get('countdown').get('count') :
-													'再生ボタンを押して下さい'
+													(this.model.get('ad').get('playing') && (ns.face === 'SP')) ? 
+														'動画の視聴が完了していません' :
+														'再生ボタンを押して下さい'
 			}));
 			//
 			return this;

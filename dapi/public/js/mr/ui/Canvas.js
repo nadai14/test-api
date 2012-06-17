@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Canvas.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Canvas.js 228 2012-06-15 14:13:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 23:13:17 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -34,25 +34,25 @@
 			
 			
 			// header 
-			this.header  = new ns.Header({ 
-				model:     this.model,
-				el:        $(ns.slctr('header'), this.el)
+			this.header     = new ns.Header({ 
+				model:        this.model,
+				el:           $(ns.slctr('header'), this.el)
 			});
 			// body
-			this.body    = new ns.Body({
-				model:     this.model, 
-				el:        $(ns.slctr('body'), this.el)
+			this.body       = new ns.Body({
+				model:        this.model, 
+				el:           $(ns.slctr('body'), this.el)
 			});
 			// footer
-			this.footer  = new ns.Footer({ 
-				model:     this.model,
-				el:        $(ns.slctr('footer'), this.el)
+			this.footer     = new ns.Footer({ 
+				model:        this.model,
+				el:           $(ns.slctr('footer'), this.el)
 			});
 			//theme
-			this.theme   = new ns.Theme({ 
-				header:    this.header,
-				footer:    this.footer,
-				model:     this.model
+			this.theme      = new ns.Theme({ 
+				header:       this.header,
+				footer:       this.footer,
+				model:        this.model
 			});
 			// catch player event & cascade
 			this.body.on('play:ad', function(e) { 

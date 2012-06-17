@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 177 2012-06-14 06:12:48Z tsuru $
+ * @version			$Id: Controller.js 228 2012-06-15 14:13:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 23:13:17 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -44,7 +44,10 @@
 			 * error handler
 			 */
 			ns.root.handleError = function(message) {
-				_self.navigate("sorry", {trigger: true});
+				ns.trace(ns.namespace + '#handleError("' + message + '")');
+				
+				_self.message = message;
+				_self.navigate("sorry/404", {trigger: true});
 			}
 			
 			if(this.model.has('ad')) {
@@ -111,25 +114,56 @@
 					// update view model
 					// this fires 'chenge' event
 					_self.model.set({
-						"thankyou": null,
-						"complete": null,
-						"campaign": campaign
+						"sorry":      null,
+						"thankyou":   null,
+						"complete":   null,
+						"conversion": null,  
+						"campaign":   campaign
 					});
 				},
 				/**
-				 * error
-				 */
-				error:  function() {
-					this.navigate("sorry/" + id, {trigger: true});
+	       * 
+	 			 * @param {Object} xhr
+	 			 * @param {Object} textStatus
+	 			 * 
+	 			 * @see http://redmine.sunbi.co.jp/issues/1770
+	       */
+	      error:  function(xhr, textStatus){
+	      	var _message = 'データ取得時にエラーが発生しました';
+	  			switch(xhr.status) {
+	  				case 401:
+	  					// 認可されていない UnauthorizedException 401
+	  				case 403:
+	  					// 状態が入稿前 ForbiddenException 403
+							// 状態が終了 ForbiddenException 403
+	  				case 404:
+	  					// アンケートIDが存在しない NotFoundException 404
+							// ページIDが存在しない NotFoundException 404
+							// アンケートIDとページIDが矛盾している NotFoundException 404
+							// アンケートページと回答の設問番号が矛盾している NotFoundException 404
+	  					var _data    = { message:   _message };
+	  					try { _data = $.parseJSON(xhr.responseText); }catch(ex){}
+	  					try { _message = ('undefined' !== typeof(_data)) ? _data.message : _message; }catch(ex){}
+	  					break;
+	  			}
+	  			var _handler = (ns.handleError || ns.root.handleError || function(mesasge) {  ns.alert(message); });
+	  			_handler(_message);
 				}
 			});
 		},
 		/**
-		 * 
+		 * sorry
 		 */
 		sorry:   function(id) {
+			ns.trace(this.typeName + '#sorry()');
+			
+			var _url = location.href;
+			_url     = (-1 < _url.indexOf('#')) ? _url.substring(0, _url.indexOf('#')) : _url;
 			this.model.set({
-				"sorry": new Backbone.Model()
+				"sorry": new Backbone.Model({
+				         	message: this.message,
+				         	back:    _url
+				         })
 			});
 		},
 		/**

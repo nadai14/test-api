@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 179 2012-06-14 08:00:36Z tsuru $
+ * @version      $Id: Complete.js 247 2012-06-17 08:15:34Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 17:00:36 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-17 17:15:34 +0900 (日, 17 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -55,18 +55,62 @@
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
-			
+			var _self = this;
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
 			
 			$(ns.slctr('title') + ' b', this.el).text('アンケートが完了しました。次のボタンを押してポイントを獲得して下さい。');
-			$(this.next.render().el).html(
-				(this.model.has('client_url')) ?
-					$('<p>').append($('<a>').attr('href', this.model.get('client_url')).attr('target', '_blank').text('ポイントをもらう')).html() :
-					'ポイントをもらう'
-			);
+			
+			var _html = 'ポイントをもらう';
+			if(this.model.has('client_url')) {
+				var _$p = $('<p>');
+				var _$a = null; 
+				if(this.model.has('conversion_tag')) {
+					this.next.off('click');
+					
+					var _tag        = this.model.get('conversion_tag');
+					var _client_url = this.model.get('client_url');
+					mr.__conversion__ = function(){ 
+						ns.trace(_tag); 
+						_self.trigger('click:next');
+						
+						mr.__conversion__ = false;
+						$(_tag)
+							.appendTo($(ns.slctr('conversion')))
+							.bind('load', function(){
+								// update flag
+								mr.__conversion__ = true;
+							});
+					};
+					_$a = $('<a>')
+					          	.attr('href', _client_url)
+					          	.attr('target', '_blank')
+					          	.attr('onclick', "javascript: " +
+					          	                 "var _url  = this.href; " +
+					          	                 "var _open = function(){ window.open(_url, '') }; " + 
+					          	                 "mr.__conversion__(); " +
+					          	                 "(function(){ " +
+					          	                 "	var _callee = arguments.callee; " + 
+					          	                 "	if(mr.__conversion__ === true){ _open(); delete mr.__conversion__; } " +
+					          	                 "	else{ setTimeout(_callee, 1000); } " + 
+					          	                 "})(); " +
+					          	                 "return false;")
+					          	.text(_html)
+					          	;
+				}else{
+					_$a = $('<a>')
+					          	.attr('href', this.model.get('client_url'))
+					          	.attr('target', '_blank')
+					          	.text(_html)
+					          	;
+				}
+				_html = _$p.append(_$a).html();
+				ns.trace(_html);
+			} 
+			
+			$(this.next.render().el).html(_html);
 			
 			// return this
 			return this;

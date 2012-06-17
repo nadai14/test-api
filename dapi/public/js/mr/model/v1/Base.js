@@ -7,17 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
-<<<<<<< .mine
- * @version      $Id: Base.js 196 2012-06-14 14:33:08Z tsuru $
-=======
- * @version      $Id: Base.js 177 2012-06-14 06:12:48Z tsuru $
->>>>>>> .r12
+ * @version      $Id: Base.js 203 2012-06-15 06:03:49Z tsuru $
  *
-<<<<<<< .mine
- * Last changed: $LastChangedDate: 2012-06-14 23:33:08 +0900 (木, 14 6 2012) $ by $Author: tsuru $
-=======
- * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
->>>>>>> .r12
+ * Last changed: $LastChangedDate: 2012-06-15 15:03:49 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -54,7 +46,7 @@
        * @param {Object} settings
        */
       beforeSend: function(xhr, settings) {
-        ns.trace('beforeSend:' + settings.type + "\t" + settings.url);
+        ns.trace(ns.namespace + '#beforeSend:' + settings.type + "\t" + settings.url);
         
         //@link http://redmine.sunbi.co.jp/issues/1763
         //@see http://api.jquery.com/jQuery.ajax/
@@ -67,34 +59,7 @@
         
         // return true;
         return true;
-      },
-      /**
-       * 
- 			 * @param {Object} xhr
- 			 * @param {Object} textStatus
- 			 * 
- 			 * @see http://redmine.sunbi.co.jp/issues/1770
-       */
-      complete:  function(xhr, textStatus){
-  			switch(xhr.status) {
-  				case 401:
-  					// 認可されていない UnauthorizedException 401
-  				case 403:
-  					// 状態が入稿前 ForbiddenException 403
-						// 状態が終了 ForbiddenException 403
-  				case 404:
-  					// アンケートIDが存在しない NotFoundException 404
-						// ページIDが存在しない NotFoundException 404
-						// アンケートIDとページIDが矛盾している NotFoundException 404
-						// アンケートページと回答の設問番号が矛盾している NotFoundException 404
-  					var _message = 'データ通信時にエラーが発生しました';
-  					var _data    = { message:   _message };
-  					try { _data = $.parseJSON(xhr.responseText); }catch(ex){}
-  					try { _message = ('undefined' !== typeof(_data)) ? _data.message : _message; }catch(ex){}
-  					(ns.handleError || ns.root.handleError || function(mesasge) {  ns.alert(message); })(_message);
-  					break;
-  			}
-			}
+      }
     }, options);
     
     // call original

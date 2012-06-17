@@ -4,9 +4,9 @@
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Next.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: Next.js 228 2012-06-15 14:13:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-15 23:13:17 +0900 (金, 15 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -36,7 +36,7 @@
 			
 			// event
 			var _self = this;
-			$(this.el).click(function(e){
+			$(this.el).live('click', function(e){
 				_self.trigger('click');
 			});
 				

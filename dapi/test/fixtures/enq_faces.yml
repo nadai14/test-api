@@ -126,14 +126,14 @@ yomei_shu_SP:
   uuid: YomeiShuSPEnqFaceID
   enq_id: YomeiShuEnqID
   face: SP
-  first_page_id: YomeiShuEnqPage1
+  first_page_id: YomeiShuSPEnqPage1
   wait_until: 30
  
 yomei_shu_PC:
   uuid: YomeiShuPCEnqFaceID
   enq_id: YomeiShuEnqID
   face: PC
-  first_page_id: YomeiShuEnqPage1
+  first_page_id: YomeiShuPCEnqPage1
   wait_until: 30
 
 # プラスワン
