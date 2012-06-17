@@ -8,10 +8,15 @@ describe ApplicationController do
     def index
       head :no_content
     end
+	
+	def error
+      response.headers['Access-Control-Allow-Origin'] = '*'
+      response.headers['Access-Control-Allow-Headers'] = 'X-Requested-By'
+	end
   end
   
   describe "認証機能テスト" do
-    before{Rails.env = 'development'}
+    before {Rails.env = 'development'}
   
     context "正常に認証されるか" do
       it 'リクエストヘッダを認証しているか' do
@@ -30,13 +35,18 @@ describe ApplicationController do
         end
       end
       
-#      context "サーバ内部で異常があった場合" do
-#        it 'status 500(Internal Server Error) を返すか' do
-#          request.env['X-Requested-By'] = 'poncan-moviereward'
-#          get :index
-#          response.status.should == 204
-#        end
-#      end
+      context "サーバ内部で異常があった場合" do
+        it 'status 500(Internal Server Error) を返すか' do
+          request.env['X-Requested-By'] = 'poncan-moviereward'
+		  stub_request(:check_requested_by, "www.example.com").to_return(:status => [500, "Internal Server Error"])
+
+		  req = Net::HTTP::Get.new("/")
+		  Net::HTTP.start("www.example.com") { |http| http.request(req) }.message # ===> "Internal Server Error"
+		  
+		  #get :index
+          #response.status.should == 204
+        end
+      end
     end
   end
 end
