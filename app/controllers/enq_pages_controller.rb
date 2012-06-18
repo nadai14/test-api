@@ -16,7 +16,7 @@ class EnqPagesController < ApplicationController
     EnqPage.
       includes([{:enq_questions => [{:question => :choices}, :branches]}, :enq_face]).
       order('enq_questions.num, choices.`order`').
-      #where('enq_faces.enq_id = ? AND enq_faces.face = ? AND enq_pages.uuid = enq_faces.first_page_id', enq_id, face).
+      where('enq_faces.enq_id = ? AND enq_faces.face = ? AND enq_pages.uuid = enq_faces.first_page_id', enq_id, face).
       first
   end
 
