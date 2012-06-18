@@ -456,10 +456,20 @@ describe EnqPagesController do
           end
         
           context "アンケートの最初のページが nil だった時" do
-            before{get :show, {id: "first", enq_id: enqs(:first_page_null).id, face: "SP", format: :json}}
+            context "最初のページ(first_page_idのページ)が存在しない時" do
+              before{get :show, {id: "first", enq_id: enqs(:first_page_null).id, face: "SP", format: :json}}
          
-            it 'status 404(NotFoundException) を返す' do
-              response.status.should == 404
+              it 'status 404(NotFoundException) を返す' do
+                response.status.should == 404
+              end
+            end
+
+            context "first_page_idがNULLの時" do
+              before{get :show, {id: "first", enq_id: enqs(:first_page_id_null).id, face: "SP", format: :json}}
+         
+              it 'status 404(NotFoundException) を返す' do
+                response.status.should == 404
+              end
             end
           end
         
