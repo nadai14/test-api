@@ -42,7 +42,7 @@ scSPquestion1_first:
   enq_page_id: EnqSPSuccessConfirmPage1First
   num: 1
   seq: Q1
-  question_id: QuestionPrefecture
+  question_id: QuestionSelect
 
 scSPquestion2_1_first:
   uuid: SuccessConfirmSPQuestion2_1First
@@ -99,7 +99,7 @@ scPCquestion1_first:
   enq_page_id: EnqPCSuccessConfirmPage1First
   num: 1
   seq: Q1
-  question_id: QuestionPrefecture
+  question_id: QuestionSelect
 
 scPCquestion2_1_first:
   uuid: SuccessConfirmPCQuestion2-1First
@@ -139,7 +139,7 @@ nullableSPQuestionFirst1:
 
 nullableSPQuestionFirst3:
   uuid: NullableSPQuestionFirst3
-  enq_page_id: EnqPageSPNullableFirst3Page1
+  enq_page_id: EnqPageSPNullableFirst3Page
   num: 1
   seq: Q1
   question_id: NullableQuestion2

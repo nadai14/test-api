@@ -53,16 +53,19 @@ nullable_SP_first_1:
   uuid: EnqSPNullableFirst1
   enq_id: EnqNullableFirst1
   face: SP
+  first_page_id: EnqPageSPNullableFirst1Page1
   
 nullable_SP_first_2:
   uuid: EnqSPNullableFirst2
   enq_id: EnqNullableFirst2
   face: SP
+  first_page_id: EnqPageSPNullableFirst2Page
   
 nullable_SP_first_3:
   uuid: EnqSPNullableFirst3
   enq_id: EnqNullableFirst3
   face: SP
+  first_page_id: EnqPageSPNullableFirst3Page
   
 # PC用のnil動作確認データ
 nullable_PC:
@@ -74,16 +77,19 @@ nullable_PC_first_1:
   uuid: EnqPCNullableFirst1
   enq_id: EnqNullableFirst1
   face: PC
+  first_page_id: EnqPagePCNullableFirst1Page1
   
 nullable_PC_first_2:
   uuid: EnqPCNullableFirst2
   enq_id: EnqNullableFirst2
   face: PC
+  first_page_id: EnqPagePCNullableFirst2Page
   
 nullable_PC_first_3:
   uuid: EnqPCNullableFirst3
   enq_id: EnqNullableFirst3
   face: PC
+  first_page_id: EnqPagePCNullableFirst3Page
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
