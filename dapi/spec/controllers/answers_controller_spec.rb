@@ -173,7 +173,7 @@ describe AnswersController do
         
             it 'status 400(BadRequestException) を返す' do
               response.status.should == 400
-			  JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
+              JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
             end
           end
 
@@ -183,7 +183,7 @@ describe AnswersController do
         
             it 'status 400(BadRequestException) を返す' do
               response.status.should == 400
-			  JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
+              JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
             end
           end
 
@@ -193,17 +193,17 @@ describe AnswersController do
         
             it 'status 400(BadRequestException) を返す' do
               response.status.should == 400
-			  JSON.parse(response.body)["message"].should == "回答に誤りが存在している"
+              JSON.parse(response.body)["message"].should == "回答に誤りが存在している"
             end
           end
-		  
+          
           context "アンケートページと回答の設問番号が矛盾している、かつ、数値入力設問の回答が数値でない、かつ、必須回答であるのに回答がない" do
             before{post :create, {enq_id: enqs(:status1).id, page_id: enq_pages(:sc_PC_page1).id, campaign_id: campaigns(:success_confirm).id,
                                   session_id: "session_id", uid: "uid", key: "mixi_uid", answer_3: "男性", answer_5: "validate", format: :json}}
         
             it 'status 400(BadRequestException) を返す' do
               response.status.should == 400
-			  JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
+              JSON.parse(response.body)["message"].should == "回答必須の設問に回答していない"
             end
           end
         end

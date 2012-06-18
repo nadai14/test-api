@@ -37,6 +37,27 @@ scSPquestion4_2:
   seq: Q4
   question_id: QuestionCheck
 
+scSPquestion1_first:
+  uuid: SuccessConfirmSPQuestion1First
+  enq_page_id: EnqSPSuccessConfirmPage1First
+  num: 1
+  seq: Q1
+  question_id: QuestionSelect
+
+scSPquestion2_1_first:
+  uuid: SuccessConfirmSPQuestion2_1First
+  enq_page_id: EnqSPSuccessConfirmPage2_1First
+  num: 2
+  seq: Q2
+  question_id: QuestionSelect
+
+scSPquestion2_2_first:
+  uuid: SuccessConfirmSPQuestion2_2First
+  enq_page_id: EnqSPSuccessConfirmPage2_2First
+  num: 2
+  seq: Q2
+  question_id: QuestionSelect
+
 # PC用の動作確認データ
 scPCquestion1:
   uuid: SuccessConfirmPCQuestion1
@@ -73,6 +94,27 @@ scPCquestion4_2:
   seq: Q4
   question_id: QuestionCheck
 
+scPCquestion1_first:
+  uuid: SuccessConfirmPCQuestion1First
+  enq_page_id: EnqPCSuccessConfirmPage1First
+  num: 1
+  seq: Q1
+  question_id: QuestionSelect
+
+scPCquestion2_1_first:
+  uuid: SuccessConfirmPCQuestion2-1First
+  enq_page_id: EnqPCSuccessConfirmPage2-1First
+  num: 2
+  seq: Q2
+  question_id: QuestionText
+
+scPCquestion2_2_first:
+  uuid: SuccessConfirmPCQuestion2-2First
+  enq_page_id: EnqPCSuccessConfirmPage2-2First
+  num: 2
+  seq: Q2
+  question_id: QuestionText
+
 # スマートフォン用のnil動作確認データ
 nullableSPQuestion1:
   uuid: NullableSPQuestion1
@@ -86,7 +128,21 @@ nullableSPuestion2_2:
   enq_page_id: EnqPageSPNullablePage2-2
   num: 2
   seq: Q2
-  question_id: NullableQuestion2-2
+  question_id: NullableQuestion2
+
+nullableSPQuestionFirst1:
+  uuid: NullableSPQuestionFirst1
+  enq_page_id: EnqPageSPNullableFirst1Page1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullableSPQuestionFirst3:
+  uuid: NullableSPQuestionFirst3
+  enq_page_id: EnqPageSPNullableFirst3Page
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion2
 
 # PC用のnil動作確認データ
 nullablePCuestion1:
@@ -101,7 +157,21 @@ nullablePCQuestion2_2:
   enq_page_id: EnqPagePCNullablePage2-2
   num: 2
   seq: Q2
-  question_id: NullableQuestion2-2
+  question_id: NullableQuestion2
+
+nullablePCQuestionFirst1:
+  uuid: NullablePCQuestionFirst1
+  enq_page_id: EnqPagePCNullableFirst1Page1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullablePCQuestionFirst3:
+  uuid: NullablePCQuestionFirst3
+  enq_page_id: EnqPagePCNullableFirst3Page
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion2
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
