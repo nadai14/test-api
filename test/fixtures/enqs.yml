@@ -6,6 +6,10 @@ status1:
   uuid: EnqStatus1
   status: 1
 
+status1_first:
+  uuid: EnqStatus1First
+  status: 1
+
 # アンケートを作成中
 status0:
   uuid: EnqStatus0
@@ -21,10 +25,26 @@ nullable:
   uuid: EnqNullable
   status: 1
 
+nullable_first_1:
+  uuid: EnqNullableFirst1
+  status: 1
+  
+nullable_first_2:
+  uuid: EnqNullableFirst2
+  status: 1
+
+nullable_first_3:
+  uuid: EnqNullableFirst3
+  status: 1
+
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
   uuid: FirstPageNullEnqID
+  status: 1
+
+first_page_id_null:
+  uuid: FirstPageIDNullEnqID
   status: 1
 
 # キャンペーンの状態が入稿前

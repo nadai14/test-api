@@ -19,6 +19,23 @@ success_confirm:
   second_point: 10
   client_url: http://cdn.poncan.jp
 
+success_confirm_first:
+  mid: CampaignSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
 # nil動作確認用のデータ
 nullable:
   mid: CampaignNullable
@@ -27,11 +44,49 @@ nullable:
   platform: gree
   point: 40 
   
+nullable_first_1:
+  mid: CampaignNullableFirst1
+  enq_id: EnqNullableFirst1
+  status: 1
+  platform: gree
+  point: 40 
+
+nullable_first_2:
+  mid: CampaignNullableFirst2
+  enq_id: EnqNullableFirst2
+  status: 1
+  platform: gree
+  point: 40 
+
+nullable_first_3:
+  mid: CampaignNullableFirst3
+  enq_id: EnqNullableFirst3
+  status: 1
+  platform: gree
+  point: 40 
+
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
   mid: FirstPageNullCampaignID
   enq_id: FirstPageNullEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーンメッセージ
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+first_page_id_null:
+  mid: FirstPageIDNullCampaignID
+  enq_id: FirstPageIDNullEnqID
   status: 1
   platform: mixi
   point: 10

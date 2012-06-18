@@ -22,9 +22,9 @@ class AnswersController < ApplicationController
   def valid?(num, content, enq_question)
     return false if enq_question.nil?
     question = enq_question.question
+    return not question.required if content == ""
     return false if question.needs_choices? && question.choices.none?{|c| c.content == content}
     return false if question.kind == "numeric" && content =~ /[^0-9]+/
-    return false if question.required && content == ""
     true
   end
 

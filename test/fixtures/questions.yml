@@ -61,13 +61,8 @@ nullable_q1:
   kind: text
   answer_content: nil要素確認用
  
-nullable_q2_1:
-  uuid: NullableQuestion2-1
-  kind: text
-  required: false
- 
-nullable_q2_2:
-  uuid: NullableQuestion2-2
+nullable_q2:
+  uuid: NullableQuestion2
   kind: text
   required: false
 
