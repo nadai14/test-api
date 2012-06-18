@@ -43,6 +43,10 @@ first_page_null:
   uuid: FirstPageNullEnqID
   status: 1
 
+first_page_id_null:
+  uuid: FirstPageIDNullEnqID
+  status: 1
+
 # キャンペーンの状態が入稿前
 camp_status0:
   uuid: CampaignStatus0EnqID

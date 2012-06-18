@@ -84,6 +84,23 @@ first_page_null:
   second_point: 10
   client_url: http://cdn.poncan.jp
 
+first_page_id_null:
+  mid: FirstPageIDNullCampaignID
+  enq_id: FirstPageIDNullEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーンメッセージ
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
 # キャンペーンの状態が入稿前
 camp_status0:
   mid: CampaignStatus0CampaignID

@@ -97,6 +97,16 @@ first_page_null_SP:
   uuid: FirstPageNullEnqFaceSPID
   enq_id: FirstPageNullEnqID
   face: SP
+  first_page_id: first_page_id
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+first_page_id_null_SP:
+  uuid: FirstPageIDNullEnqFaceSPID
+  enq_id: FirstPageIDNullEnqID
+  face: SP
   first_page_id: 
   wait_until: 30
   css: /css/sp/themes/sample-1/style.css
@@ -106,6 +116,16 @@ first_page_null_SP:
 first_page_null_PC:
   uuid: FirstPageNullEnqFacePCID
   enq_id: FirstPageNullEnqID
+  face: PC
+  first_page_id: first_page_id
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+first_page_id_null_PC:
+  uuid: FirstPageIDNullEnqFacePCID
+  enq_id: FirstPageIDNullEnqID
   face: PC
   first_page_id: 
   wait_until: 30
