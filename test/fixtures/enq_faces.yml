@@ -126,18 +126,16 @@ yomei_shu_SP:
   uuid: YomeiShuSPEnqFaceID
   enq_id: YomeiShuEnqID
   face: SP
-  first_page_id: YomeiShuEnqPage1
+  first_page_id: YomeiShuSPEnqPage1
   wait_until: 30
-  title: 動画キャンペーン
  
 yomei_shu_PC:
   uuid: YomeiShuPCEnqFaceID
   enq_id: YomeiShuEnqID
   face: PC
-  first_page_id: YomeiShuEnqPage1
+  first_page_id: YomeiShuPCEnqPage1
   wait_until: 30
-  title: 動画キャンペーン
- 
+
 # プラスワン
 plus_one_SP:
   uuid: PlusOneSPEnqFaceID

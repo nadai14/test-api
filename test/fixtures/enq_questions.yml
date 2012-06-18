@@ -23,14 +23,14 @@ scSPquestion3:
   seq: Q3
   question_id: QuestionSelect
 
-scSPquestion4-1:
+scSPquestion4_1:
   uuid: SuccessConfirmSPQuestion4-1
   enq_page_id: EnqSPSuccessConfirmPage4-1
   num: 4
   seq: Q4
   question_id: QuestionTextarea
 
-scSPquestion4-2:
+scSPquestion4_2:
   uuid: SuccessConfirmSPQuestion4-2
   enq_page_id: EnqSPSuccessConfirmPage4-2
   num: 4
@@ -59,14 +59,14 @@ scPCquestion3:
   seq: Q3
   question_id: QuestionSelect
 
-scPCquestion4-1:
+scPCquestion4_1:
   uuid: SuccessConfirmPCQuestion4-1
   enq_page_id: EnqPCSuccessConfirmPage3-1
   num: 4
   seq: Q4
   question_id: QuestionTextarea
 
-scPCquestion4-2:
+scPCquestion4_2:
   uuid: SuccessConfirmPCQuestion4-2
   enq_page_id: EnqPCSuccessConfirmPage3-2
   num: 4
@@ -81,14 +81,7 @@ nullableSPQuestion1:
   seq: Q1
   question_id: NullableQuestion1
 
-nullableSPQuestion2-1:
-  uuid: NullableSPQuestion2-1
-  enq_page_id: EnqPageSPNullablePage2-1
-  num: 2
-  seq: Q2
-  question_id: NullableQuestion2-1
-
-nullableSPuestion2-2:
+nullableSPuestion2_2:
   uuid: NullableSPQuestion2-2
   enq_page_id: EnqPageSPNullablePage2-2
   num: 2
@@ -103,14 +96,7 @@ nullablePCuestion1:
   seq: Q1
   question_id: NullableQuestion1
 
-nullablePCuestion2-1:
-  uuid: NullablePCQuestion2-1
-  enq_page_id: EnqPagePCNullablePage2-1
-  num: 2
-  seq: Q2
-  question_id: NullableQuestion2-1
-
-nullablePCQuestion2-2:
+nullablePCQuestion2_2:
   uuid: NullablePCQuestion2-2
   enq_page_id: EnqPagePCNullablePage2-2
   num: 2

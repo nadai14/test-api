@@ -1,4 +1,4 @@
-json.(@page, *extract_nil(@page, :uuid, :description, :next_page_id, :wait_until))
+json.extract!(@page, *extract_nil(@page, :uuid, :description, :next_page_id, :wait_until))
 json.enq_id @page.enq_face.enq_id
 json.question_cnt @page.enq_questions.size
 
@@ -17,7 +17,7 @@ json.questions do |json|
 
     json.branches do |json|
       json.array!(enq_question.branches) do |json, branch|
-        json.(branch, *extract_nil(branch, :answer, :next_page_id, :wait_until))
+        json.extract!(branch, *extract_nil(branch, :answer, :next_page_id, :wait_until))
       end
     end
 

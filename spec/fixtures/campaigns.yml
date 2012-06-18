@@ -10,7 +10,24 @@ success_confirm:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+success_confirm_first:
+  mid: CampaignSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
   conversion_tag: cnvtag1
@@ -27,6 +44,27 @@ nullable:
   platform: gree
   point: 40 
   
+nullable_first_1:
+  mid: CampaignNullableFirst1
+  enq_id: EnqNullableFirst1
+  status: 1
+  platform: gree
+  point: 40 
+
+nullable_first_2:
+  mid: CampaignNullableFirst2
+  enq_id: EnqNullableFirst2
+  status: 1
+  platform: gree
+  point: 40 
+
+nullable_first_3:
+  mid: CampaignNullableFirst3
+  enq_id: EnqNullableFirst3
+  status: 1
+  platform: gree
+  point: 40 
+
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
@@ -37,7 +75,7 @@ first_page_null:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
   conversion_tag: cnvtag1
@@ -55,7 +93,7 @@ camp_status0:
   point: 20
   opening_at: 2100-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン2メッセージ
   conversion_tag: cnvtag2
@@ -74,7 +112,7 @@ camp_status9:
   point: 30
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン3メッセージ
   conversion_tag: cnvtag3
@@ -92,7 +130,7 @@ camp_closed:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
@@ -110,7 +148,7 @@ incons_question:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: cnvtag4
@@ -127,11 +165,12 @@ yomei_shu:
   status: 1
   platform: mixi
   point: 13
-  opening_at: 2012-1-1 0:0:0
-  closing_at: 2100-1-1 0:0:0
-  movie: /video/yomeishu.mov
+  opening_at: 
+  closing_at: 
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-sp.jpg
+  second_picture: /images/creative-sp.jpg
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
-  
 
 # プラスワン
 plus_one:
@@ -140,8 +179,8 @@ plus_one:
   status: 1
   platform: mixi
   point: 10
-  opening_at: 2012-1-1 0:0:0
-  closing_at: 2100-1-1 0:0:0
+  opening_at:
+  closing_at:
   movie: /images/media/plus1_sp.mp4
   thumbnail: /images/poster-sp.jpg
   message: 
@@ -150,5 +189,3 @@ plus_one:
   banner_title: 
   second_point: 
   client_url: http://ponkan.jp
-  
-  
