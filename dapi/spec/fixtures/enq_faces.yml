@@ -67,6 +67,27 @@ nullable_SP_first_3:
   face: SP
   first_page_id: EnqPageSPNullableFirst3Page
   
+# 空回答確認用
+null_answer_SP:
+  uuid: EnqSPNullAnswer
+  enq_id: EnqNullAnswer
+  face: SP
+  first_page_id: EnqSPNullAnswerPage1
+  wait_until: 30
+  css: /css/sp/themes/sample-1/style.css
+  title: 空回答確認用アンケート1SP
+  description: 空回答確認用アンケート1説明SP
+
+null_answer_PC:
+  uuid: EnqPCNullAnswer
+  enq_id: EnqNullAnswer
+  face: PC
+  first_page_id: EnqPCNullAnswerPage1
+  wait_until: 30
+  css: /css/pc/themes/sample-1/style.css
+  title: 空回答確認用アンケート1SP
+  description: 空回答確認用アンケート1説明SP
+
 # PC用のnil動作確認データ
 nullable_PC:
   uuid: EnqPCNullable

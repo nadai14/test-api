@@ -66,6 +66,35 @@ nullable_q2:
   kind: text
   required: false
 
+# 空回答確認用
+unrequired_numeric:
+  uuid: QuestionUnrequiredNumeric
+  kind: numeric
+  title: 年齢
+  content: 年齢を入力してください。
+  required: false
+
+unrequired_radio:
+  uuid: QuestionUnrequiredRadio
+  kind: radio
+  title: 性別
+  content: 性別を選択してください。
+  required: false
+
+unrequired_select:
+  uuid: QuestionUnrequiredSelect
+  kind: select
+  title: 選択
+  content: 選択肢から選択してください。
+  required: false
+
+unrequired_check:
+  uuid: QuestionUnrequiredCheck
+  kind: check
+  title: チェックボックス
+  content: チェックボックスから選択してください。
+  required: false
+
 # 異常系の確認用データ
 # 設問と選択肢が矛盾している
 incons_question:

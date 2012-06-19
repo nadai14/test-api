@@ -326,7 +326,26 @@ check_choice3:
   order: 3
   content: チェックボックス3
   
+# 空回答確認用
+unrequired_radio:
+  uuid: TmpRadio
+  question_id: QuestionUnrequiredRadio
+  order: 1
+  content: 両性
 
+unrequired_select:
+  uuid: TmpSelect
+  question_id: QuestionUnrequiredSelect
+  order: 1
+  content: 選択
+
+unrequired_check:
+  uuid: TmpCheck
+  question_id: QuestionUnrequiredCheck
+  order: 1
+  content: 選択肢
+
+  
 # 養命酒
 yomei_shu_radio_male:
   uuid: YomeiShuRadioMale

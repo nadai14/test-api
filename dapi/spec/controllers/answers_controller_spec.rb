@@ -81,6 +81,48 @@ describe AnswersController do
         end
       end
       
+      describe "回答必須ではない設問に空文字列が渡された時" do
+        context "numeric の場合" do
+          before{post :create, {enq_id: enqs(:null_answer).id, page_id: enq_pages(:null_answer_SP_page1).id, campaign_id: campaigns(:null_answer).id,
+                         session_id: "session_id", uid: "uid", key: "mixi_uid", answer_1: "", format: :json}}
+          it '空の回答だと処理をスキップする' do
+            response.should be_success
+          end
+        end
+      
+        context "radio の場合" do
+          before{post :create, {enq_id: enqs(:null_answer).id, page_id: enq_pages(:null_answer_SP_page2).id, campaign_id: campaigns(:null_answer).id,
+                         session_id: "session_id", uid: "uid", key: "mixi_uid", answer_2: "", format: :json}}
+          it '空の回答だと処理をスキップする' do
+            response.should be_success
+            enq_question_id = EnqQuestion.find(:all,
+                                      :conditions => ["enq_page_id = ? and num = ?", enqs(:null_answer).id, 2]
+                                      )
+            result = Answer.find(:all,
+                        :conditions => ["campaign_id = ? and enq_question_id = ? and user_id = ?", campaigns(:null_answer).id, enq_questions(:null_answer_SP_page2), "uid"]
+                        )
+            result.length.should == 1
+			puts "result :: :#{result}:"
+          end
+        end
+        
+        context "selecet の場合" do
+          before{post :create, {enq_id: enqs(:null_answer).id, page_id: enq_pages(:null_answer_SP_page3).id, campaign_id: campaigns(:null_answer).id,
+                         session_id: "session_id", uid: "uid", key: "mixi_uid", answer_3: "", format: :json}}
+          it '空の回答だと処理をスキップする' do
+            response.should be_success
+          end
+        end
+        
+        context "check の場合" do
+          before{post :create, {enq_id: enqs(:null_answer).id, page_id: enq_pages(:null_answer_SP_page4).id, campaign_id: campaigns(:null_answer).id,
+                         session_id: "session_id", uid: "uid", key: "mixi_uid", answer_4: "", format: :json}}
+          it '空の回答だと処理をスキップする' do
+            response.should be_success
+          end
+        end
+      end
+      
       describe "異常系は動作しているか" do
         context "単一のException" do
           before do
@@ -115,7 +157,7 @@ describe AnswersController do
             before{post :create, {enq_id: enqs(:status1).id, page_id: "failed_id", campaign_id: campaigns(:success_confirm).id,
                                   session_id: "session_id", uid: @uid, key: "mixi_uid", answer_1: @answer[0], answer_2: @answer[1], format: :json}}
         
-            it 'status 404(NotFoundException)　を返す' do
+            it 'status 404(NotFoundException) を返す' do
               response.status.should == 404
             end
           end
