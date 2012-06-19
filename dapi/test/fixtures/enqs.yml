@@ -37,6 +37,11 @@ nullable_first_3:
   uuid: EnqNullableFirst3
   status: 1
 
+# 空回答確認用
+null_answer:
+  uuid: EnqNullAnswer
+  status: 1
+  
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
