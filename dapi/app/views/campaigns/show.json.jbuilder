@@ -1,6 +1,8 @@
 json.(@campaign, :mid, :point, :platform, :enq_id)
-json.extract!(@campaign, *extract_nil(@campaign, :movie, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
+json.extract!(@campaign, *extract_nil(@campaign, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
 json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
+json.movie @movie unless @movie.nil?
+json.mime_type @mime_type
 
 # face
 @campaign.enq.enq_faces.first.tap do |face|
