@@ -6,9 +6,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Footer.js 188 2012-06-14 10:24:33Z tsuru $
+ * @version			$Id: Footer.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 19:24:33 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -62,7 +62,7 @@
 			}else{
 				// render
 				$(this.el).html(this.template({
-					footer : '&copy; xxxxxxxxxxxxxx. All Rights Reserved.'
+					footer : ''
 				}));
 			}
 			

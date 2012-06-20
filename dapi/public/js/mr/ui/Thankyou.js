@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Thankyou.js 178 2012-06-14 07:00:26Z tsuru $
+ * @version      $Id: Thankyou.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 16:00:26 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -53,9 +53,9 @@
 			
 			// render
 			$(this.el).html(this.template({
-				"title":       'おめでとうございます！',
-				"point":       this.model.get('point'),
-				"message":     this.model.get('message'),
+				"title":       this.model.get('title'),
+				"description": this.model.get('description'),
+				"social":      this.model.get('social'),
 				"client_url":  this.model.has('client_url') ? this.model.get('client_url') : '#' 
 			}));
 			

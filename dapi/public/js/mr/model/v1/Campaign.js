@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 248 2012-06-17 08:57:27Z tsuru $
+ * @version      $Id: Campaign.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-17 17:57:27 +0900 (日, 17 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $
  *
  */
 (function(ns, $){
@@ -49,12 +49,12 @@
   			// resolve URL
 				if(model.has('movie')) {
 					model.set({
-						"movie": _absUrl(model.get('movie'), ns.api)  
+						"movie": ns.absUrl(ns.api, model.get('movie'))  
 					}, {silent: true});
 				}
 				if(model.has('thumbnail')) {
 					model.set({
-						"thumbnail": _absUrl(model.get('thumbnail'), ns.api)  
+						"thumbnail": ns.absUrl(ns.api, model.get('thumbnail'))  
 					}, {silent: true});
 				}
   			// call original
@@ -65,27 +65,4 @@
 			return ns.Base.prototype.fetch.call(this, options);
 		},
 	});
-	/**
-	 * 
-	 */
-	var _absUrl = (function(){
-    var wimg           = new Image();
-    var work           = document.createElement('iframe');
-    work.style.display ='none';
-    document.body.appendChild(work);
-    var wdoc           = work.contentWindow.document;
-    return function( path, base){
-      var url=path;
-      if (!base) {
-				wimg.src=path;
-				url=wimg.src;
-      } else {
-				wdoc.open();
-				wdoc.write('<head><base href="'+base+'" \/><\/head><body><img src="'+path+'" \/><\/body>');
-				wdoc.close();
-				url=wdoc.getElementsByTagName('img')[0].src;
-      }
-      return url;
-    };
-	})();
 })(mr.model.v1, mr.$);

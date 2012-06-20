@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 177 2012-06-14 06:12:48Z tsuru $
+ * @version      $Id: mr.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -58,8 +58,12 @@ var mr = (function($){
 		} ))();
 		
 		_root.ui          = new (extend(_superClass, function(){
-			this.root      = _root;
-			this.namespace = _root.namespace + '.ui'; 
+			this.root        = _root;
+			this.namespace   = _root.namespace + '.ui'; 
+			this.model       =  new (extend(_superClass, function(){
+				this.root      = _root;
+				this.namespace = _root.namespace + '.ui.model';
+			}));
 		}))();
 		
 		/**
@@ -82,24 +86,23 @@ var mr = (function($){
 			}
 			
 			// setup view model
-			var _model = new _root.model.Content();
+			var _model              = null;
 			
 			// 
-			_root.ui.player         = _model.get('parameter').get('player');
+			_root.ui.player         = (new _root.model.Parameter()).get('player');
+			
+			// controller
+			var _controller = (options.face === 'SP') ? new _root.controller.MobileController() : new _root.controller.Controller();
 			
 			// el render
 			if('undefined' !== typeof(options.el)) {
 				var _canvas    = 	new _root.ui.Canvas({
+					controller:     _controller,
 					model:          _model,
 					el:             options.el
 				});
 			}
 			
-			// controller
-			var _controller = new _root.controller.Controller({
-				model: _model 
-			});
-				
 			return this;
 		};
 		
@@ -166,8 +169,7 @@ var mr = (function($){
 		var _i2     = _url.indexOf('#');
 		var _hashes = ((0 <= _i2) ? _url.slice(_i1, _i2) : _url.slice(_i1)).split('&');
 		var _vars   = [];
-		for(var i = 0; i < _hashes.length; i++)
-		{
+		for(var i = 0; i < _hashes.length; i++) {
 			var _hash = _hashes[i].split('=');
 			_vars.push(_hash[0]);
 			_vars[_hash[0]] = _hash[1];

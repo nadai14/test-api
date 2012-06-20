@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 247 2012-06-17 08:15:34Z tsuru $
+ * @version      $Id: Complete.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-17 17:15:34 +0900 (日, 17 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -28,24 +28,20 @@
 		/**
 		 * Constructor
 		 */
-		initialize: function(){
+		initialize: function(options){
 			ns.trace(this.typeName + '#initialize()');
-			
-			// setup template
-			this.template = _.template($(this.el).html());
-			
+			// set controller
+			this.controller = options.controller;
 			// countdown
-			this.next      = new ns.Next({ 
-				model:       new ns.root.model.Next({
-				              title: 'ポイントをもらう'
-				             }),
+			this.next      = new ns.Next({
+				controller:  this.controller ,
+				model:       this.controller.models.next,
 				el:          $(ns.slctr('next'), this.el)
       });
-      
+			// setup template
+			this.template = _.template($(this.el).html());
 			// bind events
-			if('undefined' !== typeof(this.model)) {
-				this.model.on('change', this.render, this);
-			}
+			this.model.on('change', this.render, this);
 			this.next.on('click', function(){
 				this.trigger('click:next');	
 			}, this);
@@ -73,9 +69,7 @@
 					var _tag        = this.model.get('conversion_tag');
 					var _client_url = this.model.get('client_url');
 					mr.__conversion__ = function(){ 
-						ns.trace(_tag); 
-						_self.trigger('click:next');
-						
+						_self.controller.requestThankyouPage();
 						mr.__conversion__ = false;
 						$(_tag)
 							.appendTo($(ns.slctr('conversion')))

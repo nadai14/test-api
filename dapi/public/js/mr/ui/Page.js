@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Page.js 196 2012-06-14 14:33:08Z tsuru $
+ * @version      $Id: Page.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 23:33:08 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -28,35 +28,35 @@
 		/**
 		 * Constructor
 		 */
-		initialize: function(){
+		initialize: function(options){
 			ns.trace(this.typeName + '#initialize()');
-			
+			// 
+			var _self = this;
+			// set controller
+			this.controller = options.controller;
+			// extend model
+			this.model.getValues = function(){
+				return _self.getValues();
+			};
 			// questions
 			this.questions = new ns.Questions({ 
+				controller:  this.controller,
 				collection:  this.model.get('questions'),
 				el:          $(ns.slctr('questions'), this.el).exists() ? $(ns.slctr('questions'), this.el).get(0) : null 
 			});
-      
-			// countdown
-			this.next      = new ns.Next({ 
-				model:       new ns.root.model.Next({
-				              title:     this.questions.containsQuiz() ? '回答' : '次へ',
-				             	countdown: (ns.face === 'SP') ?
-				             		null :
-				             		new ns.root.model.CountDown({
-				             			count: this.model.get('wait_until')
-				             		})
-				             }),
-				el:          $(ns.slctr('next'), this.el)
+			// next button
+			this.next      = new ns.Next({
+				controller:  this.controller, 
+				model:       this.controller.models.next,
+				el:          $(ns.slctr('next'), this.el).get(0)
 			});
-			
-			// process next
-			this.next.on('click', function(){
+			// overrides function
+			this.controller.canMoveNext = function(){
 				// check required
-				if(this.questions.containsRequired()) {
-					var _required = this.questions.getRequired();
+				if(_self.questions.containsRequired()) {
+					var _required = _self.questions.getRequired();
 					for(var i = 0; i < _required.length; ++i) {
-						if(!this.questions.hasValue(_required[i])){
+						if(!_self.questions.hasValue(_required[i])){
 							ns.dialog('この設問は回答必須です。');
 							// return false;
 							return false;
@@ -64,40 +64,36 @@
 					}
 				}
 				// check quiz
-				if(this.questions.containsQuiz() && !this.questions.getIsResultShown()) {
+				if(_self.questions.containsQuiz() && !_self.questions.getIsResultShown()) {
 					//  update nextbutton
-					$(this.next.el).text('次へ');
+					$(_self.next.el).text('次へ');
 					// show result;
-					this.questions.showResult();
+					_self.questions.showResult();
 					// return false;
 					return false;
 				}
-				// trigger next
-				this.trigger('click:next');
-			}, this);
-			
-			// bind events
-			if('undefined' !== typeof(this.model)) {
-				this.model.on('change', this.render, this);
-			}
-			
+				delete _self.controller.canMoveNext;
+				return true;
+			};
+			// 
+			this.next.on('click', function(){
+				_self.controller.requestNextPage();
+			});
+			this.model.on('change', this.render, this);
 		},
 		/**
 		 * render method
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
-			
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
-			
 			// render 
 			$(ns.slctr('title') + ' b', this.el).text(this.model.get('description'));
 			this.questions.render();
-			this.next.render().startCountDown();
-			
+			this.next.render();
 			// return
 			return this;
 		},
@@ -106,7 +102,6 @@
 		 */
 		getValues:	function(){
 			ns.trace(this.typeName + '#getValues()');
-			
 			return this.questions.getValues();
 		}
 	});

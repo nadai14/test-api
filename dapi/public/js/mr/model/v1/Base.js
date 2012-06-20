@@ -7,13 +7,12 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 203 2012-06-15 06:03:49Z tsuru $
+ * @version      $Id: Base.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-15 15:03:49 +0900 (金, 15 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
-  
   ns.Base = ns.root.model.Base.extend({
     /**
      * typeName of this class
@@ -67,4 +66,12 @@
     //  
     return _result;
   };
+  /**
+	 * 
+	 */
+	ns.absUrl = function(base, path){
+		ns.trace(ns.namespace + '#absUrl("' + base + '", "' + path + '")');
+  	url = (new URI(path)).resolve(new URI(base));
+    return url.toString();
+	};
 })(mr.model.v1, mr.$, mr.ua);

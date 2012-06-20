@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Landing.js 136 2012-06-10 14:19:46Z tsuru $
+ * @version      $Id: Landing.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-10 23:19:46 +0900 (日, 10 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -44,7 +44,6 @@
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
-			
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
@@ -52,7 +51,6 @@
 			if($(this.el).hasClass(ns.cls('hidden'))) {
 				$(this.el).removeClass(ns.cls('hidden'));
 			}
-			
 			// render
 			$(this.el).html(this.template({
 				title:       this.model.get('title'),

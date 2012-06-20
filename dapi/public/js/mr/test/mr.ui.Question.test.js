@@ -250,6 +250,40 @@
 	});
 	
 	/*
+	**getIsQuiz()
+	*/
+	test('getIsQuiz()',function(){
+		var _question = new ns.root.model.Question({
+				"answer": 'numeric'
+			});
+			// create model
+		var _view = new ns.Question({
+			model: _question,
+			el:    _el
+		});
+		// test
+		equal(_view.getIsQuiz(), _question.has('answer'),"has('answer') == " + _question.has('answer'));
+		_body.removeChild(_el);
+	});
+	
+	/*
+	**getIsResultShown()
+	*/
+	test('getIsResultShown()',function(){
+		var _question = new ns.root.model.Question({
+				//"answer": 'numeric'
+			});
+			// create model
+		var _view = new ns.Question({
+			model: _question,
+			el:    _el
+		});
+		// test
+		var isExist = $(ns.slctr('answer'), _view.el).hasClass(ns.cls('result-hide'));
+		equal(_view.getIsResultShown(), !isExist,"has('"+ ns.cls('result-hide') +"') == " + isExist);
+		_body.removeChild(_el);
+	});
+	/*
 	**render()
 	*/
 	test('render()',function(){

@@ -40,7 +40,7 @@ Author: Toshiya TSURU
 			
 		}
 			
-			.mr-ui-ad .mr-ui-player,
+			.mejs-container.mr-ui-player, 
 			.mr-ui-ad .mr-ui-creative {
 				width:        528px;/*before the change 355px*/
 				height:       297px;/*before the change 204px*/
@@ -202,6 +202,10 @@ Author: Toshiya TSURU
 				.mr-ui-thankyou .mr-ui-conversion {
 					text-align: center;
 				}
+				
+				.mr-ui-thankyou .mr-ui-next {
+					width:         322px;
+				}
 			
 			.mr-ui-already {
 			}
@@ -220,6 +224,12 @@ Author: Toshiya TSURU
 					text-align:   center;
 				}
 				
+			.mr-ui-sorry {
+			}
+					
+				.mr-ui-sorry .mr-ui-button {
+					width:         322px;
+				}
 				
 	.mr-ui-footer {
 		width:950px;/*before the change 760px*/
@@ -239,13 +249,18 @@ Author: Toshiya TSURU
 		width:  0px;
 		height: 0px;
 	}
-
+	
+		.mr-ui-conversion img {
+			width:  0px;
+			height: 0px;
+		}
 /* * * * * * * * * * * * * * * * * * * *
  * Assets
  * * * * * * * * * * * * * * * * * * * */ 
 .mr-ui-button {
 	border-radius:    5px;
 	background-color: #333;
+	background:      -moz-linear-gradient(top, #E5E4E1, #9E9D9A);
 	background:       -webkit-gradient(linear, left top, left bottom, from(#E5E4E1), to(#9E9D9A));
 	width:            7em;
 	line-height:      2em;

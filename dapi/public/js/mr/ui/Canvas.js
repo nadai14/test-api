@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Canvas.js 228 2012-06-15 14:13:17Z tsuru $
+ * @version      $Id: Canvas.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-15 23:13:17 +0900 (金, 15 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -29,9 +29,11 @@
 		/**
 		 * Constructor
 		 */
-		initialize: function(){
+		initialize: function(options){
 			ns.trace(this.typeName + '#initialize()');
 			
+			// 
+			this.controller = options.controller;
 			
 			// header 
 			this.header     = new ns.Header({ 
@@ -40,6 +42,7 @@
 			});
 			// body
 			this.body       = new ns.Body({
+				controller:   this.controller,
 				model:        this.model, 
 				el:           $(ns.slctr('body'), this.el)
 			});
@@ -49,10 +52,11 @@
 				el:           $(ns.slctr('footer'), this.el)
 			});
 			//theme
-			this.theme      = new ns.Theme({ 
+			this.theme      = new ns.Theme({
+				controller:   this.controller,
+				model:        this.controller.models.theme,
 				header:       this.header,
-				footer:       this.footer,
-				model:        this.model
+				footer:       this.footer
 			});
 			// catch player event & cascade
 			this.body.on('play:ad', function(e) { 

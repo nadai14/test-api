@@ -4,9 +4,9 @@
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Parameter.js 177 2012-06-14 06:12:48Z tsuru $
+ * @version      $Id: Parameter.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 15:12:48 +0900 (木, 14 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -26,7 +26,7 @@
 			"mid":        ns.getParameter('mid'),
 			"uid":        ns.getParameter('uid'),
 			"already":    parseInt(ns.hasParameter('already') ? ns.getParameter('already') : 0) ,
-			"player":     (ns.hasParameter('player')  ? ns.getParameter('player') : 'html5')
+			"player":     (ns.hasParameter('player')  ? ns.getParameter('player') : null)
 		}
 	});
 })(mr.model);

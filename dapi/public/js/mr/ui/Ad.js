@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: Ad.js 251 2012-06-19 19:57:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -28,48 +28,42 @@
 		/**
 		 * Constructor
 		 */
-		initialize: function(){
+		initialize: function(options){
 			ns.trace(this.typeName + '#initialize()');
-			
-			// creates child components
-			this.player   = new ns.Player({ 
-				model:      this.model,
-				el:         $(ns.slctr('player'), this.el)
-			});
-			// creative container
-			this.creative = new ns.Creative({ 
-				model:      this.model,
-				el:         $(ns.slctr('creative'), this.el)
-			});
+			// set controller
+			this.controller = options.controller;
 			// bind events
-			if('undefined' !== typeof(this.model)) {
-				this.model.on('change', this.render, this);
-			}
+			this.model.on('change', this.render, this);
 		},
 		/**
 		 * 
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
-			
+			// 
+			var _self = this;
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
 			
-			if(this.model.has('complete')) {
-				if(this.model.get('campaign').has('second_picture')) {
-					this.player.hide();
-					this.creative.show();
-				}else{
-					this.creative.hide();
-					this.player.show();
-				}
-			}else if(this.model.has('campaign')) {
-				this.creative.hide();
-				this.player.show();	
+			// render
+			if(this.model.has('creative')) {
+				$(this.el).html(
+				new ns.Creative({ 
+					controller: this.controller,
+					model:      this.model,
+					el:         $(ns.slctr('creative'), this.el)
+				}).render().el);
+			}else if(this.model.has('video')) {
+				new ns.PlayerME({ 
+					controller: this.controller,
+					model:      this.model,
+					el:         $(ns.slctr('player'), this.el)
+				}).render(function(e){
+					// alert(e);
+				});
 			}
-			
 			// return this
 			return this;
 		}
