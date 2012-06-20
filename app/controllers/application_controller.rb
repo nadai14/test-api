@@ -72,6 +72,6 @@ class ApplicationController < ActionController::Base
   end
     
   def options
-    render :text => ""
+    head :ok
   end
 end
