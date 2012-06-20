@@ -2,18 +2,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 # スマートフォン用の動作確認データ
-scSPpage3to4_1:
-  uuid: SuccessConfirmSPPage3to4-1
+scSPpage2to3_1:
+  uuid: SuccessConfirmSPPage2to3-1
   enq_question_id: SuccessConfirmSPQuestion3
   answer: 選択肢1
-  next_page_id: EnqSPSuccessConfirmPage4-1
+  next_page_id: EnqSPSuccessConfirmPage3-1
   wait_until: 1
 
-scSPpage3to4_2:
-  uuid: SuccessConfirmSPPage3to4-2
+scSPpage2to3_2:
+  uuid: SuccessConfirmSPPage2to3-2
   enq_question_id: SuccessConfirmSPQuestion3
   answer: 選択肢2
-  next_page_id: EnqSPSuccessConfirmPage4-2
+  next_page_id: EnqSPSuccessConfirmPage3-2
   wait_until: 1
 
 scSPpage1to2_2_first:

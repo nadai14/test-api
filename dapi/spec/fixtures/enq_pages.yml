@@ -13,25 +13,18 @@ sc_SP_page2:
   uuid: EnqSPSuccessConfirmPage2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ2
-  next_page_id: EnqSPSuccessConfirmPage3
+  next_page_id: EnqSPSuccessConfirmPage3-1
   wait_until: 1
 
-sc_SP_page3:
-  uuid: EnqSPSuccessConfirmPage3
+sc_SP_page3_1:
+  uuid: EnqSPSuccessConfirmPage3-1
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
-  next_page_id: EnqSPSuccessConfirmPage4-1
-  wait_until: 1
-
-sc_SP_page4_1:
-  uuid: EnqSPSuccessConfirmPage4-1
-  enq_face_id: EnqSPSuccessConfirm
-  description: アンケ1SPページ2
   next_page_id: 
   wait_until: 1
 
-sc_SP_page4_2:
-  uuid: EnqSPSuccessConfirmPage4-2
+sc_SP_page3_2:
+  uuid: EnqSPSuccessConfirmPage3-2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
   next_page_id: 
