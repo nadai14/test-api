@@ -29,7 +29,8 @@ class AnswersController < ApplicationController
   end
 
   def register(content, enq_question_id, campaign_id, uid, user_agent)
-    Answer.create(campaign_id: campaign_id, enq_question_id: enq_question_id, user_id: uid, user_agent: user_agent, answer: content)
+    answer = content.class == Array ? content.join("b") : content
+    Answer.create(campaign_id: campaign_id, enq_question_id: enq_question_id, user_id: uid, user_agent: user_agent, answer: answer)
   end
 
 end
