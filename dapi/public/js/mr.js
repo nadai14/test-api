@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: mr.js 252 2012-06-20 01:33:15Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -76,7 +76,6 @@ var mr = (function($){
 			
 			// setup api
 			this.model.v1.api = this.model.api = (options.api) ? options.api : '../api/v1/';
-			
 			// face(force)
 			if('undefined' !== typeof(options.face)) {
 				_root.ui.face         = options.face;
@@ -84,16 +83,12 @@ var mr = (function($){
 				_root.model.v1.face   = options.face;
 				_root.model.face      = options.face;
 			}
-			
 			// setup view model
 			var _model              = null;
-			
 			// 
 			_root.ui.player         = (new _root.model.Parameter()).get('player');
-			
 			// controller
 			var _controller = (options.face === 'SP') ? new _root.controller.MobileController() : new _root.controller.Controller();
-			
 			// el render
 			if('undefined' !== typeof(options.el)) {
 				var _canvas    = 	new _root.ui.Canvas({
@@ -102,7 +97,8 @@ var mr = (function($){
 					el:             options.el
 				});
 			}
-			
+			// start
+			Backbone.history.start();
 			return this;
 		};
 		

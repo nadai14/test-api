@@ -72,23 +72,27 @@
 			  /**
 				 * 
 				 */
-			  asyncTest('With OUT "X-Requested-By: poncan-moviereward"', function() {
+			  asyncTest('Answer test"', function() {
+			  	var _url  = 'http://moviereward.nadai.jp:3001/api/v1/enqs/EnqStatus1/pages/EnqPCSuccessConfirmPage1/campaigns/CampaignSuccessConfirm/answers';
+			  	var _data = {
+			  		"session_id": "3175f6d7-a020-7ad0-cc3e-3372ea140f02",
+			  		"uid":        "1",
+			  		"key":        "mixi_uid",
+			  		"answer_1":   "男性",
+			  		"answer_2":   "32",
+			  	};
 			  	$.ajax({
-						type:  "GET",
+						type:  "POST",
 						url:   _url,
-						data:  {
-							face:  'SP'
-						},
+						data:  _data,
 						beforeSend: function(xhr, settings) {
-							/* 
-							 * xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
-							 */
+							xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
 						},
 						complete:   function(xhr, textStatus){
-							if(xhr.status === 401) {
-								ok(true,  'HTTP ' + xhr.status);
+							if(xhr.status !== 200) {
+								ok(false,  'HTTP ' + xhr.status + ' ' + textStatus);
 							}else{
-								ok(true,  'Unbexpected HTTP Status ' + xhr.status);
+								ok(true);
 							}
 							start();
 						}

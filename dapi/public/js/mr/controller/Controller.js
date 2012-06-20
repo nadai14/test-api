@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version			$Id: Controller.js 253 2012-06-20 02:02:54Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 11:02:54 +0900 (水, 20 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -25,7 +25,6 @@
 			"":                      "start",
 			"campaign/:id":          "campaign",
 			"already/:id":           "already",
-			"sorry/:id":             "sorry",
 		},
 		/**
 		 * initialize
@@ -57,8 +56,7 @@
 				theme:     new ns.root.ui.model.Theme(),
 				landing:   new ns.root.ui.model.Landing(),
 				content:   new ns.root.ui.model.Content(),
-				next:      new ns.root.ui.model.Next(),
-				sorry:     new ns.root.ui.model.Sorry()
+				next:      new ns.root.ui.model.Next()
 			}; 
 			
 			// set default values
@@ -72,9 +70,6 @@
 			this.on('change:isAdEnded',     this.onIsAdEndedChanged,     this);	
 			this.on('change:adCurrentTime', this.onAdCurrentTimeChanged, this);
 			this.on('change:isTimePassed',  this.onIsTimePassedChanged,  this);
-				
-			
-			
 			
 			var _cookies = document.cookie.split(';');
 			var _parsed = {};
@@ -89,7 +84,7 @@
 				this.session_id = _parsed['MRID'];
 			}
 			// start history
-			Backbone.history.start();
+			
 			// this.start();
 		},
 		/**
@@ -106,7 +101,7 @@
 					this.navigate("campaign/" + this.models.parameter.get('mid'), { trigger: true, replace: true });	
 				}
 			}else{
-				this.navigate("sorry", {trigger: true, replace: true});
+				this.sorry('ページの呼び出しが不正です。');
 			}
 		},
 		/**
@@ -132,7 +127,7 @@
 				// landing
 				_self.models.landing.set({ 
 					"title":       campaign.get('title'),
-					"description": campaign.get('description')
+					"description": _.template(campaign.get('description').replace('#{', '{{').replace('}', '}}'))({ "point": campaign.get('point')})
 				});
 				// content
 				_self.models.content.set({ 
@@ -146,17 +141,16 @@
 		 * sorry
 		 */
 		sorry:   function(message) {
-			ns.trace(this.typeName + '#sorry()');
+			ns.trace(this.typeName + '#sorry("' + message + '")');
 			var _self = this;
 			
-			// sory
-			this.models.sorry.set({
-				'message':  message
-			});
 			// content
 			_self.models.content.set({ 
 				"view":        ns.root.ui.Sorry,
-				"model":       this.models.sorry,
+				"model":       new ns.root.ui.model.Sorry({
+				               	"title":       '申し訳ございません。',
+				               	"description": message
+				               }),
 				"selector":    ns.root.ui.slctr('sorry')
 			});
 		},
@@ -173,10 +167,12 @@
    	 * 
    	 */
    	ajaxError: function(xhr, textStatus) {
-   		ns.trace(this.typeName + '#ajaxError("' + textStatus + '")');
+   		ns.trace(this.typeName + '#ajaxError("' + xhr.status + '", "' + textStatus + '")');
    		var _self = this;
    		var _message = 'データ通信時にエラーが発生しました';
 			switch(xhr.status) {
+				case 0:
+					
 				case 401:
 					// 認可されていない UnauthorizedException 401
 				case 403:
@@ -215,14 +211,12 @@
 				 * success
 				 */
 				success: function(campaign, response) {
+					ns.trace(_self.typeName + '#fetchCampaign()#success');
+					ns.trace(JSON.stringify(campaign));
 					// set this
 					_self.wait_until = campaign.has('wait_until') ? campaign.get('wait_until') : -1;
 					// callback
 					success(campaign);
-				},
-				error:  function(xhr, textStatus){
-	      	ns.trace(ns.typeName + '#fetchCampaign()#error');
-	      	_self.ajaxError(xhr, textStatus);
 				},
 				/**
 	       * 
@@ -232,7 +226,7 @@
 	 			 * @see http://redmine.sunbi.co.jp/issues/1770
 	       */
 	      complete:  function(xhr, textStatus){
-	      	ns.trace(ns.typeName + '#fetchCampaign()#complete');
+	      	ns.trace(_self.typeName + '#fetchCampaign()#complete');
 	      	_self.ajaxError(xhr, textStatus);
 				}
 			});
@@ -255,6 +249,8 @@
 				 * success
 				 */
 				success: function(page, response) {
+					ns.trace(_self.typeName + '#fetchPage()#success');
+					ns.trace(JSON.stringify(page));
 					// set this
 					_self.wait_until = page.has('wait_until') ? page.get('wait_until') : -1;
 					// callback
@@ -274,7 +270,7 @@
      * 
      */
     sendAnswer: function(answer, success) {
-    	ns.trace(this.typeName + '#sendAnswer("' + JSON.stringify(answer) + '")');
+    	ns.trace(this.typeName + '#sendAnswer("' + JSON.stringify(answer.data) + '")');
     	// 
     	var _self = this;
     	// send answer
@@ -283,16 +279,15 @@
 				url:        answer.url(),
 				data:       answer.data,
 				beforeSend: function(xhr, settings) {
-					ns.trace(ns.typeName + '#sendAnswer()#beforeSend:' + settings.type + "\t" + settings.url);
+					ns.trace(_self.typeName + '#sendAnswer()#beforeSend:' + settings.type + "\t" + settings.url);
 					xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
       	},
 				success: function(data, status) {
-					ns.trace(ns.typeName + '#sendAnswer()#success');
+					ns.trace(_self.typeName + '#sendAnswer()#success');
 					success();
 				},
 				complete:  function(xhr, textStatus){
-					ns.trace(ns.typeName + '#sendAnswer()#complete');
-					ns.trace(xhr.responseText);
+					ns.trace(_self.typeName + '#sendAnswer()#complete');
 					_self.ajaxError(xhr, textStatus);
 				}
 			});
@@ -331,8 +326,8 @@
     	}else if(0 < _self.wait_until){
     		var _left = _self.wait_until - _currentTimeInSec;
 				if(0 < _left) {
-					_self.models.next.set('title', _left + '秒');
-    			_self.models.nav.set('html', _left + '秒');
+					_self.models.next.set('title', '次の設問まで 残り：' + _left + ' 秒');
+    			_self.models.nav.set('html',   '次の設問まで 残り：' + _left + ' 秒');
 				}else{
 					_self.models.next.set('title', '次へ');
 					_isTimePassed = true;
@@ -362,14 +357,14 @@
     	return this;
     },
     /**
-     * isAdPlayingChanged 
+     * onIsTimePassedChanged() 
      */
     onIsTimePassedChanged: function() {
     	ns.trace(this.typeName + '#onIsTimePassedChanged()');
     	this.requestNextPage();
     },
     /**
-     * 
+     * requestNextPage()
      */
     requestNextPage: function(callback) {
     	ns.trace(this.typeName + '#requestNextPage()');
@@ -402,8 +397,6 @@
 							callback();
 						});
 					};
-					
-	    		
 					if(_self._page) {
 						var _page       = _self._page; 
 						// send answer
@@ -475,7 +468,7 @@
 			return this;
     },
     /**
-     * 
+     * requestThankyouPage()
      */
     requestThankyouPage: function() {
     	ns.trace(this.typeName + '#requestThankyouPage()');
@@ -501,14 +494,14 @@
 			}
     },
    	/**
-     * 
+     * getIsAdPlaying()
      */
     getIsAdPlaying: function() {
     	ns.trace(this.typeName + '#getIsPlaying()');
     	return this.isAdPlaying;
     },
    	/**
-     * 
+     * setIsAdPlaying()
      */
     setIsAdPlaying: function(playing) {
     	ns.trace(this.typeName + '#setIsAdPlaying(' + playing + ')');
@@ -519,21 +512,21 @@
     	return this;
     },
     /**
-     * isAdPlayingChanged 
+     * onIsAdPlayingChanged() 
      */
     onIsAdPlayingChanged: function() {
     	ns.trace(this.typeName + '#onIsAdPlayingChanged()');
     	
     },
     /**
-     * 
+     * getIsAdEnded()
      */
     getIsAdEnded: function() {
     	ns.trace(this.typeName + '#getIsAdEnded()');
     	return this.isAdEnded;
     },
    	/**
-     * 
+     * setIsAdEnded()
      */
     setIsAdEnded: function(ended) {
     	ns.trace(this.typeName + '#setIsAdEnded(' + ended + ')');
@@ -544,7 +537,7 @@
     	return this;
     },
     /**
-     * isAdPlayingChanged 
+     * onIsAdEndedChanged() 
      */
     onIsAdEndedChanged: function() {
     	ns.trace(this.typeName + '#onIsAdEndedChanged()');

@@ -116,8 +116,8 @@
 						<div class="mr-ui-title">
 							<b class="clear-type">{{title}}</b>
 						</div>
-						<div class="mr-ui-message">
-							{{message}}
+						<div class="mr-ui-description">
+							{{description}}
 						</div>
 						<button type="button" class="mr-ui-button clear-type">
 							<a href="{{back}}" class="clear-type">最初に戻る</a>
@@ -221,10 +221,11 @@
 		<script>
 			$(document).ready(function(){
     		mr.initialize({
-    			// api: '../api/v1',                                        // this depends on where
-					// api: 'http://192.168.1.115/nci-201205/api/v1',           // toshiya tsuru dev env
-					// api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',  // front demo site ()
-					api: 'http://moviereward.nadai.jp:3001/api/v1',             // mr development site
+    			// api: '../api/v1',                                         // relative
+					// api: 'http://192.168.1.115/nci-201205/api/v1',            // dev(tsuru local)
+					// api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',   // dev(sunbi)
+					api: 'http://moviereward.nadai.jp:3001/api/v1',              // dev
+					// api: 'http://moviereward.nadai.jp:3000/api/v1',           // prod
     			el:   'mr-canvas',
     			face: 'SP'         // 20120605 force FACE API parameter
 				});

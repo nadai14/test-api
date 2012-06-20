@@ -20,9 +20,9 @@
 		 * @see http://backbonejs.org/#Model-defaults
 		 */
 		defaults: {
-			"title":      '申し訳ございません。',
-			"message":    '...',
-			"back":       '#',
+			"title":       '申し訳ございません。',
+			"description": '...',
+			"back":        '#',
 		},
 		/**
 		 * constructor

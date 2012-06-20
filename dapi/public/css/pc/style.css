@@ -226,7 +226,13 @@ Author: Toshiya TSURU
 				
 			.mr-ui-sorry {
 			}
-					
+				
+				.mr-ui-sorry .mr-ui-description {
+					text-align:    center;
+					margin-top:    20px;
+					margin-bottom: 20px;
+				}
+				
 				.mr-ui-sorry .mr-ui-button {
 					width:         322px;
 				}

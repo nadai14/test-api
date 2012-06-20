@@ -52,9 +52,9 @@
 			
 			// render
 			$(this.el).html(this.template({
-				"title":     this.model.has('title') ? this.model.get('title') : '申し訳ございません',
-				"message":   this.model.has('message') ? this.model.get('message') : '',
-				"back":      this.model.has('back') ? this.model.get('back') : ''  
+				"title":       this.model.has('title')       ? this.model.get('title') : '申し訳ございません',
+				"description": this.model.has('description') ? this.model.get('description') : '',
+				"back":        this.model.has('back')        ? this.model.get('back') : ''  
 			}));
 			
 			// return this

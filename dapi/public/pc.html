@@ -112,8 +112,8 @@
 						<div class="mr-ui-title">
 							<b class="clear-type">{{title}}</b>
 						</div>
-						<div class="mr-ui-message">
-							{{message}}
+						<div class="mr-ui-description">
+							{{description}}
 						</div>
 						<button type="button" class="mr-ui-button clear-type">
 							<a href="{{back}}" class="clear-type">最初に戻る</a>
@@ -184,9 +184,6 @@
 		<script src="js/mr/model/v1/Questions.js?v=20120620"></script>
 		<script src="js/mr/model/v1/Answer.js?v=20120620"></script>
 		<script src="js/mr/model/Parameter.js?v=20120620"></script>
-		<script src="js/mr/model/CountDown.js?v=20120620"></script>
-		<script src="js/mr/model/Next.js?v=20120620"></script>
-		<script src="js/mr/model/Content.js?v=20120614"></script>
 		<script src="js/mr/model/Campaign.js?v=20120620"></script>
 		<script src="js/mr/model/Page.js?v=20120620"></script>
 		<script src="js/mr/model/Question.js?v=20120620"></script>
@@ -229,10 +226,11 @@
 		<script>
 			$(document).ready(function(){
 				mr.initialize({
-					// api: '../api/v1',
-					// api: 'http://192.168.1.115/nci-201205/api/v1',
-					// api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',
-					api: 'http://moviereward.nadai.jp:3001/api/v1',             // mr development site
+					// api: '../api/v1',                                         // relative
+					// api: 'http://192.168.1.115/nci-201205/api/v1',            // dev(tsuru local)
+					// api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',   // dev(sunbi)
+					api: 'http://moviereward.nadai.jp:3001/api/v1',              // dev
+					// api: 'http://moviereward.nadai.jp:3000/api/v1',           // prod
 					el:  'mr-canvas'
 				});
   		});
