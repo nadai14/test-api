@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Page.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Page.js 265 2012-06-20 23:48:24Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -36,6 +36,7 @@
 			this.controller = options.controller;
 			// extend model
 			this.model.getValues = function(){
+				ns.trace(this.typeName + '#initialize():getValues at '  + _self.model.get('uuid'));
 				return _self.getValues();
 			};
 			// questions
@@ -91,7 +92,7 @@
 				$(this.el).removeClass(ns.cls('template'));
 			}
 			// render 
-			$(ns.slctr('title') + ' b', this.el).text(this.model.get('description'));
+			$(ns.slctr('title') + ' b', this.el).text(this.model.has('description') ? this.model.get('description') : '');
 			this.questions.render();
 			this.next.render();
 			// return

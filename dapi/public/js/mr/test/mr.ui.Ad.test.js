@@ -43,33 +43,26 @@
 		
 		$(_el).append($('<div>').addClass(ns.cls('player')));
 		$(_el).append($('<div>').addClass(ns.cls('creative')));
+		// controller
+		var _face = 'PC';
+		var _controller = (_face === 'SP') ? new ns.root.controller.MobileController() : new ns.root.controller.Controller();
 		
-		var _content = new ns.root.model.Content({
-			"campaign": {}
-		});
-				
-		var _view = new ns.Ad({
-			model: _content,
-			el:    _el
+		var _view    = 	new ns.Ad({
+			controller:     _controller,
+			model:          _controller.models.ad,
+			el:             _el
 		}).render();
 		
+		if(_view.model.has('creative')){
+			//TODO
+		}else if(_view.model.has('video')){
+			//TODO
+		}
 		var divPlayer = $(ns.slctr('player'), _view.el);
 		var divCreative = $(ns.slctr('creative'), _view.el);
-		equal(divPlayer.length, 1, 'divPlayer.length = 1');
-		equal(divCreative.length, 1, 'divCreative.length = 1');
-		
-		var divPlayer = $(ns.slctr('player')+':visible', _view.el);
-		var divCreative = $(ns.slctr('creative')+':visible', _view.el);
-		if(divPlayer.length > 0)
-			equal(divPlayer.length, 1, 'player.show()');
-		else
-			equal(divPlayer.length, 0, 'player.hide()');
-			
-		if(divCreative.length > 0)
-			equal(divCreative.length, 1, 'creative.show()');
-		else
-			equal(divCreative.length, 0, 'creative.hide()');
-		
+		equal(divPlayer.length, 1);
+		equal(divCreative.length, 1);
+				
 		_body.removeChild(_el);
 	});
 

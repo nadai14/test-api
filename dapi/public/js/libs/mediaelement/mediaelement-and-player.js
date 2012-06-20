@@ -3160,12 +3160,13 @@ if (typeof jQuery != 'undefined') {
 		isInIframe: false,
 		
 		buildfullscreen: function(player, controls, layers, media) {
-
+			
 			if (!player.isVideo)
 				return;
 				
 			player.isInIframe = (window.location != window.parent.location);
-				
+			
+			
 			// native events
 			if (mejs.MediaFeatures.hasTrueNativeFullScreen) {
 				
@@ -3208,6 +3209,7 @@ if (typeof jQuery != 'undefined') {
 				if (t.media.pluginType === 'native' || (!t.options.usePluginFullScreen && !mejs.MediaFeatures.isFirefox)) {
 					
 					fullscreenBtn.click(function() {
+						
 						var isFullScreen = (mejs.MediaFeatures.hasTrueNativeFullScreen && mejs.MediaFeatures.isFullScreen()) || player.isFullScreen;													
 						
 						if (isFullScreen) {
@@ -3218,7 +3220,7 @@ if (typeof jQuery != 'undefined') {
 					});
 					
 				} else {
-
+					// Android 
 					var hideTimeout = null,
 						supportsPointerEvents = (function() {
 							// TAKEN FROM MODERNIZR

@@ -260,3 +260,7 @@
 .mr-ui-hidden {
 	display: none;
 }
+
+.mejs-overlay-play {
+	display: none;
+}

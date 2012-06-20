@@ -40,22 +40,16 @@
 	 * render()
 	 */
 	test('render()', function() {
-		$(_el).append($('<div>').addClass(ns.cls('ad')));
-		$(_el).append($('<div>').addClass(ns.cls('nav')));
-		$(_el).append($('<div>').addClass(ns.cls('content')));
-		$(ns.slctr('ad')).append($('<div>').addClass(ns.cls('player')));
-		$(ns.slctr('ad')).append($('<div>').addClass(ns.cls('creative')));
-		
-		var _content = new ns.root.model.Content({
-		});
+		_face = 'PC';
+		var _controller = (_face === 'SP') ? new ns.root.controller.MobileController() : new ns.root.controller.Controller();
 		var _view = new ns.Body({
-			model:	_content,
-			el	 :  _el
+			controller:	_controller,
+			el	 :		_el
 		}).render();
 		
-		equal($(ns.slctr('body'),this.el).length>0, true, '['+ ns.cls('body') +']' + ' is exist');
-		equal($(ns.slctr('template'),_view.el).length>0, false, '['+ ns.cls('template') +']' + ' is not exist');
-		
+		equal(typeof(_view.ad), 'object', 'new Ad()');
+		equal(typeof(_view.nav), 'object', 'new Nav()');
+		equal(typeof(_view.content), 'object', 'new Content()');
 		_body.removeChild(_el);
 	});
 

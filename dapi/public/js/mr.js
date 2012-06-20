@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 252 2012-06-20 01:33:15Z tsuru $
+ * @version      $Id: mr.js 263 2012-06-20 15:45:15Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 00:45:15 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -77,18 +77,18 @@ var mr = (function($){
 			// setup api
 			this.model.v1.api = this.model.api = (options.api) ? options.api : '../api/v1/';
 			// face(force)
-			if('undefined' !== typeof(options.face)) {
-				_root.ui.face         = options.face;
-				_root.controller.face = options.face;
-				_root.model.v1.face   = options.face;
-				_root.model.face      = options.face;
+			if('undefined' !== typeof(options.terminal)) {
+				_root.ui.terminal         = options.terminal;
+				_root.controller.terminal = options.terminal;
+				_root.model.v1.terminal   = options.terminal;
+				_root.model.terminal      = options.terminal;
 			}
 			// setup view model
 			var _model              = null;
 			// 
 			_root.ui.player         = (new _root.model.Parameter()).get('player');
 			// controller
-			var _controller = (options.face === 'SP') ? new _root.controller.MobileController() : new _root.controller.Controller();
+			var _controller = (options.terminal === 'iPhone' || options.terminal === 'Android') ? new _root.controller.MobileController() : new _root.controller.Controller();
 			// el render
 			if('undefined' !== typeof(options.el)) {
 				var _canvas    = 	new _root.ui.Canvas({

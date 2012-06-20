@@ -44,18 +44,22 @@
 		$(ns.slctr('complete')).append($('<div>').addClass(ns.cls('title')));
 		$(ns.slctr('title')).append($('<b>'));
 		
-		var _content = new ns.root.model.Content({
-			"client_url": 'http://127.0.0.1'
-		});
+		var _face = 'PC';
+		var _controller = (_face === 'SP') ? new ns.root.controller.MobileController() : new ns.root.controller.Controller();
+		
 		var _view = new ns.Complete({
-			model:	_content,
-			el	 :  _el
+			controller: _controller,
+			model	  : new ns.model.Complete({
+				//"conversion_tag" : '',
+				"client_url"	 : 'http://127.0.0.1'
+			}),
+			el	 	  : _el
 		}).render();
 		
 		equal($(ns.slctr('title') + ' b').text(), 'アンケートが完了しました。次のボタンを押してポイントを獲得して下さい。', ns.cls('title')+".text: アンケートが完了しました。次のボタンを押してポイントを獲得して下さい。");
-		equal($('a', _view.next.el).text(), 'ポイントをもらう', $(_view.next.el).attr('class')+'.text: ポイントをもらう');
+		equal($('a', _view.next.el).attr('href'), 'http://127.0.0.1', '<a>.href: ' + $(_view.next.el).find('a').attr('href'));
 		
-		_body.removeChild(_el);
+		//_body.removeChild(_el);
 	});
 
 })(mr.ui);

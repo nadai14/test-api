@@ -22,7 +22,7 @@
 		setup: function() { // 初期化処理
 			_body     = document.getElementsByTagName('body')[0];
 			_el       = document.createElement('div');
-			//$(_el).append($('<div>').addClass(ns.cls('content')));
+			$(_el).append($('<div>').addClass(ns.cls('content')));
 			if('undefined' !== typeof(_body)) {
 				_body.appendChild(_el);
 			}
@@ -40,25 +40,27 @@
 	 * render()
 	 */
 	test('render()', function() {
-		var _content = new ns.root.model.Content({
-			"thankyou": new Backbone.Model({
-				"point": 		'1',
-				"message":		'thankyou',
-				"client_url":	'http://127.0.0.1'
-			}),
-			el: $('.mr-ui-thankyou')
+		mr.model.v1.api = '../../../../api/v1';
+		$(_el).append($('<div>').addClass(ns.cls('landing')));	
+		var _face = 'PC';
+		var _controller = (_face === 'SP') ? new ns.root.controller.MobileController() : new ns.root.controller.Controller();
+		_controller.campaign('1');
+		_controller.models.content.set({ 
+			"view":        ns.root.ui.Landing,
+			"model":       _controller.models.landing,
+			"selector":    ns.root.ui.slctr('landing')
 		});
 		var _view = new ns.Content({
-			model:	_content,
-			el	 :  $(ns.slctr('content'))
+			controller: _controller,
+			model:	_controller.models.content,
+			el	 :  _el
 		}).render();
 		
 		//TODO
-		equal($(ns.slctr('title')+' b').text(),'おめでとうございます！', '{{title}}: おめでとうございます！');
-		equal($(ns.slctr('description')+' p').text().replace(/\s+/g,""),'1', '{{point}}: 1');
-		equal($(ns.slctr('message')).text().replace(/\s+/g,""),'thankyou', '{{message}}: thankyou');
-		equal($(ns.slctr('conversion')).text().replace(/\s+/g,""),'http://127.0.0.1', '{{client_url}}: http://127.0.0.1');
+		equal('', '', 'TODO');
+		//equal($(ns.slctr('title')+' b').text(),'おめでとうございます！', '{{title}}: おめでとうございます！');
 		
+		_body.removeChild(_el);
 	});
 
 })(mr.ui);

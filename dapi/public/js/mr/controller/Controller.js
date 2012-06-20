@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 253 2012-06-20 02:02:54Z tsuru $
+ * @version			$Id: Controller.js 265 2012-06-20 23:48:24Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 11:02:54 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -98,7 +98,7 @@
 				if(this.models.parameter.get('already') === 1) {
 					this.navigate("already/" + this.models.parameter.get('mid'),  { trigger: true, replace: true });
 				}else{
-					this.navigate("campaign/" + this.models.parameter.get('mid'), { trigger: true, replace: true });	
+					this.campaign(this.models.parameter.get('mid'));
 				}
 			}else{
 				this.sorry('ページの呼び出しが不正です。');
@@ -149,7 +149,8 @@
 				"view":        ns.root.ui.Sorry,
 				"model":       new ns.root.ui.model.Sorry({
 				               	"title":       '申し訳ございません。',
-				               	"description": message
+				               	"description": message,
+				               	"back":        'javascript:location.reload();'
 				               }),
 				"selector":    ns.root.ui.slctr('sorry')
 			});
@@ -172,7 +173,7 @@
    		var _message = 'データ通信時にエラーが発生しました';
 			switch(xhr.status) {
 				case 0:
-					
+				case 400:	
 				case 401:
 					// 認可されていない UnauthorizedException 401
 				case 403:
@@ -382,6 +383,10 @@
     			var _fetchPage = function(_enq_id, _id) {
     				_self.fetchPage(_enq_id, _id, function(page){
 							_self._page   = page;
+							/// navi
+							_self.models.nav.set({
+		    				"html": _self._page.get('questions').at(0).get('num') + ' / ' +  _self._page.get('question_cnt')
+		    			});
 							// content
 							_self.models.content.set({ 
 								"view":        ns.root.ui.Page,
@@ -415,15 +420,17 @@
 							key:          _answer.get('key')
 						};
 						var values        = _self._page.getValues();
+						
+						ns.trace(JSON.stringify(values));
+						
 						var _questions    = _page.get('questions');
 						for(var i = 0; i < _questions.length; ++i ){
 							var _question   = _questions.at(i);
 							var _num        = _question.get('num'); 
 							var _value      = values[_num];
 							if(_value) {
-								var _name     = 'answer_' + _num;
-								var _values   = _value.values;
-								_data[_name]  = (_values.length === 1) ? _values[0] : _values;
+								var _name     = 'answer_' + _num + '[]';
+								_data[_name]  = _value.values;
 								// _answer.set(_name, (_values.length === 1) ? _values[0] : _values);
 							}
 						}

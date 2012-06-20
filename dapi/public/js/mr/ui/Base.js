@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 160 2012-06-12 14:30:09Z tsuru $
+ * @version      $Id: Base.js 256 2012-06-20 10:04:17Z liminghua772 $
  *
- * Last changed: $LastChangedDate: 2012-06-12 23:30:09 +0900 (火, 12 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 19:04:17 +0900 (水, 20 6 2012) $ by $Author: liminghua772 $
  *
  */
 (function(ns, $){
@@ -58,8 +58,7 @@
 			selector = selector + ns.slctr('template');
 			ns.trace(this.typeName + '#cloneTemplate(\"' + selector + '\")');
 			
-			return 
-				$(selector, this.el).exists() ? 
+			return 	$(selector, this.el).exists() ? 
 					$(selector, this.el).clone().appendTo($(this.el)) : 
 					null
 		}

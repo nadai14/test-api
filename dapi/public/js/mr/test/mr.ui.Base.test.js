@@ -46,6 +46,7 @@
 		}).render();
 		 
 		equal('','');
+		_body.removeChild(_el);
 	});
 	
 	/**
@@ -57,6 +58,7 @@
 		});
 		base = _view.show();
 		equal($(ns.slctr('Base')+":visible").length>=0, true, ns.slctr('Base')+" is visible");
+		_body.removeChild(_el);
 	});
 	/**
 	 * hide()
@@ -67,6 +69,23 @@
 		});
 		base = _view.hide();
 		equal($(ns.slctr('Base')+":hidden").length>=0, true, ns.slctr('Base')+" is hidden");
+		_body.removeChild(_el);
 	});
 
+	/**
+	 * cloneTemplate()
+	 */
+	test('cloneTemplate()', function() {
+		
+		$('<div>')
+			.addClass('clear-type')
+			.addClass('mr-ui-template')
+			.appendTo($(ns.slctr('Base')));
+		
+		var _view = new ns.Base({
+			el:    _el
+		});
+		_div = _view.cloneTemplate('.clear-type');
+		equal(_div != null, true, 'cloneTemplate()');
+	});
 })(mr.ui);

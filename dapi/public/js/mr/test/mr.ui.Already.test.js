@@ -22,7 +22,6 @@
 		setup: function() { // 初期化処理
 			_body     = document.getElementsByTagName('body')[0];
 			_el       = document.createElement('div');
-			$(_el).append($('<div>').addClass(ns.cls('already')));
 			if('undefined' !== typeof(_body)) {
 				_body.appendChild(_el);
 			}
@@ -40,18 +39,19 @@
 	 * render()
 	 */
 	test('render()', function() {
-		var _content = new ns.root.model.Content({
-			'message'	:	'Already render()', 
-			'client_url':	'http://127.0.0.1'
+		_model = new Backbone.Model({
+			"message": 		'Already render()',
+			"client_url":	'http://127.0.0.1'
 		});
-		
 		var _view = new ns.Already({
-			model: _content,
-			el:    _el
+			model: _model,
+			el:    $(ns.slctr('already'))
 		}).render();
-		 
+		
+		equal($('.mr-ui-title').html().replace(/\s+/g,''),'すでに動画視聴＆アンケートは完了しています。','title: すでに動画視聴＆アンケートは完了しています。');		
 		equal(_view.model.get('message'),'Already render()','message: Already render()');
 		equal(_view.model.get('client_url'),'http://127.0.0.1', 'client_url: http://127.0.0.1');
+		equal($('.mr-ui-go_to_client_url').html().replace(/\s+/g,''),'パートナーサイトへ移動する','go_to_client_url: パートナーサイトへ移動する');
 	 });
 
 })(mr.ui);

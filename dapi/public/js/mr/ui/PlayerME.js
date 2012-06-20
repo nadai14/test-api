@@ -57,22 +57,44 @@
 			}
 			// poster
 			if(this.model.has('poster')) {
-				$(this.el).attr('poster', this.model.get('poster'));
+				// $(this.el).attr('poster', this.model.get('poster'));
 			}
 			// video
 			if(this.model.has('video')) {
+				
 				ns.trace(this.typeName + '#_render():' + this.model.get('video'));
 				// set source
+				var _$source = $('<source>').attr('src', this.model.get('video'));
 				$(this.el).attr('src', this.model.get('video'));
 				if(0 <= this.model.get('video').indexOf('m3u8')) {
-					$(this.el).attr('type', 'application/x-mpegURL');
+					_$source.attr('type', 'application/x-mpegURL');
 				}
+				_$source.appendTo($(this.el));
 				
+				$('<object>')
+					.attr('width',  _$source.attr('width'))
+					.attr('height', _$source.attr('height'))
+					.attr('type',   'application/x-shockwave-flash')
+					.attr('data',   'flashmediaelement.swf?v=3')
+					// .attr('data',   'js/libs/flvplayer.swf')
+					.append($('<param>').attr('name', 'movie').attr('value', 'flashmediaelement.swf?v=3'))
+					// .append($('<param>').attr('name', 'movie').attr('value', 'js/libs/flvplayer.swf'))
+					.append($('<param>').attr('name', 'flashvars').attr('value', 'controls=true&amp;file=' + this.model.get('video')))
+					.append($('<param>').attr('name', 'allowfullscreen').attr('value', 'true'))
+					.appendTo(_$source);
+							
 				// mediaelement
-				$(this.el).mediaelementplayer({
-					features:                 ['playpause', 'current', 'duration'],
+				var _player = $(this.el).mediaelementplayer({
+				// var _player = new MediaElement(this.el, {
+					// flashName:                '../flvplayer.swf',
+					flashName:                'flashmediaelement.swf?v=3',
+					features:                 ['playpause', 'current', 'duration', 'fullscreen'],
 					loop:                     false,
-  				AndroidUseNativeControls: false,
+					alwaysShowControls:       true,
+					usePluginFullScreen:      true,
+					enablePluginDebug:        false,
+					// alwaysShowControls:       false,
+  				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) { 
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');
@@ -89,6 +111,10 @@
 						}, false);
 						mediaElement.addEventListener('play', function(e) {
 							ns.trace('play');
+							// mediaElement.setVideoSize($(document).width(), $(document).height());
+							// mediaElement.enterFullScreen();
+							if(ua.OS === 'Android') {
+							}
 						}, false);
 						mediaElement.addEventListener('playing', function(e) {
 							ns.trace('playing');
@@ -111,12 +137,12 @@
 						}, false);
 						mediaElement.addEventListener('ended', function(e) {
 							ns.trace('ended');
-							// exit fullscreen
-							if(ua.OS === "iPhone/iPod"){
-								$(domObject).get(0).webkitExitFullscreen();
-							}
 							// end
 							_self.controller.setIsAdEnded(true);
+							// exit fullscreen
+							if(ua.OS === "iPhone/iPod" || ua.OS === 'Android'){
+								$(domObject).get(0).webkitExitFullscreen();
+							}
 						}, false);
 						
 						success(_self);

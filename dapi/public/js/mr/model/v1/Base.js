@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Base.js 265 2012-06-20 23:48:24Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -33,11 +33,18 @@
        */
       data: _.extend({
         //@link http://redmine.sunbi.co.jp/issues/1755
-        face: (ns.face) ? 
-                ns.face : 
-                (ua.OS === "iPhone/iPod" || ua.OS === "Android") ? 
-                  'SP' : // SP means SmartPhone
-                  'PC'   // PC means PC/Mac
+        terminal: (ns.terminal) ? 
+                ns.terminal : 
+                (ua.OS === "iPhone/iPod") ? 
+                	'iPhone' :
+                	(ua.OS === "Android") ?
+                		'Android' : 
+                  	'PC',
+				face:     (ns.terminal) ?
+				          	((ns.terminal === 'iPhone' || ns.terminal === 'Android') ? 'SP' : 'PC') : 
+				          	(ua.OS === "iPhone/iPod" || (ua.OS === "Android")) ?
+				          		'SP' :
+				          		'PC'
       }, (options.data || {})),
       /**
        * 

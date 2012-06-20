@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 187 2012-06-14 10:13:38Z liminghua772 $
+ * @version      $Id: Question.js 265 2012-06-20 23:48:24Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 19:13:38 +0900 (木, 14 6 2012) $ by $Author: liminghua772 $
+ * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -257,13 +257,13 @@
 			var answerUser = new Array();
 			switch(this.model.get('kind').toUpperCase()){
 				case 'RADIO':
-					var radio = $(ns.slctr('answer') + ' :radio:checked');
+					var radio = $(ns.slctr('answer') + ' :radio:checked', this.el);
 					if(radio.length>0){
 						answerUser[0] = radio[0].value;//.substring(radio[0].value.indexOf('-')+1);
 					}
 					break;
 				case 'CHECKBOX':
-					var checkbox = $(ns.slctr('answer') + ' :checkbox:checked');
+					var checkbox = $(ns.slctr('answer') + ' :checkbox:checked', this.el);
 					var arrayI = 0;
 					if(checkbox.length>0){
 						for(var i=0; i<checkbox.length; ++i){
@@ -273,18 +273,18 @@
 					}
 					break;
 				case 'SELECT':
-					answerUser[0] = $(ns.slctr('answer') + ' select option:selected').text();
+					answerUser[0] = $(ns.slctr('answer') + ' select option:selected', this.el).text();
 					break;
 				case 'TEXT':
 					if($(ns.slctr('answer') + ' :text').val().replace(/\s+/g,"")!='')
-						answerUser[0] = $(ns.slctr('answer') + ' :text').val().replace(/\s+/g,"");
+						answerUser[0] = $(ns.slctr('answer') + ' :text', this.el).val().replace(/\s+/g,"");
 					break;
 				case 'NUMERIC':
 					answerUser[0] = $('input', this.el).val();
 					break;
 				case 'TEXTAREA':
 					if($(ns.slctr('answer') + ' textarea').val().replace(/\s+/g,"")!='')
-						answerUser[0] = $(ns.slctr('answer') + ' textarea').val().replace(/\s+/g,"");
+						answerUser[0] = $(ns.slctr('answer') + ' textarea', this.el).val().replace(/\s+/g,"");
 					break;
 			}
 			
