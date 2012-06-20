@@ -65,6 +65,24 @@ nullable_first_3:
   platform: gree
   point: 40 
 
+# 空回答確認用
+null_answer:
+  mid: CampaignNullAnswer
+  enq_id: EnqNullAnswer
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  movie: /images/media/yomeishu.mov
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:

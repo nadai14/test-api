@@ -11,28 +11,28 @@ scSPquestion1:
 
 scSPquestion2:
   uuid: SuccessConfirmSPQuestion2
-  enq_page_id: EnqSPSuccessConfirmPage2
+  enq_page_id: EnqSPSuccessConfirmPage1
   num: 2
   seq: Q2
   question_id: QuestionNumeric
 
 scSPquestion3:
   uuid: SuccessConfirmSPQuestion3
-  enq_page_id: EnqSPSuccessConfirmPage3
+  enq_page_id: EnqSPSuccessConfirmPage2
   num: 3
   seq: Q3
   question_id: QuestionSelect
 
 scSPquestion4_1:
   uuid: SuccessConfirmSPQuestion4-1
-  enq_page_id: EnqSPSuccessConfirmPage4-1
+  enq_page_id: EnqSPSuccessConfirmPage3-1
   num: 4
   seq: Q4
   question_id: QuestionTextarea
 
 scSPquestion4_2:
   uuid: SuccessConfirmSPQuestion4-2
-  enq_page_id: EnqSPSuccessConfirmPage4-2
+  enq_page_id: EnqSPSuccessConfirmPage3-2
   num: 4
   seq: Q4
   question_id: QuestionCheck
@@ -172,6 +172,63 @@ nullablePCQuestionFirst3:
   num: 1
   seq: Q1
   question_id: NullableQuestion2
+
+# 空回答確認用
+null_answer_SP_page1:
+  uuid: NullAnswerSPQuestion1
+  enq_page_id: EnqSPNullAnswerPage1
+  num: 1
+  seq: Q1
+  question_id: QuestionUnrequiredNumeric
+
+null_answer_SP_page2:
+  uuid: NullAnswerSPQuestion2
+  enq_page_id: EnqSPNullAnswerPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionUnrequiredRadio
+
+null_answer_SP_page3:
+  uuid: NullAnswerSPQuestion3
+  enq_page_id: EnqSPNullAnswerPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionUnrequiredSelect
+
+null_answer_SP_page4:
+  uuid: NullAnswerSPQuestion4
+  enq_page_id: EnqSPNullAnswerPage4
+  num: 4
+  seq: Q4
+  question_id: QuestionUnrequiredCheck
+
+null_answer_PC_page1:
+  uuid: NullAnswerPCQuestion1
+  enq_page_id: EnqPCNullAnswerPage1
+  num: 1
+  seq: Q1
+  question_id: QuestionUnrequiredNumeric
+
+null_answer_PC_page2:
+  uuid: NullAnswerPCQuestion2
+  enq_page_id: EnqPCNullAnswerPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionUnrequiredRadio
+
+null_answer_PC_page3:
+  uuid: NullAnswerPCQuestion3
+  enq_page_id: EnqPCNullAnswerPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionUnrequiredSelect
+
+null_answer_PC_page4:
+  uuid: NullAnswerPCQuestion4
+  enq_page_id: EnqPCNullAnswerPage4
+  num: 4
+  seq: Q4
+  question_id: QuestionUnrequiredCheck
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull

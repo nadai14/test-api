@@ -19,7 +19,7 @@ describe EnqPagesController do
           it{should route_to(controller: "enq_pages", action: "show", enq_id: "1001", id: "1", format: :json)}
         end
       
-        before{get :show, {id: enq_pages(:sc_SP_page3).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
+        before{get :show, {id: enq_pages(:sc_SP_page2).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
       
         describe :response do
           subject{response}
@@ -29,7 +29,7 @@ describe EnqPagesController do
 
       context "ページID、アンケートIDとフェイスから値を取得する" do
         describe "レスポンスは正しく返ってきているか" do
-          before {get :show, {id: enq_pages(:sc_SP_page3).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
+          before {get :show, {id: enq_pages(:sc_SP_page2).id, enq_id: enqs(:status1).id, face: "SP", format: :json}}
         
           it 'レスポンスフォーマットの確認' do
             response.should be_success

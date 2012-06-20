@@ -13,25 +13,18 @@ sc_SP_page2:
   uuid: EnqSPSuccessConfirmPage2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ2
-  next_page_id: EnqSPSuccessConfirmPage3
+  next_page_id: EnqSPSuccessConfirmPage3-1
   wait_until: 1
 
-sc_SP_page3:
-  uuid: EnqSPSuccessConfirmPage3
+sc_SP_page3_1:
+  uuid: EnqSPSuccessConfirmPage3-1
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
-  next_page_id: EnqSPSuccessConfirmPage4-1
-  wait_until: 1
-
-sc_SP_page4_1:
-  uuid: EnqSPSuccessConfirmPage4-1
-  enq_face_id: EnqSPSuccessConfirm
-  description: アンケ1SPページ2
   next_page_id: 
   wait_until: 1
 
-sc_SP_page4_2:
-  uuid: EnqSPSuccessConfirmPage4-2
+sc_SP_page3_2:
+  uuid: EnqSPSuccessConfirmPage3-2
   enq_face_id: EnqSPSuccessConfirm
   description: アンケ1SPページ3
   next_page_id: 
@@ -177,6 +170,61 @@ nullable_PC_first_2_page:
 nullable_PC_first_3_page:
   uuid: EnqPagePCNullableFirst3Page
   enq_face_id: EnqPCNullableFirst3
+
+# 空回答確認用
+null_answer_SP_page1:
+  uuid: EnqSPNullAnswerPage1
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ1
+  next_page_id: EnqSPNullAnswerPage2
+  wait_until: 1
+
+null_answer_SP_page2:
+  uuid: EnqSPNullAnswerPage2
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ2
+  next_page_id: EnqSPNullAnswerPage3
+  wait_until: 1
+
+null_answer_SP_page3:
+  uuid: EnqSPNullAnswerPage3
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ3
+  next_page_id: EnqSPNullAnswerPage4
+  wait_until: 1
+
+null_answer_SP_page4:
+  uuid: EnqSPNullAnswerPage4
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ4
+  wait_until: 1
+
+null_answer_PC_page1:
+  uuid: EnqPCNullAnswerPage1
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ1
+  next_page_id: EnqPCNullAnswerPage2
+  wait_until: 1
+
+null_answer_PC_page2:
+  uuid: EnqPCNullAnswerPage2
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ2
+  next_page_id: EnqPCNullAnswerPage3
+  wait_until: 1
+
+null_answer_PC_page3:
+  uuid: EnqPCNullAnswerPage3
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ3
+  next_page_id: EnqPCNullAnswerPage4
+  wait_until: 1
+
+null_answer_PC_page4:
+  uuid: EnqPCNullAnswerPage4
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ4
+  wait_until: 1
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull

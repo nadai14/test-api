@@ -95,6 +95,14 @@ describe AnswersController do
                          session_id: "session_id", uid: "uid", key: "mixi_uid", answer_2: "", format: :json}}
           it '空の回答だと処理をスキップする' do
             response.should be_success
+            enq_question_id = EnqQuestion.find(:all,
+                                      :conditions => ["enq_page_id = ? and num = ?", enqs(:null_answer).id, 2]
+                                      )
+            result = Answer.find(:all,
+                        :conditions => ["campaign_id = ? and enq_question_id = ? and user_id = ?", campaigns(:null_answer).id, enq_questions(:null_answer_SP_page2), "uid"]
+                        )
+            result.length.should == 1
+			puts "result :: :#{result}:"
           end
         end
         
@@ -149,7 +157,7 @@ describe AnswersController do
             before{post :create, {enq_id: enqs(:status1).id, page_id: "failed_id", campaign_id: campaigns(:success_confirm).id,
                                   session_id: "session_id", uid: @uid, key: "mixi_uid", answer_1: @answer[0], answer_2: @answer[1], format: :json}}
         
-            it 'status 404(NotFoundException)　を返す' do
+            it 'status 404(NotFoundException) を返す' do
               response.status.should == 404
             end
           end
