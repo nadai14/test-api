@@ -34,7 +34,7 @@ prefectures:
   
 check:
   uuid: QuestionCheck
-  kind: check
+  kind: checkbox
   title: チェックボックス
   content: チェックボックスから選択してください
   required: false
