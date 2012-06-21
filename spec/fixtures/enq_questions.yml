@@ -106,14 +106,14 @@ scPCquestion2_1_first:
   enq_page_id: EnqPCSuccessConfirmPage2-1First
   num: 2
   seq: Q2
-  question_id: QuestionText
+  question_id: QuestionSelect
 
 scPCquestion2_2_first:
   uuid: SuccessConfirmPCQuestion2-2First
   enq_page_id: EnqPCSuccessConfirmPage2-2First
   num: 2
   seq: Q2
-  question_id: QuestionText
+  question_id: QuestionSelect
 
 # スマートフォン用のnil動作確認データ
 nullableSPQuestion1:
