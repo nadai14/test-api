@@ -77,3 +77,8 @@ yomei_shu:
 plus_one:
   uuid: PlusOneEnqID
   status: 1
+
+# レッグマジックX
+legmagicX:
+  uuid: LegMagicXEnqID
+  status: 1

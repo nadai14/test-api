@@ -804,3 +804,130 @@ plus_one_watch_3:
   order: 3
   content: どちらも魅力的だったから
 
+# レッグマジックX
+legmagicX_radio_male:
+  uuid: LegMagicXRadioMale
+  question_id: LegMagicXQuestion1
+  order: 1
+  content: 男性
+
+legmagicX_radio_female:
+  uuid: LegMagicXRadioFemale
+  question_id: LegMagicXQuestion1
+  order: 2
+  content: 女性
+
+legmagicX_numeric_u19:
+  uuid: LegMagicXNumericU19
+  question_id: LegMagicXQuestion2
+  order: 1
+  content: 19歳以下
+
+legmagicX_numeric_20:
+  uuid: LegMagicXNumeric20
+  question_id: LegMagicXQuestion2
+  order: 2
+  content: 20-29歳
+
+legmagicX_numeric_30:
+  uuid: LegMagicXNumeric30
+  question_id: LegMagicXQuestion2
+  order: 3
+  content: 30-39歳
+
+legmagicX_numeric_40:
+  uuid: LegMagicXNumeric40
+  question_id: LegMagicXQuestion2
+  order: 4
+  content: 40-49歳
+
+legmagicX_numeric_50:
+  uuid: LegMagicXNumeric50
+  question_id: LegMagicXQuestion2
+  order: 5
+  content: 50歳以上
+
+legmagicX_size_1:
+  uuid: LegMagicXSize1
+  question_id: LegMagicXQuestion3
+  order: 1
+  content: ある
+
+legmagicX_size_2:
+  uuid: LegMagicXSize2
+  question_id: LegMagicXQuestion3
+  order: 2
+  content: ない
+
+legmagicX_know_1:
+  uuid: LegMagicXKnow1
+  question_id: LegMagicXQuestion4
+  order: 1
+  content: はい
+
+legmagicX_know_2:
+  uuid: LegMagicXKnow2
+  question_id: LegMagicXQuestion4
+  order: 2
+  content: いいえ
+
+legmagicX_get_1:
+  uuid: LegMagicXGet1
+  question_id: LegMagicXQuestion5
+  order: 1
+  content: そう思う
+
+legmagicX_get_2:
+  uuid: LegMagicXGet2
+  question_id: LegMagicXQuestion5
+  order: 2
+  content: どちらかと言えばそう思う
+
+legmagicX_get_3:
+  uuid: LegMagicXGet3
+  question_id: LegMagicXQuestion5
+  order: 3
+  content: どちらとも思わない
+
+legmagicX_get_4:
+  uuid: LegMagicXGet4
+  question_id: LegMagicXQuestion5
+  order: 4
+  content: どちらかと言えばそう思わない
+
+legmagicX_get_5:
+  uuid: LegMagicXGet5
+  question_id: LegMagicXQuestion5
+  order: 5
+  content: そう思わない
+
+legmagicX_coin_1:
+  uuid: LegMagicXCoin1
+  question_id: LegMagicXQuestion6
+  order: 1
+  content: そう思う
+
+legmagicX_coin_2:
+  uuid: LegMagicXCoin2
+  question_id: LegMagicXQuestion6
+  order: 2
+  content: どちらかと言えばそう思う
+
+legmagicX_coin_3:
+  uuid: LegMagicXCoin3
+  question_id: LegMagicXQuestion6
+  order: 3
+  content: どちらとも思わない
+
+legmagicX_coin_4:
+  uuid: LegMagicXCoin4
+  question_id: LegMagicXQuestion6
+  order: 4
+  content: どちらかと言えばそう思わない
+
+legmagicX_coin_5:
+  uuid: LegMagicXCoin5
+  question_id: LegMagicXQuestion6
+  order: 5
+  content: そう思わない
+

@@ -123,11 +123,11 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # PlusOne
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: '/images/media/plus1_sp.mp4', thumbnail: '/images/poster-sp.jpg',
-                           second_picture: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4', client_url: 'http://ponkan.jp')
+campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus-1/style.css')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus-1/style.css')
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css')
 
 q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
 q2 = Question.create(kind: 'select', title: '年齢を教えてください。', required: true)
@@ -139,6 +139,121 @@ q7 = Question.create(kind: 'select', title: '『プラスワン』というサ�
 q8 = Question.create(kind: 'select', title: '動画を見てサービスに興味を持ちましたか？', required: true)
 q9 = Question.create(kind: 'select', title: '動画を見てサービスを利用したいと思いましたか？', required: true)
 q10 = Question.create(kind: 'select', title: '今回なぜ動画を見ていただけましたか？', required: true)
+
+q1_c1 = Choice.create(question_id: q1.uuid, order: 1, content: '男性')
+q1_c2 = Choice.create(question_id: q1.uuid, order: 2, content: '女性')
+
+q2_c1 = Choice.create(question_id: q2.uuid, order: 1, content: '19歳以下')
+q2_c2 = Choice.create(question_id: q2.uuid, order: 2, content: '20~29歳')
+q2_c3 = Choice.create(question_id: q2.uuid, order: 3, content: '30~39歳')
+q2_c4 = Choice.create(question_id: q2.uuid, order: 4, content: '40~49歳')
+q2_c5 = Choice.create(question_id: q2.uuid, order: 5, content: '50歳以上')
+
+q3_c1 = Choice.create(question_id: q3.uuid, order: 1, content: 'サークル等の仲間内で利用')
+q3_c2 = Choice.create(question_id: q3.uuid, order: 2, content: 'スポーツチームで利用')
+q3_c3 = Choice.create(question_id: q3.uuid, order: 3, content: '勤務している企業/お店で利用')
+q3_c4 = Choice.create(question_id: q3.uuid, order: 4, content: '家族・友達で利用')
+q3_c5 = Choice.create(question_id: q3.uuid, order: 5, content: 'プレゼントとして利用')
+
+q4_c1 = Choice.create(question_id: q4.uuid, order: 1, content: 'デザイン')
+q4_c2 = Choice.create(question_id: q4.uuid, order: 2, content: '着心地')
+q4_c3 = Choice.create(question_id: q4.uuid, order: 3, content: '耐久性')
+q4_c4 = Choice.create(question_id: q4.uuid, order: 4, content: '価格')
+q4_c5 = Choice.create(question_id: q4.uuid, order: 5, content: '制作スピード')
+
+q5_c1 = Choice.create(question_id: q5.uuid, order: 1, content: 'デザインを自由に選べる')
+q5_c2 = Choice.create(question_id: q5.uuid, order: 2, content: 'ウェブから簡単に発注できる')
+q5_c3 = Choice.create(question_id: q5.uuid, order: 3, content: '顧客満足度が高い')
+q5_c4 = Choice.create(question_id: q5.uuid, order: 4, content: '見積もりが簡単にできる')
+q5_c5 = Choice.create(question_id: q5.uuid, order: 5, content: '販売実績が年間150万枚と豊富')
+
+q6_c1 = Choice.create(question_id: q6.uuid, order: 1, content: '92%')
+q6_c2 = Choice.create(question_id: q6.uuid, order: 2, content: '83%')
+q6_c3 = Choice.create(question_id: q6.uuid, order: 3, content: '71%')
+q6_c4 = Choice.create(question_id: q6.uuid, order: 4, content: '64%')
+q6_c5 = Choice.create(question_id: q6.uuid, order: 5, content: '50%')
+
+q7_c1 = Choice.create(question_id: q7.uuid, order: 1, content: '知っており、自分で利用したことがある。')
+q7_c2 = Choice.create(question_id: q7.uuid, order: 2, content: '知っており、知人が利用していたことがある。')
+q7_c3 = Choice.create(question_id: q7.uuid, order: 3, content: '知っていたが、利用したことはない。')
+q7_c4 = Choice.create(question_id: q7.uuid, order: 4, content: '知らなかった。')
+
+q8_c1 = Choice.create(question_id: q8.uuid, order: 1, content: '非常に興味を持った')
+q8_c2 = Choice.create(question_id: q8.uuid, order: 2, content: '少し興味を持った')
+q8_c3 = Choice.create(question_id: q8.uuid, order: 3, content: 'あまり興味を持たなかった')
+q8_c4 = Choice.create(question_id: q8.uuid, order: 4, content: '全く興味を持たなかった')
+
+q9_c1 = Choice.create(question_id: q9.uuid, order: 1, content: '是非利用したいと思う')
+q9_c2 = Choice.create(question_id: q9.uuid, order: 2, content: '機会があれば利用したいと思う')
+q9_c3 = Choice.create(question_id: q9.uuid, order: 3, content: '利用したいと思わない')
+
+q10_c1 = Choice.create(question_id: q10.uuid, order: 1, content: 'サービスが魅力的だったから')
+q10_c2 = Choice.create(question_id: q10.uuid, order: 2, content: 'ポイントが魅力的だったから')
+q10_c3 = Choice.create(question_id: q10.uuid, order: 3, content: 'どちらも魅力的だったから')
+
+enq_sp_page10 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
+enq_sp_page9 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page10.uuid)
+enq_sp_page8 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page9.uuid)
+enq_sp_page7 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page8.uuid)
+enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page7.uuid)
+enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
+enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
+enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
+enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
+enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
+enq_face_sp.first_page_id = enq_sp_page1.uuid
+enq_face_sp.save
+
+enq_pc_page10 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
+enq_pc_page9 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page10.uuid)
+enq_pc_page8 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page9.uuid)
+enq_pc_page7 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page8.uuid)
+enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page7.uuid)
+enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
+enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
+enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
+enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
+enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
+enq_face_pc.first_page_id = enq_pc_page1.uuid
+enq_face_pc.save
+
+enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
+enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
+enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
+enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
+enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
+enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
+enq_sp_q7 = EnqQuestion.create(enq_page_id: enq_sp_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
+enq_sp_q8 = EnqQuestion.create(enq_page_id: enq_sp_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
+enq_sp_q9 = EnqQuestion.create(enq_page_id: enq_sp_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
+enq_sp_q10 = EnqQuestion.create(enq_page_id: enq_sp_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
+
+enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
+enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
+enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
+enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
+enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
+enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
+enq_pc_q7 = EnqQuestion.create(enq_page_id: enq_pc_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
+enq_pc_q8 = EnqQuestion.create(enq_page_id: enq_pc_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
+enq_pc_q9 = EnqQuestion.create(enq_page_id: enq_pc_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
+enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
+
+# レッグマジックX
+enq = Enq.create(status: 1)
+
+campaign = Campaign.create(mid: 'LegMagicXCampaignID', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css')
+
+q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
+q2 = Question.create(kind: 'select', title: '年齢を教えてください。', required: true)
+q3 = Question.create(kind: 'radio', title: '最近ウエスト、脚、ヒップのサイズが気になったことはありますか？', required: true)
+q4 = Question.create(kind: 'radio', title: 'オリジナルTシャツの制作で重視するところはどこですか？', required: true)
+q5 = Question.create(kind: 'select', title: '『プラスワン』の動画を見て良いと思ったところはどこですか？', required: true)
+q6 = Question.create(kind: 'select', title: '【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？', required: true)
 
 q1_c1 = Choice.create(question_id: q1.uuid, order: 1, content: '男性')
 q1_c2 = Choice.create(question_id: q1.uuid, order: 2, content: '女性')

@@ -23,7 +23,7 @@ class AnswersController < ApplicationController
     return false if enq_question.nil?
     question = enq_question.question
     return !question.required if content == ""
-    return false if question.needs_choices? && question.choices.none?{|c| c.content == content}
+    return false if question.needs_choices? && question.choices.none?{|c| content.class == Array ? content.all?{|a| a == c.content} : c.content == content}
     return false if question.kind == "numeric" && content =~ /[^0-9]+/
     true
   end

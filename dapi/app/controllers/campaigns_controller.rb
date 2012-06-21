@@ -11,7 +11,7 @@ class CampaignsController < ApplicationController
     raise NotFoundException.new CAMPAIGN_DOES_NOT_EXIST unless @campaign
     raise ForbiddenException.new BEFORE_OPENING if @campaign.status == 0 # TODO: delete this line after 6/18
     raise ForbiddenException.new AFTER_CLOSING if @campaign.closed?
-    type = MOVIE_TYPES[terminal]
+    type = MOVIE_TYPES[terminal] || MOVIE_TYPES[:pc]
     @mime_type = type[:mime_type]
     @movie = @campaign.movie.nil? ? nil : Pathname(@campaign.movie).sub_ext(type[:suffix]).to_s
   end
