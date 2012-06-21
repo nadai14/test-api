@@ -10,7 +10,7 @@
 # 養命酒
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'YomeiShuMovieReward', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/video/yomeishu.mov', thumbnail: '/images/poster-sp.jpg',
+campaign = Campaign.create(mid: 'YomeiShuCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mov', thumbnail: '/images/poster-sp.jpg',
                            second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', wait_until: 30)
@@ -123,11 +123,11 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # PlusOne
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'PlusOneMovieReward', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: '/video/plus1_sp.mp4', thumbnail: '/images/poster-sp.jpg',
-                           second_picture: '/images/creative-sp.jpg', client_url: 'http://ponkan.jp')
+campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus-1/style.css')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus-1/style.css')
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css')
 
 q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
 q2 = Question.create(kind: 'select', title: '年齢を教えてください。', required: true)
@@ -238,4 +238,79 @@ enq_pc_q7 = EnqQuestion.create(enq_page_id: enq_pc_page7.uuid, num: 7, seq: 'Q7'
 enq_pc_q8 = EnqQuestion.create(enq_page_id: enq_pc_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
 enq_pc_q9 = EnqQuestion.create(enq_page_id: enq_pc_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
 enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
+
+# レッグマジックX
+enq = Enq.create(status: 1)
+
+campaign = Campaign.create(mid: 'LegMagicXMovieReward', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css')
+
+q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
+q2 = Question.create(kind: 'select', title: '年齢を教えてください。', required: true)
+q3 = Question.create(kind: 'radio', title: '最近ウエスト、脚、ヒップのサイズが気になったことはありますか？', required: true)
+q4 = Question.create(kind: 'radio', title: 'オリジナルTシャツの制作で重視するところはどこですか？', required: true)
+q5 = Question.create(kind: 'select', title: '『プラスワン』の動画を見て良いと思ったところはどこですか？', required: true)
+q6 = Question.create(kind: 'select', title: '【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？', required: true)
+
+q1_c1 = Choice.create(question_id: q1.uuid, order: 1, content: '男性')
+q1_c2 = Choice.create(question_id: q1.uuid, order: 2, content: '女性')
+
+q2_c1 = Choice.create(question_id: q2.uuid, order: 1, content: '19歳以下')
+q2_c2 = Choice.create(question_id: q2.uuid, order: 2, content: '20-29歳')
+q2_c3 = Choice.create(question_id: q2.uuid, order: 3, content: '30-39歳')
+q2_c4 = Choice.create(question_id: q2.uuid, order: 4, content: '40-49歳')
+q2_c5 = Choice.create(question_id: q2.uuid, order: 5, content: '50歳以上')
+
+q3_c1 = Choice.create(question_id: q3.uuid, order: 1, content: 'ある')
+q3_c2 = Choice.create(question_id: q3.uuid, order: 2, content: 'ない')
+
+q4_c1 = Choice.create(question_id: q4.uuid, order: 1, content: 'はい')
+q4_c2 = Choice.create(question_id: q4.uuid, order: 2, content: 'いいえ')
+
+q5_c1 = Choice.create(question_id: q5.uuid, order: 1, content: 'そう思う')
+q5_c2 = Choice.create(question_id: q5.uuid, order: 2, content: 'どちらかと言えばそう思う')
+q5_c3 = Choice.create(question_id: q5.uuid, order: 3, content: 'どちらとも思わない')
+q5_c4 = Choice.create(question_id: q5.uuid, order: 4, content: 'どちらかと言えばそう思わない')
+q5_c5 = Choice.create(question_id: q5.uuid, order: 5, content: 'そう思わない')
+
+q6_c1 = Choice.create(question_id: q6.uuid, order: 1, content: 'そう思う')
+q6_c2 = Choice.create(question_id: q6.uuid, order: 2, content: 'どちらかと言えばそう思う')
+q6_c3 = Choice.create(question_id: q6.uuid, order: 3, content: 'どちらとも思わない')
+q6_c4 = Choice.create(question_id: q6.uuid, order: 4, content: 'どちらかと言えばそう思わない')
+q6_c5 = Choice.create(question_id: q6.uuid, order: 5, content: 'そう思わない')
+
+enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
+enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
+enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
+enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
+enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
+enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
+enq_face_sp.first_page_id = enq_sp_page1.uuid
+enq_face_sp.save
+
+enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
+enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
+enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
+enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
+enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
+enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
+enq_face_pc.first_page_id = enq_pc_page1.uuid
+enq_face_pc.save
+
+enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
+enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
+enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
+enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
+enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
+enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
+
+enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
+enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
+enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
+enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
+enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
+enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
 

@@ -525,3 +525,76 @@ plus_one_pc_page10:
   uuid: PlusOnePCEnqPage10
   enq_face_id: PlusOnePCEnqFaceID
   description: 
+
+# レッグマジックX
+legmagicX_sp_page1:
+  uuid: LegMagicXSPEnqPage1
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id: LegMagicXSPEnqPage2
+
+legmagicX_sp_page2:
+  uuid: LegMagicXSPEnqPage2
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id: LegMagicXSPEnqPage3
+
+legmagicX_sp_page3:
+  uuid: LegMagicXSPEnqPage3
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id: LegMagicXSPEnqPage4
+
+legmagicX_sp_page4:
+  uuid: LegMagicXSPEnqPage4
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id: LegMagicXSPEnqPage5
+
+legmagicX_sp_page5:
+  uuid: LegMagicXSPEnqPage5
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id: LegMagicXSPEnqPage6
+
+legmagicX_sp_page6:
+  uuid: LegMagicXSPEnqPage6
+  enq_face_id: LegMagicXSPEnqFaceID
+  description: 
+  next_page_id:
+
+legmagicX_pc_page1:
+  uuid: LegMagicXPCEnqPage1
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id: LegMagicXPCEnqPage2
+
+legmagicX_pc_page2:
+  uuid: LegMagicXPCEnqPage2
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id: LegMagicXPCEnqPage3
+
+legmagicX_pc_page3:
+  uuid: LegMagicXPCEnqPage3
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id: LegMagicXPCEnqPage4
+
+legmagicX_pc_page4:
+  uuid: LegMagicXPCEnqPage4
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id: LegMagicXPCEnqPage5
+
+legmagicX_pc_page5:
+  uuid: LegMagicXPCEnqPage5
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id: LegMagicXPCEnqPage6
+
+legmagicX_pc_page6:
+  uuid: LegMagicXPCEnqPage6
+  enq_face_id: LegMagicXPCEnqFaceID
+  description: 
+  next_page_id:

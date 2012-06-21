@@ -106,14 +106,14 @@ scPCquestion2_1_first:
   enq_page_id: EnqPCSuccessConfirmPage2-1First
   num: 2
   seq: Q2
-  question_id: QuestionSelect
+  question_id: QuestionText
 
 scPCquestion2_2_first:
   uuid: SuccessConfirmPCQuestion2-2First
   enq_page_id: EnqPCSuccessConfirmPage2-2First
   num: 2
   seq: Q2
-  question_id: QuestionSelect
+  question_id: QuestionText
 
 # スマートフォン用のnil動作確認データ
 nullableSPQuestion1:
@@ -573,3 +573,89 @@ plus_one_pc_question10:
   num: 10
   seq: Q10
   question_id: PlusOneQuestion10
+  
+# レッグマジックX
+legmagicX_sp_question1:
+  uuid: LegMagicXSPEnqQuestion1
+  enq_page_id: LegMagicXSPEnqPage1
+  num: 1
+  seq: Q1
+  question_id: LegMagicXQuestion1
+
+legmagicX_sp_question2:
+  uuid: LegMagicXSPEnqQuestion2
+  enq_page_id: LegMagicXSPEnqPage2
+  num: 2
+  seq: Q2
+  question_id: LegMagicXQuestion2
+
+legmagicX_sp_question3:
+  uuid: LegMagicXSPEnqQuestion3
+  enq_page_id: LegMagicXSPEnqPage3
+  num: 3
+  seq: Q3
+  question_id: LegMagicXQuestion3
+
+legmagicX_sp_question4:
+  uuid: LegMagicXSPEnqQuestion4
+  enq_page_id: LegMagicXSPEnqPage4
+  num: 4
+  seq: Q4
+  question_id: LegMagicXQuestion4
+
+legmagicX_sp_question5:
+  uuid: LegMagicXSPEnqQuestion5
+  enq_page_id: LegMagicXSPEnqPage5
+  num: 5
+  seq: Q5
+  question_id: LegMagicXQuestion5
+
+legmagicX_sp_question6:
+  uuid: LegMagicXSPEnqQuestion6
+  enq_page_id: LegMagicXSPEnqPage6
+  num: 6
+  seq: Q6
+  question_id: LegMagicXQuestion6
+
+legmagicX_pc_question1:
+  uuid: LegMagicXPCEnqQuestion1
+  enq_page_id: LegMagicXPCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: LegMagicXQuestion1
+
+legmagicX_pc_question2:
+  uuid: LegMagicXPCEnqQuestion2
+  enq_page_id: LegMagicXPCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: LegMagicXQuestion2
+
+legmagicX_pc_question3:
+  uuid: LegMagicXPCEnqQuestion3
+  enq_page_id: LegMagicXPCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: LegMagicXQuestion3
+
+legmagicX_pc_question4:
+  uuid: LegMagicXPCEnqQuestion4
+  enq_page_id: LegMagicXPCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: LegMagicXQuestion4
+
+legmagicX_pc_question5:
+  uuid: LegMagicXPCEnqQuestion5
+  enq_page_id: LegMagicXPCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: LegMagicXQuestion5
+
+legmagicX_pc_question6:
+  uuid: LegMagicXPCEnqQuestion6
+  enq_page_id: LegMagicXPCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: LegMagicXQuestion6
+

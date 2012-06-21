@@ -229,3 +229,41 @@ plus_one_question10:
   kind: select
   title: 今回なぜ動画を見ていただけましたか？
   required: true
+
+# レッグマジックX
+legmagicX_question1:
+  uuid: LegMagicXQuestion1
+  kind: radio
+  title: 性別をお答え下さい。
+  required: true
+
+legmagicX_question2:
+  uuid: LegMagicXQuestion2
+  kind: select
+  title: 年齢をお答え下さい。
+  required: true
+
+legmagicX_question3:
+  uuid: LegMagicXQuestion3
+  kind: radio
+  title: 最近ウエスト、脚、ヒップのサイズが気になったことはありますか？
+  required: true
+
+legmagicX_question4:
+  uuid: LegMagicXQuestion4
+  kind: radio
+  title: 1セットたった60秒の美脚マシン「レッグマジックX」をご存じでしたか？
+  required: true
+
+legmagicX_question5:
+  uuid: LegMagicXQuestion5
+  kind: select
+  title: 日本人女性の25人の1人が持っている「レッグマジックX」であなたも理想の脚線美を手に入れたいですか？
+  required: true
+
+legmagicX_question6:
+  uuid: LegMagicXQuestion6
+  kind: select
+  title: 「レッグマジックX」200万台突破記念キャンペーン、グリーコインプレゼントを申込みたいと思いますか。
+  required: true
+
