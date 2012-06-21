@@ -240,7 +240,7 @@ plus_one_SP:
   face: SP
   first_page_id: PlusOneSPEnqPage1
   wait_until: 
-  css: /css/sp/themes/plus-1/style.css
+  css: /css/sp/themes/plus1/style.css
   title: 
   description: 
  
@@ -250,7 +250,27 @@ plus_one_PC:
   face: PC
   first_page_id: PlusOnePCEnqPage1
   wait_until: 
-  css: /css/pc/themes/plus-1/style.css
+  css: /css/pc/themes/plus1/style.css
+  title: 
+  description: 
+
+# レッグマジックX
+legmagicX_SP:
+  uuid: LegMagicXSPEnqFaceID
+  enq_id: LegMagicXEnqID
+  face: SP
+  first_page_id: LegMagicXSPEnqPage1
+  wait_until: 
+  css: /css/sp/themes/lgmx/style.css
   title: 
   description: 
  
+legmagicX_PC:
+  uuid: LegMagicXPCEnqFaceID
+  enq_id: LegMagicXEnqID
+  face: PC
+  first_page_id: LegMagicXPCEnqPage1
+  wait_until: 
+  css: /css/pc/themes/lgmx/style.css
+  title: 
+  description: 
