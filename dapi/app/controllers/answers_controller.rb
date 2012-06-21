@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
       each_with_object({}){|(k, v), a| n = k[7..-1].to_i; a[n] = [v, page.enq_questions.find{|q| q.num == n}]}
     raise BadRequestException.new REQUIRED_QUESTION unless page.enq_questions.select{|q| q.question.required}.all?{|q| answers.has_key? q.num}
     raise BadRequestException.new IMVALID_QUESTION unless answers.all?{|k, (v, q)| valid?(k, v, q)}
+    Answers.delete_all(:campaign_id => params[:campaign_id], :enq_question_id => page.enq_questions.map(&:uuid), :user_id => params[:uid])
     answers.each{|k, (v, q)| register(v, q.uuid, params[:campaign_id], params[:uid], request.headers["User-Agent"])}
   end
 
