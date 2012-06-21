@@ -13,7 +13,7 @@ success_confirm:
   movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
-  conversion_tag: cnvtag1
+  conversion_tag: /images/conversion_tag.html
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -30,7 +30,7 @@ success_confirm_first:
   movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
-  conversion_tag: cnvtag1
+  conversion_tag: /images/conversion_tag.html
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -204,7 +204,11 @@ yomei_shu:
   closing_at: 
   movie: /images/media/yomeishu.mov
   thumbnail: /images/poster-sp.jpg
+  message: 
+  conversion_tag: /images/conversion_tag.html
   second_picture: /images/creative-sp.jpg
+  banner_title: 
+  second_point: 
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
 
 # プラスワン
@@ -219,7 +223,7 @@ plus_one:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-sp.jpg
   message: 
-  conversion_tag: 
+  conversion_tag: /images/conversion_tag.html
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 
@@ -237,7 +241,7 @@ legmagicX:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv
   thumbnail: /images/poster-sp.jpg
   message: 
-  conversion_tag: 
+  conversion_tag: /images/conversion_tag.html
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 

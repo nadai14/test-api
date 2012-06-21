@@ -10,8 +10,8 @@
 # 養命酒
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'YomeiShuCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mov', thumbnail: '/images/poster-sp.jpg',
-                           second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
+campaign = Campaign.create(mid: '73D35EDA-4D34-4A16-ABBD-8D851F6C59ED', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mov', thumbnail: '/images/poster-sp.jpg',
+                           conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', wait_until: 30)
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', wait_until: 30)
@@ -123,8 +123,8 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # PlusOne
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
-                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
+campaign = Campaign.create(mid: '66215E4A-6141-4904-BA0E-D1A002F89DE3', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
+                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css')
@@ -242,8 +242,8 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # レッグマジックX
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'LegMagicXMovieReward', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
-                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+campaign = Campaign.create(mid: '66215E4A-6141-4904-BA0E-D1A002F89DE3', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
+                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css')
