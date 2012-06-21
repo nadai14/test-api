@@ -201,7 +201,7 @@ plus_one_question5:
 
 plus_one_question6:
   uuid: PlusOneQuestion6
-  kind: select
+  kind: radio
   title: 【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？
   required: true
   answer_content: 92%

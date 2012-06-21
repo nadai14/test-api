@@ -10,8 +10,8 @@
 # 養命酒
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '73D35EDA-4D34-4A16-ABBD-8D851F6C59ED', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mov', thumbnail: '/images/poster-sp.jpg',
-                           conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
+campaign = Campaign.create(mid: 'YomeiShuCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mp4', thumbnail: '/images/poster-sp.jpg',
+                           second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', wait_until: 30)
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', wait_until: 30)
@@ -123,8 +123,8 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # PlusOne
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '66215E4A-6141-4904-BA0E-D1A002F89DE3', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
-                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
+campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css')
@@ -134,7 +134,7 @@ q2 = Question.create(kind: 'select', title: '年齢を教えてください。',
 q3 = Question.create(kind: 'select', title: 'もしオリジナルTシャツを作成するとしたらどのような場面ですか？', required: true)
 q4 = Question.create(kind: 'select', title: 'オリジナルTシャツの制作で重視するところはどこですか？', required: true)
 q5 = Question.create(kind: 'select', title: '『プラスワン』の動画を見て良いと思ったところはどこですか？', required: true)
-q6 = Question.create(kind: 'select', title: '【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？', required: true, answer_content: '92%')
+q6 = Question.create(kind: 'radio', title: '【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？', required: true, answer_content: '92%')
 q7 = Question.create(kind: 'select', title: '『プラスワン』というサービスを知っていましたか？', required: true)
 q8 = Question.create(kind: 'select', title: '動画を見てサービスに興味を持ちましたか？', required: true)
 q9 = Question.create(kind: 'select', title: '動画を見てサービスを利用したいと思いましたか？', required: true)
@@ -242,8 +242,8 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # レッグマジックX
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '66215E4A-6141-4904-BA0E-D1A002F89DE3', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
-                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '/images/conversion_tag.html', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+campaign = Campaign.create(mid: 'LegMagicXMovieReward', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
+                           thumbnail: '/images/poster-sp.jpg', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css')
