@@ -13,7 +13,7 @@ success_confirm:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
-  conversion_tag: /images/conversion_tag.html
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -30,7 +30,7 @@ success_confirm_first:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
-  conversion_tag: /images/conversion_tag.html
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -77,7 +77,7 @@ null_answer:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
-  conversion_tag: cnvtag1
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -96,7 +96,7 @@ first_page_null:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
-  conversion_tag: cnvtag1
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -113,7 +113,7 @@ first_page_id_null:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
-  conversion_tag: cnvtag1
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
@@ -131,7 +131,7 @@ camp_status0:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン2メッセージ
-  conversion_tag: cnvtag2
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner2
   second_point: 20
@@ -150,7 +150,7 @@ camp_status9:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン3メッセージ
-  conversion_tag: cnvtag3
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner3
   second_point: 30
@@ -168,7 +168,7 @@ camp_closed:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
-  conversion_tag: cnvtag4
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
@@ -186,7 +186,7 @@ incons_question:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
-  conversion_tag: cnvtag4
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
@@ -205,7 +205,7 @@ yomei_shu:
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-sp.jpg
   message: 
-  conversion_tag: /images/conversion_tag.html
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 
@@ -223,7 +223,7 @@ plus_one:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-sp.jpg
   message: 
-  conversion_tag: /images/conversion_tag.html
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 
@@ -241,7 +241,7 @@ legmagicX:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv
   thumbnail: /images/poster-sp.jpg
   message: 
-  conversion_tag: /images/conversion_tag.html
+  conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 
