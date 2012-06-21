@@ -95,7 +95,10 @@
 					enablePluginDebug:        false,
 					// alwaysShowControls:       false,
   				// AndroidUseNativeControls: false,
-					success:                  function (mediaElement, domObject) { 
+					success:                  function (mediaElement, domObject) {
+						if(0 < this.model.get('video').indexOf('flv')) {
+							$('.mejs-overlay-play').css('display', 'nonde');
+						}
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');
 						}, false);
