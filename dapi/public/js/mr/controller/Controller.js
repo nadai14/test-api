@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 265 2012-06-20 23:48:24Z tsuru $
+ * @version			$Id: Controller.js 276 2012-06-21 01:11:45Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 10:11:45 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -127,7 +127,7 @@
 				// landing
 				_self.models.landing.set({ 
 					"title":       campaign.get('title'),
-					"description": _.template(campaign.get('description').replace('#{', '{{').replace('}', '}}'))({ "point": campaign.get('point')})
+					"description": campaign.has('description') ? _.template(campaign.get('description').replace('#{', '{{').replace('}', '}}'))({ "point": campaign.get('point')}) : ''
 				});
 				// content
 				_self.models.content.set({ 

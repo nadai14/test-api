@@ -124,7 +124,7 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 enq = Enq.create(status: 1)
 
 campaign = Campaign.create(mid: 'PlusOneCampaignID', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: '/images/media/plus1_sp.mp4', thumbnail: '/images/poster-sp.jpg',
-                           second_picture: '/images/creative-sp.jpg', client_url: 'http://ponkan.jp')
+                           second_picture: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4', client_url: 'http://ponkan.jp')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus-1/style.css')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus-1/style.css')
