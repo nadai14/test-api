@@ -242,7 +242,7 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # レッグマジックX
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'LegMagicXMovieReward', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv',
+campaign = Campaign.create(mid: 'LegMagicXMovieReward', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv',
                            thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="images/creative-sp.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')

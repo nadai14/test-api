@@ -238,7 +238,7 @@ legmagicX:
   point: 10
   opening_at:
   closing_at:
-  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/lgmx/lgmx.flv
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv
   thumbnail: /images/poster-sp.jpg
   message: 
   conversion_tag: <img src="images/creative-sp.jpg" alt="サンプル">
