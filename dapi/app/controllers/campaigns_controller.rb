@@ -11,15 +11,21 @@ class CampaignsController < ApplicationController
     raise NotFoundException.new CAMPAIGN_DOES_NOT_EXIST unless @campaign
     raise ForbiddenException.new BEFORE_OPENING if @campaign.status == 0 # TODO: delete this line after 6/18
     raise ForbiddenException.new AFTER_CLOSING if @campaign.closed?
-    type = MOVIE_TYPES[terminal] || MOVIE_TYPES[:pc]
-    @mime_type = type[:mime_type]
-    @movie = @campaign.movie.nil? ? nil : Pathname(@campaign.movie).sub_ext(type[:suffix]).to_s
+    @movies = @campaign.movie.nil? ? [] : movies(@campaign.movie)
   end
 
-  MOVIE_TYPES = {
-    :iphone  => {:mime_type => "application/x-mpegURL", :suffix => ".m3u8"}, 
-    :android => {:mime_type => "video/x-flv",           :suffix => ".flv"},
-    :pc      => {:mime_type => "video/mp4",             :suffix => ".mp4"}
-  }
+  def movies(path)
+    MOVIE_TYPES.map do |hash|
+      hash.each_with_object({}) do |(k, v), a|
+         a[k] = k == "src" ? Pathname(path).sub_ext(v).to_s : v
+      end
+    end
+  end
+
+  MOVIE_TYPES = [
+    {"type" => "application/x-mpegURL", "src" => ".m3u8"}, 
+    {"type" => "video/x-flv",           "src" => ".flv"},
+    {"type" => "video/mp4",             "src" => ".mp4"}
+  ]
 
 end
