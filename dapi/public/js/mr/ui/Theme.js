@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Theme.js 252 2012-06-20 01:33:15Z tsuru $
+ * @version      $Id: Theme.js 282 2012-06-21 01:44:07Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 10:44:07 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -57,23 +57,31 @@
 				// set css
 				_link.href = this.model.get('css');
 			}else{
-				_link.href = 'css/' + ((ua.OS === "iPhone/iPod" || ua.OS === "Android") ? 'sp' : 'pc') + '/themes/default-1/style.css'
+				// _link.href = 'css/' + ((ua.OS === "iPhone/iPod" || ua.OS === "Android") ? 'sp' : 'pc') + '/themes/default-1/style.css'
 			}
 				
 			// wait for load
 			(function(_cnt){
 				if(_cnt > 20) return false; // 10 秒まで
-				var _callee = arguments.callee;
-				var _bg = $(_self.header.el).css('background-image');
-				if(_bg === 'none') setTimeout(function(){ _callee(++_cnt); }, 50);
-				else _self.header.render();
+				var _callee    = arguments.callee;
+				var _$header   = $(_self.header.el);
+				if(_$header.css('background-image') === 'none') {
+					setTimeout(function(){ _callee(++_cnt); }, 50);
+				}else{
+					_self.header.render();
+					_$header.attr('data-theme', 'mr');
+				}
 			})(0);
 			(function(_cnt){
 				if(_cnt > 20) return false; // 10 秒まで
-				var _callee = arguments.callee;
-				var _bg = $(_self.footer.el).css('background-image');
-				if(_bg === 'none') setTimeout(function(){ _callee(++_cnt); }, 50);
-				else _self.footer.render();
+				var _callee    = arguments.callee;
+				var _$footer   = $(_self.header.el);
+				if(_$footer.css('background-image') === 'none') {
+					setTimeout(function(){ _callee(++_cnt); }, 50);
+				}else{
+					_self.footer.render();
+					_$footer.attr('data-theme', 'mr');
+				} 
 			})(0);
 			
 			// return this

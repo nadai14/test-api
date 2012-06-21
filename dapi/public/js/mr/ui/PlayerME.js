@@ -67,27 +67,32 @@
 				var _$source = $('<source>').attr('src', this.model.get('video'));
 				$(this.el).attr('src', this.model.get('video'));
 				if(0 <= this.model.get('video').indexOf('m3u8')) {
+					$(_self.el).attr('src',  this.model.get('video'));
+					$(_self.el).attr('type', 'application/x-mpegURL');
 					_$source.attr('type', 'application/x-mpegURL');
 				}
 				_$source.appendTo($(this.el));
 				
-				$('<object>')
-					.attr('width',  _$source.attr('width'))
-					.attr('height', _$source.attr('height'))
-					.attr('type',   'application/x-shockwave-flash')
-					.attr('data',   'flashmediaelement.swf?v=3')
-					// .attr('data',   'js/libs/flvplayer.swf')
-					.append($('<param>').attr('name', 'movie').attr('value', 'flashmediaelement.swf?v=3'))
-					// .append($('<param>').attr('name', 'movie').attr('value', 'js/libs/flvplayer.swf'))
-					.append($('<param>').attr('name', 'flashvars').attr('value', 'controls=true&amp;file=' + this.model.get('video')))
-					.append($('<param>').attr('name', 'allowfullscreen').attr('value', 'true'))
-					.appendTo(_$source);
+				if(this.model.get('video').indexOf('m3u8') < 0) {
+					$('<object>')
+						.attr('width',  _$source.attr('width'))
+						.attr('height', _$source.attr('height'))
+						.attr('type',   'application/x-shockwave-flash')
+						.attr('data',   'flashmediaelement.swf?v=3')
+						// .attr('data',   'js/libs/flvplayer.swf')
+						.append($('<param>').attr('name', 'movie').attr('value', 'flashmediaelement.swf?v=3'))
+						// .append($('<param>').attr('name', 'movie').attr('value', 'js/libs/flvplayer.swf'))
+						.append($('<param>').attr('name', 'flashvars').attr('value', 'controls=true&amp;file=' + this.model.get('video')))
+						.append($('<param>').attr('name', 'allowfullscreen').attr('value', 'true'))
+						.appendTo(_$source);
+				}
+				
 							
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
 				// var _player = new MediaElement(this.el, {
 					// flashName:                '../flvplayer.swf',
-					flashName:                'flashmediaelement.swf?v=3',
+					// flashName:                'flashmediaelement.swf?v=3',
 					features:                 ['playpause', 'current', 'duration', 'fullscreen'],
 					loop:                     false,
 					alwaysShowControls:       true,
@@ -96,7 +101,7 @@
 					// alwaysShowControls:       false,
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
-						if(0 < this.model.get('video').indexOf('flv')) {
+						if(0 < _self.model.get('video').indexOf('flv')) {
 							$('.mejs-overlay-play').css('display', 'nonde');
 						}
 						mediaElement.addEventListener('progress', function(e) {
