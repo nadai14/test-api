@@ -6,7 +6,7 @@ class CampaignsController < ApplicationController
 
   def show
     terminal = params[:terminal].try(:downcase).try(:to_sym) || :pc
-    face = terminal == :iphone || terminal == :android ? "TO" : "PC"
+    face = terminal == :iphone || terminal == :android ? "SP" : "PC"
     @campaign = Campaign.includes(:enq => :enq_faces).where("enq_faces.face = ?", face).find_by_mid(params[:id])
     raise NotFoundException.new CAMPAIGN_DOES_NOT_EXIST unless @campaign
     raise ForbiddenException.new BEFORE_OPENING if @campaign.status == 0 # TODO: delete this line after 6/18
