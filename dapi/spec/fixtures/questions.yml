@@ -32,7 +32,7 @@ prefectures:
   content: 出身地を選択してください
   required: true
   
-check:
+checkbox:
   uuid: QuestionCheck
   kind: checkbox
   title: チェックボックス
@@ -88,9 +88,9 @@ unrequired_select:
   content: 選択肢から選択してください。
   required: false
 
-unrequired_check:
+unrequired_checkbox:
   uuid: QuestionUnrequiredCheck
-  kind: check
+  kind: checkbox
   title: チェックボックス
   content: チェックボックスから選択してください。
   required: false
