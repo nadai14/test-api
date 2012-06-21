@@ -23,9 +23,17 @@ class AnswersController < ApplicationController
     return false if enq_question.nil?
     question = enq_question.question
     return !question.required if content == ""
-    return false if question.needs_choices? && question.choices.none?{|c| content.class == Array ? content.all?{|a| a == c.content} : c.content == content}
+    return false if question.needs_choices? && not_selected?(question.choices, content)
     return false if question.kind == "numeric" && content =~ /[^0-9]+/
     true
+  end
+
+  def not_selected?(choices, content)
+    if content.class == Array
+      content.any?{|a| !choices.map(&:content).include?(a)}
+    else
+      choices.none?{|c| c.content == content}
+    end
   end
 
   def register(content, enq_question_id, campaign_id, uid, user_agent)
