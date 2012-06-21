@@ -17,15 +17,15 @@ class CampaignsController < ApplicationController
   def movies(path)
     MOVIE_TYPES.map do |hash|
       hash.each_with_object({}) do |(k, v), a|
-         a[k] = k == :suffix ? Pathname(path).sub_ext(v).to_s : v
+         a[k] = k == "src" ? Pathname(path).sub_ext(v).to_s : v
       end
     end
   end
 
   MOVIE_TYPES = [
-    {:mime_type => "application/x-mpegURL", :suffix => ".m3u8"}, 
-    {:mime_type => "video/x-flv",           :suffix => ".flv"},
-    {:mime_type => "video/mp4",             :suffix => ".mp4"}
+    {"type" => "application/x-mpegURL", "src" => ".m3u8"}, 
+    {"type" => "video/x-flv",           "src" => ".flv"},
+    {"type" => "video/mp4",             "src" => ".mp4"}
   ]
 
 end
