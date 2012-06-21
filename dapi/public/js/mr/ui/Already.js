@@ -8,7 +8,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: Already.js 256 2012-06-20 10:04:17Z liminghua772 $
  *
- * Last changed: $LastChangedDate: 2012-06-20 19:04:17 +0900 (水, 20 6 2012) $ by $Author: liminghua772 $
+ * Last changed: $LastChangedDate: 2012-06-20 19:04:17 +0900 (Wed, 20 Jun 2012) $ by $Author: liminghua772 $
  *
  */
 (function(ns, $){

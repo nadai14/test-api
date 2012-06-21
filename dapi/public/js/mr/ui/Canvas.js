@@ -8,7 +8,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: Canvas.js 252 2012-06-20 01:33:15Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (Wed, 20 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){

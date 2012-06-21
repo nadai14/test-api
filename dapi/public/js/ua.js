@@ -6,7 +6,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: ua.js 170 2012-06-13 10:24:36Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-13 19:24:36 +0900 (水, 13 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-13 19:24:36 +0900 (Wed, 13 Jun 2012) $ by $Author: tsuru $
  * 
  * @link  http://www.quirksmode.org/js/detect.html
  *
