@@ -90,7 +90,7 @@ unrequired_select:
 
 unrequired_check:
   uuid: QuestionUnrequiredCheck
-  kind: check
+  kind: checkbox
   title: チェックボックス
   content: チェックボックスから選択してください。
   required: false
