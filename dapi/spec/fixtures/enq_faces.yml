@@ -8,7 +8,7 @@ sc_SP:
   face: SP
   first_page_id: EnqSPSuccessConfirmPage1
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: アンケート1SP
   description: アンケート1説明SP
 
@@ -18,7 +18,7 @@ sc_SP_first:
   face: SP
   first_page_id: EnqSPSuccessConfirmPage1First
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: アンケート1SP
   description: アンケート1説明SP
 
@@ -29,7 +29,7 @@ sc_PC:
   face: PC
   first_page_id: EnqPCSuccessConfirmPage1
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: アンケート1PC
   description: アンケート1説明PC
 
@@ -39,7 +39,7 @@ sc_PC_first:
   face: PC
   first_page_id: EnqPCSuccessConfirmPage1First
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: アンケート1PC
   description: アンケート1説明PC
 
@@ -74,7 +74,7 @@ null_answer_SP:
   face: SP
   first_page_id: EnqSPNullAnswerPage1
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: 空回答確認用アンケート1SP
   description: 空回答確認用アンケート1説明SP
 
@@ -84,7 +84,7 @@ null_answer_PC:
   face: PC
   first_page_id: EnqPCNullAnswerPage1
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: 空回答確認用アンケート1SP
   description: 空回答確認用アンケート1説明SP
 
@@ -120,7 +120,7 @@ first_page_null_SP:
   face: SP
   first_page_id: first_page_id
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: アンケートの最初のページがNull
   description: アンケートの最初のページがNull
 
@@ -130,7 +130,7 @@ first_page_id_null_SP:
   face: SP
   first_page_id: 
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: アンケートの最初のページがNull
   description: アンケートの最初のページがNull
 
@@ -140,7 +140,7 @@ first_page_null_PC:
   face: PC
   first_page_id: first_page_id
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: アンケートの最初のページがNull
   description: アンケートの最初のページがNull
 
@@ -150,7 +150,7 @@ first_page_id_null_PC:
   face: PC
   first_page_id: 
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: アンケートの最初のページがNull
   description: アンケートの最初のページがNull
 
@@ -161,7 +161,7 @@ camp_status0_SP:
   face: SP
   first_page_id: CampaignStatus0EnqPageSPID
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: キャンペーンの状態が入稿前
   description: キャンペーンの状態が入稿前
 
@@ -171,7 +171,7 @@ camp_status0_PC:
   face: PC
   first_page_id: CampaignStatus0EnqPagePCID
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: キャンペーンの状態が入稿前
   description: キャンペーンの状態が入稿前
 
@@ -182,7 +182,7 @@ camp_closed_SP:
   face: SP
   first_page_id: CampaignClosedEnqPageSPID
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: キャンペーンの状態が入稿前
   description: キャンペーンの状態が入稿前
 
@@ -192,7 +192,7 @@ camp_closed_PC:
   face: PC
   first_page_id: CampaignClosedEnqPagePCID
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: キャンペーンの状態が終了
   description: キャンペーンの状態が終了
 
@@ -203,7 +203,7 @@ incons_question_SP:
   face: SP
   first_page_id: InconsistencyQuestionEnqPageSPID
   wait_until: 30
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/default-1/style.css
   title: 設問と選択肢が矛盾している
   description: 設問と選択肢が矛盾している
 
@@ -213,7 +213,7 @@ incons_question_PC:
   face: PC
   first_page_id: InconsistencyQuestionEnqPagePCID
   wait_until: 30
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/pc/themes/default-1/style.css
   title: 設問と選択肢が矛盾している
   description: 設問と選択肢が矛盾している
 

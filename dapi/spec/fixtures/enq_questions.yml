@@ -28,14 +28,14 @@ scSPquestion4_1:
   enq_page_id: EnqSPSuccessConfirmPage3-1
   num: 4
   seq: Q4
-  question_id: QuestionTextarea
+  question_id: QuestionCheck
 
 scSPquestion4_2:
   uuid: SuccessConfirmSPQuestion4-2
   enq_page_id: EnqSPSuccessConfirmPage3-2
   num: 4
   seq: Q4
-  question_id: QuestionCheck
+  question_id: QuestionTextarea
 
 scSPquestion1_first:
   uuid: SuccessConfirmSPQuestion1First
@@ -85,14 +85,14 @@ scPCquestion4_1:
   enq_page_id: EnqPCSuccessConfirmPage3-1
   num: 4
   seq: Q4
-  question_id: QuestionTextarea
+  question_id: QuestionCheck
 
 scPCquestion4_2:
   uuid: SuccessConfirmPCQuestion4-2
   enq_page_id: EnqPCSuccessConfirmPage3-2
   num: 4
   seq: Q4
-  question_id: QuestionCheck
+  question_id: QuestionTextarea
 
 scPCquestion1_first:
   uuid: SuccessConfirmPCQuestion1First
