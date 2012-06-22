@@ -274,3 +274,24 @@ legmagicX_PC:
   css: /css/pc/themes/lgmx/style.css
   title: 
   description: 
+
+# 永谷園
+nagatani_en_SP:
+  uuid: NagataniEnSPEnqFaceID
+  enq_id: NagataniEnEnqID
+  face: SP
+  first_page_id: NagataniEnSPEnqPage1
+  wait_until: 
+  css: /css/sp/themes/nagatanien/style.css
+  title: 
+  description: 
+ 
+nagatani_en_PC:
+  uuid: NagataniEnPCEnqFaceID
+  enq_id: NagataniEnEnqID
+  face: PC
+  first_page_id: NagataniEnPCEnqPage1
+  wait_until: 
+  css: /css/pc/themes/nagatanien/style.css
+  title: 
+  description: 

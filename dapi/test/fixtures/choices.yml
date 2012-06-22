@@ -931,3 +931,141 @@ legmagicX_coin_5:
   order: 5
   content: そう思わない
 
+# 永谷園
+nagatani_en_radio_male:
+  uuid: NagataniEnRadioMale
+  question_id: NagataniEnQuestion1
+  order: 1
+  content: 男性
+
+nagatani_en_radio_female:
+  uuid: NagataniEnRadioFemale
+  question_id: NagataniEnQuestion1
+  order: 2
+  content: 女性
+
+nagatani_en_numeric_u19:
+  uuid: NagataniEnNumericU19
+  question_id: NagataniEnQuestion2
+  order: 1
+  content: 19歳以下
+
+nagatani_en_numeric_20:
+  uuid: NagataniEnNumeric20
+  question_id: NagataniEnQuestion2
+  order: 2
+  content: 20-29歳
+
+nagatani_en_numeric_30:
+  uuid: NagataniEnNumeric30
+  question_id: NagataniEnQuestion2
+  order: 3
+  content: 30-39歳
+
+nagatani_en_numeric_40:
+  uuid: NagataniEnNumeric40
+  question_id: NagataniEnQuestion2
+  order: 4
+  content: 40-49歳
+
+nagatani_en_numeric_50:
+  uuid: NagataniEnNumeric50
+  question_id: NagataniEnQuestion2
+  order: 5
+  content: 50歳以上
+
+nagatani_en_wakeup_1:
+  uuid: NagataniEnWakeUp1
+  question_id: NagataniEnQuestion3
+  order: 1
+  content: よくある
+
+nagatani_en_wakeup_2:
+  uuid: NagataniEnWakeUp2
+  question_id: NagataniEnQuestion3
+  order: 2
+  content: たまにある
+
+nagatani_en_wakeup_3:
+  uuid: NagataniEnWakeUp3
+  question_id: NagataniEnQuestion3
+  order: 3
+  content: どちらとも言えない
+
+nagatani_en_wakeup_4:
+  uuid: NagataniEnWakeUp4
+  question_id: NagataniEnQuestion3
+  order: 4
+  content: あまりない
+
+nagatani_en_wakeup_5:
+  uuid: NagataniEnWakeUp5
+  question_id: NagataniEnQuestion3
+  order: 5
+  content: 全くない
+
+nagatani_en_know_1:
+  uuid: NagataniEnKnow1
+  question_id: NagataniEnQuestion4
+  order: 1
+  content: よく知っていた
+
+nagatani_en_know_2:
+  uuid: NagataniEnKnow2
+  question_id: NagataniEnQuestion4
+  order: 2
+  content: まあ知っていた
+
+nagatani_en_know_3:
+  uuid: NagataniEnKnow3
+  question_id: NagataniEnQuestion4
+  order: 3
+  content: 知らなかった
+
+nagatani_en_int_1:
+  uuid: NagataniEnInt1
+  question_id: NagataniEnQuestion5
+  order: 1
+  content: 非常に興味がある
+
+nagatani_en_int_2:
+  uuid: NagataniEnInt2
+  question_id: NagataniEnQuestion5
+  order: 2
+  content: まあ興味がある
+
+nagatani_en_int_3:
+  uuid: NagataniEnInt3
+  question_id: NagataniEnQuestion5
+  order: 3
+  content: どちらとも思わない
+
+nagatani_en_int_4:
+  uuid: NagataniEnInt4
+  question_id: NagataniEnQuestion5
+  order: 4
+  content: あまり興味がない
+
+nagatani_en_int_5:
+  uuid: NagataniEnInt5
+  question_id: NagataniEnQuestion5
+  order: 5
+  content: 全く興味がない
+
+nagatani_en_mixi_1:
+  uuid: NagataniEnMixi1
+  question_id: NagataniEnQuestion6
+  order: 1
+  content: 申し込みたい
+
+nagatani_en_mixi_2:
+  uuid: NagataniEnMixi2
+  question_id: NagataniEnQuestion6
+  order: 2
+  content: どちらともいえない
+
+nagatani_en_mixi_3:
+  uuid: NagataniEnMixi3
+  question_id: NagataniEnQuestion6
+  order: 3
+  content: 申込みたくない

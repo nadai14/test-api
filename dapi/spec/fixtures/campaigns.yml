@@ -27,7 +27,7 @@ success_confirm_first:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -74,7 +74,7 @@ null_answer:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン1メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -93,7 +93,7 @@ first_page_null:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -110,7 +110,7 @@ first_page_id_null:
   point: 10
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーンメッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -128,7 +128,7 @@ camp_status0:
   point: 20
   opening_at: 2100-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン2メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -147,7 +147,7 @@ camp_status9:
   point: 30
   opening_at: 2000-1-1 0:0:0
   closing_at: 2100-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン3メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -165,7 +165,7 @@ camp_closed:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -183,7 +183,7 @@ incons_question:
   point: 40
   opening_at: 2000-1-1 0:0:0
   closing_at: 2012-1-1 0:0:0
-  movie: /images/media/yomeishu.mp4
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /images/poster-pc.jpg
   message: キャンペーン4メッセージ
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
@@ -246,4 +246,22 @@ legmagicX:
   banner_title: 
   second_point: 
   client_url: http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1
+
+# 永谷園
+nagatani_en:
+  mid: NagataniEnCampaignID
+  enq_id: NagataniEnEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at:
+  closing_at:
+  movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.flv
+  thumbnail: /images/poster-sp.jpg
+  message: 
+  conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
+  second_picture: /images/creative-sp.jpg
+  banner_title: 
+  second_point: 
+  client_url: 
 

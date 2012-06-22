@@ -15,9 +15,8 @@
 				var _parameter = (-1 < window.location.href.indexOf('?')) ? window.location.href.substr(window.location.href.indexOf('?')) : '';
 				location.href = 
 					(ua.OS === "iPhone/iPod" || ua.OS === "Android") ?
-					 	'sp.html' :
-					 	'pc.html'
-					+ _parameter;
+					 	'sp.html'+ _parameter :
+					 	'pc.html'+ _parameter;
 			})();
 		</script>
 	  

@@ -659,3 +659,88 @@ legmagicX_pc_question6:
   seq: Q6
   question_id: LegMagicXQuestion6
 
+# 永谷園
+nagatani_en_sp_question1:
+  uuid: NagataniEnSPEnqQuestion1
+  enq_page_id: NagataniEnSPEnqPage1
+  num: 1
+  seq: Q1
+  question_id: NagataniEnQuestion1
+
+nagatani_en_sp_question2:
+  uuid: NagataniEnSPEnqQuestion2
+  enq_page_id: NagataniEnSPEnqPage2
+  num: 2
+  seq: Q2
+  question_id: NagataniEnQuestion2
+
+nagatani_en_sp_question3:
+  uuid: NagataniEnSPEnqQuestion3
+  enq_page_id: NagataniEnSPEnqPage3
+  num: 3
+  seq: Q3
+  question_id: NagataniEnQuestion3
+
+nagatani_en_sp_question4:
+  uuid: NagataniEnSPEnqQuestion4
+  enq_page_id: NagataniEnSPEnqPage4
+  num: 4
+  seq: Q4
+  question_id: NagataniEnQuestion4
+
+nagatani_en_sp_question5:
+  uuid: NagataniEnSPEnqQuestion5
+  enq_page_id: NagataniEnSPEnqPage5
+  num: 5
+  seq: Q5
+  question_id: NagataniEnQuestion5
+
+nagatani_en_sp_question6:
+  uuid: NagataniEnSPEnqQuestion6
+  enq_page_id: NagataniEnSPEnqPage6
+  num: 6
+  seq: Q6
+  question_id: NagataniEnQuestion6
+
+nagatani_en_pc_question1:
+  uuid: NagataniEnPCEnqQuestion1
+  enq_page_id: NagataniEnPCEnqPage1
+  num: 1
+  seq: Q1
+  question_id: NagataniEnQuestion1
+
+nagatani_en_pc_question2:
+  uuid: NagataniEnPCEnqQuestion2
+  enq_page_id: NagataniEnPCEnqPage2
+  num: 2
+  seq: Q2
+  question_id: NagataniEnQuestion2
+
+nagatani_en_pc_question3:
+  uuid: NagataniEnPCEnqQuestion3
+  enq_page_id: NagataniEnPCEnqPage3
+  num: 3
+  seq: Q3
+  question_id: NagataniEnQuestion3
+
+nagatani_en_pc_question4:
+  uuid: NagataniEnPCEnqQuestion4
+  enq_page_id: NagataniEnPCEnqPage4
+  num: 4
+  seq: Q4
+  question_id: NagataniEnQuestion4
+
+nagatani_en_pc_question5:
+  uuid: NagataniEnPCEnqQuestion5
+  enq_page_id: NagataniEnPCEnqPage5
+  num: 5
+  seq: Q5
+  question_id: NagataniEnQuestion5
+
+nagatani_en_pc_question6:
+  uuid: NagataniEnPCEnqQuestion6
+  enq_page_id: NagataniEnPCEnqPage6
+  num: 6
+  seq: Q6
+  question_id: NagataniEnQuestion6
+
