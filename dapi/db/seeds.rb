@@ -242,7 +242,7 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # レッグマジックX
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv',
+campaign = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv',
                            thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
@@ -317,7 +317,7 @@ enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6'
 # 永谷園
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: 'LegMagicXEnqID', status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.mp4',
+campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.mp4',
                            thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: '')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/nagatanien/style.css')
