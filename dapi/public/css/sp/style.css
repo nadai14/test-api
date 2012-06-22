@@ -35,14 +35,20 @@
 			box-shadow:             0 0 10px #333 inset;
 		}
 
-		.mr-ui-nav p {
-			margin:                 0px;
-			text-align:             center;
-			color:                  #333;
-			text-shadow:            1px 1px 0 rgba(150, 150, 150, 0.3);
-			
-		}
+			.mr-ui-nav p {
+				margin:                 0px;
+				text-align:             center;
+				color:                  #333;
+				text-shadow:            1px 1px 0 rgba(150, 150, 150, 0.3);
+				
+			}
 
+			/* conversion */
+		.mr-ui-conversion {
+			margin-top:            1em;
+		}
+		
+		
 		.mr-ui-content {
 			margin-top:            1em;
 			background-color:      #ebebeb;
@@ -179,16 +185,6 @@
 			vertical-align: top;
 		}
 		
-	/* conversion */
-	.mr-ui-conversion {
-		width:  0px;
-		height: 0px;
-	}
-	
-		.mr-ui-conversion img {
-			width:  0px;
-			height: 0px;
-		}
 	
 /* * * * * * * * * * * * * * * * * * * *
  * Assets
