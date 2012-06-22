@@ -225,6 +225,8 @@ yomei_shu_SP:
   face: SP
   first_page_id: YomeiShuSPEnqPage1
   wait_until: 30
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
  
 yomei_shu_PC:
   uuid: YomeiShuPCEnqFaceID
@@ -232,6 +234,8 @@ yomei_shu_PC:
   face: PC
   first_page_id: YomeiShuPCEnqPage1
   wait_until: 30
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
 
 # プラスワン
 plus_one_SP:
@@ -241,8 +245,8 @@ plus_one_SP:
   first_page_id: PlusOneSPEnqPage1
   wait_until: 
   css: /css/sp/themes/plus1/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
  
 plus_one_PC:
   uuid: PlusOnePCEnqFaceID
@@ -251,8 +255,8 @@ plus_one_PC:
   first_page_id: PlusOnePCEnqPage1
   wait_until: 
   css: /css/pc/themes/plus1/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
 
 # レッグマジックX
 legmagicX_SP:
@@ -262,8 +266,8 @@ legmagicX_SP:
   first_page_id: LegMagicXSPEnqPage1
   wait_until: 
   css: /css/sp/themes/lgmx/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
  
 legmagicX_PC:
   uuid: LegMagicXPCEnqFaceID
@@ -272,8 +276,8 @@ legmagicX_PC:
   first_page_id: LegMagicXPCEnqPage1
   wait_until: 
   css: /css/pc/themes/lgmx/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
 
 # 永谷園
 nagatani_en_SP:
@@ -283,8 +287,8 @@ nagatani_en_SP:
   first_page_id: NagataniEnSPEnqPage1
   wait_until: 
   css: /css/sp/themes/nagatanien/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント
  
 nagatani_en_PC:
   uuid: NagataniEnPCEnqFaceID
@@ -293,5 +297,5 @@ nagatani_en_PC:
   first_page_id: NagataniEnPCEnqPage1
   wait_until: 
   css: /css/pc/themes/nagatanien/style.css
-  title: 
-  description: 
+  title: 動画を見てアンケートに答えてプレゼントをもらおう
+  description: mixiポイントをプレゼント

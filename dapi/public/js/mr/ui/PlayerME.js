@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Player.js 225 2012-06-15 11:57:34Z tsuru $
+ * @version      $Id: PlayerME.js 329 2012-06-22 09:32:46Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-15 20:57:34 +0900 (金, 15 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-22 18:32:46 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){

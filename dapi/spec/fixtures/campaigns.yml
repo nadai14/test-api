@@ -224,7 +224,7 @@ plus_one:
   thumbnail: /images/poster-sp.jpg
   message: 
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
-  second_picture: /images/plus1/2nd-banner.png
+  second_picture: /css/sp/themes/plus1/2nd-banner.png
   banner_title: 
   second_point: 
   client_url: http://www.p1-intl.com/
@@ -242,7 +242,7 @@ legmagicX:
   thumbnail: /images/poster-sp.jpg
   message: 
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
-  second_picture: /images/lgmx/2nd-banner.png
+  second_picture: /css/sp/themes/lgmx/2nd-banner.png
   banner_title: 
   second_point: 
   client_url: http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1
@@ -260,7 +260,7 @@ nagatani_en:
   thumbnail: /images/poster-sp.jpg
   message: 
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
-  second_picture: /images/nagatanien/2nd-banner.png
+  second_picture: /css/sp/themes/nagatanien/2nd-banner.png
   banner_title: 
   second_point: 
   client_url: http://cdn.poncan.jp
