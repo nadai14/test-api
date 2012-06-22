@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 265 2012-06-20 23:48:24Z tsuru $
+ * @version      $Id: Base.js 303 2012-06-21 13:46:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 22:46:49 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -39,12 +39,7 @@
                 	'iPhone' :
                 	(ua.OS === "Android") ?
                 		'Android' : 
-                  	'PC',
-				face:     (ns.terminal) ?
-				          	((ns.terminal === 'iPhone' || ns.terminal === 'Android') ? 'SP' : 'PC') : 
-				          	(ua.OS === "iPhone/iPod" || (ua.OS === "Android")) ?
-				          		'SP' :
-				          		'PC'
+                  	'PC'
       }, (options.data || {})),
       /**
        * 

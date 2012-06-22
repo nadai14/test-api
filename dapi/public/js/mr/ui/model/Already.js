@@ -1,29 +1,28 @@
 /* vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2: */
 /**
- * Theme view model class
+ * Already view-model class
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id$
+ * @version      $Id: CountDown.js 146 2012-06-11 08:17:50Z tsuru $
  *
- * Last changed: $LastChangedDate$
+ * Last changed: $LastChangedDate: 2012-06-11 17:17:50 +0900 (月, 11 6 2012) $
  *
  */
 (function(ns){
-	ns.Ad = Backbone.Model.extend({
+	ns.Already = Backbone.Model.extend({
 		/**
      * typeName of this class
      */
-    typeName: ns.typeName('Ad'),
+    typeName:  ns.typeName('Already'),
 		/**
 		 * default values
 		 * @see http://backbonejs.org/#Model-defaults
 		 */
-		defaults: {
-			"poster":     null,
-			"movie":      null,
-			"movies":     null,
-			"creative":   null,
+		defaults:  {
+			"title":       'タイトル',
+			"social":      'ソーシャルタグ',
+			"client_url":  'URL',
 		},
 		/**
 		 * constructor

@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Ad.js 308 2012-06-22 01:25:15Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (Wed, 20 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-22 10:25:15 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -55,7 +55,7 @@
 					model:      this.model,
 					el:         $(ns.slctr('creative'), this.el)
 				}).render().el);
-			}else if(this.model.has('video')) {
+			}else if(this.model.has('movie')) {
 				new ns.PlayerME({ 
 					controller: this.controller,
 					model:      this.model,
