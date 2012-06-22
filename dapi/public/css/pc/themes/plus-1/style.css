@@ -1,5 +1,5 @@
 /**
- * レッグマジック様向けCSS
+ * プラスワン様向けCSS
  * 20120614
  */
 /* フッタ */
@@ -12,22 +12,22 @@
 }
 /* ナビゲーション枠 */
 .mr-ui-nav {
-	-webkit-box-shadow: inset 0 0 10px #E222AC;
-	box-shadow:         inset 0 0 10px #E222AC;
+	-webkit-box-shadow: inset 0 0 10px #79D813;
+	box-shadow:         inset 0 0 10px #79D813;
 }
 /* ナビゲーションエリア文字色 */
 .mr-ui-nav p {
-	color:              #E222AC;        
+	color:              #79D813;        
 }
 /* ボーダー */
 .mr-ui-content {
-	border:             1px solid #E222AC;
+	border:             1px solid #79D813;
 }
 /* タイトル文字色 */
 .mr-ui-content-block .mr-ui-title b {
-	color:              #E222AC;
+	color:              #79D813;
 }
 /* ボタン色 */
 .mr-ui-button {
-	background:         -webkit-gradient(linear, left top, left bottom, from(#FB62C6), to(#E222AC));
+	background:         -webkit-gradient(linear, left top, left bottom, from(#96F41C), to(#77C116));
 }

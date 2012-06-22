@@ -22,7 +22,7 @@ select:
   title: 選択問題
   content: 選択肢から選択してください
   required: true
-  answer_content: 選択肢問題正解
+  answer_content: 選択肢2
   answer_description: 選択肢問題の正解です
 
 prefectures:
