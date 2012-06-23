@@ -121,12 +121,6 @@
 							.mr-ui-question .mr-ui-answer {
 								line-height:  2em;
 							}
-							
-					
-				.mr-ui-page .mr-ui-next {
-					
-					/* float: right; */
-				}
 				
 			.mr-ui-complete {
 				text-align: center;
@@ -134,7 +128,6 @@
 			
 				.mr-ui-complete .mr-ui-button {
 					margin-top:    3em;
-					
 				}
 				
 			.mr-ui-thankyou {
@@ -205,6 +198,13 @@
 	line-height:      3em;
 	text-align:       center;
 	cursor:           pointer;
+}
+
+/*
+ * http://redmine.sunbi.co.jp/issues/1928
+ */
+.mr-ui-button:hover {
+	border:           inset 1px;
 }
 
 .mr-ui-button:disabled {

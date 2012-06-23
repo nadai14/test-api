@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 338 2012-06-23 14:58:51Z tsuru $
+ * @version      $Id: PlayerME.js 340 2012-06-23 16:44:35Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -81,17 +81,21 @@
 				ns.trace(_$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
-					flashName:                'mr-player.swf?v=201206232346',
+					flashName:                'mr-player.swf?v=201206230057',
 					features:                 _features,
 					loop:                     false,
 					alwaysShowControls:       false,
-					usePluginFullScreen:      true,
+					// usePluginFullScreen:      true,
 					enablePluginDebug:        false,
 					enableAutosize:           true,  // @see  http://redmine.sunbi.co.jp/issues/1947
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
+						_self.el = $(domObject).closest('.mejs-container').get(0);
 						if(0 < _self.model.get('movie').src.indexOf('flv')) {
-							$('.mejs-mediaelement').css('z-index', '999999');
+						 	$('.mejs-mediaelement', _self.el).css('z-index', '999999');
+						 	$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
+						 	$('.mejs-controls',  _self.el).css('z-index', '-999999');
+						 	// $('.mejs-overlay-play', _self.el).css('width', 0);
 						}else{
 							$('.mejs-poster', self.el).click(function(){
 								mediaElement.play();
@@ -130,6 +134,10 @@
 						}, false);
 						mediaElement.addEventListener('ended', function(e) {
 							ns.trace('ended');
+							// re-show poster
+							$('.mejs-poster', self.el).show();
+							$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
+							$('.mejs-controls',  _self.el).css('z-index', '-999999');
 							// end
 							_self.controller.setIsAdEnded(true);
 							// exit fullscreen

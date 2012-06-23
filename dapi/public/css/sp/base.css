@@ -77,40 +77,9 @@ p {
 	color:#f4b800;
 }
 
-/*aside {
-	background-color: #ebebeb;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 10px;
-}*/
-
-
-
 aside p:last-child {
 	margin-bottom: 0;
 }
-
-/*���փ{�^��*/
-.btn {
-	border-radius: 5px;
-	background-color: #f4b800;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F8D159), to(#DFA904));
-	width: 7em;
-	font-size: 85%;
-	text-align: center;
-	float: right;
-	/*margin-top:5px;*/
-	margin-right: 10px;
-}
-
-.btn a {
-	text-shadow: 1px 1px 0 #ddd;
-	display: block;
-	padding: 5px 0;
-	color: #444444;
-	text-decoration: none;
-}
-
 
 /* clearfix */
 .clearfix:after {

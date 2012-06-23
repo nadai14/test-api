@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 335 2012-06-23 11:35:55Z tsuru $
+ * @version			$Id: Controller.js 340 2012-06-23 16:44:35Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -115,11 +115,21 @@
 			if(!this.models.parameter.has('mid')) {
 				this.sorry('該当するキャン―ペーンはございません。');
 				return;
+			}else{
+				if(this.models.parameter.get('mid') === ''){
+					this.sorry('該当するキャン―ペーンはございません。');
+					return;
+				}
 			}
 			// check uid
 			if(!this.models.parameter.has('uid')) {
 				this.sorry('不正なリクエストです。');
 				return;
+			}else{
+				if(this.models.parameter.get('uid') === ''){
+					this.sorry('不正なリクエストです。');
+					return;
+				}
 			}
 			// switch
 			if(this.models.parameter.get('already') === 1) {

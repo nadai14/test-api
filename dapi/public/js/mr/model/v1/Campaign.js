@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 338 2012-06-23 14:58:51Z tsuru $
+ * @version      $Id: Campaign.js 340 2012-06-23 16:44:35Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -81,10 +81,12 @@
 				 * build description
 				 * @see http://redmine.sunbi.co.jp/issues/1880
 				 */
-				ns.trace(model.typeName + '#fetch()#success/1880');
-				model.set('description', _.template(model.get('description').replace('#{', '{{').replace('}', '}}'))({ 
-					"point": model.get('point')
-				}));
+				if(model.has('description')){
+					ns.trace(model.typeName + '#fetch()#success/1880');
+					model.set('description', _.template(model.get('description').replace('#{', '{{').replace('}', '}}'))({ 
+						"point": model.get('point')
+					}));
+				}
 				/**
 				 * movie fallbacks
 				 * @see http://redmine.sunbi.co.jp/issues/1910 
