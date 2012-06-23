@@ -204,7 +204,7 @@ yomei_shu:
   closing_at: 
   movie: /images/media/yomeishu.mp4
   thumbnail: /images/poster-sp.jpg
-  message: 
+  message: ''
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: 
@@ -222,7 +222,7 @@ plus_one:
   closing_at:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4
   thumbnail: /css/sp/themes/plus1/thumbnail.png
-  message: 
+  message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/plus1/2nd_banne.png
   banner_title: 
@@ -240,7 +240,7 @@ legmagicX:
   closing_at:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv
   thumbnail: /css/sp/themes/lgmx/thumbnail.png
-  message: 
+  message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/lgmx/2nd_banne.png
   banner_title: 
@@ -258,7 +258,7 @@ nagatani_en:
   closing_at:
   movie: http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.flv
   thumbnail: /css/sp/themes/nagatanien/thumbnail.png
-  message: 
+  message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/nagatanien/2nd-banner.png
   banner_title: 
