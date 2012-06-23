@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 329 2012-06-22 09:32:46Z tsuru $
+ * @version      $Id: PlayerME.js 334 2012-06-23 08:44:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 18:32:46 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -33,16 +33,12 @@
 			ns.trace(this.typeName + '#initialize()');
 			// bind this
 			_.bindAll(this, "hide", "show", "render");
-			
 			// 
 			this.controller = options.controller;
-			
-			// keep this
-			var _self = this;
 					
 			// set event handler if model exists
 			if(this.model) {
-				this.model.on('change:campaign', this.render, this);
+				this.model.on('change', this.render, this);
 			}
 		},
 		/**
@@ -50,24 +46,25 @@
 		 */
 		render: function(success){
 			ns.trace(this.typeName + '#render()');
+			// keep reference
 			var _self = this;
 			// remove template
 			if($(_self.el).hasClass(ns.cls('template'))) {
 				$(_self.el).removeClass(ns.cls('template'));
 			}
-			
 			// set source
 			var _$video = $(this.el);
-			// poster
-			if(this.model.has('poster')) {
-				// _$video.attr('poster', this.model.get('poster'));
-			}
 			// video
 			if(this.model.has('movie')) {
-				var _movies  = this.model.get('movies');
-				var _movie   = this.model.get('movie');
+				var _movie    = this.model.get('movie');
+				var _movies   = this.model.get('movies');
+				var _poster   = this.model.has('poster') ? this.model.get('poster') : '';
+				var _features = []; // ['playpause', 'current', 'duration', 'fullscreen'];
 				// set source (main)
-				_$video.attr('type', _movie.type).attr('src', _movie.src);
+				_$video
+					.attr('type', _movie.type)
+					.attr('src', _movie.src)
+					.attr('poster', _poster);
 				// fallback sources
 				for(var m = 0; m < _movies.length; ++m) {
 					var _movie   = _movies[m];
@@ -80,23 +77,25 @@
 				ns.trace(_$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
-					flashName:                'player.swf?v=20120622',
-					features:                 ['playpause', 'current', 'duration', 'fullscreen'],
+					flashName:                'player.swf?v=201206231718',
+					features:                 _features,
 					loop:                     false,
-					alwaysShowControls:       true,
+					alwaysShowControls:       false,
 					usePluginFullScreen:      true,
 					enablePluginDebug:        false,
+					enableAutosize:           true,  // @see  http://redmine.sunbi.co.jp/issues/1947
 					// alwaysShowControls:       false,
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
 						if(0 < _self.model.get('movie').src.indexOf('flv')) {
-							$('.mejs-overlay-play').css('display', 'nonde');
+							$('.mejs-mediaelement').css('z-index', '999999');
 						}
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');
 						}, false);
 						mediaElement.addEventListener('loadedmetadata', function(e) {
 							ns.trace('loadedmetadata');
+							_self.controller.setAdDuration(mediaElement.duration);
 						}, false);
 						mediaElement.addEventListener('canplay', function(e) {
 							ns.trace('canplay');
@@ -107,10 +106,6 @@
 						}, false);
 						mediaElement.addEventListener('play', function(e) {
 							ns.trace('play');
-							// mediaElement.setVideoSize($(document).width(), $(document).height());
-							// mediaElement.enterFullScreen();
-							if(ua.OS === 'Android') {
-							}
 						}, false);
 						mediaElement.addEventListener('playing', function(e) {
 							ns.trace('playing');
@@ -118,12 +113,7 @@
 						}, false);
 						mediaElement.addEventListener('pause', function(e) {
 							ns.trace('pause');
-							if(!_self.controller.getIsAdEnded()) {
-								if(mediaElement.currentTime < mediaElement.duration ) {
-									ns.alert('動画を最後まで再生してアンケートにお答えください');
-									// mediaElement.play();
-								}
-							}
+							_self.controller.setIsAdPaused(true);
 						}, false);
 						mediaElement.addEventListener('seeking', function(e) {
 							ns.trace('seeking');
@@ -136,8 +126,10 @@
 							// end
 							_self.controller.setIsAdEnded(true);
 							// exit fullscreen
-							if(ua.OS === "iPhone/iPod" || ua.OS === 'Android'){
+							if(ua.OS === "iPhone/iPod"){
 								$(domObject).get(0).webkitExitFullscreen();
+							}else if(ua.OS === 'Android'){
+								mediaElement.cancelFullScreen(); // this doesnt work....
 							}
 						}, false);
 						

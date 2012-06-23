@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id$
+ * @version      $Id: Conversion.js 330 2012-06-22 09:36:05Z tsuru $
  *
- * Last changed: $LastChangedDate$
+ * Last changed: $LastChangedDate: 2012-06-22 18:36:05 +0900 (Fri, 22 Jun 2012) $
  *
  */
 (function(ns, $){

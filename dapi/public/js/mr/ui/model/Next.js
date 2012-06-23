@@ -1,12 +1,12 @@
 /* vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2: */
 /**
- * CountDown class
+ * Next class
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Next.js 146 2012-06-11 08:17:50Z tsuru $
+ * @version      $Id: Next.js 331 2012-06-22 09:36:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-11 17:17:50 +0900 (月, 11 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-22 18:36:26 +0900 (Fri, 22 Jun 2012) $
  *
  */
 (function(ns){

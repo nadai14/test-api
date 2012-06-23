@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 304 2012-06-21 14:06:40Z tsuru $
+ * @version      $Id: mr.js 334 2012-06-23 08:44:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 23:06:40 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -204,6 +204,18 @@ var mr = (function($){
 			return object
 		}
 	};
+	/**
+	 * isFlashAvailable() 
+	 * @param {Object} object
+	 */
+	Namespace.prototype.isFlashAvailable = function(object){
+		// @see http://code.google.com/p/swfobject/wiki/api#swfobject.hasFlashPlayerVersion(versionStr)
+		if (swfobject.hasFlashPlayerVersion("9.0.18")) {
+			return true;
+		}else{
+			return false;
+		}
+	}
 	// return namespace object
 	Namespace.prototype.$          = $;
 	Namespace.prototype._$_        = _$_;

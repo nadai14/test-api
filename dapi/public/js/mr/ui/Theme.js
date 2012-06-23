@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Theme.js 282 2012-06-21 01:44:07Z tsuru $
+ * @version      $Id: Theme.js 334 2012-06-23 08:44:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 10:44:07 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -75,7 +75,7 @@
 			(function(_cnt){
 				if(_cnt > 20) return false; // 10 秒まで
 				var _callee    = arguments.callee;
-				var _$footer   = $(_self.header.el);
+				var _$footer   = $(_self.footer.el);
 				if(_$footer.css('background-image') === 'none') {
 					setTimeout(function(){ _callee(++_cnt); }, 50);
 				}else{

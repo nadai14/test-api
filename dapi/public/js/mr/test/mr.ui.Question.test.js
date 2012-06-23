@@ -5,9 +5,9 @@
  * 
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id$
+ * @version      $Id: mr.ui.Question.test.js 332 2012-06-22 09:36:58Z tsuru $
  *
- * Last changed: $LastChangedDate$
+ * Last changed: $LastChangedDate: 2012-06-22 18:36:58 +0900 (Fri, 22 Jun 2012) $
  * 
  * @see         http://docs.jquery.com/QUnit
  *
@@ -172,7 +172,7 @@
 	**/
 	test('createSelect()', function() {
 		var _question = new ns.root.model.Question({
-			"kind":		 "SELECT",
+			"kind":		   "select",
 			"choices":   [
 				{ "uuid":"1","content": "TEST-SELECT-1"},
 				{ "uuid":"2","content": "TEST-SELECT-2"},
@@ -186,12 +186,16 @@
 		});
 		
 		var _choices = _question.get('choices');
-		var _selects = _view.createSelect(_question);
-		equal(_selects.find('option').length,  _choices.length, 'enough inputs created');     // -- 1
+		var _select  = _view.createSelect(_question);
 		
-		_selects.find('option').each(function(i, _option){
-			var _id = _question.get('choices')[i].uuid;
-			equal($(_option).attr('value'),  _id,  '@id present'); 
+		console.log($('<p>').append(_select).html());
+		
+		equal(_select.find('option').length,  _choices.length +  1, 'enough inputs created');     // -- 1
+		
+		_select.find('option').each(function(i, _option){
+			if(i < 1) return;
+			var _value = _question.get('choices')[i - 1].content;
+			equal($(_option).attr('value'), _value,  'correct @value present'); 
 		});
 	});
 	/*
@@ -213,7 +217,7 @@
 	/*
 	**getValues()
 	*/
-	test('getValues()',function(){
+	test('getValues():text',function(){
 		// prepare model
 		var _question = new ns.root.model.Question({
 			"kind": 'text'
@@ -228,6 +232,37 @@
 		// test
 		equal(_view.getValues()[0], '日本語','Values(日本語)');
 		_body.removeChild(_el);
+	});
+	/*
+	**getValues()
+	*/
+	test('getValues():select',function(){
+		// prepare model
+		var _question = new ns.root.model.Question({
+			"kind":      'select',
+			"choices":   [
+				{ "uuid":"1","content": "TEST-SELECT-1"},
+				{ "uuid":"2","content": "TEST-SELECT-2"},
+				{ "uuid":"3","content": "TEST-SELECT-3"},
+				{ "uuid":"4","content": "TEST-SELECT-4"}
+			]
+		});
+		// create model
+		var _view = new ns.Question({
+			model: _question,
+			el:    _el
+		}).render();
+		
+		// not selecte test
+		equal(_view.getValues().length, 0, 'not selected OK');
+		
+		// select test 01
+		var _value = 'TEST-SELECT-1';
+		$('select', _view.el).val('TEST-SELECT-1');
+		
+		equal(_view.getValues().length,      1, 'selected first OK');
+		equal(_view.getValues()[0],     _value, 'selected first OK');
+		
 	});
 	
 	/*

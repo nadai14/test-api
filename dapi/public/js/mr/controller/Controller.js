@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 308 2012-06-22 01:25:15Z tsuru $
+ * @version			$Id: Controller.js 334 2012-06-23 08:44:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 10:25:15 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -37,7 +37,9 @@
 			// bind this
 			_.bindAll(this, 
 				"ajaxError", 
-				"fetchCampaign", 
+				"fetchCampaign",
+				"fetchPage",  
+				"getIsAlready",
 				"getAdCurrentTime", 
 				"setAdCurrentTime", 
 				"onAdCurrentTimeChanged", 
@@ -45,7 +47,14 @@
 				"setIsAdPlaying", 
 				"onIsAdPlayingChanged",
 				"requestThankyouPage",
-				"onIsAdEndedChanged");
+				"onIsAdEndedChanged",
+				"getIsAdPaused", 
+				"setIsAdPaused", 
+				"onIsAdPausedChanged",
+				"getAdDuration", 
+				"setAdDuration", 
+				"onAdDurationChanged"
+			);
 			
 			// 
 			this.models = {
@@ -62,14 +71,18 @@
 			this.isAdEnded     = false;
 			this.isAdPlaying   = false;
 			this.isTimePassed  = false;
-			this.adCurrentTime = 0;
 			this.isAlready     = false;
+			this.isPaused      = false;
+			this.adCurrentTime = 0;
+			this.adDuration    = 0;
 			
 			// event handler
 			this.on('change:isAdPlaying',   this.onIsAdPlayingChanged,   this);
 			this.on('change:isAdEnded',     this.onIsAdEndedChanged,     this);	
 			this.on('change:adCurrentTime', this.onAdCurrentTimeChanged, this);
 			this.on('change:isTimePassed',  this.onIsTimePassedChanged,  this);
+			this.on('change:isAdPaused',    this.onIsAdPausedChanged,  this);
+			this.on('change:adDuration',    this.onAdDurationChanged,  this);
 			
 			var _cookies = document.cookie.split(';');
 			var _parsed = {};
@@ -92,12 +105,11 @@
 		 */
 		start: function() { 
 			ns.trace(this.typeName + '#start()');
-			
 			// check uid
-			if(!this.models.parameter.has('uid')) {
+			if(this.models.parameter.has('debug') && !this.models.parameter.has('uid')) {
 			 	location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);	
 			}
-			
+			// check mid
 			if(this.models.parameter.has('mid')) {
 				if(this.models.parameter.get('already') === 1) {
 					this.already(this.models.parameter.get('mid'));
@@ -126,7 +138,7 @@
 				// ad
 				_self.models.ad.set({ 
 					"poster":     (campaign.has('thumbnail') ? campaign.get('thumbnail') : null),
-					"movies":      (campaign.has('movies') ? campaign.get('movies') : null),
+					"movies":     (campaign.has('movies') ? campaign.get('movies') : null),
 					"movie":      (campaign.has('movie') ? campaign.get('movie') : null)
 				});
 				// 
@@ -143,15 +155,33 @@
 						"selector":    ns.root.ui.slctr('landing')
 					});
 				}else{
+					// http://redmine.sunbi.co.jp/issues/1955
 					_self.models.nav.set({
-						"html":        'アンケートの回答は完了しています。'
+						"html":        '動画視聴&アンケートは完了しています。'
 					});
 					// already
 					var _model = new ns.root.ui.model.Already({
-						"title":       campaign.get('title'),
+						"title":       'アンケートは終了です。ありがとうございました。',
 						"social":      campaign.has('message') ? campaign.get('message') : '',
 						"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
 					});
+					// @see  http://redmine.sunbi.co.jp/issues/1955
+					// <レッグマジック・永谷園>
+					// → CMのサイトから購入でさらにmixiポイントをプレゼント
+					// <プラスワン>
+					// → CMのサイトから見積依頼でさらにmixiポイントをプレゼント
+					switch(_self.models.parameter.get('mid').toLowerCase()){
+						case 'LegMagicXCampaignID':
+						case 'lgmx':
+						case 'NagataniEnCampaignID':
+						case 'nagatanien':
+							_model.set('title', 'CMのサイトから購入でさらにmixiポイントをプレゼント。');
+							break;
+						case 'PlusOneCampaignID':
+						case 'plus1':
+							_model.set('title', 'CMのサイトから見積依頼でさらにmixiポイントをプレゼント。');
+							break;
+					}
 					// content
 					_self.models.content.set({ 
 						"view":        ns.root.ui.Already,
@@ -161,6 +191,16 @@
 				}
 			});
 		},
+		/**
+		 * already 
+		 */
+		already:   function(id) {
+			ns.trace(this.typeName + '#already("' + id + '")');
+      // 
+      this.isAlready = true;
+      // same as campaign
+      this.campaign(id, true);
+   	},
 		/**
 		 * sorry
 		 */
@@ -179,16 +219,6 @@
 				"selector":    ns.root.ui.slctr('sorry')
 			});
 		},
-		/**
-		 * already 
-		 */
-		already:   function(id) {
-			ns.trace(this.typeName + '#already("' + id + '")');
-      // 
-      this.isAlready = true;
-      // same as campaign
-      this.campaign(id, true);
-   	},
    	/**
    	 * 
    	 */
@@ -317,6 +347,13 @@
 					_self.ajaxError(xhr, textStatus);
 				}
 			});
+    },
+    /**
+     * 
+     */
+    getIsAlready:     function() {
+    	ns.trace(this.typeName + '#getIsAlready()');
+    	return this.isAlready;
     },
    	/**
      * 
@@ -516,7 +553,9 @@
 				"view":        ns.root.ui.Thankyou,
 				"model":       new ns.root.ui.model.Thankyou({
 				               	"title":        'おめでとうございます！',
-				               	"description":  _self._campaign.get('point') + 'をプレゼント',
+				               	// http://redmine.sunbi.co.jp/issues/1948
+				               	// http://redmine.sunbi.co.jp/issues/1974
+				               	"description":  'mixiポイントをプレゼント',
 				               	"social":       _self._campaign.get('message'),
 				               	"client_url":   _self._campaign.get('client_url')
 				               }),
@@ -579,5 +618,55 @@
     onIsAdEndedChanged: function() {
     	ns.trace(this.typeName + '#onIsAdEndedChanged()');
     },
+    /**
+     * getIsAdPaused()
+     */
+    getIsAdPaused: function() {
+    	ns.trace(this.typeName + '#getIsAdPaused()');
+    	return this.isAdPaused;
+    },
+   	/**
+     * setIsAdPaused()
+     */
+    setIsAdPaused: function(paused) {
+    	ns.trace(this.typeName + '#setIsAdPaused(' + paused + ')');
+    	if(this.isAdPaused !== paused) {
+    		this.isAdPaused = paused;	
+    		this.trigger('change:isAdPaused');
+    	}
+    	return this;
+    },
+    /**
+     * onIsAdEndedChanged() 
+     */
+    onIsAdPausedChanged: function() {
+    	ns.trace(this.typeName + '#onIsAdPausedChanged()');
+    	// nothing to do
+    },
+    /**
+     * getAdDuration()
+     */
+    getAdDuration: function() {
+    	ns.trace(this.typeName + '#getAdDuration()');
+    	return this.adDuration;
+    },
+   	/**
+     * setIsAdPaused()
+     */
+    setAdDuration: function(duration) {
+    	ns.trace(this.typeName + '#setAdDuration(' + duration + ')');
+    	if(this.adDuration !== duration) {
+    		this.adDuration = duration;	
+    		this.trigger('change:adDuration');
+    	}
+    	return this;
+    },
+    /**
+     * onIsAdEndedChanged() 
+     */
+    onAdDurationChanged: function() {
+    	ns.trace(this.typeName + '#onAdDurationChanged()');
+    	// nothing to do
+    }
 	}); 
 })(mr.controller);

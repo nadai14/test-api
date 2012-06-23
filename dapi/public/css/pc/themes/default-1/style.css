@@ -1,11 +1,6 @@
 /**
- * 	Sample theme file for Smart Phone
+ * 	Sample theme file for PC
  */
-
-.mr-ui-header {
-	background-image:url(header.png);
-}
-
-.mr-ui-footer {
-	background-image:url(footer.png);
+.mr-ui-canvas {
+	background-image:url(background.png);
 }

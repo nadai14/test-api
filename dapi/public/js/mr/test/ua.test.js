@@ -3,9 +3,9 @@
  * Test script for mr.*
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.test.js 146 2012-06-11 08:17:50Z tsuru $
+ * @version      $Id: ua.test.js 332 2012-06-22 09:36:58Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-11 17:17:50 +0900 (月, 11 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-22 18:36:58 +0900 (Fri, 22 Jun 2012) $
  * 
  * @see         http://docs.jquery.com/QUnit
  *
