@@ -17,7 +17,7 @@ success_confirm:
   second_picture: /images/creative-sp.jpg
   banner_title: 
   second_point: 10
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 success_confirm_first:
   mid: CampaignSuccessConfirmFirst
@@ -34,7 +34,7 @@ success_confirm_first:
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # nil動作確認用のデータ
 nullable:
@@ -81,7 +81,7 @@ null_answer:
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
@@ -100,7 +100,7 @@ first_page_null:
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 first_page_id_null:
   mid: FirstPageIDNullCampaignID
@@ -117,7 +117,7 @@ first_page_id_null:
   second_picture: /images/creative-sp.jpg
   banner_title: banner1
   second_point: 10
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # キャンペーンの状態が入稿前
 camp_status0:
@@ -135,7 +135,7 @@ camp_status0:
   second_picture: /images/creative-sp.jpg
   banner_title: banner2
   second_point: 20
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # キャンペーンが終了
 # キャンペーンの状態が終了
@@ -154,7 +154,7 @@ camp_status9:
   second_picture: /images/creative-sp.jpg
   banner_title: banner3
   second_point: 30
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # キャンペーンが終了日時を過ぎている
 camp_closed:
@@ -172,7 +172,7 @@ camp_closed:
   second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 # 設問と選択肢が矛盾している
 incons_question:
@@ -190,7 +190,7 @@ incons_question:
   second_picture: /images/creative-sp.jpg
   banner_title: banner4
   second_point: 40
-  client_url: http://cdn.poncan.jp
+  client_url: http://poncan.jp
 
 
 # 養命酒
