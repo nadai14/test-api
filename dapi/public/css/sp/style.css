@@ -39,8 +39,10 @@
 				margin:                 0px;
 				text-align:             center;
 				color:                  #333;
-				text-shadow:            1px 1px 0 rgba(150, 150, 150, 0.3);
-				
+				/* text-shadow:            1px 1px 1px rgba(150, 150, 150, 0.5); */   
+				                        /*1px 1px 0 rgba(150, 150, 150, 0.7),    選択肢2*/
+				                        /* 1px 0 rgba(150, 150, 150, 0.8),       選択肢3*/
+																/* 2px 2px 1px rgba(0, 0, 0, 0.5); */
 			}
 
 			/* conversion */
@@ -245,7 +247,7 @@ a .mr-ui-button
 	 -ms-transform: scale(1, 1.02); /* IE9����1.02 */
 	 -o-transform-origin: 0 0;
 	 -o-transform: scale(1, 1.01);
-	 text-shadow: 1px 1px 0 rgba(50, 50, 50, 0.3);
+	 text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.3), 1px 1px 1px rgba(50, 50, 50, 0.5);
 }
 
 /* * * * * * * * * * * * * * * * * * * *

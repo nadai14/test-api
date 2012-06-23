@@ -7,7 +7,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: mr.ui.test.js 174 2012-06-14 03:34:17Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-14 12:34:17 +0900 (Thu, 14 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-14 12:34:17 +0900 (木, 14 6 2012) $ by $Author: tsuru $
  * 
  * @see         http://docs.jquery.com/QUnit
  *

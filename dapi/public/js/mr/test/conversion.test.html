@@ -1,0 +1,51 @@
+<!doctype html> <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ANSWERS API Test - NCI-201205 Test</title>
+		<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.5.0.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js" ></script>
+		<script src="http://code.jquery.com/qunit/qunit-1.5.0.js"></script>
+		
+	</head>
+	<body id="body">
+		<div id="qunit"></div>
+		<div id="qunit-fixture"></div>
+		<div class="mr-ui-conversion">aaa</div>
+		<iframe id="conversion"></iframe>
+		<script>
+		alert((new Date()).getTime());
+		// document.write("<img src='../../../css/sp/themes/default-1/header.png?v=1 />"); 
+		var tag = '<script type="text/javascript">' + 
+									'eval(\'document.write("' + 
+									'<img src=\\\'../../../css/sp/themes/default-1/header.png?v=1 />' +
+									'");\');' + 
+									'<\/script>';
+			var $tag = $(tag);
+			console.log($(tag).get(0).tagName);
+			console.log($(tag).text());
+			
+			alert($(tag).text());
+			eval($(tag).text());
+			
+			// var _scrfipt = $(tag).text();
+			// var _string_fnc = "var _convartion = function() { " + _scrfipt +  " alert('evals'); }; ";
+			
+									/*
+			$(function() {
+				
+				$('.mr-ui-conversion').append($(tag));
+				alert($(tag).text());
+				eval($(tag).text());
+				// $('.mr-ui-conversion').get(0).innerHTML = tag;
+				// document.getElementById('body').a;.write(tag);
+				// alert($('.mr-ui-conversion').html());
+			});
+			*/
+		</script>
+	</body>
+</html>
+

@@ -8,7 +8,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: Page.js 265 2012-06-20 23:48:24Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){

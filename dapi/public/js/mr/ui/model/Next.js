@@ -6,7 +6,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: Next.js 331 2012-06-22 09:36:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 18:36:26 +0900 (Fri, 22 Jun 2012) $
+ * Last changed: $LastChangedDate: 2012-06-22 18:36:26 +0900 (金, 22 6 2012) $
  *
  */
 (function(ns){

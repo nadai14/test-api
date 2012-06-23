@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 335 2012-06-23 11:35:55Z tsuru $
+ * @version      $Id: PlayerME.js 338 2012-06-23 14:58:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -59,7 +59,7 @@
 				var _movie    = this.model.get('movie');
 				var _movies   = this.model.get('movies');
 				var _poster   = this.model.has('poster') ? this.model.get('poster') : '';
-				var _features = []; // ['playpause', 'current', 'duration', 'fullscreen'];
+				var _features = []; // ['playpause', 'fullscreen']; // ['playpause', 'current', 'duration', 'fullscreen'];
 				// set source (main)
 				_$video
 					.attr('type', _movie.type)
@@ -74,25 +74,28 @@
 						.appendTo(_$video);	
 				}	
 				// determine features
-				if(ua.OS !== 'iPhone/iPod' && ua.OS !== 'Android') {
+				if(ua.OS !== 'iPhone/iPod' && ua.OS !== 'iPad' && ua.OS !== 'Android') {
 					_features = ['playpause'];
 				}
 				// debug out put
 				ns.trace(_$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
-					flashName:                'player.swf?v=201206231718',
+					flashName:                'mr-player.swf?v=201206232346',
 					features:                 _features,
 					loop:                     false,
 					alwaysShowControls:       false,
 					usePluginFullScreen:      true,
 					enablePluginDebug:        false,
 					enableAutosize:           true,  // @see  http://redmine.sunbi.co.jp/issues/1947
-					// alwaysShowControls:       false,
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
 						if(0 < _self.model.get('movie').src.indexOf('flv')) {
 							$('.mejs-mediaelement').css('z-index', '999999');
+						}else{
+							$('.mejs-poster', self.el).click(function(){
+								mediaElement.play();
+							});
 						}
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');

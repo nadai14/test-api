@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 327 2012-06-22 07:55:33Z tsuru $
+ * @version      $Id: Complete.js 338 2012-06-23 14:58:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 16:55:33 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -71,9 +71,10 @@
 					mr.__conversion__ = function(){ 
 						_self.controller.requestThankyouPage();
 						mr.__conversion__ = false;
+						// add
 						$(_tag)
-							.appendTo($(ns.slctr('conversion')).removeClass(ns.cls('template')));
-
+							.removeClass(ns.cls('template'))
+							.appendTo($(ns.slctr('conversion')));
 						// callback late
 						setTimeout(function(){
 							mr.__conversion__ = true;

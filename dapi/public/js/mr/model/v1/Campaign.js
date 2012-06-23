@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 335 2012-06-23 11:35:55Z tsuru $
+ * @version      $Id: Campaign.js 338 2012-06-23 14:58:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $
+ * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -98,7 +98,7 @@
 						}else{
 					  	_types = ['video/3gpp', 'video/mp4'];
 						}
-					}else if(ua.OS === 'iPhone/iPod') {
+					}else if(ua.OS === 'iPhone/iPod' /* || ua.OS === 'iPad'*/) {
 						_types = ['application/x-mpegURL', 'video/mp4'];	
 					}else{
 						_types = ['video/mp4', 'video/x-flv'];
