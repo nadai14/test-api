@@ -20,6 +20,7 @@ module ApiController
   PAGE_DOES_NOT_EXIST = "ページIDが存在しない"
   ID_MISS_MATCH_PAGE = "アンケートIDとページIDが矛盾している"
   ID_MISS_MATCH_CAMPAIGN = "キャンペーンIDとアンケートIDが矛盾している"
+  ID_MISS_MATCH_QUESTION = "アンケートページと回答の設問番号が矛盾している"
   IMVALID_QUESTION = "回答に誤りが存在している"
   BEFORE_OPENING = "状態が入稿前"
   AFTER_CLOSING = "状態が終了" 
