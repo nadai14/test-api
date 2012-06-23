@@ -6,7 +6,7 @@ version: 2.8.1
 */
 body {
 	font:14px/1.231;
-	font-family:"ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", Meiryo, Osaka, sans-serif;
+	font-family:"ï¿½qï¿½ï¿½ï¿½Mï¿½mï¿½pï¿½S Pro W3", "Hiragino Kaku Gothic Pro", "ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½I", Meiryo, Osaka, sans-serif;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
@@ -90,7 +90,7 @@ aside p:last-child {
 	margin-bottom: 0;
 }
 
-/*Ÿ‚Öƒ{ƒ^ƒ“*/
+/*ï¿½ï¿½ï¿½Öƒ{ï¿½^ï¿½ï¿½*/
 .btn {
 	border-radius: 5px;
 	background-color: #f4b800;
@@ -114,9 +114,20 @@ aside p:last-child {
 
 /* clearfix */
 .clearfix:after {
-  content: ".";  /* V‚µ‚¢—v‘f‚ğì‚é */
-  display: block;  /* ƒuƒƒbƒNƒŒƒxƒ‹—v‘f‚É */
+  content: ".";  /* ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½vï¿½fï¿½ï¿½ï¿½ï¿½ï¿½ */
+  display: block;  /* ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½xï¿½ï¿½ï¿½vï¿½fï¿½ï¿½ */
   clear: both;
   height: 0;
   visibility: hidden;
+}
+
+/**
+ * Toshiya TSURU
+ */
+input[type="checkbox"],
+input[type="radio"] {
+	transform:         scale(1.4);
+	-webkit-transform: scale(1.4);
+	display:           inline-block;
+	margin-right:      0.5em;
 }

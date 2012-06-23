@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 334 2012-06-23 08:44:55Z tsuru $
+ * @version			$Id: Controller.js 335 2012-06-23 11:35:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -39,6 +39,7 @@
 				"ajaxError", 
 				"fetchCampaign",
 				"fetchPage",  
+				"getDefaultCss",
 				"getIsAlready",
 				"getAdCurrentTime", 
 				"setAdCurrentTime", 
@@ -105,19 +106,26 @@
 		 */
 		start: function() { 
 			ns.trace(this.typeName + '#start()');
-			// check uid
+			// uid auto add
 			if(this.models.parameter.has('debug') && !this.models.parameter.has('uid')) {
 			 	location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);	
 			}
+			
 			// check mid
-			if(this.models.parameter.has('mid')) {
-				if(this.models.parameter.get('already') === 1) {
-					this.already(this.models.parameter.get('mid'));
-				}else{
-					this.campaign(this.models.parameter.get('mid'));
-				}
+			if(!this.models.parameter.has('mid')) {
+				this.sorry('該当するキャン―ペーンはございません。');
+				return;
+			}
+			// check uid
+			if(!this.models.parameter.has('uid')) {
+				this.sorry('不正なリクエストです。');
+				return;
+			}
+			// switch
+			if(this.models.parameter.get('already') === 1) {
+				this.already(this.models.parameter.get('mid'));
 			}else{
-				this.sorry('ページの呼び出しが不正です。');
+				this.campaign(this.models.parameter.get('mid'));
 			}
 		},
 		/**
@@ -206,8 +214,17 @@
 		 */
 		sorry:   function(message) {
 			ns.trace(this.typeName + '#sorry("' + message + '")');
+			// keep reference
 			var _self = this;
-			
+			if(!_self.models.theme.has('css')) {
+				// @see http://redmine.sunbi.co.jp/issues/1979
+				_self.models.theme.set({
+					"css":       this.getDefaultCss()
+				});	
+			}
+			_self.models.nav.set({
+				html:          'エラー'
+			});
 			// content
 			_self.models.content.set({ 
 				"view":        ns.root.ui.Sorry,
@@ -349,7 +366,14 @@
 			});
     },
     /**
-     * 
+     * getDefaultCss
+     */
+   	getDefaultCss:    function() {
+   		ns.trace(this.typeName + '#getDefaultCss()');
+   		return 'css/pc/themes/default-1/style.css?v=20120623';
+   	},
+    /**
+     * getIsAlready
      */
     getIsAlready:     function() {
     	ns.trace(this.typeName + '#getIsAlready()');
@@ -563,9 +587,27 @@
 			});
 			// creative if exists
 			if(_self._campaign.has('second_picture')) {
+				// @see http://redmine.sunbi.co.jp/issues/1982
+				var _$creative = $('<p>')
+				if(_self._campaign.has('client_url')) {
+					// <a>
+					var _$a = $('<a>')
+					          	.attr('target', '_blank')
+					          	.attr('href',   _self._campaign.get('client_url'));
+					// <img>
+					$('<img>')
+						.attr('src', _self._campaign.get('second_picture'))
+						.appendTo(_$a);
+					// append
+					_$a.appendTo(_$creative);
+				}else{
+					$('<img>')
+						.attr('src', _self._campaign.get('second_picture'))
+						.appendTo(_$creative);
+				}
 				// scond
 				_self.models.ad.set({ 
-					"creative":    _self._campaign.get('second_picture')
+					"creative":    _$creative.html()
 				});
 			}
     },

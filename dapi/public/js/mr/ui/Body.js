@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Body.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Body.js 335 2012-06-23 11:35:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (Wed, 20 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -67,12 +67,11 @@
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
-			
 			// remove template
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
-				
+			// return
 			return this;
 		}
 	});

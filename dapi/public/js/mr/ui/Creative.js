@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Creative.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Creative.js 335 2012-06-23 11:35:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (Wed, 20 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -30,10 +30,8 @@
 		 */
 		initialize: function(){
 			ns.trace(this.typeName + '#initialize()');
-			
 			// setup template
 			this.template = _.template($(this.el).html());
-			 
 			// bind events
 			this.model.on('change', this.render, this);
 		},
@@ -48,7 +46,7 @@
 			}
 			// render
 			$(this.el).html(this.template({
-				"creative": $('<p>').append($('<img>').attr('src', this.model.get('creative'))).html()	 
+				"creative": (this.model.has('creative')) ? this.model.get('creative') : '' 	 
 			}));
 			// return this
 			return this;

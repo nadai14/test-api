@@ -75,7 +75,7 @@
 			
 				.mr-ui-content-block .mr-ui-title {
 					margin-top:        0.4em;
-					margin-bottom:     0.4em;
+					margin-bottom:     1em;
 				}
 			
 					.mr-ui-content-block .mr-ui-title b {
@@ -84,7 +84,8 @@
 					}
 				
 				.mr-ui-content-block .mr-ui-description {
-					margin-top:        0.4em;
+					margin-top:        1em;
+					margin-bottom:     1em;
 				}
 				
 			/**
@@ -99,11 +100,11 @@
 			}
 				
 				.mr-ui-page .mr-ui-questions {
-					margin-bottom:      0.4em;
+					margin-bottom:      1.5em;
 				}
 					
 					.mr-ui-questions .mr-ui-title {
-						text-align:      left;
+						text-align:       left;
 					}
 					
 					.mr-ui-questions .mr-ui-title b {
@@ -195,12 +196,11 @@
 	background:      -moz-linear-gradient(top, #E5E4E1, #9E9D9A);
 	background:      -webkit-gradient(linear, left top, left bottom, from(#E5E4E1), to(#9E9D9A));
 	width:            80%; 
-	margin-top:       5px;
+	margin-top:       0.5em;
 	margin-left:      auto;
 	margin-right:     auto;
 	display:          block;
-	line-height:      3em;/*2em*/
-	/* font-size:        85%; */
+	line-height:      3em;
 	text-align:       center;
 	cursor:           pointer;
 }

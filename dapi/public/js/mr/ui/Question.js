@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 329 2012-06-22 09:32:46Z tsuru $
+ * @version      $Id: Question.js 335 2012-06-23 11:35:55Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 18:32:46 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (Sat, 23 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -145,13 +145,13 @@
 		 */
 		createRadios:	function(choices, name, answer){
 			ns.trace(this.typeName + '#createRadios()');
-			
-			var _$container = $('<p>');
-			
+			// create wrapper
+			var _$wrapper = $('<p>');
+			// create each 
 			for(var i = 0; i < choices.length; ++i) {
-				var _option = choices[i];
-				var _id     = name + '-' + i.toString();
-				
+				var _option     = choices[i];
+				var _id         = name + '-' + i.toString();
+				var _$container = $('<p>');
 				// radio
 				this.createRadio(_option.content, _id, name)
 					.appendTo(_$container);		
@@ -167,19 +167,18 @@
 						.addClass(ns.cls((_corrent) ? 'correct' : 'wrong'))
 						.appendTo(_$container);	
 				}
-				// LR
-				$('<br>')
-					.appendTo(_$container);
+				// append to wrapper
+				_$wrapper.append(_$container);
 			}
-			
-			return $(_$container.html());
+			// return
+			return $(_$wrapper.html());
 		},
 		/**
 		 * createRadio
 		 */
 		createRadio:	function(value, id, name){
 			ns.trace(this.typeName + '#createRadio()');
-			
+			// return
 			return $('<input>')
 				.attr('type',  'radio')
 				.attr('id',    id)
@@ -191,25 +190,23 @@
 		 */
 		createCheckbox:	function(model){
 			ns.trace(this.typeName + '#addCheckbox()');
-			
-			var _$container = $('<p>');
+			var _$wrapper = $('<p>');
 			if(model.has('choices')) {
 				var options  = model.get('choices');
 				for(var i = 0; i < options.length; ++i) {
-					var option = options[i];
-					var _id    = model.cid + '-' + i.toString();
-					
-					$('<input>')
-						.attr('id',    model.cid + '-' + i.toString())
-						.attr('name',  model.cid)
-						.attr('type',  'checkbox')
-						.attr('value', option.content)
-						.appendTo(_$container);
-						
+					var option      = options[i];
+					var _id         = model.cid + '-' + i.toString();
+					var _$container = $('<p>');
+					var _$input     = $('<input>')
+					                  	.attr('id',    model.cid + '-' + i.toString())
+					                  	.attr('name',  model.cid)
+					                  	.attr('type',  'checkbox')
+					                  	.attr('value', option.content)
+					                  	.appendTo(_$container);
 					// add label
 					this.createLabel(option.content, _id)
 						.appendTo(_$container);
-						
+					// answer
 					if(model.has('answer')) {
 						// add label for answer
 						var _corrent = (model.get('answer').content === option.content); 
@@ -218,14 +215,12 @@
 							.addClass(ns.cls((_corrent) ? 'correct' : 'wrong'))
 							.appendTo(_$container);	
 					}
-					
-					$('<br>')
-						.appendTo(_$container);
+					// append to wrapper
+					_$wrapper.append(_$container);
 				}
 			}
-			return $(_$container.html());
+			return $(_$wrapper.html());
 		},
-		
 		/**
 		 * createSelect method
 		 */
