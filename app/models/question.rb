@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
   has_many :enq_question
 
   def needs_choices?
-    ['radio', 'select', 'check'].include? kind
+    ['radio', 'select', 'checkbox'].include? kind
   end
 
 end

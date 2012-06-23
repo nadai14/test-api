@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Player.js 225 2012-06-15 11:57:34Z tsuru $
+ * @version      $Id: PlayerME.js 329 2012-06-22 09:32:46Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-15 20:57:34 +0900 (金, 15 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-22 18:32:46 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -55,39 +55,32 @@
 			if($(_self.el).hasClass(ns.cls('template'))) {
 				$(_self.el).removeClass(ns.cls('template'));
 			}
+			
+			// set source
+			var _$video = $(this.el);
 			// poster
 			if(this.model.has('poster')) {
-				// $(this.el).attr('poster', this.model.get('poster'));
+				// _$video.attr('poster', this.model.get('poster'));
 			}
 			// video
-			if(this.model.has('video')) {
-				
-				ns.trace(this.typeName + '#_render():' + this.model.get('video'));
-				// set source
-				var _$source = $('<source>').attr('src', this.model.get('video'));
-				$(this.el).attr('src', this.model.get('video'));
-				if(0 <= this.model.get('video').indexOf('m3u8')) {
-					_$source.attr('type', 'application/x-mpegURL');
-				}
-				_$source.appendTo($(this.el));
-				
-				$('<object>')
-					.attr('width',  _$source.attr('width'))
-					.attr('height', _$source.attr('height'))
-					.attr('type',   'application/x-shockwave-flash')
-					.attr('data',   'flashmediaelement.swf?v=3')
-					// .attr('data',   'js/libs/flvplayer.swf')
-					.append($('<param>').attr('name', 'movie').attr('value', 'flashmediaelement.swf?v=3'))
-					// .append($('<param>').attr('name', 'movie').attr('value', 'js/libs/flvplayer.swf'))
-					.append($('<param>').attr('name', 'flashvars').attr('value', 'controls=true&amp;file=' + this.model.get('video')))
-					.append($('<param>').attr('name', 'allowfullscreen').attr('value', 'true'))
-					.appendTo(_$source);
-							
+			if(this.model.has('movie')) {
+				var _movies  = this.model.get('movies');
+				var _movie   = this.model.get('movie');
+				// set source (main)
+				_$video.attr('type', _movie.type).attr('src', _movie.src);
+				// fallback sources
+				for(var m = 0; m < _movies.length; ++m) {
+					var _movie   = _movies[m];
+					var _$source = $('<source>')
+						.attr('type', _movie.type)
+						.attr('src', _movie.src)
+						.appendTo(_$video);	
+				}	
+				// debug out put
+				ns.trace(_$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
-				// var _player = new MediaElement(this.el, {
-					// flashName:                '../flvplayer.swf',
-					flashName:                'flashmediaelement.swf?v=3',
+					flashName:                'player.swf?v=20120622',
 					features:                 ['playpause', 'current', 'duration', 'fullscreen'],
 					loop:                     false,
 					alwaysShowControls:       true,
@@ -96,7 +89,7 @@
 					// alwaysShowControls:       false,
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
-						if(0 < this.model.get('video').indexOf('flv')) {
+						if(0 < _self.model.get('movie').src.indexOf('flv')) {
 							$('.mejs-overlay-play').css('display', 'nonde');
 						}
 						mediaElement.addEventListener('progress', function(e) {
@@ -128,7 +121,7 @@
 							if(!_self.controller.getIsAdEnded()) {
 								if(mediaElement.currentTime < mediaElement.duration ) {
 									ns.alert('動画を最後まで再生してアンケートにお答えください');
-									mediaElement.play();
+									// mediaElement.play();
 								}
 							}
 						}, false);

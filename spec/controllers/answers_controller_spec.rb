@@ -102,7 +102,6 @@ describe AnswersController do
                         :conditions => ["campaign_id = ? and enq_question_id = ? and user_id = ?", campaigns(:null_answer).id, enq_questions(:null_answer_SP_page2), "uid"]
                         )
             result.length.should == 1
-			puts "result :: :#{result}:"
           end
         end
         

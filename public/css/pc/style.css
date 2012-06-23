@@ -224,6 +224,10 @@ Author: Toshiya TSURU
 					text-align:   center;
 				}
 				
+				.mr-ui-already .mr-ui-button {
+					width:         322px;
+				}
+				
 			.mr-ui-sorry {
 			}
 				

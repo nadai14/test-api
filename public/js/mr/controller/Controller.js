@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 276 2012-06-21 01:11:45Z tsuru $
+ * @version			$Id: Controller.js 308 2012-06-22 01:25:15Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 10:11:45 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-22 10:25:15 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -23,8 +23,7 @@
 		 */
 		routes: {	
 			"":                      "start",
-			"campaign/:id":          "campaign",
-			"already/:id":           "already",
+			"campaign/:id":          "campaign"
 		},
 		/**
 		 * initialize
@@ -64,6 +63,7 @@
 			this.isAdPlaying   = false;
 			this.isTimePassed  = false;
 			this.adCurrentTime = 0;
+			this.isAlready     = false;
 			
 			// event handler
 			this.on('change:isAdPlaying',   this.onIsAdPlayingChanged,   this);
@@ -93,10 +93,14 @@
 		start: function() { 
 			ns.trace(this.typeName + '#start()');
 			
-			// @ link http://backbonejs.org/#Router-navigate
+			// check uid
+			if(!this.models.parameter.has('uid')) {
+			 	location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);	
+			}
+			
 			if(this.models.parameter.has('mid')) {
 				if(this.models.parameter.get('already') === 1) {
-					this.navigate("already/" + this.models.parameter.get('mid'),  { trigger: true, replace: true });
+					this.already(this.models.parameter.get('mid'));
 				}else{
 					this.campaign(this.models.parameter.get('mid'));
 				}
@@ -122,19 +126,39 @@
 				// ad
 				_self.models.ad.set({ 
 					"poster":     (campaign.has('thumbnail') ? campaign.get('thumbnail') : null),
-					"video":      (campaign.has('movie') ? campaign.get('movie') : null)
+					"movies":      (campaign.has('movies') ? campaign.get('movies') : null),
+					"movie":      (campaign.has('movie') ? campaign.get('movie') : null)
 				});
-				// landing
-				_self.models.landing.set({ 
-					"title":       campaign.get('title'),
-					"description": campaign.has('description') ? _.template(campaign.get('description').replace('#{', '{{').replace('}', '}}'))({ "point": campaign.get('point')}) : ''
-				});
-				// content
-				_self.models.content.set({ 
-					"view":        ns.root.ui.Landing,
-					"model":       _self.models.landing,
-					"selector":    ns.root.ui.slctr('landing')
-				});
+				// 
+				if(!_self.isAlready) {
+					// landing
+					_self.models.landing.set({ 
+						"title":       campaign.get('title'),
+						"description": campaign.has('description') ? campaign.get('description') : ''
+					});
+					// content
+					_self.models.content.set({ 
+						"view":        ns.root.ui.Landing,
+						"model":       _self.models.landing,
+						"selector":    ns.root.ui.slctr('landing')
+					});
+				}else{
+					_self.models.nav.set({
+						"html":        'アンケートの回答は完了しています。'
+					});
+					// already
+					var _model = new ns.root.ui.model.Already({
+						"title":       campaign.get('title'),
+						"social":      campaign.has('message') ? campaign.get('message') : '',
+						"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
+					});
+					// content
+					_self.models.content.set({ 
+						"view":        ns.root.ui.Already,
+						"model":       _model,
+						"selector":    ns.root.ui.slctr('already')
+					});
+				}
 			});
 		},
 		/**
@@ -160,9 +184,10 @@
 		 */
 		already:   function(id) {
 			ns.trace(this.typeName + '#already("' + id + '")');
-      
+      // 
+      this.isAlready = true;
       // same as campaign
-      this.campaign(id);
+      this.campaign(id, true);
    	},
    	/**
    	 * 
@@ -213,7 +238,7 @@
 				 */
 				success: function(campaign, response) {
 					ns.trace(_self.typeName + '#fetchCampaign()#success');
-					ns.trace(JSON.stringify(campaign));
+					ns.trace(ns.stringify(campaign));
 					// set this
 					_self.wait_until = campaign.has('wait_until') ? campaign.get('wait_until') : -1;
 					// callback
@@ -251,7 +276,7 @@
 				 */
 				success: function(page, response) {
 					ns.trace(_self.typeName + '#fetchPage()#success');
-					ns.trace(JSON.stringify(page));
+					ns.trace(ns.stringify(page));
 					// set this
 					_self.wait_until = page.has('wait_until') ? page.get('wait_until') : -1;
 					// callback
@@ -271,7 +296,7 @@
      * 
      */
     sendAnswer: function(answer, success) {
-    	ns.trace(this.typeName + '#sendAnswer("' + JSON.stringify(answer.data) + '")');
+    	ns.trace(this.typeName + '#sendAnswer("' + ns.stringify(answer.data) + '")');
     	// 
     	var _self = this;
     	// send answer
@@ -419,9 +444,7 @@
 							uid:          _answer.get('uid'),
 							key:          _answer.get('key')
 						};
-						var values        = _self._page.getValues();
-						
-						ns.trace(JSON.stringify(values));
+						var values        = _page.getValues();
 						
 						var _questions    = _page.get('questions');
 						for(var i = 0; i < _questions.length; ++i ){
@@ -466,6 +489,13 @@
 					}
 				};
 				_self._requestNextPageProcess(function(){
+					_self._requestNextPageProcess = null;
+					if('undefined' !== typeof(callback)) {
+						callback();
+					}
+				});
+    	}else{
+    		_self._requestNextPageProcess(function(){
 					_self._requestNextPageProcess = null;
 					if('undefined' !== typeof(callback)) {
 						callback();

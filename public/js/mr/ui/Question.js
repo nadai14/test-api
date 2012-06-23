@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Question.js 265 2012-06-20 23:48:24Z tsuru $
+ * @version      $Id: Question.js 329 2012-06-22 09:32:46Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-22 18:32:46 +0900 (Fri, 22 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -16,15 +16,15 @@
 		/**
 		 * typeName of this class
 		 */
-		typeName: ns.typeName('Question'), 
+		typeName:   ns.typeName('Question'), 
 		/**
 		 * 
 		 */
-		tagName:  'div',
+		tagName:    'div',
 		/**
 		 * 
 		 */
-		className: ns.cls('question'),
+		className:  ns.cls('question'),
 		/**
 		 * Constructor
 		 */
@@ -227,26 +227,31 @@
 		},
 		
 		/**
-		 * createSelect
+		 * createSelect method
 		 */
 		createSelect:	function(model){
-			ns.trace(this.typeName + '#addSelect()');
-			
+			ns.trace(this.typeName + '#createSelect()');
+			if(!model.has('choices')) return '';
+			// prepare container, etc..
+			var options     = model.get('choices');
 			var _$container = $('<p>');
-			if(model.has('choices')) {
-				var options  = model.get('choices');				
-                var option = "";
-                for(var i=0; i< options.length; ++i)
-                {
-                    option += "<option value='" + options[i].uuid + "'>" + options[i].content + "</option>";
-                }
-				$('<select>')
-					.attr('id',    model.cid)
-					.attr('name',  model.cid)
-					.html(option)
-					.appendTo(_$container);
+			var _$select    = $('<select>').attr('id', model.cid).attr('name', model.cid);
+			// 
+			$('<option>')
+					.text('<お選び下さい>')
+					.addClass(ns.cls('presuedo-option'))
+					.appendTo(_$select);
+			// create <option>s for each options 
+			for(var i=0; i< options.length; ++i){
+				$('<option>')
+					.attr('value', options[i].content)
+					.text(options[i].content)
+					.appendTo(_$select);
 			}
-			return $(_$container);
+			// append to container
+			_$container.append(_$select);
+			// return html <select>...
+			return $(_$container.html());
 		},
 		/**
 		 * 
@@ -273,7 +278,16 @@
 					}
 					break;
 				case 'SELECT':
-					answerUser[0] = $(ns.slctr('answer') + ' select option:selected', this.el).text();
+					var _$select       = $(ns.slctr('answer') + ' select', this.el);
+					if(0 < _$select.length) {
+						var _$selected   = $('option:selected', _$select);
+						// 
+						//   As of jQuery 1.6, the .attr() method returns undefined
+						//   for attributes that have not been set. 
+						if(0 < _$selected.length && !_$selected.hasClass(ns.cls('presuedo-option'))) {
+							answerUser[0]	 = _$selected.attr('value');
+						}
+					}
 					break;
 				case 'TEXT':
 					if($(ns.slctr('answer') + ' :text').val().replace(/\s+/g,"")!='')

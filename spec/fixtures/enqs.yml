@@ -82,3 +82,8 @@ plus_one:
 legmagicX:
   uuid: LegMagicXEnqID
   status: 1
+
+# 永谷園
+nagatani_en:
+  uuid: NagataniEnEnqID
+  status: 1

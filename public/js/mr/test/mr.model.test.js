@@ -7,7 +7,7 @@
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
  * @version      $Id: mr.model.test.js 167 2012-06-13 01:58:51Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-13 10:58:51 +0900 (水, 13 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-13 10:58:51 +0900 (Wed, 13 Jun 2012) $ by $Author: tsuru $
  * 
  * @see         http://docs.jquery.com/QUnit
  *

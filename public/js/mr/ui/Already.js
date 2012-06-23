@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Already.js 256 2012-06-20 10:04:17Z liminghua772 $
+ * @version      $Id: Already.js 305 2012-06-21 14:48:40Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 19:04:17 +0900 (水, 20 6 2012) $ by $Author: liminghua772 $
+ * Last changed: $LastChangedDate: 2012-06-21 23:48:40 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -35,9 +35,7 @@
 			this.template = _.template($(this.el).html());
 			 
 			// bind events
-			if('undefined' !== typeof(this.model)) {
-				this.model.on('change', this.render, this);
-			}
+			this.model.on('change', this.render, this);
 		},
 		/**
 		 * 
@@ -52,10 +50,9 @@
 			
 			// render
 			$(this.el).html(this.template({
-				title:            'すでに動画視聴＆アンケートは完了しています。',
-				message:          this.model.has('message') ? this.model.get('message') : '',
-				client_url:       this.model.has('client_url') ? (this.model.get('client_url') != '' ? this.model.get('client_url') : '#') : '#',
-				go_to_client_url: 'パートナーサイトへ移動する'
+				title:            this.model.get('title'),
+				social:           this.model.get('social'),
+				client_url:       this.model.get('client_url')
 			}));
 			// return this
 			return this;

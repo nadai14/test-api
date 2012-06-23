@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="css/sp/base.css">
 		<!-- <link rel="stylesheet" href="js/libs/video-js/video-js.min.css" > -->
 		<link rel="stylesheet" href="js/libs/mediaelement/mediaelementplayer.min.css" />
-		<link rel="stylesheet" href="css/sp/style.css">
+		<link rel="stylesheet" href="css/sp/style.css?v=201206221657">
 		
 	  <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 	</head>
@@ -27,7 +27,7 @@
 		<div class="mr-ui-body">
 			
 			<div class="mr-ui-ad">
-				<video class="mr-ui-player" width="265" height="154" controls="controls"></video>
+				<video class="mr-ui-player" width="265" height="154"></video>
 				<div class="mr-ui-creative mr-ui-template">{{creative}}</div>
 			</div>
             
@@ -35,6 +35,10 @@
 				<p class="clear-type">{{html}}</p>
 			</div>
 
+			<!-- for conversion -->
+			<div class="mr-ui-conversion mr-ui-template">
+			</div>
+		
 			<section>
 				<div class="mr-ui-content">
 					
@@ -104,10 +108,12 @@
 							<b class="clear-type">{{title}}</b>
 						</div>
 						<div class="mr-ui-message">
-							{{message}}
+							{{social}}
 						</div>
 						<div class="mr-ui-client">
-							<a href="{{client_url}}" >{{go_to_client_url}}</a>
+							<button type="button" class="mr-ui-next mr-ui-button clear-type" >
+								<a target="_blank" href="{{client_url}}">クライアントサイトへ移動する</a>
+							</button>
 						</div>
 					</div>
 					
@@ -130,11 +136,7 @@
 		</div><!--wrap end-->
 
 		<div class="mr-ui-footer">
-			<img src="" width="100%" alt="&copy; xxxxxxxxxxxxxx. All Rights Reserved.">
-		</div>
-		
-		<!-- for conversion -->
-		<div class="mr-ui-conversion">
+			<img src="" width="100%" alt="">
 		</div>
 		
 		<!-- load scripts  -->
@@ -166,7 +168,7 @@
 		<script src="js/libs/URI.js"></script>
 		
 		<!-- MovieReward Scripts -->
-		<script src="js/mr.js?v=20120620"></script>
+		<script src="js/mr.js?v=201206212305"></script>
 		
 		<script src="js/mr/model/Base.js?v=20120620"></script>
 		<script src="js/mr/model/v1/Base.js?v=20120620"></script>
@@ -184,7 +186,7 @@
 				
 		<script src="js/mr/ui/Base.js?v=20120620"></script>
 		<script src="js/mr/ui/Creative.js?v=20120620"></script>
-		<script src="js/mr/ui/PlayerME.js?v=201206202131"></script>
+		<script src="js/mr/ui/PlayerME.js?v=201206211108"></script>
 		<script src="js/mr/ui/model/Nav.js?v=20120620"></script>
 		<script src="js/mr/ui/Nav.js?v=20120620"></script>
 		<script src="js/mr/ui/model/Ad.js?v=20120620"></script>
@@ -195,10 +197,11 @@
 		<script src="js/mr/ui/Next.js?v=20120620"></script>
 		<script src="js/mr/ui/Question.js?v=201206210830"></script>
 		<script src="js/mr/ui/Questions.js?v=20120620"></script>
+		<script src="js/mr/ui/model/Already.js?v=20120621"></script>
 		<script src="js/mr/ui/Already.js?v=20120620"></script>
 		<script src="js/mr/ui/Page.js?v=201206210840"></script>
 		<script src="js/mr/ui/model/Complete.js?v=20120620"></script>
-		<script src="js/mr/ui/Complete.js?v=20120620"></script>
+		<script src="js/mr/ui/Complete.js?v=201206221647"></script>
 		<script src="js/mr/ui/model/Thankyou.js?v=20120620"></script>
 		<script src="js/mr/ui/Thankyou.js?v=20120620"></script>
 		<script src="js/mr/ui/model/Sorry.js?v=20120620"></script>
@@ -209,7 +212,7 @@
 		<script src="js/mr/ui/Footer.js?v=20120620"></script>
 		<script src="js/mr/ui/Header.js?v=20120620"></script>
 		<script src="js/mr/ui/model/Theme.js?v=20120620"></script>
-		<script src="js/mr/ui/Theme.js?v=20120620"></script>
+		<script src="js/mr/ui/Theme.js?v=201206211045"></script>
 		<script src="js/mr/ui/Conversion.js?v=20120620"></script>
 		<script src="js/mr/ui/Canvas.js?v=20120620"></script>
 
@@ -223,8 +226,8 @@
     			// api: '../api/v1',                                         // relative
 					// api: 'http://192.168.1.115/nci-201205/api/v1',            // dev(tsuru local)
 					// api: 'http://demo.sunbi.co.jp/nci-201205/trunk/api/v1',   // dev(sunbi)
-					// api: 'http://moviereward.nadai.jp:3001/api/v1',           // dev
 					// api: 'http://moviereward.nadai.jp:3000/api/v1',           // prod
+					// api: 'http://moviereward.nadai.jp:3001/api/v1',           // dev
 					api: 'http://moviereward.nadai.jp:3002/api/v1',           // prod
     			el:       'mr-canvas',
     			terminal: (ua.OS === "iPhone/iPod") ? 'iPhone' : 'Android'

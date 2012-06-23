@@ -598,3 +598,76 @@ legmagicX_pc_page6:
   enq_face_id: LegMagicXPCEnqFaceID
   description: 
   next_page_id:
+
+# レッグマジックX
+nagatani_en_sp_page1:
+  uuid: NagataniEnSPEnqPage1
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id: NagataniEnSPEnqPage2
+
+nagatani_en_sp_page2:
+  uuid: NagataniEnSPEnqPage2
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id: NagataniEnSPEnqPage3
+
+nagatani_en_sp_page3:
+  uuid: NagataniEnSPEnqPage3
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id: NagataniEnSPEnqPage4
+
+nagatani_en_sp_page4:
+  uuid: NagataniEnSPEnqPage4
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id: NagataniEnSPEnqPage5
+
+nagatani_en_sp_page5:
+  uuid: NagataniEnSPEnqPage5
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id: NagataniEnSPEnqPage6
+
+nagatani_en_sp_page6:
+  uuid: NagataniEnSPEnqPage6
+  enq_face_id: NagataniEnSPEnqFaceID
+  description: 
+  next_page_id:
+
+nagatani_en_pc_page1:
+  uuid: NagataniEnPCEnqPage1
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id: NagataniEnPCEnqPage2
+
+nagatani_en_pc_page2:
+  uuid: NagataniEnPCEnqPage2
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id: NagataniEnPCEnqPage3
+
+nagatani_en_pc_page3:
+  uuid: NagataniEnPCEnqPage3
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id: NagataniEnPCEnqPage4
+
+nagatani_en_pc_page4:
+  uuid: NagataniEnPCEnqPage4
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id: NagataniEnPCEnqPage5
+
+nagatani_en_pc_page5:
+  uuid: NagataniEnPCEnqPage5
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id: NagataniEnPCEnqPage6
+
+nagatani_en_pc_page6:
+  uuid: NagataniEnPCEnqPage6
+  enq_face_id: NagataniEnPCEnqFaceID
+  description: 
+  next_page_id:

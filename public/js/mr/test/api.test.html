@@ -22,7 +22,7 @@
 						type:  "GET",
 						url:   _url,
 						data:  {
-							face:  'SP'
+							terminal:  'iPhone'
 						},
 						beforeSend: function(xhr, settings) { 
 							xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
@@ -49,7 +49,7 @@
 						type:  "GET",
 						url:   _url,
 						data:  {
-							face:  'SP'
+							terminal:  'iPhone'
 						},
 						beforeSend: function(xhr, settings) {
 							/* 
@@ -73,18 +73,16 @@
 				 * 
 				 */
 			  asyncTest('Answer test"', function() {
-			  	// var _url  = 'http://moviereward.nadai.jp:3001/api/v1/enqs/EnqStatus1/pages/EnqPCSuccessConfirmPage1/campaigns/CampaignSuccessConfirm/answers';
-			  	var _url  = 'http://nci-201205.sunbinet.local/nci-201205/api/v1/enqs/1/pages/1/campaigns/1/answers';
+			  	var _url  = 'http://moviereward.nadai.jp:3002/api/v1/enqs/PlusOneEnqID/pages/PlusOneSPEnqPage1/campaigns/PlusOneCampaignID/answers ';
+			  	// var _url  = 'http://nci-201205.sunbinet.local/nci-201205/api/v1/enqs/1/pages/1/campaigns/1/answers';
 			  	var _data = {
 			  		"session_id": "3175f6d7-a020-7ad0-cc3e-3372ea140f02",
-			  		"uid":        "1",
+			  		"uid":        "asdfasdfasdfasdf",
 			  		"key":        "mixi_uid",
-			  		"answer_1[]":  ["男性", "助成"],
-			  		"answer_2":   ["32"],
+			  		"answer_1[]":  ["男性"],
 			  	};
-			  	console.log(JSON.stringify(_data));
 			  	$.ajax({
-						type:  "GET",
+						type:  "POST",
 						url:   _url,
 						data:  _data,
 						beforeSend: function(xhr, settings) {

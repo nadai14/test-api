@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 263 2012-06-20 15:45:15Z tsuru $
+ * @version      $Id: mr.js 304 2012-06-21 14:06:40Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 00:45:15 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-21 23:06:40 +0900 (Thu, 21 Jun 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -189,6 +189,20 @@ var mr = (function($){
 		this.trace(this.namespace + '#hasParameter("' + name + '")');
 		
 		return ('undefined' !== typeof(this.getParameters()[name]));
+	};
+	/**
+	 * stringify
+   * @param {Object} name
+	 */
+	Namespace.prototype.stringify = function(object){
+		this.trace(this.namespace + '#stringify("' + object + '")');
+		
+		if('undefined' !== typeof(JSON)) {
+			return JSON.stringify(object);
+		}else{
+			this.trace('Can\'t stringify object!! this browser doesn\'t support JSON! ');
+			return object
+		}
 	};
 	// return namespace object
 	Namespace.prototype.$          = $;
