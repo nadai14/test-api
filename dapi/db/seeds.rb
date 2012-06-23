@@ -318,7 +318,7 @@ enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6'
 enq = Enq.create(status: 1)
 
 campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.mp4',
-                           thumbnail: '/css/sp/themes/nagatanien/thumbnail.png', conversion_tag: '<img src="../../images/conversion-sp.jpg alt="サンプル">', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: '')
+                           thumbnail: '/css/sp/themes/nagatanien/thumbnail.png', conversion_tag: '<img src="../../images/conversion-sp.jpg alt="サンプル">', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: 'http://cdn.poncan.jp')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/nagatanien/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/nagatanien/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
