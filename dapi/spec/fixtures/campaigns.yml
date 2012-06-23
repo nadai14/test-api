@@ -202,7 +202,7 @@ yomei_shu:
   point: 13
   opening_at: 
   closing_at: 
-  movie: /images/media/yomeishu.mp4
+  movie: /video/yomeishu/yomeishu.mp4
   thumbnail: /images/poster-sp.jpg
   message: ''
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
