@@ -221,7 +221,7 @@ plus_one:
   opening_at:
   closing_at:
   movie: /video/plus1/plus1.mp4
-  thumbnail: /css/sp/themes/plus1/thumbnail.png
+  thumbnail: /css/sp/themes/plus1/thumbnail.jpg
   message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/plus1/2nd_banne.png
@@ -239,7 +239,7 @@ legmagicX:
   opening_at:
   closing_at:
   movie: /video/lgmx/lgmx.flv
-  thumbnail: /css/sp/themes/lgmx/thumbnail.png
+  thumbnail: /css/sp/themes/lgmx/thumbnail.jpg
   message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/lgmx/2nd_banne.png
@@ -257,7 +257,7 @@ nagatani_en:
   opening_at:
   closing_at:
   movie: /video/nagatanien/nagatanien.flv
-  thumbnail: /css/sp/themes/nagatanien/thumbnail.png
+  thumbnail: /css/sp/themes/nagatanien/thumbnail.jpg
   message: ''
   conversion_tag: <img src="../../images/conversion-sp.jpg alt="サンプル">
   second_picture: /css/sp/themes/nagatanien/2nd-banner.png
