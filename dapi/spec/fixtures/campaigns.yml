@@ -223,7 +223,7 @@ plus_one:
   movie: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   thumbnail: /css/sp/themes/plus1/thumbnail.jpg
   message: ''
-  conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?adv_key=#{uid}&t=#{time}' />"
+  conversion_tag: "<img src='//moviereward.nadai.jp/imags/plus1/conversion-sp.jpg?t=#{time}' />"
   second_picture: /css/sp/themes/plus1/2nd_banne.png
   banner_title: 
   second_point: 
@@ -241,7 +241,7 @@ legmagicX:
   movie: http://moviereward.nadai.jp/video/lgmx/lgmx.flv
   thumbnail: /css/sp/themes/lgmx/thumbnail.jpg
   message: ''
-  conversion_tag: "<img src='//moviereward.nadai.jp/images/lgmx/conversion-sp.jpg?adv_key=#{uid}&t=#{time}' />"
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/lgmx/conversion-sp.jpg?t=#{time}' />"
   second_picture: /css/sp/themes/lgmx/2nd_banne.png
   banner_title: 
   second_point: 
@@ -259,7 +259,7 @@ nagatani_en:
   movie: http://moviereward.nadai.jp/video/nagatanien/nagatanien.flv
   thumbnail: /css/sp/themes/nagatanien/thumbnail.jpg
   message: ''
-  conversion_tag: "<img src='//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?adv_key=#{uid}&t=#{time}' />"
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?t=#{time}' />"
   second_picture: /css/sp/themes/nagatanien/2nd-banner.png
   banner_title: 
   second_point: 
