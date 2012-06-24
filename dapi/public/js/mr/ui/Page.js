@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Page.js 265 2012-06-20 23:48:24Z tsuru $
+ * @version      $Id: Page.js 342 2012-06-23 19:32:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 08:48:24 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -43,7 +43,7 @@
 			this.questions = new ns.Questions({ 
 				controller:  this.controller,
 				collection:  this.model.get('questions'),
-				el:          $(ns.slctr('questions'), this.el).exists() ? $(ns.slctr('questions'), this.el).get(0) : null 
+				el:          $(ns.slctr('questions'), this.el)
 			});
 			// next button
 			this.next      = new ns.Next({

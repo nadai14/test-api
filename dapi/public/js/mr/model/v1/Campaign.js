@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 340 2012-06-23 16:44:35Z tsuru $
+ * @version      $Id: Campaign.js 342 2012-06-23 19:32:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -83,9 +83,21 @@
 				 */
 				if(model.has('description')){
 					ns.trace(model.typeName + '#fetch()#success/1880');
-					model.set('description', _.template(model.get('description').replace('#{', '{{').replace('}', '}}'))({ 
+					model.set('description', _.template(ns.mustachize(model.get('description')))({ 
 						"point": model.get('point')
 					}));
+				}
+				/**
+				 * http://redmine.sunbi.co.jp/issues/1985
+				 * http://redmine.sunbi.co.jp/issues/1987
+				 */
+				if(model.has('conversion_tag')){
+					ns.trace(model.typeName + '#fetch()#success/1987');
+					model.set('conversion_tag', _.template(ns.mustachize(model.get('conversion_tag')))({ 
+						"uid":  ns.getParameter('uid'),
+						"time": (new Date()).getTime()
+					}));
+					ns.trace(model.typeName + '#fetch()#success/1987#' + model.get('conversion_tag'));
 				}
 				/**
 				 * movie fallbacks
@@ -100,7 +112,7 @@
 						}else{
 					  	_types = ['video/3gpp', 'video/mp4'];
 						}
-					}else if(ua.OS === 'iPhone/iPod' /* || ua.OS === 'iPad'*/) {
+					}else if(ua.OS === 'iPhone/iPod' || ua.OS === 'iPad') {
 						_types = ['application/x-mpegURL', 'video/mp4'];	
 					}else{
 						_types = ['video/mp4', 'video/x-flv'];

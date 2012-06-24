@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 340 2012-06-23 16:44:35Z tsuru $
+ * @version			$Id: Controller.js 342 2012-06-23 19:32:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -39,6 +39,7 @@
 				"ajaxError", 
 				"fetchCampaign",
 				"fetchPage",  
+				"requestThankyouPage",
 				"getDefaultCss",
 				"getIsAlready",
 				"getAdCurrentTime", 
@@ -598,7 +599,7 @@
 			// creative if exists
 			if(_self._campaign.has('second_picture')) {
 				// @see http://redmine.sunbi.co.jp/issues/1982
-				var _$creative = $('<p>')
+				var _$creative = $('<p>');
 				if(_self._campaign.has('client_url')) {
 					// <a>
 					var _$a = $('<a>')

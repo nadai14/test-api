@@ -1,17 +1,17 @@
 /* vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2: */
 /**
- * Complete class
+ * Complete view class
  *
  *
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 338 2012-06-23 14:58:51Z tsuru $
+ * @version      $Id: Complete.js 342 2012-06-23 19:32:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 23:58:51 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
-(function(ns, $){
+(function(ns, $, ua){
 	ns.Complete = ns.Base.extend({
 		/**
 		 * typeName of this class
@@ -51,6 +51,7 @@
 		 */
 		render: function(){
 			ns.trace(this.typeName + '#render()');
+			// keep reference
 			var _self = this;
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
@@ -66,32 +67,48 @@
 				if(this.model.has('conversion_tag')) {
 					this.next.off('click');
 					
-					var _tag        = this.model.get('conversion_tag');
-					var _client_url = this.model.get('client_url');
-					mr.__conversion__ = function(){ 
-						_self.controller.requestThankyouPage();
+					var _tag            = this.model.get('conversion_tag');
+					var _client_url     = this.model.get('client_url');
+					// onclick callback
+					mr.__conversion__   = function(){ 
 						mr.__conversion__ = false;
+						var _$container   = $(ns.slctr('conversion'), $(_self.el).closest(ns.slctr('canvas'))).removeClass(ns.cls('template'));
+						var _$tag         = $(_tag);
+						if(_$tag.get(0).tagName !== 'IMG') {
+							ns.alert('システムエラー:コンバージョンタグが不正。');
+							return;
+						} 
 						// add
-						$(_tag)
-							.removeClass(ns.cls('template'))
-							.appendTo($(ns.slctr('conversion')));
-						// callback late
-						setTimeout(function(){
-							mr.__conversion__ = true;
-						}, 1000);
+						_$tag
+							.load(function(){
+								ns.trace(_self.typeName + '#render()#__conversion__#load');
+								// wait for thank you
+								setTimeout(function(){
+									mr.__conversion__ = true;
+								}, (ua.OS === 'iPhone/iPod') ? 800 : 1500); 
+								// show thank you page 
+								_self.controller.requestThankyouPage();
+							})
+							.appendTo(_$container);
 					};
 					_$a = $('<a>')
-					          	.attr('href', _client_url)
+					          	.attr('href',   _client_url)
 					          	.attr('target', '_blank')
 					          	.attr('onclick', "javascript: " +
 					          	                 "var _url  = this.href; " +
-					          	                 "var _open = function(){ window.open(_url, '') }; " + 
+					          	                 "var _open = function(){ return window.open(_url, '_blank'); }; " + 
 					          	                 "mr.__conversion__(); " +
-					          	                 "(function(){ " +
+					          	                 "mr.__conversion_callback__ = function() { " +
 					          	                 "	var _callee = arguments.callee; " + 
-					          	                 "	if(mr.__conversion__ === true){ _open(); delete mr.__conversion__; } " +
-					          	                 "	else{ setTimeout(_callee, 1000); } " + 
-					          	                 "})(); " +
+					          	                 "	if(mr.__conversion__ === true){ " + 
+					          	                 "    if('undefined' === typeof(_open())) { " + 
+					          	                 "      location.href = _url; " +
+					          	                 "    }; " + 
+					          	                 "    delete mr.__conversion__; " + 
+					          	                 "    delete mr.__conversion_callback__; " + 
+					          	                 "  }else{ setTimeout(_callee, 1000); } " + 
+					          	                 "}; " +
+					          	                 "mr.__conversion_callback__(); " +
 					          	                 "return false;")
 					          	.text(_html)
 					          	;
@@ -103,13 +120,11 @@
 					          	;
 				}
 				_html = _$p.append(_$a).html();
-				ns.trace(_html);
+				ns.trace(this.typeName + '#render():' + _html);
 			} 
-			
-			$(this.next.render().el).html(_html);
-			
+			$(this.next.render().el).html(_html).click(function(){ $('a', this).click(); });
 			// return this
 			return this;
 		}
 	});
-})(mr.ui, mr.$);
+})(mr.ui, mr.$, mr.ua);

@@ -11,25 +11,19 @@
 		<script src="http://code.jquery.com/qunit/qunit-1.5.0.js"></script>
 		
 	</head>
-	<body id="body">
+	<body>
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
-		<div class="mr-ui-conversion">aaa</div>
-		<iframe id="conversion"></iframe>
+		<div id="conversion" class="mr-ui-conversion">aaa</div>
 		<script>
-		alert((new Date()).getTime());
-		// document.write("<img src='../../../css/sp/themes/default-1/header.png?v=1 />"); 
-		var tag = '<script type="text/javascript">' + 
-									'eval(\'document.write("' + 
-									'<img src=\\\'../../../css/sp/themes/default-1/header.png?v=1 />' +
-									'");\');' + 
-									'<\/script>';
-			var $tag = $(tag);
-			console.log($(tag).get(0).tagName);
-			console.log($(tag).text());
-			
-			alert($(tag).text());
-			eval($(tag).text());
+			$(function() {
+				var tag = "<img src='http://moviereward.nadai.jp:3002/css/sp/themes/plus1/header.png' />";
+				var $tag = $(tag);
+				$tag.load(function(){
+						alert('loaded');
+				});
+				$('#conversion').html($tag);
+			});
 			
 			// var _scrfipt = $(tag).text();
 			// var _string_fnc = "var _convartion = function() { " + _scrfipt +  " alert('evals'); }; ";

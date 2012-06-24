@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 334 2012-06-23 08:44:55Z tsuru $
+ * @version      $Id: mr.js 342 2012-06-23 19:32:26Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -208,14 +208,28 @@ var mr = (function($){
 	 * isFlashAvailable() 
 	 * @param {Object} object
 	 */
-	Namespace.prototype.isFlashAvailable = function(object){
+	Namespace.prototype.isFlashAvailable = function(){
+		this.trace(this.namespace + '#isFlashAvailable()');
 		// @see http://code.google.com/p/swfobject/wiki/api#swfobject.hasFlashPlayerVersion(versionStr)
 		if (swfobject.hasFlashPlayerVersion("9.0.18")) {
 			return true;
 		}else{
 			return false;
 		}
-	}
+	};
+	/**
+	 * 
+	 * @param {Object} object
+	 */
+	Namespace.prototype.mustachize = function(src){
+		this.trace(this.namespace + '#mustachize("' + src + '")');
+		if('undefined' === typeof(src)) {
+			return null;
+		}
+		var _ret = src.replace(/#{(\w+)}/g, '{{$1}}');
+		this.trace(this.namespace + '#mustachize("' + src + '"):' + _ret);
+		return _ret;
+	};
 	// return namespace object
 	Namespace.prototype.$          = $;
 	Namespace.prototype._$_        = _$_;
