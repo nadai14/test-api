@@ -11,31 +11,33 @@
 		<script src="qunit/qunit.js"></script>
 		<script>
 			$(function(){
-				module('Campaign API(moviereward.nadai.jp:3001) test');
-				var _url = 'http://moviereward.nadai.jp:3001/api/v1/campaigns/CampaignSuccessConfirm';
-				
+				module('Campaign API(moviereward.nadai.jp:3002) test');
+				var _url = 'http://moviereward.nadai.jp:3002/api/v1/campaigns/PlusOneCampaignID';
+				// var _url = 'http://moviereward.nadai.jp/api/v1/campaigns/PlusOneCampaignID?v=d24d4dfdfdf70'; 
 				/**
 				 * 
 				 */
 			  asyncTest('With "X-Requested-By: poncan-moviereward"', function() {
+			  	$.support.cors = true; 
 			  	$.ajax({
 						type:  "GET",
 						url:   _url,
 						data:  {
-							terminal:  'iPhone'
+							terminal:  'PC'
 						},
+						crossDomain: true,
 						beforeSend: function(xhr, settings) { 
-							xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
+						 	xhr.setRequestHeader("X-Requested-By","poncan-moviereward");
 						},
 						success:    function(data, status) {
 							ok(true,  status);
 							start();
 						},
-						complete:   function(xhr, textStatus){
-							
-						},
+						// complete:   function(xhr, textStatus){
+						// 	
+						// },
 						error:      function(xhr, status, error){
-							ok(false, 'HTTP ' + xhr.status);
+							ok(false, 'HTTP ' + xhr.status + '/' + status + '/' + error);
 							start();
 						}
 					});
@@ -49,7 +51,7 @@
 						type:  "GET",
 						url:   _url,
 						data:  {
-							terminal:  'iPhone'
+							terminal:  'PC'
 						},
 						beforeSend: function(xhr, settings) {
 							/* 
@@ -67,7 +69,7 @@
 					});
 				});
 			  
-			  module('Campaign API(moviereward.nadai.jp:3001) test');
+			  module('Campaign API(moviereward.nadai.jp:3002) test');
 			  
 			  /**
 				 * 

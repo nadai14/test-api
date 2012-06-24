@@ -270,11 +270,12 @@ Author: Toshiya TSURU
 .mr-ui-button {
 	border-radius:    5px;
 	background-color: #333;
-	background:      -moz-linear-gradient(top, #E5E4E1, #9E9D9A);
-	background:       -webkit-gradient(linear, left top, left bottom, from(#E5E4E1), to(#9E9D9A));
+  background:       -moz-linear-gradient(top, #E5E4E1, #9E9D9A); /* Mozilla */
+  background:       -webkit-gradient(linear, left top, left bottom, from(#E5E4E1), to(#9E9D9A)); /* webkit */
+	filter:           progid:DXImageTransform.Microsoft.gradient(GradientType=0,startcolorstr=#E5E4E1, endcolorstr=#9E9D9A); /*IE6 IE7 */
+  -ms-filter:       "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startcolorstr=#E5E4E1, endcolorstr=#9E9D9A))"; /* IE 8+ */
 	width:            7em;
 	line-height:      2em;
-	/* font-size:        85%; */
 	text-align:       center;
 	margin-top:       5px;
 	margin-right:     10px;
@@ -323,6 +324,10 @@ Author: Toshiya TSURU
 
 .max255 {
 	font-size:0.8em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	margin-right: 1em;
 }
 
 /* * * * * * * * * * * * * * * * * * * *
