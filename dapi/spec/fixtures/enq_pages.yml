@@ -1,7 +1,8 @@
 # coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-# スマートフォン用の動作確認データ
+# スマートフォン用
+# 動作確認データ
 sc_SP_page1:
   uuid: EnqSPSuccessConfirmPage1
   enq_face_id: EnqSPSuccessConfirm
@@ -51,7 +52,105 @@ sc_SP_page2_2_first:
   next_page_id: 
   wait_until: 1
 
-# PC用の動作確認データ
+# nil動作確認データ
+nullable_SP_page1:
+  uuid: EnqPageSPNullablePage1
+  enq_face_id: EnqSPNullable
+  next_page_id: EnqPageSPNullablePage2-1
+
+nullable_SP_page2_1:
+  uuid: EnqPageSPNullablePage2-1
+  enq_face_id: EnqSPNullable
+
+nullable_SP_page2_2:
+  uuid: EnqPageSPNullablePage2-2
+  enq_face_id: EnqSPNullable
+
+nullable_SP_first_1_page1:
+  uuid: EnqPageSPNullableFirst1Page1
+  enq_face_id: EnqSPNullableFirst1
+  next_page_id: EnqPageSPNullablePage2-1
+
+nullable_SP_first_1_page2_1:
+  uuid: EnqPageSPNullableFirst1Page2-1
+  enq_face_id: EnqSPNullableFirst1
+
+nullable_SP_first_1_page2_2:
+  uuid: EnqPageSPNullableFirst1Page2-2
+  enq_face_id: EnqSPNullable
+
+nullable_SP_first_2_page:
+  uuid: EnqPageSPNullableFirst2Page
+  enq_face_id: EnqSPNullableFirst2
+
+nullable_SP_first_3_page:
+  uuid: EnqPageSPNullableFirst3Page
+  enq_face_id: EnqSPNullableFirst3
+
+# 空回答確認用
+null_answer_SP_page1:
+  uuid: EnqSPNullAnswerPage1
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ1
+  next_page_id: EnqSPNullAnswerPage2
+  wait_until: 1
+
+null_answer_SP_page2:
+  uuid: EnqSPNullAnswerPage2
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ2
+  next_page_id: EnqSPNullAnswerPage3
+  wait_until: 1
+
+null_answer_SP_page3:
+  uuid: EnqSPNullAnswerPage3
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ3
+  next_page_id: EnqSPNullAnswerPage4
+  wait_until: 1
+
+null_answer_SP_page4:
+  uuid: EnqSPNullAnswerPage4
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ4
+  wait_until: 1
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqPageSPID
+  enq_face_id: FirstPageNullEnqFaceSPID
+  description: アンケートの最初のページがNull
+  next_page_id: 
+  wait_until: 1
+
+# キャンペーンの状態が入稿前
+camp_status0_SP:
+  uuid: CampaignStatus0EnqPageSPID
+  enq_face_id: CampaignStatus0EnqFaceSPID
+  description: キャンペーンの状態が入稿前
+  next_page_id: 
+  wait_until: 1
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqPageSPID
+  enq_face_id: CampaignClosedEnqFaceSPID
+  description: キャンペーンの状態が終了
+  next_page_id: 
+  wait_until: 1
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqPageSPID
+  enq_face_id: InconsistencyQuestionEnqFaceSPID
+  description: 設問と選択肢が矛盾している
+  next_page_id: 
+  wait_until: 1
+
+
+# PC用
+# 動作確認データ
 sc_PC_page1:
   uuid: EnqPCSuccessConfirmPage1
   enq_face_id: EnqPCSuccessConfirm
@@ -101,42 +200,7 @@ sc_PC_page2_2_first:
   next_page_id: 
   wait_until: 1
 
-# スマートフォン用のnil動作確認データ
-nullable_SP_page1:
-  uuid: EnqPageSPNullablePage1
-  enq_face_id: EnqSPNullable
-  next_page_id: EnqPageSPNullablePage2-1
-
-nullable_SP_page2_1:
-  uuid: EnqPageSPNullablePage2-1
-  enq_face_id: EnqSPNullable
-
-nullable_SP_page2_2:
-  uuid: EnqPageSPNullablePage2-2
-  enq_face_id: EnqSPNullable
-
-nullable_SP_first_1_page1:
-  uuid: EnqPageSPNullableFirst1Page1
-  enq_face_id: EnqSPNullableFirst1
-  next_page_id: EnqPageSPNullablePage2-1
-
-nullable_SP_first_1_page2_1:
-  uuid: EnqPageSPNullableFirst1Page2-1
-  enq_face_id: EnqSPNullableFirst1
-
-nullable_SP_first_1_page2_2:
-  uuid: EnqPageSPNullableFirst1Page2-2
-  enq_face_id: EnqSPNullable
-
-nullable_SP_first_2_page:
-  uuid: EnqPageSPNullableFirst2Page
-  enq_face_id: EnqSPNullableFirst2
-
-nullable_SP_first_3_page:
-  uuid: EnqPageSPNullableFirst3Page
-  enq_face_id: EnqSPNullableFirst3
-
-# PC用のnil動作確認データ
+# nil動作確認データ
 nullable_PC_page1:
   uuid: EnqPagePCNullablePage1
   enq_face_id: EnqPCNullable
@@ -172,33 +236,6 @@ nullable_PC_first_3_page:
   enq_face_id: EnqPCNullableFirst3
 
 # 空回答確認用
-null_answer_SP_page1:
-  uuid: EnqSPNullAnswerPage1
-  enq_face_id: EnqSPNullAnswer
-  description: 空回答確認用アンケSPページ1
-  next_page_id: EnqSPNullAnswerPage2
-  wait_until: 1
-
-null_answer_SP_page2:
-  uuid: EnqSPNullAnswerPage2
-  enq_face_id: EnqSPNullAnswer
-  description: 空回答確認用アンケSPページ2
-  next_page_id: EnqSPNullAnswerPage3
-  wait_until: 1
-
-null_answer_SP_page3:
-  uuid: EnqSPNullAnswerPage3
-  enq_face_id: EnqSPNullAnswer
-  description: 空回答確認用アンケSPページ3
-  next_page_id: EnqSPNullAnswerPage4
-  wait_until: 1
-
-null_answer_SP_page4:
-  uuid: EnqSPNullAnswerPage4
-  enq_face_id: EnqSPNullAnswer
-  description: 空回答確認用アンケSPページ4
-  wait_until: 1
-
 null_answer_PC_page1:
   uuid: EnqPCNullAnswerPage1
   enq_face_id: EnqPCNullAnswer
@@ -228,13 +265,6 @@ null_answer_PC_page4:
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_SP:
-  uuid: FirstPageNullEnqPageSPID
-  enq_face_id: FirstPageNullEnqFaceSPID
-  description: アンケートの最初のページがNull
-  next_page_id: 
-  wait_until: 1
-
 first_page_null_PC:
   uuid: FirstPageNullEnqPagePCID
   enq_face_id: FirstPageNullEnqFacePCID
@@ -243,13 +273,6 @@ first_page_null_PC:
   wait_until: 1
 
 # キャンペーンの状態が入稿前
-camp_status0_SP:
-  uuid: CampaignStatus0EnqPageSPID
-  enq_face_id: CampaignStatus0EnqFaceSPID
-  description: キャンペーンの状態が入稿前
-  next_page_id: 
-  wait_until: 1
-
 camp_status0_PC:
   uuid: CampaignStatus0EnqPagePCID
   enq_face_id: CampaignStatus0EnqFacePCID
@@ -258,13 +281,6 @@ camp_status0_PC:
   wait_until: 1
 
 # キャンペーンの状態が終了
-camp_closed_SP:
-  uuid: CampaignClosedEnqPageSPID
-  enq_face_id: CampaignClosedEnqFaceSPID
-  description: キャンペーンの状態が終了
-  next_page_id: 
-  wait_until: 1
-
 camp_closed_PC:
   uuid: CampaignClosedEnqPagePCID
   enq_face_id: CampaignClosedEnqFacePCID
@@ -273,13 +289,6 @@ camp_closed_PC:
   wait_until: 1
 
 # 設問と選択肢が矛盾している
-incons_question_SP:
-  uuid: InconsistencyQuestionEnqPageSPID
-  enq_face_id: InconsistencyQuestionEnqFaceSPID
-  description: 設問と選択肢が矛盾している
-  next_page_id: 
-  wait_until: 1
-
 incons_question_PC:
   uuid: InconsistencyQuestionEnqPagePCID
   enq_face_id: InconsistencyQuestionEnqFacePCID

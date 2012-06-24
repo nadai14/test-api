@@ -1,7 +1,8 @@
 ﻿# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-# スマートフォン用の動作確認データ
+# スマートフォン用
+# 動作確認データ
 sc_SP:
   uuid: EnqSPSuccessConfirm
   enq_id: EnqStatus1
@@ -22,28 +23,7 @@ sc_SP_first:
   title: アンケート1SP
   description: アンケート1説明SP
 
-# PC用の動作確認データ
-sc_PC:
-  uuid: EnqPCSuccessConfirm
-  enq_id: EnqStatus1
-  face: PC
-  first_page_id: EnqPCSuccessConfirmPage1
-  wait_until: 30
-  css: /css/pc/themes/default-1/style.css
-  title: アンケート1PC
-  description: アンケート1説明PC
-
-sc_PC_first:
-  uuid: EnqPCSuccessConfirmFirst
-  enq_id: EnqStatus1First
-  face: PC
-  first_page_id: EnqPCSuccessConfirmPage1First
-  wait_until: 30
-  css: /css/pc/themes/default-1/style.css
-  title: アンケート1PC
-  description: アンケート1説明PC
-
-# スマートフォン用のnil動作確認データ
+# nil動作確認データ
 nullable_SP:
   uuid: EnqSPNullable
   enq_id: EnqNullable
@@ -78,6 +58,85 @@ null_answer_SP:
   title: 空回答確認用アンケート1SP
   description: 空回答確認用アンケート1説明SP
 
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqFaceSPID
+  enq_id: FirstPageNullEnqID
+  face: SP
+  first_page_id: first_page_id
+  wait_until: 30
+  css: /css/sp/themes/default-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+first_page_id_null_SP:
+  uuid: FirstPageIDNullEnqFaceSPID
+  enq_id: FirstPageIDNullEnqID
+  face: SP
+  first_page_id: 
+  wait_until: 30
+  css: /css/sp/themes/default-1/style.css
+  title: アンケートの最初のページがNull
+  description: アンケートの最初のページがNull
+
+# キャンペーンの状態が入稿前
+camp_status0_SP:
+  uuid: CampaignStatus0EnqFaceSPID
+  enq_id: CampaignStatus0EnqID
+  face: SP
+  first_page_id: CampaignStatus0EnqPageSPID
+  wait_until: 30
+  css: /css/sp/themes/default-1/style.css
+  title: キャンペーンの状態が入稿前
+  description: キャンペーンの状態が入稿前
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqFaceSPID
+  enq_id: CampaignClosedEnqID
+  face: SP
+  first_page_id: CampaignClosedEnqPageSPID
+  wait_until: 30
+  css: /css/sp/themes/default-1/style.css
+  title: キャンペーンの状態が入稿前
+  description: キャンペーンの状態が入稿前
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqFaceSPID
+  enq_id: InconsistencyQuestionEnqID
+  face: SP
+  first_page_id: InconsistencyQuestionEnqPageSPID
+  wait_until: 30
+  css: /css/sp/themes/default-1/style.css
+  title: 設問と選択肢が矛盾している
+  description: 設問と選択肢が矛盾している
+
+  
+# PC用
+# 動作確認データ
+sc_PC:
+  uuid: EnqPCSuccessConfirm
+  enq_id: EnqStatus1
+  face: PC
+  first_page_id: EnqPCSuccessConfirmPage1
+  wait_until: 30
+  css: /css/pc/themes/default-1/style.css
+  title: アンケート1PC
+  description: アンケート1説明PC
+
+sc_PC_first:
+  uuid: EnqPCSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  face: PC
+  first_page_id: EnqPCSuccessConfirmPage1First
+  wait_until: 30
+  css: /css/pc/themes/default-1/style.css
+  title: アンケート1PC
+  description: アンケート1説明PC
+
+# 空回答確認用
 null_answer_PC:
   uuid: EnqPCNullAnswer
   enq_id: EnqNullAnswer
@@ -88,7 +147,7 @@ null_answer_PC:
   title: 空回答確認用アンケート1SP
   description: 空回答確認用アンケート1説明SP
 
-# PC用のnil動作確認データ
+# nil動作確認データ
 nullable_PC:
   uuid: EnqPCNullable
   enq_id: EnqNullable
@@ -114,26 +173,6 @@ nullable_PC_first_3:
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_SP:
-  uuid: FirstPageNullEnqFaceSPID
-  enq_id: FirstPageNullEnqID
-  face: SP
-  first_page_id: first_page_id
-  wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: アンケートの最初のページがNull
-  description: アンケートの最初のページがNull
-
-first_page_id_null_SP:
-  uuid: FirstPageIDNullEnqFaceSPID
-  enq_id: FirstPageIDNullEnqID
-  face: SP
-  first_page_id: 
-  wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: アンケートの最初のページがNull
-  description: アンケートの最初のページがNull
-
 first_page_null_PC:
   uuid: FirstPageNullEnqFacePCID
   enq_id: FirstPageNullEnqID
@@ -155,16 +194,6 @@ first_page_id_null_PC:
   description: アンケートの最初のページがNull
 
 # キャンペーンの状態が入稿前
-camp_status0_SP:
-  uuid: CampaignStatus0EnqFaceSPID
-  enq_id: CampaignStatus0EnqID
-  face: SP
-  first_page_id: CampaignStatus0EnqPageSPID
-  wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: キャンペーンの状態が入稿前
-  description: キャンペーンの状態が入稿前
-
 camp_status0_PC:
   uuid: CampaignStatus0EnqFacePCID
   enq_id: CampaignStatus0EnqID
@@ -176,16 +205,6 @@ camp_status0_PC:
   description: キャンペーンの状態が入稿前
 
 # キャンペーンの状態が終了
-camp_closed_SP:
-  uuid: CampaignClosedEnqFaceSPID
-  enq_id: CampaignClosedEnqID
-  face: SP
-  first_page_id: CampaignClosedEnqPageSPID
-  wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: キャンペーンの状態が入稿前
-  description: キャンペーンの状態が入稿前
-
 camp_closed_PC:
   uuid: CampaignClosedEnqFacePCID
   enq_id: CampaignClosedEnqID
@@ -197,16 +216,6 @@ camp_closed_PC:
   description: キャンペーンの状態が終了
 
 # 設問と選択肢が矛盾している
-incons_question_SP:
-  uuid: InconsistencyQuestionEnqFaceSPID
-  enq_id: InconsistencyQuestionEnqID
-  face: SP
-  first_page_id: InconsistencyQuestionEnqPageSPID
-  wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: 設問と選択肢が矛盾している
-  description: 設問と選択肢が矛盾している
-
 incons_question_PC:
   uuid: InconsistencyQuestionEnqFacePCID
   enq_id: InconsistencyQuestionEnqID
