@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 345 2012-06-24 08:33:37Z tsuru $
+ * @version			$Id: Controller.js 346 2012-06-24 09:47:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -111,7 +111,20 @@
 			if(this.models.parameter.has('debug')) {
 				if(!this.models.parameter.has('uid')) {
 			 		location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);
-			 	}	
+			 	}
+			 	if(this.models.parameter.has('mid')) {
+			 		var _mid = '';
+			 		switch(this.models.parameter.get('mid')) {
+			 			case 'plus1':      _mid = 'PlusOneCampaignID';    break;
+			 			case 'lgmx':       _mid = 'LegMagicXCampaignID';  break;
+			 			case 'nagatanien': _mid = 'NagataniEnCampaignID'; break;
+			 		}
+			 		if(0 < _mid.length) {
+			 			var _url = location.href;
+			 			_url = _url.replace(/mid=(.+)/, 'mid=' + _mid);
+			 			location.href = _url; 
+			 		}
+			 	}
 			}
 			
 			// check mid
@@ -339,8 +352,7 @@
 				 * success
 				 */
 				success: function(page, response) {
-					ns.trace(_self.typeName + '#fetchPage()#success');
-					ns.trace(ns.stringify(page));
+					ns.trace(_self.typeName + '#fetchPage()#success/' + ns.stringify(page));
 					// set this
 					_self.wait_until = page.has('wait_until') ? page.get('wait_until') : -1;
 					// callback

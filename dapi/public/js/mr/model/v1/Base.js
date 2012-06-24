@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 334 2012-06-23 08:44:55Z tsuru $
+ * @version      $Id: Base.js 346 2012-06-24 09:47:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 17:44:55 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -77,6 +77,7 @@
 	ns.absUrl = function(base, path){
 		ns.trace(ns.namespace + '#absUrl("' + base + '", "' + path + '")');
 		url = (new URI(path)).resolve(new URI(base));
+		ns.trace(ns.namespace + '#absUrl("' + base + '", "' + path + '"):' + url.toString());
 		return url.toString();
 	};
 })(mr.model.v1, mr.$, mr.ua);

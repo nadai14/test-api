@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 342 2012-06-23 19:32:26Z tsuru $
+ * @version      $Id: mr.js 346 2012-06-24 09:47:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
@@ -201,7 +201,7 @@ var mr = (function($){
 			return JSON.stringify(object);
 		}else{
 			this.trace('Can\'t stringify object!! this browser doesn\'t support JSON! ');
-			return object
+			return object;
 		}
 	};
 	/**

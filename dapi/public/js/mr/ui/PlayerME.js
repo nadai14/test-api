@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 345 2012-06-24 08:33:37Z tsuru $
+ * @version      $Id: PlayerME.js 346 2012-06-24 09:47:05Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -78,7 +78,7 @@
 					_features = ['playpause'];
 				}
 				// debug out put
-				ns.trace(_$video.parent().html());
+				ns.trace(this.typeName + '#render():' + _$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
 					flashName:                'mr-player.swf?v=201206230057',
@@ -111,7 +111,7 @@
 							ns.trace('progress');
 						}, false);
 						mediaElement.addEventListener('loadedmetadata', function(e) {
-							ns.trace('loadedmetadata');
+							ns.trace('loadedmetadata:mediaElement.duration:' + mediaElement.duration);
 							// _self.controller.setAdDuration(mediaElement.duration);
 						}, false);
 						mediaElement.addEventListener('canplay', function(e) {
