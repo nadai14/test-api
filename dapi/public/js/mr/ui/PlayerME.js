@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 340 2012-06-23 16:44:35Z tsuru $
+ * @version      $Id: PlayerME.js 344 2012-06-24 07:17:27Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 01:44:35 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -90,14 +90,16 @@
 					enableAutosize:           true,  // @see  http://redmine.sunbi.co.jp/issues/1947
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
+						// 
 						_self.el = $(domObject).closest('.mejs-container').get(0);
+						
 						if(0 < _self.model.get('movie').src.indexOf('flv')) {
 						 	$('.mejs-mediaelement', _self.el).css('z-index', '999999');
 						 	$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
 						 	$('.mejs-controls',  _self.el).css('z-index', '-999999');
 						 	// $('.mejs-overlay-play', _self.el).css('width', 0);
 						}else{
-							$('.mejs-poster', self.el).click(function(){
+							$('.mejs-poster', _self.el).click(function(){
 								mediaElement.play();
 							});
 						}

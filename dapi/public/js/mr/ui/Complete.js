@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 342 2012-06-23 19:32:26Z tsuru $
+ * @version      $Id: Complete.js 344 2012-06-24 07:17:27Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -69,6 +69,10 @@
 					
 					var _tag            = this.model.get('conversion_tag');
 					var _client_url     = this.model.get('client_url');
+					//
+					_tag                = _.template(_tag)({ 
+					 	"time":           (new Date()).getTime()
+					});
 					// onclick callback
 					mr.__conversion__   = function(){ 
 						mr.__conversion__ = false;
@@ -85,7 +89,7 @@
 								// wait for thank you
 								setTimeout(function(){
 									mr.__conversion__ = true;
-								}, (ua.OS === 'iPhone/iPod') ? 800 : 1500); 
+								}, 800); 
 								// show thank you page 
 								_self.controller.requestThankyouPage();
 							})
@@ -96,13 +100,14 @@
 					          	.attr('target', '_blank')
 					          	.attr('onclick', "javascript: " +
 					          	                 "var _url  = this.href; " +
-					          	                 "var _open = function(){ return window.open(_url, '_blank'); }; " + 
+					          	                 // "var _open = function(){ return window.open(_url, '_blank'); }; " + 
 					          	                 "mr.__conversion__(); " +
 					          	                 "mr.__conversion_callback__ = function() { " +
 					          	                 "	var _callee = arguments.callee; " + 
 					          	                 "	if(mr.__conversion__ === true){ " + 
-					          	                 "    if('undefined' === typeof(_open())) { " + 
-					          	                 "      location.href = _url; " +
+					          	                 // "    if('undefined' === typeof(_open())) { " + 
+					          	                 "    if('undefined' === typeof(window.open(_url, '_blank'))) { " +
+					          	                 // "      location.href = _url; " +
 					          	                 "    }; " + 
 					          	                 "    delete mr.__conversion__; " + 
 					          	                 "    delete mr.__conversion_callback__; " + 

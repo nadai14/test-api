@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 342 2012-06-23 19:32:26Z tsuru $
+ * @version      $Id: Campaign.js 344 2012-06-24 07:17:27Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -93,10 +93,7 @@
 				 */
 				if(model.has('conversion_tag')){
 					ns.trace(model.typeName + '#fetch()#success/1987');
-					model.set('conversion_tag', _.template(ns.mustachize(model.get('conversion_tag')))({ 
-						"uid":  ns.getParameter('uid'),
-						"time": (new Date()).getTime()
-					}));
+					model.set('conversion_tag', ns.mustachize(model.get('conversion_tag')));
 					ns.trace(model.typeName + '#fetch()#success/1987#' + model.get('conversion_tag'));
 				}
 				/**
