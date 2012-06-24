@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 345 2012-06-24 08:33:37Z tsuru $
+ * @version      $Id: Campaign.js 347 2012-06-24 10:20:21Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-24 19:20:21 +0900 (日, 24 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -102,7 +102,13 @@
 				 */
 				if(model.has('movies')) {
 					ns.trace(model.typeName + '#fetch()#success/1910');
-					var _types = ['video/3gpp', 'video/mp4', 'video/x-flv', 'application/x-mpegURL'];
+					var _types = [
+						'video/3gpp',             // .3gp
+						'video/quicktime',        // .mov
+						'video/mp4',              // .mp4
+						'video/x-flv',            // .flv
+						'application/x-mpegURL'   // .m3u8
+					];
 					if(ua.OS === 'Android') {
 						if (ns.isFlashAvailable()) {
 					  	_types = ['video/x-flv', 'video/3gpp', 'video/mp4'];
@@ -110,7 +116,11 @@
 					  	_types = ['video/3gpp', 'video/mp4'];
 						}
 					}else if(ua.OS === 'iPhone/iPod' || ua.OS === 'iPad') {
-						_types = ['application/x-mpegURL', 'video/mp4'];	
+						if(/OS 4/.test(window.navigator.userAgent)) {
+							_types = ['video/quicktime', 'video/mp4'];
+						}else{
+							_types = ['application/x-mpegURL', 'video/mp4'];	
+						}
 					}else{
 						_types = ['video/mp4', 'video/x-flv'];
 					}

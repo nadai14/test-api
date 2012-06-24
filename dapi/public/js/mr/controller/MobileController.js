@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: MobileController.js 345 2012-06-24 08:33:37Z tsuru $
+ * @version      $Id: MobileController.js 347 2012-06-24 10:20:21Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 19:20:21 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -56,7 +56,7 @@
 						});
 					// scrollto
 					$('html, body').animate({
-						crollTop: $(".mr-ui-content").offset().top
+						scrollTop: $(".mr-ui-content").offset().top
 					}, 1500);
 				});
 			}
