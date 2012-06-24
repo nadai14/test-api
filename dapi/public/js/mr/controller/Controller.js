@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 342 2012-06-23 19:32:26Z tsuru $
+ * @version			$Id: Controller.js 345 2012-06-24 08:33:37Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 04:32:26 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -108,8 +108,10 @@
 		start: function() { 
 			ns.trace(this.typeName + '#start()');
 			// uid auto add
-			if(this.models.parameter.has('debug') && !this.models.parameter.has('uid')) {
-			 	location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);	
+			if(this.models.parameter.has('debug')) {
+				if(!this.models.parameter.has('uid')) {
+			 		location.href = location.href + '&uid=' + (((1+Math.random())*0x10000000)|0).toString(16).substring(1);
+			 	}	
 			}
 			
 			// check mid
@@ -190,13 +192,13 @@
 					// <プラスワン>
 					// → CMのサイトから見積依頼でさらにmixiポイントをプレゼント
 					switch(_self.models.parameter.get('mid').toLowerCase()){
-						case 'LegMagicXCampaignID':
+						case 'legmagicxcampaignid':
 						case 'lgmx':
-						case 'NagataniEnCampaignID':
+						case 'nagataniencampaignid':
 						case 'nagatanien':
 							_model.set('title', 'CMのサイトから購入でさらにmixiポイントをプレゼント。');
 							break;
-						case 'PlusOneCampaignID':
+						case 'plusonecampaignid':
 						case 'plus1':
 							_model.set('title', 'CMのサイトから見積依頼でさらにmixiポイントをプレゼント。');
 							break;
@@ -299,6 +301,10 @@
 					ns.trace(ns.stringify(campaign));
 					// set this
 					_self.wait_until = campaign.has('wait_until') ? campaign.get('wait_until') : -1;
+					// @see http://redmine.sunbi.co.jp/issues/1991 
+					if(campaign.has('duration')) {
+						_self.setAdDuration(campaign.get('duration'));
+					}
 					// callback
 					success(campaign);
 				},
@@ -711,6 +717,9 @@
     	if(this.adDuration !== duration) {
     		this.adDuration = duration;	
     		this.trigger('change:adDuration');
+    		if(this.adDuration === Infinity) {
+    			ns.alert('Infinity');
+    		}
     	}
     	return this;
     },

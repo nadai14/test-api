@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: MobileController.js 344 2012-06-24 07:17:27Z tsuru $
+ * @version      $Id: MobileController.js 345 2012-06-24 08:33:37Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -69,7 +69,7 @@
 			
 			if(!this.getIsAdEnded() && !this.getIsAlready()) {
 				if(this.getAdCurrentTime() < this.getAdDuration() - 2 /**/) {
-					ns.alert('動画を最後まで再生してアンケートにお答えください');
+					ns.alert('動画を最後まで再生してアンケートにお答えください。(' + this.getAdCurrentTime() + '/' + this.getAdDuration() + ')');
 					// mediaElement.play();
 				}
 			}

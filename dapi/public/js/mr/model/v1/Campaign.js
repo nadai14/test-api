@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 344 2012-06-24 07:17:27Z tsuru $
+ * @version      $Id: Campaign.js 345 2012-06-24 08:33:37Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -131,6 +131,25 @@
 								// sort movie
 								_movies_sorted.push(_movie);
 							}
+						}
+					}
+					/**
+					 * @see http://redmine.sunbi.co.jp/issues/1991 
+					 */
+					if(!model.has('duration')) {
+						switch(model.get('uuid').toLowerCase()){
+							case 'plusonecampaignid':
+							case 'plus1':
+								model.set('duration', 47)
+								break;
+							case 'legmagicxcampaignid':
+							case 'lgmx':
+								model.set('duration', 150)
+								break;
+							case 'nagataniencampaignid':
+							case 'nagatanien':
+								model.set('duration', 144)
+								break;
 						}
 					}
 					model.set({

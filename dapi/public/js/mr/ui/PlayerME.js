@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 344 2012-06-24 07:17:27Z tsuru $
+ * @version      $Id: PlayerME.js 345 2012-06-24 08:33:37Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 16:17:27 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-24 17:33:37 +0900 (日, 24 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -99,7 +99,11 @@
 						 	$('.mejs-controls',  _self.el).css('z-index', '-999999');
 						 	// $('.mejs-overlay-play', _self.el).css('width', 0);
 						}else{
+							$('.mejs-overlay-loading',  _self.el).css('z-index', '-999999');
 							$('.mejs-poster', _self.el).click(function(){
+								mediaElement.play();
+							});
+							$('.mejs-mediaelement', _self.el).click(function(){
 								mediaElement.play();
 							});
 						}
@@ -108,7 +112,7 @@
 						}, false);
 						mediaElement.addEventListener('loadedmetadata', function(e) {
 							ns.trace('loadedmetadata');
-							_self.controller.setAdDuration(mediaElement.duration);
+							// _self.controller.setAdDuration(mediaElement.duration);
 						}, false);
 						mediaElement.addEventListener('canplay', function(e) {
 							ns.trace('canplay');
