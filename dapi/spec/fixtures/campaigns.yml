@@ -230,7 +230,7 @@ plus_one:
   client_url: http://www.p1-intl.com/
 
 plus_one_video480:
-  mid: PlusOneCampaignID480
+  mid: PlusOne480CampaignID
   enq_id: PlusOneEnqID
   status: 1
   platform: mixi
@@ -247,7 +247,7 @@ plus_one_video480:
   client_url: http://www.p1-intl.com/
 
 plus_one_video640:
-  mid: PlusOneCampaignID640
+  mid: PlusOne640CampaignID
   enq_id: PlusOneEnqID
   status: 1
   platform: mixi
