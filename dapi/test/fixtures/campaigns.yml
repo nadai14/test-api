@@ -237,7 +237,7 @@ plus_one_video480:
   point: 10
   opening_at:
   closing_at:
-  movie: http://moviereward.nadai.jp/video/plus1/plus1_sp.flv
+  movie: http://moviereward.nadai.jp/video/plus1/plus1_sp_480.flv
   thumbnail: /css/sp/themes/plus1/thumbnail.jpg
   message: ''
   conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
