@@ -229,6 +229,41 @@ plus_one:
   second_point: 
   client_url: http://www.p1-intl.com/
 
+plus_one_video480:
+  mid: PlusOneCampaignID
+  enq_id: PlusOneEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at:
+  closing_at:
+  movie: http://moviereward.nadai.jp/video/plus1/plus1_sp.flv
+  thumbnail: /css/sp/themes/plus1/thumbnail.jpg
+  message: ''
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
+  second_picture: /css/sp/themes/plus1/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://www.p1-intl.com/
+
+plus_one_video640:
+  mid: PlusOneCampaignID
+  enq_id: PlusOneEnqID
+  status: 1
+  platform: mixi
+  point: 10
+  opening_at:
+  closing_at:
+  movie: http://moviereward.nadai.jp/video/plus1/plus1_sp_640.flv
+  thumbnail: /css/sp/themes/plus1/thumbnail.jpg
+  message: ''
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
+  second_picture: /css/sp/themes/plus1/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://www.p1-intl.com/
+
+
 # レッグマジックX
 legmagicX:
   mid: LegMagicXCampaignID
