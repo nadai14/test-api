@@ -73,6 +73,8 @@ GEM
       activesupport (= 3.2.5)
       bundler (~> 1.0)
       railties (= 3.2.5)
+    rails3_acts_as_paranoid (0.2.4)
+      activerecord (~> 3.2)
     railties (3.2.5)
       actionpack (= 3.2.5)
       activesupport (= 3.2.5)
@@ -113,6 +115,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   rails (= 3.2.5)
+  rails3_acts_as_paranoid (~> 0.2.0)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

@@ -37,3 +37,5 @@ gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'
+
+gem "rails3_acts_as_paranoid", "~>0.2.0"
