@@ -9,14 +9,14 @@ movie1:
   duration: 100
 
 movie2:
-  uuid: Movie1
+  uuid: Movie2
   campaign_id: CampaignSuccessConfirm
   mime_type: video/x-flv
   src: /video/hoge.flv
   duration: 100
 
 movie3:
-  uuid: Movie1
+  uuid: Movie3
   campaign_id: CampaignSuccessConfirm
   src: /video/hoge.mp4
   duration: 100
