@@ -47,6 +47,8 @@ GEM
       activesupport (>= 3.0.0)
       blankslate (>= 2.1.2.4)
     journey (1.0.3)
+    jpbuilder (0.2.2)
+      jbuilder
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
@@ -111,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jbuilder
+  jpbuilder (~> 0.2.2)
   jquery-rails
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
