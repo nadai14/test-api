@@ -1,35 +1,158 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  status: 
-  platform: MyString
-  point: 
-  opening_at: 2012-06-10 00:25:34
-  closing_at: 2012-06-10 00:25:34
-  movie: MyString
-  thumbnail: MyString
-  message: MyText
-  conversion_tag: MyText
-  second_picture: MyString
-  banner_title: MyString
-  second_point: 
-  client_url: MyString
-  created_by: MyString
-  updated_by: MyString
+# 動作確認用データ
+success_confirm:
+  mid: CampaignSuccessConfirm
+  mcd: CampaignSuccessConfirm
+  enq_id: EnqStatus1
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
 
-two:
-  status: 
-  platform: MyString
-  point: 
-  opening_at: 2012-06-10 00:25:34
-  closing_at: 2012-06-10 00:25:34
-  movie: MyString
-  thumbnail: MyString
-  message: MyText
-  conversion_tag: MyText
-  second_picture: MyString
-  banner_title: MyString
-  second_point: 
-  client_url: MyString
-  created_by: MyString
-  updated_by: MyString
+success_confirm_first:
+  mid: CampaignSuccessConfirmFirst
+  mcd: CampaignSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+# nil動作確認用のデータ
+nullable:
+  mid: CampaignNullable
+  mcd: CampaignNullable
+  enq_id: EnqNullable
+  platform: gree
+  point: 40 
+  
+nullable_first_1:
+  mid: CampaignNullableFirst1
+  mcd: CampaignNullableFirst1
+  enq_id: EnqNullableFirst1
+  platform: gree
+  point: 40 
+
+nullable_first_2:
+  mid: CampaignNullableFirst2
+  mcd: CampaignNullableFirst2
+  enq_id: EnqNullableFirst2
+  platform: gree
+  point: 40 
+
+nullable_first_3:
+  mid: CampaignNullableFirst3
+  mcd: CampaignNullableFirst3
+  enq_id: EnqNullableFirst3
+  platform: gree
+  point: 40 
+
+# 空回答確認用
+null_answer:
+  mid: CampaignNullAnswer
+  mcd: CampaignNullAnswer
+  enq_id: EnqNullAnswer
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン1メッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null:
+  mid: FirstPageNullCampaignID
+  mcd: FirstPageNullCampaignID
+  enq_id: FirstPageNullEnqID
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーンメッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+first_page_id_null:
+  mid: FirstPageIDNullCampaignID
+  mcd: FirstPageIDNullCampaignID
+  enq_id: FirstPageIDNullEnqID
+  platform: mixi
+  point: 10
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2100-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーンメッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag1
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner1
+  second_point: 10
+  client_url: http://cdn.poncan.jp
+
+# キャンペーンが終了日時を過ぎている
+camp_closed:
+  mid: CampaignClosedCampaignID
+  mcd: CampaignClosedCampaignID
+  enq_id: CampaignClosedEnqID
+  platform: gree
+  point: 40
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン4メッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag4
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner4
+  second_point: 40
+  client_url: http://cdn.poncan.jp
+
+# 設問と選択肢が矛盾している
+incons_question:
+  mid: InconsistencyQuestionCampaignID
+  mcd: InconsistencyQuestionCampaignID
+  enq_id: InconsistencyQuestionEnqID
+  platform: gree
+  point: 40
+  opening_at: 2000-1-1 0:0:0
+  closing_at: 2012-1-1 0:0:0
+  thumbnail: /images/poster-pc.jpg
+  message: キャンペーン4メッセージ
+  button_text: ボタン
+  conversion_tag: cnvtag4
+  second_picture: /images/creative-sp.jpg
+  banner_title: banner4
+  second_point: 40
+  client_url: http://cdn.poncan.jp
+
+

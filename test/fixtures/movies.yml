@@ -1,0 +1,22 @@
+# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+movie1:
+  uuid: Movie1
+  campaign_id: CampaignSuccessConfirm
+  mime_type: application/x-mpegURL
+  src: /video/hoge.m3u8
+  duration: 100
+
+movie2:
+  uuid: Movie1
+  campaign_id: CampaignSuccessConfirm
+  mime_type: video/x-flv
+  src: /video/hoge.flv
+  duration: 100
+
+movie3:
+  uuid: Movie1
+  campaign_id: CampaignSuccessConfirm
+  src: /video/hoge.mp4
+  duration: 100

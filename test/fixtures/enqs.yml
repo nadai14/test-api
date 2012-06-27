@@ -1,17 +1,66 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  status: 1
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
+# 動作確認データ
+status1:
+  uuid: EnqStatus1
+  message: メッセージ
+  button_text: ボタン
 
-two:
-  status: 1
-  title: MyString
-  description: MyText
-  message: MyText
-  movie: MyString
-  thumbnail: MyString
+status1_first:
+  uuid: EnqStatus1First
+  message: メッセージ
+  button_text: ボタン
+
+
+# nil動作確認用
+nullable:
+  uuid: EnqNullable
+  message: メッセージ
+  button_text: ボタン
+
+nullable_first_1:
+  uuid: EnqNullableFirst1
+  message: メッセージ
+  button_text: ボタン
+  
+nullable_first_2:
+  uuid: EnqNullableFirst2
+  message: メッセージ
+  button_text: ボタン
+
+nullable_first_3:
+  uuid: EnqNullableFirst3
+  message: メッセージ
+  button_text: ボタン
+
+# 空回答確認用
+null_answer:
+  uuid: EnqNullAnswer
+  message: メッセージ
+  button_text: ボタン
+  
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null:
+  uuid: FirstPageNullEnqID
+  message: メッセージ
+  button_text: ボタン
+
+first_page_id_null:
+  uuid: FirstPageIDNullEnqID
+  message: メッセージ
+  button_text: ボタン
+
+# キャンペーンの状態が終了
+camp_closed:
+  uuid: CampaignClosedEnqID
+  message: メッセージ
+  button_text: ボタン
+
+# 設問と選択肢が矛盾している
+incons_question:
+  uuid: InconsistencyQuestionEnqID
+  message: メッセージ
+  button_text: ボタン
+

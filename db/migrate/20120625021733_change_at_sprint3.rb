@@ -12,7 +12,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     add_index :campaigns, :mcd
 
     # campaign_faces
-    create_table :campaigns_faces, :id => false do |t|
+    create_table :campaign_faces, :id => false do |t|
       t.string :uuid, :limit => 36, :primary => true
       t.string :campaign_id, :null => false
       t.string :face, :null => false
@@ -23,7 +23,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
       t.timestamp :updated_at
       t.timestamp :deleted_at
     end
-    add_index :campaigns_faces, [:campaign_id, :face, :deleted_at], :unique => true
+    add_index :campaign_faces, [:campaign_id, :face, :deleted_at], :unique => true
 
     # movies
     create_table :movies, :id => false do |t|
@@ -31,6 +31,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
       t.string :campaign_id, :null => false
       t.string :mime_type
       t.string :src, :null => false
+      t.integer :duration, :null => false
       t.string :updated_by
       t.timestamp :updated_at
       t.timestamp :deleted_at
@@ -86,8 +87,8 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     end
 
     # campaign_faces
-    remove_index :campaigns_faces, [:campaign_id, :face, :deleted_at]
-    drop_table :campaigns_faces
+    remove_index :campaign_faces, [:campaign_id, :face, :deleted_at]
+    drop_table :campaign_faces
 
     # movies
     remove_index :movies, [:campaign_id, :mime_type, :deleted_at]

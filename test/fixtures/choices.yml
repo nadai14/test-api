@@ -1,9 +1,348 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  question_id: MyString
-  content: MyString
+# 動作確認データ
+radio_male:
+  uuid: RadioMale
+  question_id: QuestionRadio
+  order: 1
+  content: 男性
 
-two:
-  question_id: MyString
-  content: MyString
+radio_female:
+  uuid: RadioFemale
+  question_id: QuestionRadio
+  order: 2
+  content: 女性
+
+select_choice1:
+  uuid: SelectChoice1
+  question_id: QuestionSelect
+  order: 1
+  content: 選択肢1
+
+select_choice2:
+  uuid: SelectChoice2
+  question_id: QuestionSelect
+  order: 2
+  content: 選択肢2
+
+select_hokkaido:
+  uuid: SelectHokkaido
+  question_id: QuestionPrefectures
+  order: 1
+  content: 北海道
+
+select_aomori:
+  uuid: SelectAomori
+  question_id: QuestionPrefectures
+  order: 2
+  content: 青森県
+
+select_iwate:
+  uuid: Select
+  question_id: QuestionPrefectures
+  order: 3
+  content: 岩手県
+
+select_miyagi:
+  uuid: SelectMiyagi
+  question_id: QuestionPrefectures
+  order: 4
+  content: 宮城県
+
+select_akita:
+  uuid: SelectAkita
+  question_id: QuestionPrefectures
+  order: 5
+  content: 秋田県
+
+select_yamagata:
+  uuid: SelectYamagata
+  question_id: QuestionPrefectures
+  order: 6
+  content: 山形県
+
+select_hukushima:
+  uuid: SelectHukushima
+  question_id: QuestionPrefectures
+  order: 7
+  content: 福島県
+
+select_ibaraki:
+  uuid: SelectIbaraki
+  question_id: QuestionPrefectures
+  order: 8
+  content: 茨城県
+
+select_tochigi:
+  uuid: SelectTochigi
+  question_id: QuestionPrefectures
+  order: 9
+  content: 栃木県
+
+select_gunma:
+  uuid: SelectGunma
+  question_id: QuestionPrefectures
+  order: 10
+  content: 群馬県
+
+select_saitama:
+  uuid: SelectSaitama
+  question_id: QuestionPrefectures
+  order: 11
+  content: 埼玉県
+
+select_chiba:
+  uuid: SelectChiba
+  question_id: QuestionPrefectures
+  order: 12
+  content: 千葉県
+
+select_tokyo:
+  uuid: SelectTokyo
+  question_id: QuestionPrefectures
+  order: 13
+  content: 東京都
+
+select_kanagawa:
+  uuid: SelectKanagawa
+  question_id: QuestionPrefectures
+  order: 14
+  content: 神奈川県
+
+select_niigata:
+  uuid: SelectNiigata
+  question_id: QuestionPrefectures
+  order: 15
+  content: 新潟県
+
+select_toyama:
+  uuid: SelectToyama
+  question_id: QuestionPrefectures
+  order: 16
+  content: 富山県
+
+select_ishikawa:
+  uuid: SelectIshikawa
+  question_id: QuestionPrefectures
+  order: 17
+  content: 石川県
+
+select_hukui:
+  uuid: SelectHukui
+  question_id: QuestionPrefectures
+  order: 18
+  content: 福井県
+
+select_yamanashi:
+  uuid: SelectYamanashi
+  question_id: QuestionPrefectures
+  order: 19
+  content: 山梨県
+
+select_nagano:
+  uuid: SelectNagano
+  question_id: QuestionPrefectures
+  order: 20
+  content: 長野県
+
+select_gihu:
+  uuid: SelectGihu
+  question_id: QuestionPrefectures
+  order: 21
+  content: 岐阜県
+
+select_shizuoka:
+  uuid: SelectShizuoka
+  question_id: QuestionPrefectures
+  order: 22
+  content: 静岡県
+
+select_aichi:
+  uuid: SelectAichi
+  question_id: QuestionPrefectures
+  order: 23
+  content: 愛知県
+
+select_mie:
+  uuid: SelectMie
+  question_id: QuestionPrefectures
+  order: 24
+  content: 三重県
+
+select_shiga:
+  uuid: SelectShiga
+  question_id: QuestionPrefectures
+  order: 25
+  content: 滋賀県
+
+select_Kyoto:
+  uuid: SelectKyoto
+  question_id: QuestionPrefectures
+  order: 26
+  content: 京都府
+
+select_osaka:
+  uuid: SelectOsaka
+  question_id: QuestionPrefectures
+  order: 27
+  content: 大阪府
+
+select_Hyogo:
+  uuid: SelectHyogo
+  question_id: QuestionPrefectures
+  order: 28
+  content: 兵庫県
+
+select_Nara:
+  uuid: SelectNara
+  question_id: QuestionPrefectures
+  order: 29
+  content: 奈良県
+
+select_yakayama:
+  uuid: SelectWakayama
+  question_id: QuestionPrefectures
+  order: 30
+  content: 和歌山県
+
+select_Tottori:
+  uuid: SelectTottori
+  question_id: QuestionPrefectures
+  order: 31
+  content: 鳥取県
+
+select_shimane:
+  uuid: SelectShimane
+  question_id: QuestionPrefectures
+  order: 32
+  content: 島根県
+
+select_okayama:
+  uuid: SelectOkayama
+  question_id: QuestionPrefectures
+  order: 33
+  content: 岡山県
+
+select_hiroshima:
+  uuid: SelectHiroshima
+  question_id: QuestionPrefectures
+  order: 34
+  content: 広島県
+
+select_yamaguchi:
+  uuid: SelectYamaguchi
+  question_id: QuestionPrefectures
+  order: 35
+  content: 山口県
+
+select_tokushima:
+  uuid: SelectTokushima
+  question_id: QuestionPrefectures
+  order: 36
+  content: 徳島県
+
+select_kagawa:
+  uuid: SelectKagawa
+  question_id: QuestionPrefectures
+  order: 37
+  content: 香川県
+
+select_ehime:
+  uuid: SelectEhime
+  question_id: QuestionPrefectures
+  order: 38
+  content: 愛媛県
+
+select_kouchi:
+  uuid: SelectKouchi
+  question_id: QuestionPrefectures
+  order: 39
+  content: 高知県
+
+select_hukuoka:
+  uuid: SelectHukuoka
+  question_id: QuestionPrefectures
+  order: 40
+  content: 福岡県
+
+select_saga:
+  uuid: SelectSaga
+  question_id: QuestionPrefectures
+  order: 41
+  content: 佐賀県
+
+select_nagasaki:
+  uuid: SelectNagasaki
+  question_id: QuestionPrefectures
+  order: 42
+  content: 長崎県
+
+select_kumamoto:
+  uuid: SelectKumamoto
+  question_id: QuestionPrefectures
+  order: 43
+  content: 熊本県
+
+select_oita:
+  uuid: SelectOita
+  question_id: QuestionPrefectures
+  order: 44
+  content: 大分県
+
+select_miyazaki:
+  uuid: SelectMiyazaki
+  question_id: QuestionPrefectures
+  order: 45
+  content: 宮崎県
+ 
+select_kagoshima:
+  uuid: SelectKagoshima
+  question_id: QuestionPrefectures
+  order: 46
+  content: 鹿児島県
+ 
+select_Okinawa:
+  uuid: SelectOkinawa
+  question_id: QuestionPrefectures
+  order: 47
+  content: 沖縄県
+ 
+check_choice1:
+  uuid: CheckChoice1
+  question_id: QuestionCheck
+  order: 1
+  content: チェックボックス1
+
+check_choice2:
+  uuid: CheckChoice2
+  question_id: QuestionCheck
+  order: 2
+  content: チェックボックス2
+
+check_choice3:
+  uuid: CheckChoice3
+  question_id: QuestionCheck
+  order: 3
+  content: チェックボックス3
+  
+# 空回答確認用
+unrequired_radio:
+  uuid: TmpRadio
+  question_id: QuestionUnrequiredRadio
+  order: 1
+  content: 両性
+
+unrequired_select:
+  uuid: TmpSelect
+  question_id: QuestionUnrequiredSelect
+  order: 1
+  content: 選択
+
+unrequired_check:
+  uuid: TmpCheck
+  question_id: QuestionUnrequiredCheck
+  order: 1
+  content: 選択肢
+
+  

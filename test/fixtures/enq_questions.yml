@@ -1,13 +1,278 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_page_id: MyString
+# スマートフォン用の動作確認データ
+scSPquestion1:
+  uuid: SuccessConfirmSPQuestion1
+  enq_page_id: EnqSPSuccessConfirmPage1
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionRadio
 
-two:
-  enq_page_id: MyString
+scSPquestion2:
+  uuid: SuccessConfirmSPQuestion2
+  enq_page_id: EnqSPSuccessConfirmPage1
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scSPquestion3:
+  uuid: SuccessConfirmSPQuestion3
+  enq_page_id: EnqSPSuccessConfirmPage2
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scSPquestion4_1:
+  uuid: SuccessConfirmSPQuestion4-1
+  enq_page_id: EnqSPSuccessConfirmPage3-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scSPquestion4_2:
+  uuid: SuccessConfirmSPQuestion4-2
+  enq_page_id: EnqSPSuccessConfirmPage3-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+scSPquestion1_first:
+  uuid: SuccessConfirmSPQuestion1First
+  enq_page_id: EnqSPSuccessConfirmPage1First
   num: 1
-  seq: MyString
-  question_id: MyString
+  seq: Q1
+  question_id: QuestionSelect
+
+scSPquestion2_1_first:
+  uuid: SuccessConfirmSPQuestion2_1First
+  enq_page_id: EnqSPSuccessConfirmPage2_1First
+  num: 2
+  seq: Q2
+  question_id: QuestionSelect
+
+scSPquestion2_2_first:
+  uuid: SuccessConfirmSPQuestion2_2First
+  enq_page_id: EnqSPSuccessConfirmPage2_2First
+  num: 2
+  seq: Q2
+  question_id: QuestionSelect
+
+# PC用の動作確認データ
+scPCquestion1:
+  uuid: SuccessConfirmPCQuestion1
+  enq_page_id: EnqPCSuccessConfirmPage1
+  num: 1
+  seq: Q1
+  question_id: QuestionRadio
+
+scPCquestion2:
+  uuid: SuccessConfirmPCQuestion2
+  enq_page_id: EnqPCSuccessConfirmPage1
+  num: 2
+  seq: Q2
+  question_id: QuestionNumeric
+
+scPCquestion3:
+  uuid: SuccessConfirmPCQuestion3
+  enq_page_id: EnqPCSuccessConfirmPage2
+  num: 3
+  seq: Q3
+  question_id: QuestionSelect
+
+scPCquestion4_1:
+  uuid: SuccessConfirmPCQuestion4-1
+  enq_page_id: EnqPCSuccessConfirmPage3-1
+  num: 4
+  seq: Q4
+  question_id: QuestionTextarea
+
+scPCquestion4_2:
+  uuid: SuccessConfirmPCQuestion4-2
+  enq_page_id: EnqPCSuccessConfirmPage3-2
+  num: 4
+  seq: Q4
+  question_id: QuestionCheck
+
+scPCquestion1_first:
+  uuid: SuccessConfirmPCQuestion1First
+  enq_page_id: EnqPCSuccessConfirmPage1First
+  num: 1
+  seq: Q1
+  question_id: QuestionSelect
+
+scPCquestion2_1_first:
+  uuid: SuccessConfirmPCQuestion2-1First
+  enq_page_id: EnqPCSuccessConfirmPage2-1First
+  num: 2
+  seq: Q2
+  question_id: QuestionText
+
+scPCquestion2_2_first:
+  uuid: SuccessConfirmPCQuestion2-2First
+  enq_page_id: EnqPCSuccessConfirmPage2-2First
+  num: 2
+  seq: Q2
+  question_id: QuestionText
+
+# スマートフォン用のnil動作確認データ
+nullableSPQuestion1:
+  uuid: NullableSPQuestion1
+  enq_page_id: EnqPageSPNullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullableSPuestion2_2:
+  uuid: NullableSPQuestion2-2
+  enq_page_id: EnqPageSPNullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2
+
+nullableSPQuestionFirst1:
+  uuid: NullableSPQuestionFirst1
+  enq_page_id: EnqPageSPNullableFirst1Page1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullableSPQuestionFirst3:
+  uuid: NullableSPQuestionFirst3
+  enq_page_id: EnqPageSPNullableFirst3Page
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion2
+
+# PC用のnil動作確認データ
+nullablePCuestion1:
+  uuid: NullablePCQuestion1
+  enq_page_id: EnqPagePCNullablePage1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullablePCQuestion2_2:
+  uuid: NullablePCQuestion2-2
+  enq_page_id: EnqPagePCNullablePage2-2
+  num: 2
+  seq: Q2
+  question_id: NullableQuestion2
+
+nullablePCQuestionFirst1:
+  uuid: NullablePCQuestionFirst1
+  enq_page_id: EnqPagePCNullableFirst1Page1
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion1
+
+nullablePCQuestionFirst3:
+  uuid: NullablePCQuestionFirst3
+  enq_page_id: EnqPagePCNullableFirst3Page
+  num: 1
+  seq: Q1
+  question_id: NullableQuestion2
+
+# 空回答確認用
+null_answer_SP_page1:
+  uuid: NullAnswerSPQuestion1
+  enq_page_id: EnqSPNullAnswerPage1
+  num: 1
+  seq: Q1
+  question_id: QuestionUnrequiredNumeric
+
+null_answer_SP_page2:
+  uuid: NullAnswerSPQuestion2
+  enq_page_id: EnqSPNullAnswerPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionUnrequiredRadio
+
+null_answer_SP_page3:
+  uuid: NullAnswerSPQuestion3
+  enq_page_id: EnqSPNullAnswerPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionUnrequiredSelect
+
+null_answer_SP_page4:
+  uuid: NullAnswerSPQuestion4
+  enq_page_id: EnqSPNullAnswerPage4
+  num: 4
+  seq: Q4
+  question_id: QuestionUnrequiredCheck
+
+null_answer_PC_page1:
+  uuid: NullAnswerPCQuestion1
+  enq_page_id: EnqPCNullAnswerPage1
+  num: 1
+  seq: Q1
+  question_id: QuestionUnrequiredNumeric
+
+null_answer_PC_page2:
+  uuid: NullAnswerPCQuestion2
+  enq_page_id: EnqPCNullAnswerPage2
+  num: 2
+  seq: Q2
+  question_id: QuestionUnrequiredRadio
+
+null_answer_PC_page3:
+  uuid: NullAnswerPCQuestion3
+  enq_page_id: EnqPCNullAnswerPage3
+  num: 3
+  seq: Q3
+  question_id: QuestionUnrequiredSelect
+
+null_answer_PC_page4:
+  uuid: NullAnswerPCQuestion4
+  enq_page_id: EnqPCNullAnswerPage4
+  num: 4
+  seq: Q4
+  question_id: QuestionUnrequiredCheck
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqQuestionSPID
+  enq_page_id: FirstPageNullEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqQuestionPCID
+  enq_page_id: FirstPageNullEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqQuestionSPID
+  enq_page_id: CampaignClosedEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqQuestionPCID
+  enq_page_id: CampaignClosedEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionText
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqQuestionSPID
+  enq_page_id: InconsistencyQuestionEnqPageSPID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqQuestionPCID
+  enq_page_id: InconsistencyQuestionEnqPagePCID
+  num: 1
+  seq: Q1
+  question_id: QuestionInconsistency
+

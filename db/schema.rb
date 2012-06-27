@@ -40,6 +40,20 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
 
   add_index "branches", ["enq_question_id", "answer", "deleted_at"], :name => "index_branches_on_enq_question_id_and_answer_and_deleted_at", :unique => true
 
+  create_table "campaign_faces", :id => false, :force => true do |t|
+    t.string   "uuid",        :limit => 36
+    t.string   "campaign_id",               :null => false
+    t.string   "face",                      :null => false
+    t.string   "css"
+    t.string   "title"
+    t.text     "description"
+    t.string   "updated_by"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+  end
+
+  add_index "campaign_faces", ["campaign_id", "face", "deleted_at"], :name => "index_campaign_faces_on_campaign_id_and_face_and_deleted_at", :unique => true
+
   create_table "campaigns", :id => false, :force => true do |t|
     t.string   "mid",            :limit => 36
     t.string   "enq_id"
@@ -62,20 +76,6 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
   end
 
   add_index "campaigns", ["mcd"], :name => "index_campaigns_on_mcd"
-
-  create_table "campaigns_faces", :id => false, :force => true do |t|
-    t.string   "uuid",        :limit => 36
-    t.string   "campaign_id",               :null => false
-    t.string   "face",                      :null => false
-    t.string   "css"
-    t.string   "title"
-    t.text     "description"
-    t.string   "updated_by"
-    t.datetime "updated_at"
-    t.datetime "deleted_at"
-  end
-
-  add_index "campaigns_faces", ["campaign_id", "face", "deleted_at"], :name => "index_campaigns_faces_on_campaign_id_and_face_and_deleted_at", :unique => true
 
   create_table "choices", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
     t.string   "campaign_id",               :null => false
     t.string   "mime_type"
     t.string   "src",                       :null => false
+    t.integer  "duration",                  :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
     t.datetime "deleted_at"

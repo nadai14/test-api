@@ -1,15 +1,156 @@
+﻿# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_id: MyString
-  face: TO
-  first_page_id: MyString
-  wait_until: 2012-06-03 18:07:08
-  css: MyString
+# スマートフォン用の動作確認データ
+sc_SP:
+  uuid: EnqSPSuccessConfirm
+  enq_id: EnqStatus1
+  face: SP
+  first_page_id: EnqSPSuccessConfirmPage1
+  wait_until: 30
 
-two:
-  enq_id: MyString
+sc_SP_first:
+  uuid: EnqSPSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  face: SP
+  first_page_id: EnqSPSuccessConfirmPage1First
+  wait_until: 30
+
+# PC用の動作確認データ
+sc_PC:
+  uuid: EnqPCSuccessConfirm
+  enq_id: EnqStatus1
   face: PC
-  first_page_id: MyString
-  wait_until: 2012-06-03 18:07:08
-  css: MyString
+  first_page_id: EnqPCSuccessConfirmPage1
+  wait_until: 30
+
+sc_PC_first:
+  uuid: EnqPCSuccessConfirmFirst
+  enq_id: EnqStatus1First
+  face: PC
+  first_page_id: EnqPCSuccessConfirmPage1First
+  wait_until: 30
+
+# スマートフォン用のnil動作確認データ
+nullable_SP:
+  uuid: EnqSPNullable
+  enq_id: EnqNullable
+  face: SP
+  
+nullable_SP_first_1:
+  uuid: EnqSPNullableFirst1
+  enq_id: EnqNullableFirst1
+  face: SP
+  first_page_id: EnqPageSPNullableFirst1Page1
+  
+nullable_SP_first_2:
+  uuid: EnqSPNullableFirst2
+  enq_id: EnqNullableFirst2
+  face: SP
+  first_page_id: EnqPageSPNullableFirst2Page
+  
+nullable_SP_first_3:
+  uuid: EnqSPNullableFirst3
+  enq_id: EnqNullableFirst3
+  face: SP
+  first_page_id: EnqPageSPNullableFirst3Page
+  
+# 空回答確認用
+null_answer_SP:
+  uuid: EnqSPNullAnswer
+  enq_id: EnqNullAnswer
+  face: SP
+  first_page_id: EnqSPNullAnswerPage1
+  wait_until: 30
+
+null_answer_PC:
+  uuid: EnqPCNullAnswer
+  enq_id: EnqNullAnswer
+  face: PC
+  first_page_id: EnqPCNullAnswerPage1
+  wait_until: 30
+
+# PC用のnil動作確認データ
+nullable_PC:
+  uuid: EnqPCNullable
+  enq_id: EnqNullable
+  face: PC
+
+nullable_PC_first_1:
+  uuid: EnqPCNullableFirst1
+  enq_id: EnqNullableFirst1
+  face: PC
+  first_page_id: EnqPagePCNullableFirst1Page1
+  
+nullable_PC_first_2:
+  uuid: EnqPCNullableFirst2
+  enq_id: EnqNullableFirst2
+  face: PC
+  first_page_id: EnqPagePCNullableFirst2Page
+  
+nullable_PC_first_3:
+  uuid: EnqPCNullableFirst3
+  enq_id: EnqNullableFirst3
+  face: PC
+  first_page_id: EnqPagePCNullableFirst3Page
+  
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqFaceSPID
+  enq_id: FirstPageNullEnqID
+  face: SP
+  first_page_id: first_page_id
+  wait_until: 30
+
+first_page_id_null_SP:
+  uuid: FirstPageIDNullEnqFaceSPID
+  enq_id: FirstPageIDNullEnqID
+  face: SP
+  first_page_id: 
+  wait_until: 30
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqFacePCID
+  enq_id: FirstPageNullEnqID
+  face: PC
+  first_page_id: first_page_id
+  wait_until: 30
+
+first_page_id_null_PC:
+  uuid: FirstPageIDNullEnqFacePCID
+  enq_id: FirstPageIDNullEnqID
+  face: PC
+  first_page_id: 
+  wait_until: 30
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqFaceSPID
+  enq_id: CampaignClosedEnqID
+  face: SP
+  first_page_id: CampaignClosedEnqPageSPID
+  wait_until: 30
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqFacePCID
+  enq_id: CampaignClosedEnqID
+  face: PC
+  first_page_id: CampaignClosedEnqPagePCID
+  wait_until: 30
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqFaceSPID
+  enq_id: InconsistencyQuestionEnqID
+  face: SP
+  first_page_id: InconsistencyQuestionEnqPageSPID
+  wait_until: 30
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqFacePCID
+  enq_id: InconsistencyQuestionEnqID
+  face: PC
+  first_page_id: InconsistencyQuestionEnqPagePCID
+  wait_until: 30
+

@@ -1,13 +1,274 @@
+# coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  enq_face_id: MyString
-  description: MyText
-  next_page_id: MyString
+# スマートフォン用の動作確認データ
+sc_SP_page1:
+  uuid: EnqSPSuccessConfirmPage1
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ1
+  next_page_id: EnqSPSuccessConfirmPage2
   wait_until: 1
 
-two:
-  enq_face_id: MyString
-  description: MyText
-  next_page_id: MyString
+sc_SP_page2:
+  uuid: EnqSPSuccessConfirmPage2
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ2
+  next_page_id: EnqSPSuccessConfirmPage3-1
   wait_until: 1
+
+sc_SP_page3_1:
+  uuid: EnqSPSuccessConfirmPage3-1
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ3
+  next_page_id: 
+  wait_until: 1
+
+sc_SP_page3_2:
+  uuid: EnqSPSuccessConfirmPage3-2
+  enq_face_id: EnqSPSuccessConfirm
+  description: アンケ1SPページ3
+  next_page_id: 
+  wait_until: 1
+  
+sc_SP_page1_first:
+  uuid: EnqSPSuccessConfirmPage1First
+  enq_face_id: EnqSPSuccessConfirmFirst
+  description: アンケ1SPページ1First
+  next_page_id: EnqSPSuccessConfirmPage2-1First
+  wait_until: 1
+
+sc_SP_page2_1_first:
+  uuid: EnqSPSuccessConfirmPage2-1First
+  enq_face_id: EnqSPSuccessConfirmFirst
+  description: アンケ1SPページ2-1First
+  next_page_id: 
+  wait_until: 1
+
+sc_SP_page2_2_first:
+  uuid: EnqSPSuccessConfirmPage2-2First
+  enq_face_id: EnqSPSuccessConfirmFirst
+  description: アンケ1SPページ2-2First
+  next_page_id: 
+  wait_until: 1
+
+# PC用の動作確認データ
+sc_PC_page1:
+  uuid: EnqPCSuccessConfirmPage1
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ1
+  next_page_id: EnqPCSuccessConfirmPage2
+  wait_until: 1
+
+sc_PC_page2:
+  uuid: EnqPCSuccessConfirmPage2
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ2
+  next_page_id: EnqPCSuccessConfirmPage3-1
+  wait_until: 1
+
+sc_PC_page3_1:
+  uuid: EnqPCSuccessConfirmPage3-1
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ3-1
+  next_page_id: 
+  wait_until: 1
+
+sc_PC_page3_2:
+  uuid: EnqPCSuccessConfirmPage3-2
+  enq_face_id: EnqPCSuccessConfirm
+  description: アンケ1PCページ3-2
+  next_page_id: 
+  wait_until: 1
+
+sc_PC_page1_first:
+  uuid: EnqPCSuccessConfirmPage1First
+  enq_face_id: EnqPCSuccessConfirmFirst
+  description: アンケ1PCページ1First
+  next_page_id: EnqPCSuccessConfirmPage2-1First
+  wait_until: 1
+
+sc_PC_page2_1_first:
+  uuid: EnqPCSuccessConfirmPage2-1First
+  enq_face_id: EnqPCSuccessConfirmFirst
+  description: アンケ1PCページ2-1First
+  next_page_id: 
+  wait_until: 1
+
+sc_PC_page2_2_first:
+  uuid: EnqPCSuccessConfirmPage2-2First
+  enq_face_id: EnqPCSuccessConfirmFirst
+  description: アンケ1PCページ2-2First
+  next_page_id: 
+  wait_until: 1
+
+# スマートフォン用のnil動作確認データ
+nullable_SP_page1:
+  uuid: EnqPageSPNullablePage1
+  enq_face_id: EnqSPNullable
+  next_page_id: EnqPageSPNullablePage2-1
+
+nullable_SP_page2_1:
+  uuid: EnqPageSPNullablePage2-1
+  enq_face_id: EnqSPNullable
+
+nullable_SP_page2_2:
+  uuid: EnqPageSPNullablePage2-2
+  enq_face_id: EnqSPNullable
+
+nullable_SP_first_1_page1:
+  uuid: EnqPageSPNullableFirst1Page1
+  enq_face_id: EnqSPNullableFirst1
+  next_page_id: EnqPageSPNullablePage2-1
+
+nullable_SP_first_1_page2_1:
+  uuid: EnqPageSPNullableFirst1Page2-1
+  enq_face_id: EnqSPNullableFirst1
+
+nullable_SP_first_1_page2_2:
+  uuid: EnqPageSPNullableFirst1Page2-2
+  enq_face_id: EnqSPNullable
+
+nullable_SP_first_2_page:
+  uuid: EnqPageSPNullableFirst2Page
+  enq_face_id: EnqSPNullableFirst2
+
+nullable_SP_first_3_page:
+  uuid: EnqPageSPNullableFirst3Page
+  enq_face_id: EnqSPNullableFirst3
+
+# PC用のnil動作確認データ
+nullable_PC_page1:
+  uuid: EnqPagePCNullablePage1
+  enq_face_id: EnqPCNullable
+  next_page_id: EnqPagePCNullablePage2-1
+
+nullable_PC_page2_1:
+  uuid: EnqPagePCNullablePage2-1
+  enq_face_id: EnqPCNullable
+
+nullable_PC_page2_2:
+  uuid: EnqPagePCNullablePage2-2
+  enq_face_id: EnqPCNullable
+  
+nullable_PC_first_1_page1:
+  uuid: EnqPagePCNullableFirst1Page1
+  enq_face_id: EnqPCNullableFirst1
+  next_page_id: EnqPagePCNullablePage2-1
+
+nullable_PC_first_1_page2_1:
+  uuid: EnqPagePCNullableFirst1Page2-1
+  enq_face_id: EnqPCNullableFirst1
+
+nullable_PC_first_1_page2_2:
+  uuid: EnqPagePCNullableFirst1Page2-2
+  enq_face_id: EnqPCNullable
+
+nullable_PC_first_2_page:
+  uuid: EnqPagePCNullableFirst2Page
+  enq_face_id: EnqPCNullableFirst2
+
+nullable_PC_first_3_page:
+  uuid: EnqPagePCNullableFirst3Page
+  enq_face_id: EnqPCNullableFirst3
+
+# 空回答確認用
+null_answer_SP_page1:
+  uuid: EnqSPNullAnswerPage1
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ1
+  next_page_id: EnqSPNullAnswerPage2
+  wait_until: 1
+
+null_answer_SP_page2:
+  uuid: EnqSPNullAnswerPage2
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ2
+  next_page_id: EnqSPNullAnswerPage3
+  wait_until: 1
+
+null_answer_SP_page3:
+  uuid: EnqSPNullAnswerPage3
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ3
+  next_page_id: EnqSPNullAnswerPage4
+  wait_until: 1
+
+null_answer_SP_page4:
+  uuid: EnqSPNullAnswerPage4
+  enq_face_id: EnqSPNullAnswer
+  description: 空回答確認用アンケSPページ4
+  wait_until: 1
+
+null_answer_PC_page1:
+  uuid: EnqPCNullAnswerPage1
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ1
+  next_page_id: EnqPCNullAnswerPage2
+  wait_until: 1
+
+null_answer_PC_page2:
+  uuid: EnqPCNullAnswerPage2
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ2
+  next_page_id: EnqPCNullAnswerPage3
+  wait_until: 1
+
+null_answer_PC_page3:
+  uuid: EnqPCNullAnswerPage3
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ3
+  next_page_id: EnqPCNullAnswerPage4
+  wait_until: 1
+
+null_answer_PC_page4:
+  uuid: EnqPCNullAnswerPage4
+  enq_face_id: EnqPCNullAnswer
+  description: 空回答確認用アンケPCページ4
+  wait_until: 1
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullEnqPageSPID
+  enq_face_id: FirstPageNullEnqFaceSPID
+  description: アンケートの最初のページがNull
+  next_page_id: 
+  wait_until: 1
+
+first_page_null_PC:
+  uuid: FirstPageNullEnqPagePCID
+  enq_face_id: FirstPageNullEnqFacePCID
+  description: アンケートの最初のページがNull
+  next_page_id: 
+  wait_until: 1
+
+# キャンペーンの状態が終了
+camp_closed_SP:
+  uuid: CampaignClosedEnqPageSPID
+  enq_face_id: CampaignClosedEnqFaceSPID
+  description: キャンペーンの状態が終了
+  next_page_id: 
+  wait_until: 1
+
+camp_closed_PC:
+  uuid: CampaignClosedEnqPagePCID
+  enq_face_id: CampaignClosedEnqFacePCID
+  description: キャンペーンの状態が終了
+  next_page_id: 
+  wait_until: 1
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionEnqPageSPID
+  enq_face_id: InconsistencyQuestionEnqFaceSPID
+  description: 設問と選択肢が矛盾している
+  next_page_id: 
+  wait_until: 1
+
+incons_question_PC:
+  uuid: InconsistencyQuestionEnqPagePCID
+  enq_face_id: InconsistencyQuestionEnqFacePCID
+  description: 設問と選択肢が矛盾している
+  next_page_id: 
+  wait_until: 1
+
