@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   before_filter :append_header, :if => :development?
   before_filter :accept_callback, :if => :development?
   before_filter :reject_callback, :unless => :development?
-  before_filter :check_requested_by, :except => :options
+  before_filter :check_requested_by, :except => :options, :unless => :development?
 
   def check_requested_by
     raise UnauthorizedException.new UNAUTHORIZED unless request.headers["X-Requested-By"] == "poncan-moviereward"
