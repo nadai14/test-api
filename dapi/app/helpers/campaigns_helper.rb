@@ -26,16 +26,4 @@ module CampaignsHelper
     '<p>アンケートは終了です。ありがとうございました。</p>'
   end
 
-  def defaultButtonText
-    'CMのサイトを見る'
-  end
-
-  def defaultEnqMessage
-    '<p>アンケートが完了しました。</p>'
-  end
-
-  def defaultEnqButtonText
-    'ポイントをもらう'
-  end
-
 end

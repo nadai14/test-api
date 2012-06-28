@@ -1,8 +1,7 @@
 class EnqPage < ActiveRecord::Base
   include Extensions::UUID
-  acts_as_paranoid
 
-  attr_accessible :description, :enq_face_id, :next_page_id, :wait_until
+  attr_accessible :description, :enq_face_id, :next_page_id, :wait_until, :updated_by, :updated_at
 
   belongs_to :enq_face
   belongs_to :enq_page

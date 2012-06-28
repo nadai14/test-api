@@ -1,8 +1,6 @@
 class Choice < ActiveRecord::Base
   include Extensions::UUID
-  acts_as_paranoid
-
-  attr_accessible :content, :question_id, :order
+  attr_accessible :content, :question_id, :order, :updated_by, :updated_at
 
   belongs_to :question
 end

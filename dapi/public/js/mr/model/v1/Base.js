@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Base.js 346 2012-06-24 09:47:05Z tsuru $
+ * @version      $Id: Base.js 363 2012-06-24 19:19:45Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-25 04:19:45 +0900 (月, 25 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -48,6 +48,7 @@
 			 */
 			beforeSend: function(xhr, settings) {
 				ns.trace(ns.namespace + '#beforeSend:' + settings.type + "\t" + settings.url);
+				ns.trace(ns.namespace + '#beforeSend:' + ns.stringify(xhr));
 				//@link http://redmine.sunbi.co.jp/issues/1763
 				//@see http://api.jquery.com/jQuery.ajax/
 				//@see http://zeptojs.com#ajax

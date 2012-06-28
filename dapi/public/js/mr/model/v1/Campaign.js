@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 347 2012-06-24 10:20:21Z tsuru $
+ * @version      $Id: Campaign.js 361 2012-06-24 18:10:40Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 19:20:21 +0900 (日, 24 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-25 03:10:40 +0900 (月, 25 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -111,15 +111,16 @@
 					];
 					if(ua.OS === 'Android') {
 						if (ns.isFlashAvailable()) {
-					  	_types = ['video/x-flv', 'video/3gpp', 'video/mp4'];
+					  	_types = ['video/x-flv', 'video/mp4', 'video/3gpp'];
+					  	// _types = ['video/3gpp', 'video/mp4', 'video/x-flv'];
 						}else{
-					  	_types = ['video/3gpp', 'video/mp4'];
+					  	_types = ['video/mp4', 'video/3gpp'];
 						}
 					}else if(ua.OS === 'iPhone/iPod' || ua.OS === 'iPad') {
 						if(/OS 4/.test(window.navigator.userAgent)) {
-							_types = ['video/quicktime', 'video/mp4'];
+							_types = ['video/quicktime', 'video/mp4', 'application/x-mpegURL'];
 						}else{
-							_types = ['application/x-mpegURL', 'video/mp4'];	
+							_types = ['application/x-mpegURL', 'video/quicktime', 'video/mp4'];	
 						}
 					}else{
 						_types = ['video/mp4', 'video/x-flv'];

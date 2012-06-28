@@ -6,13 +6,16 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 346 2012-06-24 09:47:05Z tsuru $
+ * @version      $Id: mr.js 363 2012-06-24 19:19:45Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-25 04:19:45 +0900 (月, 25 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
-	
+	/**
+	 * CORS Support
+	 */
+	$.support.cors = true;
 	/**
 	 * returns jQuery or Zepto object of the target
 	 */
@@ -211,7 +214,7 @@ var mr = (function($){
 	Namespace.prototype.isFlashAvailable = function(){
 		this.trace(this.namespace + '#isFlashAvailable()');
 		// @see http://code.google.com/p/swfobject/wiki/api#swfobject.hasFlashPlayerVersion(versionStr)
-		if (swfobject.hasFlashPlayerVersion("9.0.18")) {
+		if (swfobject.hasFlashPlayerVersion("10.1.52")) {
 			return true;
 		}else{
 			return false;

@@ -11,9 +11,6 @@ RewardApi::Application.routes.draw do
         end
       end
     end
-
-    get 'streams/:controller(.:format)', :action => 'show'
-
   end
 
   # The priority is based upon order of creation:

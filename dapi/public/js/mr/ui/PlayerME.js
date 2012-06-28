@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 346 2012-06-24 09:47:05Z tsuru $
+ * @version      $Id: PlayerME.js 365 2012-06-25 02:47:18Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-25 11:47:18 +0900 (月, 25 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -59,12 +59,14 @@
 				var _movie    = this.model.get('movie');
 				var _movies   = this.model.get('movies');
 				var _poster   = this.model.has('poster') ? this.model.get('poster') : '';
+				var _mode     = 'auto'; // (ua.OS === 'Android' && ns.isFlashAvailable()) ? 'shim' : 'auto';
 				var _features = []; // ['playpause', 'fullscreen']; // ['playpause', 'current', 'duration', 'fullscreen'];
 				// set source (main)
 				_$video
-					.attr('type', _movie.type)
-					.attr('src', _movie.src)
-					.attr('poster', _poster);
+					.attr('type',   _movie.type)
+					.attr('src',    _movie.src)
+					.attr('poster', _poster);/*
+					.attr('preload', "auto");*/
 				// fallback sources
 				for(var m = 0; m < _movies.length; ++m) {
 					var _movie   = _movies[m];
@@ -75,19 +77,21 @@
 				}	
 				// determine features
 				if(ua.OS !== 'iPhone/iPod' && ua.OS !== 'iPad' && ua.OS !== 'Android') {
-					_features = ['playpause'];
+					// _features = ['playpause'];
 				}
 				// debug out put
 				ns.trace(this.typeName + '#render():' + _$video.parent().html());
 				// mediaelement
 				var _player = $(this.el).mediaelementplayer({
-					flashName:                'mr-player.swf?v=201206230057',
+					flashName:                'mr-player.swf?v=201206251139',
+					mode:                     _mode,
 					features:                 _features,
 					loop:                     false,
 					alwaysShowControls:       false,
 					// usePluginFullScreen:      true,
 					enablePluginDebug:        false,
 					enableAutosize:           true,  // @see  http://redmine.sunbi.co.jp/issues/1947
+					enablePluginSmoothing:    true,
   				// AndroidUseNativeControls: false,
 					success:                  function (mediaElement, domObject) {
 						// 
@@ -100,13 +104,21 @@
 						 	// $('.mejs-overlay-play', _self.el).css('width', 0);
 						}else{
 							$('.mejs-overlay-loading',  _self.el).css('z-index', '-999999');
-							$('.mejs-poster', _self.el).click(function(){
-								mediaElement.play();
-							});
-							$('.mejs-mediaelement', _self.el).click(function(){
-								mediaElement.play();
-							});
+							if(ua.OS !== 'iPhone/iPod' && ua.OS !== 'iPad' && ua.OS !== 'Android') {
+								$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
+						 		$('.mejs-controls',  _self.el).css('z-index', '-999999');
+							}
 						}
+						if((0 < _self.model.get('movie').src.indexOf('mp4')) && ua.OS === 'Android' && _mode !== 'shim') {
+							$('.mejs-poster', self.el).show();
+							$('.mejs-poster', self.el).css('z-index', '999999');
+						}
+						$('.mejs-poster', _self.el).click(function(){
+							mediaElement.play();
+						});
+						$('.mejs-mediaelement', _self.el).click(function(){
+							mediaElement.play();
+						});
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');
 						}, false);
@@ -142,6 +154,9 @@
 							ns.trace('ended');
 							// re-show poster
 							$('.mejs-poster', self.el).show();
+							if((0 < _self.model.get('movie').src.indexOf('mp4')) && ua.OS === 'Android' && _mode !== 'shim') {
+								$('.mejs-poster', self.el).css('z-index', '999999');
+							}
 							$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
 							$('.mejs-controls',  _self.el).css('z-index', '-999999');
 							// end
@@ -149,8 +164,6 @@
 							// exit fullscreen
 							if(ua.OS === "iPhone/iPod"){
 								$(domObject).get(0).webkitExitFullscreen();
-							}else if(ua.OS === 'Android'){
-								mediaElement.exitFullScreen(); // this doesnt work....
 							}
 						}, false);
 						
