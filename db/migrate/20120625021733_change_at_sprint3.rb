@@ -6,9 +6,10 @@ class ChangeAtSprint3 < ActiveRecord::Migration
       t.text :button_text
       t.timestamp :deleted_at
       t.remove :movie, :status
+      t.timestamps
     end
     Campaign.update_all("mcd = mid")
-    change_column :campaigns, :mcd, :text, :null => false
+    change_column :campaigns, :mcd, :string, :null => false
     add_index :campaigns, :mcd
 
     # campaign_faces
@@ -83,7 +84,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     change_table :campaigns do |t|
       t.string :movie
       t.integer :status, :null => false, :default => 0
-      t.remove :mcd, :button_text, :deleted_at
+      t.remove :mcd, :button_text, :deleted_at, :created_at, :updated_at
     end
 
     # campaign_faces

@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
   create_table "campaigns", :id => false, :force => true do |t|
     t.string   "mid",            :limit => 36
     t.string   "enq_id"
-    t.string   "platform",                      :null => false
-    t.integer  "point",                         :null => false
+    t.string   "platform",                     :null => false
+    t.integer  "point",                        :null => false
     t.datetime "opening_at"
     t.datetime "closing_at"
     t.string   "thumbnail"
@@ -70,9 +70,11 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
     t.string   "client_url"
     t.string   "created_by"
     t.string   "updated_by"
-    t.text     "mcd",            :limit => 255, :null => false
+    t.string   "mcd",                          :null => false
     t.text     "button_text"
     t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "campaigns", ["mcd"], :name => "index_campaigns_on_mcd"
