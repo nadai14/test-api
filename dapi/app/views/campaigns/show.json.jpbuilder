@@ -1,0 +1,28 @@
+json.(@campaign, :mid, :point, :platform, :enq_id)
+json.extract!(@campaign, *extract_nil(@campaign, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
+json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
+json.button_text (@campaign.button_text.nil? ? defaultButtonText : @campaign.button_text)
+json.movies do |json|
+  json.array!(@campaign.movies) do |json, movie|
+    json.(movie, :mime_type, :src)
+  end
+end
+
+# campaign_face
+@campaign.campaign_faces.first.tap do |face|
+  json.title (face.title.nil? ? defaultTitle(face) : face.title)
+  json.description (face.description.nil? ? defaultDescription(face) : face.description)
+  json.css (face.css.nil? ? defaultCss(face) : face.css)
+end
+
+# enq
+@campaign.enq.tap do |enq|
+  json.enq_message (enq.message.nil? ? defaultEnqMessage : enq.message)
+  json.enq_button_text (enq.button_text.nil? ? defaultEnqButtonText : enq.button_text)
+end
+
+# enq_face
+@campaign.enq.enq_faces.first.tap do |face|
+  json.extract!(face, *extract_nil(face, :first_page_id, :wait_until))
+end
+

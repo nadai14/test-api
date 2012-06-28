@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120609152534) do
+ActiveRecord::Schema.define(:version => 20120625021733) do
 
   create_table "answers", :id => false, :force => true do |t|
     t.string   "uuid",            :limit => 36
@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.text     "answer",                        :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
-  add_index "answers", ["campaign_id", "enq_question_id", "user_id"], :name => "index_answers_on_campaign_id_and_enq_question_id_and_user_id", :unique => true
+  add_index "answers", ["campaign_id", "enq_question_id", "user_id", "deleted_at"], :name => "idx_answers_on_answers_unique", :unique => true
 
   create_table "branches", :id => false, :force => true do |t|
     t.string   "uuid",            :limit => 36
@@ -34,19 +35,32 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.integer  "wait_until"
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
-  add_index "branches", ["enq_question_id", "answer"], :name => "index_branches_on_enq_question_id_and_answer", :unique => true
+  add_index "branches", ["enq_question_id", "answer", "deleted_at"], :name => "index_branches_on_enq_question_id_and_answer_and_deleted_at", :unique => true
+
+  create_table "campaign_faces", :id => false, :force => true do |t|
+    t.string   "uuid",        :limit => 36
+    t.string   "campaign_id",               :null => false
+    t.string   "face",                      :null => false
+    t.string   "css"
+    t.string   "title"
+    t.text     "description"
+    t.string   "updated_by"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+  end
+
+  add_index "campaign_faces", ["campaign_id", "face", "deleted_at"], :name => "index_campaign_faces_on_campaign_id_and_face_and_deleted_at", :unique => true
 
   create_table "campaigns", :id => false, :force => true do |t|
     t.string   "mid",            :limit => 36
     t.string   "enq_id"
-    t.integer  "status",                       :default => 0, :null => false
-    t.string   "platform",                                    :null => false
-    t.integer  "point",                                       :null => false
+    t.string   "platform",                      :null => false
+    t.integer  "point",                         :null => false
     t.datetime "opening_at"
     t.datetime "closing_at"
-    t.string   "movie"
     t.string   "thumbnail"
     t.text     "message"
     t.text     "conversion_tag"
@@ -56,7 +70,12 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "client_url"
     t.string   "created_by"
     t.string   "updated_by"
+    t.text     "mcd",            :limit => 255, :null => false
+    t.text     "button_text"
+    t.datetime "deleted_at"
   end
+
+  add_index "campaigns", ["mcd"], :name => "index_campaigns_on_mcd"
 
   create_table "choices", :id => false, :force => true do |t|
     t.string   "uuid",        :limit => 36
@@ -65,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "content",                   :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
   add_index "choices", ["question_id"], :name => "index_choices_on_question_id"
@@ -75,14 +95,12 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "face",                        :null => false
     t.string   "first_page_id"
     t.integer  "wait_until"
-    t.string   "css"
-    t.string   "title"
-    t.text     "description"
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
-  add_index "enq_faces", ["enq_id", "face"], :name => "index_enq_faces_on_enq_id_and_face", :unique => true
+  add_index "enq_faces", ["enq_id", "face", "deleted_at"], :name => "index_enq_faces_on_enq_id_and_face_and_deleted_at", :unique => true
 
   create_table "enq_pages", :id => false, :force => true do |t|
     t.string   "uuid",         :limit => 36
@@ -92,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.integer  "wait_until"
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
   add_index "enq_pages", ["enq_face_id"], :name => "index_enq_pages_on_enq_face_id"
@@ -104,16 +123,32 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.string   "question_id",               :null => false
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
-  add_index "enq_questions", ["enq_page_id", "num"], :name => "index_enq_questions_on_enq_page_id_and_num", :unique => true
+  add_index "enq_questions", ["enq_page_id", "num", "deleted_at"], :name => "index_enq_questions_on_enq_page_id_and_num_and_deleted_at", :unique => true
 
   create_table "enqs", :id => false, :force => true do |t|
-    t.string   "uuid",       :limit => 36
-    t.integer  "status",                   :default => 0, :null => false
+    t.string   "uuid",        :limit => 36
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.text     "message"
+    t.text     "button_text"
+    t.datetime "deleted_at"
   end
+
+  create_table "movies", :id => false, :force => true do |t|
+    t.string   "uuid",        :limit => 36
+    t.string   "campaign_id",               :null => false
+    t.string   "mime_type"
+    t.string   "src",                       :null => false
+    t.integer  "duration",                  :null => false
+    t.string   "updated_by"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+  end
+
+  add_index "movies", ["campaign_id", "mime_type", "deleted_at"], :name => "index_movies_on_campaign_id_and_mime_type_and_deleted_at", :unique => true
 
   create_table "questions", :id => false, :force => true do |t|
     t.string   "uuid",               :limit => 36
@@ -125,6 +160,7 @@ ActiveRecord::Schema.define(:version => 20120609152534) do
     t.text     "answer_description"
     t.string   "updated_by"
     t.datetime "updated_at"
+    t.datetime "deleted_at"
   end
 
 end

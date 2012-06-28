@@ -1,0 +1,18 @@
+# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+campaign_success_1_sp:
+  uuid: CampaginFace1
+  campaign_id: CampaignSuccessConfirm
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルSP
+  description: 説明SP
+
+campaign_success_1_pc:
+  uuid: CampaginFace1
+  campaign_id: CampaignSuccessConfirm
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルPC
+  description: 説明PC

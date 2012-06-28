@@ -25,12 +25,15 @@ module ApiController
   BEFORE_OPENING = "状態が入稿前"
   AFTER_CLOSING = "状態が終了" 
   REQUIRED_QUESTION = "回答必須の設問に回答していない" 
+  UNEXPECTED_PARAMTER = "予期しないパラメータが渡された"
 
 end
 
 class ApplicationController < ActionController::Base
   include ApiController
   before_filter :append_header, :if => :development?
+  before_filter :accept_callback, :if => :development?
+  before_filter :reject_callback, :unless => :development?
   before_filter :check_requested_by, :except => :options
 
   def check_requested_by
@@ -40,6 +43,14 @@ class ApplicationController < ActionController::Base
   def append_header
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Headers'] = 'X-Requested-By'
+  end
+
+  def accept_callback
+    response.headers['Content-Type'] = 'text/javascript' if params.has_key? "callback"
+  end
+
+  def reject_callback
+    raise BadRequestException.new UNEXPECTED_PARAMTER if params.has_key? "callback"
   end
 
   def development?

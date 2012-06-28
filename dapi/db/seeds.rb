@@ -10,8 +10,8 @@
 # 養命酒
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/video/yomeishu/yomeishu.mp4', thumbnail: '/images/poster-sp.jpg',
-                           message: '', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
+campaign = Campaign.create(mid: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 13, movie: '/images/media/yomeishu.mp4', thumbnail: '/images/poster-sp.jpg',
+                           conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu')
 
 enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', wait_until: 30)
 enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', wait_until: 30)
@@ -123,11 +123,11 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # PlusOne
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '28080715-38D2-432A-8B7A-C08454E4BE0B', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://moviereward.nadai.jp/video/plus1/plus1.mp4',
-                           thumbnail: '/css/sp/themes/plus1/thumbnail.jpg', message: '', conversion_tag: '<img src=\'//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}\' />', second_picture: '/css/sp/themes/plus1/2nd_banne.png', client_url: 'http://www.p1-intl.com/')
+campaign = Campaign.create(mid: '28080715-38D2-432A-8B7A-C08454E4BE0B', enq_id: enq.uuid, status: 1, platform: 'mixi', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/plus1/plus1.mp4',
+                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.p1-intl.com/')
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/plus1/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/plus1/style.css')
 
 q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
 q2 = Question.create(kind: 'radio', title: '年齢を教えてください。', required: true)
@@ -242,11 +242,11 @@ enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: '
 # レッグマジックX
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://moviereward.nadai.jp/video/lgmx/lgmx.flv',
-                           thumbnail: '/css/sp/themes/lgmx/thumbnail.jpg', message: '', conversion_tag: '<img src=\'//moviereward.nadai.jp/images/lgmx/conversion-sp.jpg?t=#{time}\' />', second_picture: '/css/sp/themes/lgmx/2nd_banne.png', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+campaign = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/lgmx/lgmx.flv',
+                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/lgmx/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/lgmx/style.css')
 
 q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
 q2 = Question.create(kind: 'radio', title: '年齢を教えてください。', required: true)
@@ -317,11 +317,11 @@ enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6'
 # 永谷園
 enq = Enq.create(status: 1)
 
-campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://moviereward.nadai.jp/video/nagatanien/nagatanien.mp4',
-                           thumbnail: '/css/sp/themes/nagatanien/thumbnail.jpg', message: '', conversion_tag: '<img src=\'//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?t=#{time}\' />', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: 'http://poncan.jp')
+campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://demo.sunbi.co.jp/nci-201205/trunk/streaming/media/nagatanien/nagatanien.mp4',
+                           thumbnail: '/images/poster-sp.jpg', conversion_tag: '<img src="../../images/conversion.jpg" alt="サンプル">', second_picture: '/images/creative-sp.jpg', client_url: '')
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/nagatanien/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/nagatanien/style.css', title: '動画を見てアンケートに答えてプレゼントをもらおう', description: 'mixiポイントをプレゼント')
+enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP', css: '/css/sp/themes/nagatanien/style.css')
+enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC', css: '/css/pc/themes/nagatanien/style.css')
 
 q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
 q2 = Question.create(kind: 'radio', title: '年齢を教えてください。', required: true)

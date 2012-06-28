@@ -45,6 +45,7 @@ gem "composite_primary_keys", "~> 5.0.4"
 
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
+gem "jpbuilder", "~> 0.2.2"
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -54,3 +55,5 @@ gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'
+
+gem "rails3_acts_as_paranoid", "~>0.2.0"
