@@ -5,6 +5,7 @@ class AnswersController < ApplicationController
   def create
     page = EnqPage.
       includes([{:enq_questions => [{:question => :choices}, :branches]}, {:enq_face => {:enq => :campaigns}}]).
+      where('enq_questions.deleted_at IS NULL AND questions.deleted_at IS NULL AND choices.deleted_at IS NULL AND branches.deleted_at IS NULL AND enq_faces.deleted_at IS NULL AND enqs.deleted_at IS NULL AND campaigns.deleted_at IS NULL').
       find_by_uuid(params[:page_id])
     raise NotFoundException.new PAGE_DOES_NOT_EXIST if page.nil?
     raise NotFoundException.new ID_MISS_MATCH_PAGE if page.enq_face.enq_id != params[:enq_id]
