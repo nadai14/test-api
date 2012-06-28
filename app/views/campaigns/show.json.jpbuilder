@@ -2,6 +2,8 @@ json.(@campaign, :mid, :point, :platform, :enq_id)
 json.extract!(@campaign, *extract_nil(@campaign, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
 json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
 json.button_text (@campaign.button_text.nil? ? defaultButtonText : @campaign.button_text)
+json.question_cnt @count
+
 json.movies do |json|
   json.array!(@campaign.movies) do |json, movie|
     json.(movie, :mime_type, :src)

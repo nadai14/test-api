@@ -1,6 +1,5 @@
 json.extract!(@page, *extract_nil(@page, :uuid, :description, :next_page_id, :wait_until))
 json.enq_id @page.enq_face.enq_id
-json.question_cnt @count # TODO: move to the campaigin api
 
 json.questions do |json|
   json.array!(@page.enq_questions) do |json, enq_question|

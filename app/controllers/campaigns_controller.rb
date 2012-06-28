@@ -13,6 +13,11 @@ class CampaignsController < ApplicationController
       find_by_mid(params[:id])
     raise NotFoundException.new CAMPAIGN_DOES_NOT_EXIST unless @campaign
     raise ForbiddenException.new AFTER_CLOSING if @campaign.closed?
+
+    @count = EnqQuestion.
+      includes(:enq_page => {:enq_face => :enq}).
+      where('enqs.uuid = ? AND enq_faces.face = ? AND enq_pages.deleted_at IS NULL AND enq_faces.deleted_at IS NULL AND enqs.deleted_at IS NULL', @campaign.enq_id, face).
+      count(:uuid)
   end
 
 end
