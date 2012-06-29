@@ -1,9 +1,10 @@
 json.(@campaign, :mid, :point, :platform, :enq_id)
 json.extract!(@campaign, *extract_nil(@campaign, :thumbnail, :conversion_tag, :second_picture, :second_point, :client_url))
-json.message (@campaign.message.nil? ? defaultMessage : @campaign.message)
-json.button_text (@campaign.button_text.nil? ? defaultButtonText : @campaign.button_text)
-json.page_button_text (@campaign.page_button_text.nil? ? defaultPageButtonText : @campaign.page_button_text)
+json.message (@campaign.message.nil? ? default_message : @campaign.message)
+json.thanks_button_text (@campaign.thanks_button_text.nil? ? default_thanks_button_text : @campaign.thanks_button_text)
+json.page_button_text (@campaign.page_button_text.nil? ? default_page_button_text : @campaign.page_button_text)
 json.question_cnt @count
+json.already_button_text 'already button'
 
 json.movies do |json|
   json.array!(@campaign.movies) do |json, movie|
@@ -13,15 +14,15 @@ end
 
 # campaign_face
 @campaign.campaign_faces.first.tap do |face|
-  json.title (face.title.nil? ? defaultTitle(face) : face.title)
-  json.description (face.description.nil? ? defaultDescription(face) : face.description)
-  json.css (face.css.nil? ? defaultCss(face) : face.css)
+  json.title (face.title.nil? ? default_title : face.title)
+  json.description (face.description.nil? ? default_description(face) : face.description)
+  json.css (face.css.nil? ? default_css(face) : face.css)
 end
 
 # enq
 @campaign.enq.tap do |enq|
-  json.enq_message (enq.message.nil? ? defaultEnqMessage : enq.message)
-  json.enq_button_text (enq.button_text.nil? ? defaultEnqButtonText : enq.button_text)
+  json.enq_message (enq.message.nil? ? default_enq_message : enq.message)
+  json.complete_button_text (enq.complete_button_text.nil? ? default_complete_button_text : enq.complete_button_text)
 end
 
 # enq_face

@@ -2,7 +2,7 @@
 
 module CampaignsHelper
 
-  def defaultCss(face)
+  def default_css(face)
     if face.face.upcase == "PC" 
       "/css/pc/themes/default/style.css"
     else
@@ -10,11 +10,11 @@ module CampaignsHelper
     end
   end
 
-  def defaultTitle(face)
-    ""
+  def default_title
+    ''
   end
 
-  def defaultDescription(face)
+  def default_description(face)
     if face.face.upcase == "PC" 
       '<p>動画を見ながらアンケートに答えてプレゼントをもらおう！</p><p>#{point}ポイントプレゼント</p>'
     else
@@ -22,23 +22,23 @@ module CampaignsHelper
     end
   end
 
-  def defaultMessage
+  def default_message
     '<p>アンケートは終了です。ありがとうございました。</p>'
   end
 
-  def defaultButtonText
+  def default_thanks_button_text
     'CMのサイトを見る'
   end
 
-  def defaultEnqMessage
+  def default_enq_message
     '<p>アンケートが完了しました。</p>'
   end
 
-  def defaultEnqButtonText
+  def default_complete_button_text
     'ポイントをもらう'
   end
 
-  def defaultPageButtonText
+  def default_page_button_text
     'CMサイトへ'
   end
 

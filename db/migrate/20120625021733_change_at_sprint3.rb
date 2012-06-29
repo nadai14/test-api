@@ -4,7 +4,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     change_table :campaigns do |t|
       t.string :mcd
       t.string :name, :null => false, :default => ""
-      t.text :button_text
+      t.text :thanks_button_text
       t.text :page_button_text
       t.timestamp :deleted_at
       t.timestamps
@@ -44,7 +44,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     # enqs
     change_table :enqs do |t|
       t.text :message
-      t.text :button_text
+      t.text :complete_button_text
       t.timestamp :deleted_at
     end
     remove_column :enqs, :status
@@ -86,7 +86,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     change_table :campaigns do |t|
       t.string :movie
       t.integer :status, :null => false, :default => 0
-      t.remove :mcd, :button_text, :deleted_at, :created_at, :updated_at, :page_button_text, :name
+      t.remove :mcd, :thanks_button_text, :deleted_at, :created_at, :updated_at, :page_button_text, :name
     end
 
     # campaign_faces
@@ -99,7 +99,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
 
     # enqs
     add_column :enqs, :status, :integer, {:null => false, :default => 0}
-    remove_column :enqs, [:message, :button_text, :deleted_at]
+    remove_column :enqs, [:message, :complete_button_text, :deleted_at]
 
     # enq_faces
     remove_index :enq_faces, [:enq_id, :face, :deleted_at]
