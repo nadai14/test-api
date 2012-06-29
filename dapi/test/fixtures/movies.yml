@@ -1,22 +1,104 @@
 # coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-movie1:
-  uuid: Movie1
-  campaign_id: CampaignSuccessConfirm
+# 動作確認用データ
+sc_m3u8:
+  uuid: SuccessConfirmM3U8MovieID
+  campaign_id: SuccessConfirmCampaignID
   mime_type: application/x-mpegURL
-  src: /video/hoge.m3u8
-  duration: 100
+  src: /video/plus1/plus1.m3u8
+  duration: 47
 
-movie2:
-  uuid: Movie2
-  campaign_id: CampaignSuccessConfirm
+sc_flv:
+  uuid: SuccessConfirmFLVovieID
+  campaign_id: SuccessConfirmCampaignID
   mime_type: video/x-flv
-  src: /video/hoge.flv
-  duration: 100
+  src: /video/plus1/plus1.flv
+  duration: 47
 
-movie3:
-  uuid: Movie3
-  campaign_id: CampaignSuccessConfirm
-  src: /video/hoge.mp4
-  duration: 100
+sc_mp4:
+  uuid: SuccessConfirmMP4MovieID
+  campaign_id: SuccessConfirmCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# nil動作確認用のデータ
+nullable_m3u8:
+  uuid: NullableM3U8MovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+nullable_flv:
+  uuid: NullableFLVMovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+nullable_mp4:
+  uuid: NullableMP4MovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 空回答確認用
+null_answer_m3u8:
+  uuid: NullAnswerM3U8MovieID
+  campaign_id: NullAnswerCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+null_answer_flv:
+  uuid: NullAnswerFLVovieID
+  campaign_id: NullAnswerCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+null_answer_mp4:
+  uuid: NullAnswerMP4MovieID
+  campaign_id: NullAnswerCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_m3u8:
+  uuid: FirstPageNullM3U8MovieID
+  campaign_id: FirstPageNullCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+first_page_null_flv:
+  uuid: FirstPageNullFLVovieID
+  campaign_id: FirstPageNullCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+first_page_null_mp4:
+  uuid: FirstPageNullMP4MovieID
+  campaign_id: FirstPageNullCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+first_page_id_null:
+
+# キャンペーンが終了日時を過ぎている
+camp_closed:
+
+# 設問と選択肢が矛盾している
+incons_question:
+
+
+# 養命酒
+yomei_shu:
+
+# プラスワン
+plus_one:
+
+# レッグマジックX
+legmagicX:
+
