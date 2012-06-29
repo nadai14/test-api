@@ -1354,7 +1354,7 @@
     if (params.type !== 'GET' && !Backbone.emulateJSON) {
       params.processData = false;
     }
-
+    options.crossDomain = true;
     // Make the request, allowing the user to override any Ajax options.
     return $.ajax(_.extend(params, options));
   };

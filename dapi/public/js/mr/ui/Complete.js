@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Complete.js 346 2012-06-24 09:47:05Z tsuru $
+ * @version      $Id: Complete.js 381 2012-06-29 10:39:16Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -60,7 +60,9 @@
 			
 			$(ns.slctr('title') + ' b', this.el).text('アンケートが完了しました。次のボタンを押してポイントを獲得して下さい。');
 			
-			var _html = 'ポイントをもらう';
+			// var _html = 'ポイントをもらう';
+			// http://redmine.sunbi.co.jp/issues/2041
+			var _html = (this.model.has('button_title')) ? this.model.get('button_title') : 'ポイントをもらう';
 			if(this.model.has('client_url')) {
 				var _$p = $('<p>');
 				var _$a = null; 
@@ -115,13 +117,13 @@
 					          	                 "}; " +
 					          	                 "mr.__conversion_callback__(); " +
 					          	                 "return false;")
-					          	.text(_html)
+					          	.html(_html)
 					          	;
 				}else{
 					_$a = $('<a>')
 					          	.attr('href', this.model.get('client_url'))
 					          	.attr('target', '_blank')
-					          	.text(_html)
+					          	.html(_html)
 					          	;
 				}
 				_html = _$p.append(_$a).html();

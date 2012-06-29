@@ -38,4 +38,8 @@ module CampaignsHelper
     'ポイントをもらう'
   end
 
+  def defaultPageButtonText
+    'CMサイトへ'
+  end
+
 end

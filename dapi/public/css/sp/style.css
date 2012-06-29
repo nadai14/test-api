@@ -96,7 +96,10 @@
 			.mr-ui-landing {
 				
 			}
-		
+				.mr-ui-landing .mr-ui-remarks p {
+					font-size: 70%;
+				}
+				
 			.mr-ui-page {
 				
 			}
@@ -198,6 +201,13 @@
 	line-height:      3em;
 	text-align:       center;
 	cursor:           pointer;
+}
+
+/* 20120629 Toshiy TSURU */
+.mr-ui-button.mr-ui-link {
+	width:            100%;
+	margin-top:       0;
+	margin-bottom:    0.5em;
 }
 
 /*

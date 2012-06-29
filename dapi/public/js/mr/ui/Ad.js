@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 308 2012-06-22 01:25:15Z tsuru $
+ * @version      $Id: Ad.js 377 2012-06-29 03:25:02Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-22 10:25:15 +0900 (金, 22 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -56,13 +56,23 @@
 					el:         $(ns.slctr('creative'), this.el)
 				}).render().el);
 			}else if(this.model.has('movie')) {
-				new ns.PlayerME({ 
-					controller: this.controller,
-					model:      this.model,
-					el:         $(ns.slctr('player'), this.el)
-				}).render(function(e){
-					// alert(e);
-				});
+				if((ua.OS === "iPhone/iPod") || (ua.OS === "Android" || ('PC' !== ns.terminal))) {
+					new ns.PlayerME({ 
+						controller: this.controller,
+						model:      this.model,
+						el:         $(ns.slctr('player'), this.el)
+					}).render(function(e){
+						// alert(e);
+					});
+				}else{
+					new ns.PlayerPC({ 
+						controller: this.controller,
+						model:      this.model,
+						el:         $(ns.slctr('player'), this.el)
+					}).render(function(e){
+						// alert(e);
+					});
+				}
 			}
 			// return this
 			return this;

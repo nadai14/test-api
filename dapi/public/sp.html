@@ -26,6 +26,10 @@
 
 		<div class="mr-ui-body">
 			
+			<button class="mr-ui-link mr-ui-button mr-ui-template clear-type" type="button" onclick="javascript:window.open($('a', this).attr('href'), ''); return false;" >
+				<a target="_blank" href="{{client_url}}">{{title}}</a>
+			</button>
+			
 			<div class="mr-ui-ad mr-ui-template">
 				<video class="mr-ui-player" width="265" height="154"></video>
 				<div class="mr-ui-creative mr-ui-template">{{creative}}</div>
@@ -45,6 +49,9 @@
 						</div>
 						<div class="mr-ui-description">
 							<p class="clear-type">{{description}}</p>
+						</div>
+						<div class="mr-ui-remarks">
+							<p class="clear-type">動画視聴完了後、10秒以内にアンケート回答をスタートしないとポイントをもらえません。</p>
 						</div>
 					</div>
 					
@@ -113,7 +120,7 @@
 						</div>
 					</div>
 					
-					<!-- already page : template for mr.ui.Already.js -->
+					<!-- sorry page : template for mr.ui.Sorry.js -->
 					<div class="mr-ui-sorry mr-ui-content-block mr-ui-template">
 						<div class="mr-ui-title">
 							<b class="clear-type">{{title}}</b>
@@ -121,16 +128,33 @@
 						<div class="mr-ui-description">
 							{{description}}
 						</div>
-						<button type="button" class="mr-ui-button clear-type">
+						<button type="button" class="mr-ui-button clear-type" onclick="javascript:location.href = $('a', this).attr('href'); return false;" >
 							<a href="{{back}}" class="clear-type">最初に戻る</a>
+						</button>
+					</div>
+					
+					<!-- timeout page : template for mr.ui.Timeout.js -->
+					<div class="mr-ui-timeout mr-ui-content-block mr-ui-template">
+						<div class="mr-ui-title">
+							<b class="clear-type">{{title}}</b>
+						</div>
+						<div class="mr-ui-description">
+							{{description}}
+						</div>
+						<button type="button" class="mr-ui-button clear-type" onclick="javascript:location.href = $('a', this).attr('href'); return false;" >
+							<a href="{{back}}" class="clear-type">もう一度CMをみる</a>
 						</button>
 					</div>
 					
 				</div>
 			</section>
-
+			
+			<button class="mr-ui-link mr-ui-button mr-ui-template clear-type" type="button" onclick="javascript:window.open($('a', this).attr('href'), ''); return false;" >
+				<a target="_blank" href="{{client_url}}">{{title}}</a>
+			</button>
+			
 		</div><!--wrap end-->
-
+			
 		<!-- for conversion -->
 		<div class="mr-ui-conversion mr-ui-template">
 		</div>
@@ -171,57 +195,62 @@
 		<script src="js/libs/URI.js"></script>
 		
 		<!-- MovieReward Scripts -->
-		<script src="js/mr.js?v=201206251139"></script>
+		<script src="js/mr.js?v=201206291940"></script>
 		
-		<script src="js/mr/model/Base.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Base.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Campaign.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Page.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Question.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Questions.js?v=201206251139"></script>
-		<script src="js/mr/model/v1/Answer.js?v=201206251139"></script>
-		<script src="js/mr/model/Parameter.js?v=201206251139"></script>
-		<script src="js/mr/model/Campaign.js?v=201206251139"></script>
-		<script src="js/mr/model/Page.js?v=201206251139"></script>
-		<script src="js/mr/model/Question.js?v=201206251139"></script>
-		<script src="js/mr/model/Questions.js?v=201206251139"></script>
-		<script src="js/mr/model/Answer.js?v=201206251139"></script>
+		<script src="js/mr/model/Base.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Base.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Campaign.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Page.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Question.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Questions.js?v=201206291940"></script>
+		<script src="js/mr/model/v1/Answer.js?v=201206291940"></script>
+		<script src="js/mr/model/Parameter.js?v=201206291940"></script>
+		<script src="js/mr/model/Campaign.js?v=201206291940"></script>
+		<script src="js/mr/model/Page.js?v=201206291940"></script>
+		<script src="js/mr/model/Question.js?v=201206291940"></script>
+		<script src="js/mr/model/Questions.js?v=201206291940"></script>
+		<script src="js/mr/model/Answer.js?v=201206291940"></script>
 				
-		<script src="js/mr/ui/Base.js?v=201206251139"></script>
-		<script src="js/mr/ui/Creative.js?v=201206251139"></script>
-		<script src="js/mr/ui/PlayerME.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Nav.js?v=201206251139"></script>
-		<script src="js/mr/ui/Nav.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Ad.js?v=201206251139"></script>
-		<script src="js/mr/ui/Ad.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Landing.js?v=201206251139"></script>
-		<script src="js/mr/ui/Landing.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Next.js?v=201206251139"></script>
-		<script src="js/mr/ui/Next.js?v=201206251139"></script>
-		<script src="js/mr/ui/Question.js?v=201206251139"></script>
-		<script src="js/mr/ui/Questions.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Already.js?v=201206251139"></script>
-		<script src="js/mr/ui/Already.js?v=201206251139"></script>
-		<script src="js/mr/ui/Page.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Complete.js?v=201206251139"></script>
-		<script src="js/mr/ui/Complete.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Thankyou.js?v=201206251139"></script>
-		<script src="js/mr/ui/Thankyou.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Sorry.js?v=201206251139"></script>
-		<script src="js/mr/ui/Sorry.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Content.js?v=201206251139"></script>
-		<script src="js/mr/ui/Content.js?v=201206251139"></script>
-		<script src="js/mr/ui/Body.js?v=201206251139"></script>
-		<script src="js/mr/ui/Footer.js?v=201206251139"></script>
-		<script src="js/mr/ui/Header.js?v=201206251139"></script>
-		<script src="js/mr/ui/model/Theme.js?v=201206251139"></script>
-		<script src="js/mr/ui/Theme.js?v=201206251139"></script>
-		<script src="js/mr/ui/Conversion.js?v=201206251139"></script>
-		<script src="js/mr/ui/Canvas.js?v=201206251139"></script>
+		<script src="js/mr/ui/Base.js?v=201206291940"></script>
+		<script src="js/mr/ui/Creative.js?v=201206291940"></script>
+		<script src="js/mr/ui/PlayerPC.js?v=201206291940"></script>
+		<script src="js/mr/ui/PlayerME.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Nav.js?v=201206291940"></script>
+		<script src="js/mr/ui/Nav.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Link.js?v=201206291940"></script>
+		<script src="js/mr/ui/Link.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Ad.js?v=201206291940"></script>
+		<script src="js/mr/ui/Ad.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Landing.js?v=201206291940"></script>
+		<script src="js/mr/ui/Landing.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Next.js?v=201206291940"></script>
+		<script src="js/mr/ui/Next.js?v=201206291940"></script>
+		<script src="js/mr/ui/Question.js?v=201206291940"></script>
+		<script src="js/mr/ui/Questions.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Already.js?v=201206291940"></script>
+		<script src="js/mr/ui/Already.js?v=201206291940"></script>
+		<script src="js/mr/ui/Page.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Complete.js?v=201206291940"></script>
+		<script src="js/mr/ui/Complete.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Thankyou.js?v=201206291940"></script>
+		<script src="js/mr/ui/Thankyou.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Sorry.js?v=201206291940"></script>
+		<script src="js/mr/ui/Sorry.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Timeout.js?v=201206291940"></script>
+		<script src="js/mr/ui/Timeout.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Content.js?v=201206291940"></script>
+		<script src="js/mr/ui/Content.js?v=201206291940"></script>
+		<script src="js/mr/ui/Body.js?v=201206291940"></script>
+		<script src="js/mr/ui/Footer.js?v=201206291940"></script>
+		<script src="js/mr/ui/Header.js?v=201206291940"></script>
+		<script src="js/mr/ui/model/Theme.js?v=201206291940"></script>
+		<script src="js/mr/ui/Theme.js?v=201206291940"></script>
+		<script src="js/mr/ui/Conversion.js?v=201206291940"></script>
+		<script src="js/mr/ui/Canvas.js?v=201206291940"></script>
 
 		
-		<script src="js/mr/controller/Controller.js?v=201206251139"></script>
-		<script src="js/mr/controller/MobileController.js?v=201206251139"></script>
+		<script src="js/mr/controller/Controller.js?v=201206291940"></script>
+		<script src="js/mr/controller/MobileController.js?v=201206291940"></script>
 		
 		<script>
 			$(document).ready(function(){
