@@ -55,10 +55,10 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
   add_index "campaign_faces", ["campaign_id", "face", "deleted_at"], :name => "index_campaign_faces_on_campaign_id_and_face_and_deleted_at", :unique => true
 
   create_table "campaigns", :id => false, :force => true do |t|
-    t.string   "mid",            :limit => 36
+    t.string   "mid",              :limit => 36
     t.string   "enq_id"
-    t.string   "platform",                     :null => false
-    t.integer  "point",                        :null => false
+    t.string   "platform",                                       :null => false
+    t.integer  "point",                                          :null => false
     t.datetime "opening_at"
     t.datetime "closing_at"
     t.string   "thumbnail"
@@ -70,8 +70,10 @@ ActiveRecord::Schema.define(:version => 20120625021733) do
     t.string   "client_url"
     t.string   "created_by"
     t.string   "updated_by"
-    t.string   "mcd",                          :null => false
+    t.string   "mcd",                                            :null => false
+    t.string   "name",                           :default => "", :null => false
     t.text     "button_text"
+    t.text     "page_button_text"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"

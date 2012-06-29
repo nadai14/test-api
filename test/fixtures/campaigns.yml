@@ -5,6 +5,7 @@
 success_confirm:
   mid: CampaignSuccessConfirm
   mcd: CampaignSuccessConfirm
+  name: CampaignSuccessConfirm
   enq_id: EnqStatus1
   platform: mixi
   point: 10
@@ -18,10 +19,12 @@ success_confirm:
   banner_title: banner1
   second_point: 10
   client_url: http://cdn.poncan.jp
+  page_button_text: ページボタン
 
 success_confirm_first:
   mid: CampaignSuccessConfirmFirst
   mcd: CampaignSuccessConfirmFirst
+  name: CampaignSuccessConfirmFirst
   enq_id: EnqStatus1First
   platform: mixi
   point: 10
@@ -40,6 +43,7 @@ success_confirm_first:
 nullable:
   mid: CampaignNullable
   mcd: CampaignNullable
+  name: CampaignNullable
   enq_id: EnqNullable
   platform: gree
   point: 40 
@@ -47,6 +51,7 @@ nullable:
 nullable_first_1:
   mid: CampaignNullableFirst1
   mcd: CampaignNullableFirst1
+  name: CampaignNullableFirst1
   enq_id: EnqNullableFirst1
   platform: gree
   point: 40 
@@ -54,6 +59,7 @@ nullable_first_1:
 nullable_first_2:
   mid: CampaignNullableFirst2
   mcd: CampaignNullableFirst2
+  name: CampaignNullableFirst2
   enq_id: EnqNullableFirst2
   platform: gree
   point: 40 
@@ -61,6 +67,7 @@ nullable_first_2:
 nullable_first_3:
   mid: CampaignNullableFirst3
   mcd: CampaignNullableFirst3
+  name: CampaignNullableFirst3
   enq_id: EnqNullableFirst3
   platform: gree
   point: 40 
@@ -69,6 +76,7 @@ nullable_first_3:
 null_answer:
   mid: CampaignNullAnswer
   mcd: CampaignNullAnswer
+  name: CampaignNullAnswer
   enq_id: EnqNullAnswer
   platform: mixi
   point: 10
@@ -88,6 +96,7 @@ null_answer:
 first_page_null:
   mid: FirstPageNullCampaignID
   mcd: FirstPageNullCampaignID
+  name: FirstPageNullCampaignID
   enq_id: FirstPageNullEnqID
   platform: mixi
   point: 10
@@ -105,6 +114,7 @@ first_page_null:
 first_page_id_null:
   mid: FirstPageIDNullCampaignID
   mcd: FirstPageIDNullCampaignID
+  name: FirstPageIDNullCampaignID
   enq_id: FirstPageIDNullEnqID
   platform: mixi
   point: 10
@@ -123,6 +133,7 @@ first_page_id_null:
 camp_closed:
   mid: CampaignClosedCampaignID
   mcd: CampaignClosedCampaignID
+  name: CampaignClosedCampaignID
   enq_id: CampaignClosedEnqID
   platform: gree
   point: 40
@@ -141,6 +152,7 @@ camp_closed:
 incons_question:
   mid: InconsistencyQuestionCampaignID
   mcd: InconsistencyQuestionCampaignID
+  name: InconsistencyQuestionCampaignID
   enq_id: InconsistencyQuestionEnqID
   platform: gree
   point: 40
