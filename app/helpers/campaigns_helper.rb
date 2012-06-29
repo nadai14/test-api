@@ -42,4 +42,8 @@ module CampaignsHelper
     'CMサイトへ'
   end
 
+  def default_already_button_text
+    'CMのサイトを見る'
+  end
+
 end

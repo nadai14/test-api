@@ -4,7 +4,7 @@ json.message (@campaign.message.nil? ? default_message : @campaign.message)
 json.thanks_button_text (@campaign.thanks_button_text.nil? ? default_thanks_button_text : @campaign.thanks_button_text)
 json.page_button_text (@campaign.page_button_text.nil? ? default_page_button_text : @campaign.page_button_text)
 json.question_cnt @count
-json.already_button_text 'already button'
+json.already_button_text (@campaign.already_button_text.nil? ? default_already_button_text : @campaign.already_button_text)
 
 json.movies do |json|
   json.array!(@campaign.movies) do |json, movie|

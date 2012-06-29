@@ -6,6 +6,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
       t.string :name, :null => false, :default => ""
       t.text :thanks_button_text
       t.text :page_button_text
+      t.text :already_button_text
       t.timestamp :deleted_at
       t.timestamps
       t.remove :movie, :status
@@ -86,7 +87,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
     change_table :campaigns do |t|
       t.string :movie
       t.integer :status, :null => false, :default => 0
-      t.remove :mcd, :thanks_button_text, :deleted_at, :created_at, :updated_at, :page_button_text, :name
+      t.remove :mcd, :thanks_button_text, :deleted_at, :created_at, :updated_at, :page_button_text, :name, :already_button_text
     end
 
     # campaign_faces
