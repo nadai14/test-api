@@ -264,14 +264,16 @@ legmagicX_SP_question1:
   enq_page_id: LegMagicXSPEnqPage1
   num: 1
   seq: Q1
-  question_id: LegMagicQuestion1
+  question_id: QuestionSex
+#  question_id: LegMagicQuestion1
 
 legmagicX_SP_question2:
   uuid: LegMagicXSPEnqQuestion2
   enq_page_id: LegMagicXSPEnqPage2
   num: 2
   seq: Q2
-  question_id: LegMagicQuestion2
+  question_id: QuestionAge
+#  question_id: LegMagicQuestion2
 
 legmagicX_SP_question3:
   uuid: LegMagicXSPEnqQuestion3
@@ -306,14 +308,16 @@ legmagicX_PC_question1:
   enq_page_id: LegMagicXPCEnqPage1
   num: 1
   seq: Q1
-  question_id: LegMagicQuestion1
+  question_id: QuestionSex
+#  question_id: LegMagicQuestion1
 
 legmagicX_PC_question2:
   uuid: LegMagicXPCEnqQuestion2
   enq_page_id: LegMagicXPCEnqPage2
   num: 2
   seq: Q2
-  question_id: LegMagicQuestion2
+  question_id: QuestionAge
+#  question_id: LegMagicQuestion2
 
 legmagicX_PC_question3:
   uuid: LegMagicXPCEnqQuestion3
@@ -348,14 +352,16 @@ legmagic_A_question1:
   enq_page_id: LegMagicAEnqPage1
   num: 1
   seq: Q1
-  question_id: LegMagicQuestion1
+  question_id: QuestionSex
+#  question_id: LegMagicQuestion1
 
 legmagic_A_question2:
   uuid: LegMagicAEnqQuestion2
   enq_page_id: LegMagicAEnqPage2
   num: 2
   seq: Q2
-  question_id: LegMagicQuestion2
+  question_id: QuestionAge
+#  question_id: LegMagicQuestion2
 
 legmagic_A_question3:
   uuid: LegMagicAEnqQuestion3
@@ -390,14 +396,16 @@ legmagic_B_question1:
   enq_page_id: LegMagicBEnqPage1
   num: 1
   seq: Q1
-  question_id: LegMagicQuestion1
+  question_id: QuestionSex
+#  question_id: LegMagicQuestion1
 
 legmagic_B_question2:
   uuid: LegMagicBEnqQuestion2
   enq_page_id: LegMagicBEnqPage2
   num: 2
   seq: Q2
-  question_id: LegMagicQuestion2
+  question_id: QuestionAge
+#  question_id: LegMagicQuestion2
 
 legmagic_B_question3:
   uuid: LegMagicBEnqQuestion3
@@ -433,14 +441,16 @@ power_pranning_question1:
   enq_page_id: PowerPlanningEnqPage1
   num: 1
   seq: Q1
-  question_id: PowerPlanningMQuestion1
+  question_id: QuestionSex
+#  question_id: PowerPlanningMQuestion1
 
 power_pranning_question2:
   uuid: PowerPlanningEnqQuestion2
   enq_page_id: PowerPlanningEnqPage2
   num: 2
   seq: Q2
-  question_id: PowerPlanningMQuestion2
+  question_id: QuestionAge
+#  question_id: PowerPlanningMQuestion2
 
 power_pranning_question3:
   uuid: PowerPlanningEnqQuestion3
@@ -475,35 +485,40 @@ power_pranning_A_question1:
   enq_page_id: PowerPlanningAEnqPage1
   num: 1
   seq: Q1
-  question_id: PowerPlanningGQuestion1
+  question_id: QuestionSex
+#  question_id: PowerPlanningGQuestion1
 
 power_pranning_A_question2:
   uuid: PowerPlanningAEnqQuestion2
   enq_page_id: PowerPlanningAEnqPage2
   num: 2
   seq: Q2
-  question_id: PowerPlanningGQuestion2
+  question_id: QuestionAge
+#  question_id: PowerPlanningGQuestion2
 
 power_pranning_A_question3:
   uuid: PowerPlanningAEnqQuestion3
   enq_page_id: PowerPlanningAEnqPage3
   num: 3
   seq: Q3
-  question_id: PowerPlanningGQuestion3
+  question_id: PowerPlanningMQuestion3
+#  question_id: PowerPlanningGQuestion3
 
 power_pranning_A_question4:
   uuid: PowerPlanningAEnqQuestion4
   enq_page_id: PowerPlanningAEnqPage4
   num: 4
   seq: Q4
-  question_id: PowerPlanningGQuestion4
+  question_id: PowerPlanningMQuestion4
+#  question_id: PowerPlanningGQuestion4
 
 power_pranning_A_question5:
   uuid: PowerPlanningAEnqQuestion5
   enq_page_id: PowerPlanningAEnqPage5
   num: 5
   seq: Q5
-  question_id: PowerPlanningGQuestion5
+  question_id: PowerPlanningMQuestion5
+#  question_id: PowerPlanningGQuestion5
 
 power_pranning_A_question6:
   uuid: PowerPlanningAEnqQuestion6
@@ -517,35 +532,40 @@ power_pranning_B_question1:
   enq_page_id: PowerPlanningBEnqPage1
   num: 1
   seq: Q1
-  question_id: PowerPlanningGQuestion1
+  question_id: QuestionSex
+#  question_id: PowerPlanningGQuestion1
 
 power_pranning_B_question2:
   uuid: PowerPlanningBEnqQuestion2
   enq_page_id: PowerPlanningBEnqPage2
   num: 2
   seq: Q2
-  question_id: PowerPlanningGQuestion2
+  question_id: QuestionAge
+#  question_id: PowerPlanningGQuestion2
 
 power_pranning_B_question3:
   uuid: PowerPlanningBEnqQuestion3
   enq_page_id: PowerPlanningBEnqPage3
   num: 3
   seq: Q3
-  question_id: PowerPlanningGQuestion3
+  question_id: PowerPlanningMQuestion3
+#  question_id: PowerPlanningGQuestion3
 
 power_pranning_B_question4:
   uuid: PowerPlanningBEnqQuestion4
   enq_page_id: PowerPlanningBEnqPage4
   num: 4
   seq: Q4
-  question_id: PowerPlanningGQuestion4
+  question_id: PowerPlanningMQuestion4
+#  question_id: PowerPlanningGQuestion4
 
 power_pranning_B_question5:
   uuid: PowerPlanningBEnqQuestion5
   enq_page_id: PowerPlanningBEnqPage5
   num: 5
   seq: Q5
-  question_id: PowerPlanningGQuestion5
+  question_id: PowerPlanningMQuestion5
+#  question_id: PowerPlanningGQuestion5
 
 power_pranning_B_question6:
   uuid: PowerPlanningBEnqQuestion6
@@ -560,14 +580,16 @@ ya_man_question1:
   enq_page_id: YaManEnqPage1
   num: 1
   seq: Q1
-  question_id: YaManQuestion1
+  question_id: QuestionSex
+#  question_id: YaManQuestion1
 
 ya_man_question2:
   uuid: YaManEnqQuestion2
   enq_page_id: YaManEnqPage2
   num: 2
   seq: Q2
-  question_id: YaManQuestion2
+  question_id: QuestionAge
+#  question_id: YaManQuestion2
 
 ya_man_question3:
   uuid: YaManEnqQuestion3
@@ -590,19 +612,28 @@ ya_man_question5:
   seq: Q5
   question_id: YaManQuestion5
 
+ya_man_question6:
+  uuid: YaManEnqQuestion6
+  enq_page_id: YaManEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YaManQuestion6
+
 ya_man_A_question1:
   uuid: YaManAEnqQuestion1
   enq_page_id: YaManAEnqPage1
   num: 1
   seq: Q1
-  question_id: YaManQuestion1
+  question_id: QuestionSex
+#  question_id: YaManQuestion1
 
 ya_man_A_question2:
   uuid: YaManAEnqQuestion2
   enq_page_id: YaManAEnqPage2
   num: 2
   seq: Q2
-  question_id: YaManQuestion2
+  question_id: QuestionAge
+#  question_id: YaManQuestion2
 
 ya_man_A_question3:
   uuid: YaManAEnqQuestion3
@@ -625,19 +656,28 @@ ya_man_A_question5:
   seq: Q5
   question_id: YaManQuestion5
 
+ya_man_A_question6:
+  uuid: YaManAEnqQuestion6
+  enq_page_id: YaManAEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YaManQuestion6
+
 ya_man_B_question1:
   uuid: YaManBEnqQuestion1
   enq_page_id: YaManBEnqPage1
   num: 1
   seq: Q1
-  question_id: YaManQuestion1
+  question_id: QuestionSex
+#  question_id: YaManQuestion1
 
 ya_man_B_question2:
   uuid: YaManBEnqQuestion2
   enq_page_id: YaManBEnqPage2
   num: 2
   seq: Q2
-  question_id: YaManQuestion2
+  question_id: QuestionAge
+#  question_id: YaManQuestion2
 
 ya_man_B_question3:
   uuid: YaManBEnqQuestion3
@@ -660,20 +700,29 @@ ya_man_B_question5:
   seq: Q5
   question_id: YaManQuestion5
 
+ya_man_B_question6:
+  uuid: YaManBEnqQuestion6
+  enq_page_id: YaManBEnqPage6
+  num: 6
+  seq: Q6
+  question_id: YaManQuestion6
+
 # 養命酒
 yomei_shu_SP_question1:
   uuid: YomeiShuSPEnqQuestion1
   enq_page_id: YomeiShuSPEnqPage1
   num: 1
   seq: Q1
-  question_id: YomeiShuQuestion1
+  question_id: QuestionSex
+#  question_id: YomeiShuQuestion1
 
 yomei_shu_SP_question2:
   uuid: YomeiShuSPEnqQuestion2
   enq_page_id: YomeiShuSPEnqPage2
   num: 2
   seq: Q2
-  question_id: YomeiShuQuestion2
+  question_id: QuestionAge
+#  question_id: YomeiShuQuestion2
 
 yomei_shu_SP_question3:
   uuid: YomeiShuSPEnqQuestion3
@@ -736,14 +785,16 @@ yomei_shu_PC_question1:
   enq_page_id: YomeiShuPCEnqPage1
   num: 1
   seq: Q1
-  question_id: YomeiShuQuestion1
+  question_id: QuestionSex
+#  question_id: YomeiShuQuestion1
 
 yomei_shu_PC_question2:
   uuid: YomeiShuPCEnqQuestion2
   enq_page_id: YomeiShuPCEnqPage2
   num: 2
   seq: Q2
-  question_id: YomeiShuQuestion2
+  question_id: QuestionAge
+#  question_id: YomeiShuQuestion2
 
 yomei_shu_PC_question3:
   uuid: YomeiShuPCEnqQuestion3
@@ -806,14 +857,16 @@ yomei_shu_A_question1:
   enq_page_id: YomeiShuAEnqPage1
   num: 1
   seq: Q1
-  question_id: YomeiShuQuestion1
+  question_id: QuestionSex
+#  question_id: YomeiShuQuestion1
 
 yomei_shu_A_question2:
   uuid: YomeiShuAEnqQuestion2
   enq_page_id: YomeiShuAEnqPage2
   num: 2
   seq: Q2
-  question_id: YomeiShuQuestion2
+  question_id: QuestionAge
+#  question_id: YomeiShuQuestion2
 
 yomei_shu_A_question3:
   uuid: YomeiShuAEnqQuestion3
@@ -876,14 +929,16 @@ yomei_shu_B_question1:
   enq_page_id: YomeiShuBEnqPage1
   num: 1
   seq: Q1
-  question_id: YomeiShuQuestion1
+  question_id: QuestionSex
+#  question_id: YomeiShuQuestion1
 
 yomei_shu_B_question2:
   uuid: YomeiShuBEnqQuestion2
   enq_page_id: YomeiShuBEnqPage2
   num: 2
   seq: Q2
-  question_id: YomeiShuQuestion2
+  question_id: QuestionAge
+#  question_id: YomeiShuQuestion2
 
 yomei_shu_B_question3:
   uuid: YomeiShuBEnqQuestion3
@@ -947,14 +1002,16 @@ plus_one_SP_question1:
   enq_page_id: PlusOneSPEnqPage1
   num: 1
   seq: Q1
-  question_id: PlusOneQuestion1
+  question_id: QuestionSex
+#  question_id: PlusOneQuestion1
 
 plus_one_SP_question2:
   uuid: PlusOneSPEnqQuestion2
   enq_page_id: PlusOneSPEnqPage2
   num: 2
   seq: Q2
-  question_id: PlusOneQuestion2
+  question_id: QuestionAge
+#  question_id: PlusOneQuestion2
 
 plus_one_SP_question3:
   uuid: PlusOneSPEnqQuestion3
@@ -1017,14 +1074,16 @@ plus_one_PC_question1:
   enq_page_id: PlusOnePCEnqPage1
   num: 1
   seq: Q1
-  question_id: PlusOneQuestion1
+  question_id: QuestionSex
+#  question_id: PlusOneQuestion1
 
 plus_one_PC_question2:
   uuid: PlusOnPCPEnqQuestion2
   enq_page_id: PlusOnePCEnqPage2
   num: 2
   seq: Q2
-  question_id: PlusOneQuestion2
+  question_id: QuestionAge
+#  question_id: PlusOneQuestion2
 
 plus_one_PC_question3:
   uuid: PlusOnPCPEnqQuestion3
@@ -1087,14 +1146,16 @@ plus_one_A_question1:
   enq_page_id: PlusOneAEnqPage1
   num: 1
   seq: Q1
-  question_id: PlusOneQuestion1
+  question_id: QuestionSex
+#  question_id: PlusOneQuestion1
 
 plus_one_A_question2:
   uuid: PlusOneAEnqQuestion2
   enq_page_id: PlusOneAEnqPage2
   num: 2
   seq: Q2
-  question_id: PlusOneQuestion2
+  question_id: QuestionAge
+#  question_id: PlusOneQuestion2
 
 plus_one_A_question3:
   uuid: PlusOneAEnqQuestion3
@@ -1157,14 +1218,16 @@ plus_one_B_question1:
   enq_page_id: PlusOneBEnqPage1
   num: 1
   seq: Q1
-  question_id: PlusOneQuestion1
+  question_id: QuestionSex
+#  question_id: PlusOneQuestion1
 
 plus_one_B_question2:
   uuid: PlusOneBEnqQuestion2
   enq_page_id: PlusOneBEnqPage2
   num: 2
   seq: Q2
-  question_id: PlusOneQuestion2
+  question_id: QuestionAge
+#  question_id: PlusOneQuestion2
 
 plus_one_B_question3:
   uuid: PlusOneBEnqQuestion3
@@ -1228,14 +1291,16 @@ nagatanien_SP_question1:
   enq_page_id: NagatanienSPEnqPage1
   num: 1
   seq: Q1
-  question_id: NagatanienQuestion1
+  question_id: QuestionSex
+#  question_id: NagatanienQuestion1
 
 nagatanien_SP_question2:
   uuid: NagatanienSPEnqQuestion2
   enq_page_id: NagatanienSPEnqPage2
   num: 2
   seq: Q2
-  question_id: NagatanienQuestion2
+  question_id: QuestionAge
+#  question_id: NagatanienQuestion2
 
 nagatanien_SP_question3:
   uuid: NagatanienSPEnqQuestion3
@@ -1270,14 +1335,16 @@ nagatanien_PC_question1:
   enq_page_id: NagatanienPCEnqPage1
   num: 1
   seq: Q1
-  question_id: NagatanienQuestion1
+  question_id: QuestionSex
+#  question_id: NagatanienQuestion1
 
 nagatanien_PC_question2:
   uuid: NagatanienPCEnqQuestion2
   enq_page_id: NagatanienPCEnqPage2
   num: 2
   seq: Q2
-  question_id: NagatanienQuestion2
+  question_id: QuestionAge
+#  question_id: NagatanienQuestion2
 
 nagatanien_PC_question3:
   uuid: NagatanienPCEnqQuestion3
@@ -1312,14 +1379,16 @@ nagatanien_A_question1:
   enq_page_id: NagatanienAEnqPage1
   num: 1
   seq: Q1
-  question_id: NagatanienQuestion1
+  question_id: QuestionSex
+#  question_id: NagatanienQuestion1
 
 nagatanien_A_question2:
   uuid: NagatanienAEnqQuestion2
   enq_page_id: NagatanienAEnqPage2
   num: 2
   seq: Q2
-  question_id: NagatanienQuestion2
+  question_id: QuestionAge
+#  question_id: NagatanienQuestion2
 
 nagatanien_A_question3:
   uuid: NagatanienAEnqQuestion3
@@ -1354,14 +1423,16 @@ nagatanien_B_question1:
   enq_page_id: NagatanienBEnqPage1
   num: 1
   seq: Q1
-  question_id: NagatanienQuestion1
+  question_id: QuestionSex
+#  question_id: NagatanienQuestion1
 
 nagatanien_B_question2:
   uuid: NagatanienBEnqQuestion2
   enq_page_id: NagatanienBEnqPage2
   num: 2
   seq: Q2
-  question_id: NagatanienQuestion2
+  question_id: QuestionAge
+#  question_id: NagatanienQuestion2
 
 nagatanien_B_question3:
   uuid: NagatanienBEnqQuestion3

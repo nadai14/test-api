@@ -345,727 +345,1174 @@ unrequired_check:
   order: 1
   content: 選択肢
 
-  
-# 養命酒
-yomei_shu_radio_male:
-  uuid: YomeiShuRadioMale
-  question_id: YomeiShuQuestion1
+# 案件テスト用データ
+# 共通の設問
+question_sex_male:
+  uuid: QuestionSexMale
+  question_id: QuestionSex
   order: 1
   content: 男性
 
-yomei_shu_radio_female:
-  uuid: YomeiShuRadioFemale
-  question_id: YomeiShuQuestion1
+question_sex_female:
+  uuid: QuestionSexFemale
+  question_id: QuestionSex
   order: 2
   content: 女性
 
-yomei_shu_numeric_20:
-  uuid: YomeiShuNumeric20
-  question_id: YomeiShuQuestion2
+question_age_u19:
+  uuid: LegMagicNumericU19
+  question_id: LegMagicQuestion2
   order: 1
-  content: 20~29歳
+  content: 19歳以下
 
-yomei_shu_numeric_30:
-  uuid: YomeiShuNumeric30
-  question_id: YomeiShuQuestion2
+question_age_20:
+  uuid: LegMagicNumeric20
+  question_id: LegMagicQuestion2
   order: 2
-  content: 30~39歳
+  content: 20-29歳
 
-yomei_shu_numeric_40:
-  uuid: YomeiShuNumeric40
-  question_id: YomeiShuQuestion2
+question_age_30:
+  uuid: LegMagicNumeric30
+  question_id: LegMagicQuestion2
   order: 3
-  content: 40~49歳
+  content: 30-39歳
 
-yomei_shu_numeric_50:
-  uuid: YomeiShuNumeric50
-  question_id: YomeiShuQuestion2
+question_age_40:
+  uuid: LegMagicNumeric40
+  question_id: LegMagicQuestion2
   order: 4
-  content: 50~59歳
+  content: 40-49歳
 
-yomei_shu_numeric_60:
-  uuid: YomeiShuNumeric60
-  question_id: YomeiShuQuestion2
+question_age_50:
+  uuid: LegMagicNumeric50
+  question_id: LegMagicQuestion2
   order: 5
-  content: 60歳以上
+  content: 50歳以上
 
-yomei_shu_kaori_kyoumi_1:
-  uuid: YomeiShuKaoriKyoumi1
+# レッグマジック
+#legmagic_q1_1:
+#  uuid: LegMagicQ1-1
+#  question_id: LegMagicQuestion1
+#  order: 1
+#  content: 男性
+#
+#legmagic_q1_1:
+#  uuid: LegMagicQ1-2
+#  question_id: LegMagicQuestion1
+#  order: 2
+#  content: 女性
+#
+#legmagic_q2_1:
+#  uuid: LegMagicQ2-1
+#  question_id: LegMagicQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#legmagic_q2_2:
+#  uuid: LegMagicQ2-2
+#  question_id: LegMagicQuestion2
+#  order: 2
+#  content: 20-29歳
+#
+#legmagic_q2_3:
+#  uuid: LegMagicQ2-3
+#  question_id: LegMagicQuestion2
+#  order: 3
+#  content: 30-39歳
+#
+#legmagic_q2_4:
+#  uuid: LegMagicQ2-4
+#  question_id: LegMagicQuestion2
+#  order: 4
+#  content: 40-49歳
+#
+#legmagic_q2_5:
+#  uuid: LegMagicQ2-5
+#  question_id: LegMagicQuestion2
+#  order: 5
+#  content: 50歳以上
+
+legmagic_q3_1:
+  uuid: LegMagicQ3-1
+  question_id: LegMagicQuestion3
+  order: 1
+  content: ある
+
+legmagic_q3_2:
+  uuid: LegMagicQ3-2
+  question_id: LegMagicQuestion3
+  order: 2
+  content: ない
+
+legmagic_q4_1:
+  uuid: LegMagicQ4-1
+  question_id: LegMagicQuestion4
+  order: 1
+  content: はい
+
+legmagic_q4_2:
+  uuid: LegMagicQ4-2
+  question_id: LegMagicQuestion4
+  order: 2
+  content: いいえ
+
+legmagic_q5_1:
+  uuid: LegMagicQ5-1
+  question_id: LegMagicQuestion5
+  order: 1
+  content: そう思う
+
+legmagic_q5_2:
+  uuid: LegMagicQ5-2
+  question_id: LegMagicQuestion5
+  order: 2
+  content: どちらかと言えばそう思う
+
+legmagic_q5_3:
+  uuid: LegMagicQ5-3
+  question_id: LegMagicQuestion5
+  order: 3
+  content: どちらとも思わない
+
+legmagic_q5_4:
+  uuid: LegMagicQ5-4
+  question_id: LegMagicQuestion5
+  order: 4
+  content: どちらかと言えばそう思わない
+
+legmagic_q5_5:
+  uuid: LegMagicQ5-5
+  question_id: LegMagicQuestion5
+  order: 5
+  content: そう思わない
+
+legmagic_q6_1:
+  uuid: LegMagicQ6-1
+  question_id: LegMagicQuestion6
+  order: 1
+  content: そう思う
+
+legmagic_q6_2:
+  uuid: LegMagicQ6-2
+  question_id: LegMagicQuestion6
+  order: 2
+  content: どちらかと言えばそう思う
+
+legmagic_q6_3:
+  uuid: LegMagicQ6-3
+  question_id: LegMagicQuestion6
+  order: 3
+  content: どちらとも思わない
+
+legmagic_q6_4:
+  uuid: LegMagicQ6-4
+  question_id: LegMagicQuestion6
+  order: 4
+  content: どちらかと言えばそう思わない
+
+legmagic_q6_5:
+  uuid: LegMagicQ6-5
+  question_id: LegMagicQuestion6
+  order: 5
+  content: そう思わない
+
+# パワープランニング
+#power_planning_M_q1_1:
+#  uuid: PowerPlanningMQ1-1
+#  question_id: PowerPlanningMQuestion1
+#  order: 1
+#  content: 男性
+#
+#power_planning_M_q1_2:
+#  uuid: PowerPlanningMQ1-2
+#  question_id: PowerPlanningMQuestion1
+#  order: 2
+#  content: 女性
+#
+#power_planning_M_q2_1:
+#  uuid: PowerPlanningMQ2-1
+#  question_id: PowerPlanningMQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#power_planning_M_q2_2:
+#  uuid: PowerPlanningMQ2-2
+#  question_id: PowerPlanningMQuestion2
+#  order: 2
+#  content: 20-29歳
+#
+#power_planning_M_q2_3:
+#  uuid: PowerPlanningMQ2-3
+#  question_id: PowerPlanningMQuestion2
+#  order: 3
+#  content: 30-39歳
+#
+#power_planning_M_q2_4:
+#  uuid: PowerPlanningMQ2-4
+#  question_id: PowerPlanningMQuestion2
+#  order: 4
+#  content: 40-49歳
+#
+#power_planning_M_q2_5:
+#  uuid: PowerPlanningMQ2-5
+#  question_id: PowerPlanningMQuestion2
+#  order: 5
+#  content: 50歳以上
+
+power_planning_M_q3_1:
+  uuid: PowerPlanningMQ3-1
+  question_id: PowerPlanningMQuestion3
+  order: 1
+  content: 高いと感じている
+
+power_planning_M_q3_2:
+  uuid: PowerPlanningMQ3-2
+  question_id: PowerPlanningMQuestion3
+  order: 2
+  content: 普通と感じている
+
+power_planning_M_q3_3:
+  uuid: PowerPlanningMQ3-3
+  question_id: PowerPlanningMQuestion3
+  order: 3
+  content: 安いと感じている
+
+power_planning_M_q3_4:
+  uuid: PowerPlanningMQ3-4
+  question_id: PowerPlanningMQuestion3
+  order: 4
+  content: 加入していない
+
+power_planning_M_q4_1:
+  uuid: PowerPlanningMQ4-1
+  question_id: PowerPlanningMQuestion4
+  order: 1
+  content: 知っている
+
+power_planning_M_q4_2:
+  uuid: PowerPlanningMQ4-2
+  question_id: PowerPlanningMQuestion4
+  order: 2
+  content: 知らない
+
+power_planning_M_q5_1:
+  uuid: PowerPlanningMQ5-1
+  question_id: PowerPlanningMQuestion5
+  order: 1
+  content: 聞いたことはある
+
+power_planning_M_q5_2:
+  uuid: PowerPlanningMQ5-2
+  question_id: PowerPlanningMQuestion5
+  order: 2
+  content: 知らなかった
+
+power_planning_M_q5_3:
+  uuid: PowerPlanningMQ5-3
+  question_id: PowerPlanningMQuestion5
+  order: 3
+  content: 知っていた
+
+power_planning_M_q5_4:
+  uuid: PowerPlanningMQ5-4
+  question_id: PowerPlanningMQuestion5
+  order: 4
+  content: 利用したことがある
+
+power_planning_M_q6_1:
+  uuid: PowerPlanningMQ6-1
+  question_id: PowerPlanningMQuestion6
+  order: 1
+  content: 参加してみたい
+
+power_planning_M_q6_2:
+  uuid: PowerPlanningMQ6-2
+  question_id: PowerPlanningMQuestion6
+  order: 2
+  content: 興味はある
+
+power_planning_M_q6_3:
+  uuid: PowerPlanningMQ6-3
+  question_id: PowerPlanningMQuestion6
+  order: 3
+  content: 機会があれば参加してみたい
+
+power_planning_M_q6_4:
+  uuid: PowerPlanningMQ6-4
+  question_id: PowerPlanningMQuestion6
+  order: 4
+  content: もう少し詳細を知りたい
+
+power_planning_M_q6_5:
+  uuid: PowerPlanningMQ6-5
+  question_id: PowerPlanningMQuestion6
+  order: 5
+  content: 参加したくない
+
+#power_planning_G_q1_1:
+#  uuid: PowerPlanningGQ1-1
+#  question_id: PowerPlanningGQuestion1
+#  order: 1
+#  content: 男性
+#
+#power_planning_G_q1_2:
+#  uuid: PowerPlanningGQ1-2
+#  question_id: PowerPlanningGQuestion1
+#  order: 2
+#  content: 女性
+#
+#power_planning_G_q2_1:
+#  uuid: PowerPlanningGQ2-1
+#  question_id: PowerPlanningGQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#power_planning_G_q2_2:
+#  uuid: PowerPlanningGQ2-2
+#  question_id: PowerPlanningGQuestion2
+#  order: 2
+#  content: 20-29歳
+#
+#power_planning_G_q2_3:
+#  uuid: PowerPlanningGQ2-3
+#  question_id: PowerPlanningGQuestion2
+#  order: 3
+#  content: 30-39歳
+#
+#power_planning_G_q2_4:
+#  uuid: PowerPlanningGQ2-4
+#  question_id: PowerPlanningGQuestion2
+#  order: 4
+#  content: 40-49歳
+#
+#power_planning_G_q2_5:
+#  uuid: PowerPlanningGQ2-5
+#  question_id: PowerPlanningGQuestion2
+#  order: 5
+#  content: 50歳以上
+#
+#power_planning_G_q3_1:
+#  uuid: PowerPlanningGQ3-1
+#  question_id: PowerPlanningGQuestion3
+#  order: 1
+#  content: 高いと感じている
+#
+#power_planning_G_q3_2:
+#  uuid: PowerPlanningGQ3-2
+#  question_id: PowerPlanningGQuestion3
+#  order: 2
+#  content: 普通と感じている
+#
+#power_planning_G_q3_3:
+#  uuid: PowerPlanningGQ3-3
+#  question_id: PowerPlanningGQuestion3
+#  order: 3
+#  content: 安いと感じている
+#
+#power_planning_G_q3_4:
+#  uuid: PowerPlanningGQ3-4
+#  question_id: PowerPlanningGQuestion3
+#  order: 4
+#  content: 加入していない
+#
+#power_planning_G_q4_1:
+#  uuid: PowerPlanningGQ4-1
+#  question_id: PowerPlanningGQuestion4
+#  order: 1
+#  content: 知っている
+#
+#power_planning_G_q4_2:
+#  uuid: PowerPlanningGQ4-2
+#  question_id: PowerPlanningGQuestion4
+#  order: 2
+#  content: 知らない
+#
+#power_planning_G_q5_1:
+#  uuid: PowerPlanningGQ5-1
+#  question_id: PowerPlanningGQuestion5
+#  order: 1
+#  content: 聞いたことはある
+#
+#power_planning_G_q5_2:
+#  uuid: PowerPlanningGQ5-2
+#  question_id: PowerPlanningGQuestion5
+#  order: 2
+#  content: 知らなかった
+#
+#power_planning_G_q5_3:
+#  uuid: PowerPlanningGQ5-3
+#  question_id: PowerPlanningGQuestion5
+#  order: 3
+#  content: 知っていた
+#
+#power_planning_G_q5_4:
+#  uuid: PowerPlanningGQ5-4
+#  question_id: PowerPlanningGQuestion5
+#  order: 4
+#  content: 利用したことがある
+
+power_planning_G_q6_1:
+  uuid: PowerPlanningGQ6-1
+  question_id: PowerPlanningGQuestion6
+  order: 1
+  content: 参加してみたい
+
+power_planning_G_q6_2:
+  uuid: PowerPlanningGQ6-2
+  question_id: PowerPlanningGQuestion6
+  order: 2
+  content: 興味はある
+
+power_planning_G_q6_3:
+  uuid: PowerPlanningGQ6-3
+  question_id: PowerPlanningGQuestion6
+  order: 3
+  content: 機会があれば参加してみたい
+
+power_planning_G_q6_4:
+  uuid: PowerPlanningGQ6-4
+  question_id: PowerPlanningGQuestion6
+  order: 4
+  content: もう少し詳細を知りたい
+
+power_planning_G_q6_5:
+  uuid: PowerPlanningGQ6-5
+  question_id: PowerPlanningGQuestion6
+  order: 5
+  content: 参加したくない
+
+# ヤーマン
+#ya_man_q1_1:
+#  uuid: YaManQ1-1
+#  question_id: YaManQuestion1
+#  order: 1
+#  content: 男性
+#
+#ya_man_q1_2:
+#  uuid: YaManQ1-2
+#  question_id: YaManQuestion1
+#  order: 2
+#  content: 女性
+#
+#ya_man_q2_1:
+#  uuid: YaManQ2-1
+#  question_id: YaManQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#ya_man_q2_2:
+#  uuid: YaManQ2-2
+#  question_id: YaManQuestion2
+#  order: 2
+#  content: 20-29歳
+#
+#ya_man_q2_3:
+#  uuid: YaManQ2-3
+#  question_id: YaManQuestion2
+#  order: 3
+#  content: 30-39歳
+#
+#ya_man_q2_4:
+#  uuid: YaManQ2-4
+#  question_id: YaManQuestion2
+#  order: 4
+#  content: 40-49歳
+#
+#ya_man_q2_5:
+#  uuid: YaManQ2-5
+#  question_id: YaManQuestion2
+#  order: 5
+#  content: 50歳以上
+
+ya_man_q3_1:
+  uuid: YaManQ3-1
+  question_id: YaManQuestion3
+  order: 1
+  content: 興味を持った
+
+ya_man_q3_2:
+  uuid: YaManQ3-2
+  question_id: YaManQuestion3
+  order: 2
+  content: どちらかと言えば興味を持った
+
+ya_man_q3_3:
+  uuid: YaManQ3-3
+  question_id: YaManQuestion3
+  order: 3
+  content: どちらとも言えない
+
+ya_man_q3_4:
+  uuid: YaManQ3-4
+  question_id: YaManQuestion3
+  order: 4
+  content: どちらかと言えば興味は持たなかった
+
+ya_man_q3_5:
+  uuid: YaManQ3-5
+  question_id: YaManQuestion3
+  order: 5
+  content: 興味は持たなかった
+
+ya_man_q4_1:
+  uuid: YaManQ4-1
+  question_id: YaManQuestion4
+  order: 1
+  content: 買ってみたい
+
+ya_man_q4_2:
+  uuid: YaManQ4-2
+  question_id: YaManQuestion4
+  order: 2
+  content: どちらかと言えば買ってみたい
+
+ya_man_q4_3:
+  uuid: YaManQ4-3
+  question_id: YaManQuestion4
+  order: 3
+  content: どちらともいえない
+
+ya_man_q4_4:
+  uuid: YaManQ4-4
+  question_id: YaManQuestion4
+  order: 4
+  content: どちらかと言えば買ってみたくはない
+
+ya_man_q4_5:
+  uuid: YaManQ4-5
+  question_id: YaManQuestion4
+  order: 5
+  content: 買ってみたくはない
+
+ya_man_q5_1:
+  uuid: YaManQ5-1
+  question_id: YaManQuestion5
+  order: 1
+  content: 以前から知っていた
+
+ya_man_q5_2:
+  uuid: YaManQ5-2
+  question_id: YaManQuestion5
+  order: 2
+  content: 見たことがある
+
+ya_man_q5_3:
+  uuid: YaManQ5-3
+  question_id: YaManQuestion5
+  order: 3
+  content: 知らなかった
+
+ya_man_q6_1:
+  uuid: YaManQ6-1
+  question_id: YaManQuestion6
+  order: 1
+  content: 商品が気になったから
+
+ya_man_q6_2:
+  uuid: YaManQ6-2
+  question_id: YaManQuestion6
+  order: 2
+  content: ポイントがついていたから
+
+ya_man_q6_3:
+  uuid: YaManQ6-3
+  question_id: YaManQuestion6
+  order: 3
+  content: 動画が面白そうだったから
+
+# 養命酒
+#yomei_shu_q1_1:
+#  uuid: YomeiShuQ1-1
+#  question_id: YomeiShuQuestion1
+#  order: 1
+#  content: 男性
+#
+#yomei_shu_q1_2:
+#  uuid: YomeiShuQ1-2
+#  question_id: YomeiShuQuestion1
+#  order: 2
+#  content: 女性
+#
+#yomei_shu_q2_1:
+#  uuid: YomeiShuQ2-1
+#  question_id: YomeiShuQuestion2
+#  order: 1
+#  content: 20~29歳
+#
+#yomei_shu_q2_2:
+#  uuid: YomeiShuQ2-2
+#  question_id: YomeiShuQuestion2
+#  order: 2
+#  content: 30~39歳
+#
+#yomei_shu_q2_3:
+#  uuid: YomeiShuQ2-3
+#  question_id: YomeiShuQuestion2
+#  order: 3
+#  content: 40~49歳
+#
+#yomei_shu_q2_4:
+#  uuid: YomeiShuQ2-4
+#  question_id: YomeiShuQuestion2
+#  order: 4
+#  content: 50~59歳
+#
+#yomei_shu_q2_5:
+#  uuid: YomeiShuQ2-5
+#  question_id: YomeiShuQuestion2
+#  order: 5
+#  content: 60歳以上
+
+yomei_shu_q3_1:
+  uuid: YomeiShuKaoriQ3-1
   question_id: YomeiShuQuestion3
   order: 1
   content: 非常に興味を持った
 
-yomei_shu_kaori_kyoumi_2:
-  uuid: YomeiShuKaoriKyoumi2
+yomei_shu_q3_2:
+  uuid: YomeiShuKaoriQ3-2
   question_id: YomeiShuQuestion3
   order: 2
   content: やや興味を持った
 
-yomei_shu_kaori_kyoumi_3:
-  uuid: YomeiShuKaoriKyoumi3
+yomei_shu_q3_3:
+  uuid: YomeiShuKaoriQ3-3
   question_id: YomeiShuQuestion3
   order: 3
   content: どちらともいえない
 
-yomei_shu_kaori_kyoumi_4:
-  uuid: YomeiShuKaoriKyoumi4
+yomei_shu_q3_4:
+  uuid: YomeiShuKaoriQ3-4
   question_id: YomeiShuQuestion3
   order: 4
   content: あまり興味は持たなかった
 
-yomei_shu_kaori_kyoumi_5:
-  uuid: YomeiShuKaoriKyoumi5
+yomei_shu_q3_5:
+  uuid: YomeiShuKaoriQ3-5
   question_id: YomeiShuQuestion3
   order: 5
   content: 全く興味は持たなかった
 
-yomei_shu_drink_1:
-  uuid: YomeiShuDrink1
+yomei_shu_q4_1:
+  uuid: YomeiShuQ4-1
   question_id: YomeiShuQuestion4
   order: 1
   content: 非常に飲んでみたい
 
-yomei_shu_drink_2:
-  uuid: YomeiShuDrink2
+yomei_shu_q4_2:
+  uuid: YomeiShuQ4-2
   question_id: YomeiShuQuestion4
   order: 2
   content: やや飲んでみたい
 
-yomei_shu_drink_3:
-  uuid: YomeiShuDrink3
+yomei_shu_q4_3:
+  uuid: YomeiShuQ4-3
   question_id: YomeiShuQuestion4
   order: 3
   content: どちらともいえない
 
-yomei_shu_drink_4:
-  uuid: YomeiShuDrink4
+yomei_shu_q4_4:
+  uuid: YomeiShuQ4-4
   question_id: YomeiShuQuestion4
   order: 4
   content: あまり飲んでみたくない
 
-yomei_shu_drink_5:
-  uuid: YomeiShuDrink5
+yomei_shu_q4_5:
+  uuid: YomeiShuQ4-5
   question_id: YomeiShuQuestion4
   order: 5
   content: 全く飲んでみたくない
 
-yomei_shu_buy_1:
-  uuid: YomeiShuBuy1
+yomei_shu_q5_1:
+  uuid: YomeiShuQ5-1
   question_id: YomeiShuQuestion5
   order: 1
   content: 非常に買ってみたい
 
-yomei_shu_buy_2:
-  uuid: YomeiShuBuy2
+yomei_shu_q5_2:
+  uuid: YomeiShuQ5-2
   question_id: YomeiShuQuestion5
   order: 2
   content: やや買ってみたい
 
-yomei_shu_buy_3:
-  uuid: YomeiShuBuy3
+yomei_shu_q5_3:
+  uuid: YomeiShuQ5-3
   question_id: YomeiShuQuestion5
   order: 3
   content: どちらともいえない
 
-yomei_shu_buy_4:
-  uuid: YomeiShuBuy4
+yomei_shu_q5_4:
+  uuid: YomeiShuQ5-4
   question_id: YomeiShuQuestion5
   order: 4
   content: あまり買ってみたくはない
 
-yomei_shu_buy_5:
-  uuid: YomeiShuBuy5
+yomei_shu_q5_5:
+  uuid: YomeiShuQ5-5
   question_id: YomeiShuQuestion5
   order: 5
   content: まったく買ってみたくはない
 
-yomei_shu_sp_know_1:
-  uuid: YomeiShuSPKnow1
+yomei_shu_q6_1:
+  uuid: YomeiShuQ6-1
   question_id: YomeiShuQuestion6
   order: 1
   content: 以前から知っていた
 
-yomei_shu_sp_know_2:
-  uuid: YomeiShuSPKnow2
+yomei_shu_q6_2:
+  uuid: YomeiShuQ6-2
   question_id: YomeiShuQuestion6
   order: 2
   content: 今回はじめて知った
 
-yomei_shu_sp_drank_1:
-  uuid: YomeiShuSPDrank1
+yomei_shu_q7_1:
+  uuid: YomeiShuQ7-1
   question_id: YomeiShuQuestion7
   order: 1
   content: 購入して飲んだことがある
 
-yomei_shu_sp_drank_2:
-  uuid: YomeiShuSPDrank2
+yomei_shu_q7_2:
+  uuid: YomeiShuQ7-2
   question_id: YomeiShuQuestion7
   order: 2
   content: 試飲会や試供品で飲んだことがある
 
-yomei_shu_sp_drank_3:
-  uuid: YomeiShuSPDrank3
+yomei_shu_q7_3:
+  uuid: YomeiShuQ7-3
   question_id: YomeiShuQuestion7
   order: 3
   content: 飲んだことはない
 
-yomei_shu_know_1:
-  uuid: YomeiShuKnow1
+yomei_shu_q8_1:
+  uuid: YomeiShuQ8-1
   question_id: YomeiShuQuestion8
   order: 1
   content: 以前から知っていた
 
-yomei_shu_know_2:
-  uuid: YomeiShuKnow2
+yomei_shu_q8_2:
+  uuid: YomeiShuQ8-2
   question_id: YomeiShuQuestion8
   order: 2
   content: 今回はじめて知った
 
-yomei_shu_drank_1:
-  uuid: YomeiShuDrank1
+yomei_shu_q9_1:
+  uuid: YomeiShuQ9-1
   question_id: YomeiShuQuestion9
   order: 1
   content: 購入して飲んだことがある
 
-yomei_shu_drank_2:
-  uuid: YomeiShuDrank2
+yomei_shu_q9_2:
+  uuid: YomeiShuQ9-2
   question_id: YomeiShuQuestion9
   order: 2
   content: 試飲会や試供品で飲んだことがある
 
-yomei_shu_drank_3:
-  uuid: YomeiShuDrank3
+yomei_shu_q9_3:
+  uuid: YomeiShuQ9-3
   question_id: YomeiShuQuestion9
   order: 3
   content: 飲んだことはない
 
-yomei_shu_watch_1:
-  uuid: YomeiShuWatch1
+yomei_shu_q10_1:
+  uuid: YomeiShuQ10-1
   question_id: YomeiShuQuestion10
   order: 1
   content: 商品が気になったから
 
-yomei_shu_watch_2:
-  uuid: YomeiShuWatch2
+yomei_shu_q10_2:
+  uuid: YomeiShuQ10-2
   question_id: YomeiShuQuestion10
   order: 2
   content: ポイントがついていたから
 
-yomei_shu_watch_3:
-  uuid: YomeiShuWatch3
+yomei_shu_q10_3:
+  uuid: YomeiShuQ10-3
   question_id: YomeiShuQuestion10
   order: 3
   content: 動画が面白そうだったから
 
 # プラスワン
-plus_one_radio_male:
-  uuid: PlusOneRadioMale
-  question_id: PlusOneQuestion1
-  order: 1
-  content: 男性
+#plus_one_q1_1:
+#  uuid: PlusOneQ1-1
+#  question_id: PlusOneQuestion1
+#  order: 1
+#  content: 男性
+#
+#plus_one_q1_2:
+#  uuid: PlusOneQ1-2
+#  question_id: PlusOneQuestion1
+#  order: 2
+#  content: 女性
+#
+#plus_one_q2_1:
+#  uuid: PlusOneQ2-1
+#  question_id: PlusOneQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#plus_one_q2_2:
+#  uuid: PlusOneQ2-2
+#  question_id: PlusOneQuestion2
+#  order: 2
+#  content: 20~29歳
+#
+#plus_one_q2_3:
+#  uuid: PlusOneQ2-3
+#  question_id: PlusOneQuestion2
+#  order: 3
+#  content: 30~39歳
+#
+#plus_one_q2_4:
+#  uuid: PlusOneQ2-4
+#  question_id: PlusOneQuestion2
+#  order: 4
+#  content: 40~49歳
+#
+#plus_one_q2_5:
+#  uuid: PlusOneQ2-5
+#  question_id: PlusOneQuestion2
+#  order: 5
+#  content: 50歳以上
 
-plus_one_radio_female:
-  uuid: PlusOneRadioFemale
-  question_id: PlusOneQuestion1
-  order: 2
-  content: 女性
-
-plus_one_numeric_u19:
-  uuid: PlusOneNumericU19
-  question_id: PlusOneQuestion2
-  order: 1
-  content: 19歳以下
-
-plus_one_numeric_20:
-  uuid: PlusOneNumeric20
-  question_id: PlusOneQuestion2
-  order: 2
-  content: 20~29歳
-
-plus_one_numeric_30:
-  uuid: PlusOneNumeric30
-  question_id: PlusOneQuestion2
-  order: 3
-  content: 30~39歳
-
-plus_one_numeric_40:
-  uuid: PlusOneNumeric40
-  question_id: PlusOneQuestion2
-  order: 4
-  content: 40~49歳
-
-plus_one_numeric_50:
-  uuid: PlusOneNumeric50
-  question_id: PlusOneQuestion2
-  order: 5
-  content: 50歳以上
-
-plus_one_scene_1:
-  uuid: PlusOneScene1
+plus_one_q3_1:
+  uuid: PlusOneQ3-1
   question_id: PlusOneQuestion3
   order: 1
   content: サークル等の仲間内で利用
 
-plus_one_scene_2:
-  uuid: PlusOneScene2
+plus_one_q3_2:
+  uuid: PlusOneQ3-2
   question_id: PlusOneQuestion3
   order: 2
   content: スポーツチームで利用
 
-plus_one_scene_3:
-  uuid: PlusOneScene3
+plus_one_q3_3:
+  uuid: PlusOneQ3-3
   question_id: PlusOneQuestion3
   order: 3
   content: 勤務している企業/お店で利用
 
-plus_one_scene_4:
-  uuid: PlusOneScene4
+plus_one_q3_4:
+  uuid: PlusOneQ3-4
   question_id: PlusOneQuestion3
   order: 4
   content: 家族・友達で利用
 
-plus_one_scene_5:
-  uuid: PlusOneScene5
+plus_one_q3_5:
+  uuid: PlusOneQ3-5
   question_id: PlusOneQuestion3
   order: 5
   content: プレゼントとして利用
 
-plus_one_cons_1:
-  uuid: PlusOneConsideration1
+plus_one_q4_1:
+  uuid: PlusOneQ4-1
   question_id: PlusOneQuestion4
   order: 1
   content: デザイン
 
-plus_one_cons_2:
-  uuid: PlusOneConsideration2
+plus_one_q4_2:
+  uuid: PlusOneQ4-2
   question_id: PlusOneQuestion4
   order: 2
   content: 着心地
 
-plus_one_cons_3:
-  uuid: PlusOneConsideration3
+plus_one_q4_3:
+  uuid: PlusOneQ4-3
   question_id: PlusOneQuestion4
   order: 3
   content: 耐久性
 
-plus_one_cons_4:
-  uuid: PlusOneConsideration4
+plus_one_q4_4:
+  uuid: PlusOneQ4-4
   question_id: PlusOneQuestion4
   order: 4
   content: 価格
 
-plus_one_cons_5:
-  uuid: PlusOneConsideration5
+plus_one_q4_5:
+  uuid: PlusOneQ4-5
   question_id: PlusOneQuestion4
   order: 5
   content: 制作スピード
 
-plus_one_good_1:
-  uuid: PlusOneGood1
+plus_one_q5_1:
+  uuid: PlusOneQ5-1
   question_id: PlusOneQuestion5
   order: 1
   content: デザインを自由に選べる
 
-plus_one_good_2:
-  uuid: PlusOneGood2
+plus_one_q5_2:
+  uuid: PlusOneQ5-2
   question_id: PlusOneQuestion5
   order: 2
   content: ウェブから簡単に発注できる
 
-plus_one_good_3:
-  uuid: PlusOneGood3
+plus_one_q5_3:
+  uuid: PlusOneQ5-3
   question_id: PlusOneQuestion5
   order: 3
   content: 顧客満足度が高い
 
-plus_one_good_4:
-  uuid: PlusOneGood4
+plus_one_q5_4:
+  uuid: PlusOneQ5-4
   question_id: PlusOneQuestion5
   order: 4
   content: 見積もりが簡単にできる
 
-plus_one_good_5:
-  uuid: PlusOneGood5
+plus_one_q5_5:
+  uuid: PlusOneQ5-5
   question_id: PlusOneQuestion5
   order: 5
   content: 販売実績が年間150万枚と豊富
 
-plus_one_satis1:
-  uuid: PlusOneSatisfaction1
+plus_one_q6_1:
+  uuid: PlusOneQ6-1
   question_id: PlusOneQuestion6
   order: 1
   content: 92%
 
-plus_one_satis2:
-  uuid: PlusOneSatisfaction2
+plus_one_q6_2:
+  uuid: PlusOneQ6-2
   question_id: PlusOneQuestion6
   order: 2
   content: 83%
 
-plus_one_satis3:
-  uuid: PlusOneSatisfaction3
+plus_one_q6_3:
+  uuid: PlusOneQ6-3
   question_id: PlusOneQuestion6
   order: 3
   content: 71%
 
-plus_one_satis4:
-  uuid: PlusOneSatisfaction4
+plus_one_q6_4:
+  uuid: PlusOneQ6-4
   question_id: PlusOneQuestion6
   order: 4
   content: 64%
 
-plus_one_satis5:
-  uuid: PlusOneSatisfaction5
+plus_one_q6_5:
+  uuid: PlusOneQ6-5
   question_id: PlusOneQuestion6
   order: 5
   content: 50%
 
-plus_one_know_1:
-  uuid: PlusOneKnow1
+plus_one_q7_1:
+  uuid: PlusOneQ7-1
   question_id: PlusOneQuestion7
   order: 1
   content: 知っており、自分で利用したことがある。
 
-plus_one_know_2:
-  uuid: PlusOneKnow2
+plus_one_q7_2:
+  uuid: PlusOneQ7-2
   question_id: PlusOneQuestion7
   order: 2
   content: 知っており、知人が利用していたことがある。
 
-plus_one_know_3:
-  uuid: PlusOneKnow3
+plus_one_q7_3:
+  uuid: PlusOneQ7-3
   question_id: PlusOneQuestion7
   order: 3
   content: 知っていたが、利用したことはない。
 
-plus_one_know_4:
-  uuid: PlusOneKnow4
+plus_one_q7_4:
+  uuid: PlusOneQ7-4
   question_id: PlusOneQuestion7
   order: 4
   content: 知らなかった。
 
-plus_one_kyoumi_1:
-  uuid: PlusOneKyoumi1
+plus_one_q8_1:
+  uuid: PlusOneQ8-1
   question_id: PlusOneQuestion8
   order: 1
   content: 非常に興味を持った
 
-plus_one_kyoumi_2:
-  uuid: PlusOneKyoumi2
+plus_one_q8_2:
+  uuid: PlusOneQ8-2
   question_id: PlusOneQuestion8
   order: 2
   content: 少し興味を持った
 
-plus_one_kyoumi_3:
-  uuid: PlusOneKyoumi3
+plus_one_q8_3:
+  uuid: PlusOneQ8-3
   question_id: PlusOneQuestion8
   order: 3
   content: あまり興味を持たなかった
 
-plus_one_kyoumi_4:
-  uuid: PlusOneKyoumi4
+plus_one_q8_4:
+  uuid: PlusOneQ8-4
   question_id: PlusOneQuestion8
   order: 4
   content: 全く興味を持たなかった
 
-plus_one_use_1:
+plus_one_q9_1:
   uuid: PlusOneUse1
   question_id: PlusOneQuestion9
   order: 1
   content: 是非利用したいと思う
 
-plus_one_use_2:
-  uuid: PlusOneUse2
+plus_one_q9_2:
+  uuid: PlusOneQ9-2
   question_id: PlusOneQuestion9
   order: 2
   content: 機会があれば利用したいと思う
 
-plus_one_use_3:
-  uuid: PlusOneUse3
+plus_one_q9_3:
+  uuid: PlusOneQ9-3
   question_id: PlusOneQuestion9
   order: 3
   content: 利用したいと思わない
 
-plus_one_watch_1:
-  uuid: PlusOneWatch1
+plus_one_q10_1:
+  uuid: PlusOneQ10-1
   question_id: PlusOneQuestion10
   order: 1
   content: サービスが魅力的だったから
 
-plus_one_watch_2:
-  uuid: PlusOneWatch2
+plus_one_q10_2:
+  uuid: PlusOneQ10-2
   question_id: PlusOneQuestion10
   order: 2
   content: ポイントが魅力的だったから
 
-plus_one_watch_3:
-  uuid: PlusOneWatch3
+plus_one_q10_3:
+  uuid: PlusOneQ10-3
   question_id: PlusOneQuestion10
   order: 3
   content: どちらも魅力的だったから
 
-# レッグマジックX
-legmagicX_radio_male:
-  uuid: LegMagicXRadioMale
-  question_id: LegMagicXQuestion1
-  order: 1
-  content: 男性
-
-legmagicX_radio_female:
-  uuid: LegMagicXRadioFemale
-  question_id: LegMagicXQuestion1
-  order: 2
-  content: 女性
-
-legmagicX_numeric_u19:
-  uuid: LegMagicXNumericU19
-  question_id: LegMagicXQuestion2
-  order: 1
-  content: 19歳以下
-
-legmagicX_numeric_20:
-  uuid: LegMagicXNumeric20
-  question_id: LegMagicXQuestion2
-  order: 2
-  content: 20-29歳
-
-legmagicX_numeric_30:
-  uuid: LegMagicXNumeric30
-  question_id: LegMagicXQuestion2
-  order: 3
-  content: 30-39歳
-
-legmagicX_numeric_40:
-  uuid: LegMagicXNumeric40
-  question_id: LegMagicXQuestion2
-  order: 4
-  content: 40-49歳
-
-legmagicX_numeric_50:
-  uuid: LegMagicXNumeric50
-  question_id: LegMagicXQuestion2
-  order: 5
-  content: 50歳以上
-
-legmagicX_size_1:
-  uuid: LegMagicXSize1
-  question_id: LegMagicXQuestion3
-  order: 1
-  content: ある
-
-legmagicX_size_2:
-  uuid: LegMagicXSize2
-  question_id: LegMagicXQuestion3
-  order: 2
-  content: ない
-
-legmagicX_know_1:
-  uuid: LegMagicXKnow1
-  question_id: LegMagicXQuestion4
-  order: 1
-  content: はい
-
-legmagicX_know_2:
-  uuid: LegMagicXKnow2
-  question_id: LegMagicXQuestion4
-  order: 2
-  content: いいえ
-
-legmagicX_get_1:
-  uuid: LegMagicXGet1
-  question_id: LegMagicXQuestion5
-  order: 1
-  content: そう思う
-
-legmagicX_get_2:
-  uuid: LegMagicXGet2
-  question_id: LegMagicXQuestion5
-  order: 2
-  content: どちらかと言えばそう思う
-
-legmagicX_get_3:
-  uuid: LegMagicXGet3
-  question_id: LegMagicXQuestion5
-  order: 3
-  content: どちらとも思わない
-
-legmagicX_get_4:
-  uuid: LegMagicXGet4
-  question_id: LegMagicXQuestion5
-  order: 4
-  content: どちらかと言えばそう思わない
-
-legmagicX_get_5:
-  uuid: LegMagicXGet5
-  question_id: LegMagicXQuestion5
-  order: 5
-  content: そう思わない
-
-legmagicX_coin_1:
-  uuid: LegMagicXCoin1
-  question_id: LegMagicXQuestion6
-  order: 1
-  content: そう思う
-
-legmagicX_coin_2:
-  uuid: LegMagicXCoin2
-  question_id: LegMagicXQuestion6
-  order: 2
-  content: どちらかと言えばそう思う
-
-legmagicX_coin_3:
-  uuid: LegMagicXCoin3
-  question_id: LegMagicXQuestion6
-  order: 3
-  content: どちらとも思わない
-
-legmagicX_coin_4:
-  uuid: LegMagicXCoin4
-  question_id: LegMagicXQuestion6
-  order: 4
-  content: どちらかと言えばそう思わない
-
-legmagicX_coin_5:
-  uuid: LegMagicXCoin5
-  question_id: LegMagicXQuestion6
-  order: 5
-  content: そう思わない
-
 # 永谷園
-nagatani_en_radio_male:
-  uuid: NagataniEnRadioMale
-  question_id: NagataniEnQuestion1
-  order: 1
-  content: 男性
+#nagatanien_q1_1:
+#  uuid: NagatanienQ1-2
+#  question_id: NagataniEnQuestion1
+#  order: 1
+#  content: 男性
+#
+#nagatanien_q1_2:
+#  uuid: NagatanienQ1-2
+#  question_id: NagataniEnQuestion1
+#  order: 2
+#  content: 女性
+#
+#nagatanien_q2_1:
+#  uuid: NagatanienQ2-1
+#  question_id: NagataniEnQuestion2
+#  order: 1
+#  content: 19歳以下
+#
+#nagatanien_q2_2:
+#  uuid: NagatanienQ2-2
+#  question_id: NagataniEnQuestion2
+#  order: 2
+#  content: 20-29歳
+#
+#nagatanien_q2_3:
+#  uuid: NagatanienQ2-3
+#  question_id: NagataniEnQuestion2
+#  order: 3
+#  content: 30-39歳
+#
+#nagatanien_q2_4:
+#  uuid: NagatanienQ2-4
+#  question_id: NagataniEnQuestion2
+#  order: 4
+#  content: 40-49歳
+#
+#nagatanien_q2_5:
+#  uuid: NagatanienQ2-5
+#  question_id: NagataniEnQuestion2
+#  order: 5
+#  content: 50歳以上
 
-nagatani_en_radio_female:
-  uuid: NagataniEnRadioFemale
-  question_id: NagataniEnQuestion1
-  order: 2
-  content: 女性
-
-nagatani_en_numeric_u19:
-  uuid: NagataniEnNumericU19
-  question_id: NagataniEnQuestion2
-  order: 1
-  content: 19歳以下
-
-nagatani_en_numeric_20:
-  uuid: NagataniEnNumeric20
-  question_id: NagataniEnQuestion2
-  order: 2
-  content: 20-29歳
-
-nagatani_en_numeric_30:
-  uuid: NagataniEnNumeric30
-  question_id: NagataniEnQuestion2
-  order: 3
-  content: 30-39歳
-
-nagatani_en_numeric_40:
-  uuid: NagataniEnNumeric40
-  question_id: NagataniEnQuestion2
-  order: 4
-  content: 40-49歳
-
-nagatani_en_numeric_50:
-  uuid: NagataniEnNumeric50
-  question_id: NagataniEnQuestion2
-  order: 5
-  content: 50歳以上
-
-nagatani_en_wakeup_1:
-  uuid: NagataniEnWakeUp1
+nagatanien_q3_1:
+  uuid: NagatanienQ3-1
   question_id: NagataniEnQuestion3
   order: 1
   content: よくある
 
-nagatani_en_wakeup_2:
-  uuid: NagataniEnWakeUp2
+nagatanien_q3_2:
+  uuid: NagatanienQ3-2
   question_id: NagataniEnQuestion3
   order: 2
   content: たまにある
 
-nagatani_en_wakeup_3:
-  uuid: NagataniEnWakeUp3
+nagatanien_q3_3:
+  uuid: NagatanienQ3-3
   question_id: NagataniEnQuestion3
   order: 3
   content: どちらとも言えない
 
-nagatani_en_wakeup_4:
-  uuid: NagataniEnWakeUp4
+nagatanien_q3_4:
+  uuid: NagatanienQ3-4
   question_id: NagataniEnQuestion3
   order: 4
   content: あまりない
 
-nagatani_en_wakeup_5:
-  uuid: NagataniEnWakeUp5
+nagatanien_q3_5:
+  uuid: NagatanienQ3-5
   question_id: NagataniEnQuestion3
   order: 5
   content: 全くない
 
-nagatani_en_know_1:
-  uuid: NagataniEnKnow1
+nagatanien_q4_1:
+  uuid: NagatanienQ4-1
   question_id: NagataniEnQuestion4
   order: 1
   content: よく知っていた
 
-nagatani_en_know_2:
-  uuid: NagataniEnKnow2
+nagatanien_q4_2:
+  uuid: NagatanienQ4-2
   question_id: NagataniEnQuestion4
   order: 2
   content: まあ知っていた
 
-nagatani_en_know_3:
-  uuid: NagataniEnKnow3
+nagatanien_q4_3:
+  uuid: NagatanienQ4-3
   question_id: NagataniEnQuestion4
   order: 3
   content: 知らなかった
 
-nagatani_en_int_1:
-  uuid: NagataniEnInt1
+nagatanien_q5_1:
+  uuid: NagatanienQ5-1
   question_id: NagataniEnQuestion5
   order: 1
   content: 非常に興味がある
 
-nagatani_en_int_2:
-  uuid: NagataniEnInt2
+nagatanien_q5_2:
+  uuid: NagatanienQ5-2
   question_id: NagataniEnQuestion5
   order: 2
   content: まあ興味がある
 
-nagatani_en_int_3:
-  uuid: NagataniEnInt3
+nagatanien_q5_3:
+  uuid: NagatanienQ5-3
   question_id: NagataniEnQuestion5
   order: 3
   content: どちらとも思わない
 
-nagatani_en_int_4:
-  uuid: NagataniEnInt4
+nagatanien_q5_4:
+  uuid: NagatanienQ5-4
   question_id: NagataniEnQuestion5
   order: 4
   content: あまり興味がない
 
-nagatani_en_int_5:
-  uuid: NagataniEnInt5
+nagatanien_q5_5:
+  uuid: NagatanienQ5-5
   question_id: NagataniEnQuestion5
   order: 5
   content: 全く興味がない
 
-nagatani_en_mixi_1:
-  uuid: NagataniEnMixi1
+nagatanien_q6_1:
+  uuid: NagatanienQ6-1
   question_id: NagataniEnQuestion6
   order: 1
   content: 申し込みたい
 
-nagatani_en_mixi_2:
-  uuid: NagataniEnMixi2
+nagatanien_q6_2:
+  uuid: NagatanienQ6-2
   question_id: NagataniEnQuestion6
   order: 2
   content: どちらともいえない
 
-nagatani_en_mixi_3:
-  uuid: NagataniEnMixi3
+nagatanien_q6_3:
+  uuid: NagatanienQ6-3
   question_id: NagataniEnQuestion6
   order: 3
   content: 申込みたくない

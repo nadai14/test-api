@@ -1,0 +1,293 @@
+# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# APIテスト用データ
+# スマートフォン用
+# 動作確認用データ
+success_confirm_SP:
+  uuid: SuccessConfirmSPCampaginFaceID
+  campaign_id: SuccessConfirmCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルSCSP
+  description: 説明SCSP
+
+# nil動作確認用のデータ
+nullable_SP:
+  uuid: NullableSPCampaginFaceID
+  campaign_id: NullableCampaignID
+  face: SP
+
+# 空回答確認用
+null_answer_SP:
+  uuid: NullAnswerSPCampaginFaceID
+  campaign_id: NullAnswerCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルNASP
+  description: 説明NASP
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_SP:
+  uuid: FirstPageNullSPCampaginFaceID
+  campaign_id: FirstPageNullCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルFPNSP
+  description: 説明FPNSP
+
+first_page_id_null_SP:
+  uuid: FirstPageIDNullSPCampaginFaceID
+  campaign_id: FirstPageIDNullCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルFPIDNSP
+  description: 説明FPIDNSP
+
+# キャンペーンが終了日時を過ぎている
+camp_closed_SP:
+  uuid: CampaignClosedSPCampaginFaceID
+  campaign_id: CampaignClosedCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルCCSP
+  description: 説明CCSP
+
+# 設問と選択肢が矛盾している
+incons_question_SP:
+  uuid: InconsistencyQuestionSPCampaginFaceID
+  campaign_id: InconsistencyQuestionCampaignID
+  face: SP
+  css: /css/sp/themes/sample-1/style.css
+  title: タイトルIQSP
+  description: 説明IQSP
+  
+# PC用
+# 動作確認用データ
+success_confirm_PC:
+  uuid: SuccessConfirmPCCampaginFaceID
+  campaign_id: SuccessConfirmCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルSCPC
+  description: 説明SCPC
+
+# nil動作確認用のデータ
+nullable_PC:
+  uuid: NullablePCCampaginFaceID
+  campaign_id: NullableCampaignID
+  face: PC
+
+# 空回答確認用
+null_answer_PC:
+  uuid: NullAnswerPCCampaginFaceID
+  campaign_id: NullAnswerCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルNAPC
+  description: 説明NAPC
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_PC:
+  uuid: FirstPageNullPCCampaginFaceID
+  campaign_id: FirstPageNullCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルFPNPC
+  description: 説明FPNPC
+
+first_page_id_null_PC:
+  uuid: FirstPageIDNullPCCampaginFaceID
+  campaign_id: FirstPageIDNullCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルFPIDNPC
+  description: 説明FPIDNPC
+
+# キャンペーンが終了日時を過ぎている
+camp_closed_PC:
+  uuid: CampaignClosedPCCampaginFaceID
+  campaign_id: CampaignClosedCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルCCPC
+  description: 説明CCPC
+
+# 設問と選択肢が矛盾している
+incons_question_PC:
+  uuid: InconsistencyQuestionPCCampaginFaceID
+  campaign_id: InconsistencyQuestionCampaignID
+  face: PC
+  css: /css/pc/themes/sample-1/style.css
+  title: タイトルIQPC
+  description: 説明IQPC
+
+
+# 案件テスト用データ
+# レッグマジック
+legmagicX_SP:
+  uuid: LegMagicXSPCampaginFaceID
+  campaign_id: LegMagicXCampaignID
+  face: SP
+  css: /css/sp/themes/lgmx/style.css
+  title: 
+  description: 
+
+legmagicX_PC:
+  uuid: LegMagicXPCCampaginFaceID
+  campaign_id: LegMagicXCampaignID
+  face: PC
+  css: /css/pc/themes/lgmx/style.css
+  title: 
+  description: 
+
+legmagic_A:
+  uuid: LegMagicACampaginFaceID
+  campaign_id: LegMagicACampaignID
+  face: SP
+  css: /css/sp/themes/legmagic/style.css
+  title: 
+  description: 
+
+legmagic_B:
+  uuid: LegMagicBCampaginFaceID
+  campaign_id: LegMagicBCampaignID
+  face: SP
+  css: /css/sp/themes/legmagic/style.css
+  title: 
+  description: 
+
+# パワープランニング
+power_planning:
+  uuid: PowerPlanningCampaginFaceID
+  campaign_id: PowerPlanningCampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+power_planning_A:
+  uuid: PowerPlanningACampaginFaceID
+  campaign_id: PowerPlanningACampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+power_planning_B:
+  uuid: PowerPlanningBCampaginFaceID
+  campaign_id: PowerPlanningBCampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+# ヤーマン
+ya_man:
+  uuid: YaManCampaginFaceID
+  campaign_id: YaManCampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+
+ya_man_A:
+  uuid: YaManACampaginFaceID
+  campaign_id: YaManACampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+  
+ya_man_B:
+  uuid: YaManBCampaginFaceID
+  campaign_id: YaManBCampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+  
+# 養命酒
+yomei_shu_SP:
+  uuid: YomeiShuSPCampaginFaceID
+  campaign_id: YomeiShuCampaignID
+  face: SP
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+yomei_shu_PC:
+  uuid: YomeiShuPCCampaginFaceID
+  campaign_id: YomeiShuCampaignID
+  face: PC
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+yomei_shu_A:
+  uuid: YomeiShuACampaginFaceID
+  campaign_id: YomeiShuACampaignID
+  face: SP
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+yomei_shu_B:
+  uuid: YomeiShuPCCampaginFaceID
+  campaign_id: YomeiShuCampaignID
+  face: SP
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+# プラスワン
+plus_one_SP:
+  uuid: PlusOneSPCampaginFaceID
+  campaign_id: PlusOneCampaignID
+  face: SP
+  css: /css/sp/themes/plus1/style.css
+  title: 
+  description: 
+
+plus_one_PC:
+  uuid: PlusOnePCCampaginFaceID
+  campaign_id: PlusOneCampaignID
+  face: PC
+  css: /css/pc/themes/plus1/style.css
+  title: 
+  description: 
+
+plus_one_A:
+  uuid: PlusOneSPCampaginFaceID
+  campaign_id: PlusOneCampaignID
+  face: SP
+  css: /css/sp/themes/plus1/style.css
+  title: 
+  description: 
+
+plus_one_B:
+  uuid: PlusOnePCCampaginFaceID
+  campaign_id: PlusOneCampaignID
+  face: PC
+  css: /css/pc/themes/plus1/style.css
+  title: 
+  description: 
+
+# 永谷園
+nagatanien_SP:
+  uuid: NagatanienSPCampaginFaceID
+  campaign_id: NagatanienCampaignID
+  face: SP
+  css: /css/sp/themes/nagatanien/style.css
+  title: 
+  description: 
+
+nagatanien_PC:
+  uuid: NagatanienPCCampaginFaceID
+  campaign_id: NagatanienCampaignID
+  face: PC
+  css: /css/pc/themes/nagatanien/style.css
+  title: 
+  description: 

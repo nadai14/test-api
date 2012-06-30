@@ -71,6 +71,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
 
     # questions
     add_column :questions, :deleted_at, :timestamp
+    change_column :questions, :required, :boolean, :null => false, :default => true
 
     # choices
     add_column :choices, :deleted_at, :timestamp
@@ -127,6 +128,7 @@ class ChangeAtSprint3 < ActiveRecord::Migration
 
     # questions
     remove_column :questions, :deleted_at
+    change_column :questions, :required, :boolean, :null => false, :default => false
 
     # choices
     remove_column :choices, :deleted_at

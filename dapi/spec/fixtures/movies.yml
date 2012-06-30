@@ -1,0 +1,476 @@
+# coding: utf-8
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# 動作確認用データ
+sc_m3u8:
+  uuid: SuccessConfirmM3U8MovieID
+  campaign_id: SuccessConfirmCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+sc_flv:
+  uuid: SuccessConfirmFLVovieID
+  campaign_id: SuccessConfirmCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+sc_mp4:
+  uuid: SuccessConfirmMP4MovieID
+  campaign_id: SuccessConfirmCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# nil動作確認用のデータ
+nullable_m3u8:
+  uuid: NullableM3U8MovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+nullable_flv:
+  uuid: NullableFLVMovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+nullable_mp4:
+  uuid: NullableMP4MovieID
+  campaign_id: NullableCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 空回答確認用
+null_answer_m3u8:
+  uuid: NullAnswerM3U8MovieID
+  campaign_id: NullAnswerCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+null_answer_flv:
+  uuid: NullAnswerFLVovieID
+  campaign_id: NullAnswerCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+null_answer_mp4:
+  uuid: NullAnswerMP4MovieID
+  campaign_id: NullAnswerCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 異常系の確認用データ
+# アンケートの最初のページがNull
+first_page_null_m3u8:
+  uuid: FirstPageNullM3U8MovieID
+  campaign_id: FirstPageNullCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+first_page_null_flv:
+  uuid: FirstPageNullFLVovieID
+  campaign_id: FirstPageNullCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+first_page_null_mp4:
+  uuid: FirstPageNullMP4MovieID
+  campaign_id: FirstPageNullCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+first_page_id_null_m3u8:
+  uuid: FirstPageIDNullM3U8MovieID
+  campaign_id: FirstPageIDNullCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+first_page_id_null_flv:
+  uuid: FirstPageIDNullFLVovieID
+  campaign_id: FirstPageIDNullCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+first_page_id_null_mp4:
+  uuid: FirstPageIDNullMP4MovieID
+  campaign_id: FirstPageIDNullCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+
+# キャンペーンが終了日時を過ぎている
+camp_closed_m3u8:
+  uuid: CampaignClosedM3U8MovieID
+  campaign_id: CampaignClosedCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+camp_closed_flv:
+  uuid: CampaignClosedFLVovieID
+  campaign_id: CampaignClosedCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+camp_closed_mp4:
+  uuid: CampaignClosedMP4MovieID
+  campaign_id: CampaignClosedCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 設問と選択肢が矛盾している
+incons_question_m3u8:
+  uuid: InconsistencyQuestionM3U8MovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+incons_question_flv:
+  uuid: InconsistencyQuestionFLVovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+incons_question_mp4:
+  uuid: InconsistencyQuestionMP4MovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
+# 案件テスト用データ
+# レッグマジック
+legmagicX_m3u8:
+  uuid: LegMagicXM3U8MovieID
+  campaign_id: LegMagicXCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/lgmx/lgmx.m3u8
+  duration: 150
+
+legmagicX_flv:
+  uuid: LegMagicXFLVMovieID
+  campaign_id: LegMagicXCampaignID
+  mime_type: video/x-flv
+  src: /video/lgmx/lgmx.flv
+  duration: 150
+
+legmagicX_mp4:
+  uuid: LegMagicXMP4MovieID
+  campaign_id: LegMagicXCampaignID
+  src: /video/lgmx/lgmx.mp4
+  duration: 150
+
+legmagic_A_m3u8:
+  uuid: LegMagicAM3U8MovieID
+  campaign_id: LegMagicACampaignID
+  mime_type: application/x-mpegURL
+  src: /video/lgmx/lgmx.m3u8
+  duration: 150
+
+legmagic_A_flv:
+  uuid: LegMagicAFLVMovieID
+  campaign_id: LegMagicACampaignID
+  mime_type: video/x-flv
+  src: /video/lgmx/lgmx.flv
+  duration: 150
+
+legmagic_A_mp4:
+  uuid: LegMagicAMP4MovieID
+  campaign_id: LegMagicXCampaignID
+  src: /video/lgmx/lgmx.mp4
+  duration: 150
+
+legmagic_B_m3u8:
+  uuid: LegMagicBM3U8MovieID
+  campaign_id: LegMagicBCampaignID
+  mime_type: application/x-mpegURL
+  src:/video/lgmx/lgmx.m3u8
+  duration: 150
+
+legmagic_B_flv:
+  uuid: LegMagicBFLVMovieID
+  campaign_id: LegMagicBCampaignID
+  mime_type: video/x-flv
+  src: /video/lgmx/lgmx.flv
+  duration: 150
+
+legmagic_B_mp4:
+  uuid: LegMagicBMP4MovieID
+  campaign_id: LegMagicBCampaignID
+  src: /video/lgmx/lgmx.mp4
+  duration: 150
+
+# パワープランニング
+power_planning_m3u8:
+  uuid: PowerPlanningM3U8MovieID
+  campaign_id: PowerPlanningCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/powerplaning/movie.m3u8
+  duration: 0
+
+power_planning_flv:
+  uuid: PowerPlanningFLVMovieID
+  campaign_id: PowerPlanningCampaignID
+  mime_type: video/x-flv
+  src: /video/powerplaning/movie.flv
+  duration: 0
+
+power_planning_mp4:
+  uuid: PowerPlanningMP4MovieID
+  campaign_id: PowerPlanningCampaignID
+  src: /video/powerplaning/movie.mp4
+  duration: 0
+
+power_planning_A_m3u8:
+  uuid: PowerPlanningAM3U8MovieID
+  campaign_id: PowerPlanningACampaignID
+  mime_type: application/x-mpegURL
+  src: /video/powerplaning/movie.m3u8
+  duration: 0
+
+power_planning_A_flv:
+  uuid: PowerPlanningAFLVMovieID
+  campaign_id: PowerPlanningACampaignID
+  mime_type: video/x-flv
+  src: /video/powerplaning/movie.flv
+  duration: 0
+
+power_planning_A_mp4:
+  uuid: PowerPlanningAMP4MovieID
+  campaign_id: PowerPlanningACampaignID
+  src: /video/powerplaning/movie.mp4
+  duration: 0
+
+power_planning_B_m3u8:
+  uuid: PowerPlanningBM3U8MovieID
+  campaign_id: PowerPlanningBCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/powerplaning/movie.m3u8
+  duration: 0
+
+power_planning_B_flv:
+  uuid: PowerPlanningBFLVMovieID
+  campaign_id: PowerPlanningBCampaignID
+  mime_type: video/x-flv
+  src: /video/powerplaning/movie.flv
+  duration: 0
+
+power_planning_B_mp4:
+  uuid: PowerPlanningBMP4MovieID
+  campaign_id: PowerPlanningBCampaignID
+  src: /video/powerplaning/movie.mp4
+  duration: 0
+
+# ヤーマン
+ya_man_m3u8:
+  uuid: YaManM3U8MovieID
+  campaign_id: YaManCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/ya-man/movie.m3u8
+  duration: 0
+
+ya_man_flv:
+  uuid: YaManFLVMovieID
+  campaign_id: YaManCampaignID
+  mime_type: video/x-flv
+  src: /video/ya-man/movie.flv
+  duration: 0
+
+ya_man_mp4:
+  uuid: YaManFLVMP4MovieID
+  campaign_id: YaManCampaignID
+  src: /video/ya-man/movie.mp4
+  duration: 0
+
+ya_man_A_m3u8:
+  uuid: YaManAM3U8MovieID
+  campaign_id: YaManACampaignID
+  mime_type: application/x-mpegURL
+  src: /video/ya-man/movie.m3u8
+  duration: 0
+
+ya_man_A_flv:
+  uuid: YaManAFLVMovieID
+  campaign_id: YaManACampaignID
+  mime_type: video/x-flv
+  src: /video/ya-man/movie.flv
+  duration: 0
+
+ya_man_A_mp4:
+  uuid: YaManFLVAMP4MovieID
+  campaign_id: YaManACampaignID
+  src: /video/ya-man/movie.mp4
+  duration: 0
+
+ya_man_B_m3u8:
+  uuid: YaManBM3U8MovieID
+  campaign_id: YaManBCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/ya-man/movie.m3u8
+  duration: 0
+
+ya_man_B_flv:
+  uuid: YaManBFLVMovieID
+  campaign_id: YaManBCampaignID
+  mime_type: video/x-flv
+  src: /video/ya-man/movie.flv
+  duration: 0
+
+ya_man_B_mp4:
+  uuid: YaManBMP4MovieID
+  campaign_id: YaManBCampaignID
+  src: /video/ya-man/movie.mp4
+  duration: 0
+
+# 養命酒
+yomei_shu_m3u8:
+  uuid: YomeiShuM3U8MovieID
+  campaign_id: YomeiShuCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/yomeishu/movie.m3u8
+  duration: 0
+
+yomei_shu_flv:
+  uuid: YomeiShuFLVovieID
+  campaign_id: YomeiShuCampaignID
+  mime_type: video/x-flv
+  src: /video/yomeishu/movie.flv
+  duration: 0
+
+yomei_shu_mp4:
+  uuid: YomeiShuMP4MovieID
+  campaign_id: YomeiShuCampaignID
+  src: /video/yomeishu/movie.mp4
+  duration: 0
+
+yomei_shu_A_m3u8:
+  uuid: YomeiShuAM3U8MovieID
+  campaign_id: YomeiShuACampaignID
+  mime_type: application/x-mpegURL
+  src: /video/yomeishu/movie.m3u8
+  duration: 0
+
+yomei_shu_A_flv:
+  uuid: YomeiShuAFLVovieID
+  campaign_id: YomeiShuACampaignID
+  mime_type: video/x-flv
+  src: /video/yomeishu/movie.flv
+  duration: 0
+
+yomei_shu_A_mp4:
+  uuid: YomeiShuAMP4MovieID
+  campaign_id: YomeiShuACampaignID
+  src: /video/yomeishu/movie.mp4
+  duration: 0
+
+yomei_shu_B_m3u8:
+  uuid: YomeiShuBM3U8MovieID
+  campaign_id: YomeiShuBCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/yomeishu/movie.m3u8
+  duration: 0
+
+yomei_shu_B_flv:
+  uuid: YomeiShuBFLVovieID
+  campaign_id: YomeiShuBCampaignID
+  mime_type: video/x-flv
+  src: /video/yomeishu/movie.flv
+  duration: 0
+
+yomei_shu_B_mp4:
+  uuid: YomeiShuBMP4MovieID
+  campaign_id: YomeiShuBCampaignID
+  src: /video/yomeishu/movie.mp4
+  duration: 0
+
+# プラスワン
+plus_one_m3u8:
+  uuid: PlusOneM3U8MovieID
+  campaign_id: PlusOneCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/movie.m3u8
+  duration: 47
+
+plus_one_flv:
+  uuid: PlusOneFLVovieID
+  campaign_id: PlusOneCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/movie.flv
+  duration: 47
+
+plus_one_mp4:
+  uuid: PlusOneMP4MovieID
+  campaign_id: PlusOneCampaignID
+  src: /video/plus1/movie.mp4
+  duration: 47
+
+plus_one_A_m3u8:
+  uuid: PlusOneAM3U8MovieID
+  campaign_id: PlusOneACampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/movie.m3u8
+  duration: 47
+
+plus_one_A_flv:
+  uuid: PlusOneAFLVovieID
+  campaign_id: PlusOneACampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/movie.flv
+  duration: 47
+
+plus_one_A_mp4:
+  uuid: PlusOneAMP4MovieID
+  campaign_id: PlusOneACampaignID
+  src: /video/plus1/movie.mp4
+  duration: 47
+
+plus_one_B_m3u8:
+  uuid: PlusOneBM3U8MovieID
+  campaign_id: PlusOneBCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/movie.m3u8
+  duration: 47
+
+plus_one_B_flv:
+  uuid: PlusOneBFLVovieID
+  campaign_id: PlusOneBCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/movie.flv
+  duration: 47
+
+plus_one_B_mp4:
+  uuid: PlusOneBMP4MovieID
+  campaign_id: PlusOneBCampaignID
+  src: /video/plus1/movie.mp4
+  duration: 47
+
+# 永谷園
+nagatanien_m3u8:
+  uuid: NagatanienM3U8MovieID
+  campaign_id: NagatanienCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/nagatanien/movie.m3u8
+  duration: 144
+
+nagatanien_flv:
+  uuid: NagatanienFLVovieID
+  campaign_id: NagatanienCampaignID
+  mime_type: video/x-flv
+  src: /video/nagatanien/movie.flv
+  duration: 144
+
+nagatanien_mp4:
+  uuid: NagatanienMP4MovieID
+  campaign_id: NagatanienCampaignID
+  src: /video/nagatanien/movie.mp4
+  duration: 144
+

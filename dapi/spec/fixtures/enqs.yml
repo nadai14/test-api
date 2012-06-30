@@ -1,89 +1,82 @@
 # coding: utf-8
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-# 動作確認データ
-status1:
-  uuid: EnqStatus1
-  status: 1
-
-status1_first:
-  uuid: EnqStatus1First
-  status: 1
-
-# アンケートを作成中
-status0:
-  uuid: EnqStatus0
-  status: 0
-
-# アンケート作成完了
-status9:
-  uuid: EnqStatus9
-  status: 9
+# 動作確認用データ
+success_confirm:
+  uuid: SuccessConfirmEnqID
+  message: SCメッセージ
+  button_text: SCボタン
 
 # nil動作確認用
 nullable:
-  uuid: EnqNullable
-  status: 1
-
-nullable_first_1:
-  uuid: EnqNullableFirst1
-  status: 1
-  
-nullable_first_2:
-  uuid: EnqNullableFirst2
-  status: 1
-
-nullable_first_3:
-  uuid: EnqNullableFirst3
-  status: 1
+  uuid: NullableEnqID
+  message: Nullableメッセージ
+  button_text: Nullableボタン
 
 # 空回答確認用
 null_answer:
-  uuid: EnqNullAnswer
-  status: 1
+  uuid: NullAnswerEnqID
+  message: NAメッセージ
+  button_text: NAボタン
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
   uuid: FirstPageNullEnqID
-  status: 1
+  message: FPNメッセージ
+  button_text: FPNボタン
 
 first_page_id_null:
   uuid: FirstPageIDNullEnqID
-  status: 1
-
-# キャンペーンの状態が入稿前
-camp_status0:
-  uuid: CampaignStatus0EnqID
-  status: 1
+  message: FPIDNメッセージ
+  button_text: FPIDNボタン
 
 # キャンペーンの状態が終了
 camp_closed:
   uuid: CampaignClosedEnqID
-  status: 1
+  message: CCメッセージ
+  button_text: CCボタン
 
 # 設問と選択肢が矛盾している
 incons_question:
   uuid: InconsistencyQuestionEnqID
-  status: 1
+  message: IQメッセージ
+  button_text: IQボタン
 
 
+# 案件テスト用データ
+# レッグマジック
+legmagic:
+  uuid: LegMagicEnqID
+  message: 
+  button_text: 
+
+# パワープランニング
+power_planning:
+  uuid: PowerPlanningEnqID
+  message: 
+  button_text: 
+
+# ヤーマン
+ya_man:
+  uuid: YaManEnqID
+  message: 
+  button_text: 
+  
 # 養命酒
 yomei_shu:
   uuid: YomeiShuEnqID
-  status: 1
+  message: 
+  button_text: 
 
 # プラスワン
 plus_one:
   uuid: PlusOneEnqID
-  status: 1
-
-# レッグマジックX
-legmagicX:
-  uuid: LegMagicXEnqID
-  status: 1
+  message: 
+  button_text: 
 
 # 永谷園
 nagatani_en:
   uuid: NagataniEnEnqID
-  status: 1
+  message: 
+  button_text: 

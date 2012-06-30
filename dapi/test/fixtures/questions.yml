@@ -122,18 +122,32 @@ incons_question:
 
 
 # 案件テスト用データ
-# レッグマジック
-legmagic_question1:
-  uuid: LegMagicQuestion1
+# 共通の設問
+question_sex:
+  uuid: QuestionSex
   kind: radio
-  title: 性別をお教えください。
+  title: 性別をお教えください
   required: true
 
-legmagic_question2:
-  uuid: LegMagicQuestion2
+question_age:
+  uuid: QuestionAge
   kind: radio
-  title: 年齢をお答え下さい。
+  title: 年齢をお答え下さい
   required: true
+
+
+# レッグマジック
+#legmagic_question1:
+#  uuid: LegMagicQuestion1
+#  kind: radio
+#  title: 性別をお教えください
+#  required: true
+#
+#legmagic_question2:
+#  uuid: LegMagicQuestion2
+#  kind: radio
+#  title: 年齢をお答え下さい
+#  required: true
 
 legmagic_question3:
   uuid: LegMagicQuestion3
@@ -160,17 +174,17 @@ legmagic_question6:
   required: true
 
 # パワープランニング
-power_planning_M_question1:
-  uuid: PowerPlanningMQuestion1
-  kind: radio
-  title: 性別をお教えください
-  required: true
-
-power_planning_M_question2:
-  uuid: PowerPlanningMQuestion2
-  kind: radio
-  title: 年齢をお答え下さい
-  required: true
+#power_planning_M_question1:
+#  uuid: PowerPlanningMQuestion1
+#  kind: radio
+#  title: 性別をお教えください
+#  required: true
+#
+#power_planning_M_question2:
+#  uuid: PowerPlanningMQuestion2
+#  kind: radio
+#  title: 年齢をお答え下さい
+#  required: true
 
 power_planning_M_question3:
   uuid: PowerPlanningMQuestion3
@@ -196,35 +210,35 @@ power_planning_M_question6:
   title: mixiポイントがプレゼントされる「みんなの生命保険アドバイザー」のお得な無料相談についてどう思いますか？
   required: true
 
-power_planning_G_question1:
-  uuid: PowerPlanningGQuestion1
-  kind: radio
-  title: 性別をお教えください
-  required: true
-
-power_planning_G_question2:
-  uuid: PowerPlanningGQuestion2
-  kind: radio
-  title: 年齢をお答え下さい
-  required: true
-
-power_planning_G_question3:
-  uuid: PowerPlanningGQuestion3
-  kind: radio
-  title: あなたが加入している生命保険のひと月あたりの保険料についてどう感じていますか？
-  required: true
-
-power_planning_G_question4:
-  uuid: PowerPlanningGQuestion4
-  kind: radio
-  title: あなたは所得税で最高12万円の控除を受け取ることができる新生命保険料控除制度を知っていますか？
-  required: true
-
-power_planning_G_question5:
-  uuid: PowerPlanningGQuestion5
-  kind: radio
-  title: 生命保険のプロが複数会社のメニューから保険料節約などの最適プランを診断出来る無料相談サービスをご存知ですか？
-  required: true
+#power_planning_G_question1:
+#  uuid: PowerPlanningGQuestion1
+#  kind: radio
+#  title: 性別をお教えください
+#  required: true
+#
+#power_planning_G_question2:
+#  uuid: PowerPlanningGQuestion2
+#  kind: radio
+#  title: 年齢をお答え下さい
+#  required: true
+#
+#power_planning_G_question3:
+#  uuid: PowerPlanningGQuestion3
+#  kind: radio
+#  title: あなたが加入している生命保険のひと月あたりの保険料についてどう感じていますか？
+#  required: true
+#
+#power_planning_G_question4:
+#  uuid: PowerPlanningGQuestion4
+#  kind: radio
+#  title: あなたは所得税で最高12万円の控除を受け取ることができる新生命保険料控除制度を知っていますか？
+#  required: true
+#
+#power_planning_G_question5:
+#  uuid: PowerPlanningGQuestion5
+#  kind: radio
+#  title: 生命保険のプロが複数会社のメニューから保険料節約などの最適プランを診断出来る無料相談サービスをご存知ですか？
+#  required: true
 
 power_planning_G_question6:
   uuid: PowerPlanningGQuestion6
@@ -233,54 +247,54 @@ power_planning_G_question6:
   required: true
 
 # ヤーマン
-ya_man_question1:
-  uuid: PowerPlanningQuestion1
-  kind: radio
-  title: 性別をお教えください
-  required: true
-
-ya_man_question2:
-  uuid: PowerPlanningQuestion2
-  kind: radio
-  title: 年齢をお答え下さい
-  required: true
+#ya_man_question1:
+#  uuid: YaManQuestion1
+#  kind: radio
+#  title: 性別をお教えください
+#  required: true
+#
+#ya_man_question2:
+#  uuid: YaManQuestion2
+#  kind: radio
+#  title: 年齢をお答え下さい
+#  required: true
 
 ya_man_question3:
-  uuid: PowerPlanningQuestion3
+  uuid: YaManQuestion3
   kind: radio
   title: このCMをご覧になって「no!no!HAIR」に興味を持たれましたか？
   required: true
 
 ya_man_question4:
-  uuid: PowerPlanningQuestion4
+  uuid: YaManQuestion4
   kind: radio
   title: このCMをご覧になって「no!no!HAIR」を買ってみたいと思いましたか？
   required: true
 
 ya_man_question5:
-  uuid: PowerPlanningQuestion5
+  uuid: YaManQuestion5
   kind: radio
   title: 「no!no!HAIR」を以前からご存知でしたか？
   required: true
 
 ya_man_question6:
-  uuid: PowerPlanningQuestion6
+  uuid: YaManQuestion6
   kind: radio
   title: 最後に今回のCMを再生したきっかけを教えてください。
   required: true
 
 # 養命酒
-yomei_shu_question1:
-  uuid: YomeiShuQuestion1
-  kind: radio
-  title: 性別をお教えください。
-  required: true
-
-yomei_shu_question2:
-  uuid: YomeiShuQuestion2
-  kind: radio
-  title: 年齢をお答えください。
-  required: true
+#yomei_shu_question1:
+#  uuid: YomeiShuQuestion1
+#  kind: radio
+#  title: 性別をお教えください。
+#  required: true
+#
+#yomei_shu_question2:
+#  uuid: YomeiShuQuestion2
+#  kind: radio
+#  title: 年齢をお答えください。
+#  required: true
 
 yomei_shu_question3:
   uuid: YomeiShuQuestion3
@@ -331,17 +345,17 @@ yomei_shu_question10:
   required: true
 
 # プラスワン
-plus_one_question1:
-  uuid: PlusOneQuestion1
-  kind: radio
-  title: 性別をお教えください
-  required: true
-
-plus_one_question2:
-  uuid: PlusOneQuestion2
-  kind: radio
-  title: 年齢をお答え下さい
-  required: true
+#plus_one_question1:
+#  uuid: PlusOneQuestion1
+#  kind: radio
+#  title: 性別をお教えください
+#  required: true
+#
+#plus_one_question2:
+#  uuid: PlusOneQuestion2
+#  kind: radio
+#  title: 年齢をお答え下さい
+#  required: true
 
 plus_one_question3:
   uuid: PlusOneQuestion3
@@ -393,17 +407,17 @@ plus_one_question10:
   required: true
 
 # 永谷園
-nagatani_en_question1:
-  uuid: NagataniEnQuestion1
-  kind: radio
-  title: 性別を教えてください。
-  required: true
-
-nagatani_en_question2:
-  uuid: NagataniEnQuestion2
-  kind: radio
-  title: 年齢を教えてください。
-  required: true
+#nagatani_en_question1:
+#  uuid: NagataniEnQuestion1
+#  kind: radio
+#  title: 性別を教えてください。
+#  required: true
+#
+#nagatani_en_question2:
+#  uuid: NagataniEnQuestion2
+#  kind: radio
+#  title: 年齢を教えてください。
+#  required: true
 
 nagatani_en_question3:
   uuid: NagataniEnQuestion3
