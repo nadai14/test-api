@@ -131,7 +131,8 @@ legmagicX_SP:
   uuid: LegMagicXSPCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: SP
-  css: /css/sp/themes/legmagic/style.css
+#  css: /css/sp/themes/legmagic/style.css
+  css: /css/sp/themes/lgmx/style.css
   title: 
   description: 
 
@@ -139,7 +140,8 @@ legmagicX_PC:
   uuid: LegMagicXPCCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: PC
-  css: /css/pc/themes/legmagic/style.css
+#  css: /css/pc/themes/legmagic/style.css
+  css: /css/pc/themes/lgmx/style.css
   title: 
   description: 
 
@@ -147,7 +149,8 @@ legmagic_A:
   uuid: LegMagicACampaginFaceID
   campaign_id: LegMagicACampaignID
   face: SP
-  css: /css/sp/themes/legmagic/style.css
+#  css: /css/sp/themes/legmagic/style.css
+  css: /css/sp/themes/lgmx/style.css
   title: 
   description: 
 
@@ -155,7 +158,8 @@ legmagic_B:
   uuid: LegMagicBCampaginFaceID
   campaign_id: LegMagicBCampaignID
   face: SP
-  css: /css/sp/themes/legmagic/style.css
+#  css: /css/sp/themes/legmagic/style.css
+  css: /css/sp/themes/lgmx/style.css
   title: 
   description: 
 
