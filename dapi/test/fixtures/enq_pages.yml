@@ -442,6 +442,13 @@ power_planning_page5:
   uuid: PowerPlanningEnqPage5
   enq_face_id: PowerPlanningEnqFaceID
   description: 
+  next_page_id: PowerPlanningEnqPage6
+  wait_until: 
+
+power_planning_page6:
+  uuid: PowerPlanningEnqPage6
+  enq_face_id: PowerPlanningEnqFaceID
+  description: 
   next_page_id: 
   wait_until: 
 
@@ -477,6 +484,13 @@ power_planning_A_page5:
   uuid: PowerPlanningAEnqPage5
   enq_face_id: PowerPlanningAEnqFaceID
   description: 
+  next_page_id: PowerPlanningAEnqPage6
+  wait_until: 
+
+power_planning_A_page6:
+  uuid: PowerPlanningAEnqPage6
+  enq_face_id: PowerPlanningEnqFaceID
+  description: 
   next_page_id: 
   wait_until: 
 
@@ -511,6 +525,13 @@ power_planning_B_page4:
 power_planning_B_page5:
   uuid: PowerPlanningBEnqPage5
   enq_face_id: PowerPlanningBEnqFaceID
+  description: 
+  next_page_id: PowerPlanningBEnqPage6
+  wait_until: 
+
+power_planning_B_page6:
+  uuid: PowerPlanningBEnqPage6
+  enq_face_id: PowerPlanningEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
@@ -548,6 +569,13 @@ ya_man_page5:
   uuid: YaManEnqPage5
   enq_face_id: YaManEnqFaceID
   description: 
+  next_page_id: YaManEnqPage6
+  wait_until: 
+
+ya_man_page6:
+  uuid: YaManEnqPage6
+  enq_face_id: YaManEnqFaceID
+  description: 
   next_page_id: 
   wait_until: 
 
@@ -583,6 +611,13 @@ ya_man_A_page5:
   uuid: YaManAEnqPage5
   enq_face_id: YaManAEnqFaceID
   description: 
+  next_page_id: YaManAEnqPage6
+  wait_until: 
+
+ya_man_A_page6:
+  uuid: YaManAEnqPage6
+  enq_face_id: YaManEnqFaceID
+  description: 
   next_page_id: 
   wait_until: 
 
@@ -617,6 +652,13 @@ ya_man_B_page4:
 ya_man_B_page5:
   uuid: YaManBEnqPage5
   enq_face_id: YaManBBEnqFaceID
+  description: 
+  next_page_id: 
+  wait_until: 
+
+ya_man_B_page6:
+  uuid: YaManBEnqPage6
+  enq_face_id: YaManEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
