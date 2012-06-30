@@ -33,7 +33,7 @@ prefectures:
   required: true
   
 checkbox:
-  uuid: QuestionCheck
+  uuid: QuestionCheckbox
   kind: checkbox
   title: チェックボックス
   content: チェックボックスから選択してください
@@ -95,6 +95,20 @@ unrequired_checkbox:
   content: チェックボックスから選択してください。
   required: false
 
+unrequired_text:
+  uuid: QuestionUnrequiredText
+  kind: text
+  title: テキスト
+  content: テキストに入力してください。
+  required: false
+
+unrequired_textarea:
+  uuid: QuestionUnrequiredTextarea
+  kind: textatea
+  title: テキストエリア
+  content: テキストエリアに入力してください。
+  required: false
+
 # 異常系の確認用データ
 # 設問と選択肢が矛盾している
 incons_question:
@@ -107,11 +121,159 @@ incons_question:
   answer_description: 設問と選択肢が矛盾している
 
 
+# 案件テスト用データ
+# レッグマジック
+legmagic_question1:
+  uuid: LegMagicQuestion1
+  kind: radio
+  title: 性別をお教えください。
+  required: true
+
+legmagic_question2:
+  uuid: LegMagicQuestion2
+  kind: radio
+  title: 年齢をお答え下さい。
+  required: true
+
+legmagic_question3:
+  uuid: LegMagicQuestion3
+  kind: radio
+  title: 最近ウエスト、脚、ヒップのサイズが気になったことはありますか？
+  required: true
+
+legmagic_question4:
+  uuid: LegMagicQuestion4
+  kind: radio
+  title: 1セットたった60秒の美脚マシン「レッグマジックX」をご存じでしたか？
+  required: true
+
+legmagic_question5:
+  uuid: LegMagicQuestion5
+  kind: radio
+  title: 日本人女性の25人の1人が持っている「レッグマジックX」であなたも理想の脚線美を手に入れたいですか？
+  required: true
+
+legmagic_question6:
+  uuid: LegMagicQuestion6
+  kind: radio
+  title: 「レッグマジックX」200万台突破記念キャンペーン、グリーコインプレゼントを申込みたいと思いますか。
+  required: true
+
+# パワープランニング
+power_planning_M_question1:
+  uuid: PowerPlanningMQuestion1
+  kind: radio
+  title: 性別をお教えください
+  required: true
+
+power_planning_M_question2:
+  uuid: PowerPlanningMQuestion2
+  kind: radio
+  title: 年齢をお答え下さい
+  required: true
+
+power_planning_M_question3:
+  uuid: PowerPlanningMQuestion3
+  kind: radio
+  title: あなたが加入している生命保険のひと月あたりの保険料についてどう感じていますか？
+  required: true
+
+power_planning_M_question4:
+  uuid: PowerPlanningMQuestion4
+  kind: radio
+  title: あなたは所得税で最高12万円の控除を受け取ることができる新生命保険料控除制度を知っていますか？
+  required: true
+
+power_planning_M_question5:
+  uuid: PowerPlanningMQuestion5
+  kind: radio
+  title: 生命保険のプロが複数会社のメニューから保険料節約などの最適プランを診断出来る無料相談サービスをご存知ですか？
+  required: true
+
+power_planning_M_question6:
+  uuid: PowerPlanningMQuestion6
+  kind: radio
+  title: mixiポイントがプレゼントされる「みんなの生命保険アドバイザー」のお得な無料相談についてどう思いますか？
+  required: true
+
+power_planning_G_question1:
+  uuid: PowerPlanningGQuestion1
+  kind: radio
+  title: 性別をお教えください
+  required: true
+
+power_planning_G_question2:
+  uuid: PowerPlanningGQuestion2
+  kind: radio
+  title: 年齢をお答え下さい
+  required: true
+
+power_planning_G_question3:
+  uuid: PowerPlanningGQuestion3
+  kind: radio
+  title: あなたが加入している生命保険のひと月あたりの保険料についてどう感じていますか？
+  required: true
+
+power_planning_G_question4:
+  uuid: PowerPlanningGQuestion4
+  kind: radio
+  title: あなたは所得税で最高12万円の控除を受け取ることができる新生命保険料控除制度を知っていますか？
+  required: true
+
+power_planning_G_question5:
+  uuid: PowerPlanningGQuestion5
+  kind: radio
+  title: 生命保険のプロが複数会社のメニューから保険料節約などの最適プランを診断出来る無料相談サービスをご存知ですか？
+  required: true
+
+power_planning_G_question6:
+  uuid: PowerPlanningGQuestion6
+  kind: radio
+  title: GREEコインがプレゼントされる「みんなの生命保険アドバイザー」のお得な無料相談についてどう思いますか？
+  required: true
+
+# ヤーマン
+ya_man_question1:
+  uuid: PowerPlanningQuestion1
+  kind: radio
+  title: 性別をお教えください
+  required: true
+
+ya_man_question2:
+  uuid: PowerPlanningQuestion2
+  kind: radio
+  title: 年齢をお答え下さい
+  required: true
+
+ya_man_question3:
+  uuid: PowerPlanningQuestion3
+  kind: radio
+  title: このCMをご覧になって「no!no!HAIR」に興味を持たれましたか？
+  required: true
+
+ya_man_question4:
+  uuid: PowerPlanningQuestion4
+  kind: radio
+  title: このCMをご覧になって「no!no!HAIR」を買ってみたいと思いましたか？
+  required: true
+
+ya_man_question5:
+  uuid: PowerPlanningQuestion5
+  kind: radio
+  title: 「no!no!HAIR」を以前からご存知でしたか？
+  required: true
+
+ya_man_question6:
+  uuid: PowerPlanningQuestion6
+  kind: radio
+  title: 最後に今回のCMを再生したきっかけを教えてください。
+  required: true
+
 # 養命酒
 yomei_shu_question1:
   uuid: YomeiShuQuestion1
   kind: radio
-  title: 性別をお答えください。
+  title: 性別をお教えください。
   required: true
 
 yomei_shu_question2:
@@ -165,20 +327,20 @@ yomei_shu_question9:
 yomei_shu_question10:
   uuid: YomeiShuQuestion10
   kind: radio
-  title: 最後に今回の動画を再生したきっかけを教えてください。
+  title: 最後に今回のCMを再生したきっかけを教えてください。
   required: true
 
 # プラスワン
 plus_one_question1:
   uuid: PlusOneQuestion1
   kind: radio
-  title: 性別を教えてください。
+  title: 性別をお教えください
   required: true
 
 plus_one_question2:
   uuid: PlusOneQuestion2
   kind: radio
-  title: 年齢を教えてください。
+  title: 年齢をお答え下さい
   required: true
 
 plus_one_question3:
@@ -196,13 +358,13 @@ plus_one_question4:
 plus_one_question5:
   uuid: PlusOneQuestion5
   kind: radio
-  title: 『プラスワン』の動画を見て良いと思ったところはどこですか？
+  title: 『プラスワン』のCMを見て良いと思ったところはどこですか？
   required: true
 
 plus_one_question6:
   uuid: PlusOneQuestion6
   kind: radio
-  title: 【クイズ】動画の中で『プラスワン』の顧客満足度は何％でしたか？
+  title: 【クイズ】CMの中で『プラスワン』の顧客満足度は何％でしたか？
   required: true
   answer_content: 92%
 
@@ -215,56 +377,19 @@ plus_one_question7:
 plus_one_question8:
   uuid: PlusOneQuestion8
   kind: radio
-  title: 動画を見てサービスに興味を持ちましたか？
+  title: CMを見てサービスに興味を持ちましたか？
   required: true
 
 plus_one_question9:
   uuid: PlusOneQuestion9
   kind: radio
-  title: 動画を見てサービスを利用したいと思いましたか？
+  title: CMを見てサービスを利用したいと思いましたか？
   required: true
 
 plus_one_question10:
   uuid: PlusOneQuestion10
   kind: radio
-  title: 今回なぜ動画を見ていただけましたか？
-  required: true
-
-# レッグマジックX
-legmagicX_question1:
-  uuid: LegMagicXQuestion1
-  kind: radio
-  title: 性別をお答え下さい。
-  required: true
-
-legmagicX_question2:
-  uuid: LegMagicXQuestion2
-  kind: radio
-  title: 年齢をお答え下さい。
-  required: true
-
-legmagicX_question3:
-  uuid: LegMagicXQuestion3
-  kind: radio
-  title: 最近ウエスト、脚、ヒップのサイズが気になったことはありますか？
-  required: true
-
-legmagicX_question4:
-  uuid: LegMagicXQuestion4
-  kind: radio
-  title: 1セットたった60秒の美脚マシン「レッグマジックX」をご存じでしたか？
-  required: true
-
-legmagicX_question5:
-  uuid: LegMagicXQuestion5
-  kind: radio
-  title: 日本人女性の25人の1人が持っている「レッグマジックX」であなたも理想の脚線美を手に入れたいですか？
-  required: true
-
-legmagicX_question6:
-  uuid: LegMagicXQuestion6
-  kind: radio
-  title: 「レッグマジックX」200万台突破記念キャンペーン、グリーコインプレゼントを申込みたいと思いますか。
+  title: 今回なぜCMを見ていただけましたか？
   required: true
 
 # 永谷園

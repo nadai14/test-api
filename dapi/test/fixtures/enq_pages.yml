@@ -21,13 +21,20 @@ sc_SP_page3_1:
   uuid: SuccessConfirmSPEnqPage3-1
   enq_face_id: SuccessConfirmSPEnqFaceID
   description: SCSPページ3
-  next_page_id: 
+  next_page_id: SuccessConfirmSPEnqPage4
   wait_until: 1
 
 sc_SP_page3_2:
   uuid: SuccessConfirmSPEnqPage3-2
   enq_face_id: SuccessConfirmSPEnqFaceID
   description: SCSPページ3
+  next_page_id: SuccessConfirmSPEnqPage4
+  wait_until: 1
+  
+sc_SP_page4:
+  uuid: SuccessConfirmSPEnqPage4
+  enq_face_id: SuccessConfirmSPEnqFaceID
+  description: SCSPページ4
   next_page_id: 
   wait_until: 1
   
@@ -71,6 +78,20 @@ null_answer_SP_page4:
   uuid: NullAnswerSPEnqPage4
   enq_face_id: NullAnswerSPEnqFaceID
   description: 空回答確認用アンケSPページ4
+  next_page_id: NullAnswerSPEnqPage5
+  wait_until: 1
+
+null_answer_SP_page5:
+  uuid: NullAnswerSPEnqPage5
+  enq_face_id: NullAnswerSPEnqFaceID
+  description: 空回答確認用アンケSPページ5
+  next_page_id: NullAnswerSPEnqPage6
+  wait_until: 1
+
+null_answer_SP_page6:
+  uuid: NullAnswerSPEnqPage6
+  enq_face_id: NullAnswerSPEnqFaceID
+  description: 空回答確認用アンケSPページ6
   wait_until: 1
 
 # 異常系の確認用データ
@@ -119,13 +140,20 @@ sc_PC_page3_1:
   uuid: SuccessConfirmPCEnqPage3-1
   enq_face_id: SuccessConfirmPCEnqFaceID
   description: SCPCページ3
-  next_page_id: 
+  next_page_id: SuccessConfirmPCEnqPage4
   wait_until: 1
 
 sc_PC_page3_2:
   uuid: SuccessConfirmPCEnqPage3-2
   enq_face_id: SuccessConfirmPCEnqFaceID
   description: SCPCページ3
+  next_page_id: SuccessConfirmPCEnqPage4
+  wait_until: 1
+  
+sc_PC_page4:
+  uuid: SuccessConfirmPCEnqPage4
+  enq_face_id: SuccessConfirmPCEnqFaceID
+  description: SCPCページ4
   next_page_id: 
   wait_until: 1
   
@@ -169,6 +197,20 @@ null_answer_PC_page4:
   uuid: NullAnswerPCEnqPage4
   enq_face_id: NullAnswerPCEnqFaceID
   description: 空回答確認用アンケPCページ4
+  next_page_id: NullAnswerPCEnqPage5
+  wait_until: 1
+
+null_answer_PC_page5:
+  uuid: NullAnswerPCEnqPage5
+  enq_face_id: NullAnswerPCEnqFaceID
+  description: 空回答確認用アンケPCページ5
+  next_page_id: NullAnswerPCEnqPage6
+  wait_until: 1
+
+null_answer_PC_page6:
+  uuid: NullAnswerPCEnqPage6
+  enq_face_id: NullAnswerPCEnqFaceID
+  description: 空回答確認用アンケPCページ6
   wait_until: 1
 
 # 異常系の確認用データ
@@ -1054,74 +1096,74 @@ plus_one_B_page10:
   description: 
 
 # 永谷園
-nagatani_en_SP_page1:
-  uuid: NagataniEnSPEnqPage1
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page1:
+  uuid: NagatanienSPEnqPage1
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
-  next_page_id: NagataniEnSPEnqPage2
+  next_page_id: NagatanienSPEnqPage2
 
-nagatani_en_SP_page2:
-  uuid: NagataniEnSPEnqPage2
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page2:
+  uuid: NagatanienSPEnqPage2
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
-  next_page_id: NagataniEnSPEnqPage3
+  next_page_id: NagatanienSPEnqPage3
 
-nagatani_en_SP_page3:
-  uuid: NagataniEnSPEnqPage3
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page3:
+  uuid: NagatanienSPEnqPage3
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
-  next_page_id: NagataniEnSPEnqPage4
+  next_page_id: NagatanienSPEnqPage4
 
-nagatani_en_SP_page4:
-  uuid: NagataniEnSPEnqPage4
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page4:
+  uuid: NagatanienSPEnqPage4
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
-  next_page_id: NagataniEnSPEnqPage5
+  next_page_id: NagatanienSPEnqPage5
 
-nagatani_en_SP_page5:
-  uuid: NagataniEnSPEnqPage5
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page5:
+  uuid: NagatanienSPEnqPage5
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
-  next_page_id: NagataniEnSPEnqPage6
+  next_page_id: NagatanienSPEnqPage6
 
-nagatani_en_SP_page6:
-  uuid: NagataniEnSPEnqPage6
-  enq_face_id: NagataniEnSPEnqFaceID
+nagatanien_SP_page6:
+  uuid: NagatanienSPEnqPage6
+  enq_face_id: NagatanienSPEnqFaceID
   description: 
   next_page_id:
 
-nagatani_en_PC_page1:
-  uuid: NagataniEnPCEnqPage1
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page1:
+  uuid: NagatanienPCEnqPage1
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
-  next_page_id: NagataniEnPCEnqPage2
+  next_page_id: NagatanienPCEnqPage2
 
-nagatani_en_PC_page2:
-  uuid: NagataniEnPCEnqPage2
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page2:
+  uuid: NagatanienPCEnqPage2
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
-  next_page_id: NagataniEnPCEnqPage3
+  next_page_id: NagatanienPCEnqPage3
 
-nagatani_en_PC_page3:
-  uuid: NagataniEnPCEnqPage3
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page3:
+  uuid: NagatanienPCEnqPage3
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
-  next_page_id: NagataniEnPCEnqPage4
+  next_page_id: NagatanienPCEnqPage4
 
-nagatani_en_PC_page4:
-  uuid: NagataniEnPCEnqPage4
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page4:
+  uuid: NagatanienPCEnqPage4
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
-  next_page_id: NagataniEnPCEnqPage5
+  next_page_id: NagatanienPCEnqPage5
 
-nagatani_en_PC_page5:
-  uuid: NagataniEnPCEnqPage5
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page5:
+  uuid: NagatanienPCEnqPage5
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
-  next_page_id: NagataniEnPCEnqPage6
+  next_page_id: NagatanienPCEnqPage6
 
-nagatani_en_PC_page6:
-  uuid: NagataniEnPCEnqPage6
-  enq_face_id: NagataniEnPCEnqFaceID
+nagatanien_PC_page6:
+  uuid: NagatanienPCEnqPage6
+  enq_face_id: NagatanienPCEnqFaceID
   description: 
   next_page_id:

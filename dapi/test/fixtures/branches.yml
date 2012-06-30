@@ -3,75 +3,47 @@
 
 # スマートフォン用
 # 動作確認データ
-scSPpage2to3_1:
+sc_SP_page2to3_1:
   uuid: SuccessConfirmSPPage2to3-1
-  enq_question_id: SuccessConfirmSPQuestion3
+  enq_question_id: SuccessConfirmSPEnqQuestion3
   answer: 選択肢1
-  next_page_id: EnqSPSuccessConfirmPage3-1
+  next_page_id: SuccessConfirmSPEnqPage3-1
   wait_until: 1
 
-scSPpage2to3_2:
+sc_SP_page2to3_2:
   uuid: SuccessConfirmSPPage2to3-2
-  enq_question_id: SuccessConfirmSPQuestion3
+  enq_question_id: SuccessConfirmSPEnqQuestion3
   answer: 選択肢2
-  next_page_id: EnqSPSuccessConfirmPage3-2
-  wait_until: 1
-
-scSPpage1to2_2_first:
-  uuid: SuccessConfirmSPPage1to2-2
-  enq_question_id: SuccessConfirmSPQuestion1First
-  answer: 東京都
-  next_page_id: EnqSPSuccessConfirmPage2-2First
+  next_page_id: SuccessConfirmSPEnqPage3-2
   wait_until: 1
 
 # nil動作確認データ
 nullable_SP:
-  uuid: BranchNullableSP
-  enq_question_id: NullableSPQuestion1
+  uuid: NullableSPPage1to2-2
+  enq_question_id: NullableSPEnqQuestion1
   answer: Page1to2-2
-  next_page_id: NullableSPQuestion2-2
-
-nullable_SP_first:
-  uuid: BranchNullableSPFirst
-  enq_question_id: NullableSPQuestionFirst1
-  answer: Page1to2-2
-  next_page_id: EnqPageSPNullableFirst1Page2-2
-
+  next_page_id: NullableSPEnqPage2-2
 
 # PC用
 # 動作確認データ
-scPCpage2to3_1:
+sc_PC_page2to3_1:
   uuid: SuccessConfirmPCPage2to3-1
-  enq_question_id: SuccessConfirmPCQuestion3
+  enq_question_id: SuccessConfirmPCEnqQuestion3
   answer: 選択肢1
-  next_page_id: EnqPCSuccessConfirmPage3-1
+  next_page_id: SuccessConfirmPCEnqPage3-1
   wait_until: 1
 
-scPCpage2to3_2:
+sc_PC_page2to3_2:
   uuid: SuccessConfirmPCPage2to3-2
-  enq_question_id: SuccessConfirmPCQuestion3
+  enq_question_id: SuccessConfirmPCEnqQuestion3
   answer: 選択肢2
-  next_page_id: EnqPCSuccessConfirmPage3-2
-  wait_until: 1
-
-scPCpage1to2_2_first:
-  uuid: SuccessConfirmPCPage1to2-2
-  enq_question_id: SuccessConfirmPCQuestion1First
-  answer: 東京都
-  next_page_id: EnqPCSuccessConfirmPage2-2First
+  next_page_id: SuccessConfirmPCEnqPage3-2
   wait_until: 1
 
 # nil動作確認データ
 nullable_PC:
-  uuid: BranchNullablePC
-  enq_question_id: NullablePCQuestion1
+  uuid: NullablePCPage1to2-2
+  enq_question_id: NullablePCEnqQuestion1
   answer: Page1to2-2
-  next_page_id: NullablePCQuestion2-2
-
-nullable_PC_first:
-  uuid: BranchNullablePCFirst
-  enq_question_id: NullablePCQuestionFirst1
-  answer: Page1to2-2
-  next_page_id: EnqPagePCNullableFirst1Page2-2
-
+  next_page_id: NullablePCEnqPage2-2
 

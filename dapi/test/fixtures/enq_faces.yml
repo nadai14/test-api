@@ -120,7 +120,7 @@ incons_question_PC:
 
 
 # 案件テスト用データ
-# レッグマジックX
+# レッグマジック
 legmagicX_SP:
   uuid: LegMagicXSPEnqFaceID
   enq_id: LegMagicEnqID
