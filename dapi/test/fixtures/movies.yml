@@ -84,17 +84,91 @@ first_page_null_mp4:
   src: /video/plus1/plus1.mp4
   duration: 47
 
-first_page_id_null:
+first_page_id_null_m3u8:
+  uuid: FirstPageIDNullM3U8MovieID
+  campaign_id: FirstPageIDNullCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+first_page_id_null_flv:
+  uuid: FirstPageIDNullFLVovieID
+  campaign_id: FirstPageIDNullCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+first_page_id_null_mp4:
+  uuid: FirstPageIDNullMP4MovieID
+  campaign_id: FirstPageIDNullCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
 
 # キャンペーンが終了日時を過ぎている
-camp_closed:
+camp_closed_m3u8:
+  uuid: CampaignClosedM3U8MovieID
+  campaign_id: CampaignClosedCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+camp_closed_flv:
+  uuid: CampaignClosedFLVovieID
+  campaign_id: CampaignClosedCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+camp_closed_mp4:
+  uuid: CampaignClosedMP4MovieID
+  campaign_id: CampaignClosedCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
 
 # 設問と選択肢が矛盾している
-incons_question:
+incons_question_m3u8:
+  uuid: InconsistencyQuestionM3U8MovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+incons_question_flv:
+  uuid: InconsistencyQuestionFLVovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+incons_question_mp4:
+  uuid: InconsistencyQuestionMP4MovieID
+  campaign_id: InconsistencyQuestionCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
 
 
 # 養命酒
-yomei_shu:
+yomei_shu_m3u8:
+  uuid: YomeiShuM3U8MovieID
+  campaign_id: YomeiShuCampaignID
+  mime_type: application/x-mpegURL
+  src: /video/plus1/plus1.m3u8
+  duration: 47
+
+yomei_shu_flv:
+  uuid: YomeiShuFLVovieID
+  campaign_id: YomeiShuCampaignID
+  mime_type: video/x-flv
+  src: /video/plus1/plus1.flv
+  duration: 47
+
+yomei_shu_mp4:
+  uuid: YomeiShuMP4MovieID
+  campaign_id: YomeiShuCampaignID
+  src: /video/plus1/plus1.mp4
+  duration: 47
+
 
 # プラスワン
 plus_one:

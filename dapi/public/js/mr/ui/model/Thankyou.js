@@ -5,9 +5,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Thankyou.js 377 2012-06-29 03:25:02Z tsuru $
+ * @version      $Id: Thankyou.js 385 2012-06-29 14:28:31Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-29 23:28:31 +0900 (金, 29 6 2012) $
  *
  */
 (function(ns){
@@ -24,7 +24,8 @@
 			"title":        null,
 			"description":  null,
 			"social":       null,
-			"client_url":   null
+			"client_url":   null,
+			"button_title": null
 		},
 		/**
 		 * constructor

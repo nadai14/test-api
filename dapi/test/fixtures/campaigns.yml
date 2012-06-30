@@ -130,6 +130,125 @@ incons_question:
   client_url: http://poncan.jp
 
 
+# レッグマジックX
+legmagicX_A:
+  mid: LegMagicXACampaignID
+  mcd: LegMagicXACampaignID
+  name: レッグマジックA
+  enq_id: LegMagicXAEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/legmagic/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+legmagicX_B:
+  mid: LegMagicXBCampaignID
+  mcd: LegMagicXBCampaignID
+  name: レッグマジックB
+  enq_id: LegMagicXBEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/legmagic/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+# パワープランニング
+power_planning:
+  mid: PowerPlanningCampaignID
+  mcd: PowerPlanningCampaignID
+  name: パワープランニング
+  enq_id: PowerPlanningEnqID
+  platform: mixi
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/powerplaning/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/cbf2d8169ffbb345565e1bfe4c3beddcad472f15/324a0bb5d1f22337abb7dc891ce22283fc6708ac
+
+power_planning_A:
+  mid: PowerPlanningACampaignID
+  mcd: PowerPlanningACampaignID
+  name: パワープランニングA
+  enq_id: PowerPlanningAEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/powerplaning/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+power_planning_B:
+  mid: PowerPlanningBCampaignID
+  mcd: PowerPlanningBCampaignID
+  name: パワープランニングB
+  enq_id: PowerPlanningBEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/powerplaning/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+# ヤーマン
+ya_man:
+  mid: YaManCampaignID
+  mcd: YaManCampaignID
+  name: ヤーマン
+  enq_id: YaManEnqID
+  platform: mixi
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/ya-man/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/3649e845023252fee8d58c18f82c6c9494de180f/324a0bb5d1f22337abb7dc891ce22283fc6708ac
+
+
+
 # 養命酒
 yomei_shu:
   mid: YomeiShuCampaignID
@@ -169,26 +288,6 @@ plus_one:
   banner_title: 
   second_point: 
   client_url: http://www.p1-intl.com/
-
-# レッグマジックX
-legmagicX:
-  mid: LegMagicXCampaignID
-  mcd: LegMagicXCampaignID
-  name: レッグマジックX
-  enq_id: LegMagicXEnqID
-  platform: gree
-  point: 10
-  opening_at: 
-  closing_at: 
-  thumbnail: /images/lgmx/thumbnail.jpg
-  page_button_text: 
-  message: ''
-  button_text: 
-  conversion_tag: "<img src='//moviereward.nadai.jp/images/lgmx/conversion-sp.jpg?t=#{time}' />"
-  second_picture: /images/lgmx/2nd_banne.png
-  banner_title: 
-  second_point: 
-  client_url: http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1
 
 # 永谷園
 nagatanien:

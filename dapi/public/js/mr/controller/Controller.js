@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 381 2012-06-29 10:39:16Z tsuru $
+ * @version			$Id: Controller.js 385 2012-06-29 14:28:31Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 23:28:31 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -187,7 +187,7 @@
 				});
 				// link
 				_self.models.link.set({ 
-					"title":       campaign.has('page_button_text') ? campaign.get('page_button_text') : 'CMのサイトを見る', // http://redmine.sunbi.co.jp/issues/2040
+					"title":       campaign.has('page_button_text') ? campaign.get('page_button_text') : 'CMのサイトを見る', // http://redmine.sunbi.co.jp/issues/2045
  					"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
 				});
 				// ad
@@ -219,9 +219,12 @@
 					// already
 					var _model = new ns.root.ui.model.Already({
 						// "title":       'アンケートは終了です。ありがとうございました。',
-						"title":       'CM視聴ありがとうございました。', // http://redmine.sunbi.co.jp/issues/2038
-						"social":      campaign.has('message') ? campaign.get('message') : '',
-						"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
+					        // @see http://redmine.sunbi.co.jp/issues/2038
+						"title":          'CM視聴ありがとうございました。',
+						"social":         campaign.has('message')             ? campaign.get('message')              : '',
+						"client_url":     campaign.has('client_url')          ? campaign.get('client_url')           : '',
+						// @see http://redmine.sunbi.co.jp/issues/2045
+						"button_title":   campaign.has('already_button_text') ? campaign.get('already_button_text') : 'CMのサイトを見る'
 					});
 					// @see  http://redmine.sunbi.co.jp/issues/1955
 					// <レッグマジック・永谷園>
@@ -254,11 +257,11 @@
 		 */
 		already:   function(id) {
 			ns.trace(this.typeName + '#already("' + id + '")');
-      // 
-      this.isAlready = true;
-      // same as campaign
-      this.campaign(id, true);
-   	},
+			// 
+			this.isAlready = true;
+			// same as campaign
+			this.campaign(id, true);
+		},
 		/**
 		 * sorry
 		 */
@@ -624,7 +627,9 @@
 								var _model = new ns.root.ui.model.Complete({
 									"conversion_tag": _self._campaign.has('conversion_tag') ? _self._campaign.get('conversion_tag') : null,
 									"client_url":     _self._campaign.has('client_url') ? _self._campaign.get('client_url') : null,
-									"button_title":   _self._campaign.has('button_text') ? _self._campaign.get('button_text') : null // http://redmine.sunbi.co.jp/issues/2041
+									// http://redmine.sunbi.co.jp/issues/2041
+									// http://redmine.sunbi.co.jp/issues/2045
+									"button_title":   _self._campaign.has('complete_button_text') ? _self._campaign.get('complete_button_text') : null
 								});
 								// complete
 								_self.models.content.set({ 
@@ -666,16 +671,21 @@
     	ns.trace(this.typeName + '#requestThankyouPage()');
     	// 
     	var _self     = this;
-    	// complete
+    	// thankyou
+			_self.models.nav.set({
+				"html": 'おめでとうございます！'
+			});
 			_self.models.content.set({ 
 				"view":        ns.root.ui.Thankyou,
 				"model":       new ns.root.ui.model.Thankyou({
-				               	"title":        'おめでとうございます！',
+				               	"title":         'おめでとうございます！',
 				               	// http://redmine.sunbi.co.jp/issues/1948
 				               	// http://redmine.sunbi.co.jp/issues/1974
-				               	"description":  'mixiポイントをプレゼント',
-				               	"social":       _self._campaign.get('message'),
-				               	"client_url":   _self._campaign.get('client_url')
+				               	"description":   'mixiポイントをプレゼント',
+				               	"social":        _self._campaign.get('message'),
+				               	"client_url":    _self._campaign.get('client_url'),
+						// http://redmine.sunbi.co.jp/issues/2045
+						"button_title":  _self._campaign.has('thanks_button_text') ? _self._campaign.get('thanks_button_text') : 'CMのサイトを見る'
 				               }),
 				"selector":    ns.root.ui.slctr('thankyou')
 			});

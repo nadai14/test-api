@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Already.js 305 2012-06-21 14:48:40Z tsuru $
+ * @version      $Id: Already.js 385 2012-06-29 14:28:31Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-21 23:48:40 +0900 (木, 21 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 23:28:31 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -52,7 +52,8 @@
 			$(this.el).html(this.template({
 				title:            this.model.get('title'),
 				social:           this.model.get('social'),
-				client_url:       this.model.get('client_url')
+				client_url:       this.model.get('client_url'),
+				button_title:     this.model.has('button_title') ? this.model.get('button_title') : 'CMのサイトを開く'
 			}));
 			// return this
 			return this;
