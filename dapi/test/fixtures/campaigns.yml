@@ -130,12 +130,13 @@ incons_question:
   client_url: http://poncan.jp
 
 
+# 案件テスト用データ
 # レッグマジック
 legmagicX:
   mid: LegMagicXCampaignID
   mcd: LegMagicXCampaignID
   name: レッグマジックX
-  enq_id: LegMagicXEnqID
+  enq_id: LegMagicEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -154,7 +155,7 @@ legmagic_A:
   mid: LegMagicACampaignID
   mcd: LegMagicACampaignID
   name: レッグマジックA
-  enq_id: LegMagicAEnqID
+  enq_id: LegMagicEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -173,7 +174,7 @@ legmagic_B:
   mid: LegMagicBCampaignID
   mcd: LegMagicBCampaignID
   name: レッグマジックB
-  enq_id: LegMagicBEnqID
+  enq_id: LegMagicEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -212,7 +213,7 @@ power_planning_A:
   mid: PowerPlanningACampaignID
   mcd: PowerPlanningACampaignID
   name: パワープランニングA
-  enq_id: PowerPlanningAEnqID
+  enq_id: PowerPlanningEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -231,7 +232,7 @@ power_planning_B:
   mid: PowerPlanningBCampaignID
   mcd: PowerPlanningBCampaignID
   name: パワープランニングB
-  enq_id: PowerPlanningBEnqID
+  enq_id: PowerPlanningEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -270,7 +271,7 @@ ya_man_A:
   mid: YaManACampaignID
   mcd: YaManACampaignID
   name: ヤーマンA
-  enq_id: YaManAEnqID
+  enq_id: YaManEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -289,7 +290,7 @@ ya_man_B:
   mid: YaManBCampaignID
   mcd: YaManBCampaignID
   name: ヤーマンB
-  enq_id: YaManBEnqID
+  enq_id: YaManEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -328,7 +329,7 @@ yomei_shu_A:
   mid: YomeiShuACampaignID
   mcd: YomeiShuACampaignID
   name: 養命酒A
-  enq_id: YomeiShuAEnqID
+  enq_id: YomeiShuEnqID
   platform: gree
   point: 13
   opening_at: 
@@ -347,7 +348,7 @@ yomei_shu_B:
   mid: YomeiShuBCampaignID
   mcd: YomeiShuBCampaignID
   name: 養命酒B
-  enq_id: YomeiShuBEnqID
+  enq_id: YomeiShuEnqID
   platform: gree
   point: 13
   opening_at: 
@@ -386,7 +387,7 @@ plus_one_A:
   mid: PlusOneACampaignID
   mcd: PlusOneACampaignID
   name: プラスワンA
-  enq_id: PlusOneAEnqID
+  enq_id: PlusOneEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -405,7 +406,7 @@ plus_one_B:
   mid: PlusOneBCampaignID
   mcd: PlusOneBCampaignID
   name: プラスワンB
-  enq_id: PlusOneBEnqID
+  enq_id: PlusOneEnqID
   platform: gree
   point: 10
   opening_at: 
