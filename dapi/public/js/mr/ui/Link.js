@@ -1,56 +1,59 @@
 /* vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2: */
 /**
- * Nav class
+ * CountDown class
  *
  *
- * @author       Li Minghua
- * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Nav.js 377 2012-06-29 03:25:02Z tsuru $
+ * @version      $Id: Link.js 377 2012-06-29 03:25:02Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $
  *
  */
 (function(ns, $){
-	ns.Nav = ns.Base.extend({
+	ns.Link = ns.Base.extend({
 		/**
 		 * typeName of this class
 		 */
-		typeName:   ns.typeName('Nav'), 
+		typeName:   ns.typeName('Link'), 
 		/**
 		 * 
 		 */
-		tagName:    'div',
+		tagName:    'button',
 		/**
 		 * 
 		 */
-		className:  ns.cls('nav'),
+		className:  ns.cls('link'),
 		/**
 		 * Constructor
 		 */
-		initialize: function(options){
+		initialize: function(){
 			ns.trace(this.typeName + '#initialize()');
-			// set controller
-			this.controller = options.controller;
+			// keep the referecnt
+			var _self = this;
+			// initialize
+			if(!$(this.el).hasClass(ns.cls('link'))) {
+				$(this.el).addClass(ns.cls('link'))
+			}
 			// setup template
 			this.template = _.template($(this.el).html());
 			// bind events
 			this.model.on('change', this.render, this);
 		},
 		/**
-		 * render method
+		 * 
 		 */
-		render:      function(){
+		render: function(){
 			ns.trace(this.typeName + '#render()');
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
 			// render
-			$(this.el).html(this.template({ 
-				html : this.model.get('html')
+			$(this.el).html(this.template({
+				"title":      this.model.get('title'), 
+				"client_url": this.model.get('client_url')
 			}));
-			// return
+			// return this
 			return this;
 		}
 	});

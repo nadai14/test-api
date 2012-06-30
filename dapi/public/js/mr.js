@@ -6,14 +6,14 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: mr.js 363 2012-06-24 19:19:45Z tsuru $
+ * @version      $Id: mr.js 371 2012-06-27 10:51:37Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-25 04:19:45 +0900 (月, 25 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-27 19:51:37 +0900 (水, 27 6 2012) $ by $Author: tsuru $
  *
  */
 var mr = (function($){
 	/**
-	 * CORS Support
+	 * 
 	 */
 	$.support.cors = true;
 	/**

@@ -340,3 +340,7 @@ input[type="checkbox"], input[type="radio"] {
 .mr-ui-hidden {
 	display: none;
 }
+
+.mejs-controls {
+	display: none;
+}

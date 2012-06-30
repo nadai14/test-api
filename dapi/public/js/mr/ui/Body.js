@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Body.js 335 2012-06-23 11:35:55Z tsuru $
+ * @version      $Id: Body.js 377 2012-06-29 03:25:02Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-23 20:35:55 +0900 (土, 23 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -35,6 +35,14 @@
 			this.controller = options.controller;
 			
 			/* creates child components */
+			if(0< $(ns.slctr('link'), this.el).size()) {
+				// link(top)
+				this.link_top = new ns.Link({
+					controller: this.controller,
+					model:      this.controller.models.link,
+					el:         $(ns.slctr('link'), this.el).get(0)
+				});
+			}
 			// ad
 			this.ad       = new ns.Ad({
 				controller: this.controller,
@@ -53,7 +61,14 @@
 				model:      this.controller.models.content,
 				el:         $(ns.slctr('content', this.el)).exists() ? $(ns.slctr('content', this.el)).get(0) : null
 			});
-			
+			if(1 < $(ns.slctr('link'), this.el).size()) {
+				// link(bottom)
+				this.link_btm = new ns.Link({
+					controller: this.controller,
+					model:      this.controller.models.link,
+					el:         $(ns.slctr('link'), this.el).get(1)
+				});
+			}
 			// bind events
 			if('undefined' !== typeof(this.model)) {
 				this.model.on('change', this.render, this);

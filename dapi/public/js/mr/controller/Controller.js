@@ -7,12 +7,20 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 346 2012-06-24 09:47:05Z tsuru $
+ * @version			$Id: Controller.js 381 2012-06-29 10:39:16Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 18:47:05 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
+	/**
+	 * timeout defualt value in mili sec
+	 * @see http://redmine.sunbi.co.jp/issues/2025
+	 */
+	var _TIMEOUT_DEFUALT = 1000 * 10;
+	/**
+	 * 
+	 */
 	ns.Controller = Backbone.Router.extend({
 		/**
 		 * typeName of this class
@@ -55,12 +63,18 @@
 				"onIsAdPausedChanged",
 				"getAdDuration", 
 				"setAdDuration", 
-				"onAdDurationChanged"
+				"onAdDurationChanged",
+				"startWatchTimeout",
+				"onTimeout",
+				"getTimeoutTimerId", 
+				"setTimeoutTimerId", 
+				"onTimeoutTimerIdChanged"
 			);
 			
 			// 
 			this.models = {
 				parameter: new ns.root.model.Parameter(),
+				link:      new ns.root.ui.model.Link(),
 				ad:        new ns.root.ui.model.Ad(),
 				nav:       new ns.root.ui.model.Nav(),
 				theme:     new ns.root.ui.model.Theme(),
@@ -70,21 +84,23 @@
 			}; 
 			
 			// set default values
-			this.isAdEnded     = false;
-			this.isAdPlaying   = false;
-			this.isTimePassed  = false;
-			this.isAlready     = false;
-			this.isPaused      = false;
-			this.adCurrentTime = 0;
-			this.adDuration    = 0;
+			this.isAdEnded      = false;
+			this.isAdPlaying    = false;
+			this.isTimePassed   = false;
+			this.isAlready      = false;
+			this.isPaused       = false;
+			this.adCurrentTime  = 0;
+			this.adDuration     = 0;
+			this.timeoutTimerId = null;
 			
 			// event handler
-			this.on('change:isAdPlaying',   this.onIsAdPlayingChanged,   this);
-			this.on('change:isAdEnded',     this.onIsAdEndedChanged,     this);	
-			this.on('change:adCurrentTime', this.onAdCurrentTimeChanged, this);
-			this.on('change:isTimePassed',  this.onIsTimePassedChanged,  this);
-			this.on('change:isAdPaused',    this.onIsAdPausedChanged,  this);
-			this.on('change:adDuration',    this.onAdDurationChanged,  this);
+			this.on('change:isAdPlaying',    this.onIsAdPlayingChanged,    this);
+			this.on('change:isAdEnded',      this.onIsAdEndedChanged,      this);	
+			this.on('change:adCurrentTime',  this.onAdCurrentTimeChanged,  this);
+			this.on('change:isTimePassed',   this.onIsTimePassedChanged,   this);
+			this.on('change:isAdPaused',     this.onIsAdPausedChanged,     this);
+			this.on('change:adDuration',     this.onAdDurationChanged,     this);
+			this.on('change:timeoutTimerId', this.onTimeoutTimerIdChanged, this);
 			
 			var _cookies = document.cookie.split(';');
 			var _parsed = {};
@@ -169,6 +185,11 @@
 				_self.models.theme.set({
 					 "css":       (campaign.has('css') ? campaign.get('css') : null)
 				});
+				// link
+				_self.models.link.set({ 
+					"title":       campaign.has('page_button_text') ? campaign.get('page_button_text') : 'CMのサイトを見る', // http://redmine.sunbi.co.jp/issues/2040
+ 					"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
+				});
 				// ad
 				_self.models.ad.set({ 
 					"poster":     (campaign.has('thumbnail') ? campaign.get('thumbnail') : null),
@@ -189,13 +210,16 @@
 						"selector":    ns.root.ui.slctr('landing')
 					});
 				}else{
-					// http://redmine.sunbi.co.jp/issues/1955
+					// @see http://redmine.sunbi.co.jp/issues/1955
+					// @see http://redmine.sunbi.co.jp/issues/2038
 					_self.models.nav.set({
-						"html":        '動画視聴&アンケートは完了しています。'
+						// "html":        '動画視聴&アンケートは完了しています。'
+						"html":        'CM視聴は完了しています。'
 					});
 					// already
 					var _model = new ns.root.ui.model.Already({
-						"title":       'アンケートは終了です。ありがとうございました。',
+						// "title":       'アンケートは終了です。ありがとうございました。',
+						"title":       'CM視聴ありがとうございました。', // http://redmine.sunbi.co.jp/issues/2038
 						"social":      campaign.has('message') ? campaign.get('message') : '',
 						"client_url":  campaign.has('client_url') ? campaign.get('client_url') : ''
 					});
@@ -242,12 +266,14 @@
 			ns.trace(this.typeName + '#sorry("' + message + '")');
 			// keep reference
 			var _self = this;
+			// update theme
 			if(!_self.models.theme.has('css')) {
 				// @see http://redmine.sunbi.co.jp/issues/1979
 				_self.models.theme.set({
 					"css":       this.getDefaultCss()
 				});	
 			}
+			// update nav
 			_self.models.nav.set({
 				html:          'エラー'
 			});
@@ -261,6 +287,30 @@
 				               }),
 				"selector":    ns.root.ui.slctr('sorry')
 			});
+			// return
+			return this;
+		},
+		/**
+		 * timeout
+		 * @see http://redmine.sunbi.co.jp/issues/2025
+		 */
+		timeout:   function() {
+			ns.trace(this.typeName + '#timeout()');
+			// keep reference
+			var _self = this;
+			// update nav
+			_self.models.nav.set({
+				// html:          'タイムアウト', 
+				html:          'もう一度CMをみて下さい' // http://redmine.sunbi.co.jp/issues/2043
+			});
+			// content
+			_self.models.content.set({ 
+				"view":        ns.root.ui.Timeout,
+				"model":       new ns.root.ui.model.Timeout(),
+				"selector":    ns.root.ui.slctr('timeout')
+			});
+			// return
+			return this;
 		},
    	/**
    	 * 
@@ -442,10 +492,19 @@
     	}else if(0 < _self.wait_until){
     		var _left = _self.wait_until - _currentTimeInSec;
 				if(0 < _left) {
-					_self.models.next.set('title', '次の設問まで 残り：' + _left + ' 秒');
+					_self.models.next.set({
+						"title":   '残り：' + _left + ' 秒',
+						"enabled": false
+					});
     			_self.models.nav.set('html',   '次の設問まで 残り：' + _left + ' 秒');
 				}else{
-					_self.models.next.set('title', '次へ');
+					_self.models.next.set({
+						"title":   '次へ',
+						"enabled": true
+					});
+					if(_self._page) {
+						_self.models.nav.set('html',  _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目');
+					}
 					_isTimePassed = true;
 				}
     	}else{
@@ -477,7 +536,9 @@
      */
     onIsTimePassedChanged: function() {
     	ns.trace(this.typeName + '#onIsTimePassedChanged()');
-    	this.requestNextPage();
+    	if(!this._page) {
+    		this.requestNextPage();
+    	}
     },
     /**
      * requestNextPage()
@@ -486,11 +547,14 @@
     	ns.trace(this.typeName + '#requestNextPage()');
     	// 
     	var _self     = this;
+    	// validation
     	if('undefined' !== typeof(this.canMoveNext)) {
     		if(!this.canMoveNext()) {
     			return this;
     		}
     	}
+    	// cancel timeout watching
+			_self.cancelWatchTimeout();
     	// 
     	if(!_self._requestNextPageProcess) {
     		
@@ -500,7 +564,7 @@
 							_self._page   = page;
 							/// navi
 							_self.models.nav.set({
-		    				"html": _self._page.get('questions').at(0).get('num') + ' / ' +  _self._page.get('question_cnt')
+		    				"html": _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目'
 		    			});
 							// content
 							_self.models.content.set({ 
@@ -553,13 +617,14 @@
 						_self.sendAnswer(_answer, function(){
 							var _page     = _self._page;
 							var _enq_id   = _page.get('enq_id');
-							var _id       = _page.get('next_page_id');
+							var _id       = _page.findNextPageId(values);
 							if(_id) {
 								_fetchPage(_enq_id, _id);	
 							}else{
 								var _model = new ns.root.ui.model.Complete({
 									"conversion_tag": _self._campaign.has('conversion_tag') ? _self._campaign.get('conversion_tag') : null,
-									"client_url":     _self._campaign.has('client_url') ? _self._campaign.get('client_url') : null
+									"client_url":     _self._campaign.has('client_url') ? _self._campaign.get('client_url') : null,
+									"button_title":   _self._campaign.has('button_text') ? _self._campaign.get('button_text') : null // http://redmine.sunbi.co.jp/issues/2041
 								});
 								// complete
 								_self.models.content.set({ 
@@ -729,9 +794,6 @@
     	if(this.adDuration !== duration) {
     		this.adDuration = duration;	
     		this.trigger('change:adDuration');
-    		if(this.adDuration === Infinity) {
-    			ns.alert('Infinity');
-    		}
     	}
     	return this;
     },
@@ -741,6 +803,71 @@
     onAdDurationChanged: function() {
     	ns.trace(this.typeName + '#onAdDurationChanged()');
     	// nothing to do
+    },
+    /**
+     * 
+     */
+    startWatchTimeout:   function(){
+    	ns.trace(this.typeName + '#startWatchTimeout()');
+    	// keep the reference
+    	var _self = this;
+    	// set timeout
+    	var timeoutTimerId = setTimeout(function(){
+    		_self.onTimeout();
+    	}, _TIMEOUT_DEFUALT);
+    	// update id
+    	this.setTimeoutTimerId(timeoutTimerId);
+    	// return
+    	return this;
+    },
+    /**
+     * 
+     */
+    cancelWatchTimeout:  function(){
+    	ns.trace(this.typeName + '#cancelWatchTimeout()');
+    	// keep the reference
+    	var _self = this;
+    	//
+    	var _timeoutTimerId = _self.getTimeoutTimerId(); 
+    	if(_timeoutTimerId) {
+    		clearTimeout(_timeoutTimerId);
+    		_self.setTimeoutTimerId(null);	
+    	}
+    	return this;
+    },
+    /**
+     * 
+     */
+    onTimeout:           function(){
+    	ns.trace(this.typeName + '#onTimeout()');
+    	this.setTimeoutTimerId(null);
+    	return this;
+    },
+    /**
+     * getAdDuration()
+     */
+    getTimeoutTimerId:   function() {
+    	ns.trace(this.typeName + '#getTimeoutTimerId()');
+    	return this.timeoutTimerId;
+    },
+   	/**
+     * setIsAdPaused()
+     */
+    setTimeoutTimerId:   function(timeoutTimerId) {
+    	ns.trace(this.typeName + '#setTimeoutTimerId(' + timeoutTimerId + ')');
+    	if(this.timeoutTimerId !== timeoutTimerId) {
+    		this.timeoutTimerId = timeoutTimerId;	
+    		this.trigger('change:timeoutTimerId');
+    	}
+    	return this;
+    },
+    /**
+     * onIsAdEndedChanged() 
+     */
+    onTimeoutTimerIdChanged: function() {
+    	ns.trace(this.typeName + '#onTimeoutTimerIdChanged()');
+    	// nothing to do
+			return this;
     }
 	}); 
 })(mr.controller);

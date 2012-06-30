@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 361 2012-06-24 18:10:40Z tsuru $
+ * @version      $Id: Campaign.js 381 2012-06-29 10:39:16Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-25 03:10:40 +0900 (月, 25 6 2012) $
+ * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $
  *
  */
 (function(ns, $, ua){
@@ -69,6 +69,9 @@
 								var _movies = model.get(_attribute);
 								for(var m = 0; m < _movies.length; ++m) {
 									_movies[m].src = ns.absUrl(ns.api, _movies[m].src);
+									if(_movies[m].mime_type) {
+										_movies[m].type = ns.absUrl(ns.api, _movies[m].mime_type);	
+									}
 								}  
 								break;
 							default:
@@ -133,7 +136,7 @@
 						var _type = _types[t];
 						for(var m = 0; m < _movies.length; ++m) {
 							var _movie = _movies[m];
-							if(_movie.type === _type) {
+							if(_movie.mime_type === _type) {
 								// set main movie
 								if(!model.has('movie')) {
 									// set movie

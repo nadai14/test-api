@@ -4,9 +4,9 @@
  *
  *
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Next.js 251 2012-06-19 19:57:07Z tsuru $
+ * @version      $Id: Next.js 373 2012-06-28 02:09:27Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 04:57:07 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-28 11:09:27 +0900 (木, 28 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -52,6 +52,14 @@
 			}
 			// render
 			$(this.el).text(this.model.get('title'));
+			
+			if(this.model.has('enabled')) {
+				if(this.model.get('enabled')){
+					$(this.el).removeAttr('disabled');
+				}else{
+					$(this.el).attr('disabled', 'disabled');
+				}
+			}
 			
 			// return this
 			return this;

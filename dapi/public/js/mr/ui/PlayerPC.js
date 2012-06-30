@@ -7,17 +7,17 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 379 2012-06-29 08:36:16Z liminghua772 $
+ * @version      $Id: PlayerPC.js 379 2012-06-29 08:36:16Z liminghua772 $
  *
  * Last changed: $LastChangedDate: 2012-06-29 17:36:16 +0900 (金, 29 6 2012) $ by $Author: liminghua772 $
  *
  */
 (function(ns, $, ua){
-	ns.PlayerME = ns.Base.extend({
+	ns.PlayerPC = ns.Base.extend({
 		/**
 		 * typeName of this class
 		 */
-		typeName:   ns.typeName('PlayerME'), 
+		typeName:   ns.typeName('PlayerPC'), 
 		/**
 		 * default tag name of this view
 		 */
@@ -97,28 +97,7 @@
 						// 
 						_self.el = $(domObject).closest('.mejs-container').get(0);
 						
-						if(0 < _self.model.get('movie').src.indexOf('flv')) {
-						 	$('.mejs-mediaelement', _self.el).css('z-index', '999999');
-						 	$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
-						 	$('.mejs-controls',  _self.el).css('z-index', '-999999');
-						 	// $('.mejs-overlay-play', _self.el).css('width', 0);
-						}else{
-							$('.mejs-overlay-loading',  _self.el).css('z-index', '-999999');
-							if(ua.OS !== 'iPhone/iPod' && ua.OS !== 'iPad' && ua.OS !== 'Android') {
-								$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
-						 		$('.mejs-controls',  _self.el).css('z-index', '-999999');
-							}
-						}
-						if((0 < _self.model.get('movie').src.indexOf('mp4')) && ua.OS === 'Android' && _mode !== 'shim') {
-							$('.mejs-poster', self.el).show();
-							$('.mejs-poster', self.el).css('z-index', '999999');
-						}
-						$('.mejs-poster', _self.el).click(function(){
-							mediaElement.play();
-						});
-						$('.mejs-mediaelement', _self.el).click(function(){
-							mediaElement.play();
-						});
+						
 						mediaElement.addEventListener('progress', function(e) {
 							ns.trace('progress');
 						}, false);
@@ -152,19 +131,8 @@
 						}, false);
 						mediaElement.addEventListener('ended', function(e) {
 							ns.trace('ended');
-							// re-show poster
-							$('.mejs-poster', self.el).show();
-							if((0 < _self.model.get('movie').src.indexOf('mp4')) && ua.OS === 'Android' && _mode !== 'shim') {
-								$('.mejs-poster', self.el).css('z-index', '999999');
-							}
-							$('.mejs-overlay-play', _self.el).css('z-index', '-999999');
-							$('.mejs-controls',  _self.el).css('z-index', '-999999');
 							// end
 							_self.controller.setIsAdEnded(true);
-							// exit fullscreen
-							if(ua.OS === "iPhone/iPod"){
-								$(domObject).get(0).webkitExitFullscreen();
-							}
 						}, false);
 						
 						success(_self);

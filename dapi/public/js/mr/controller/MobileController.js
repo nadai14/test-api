@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: MobileController.js 354 2012-06-24 13:28:04Z tsuru $
+ * @version      $Id: MobileController.js 381 2012-06-29 10:39:16Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-24 22:28:04 +0900 (日, 24 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -71,11 +71,15 @@
 			var _self = this;
 			// 
 			if(this.getIsAdEnded() && !this.getIsAlready()){
+				// request next page
 				this.requestNextPage(function(){
+					// start watchtimeout
+					_self.startWatchTimeout();
 					// update nav
 					_self.models.nav.set({
-						"html": _self._page.get('questions').at(0).get('num') + ' / ' +  _self._page.get('question_cnt')
-						});
+						// "html": _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目'
+						"html": '10 秒以内にスタートしてください。'
+					});
 					// scrollto
 					$('html, body').animate({
 						scrollTop: $(".mr-ui-content").offset().top
@@ -94,6 +98,13 @@
 					ns.alert('動画を最後まで再生してアンケートにお答えください。(' + this.getAdCurrentTime() + '/' + this.getAdDuration() + ')');
 				}
 			}
-		}
+		},
+		/**
+		 * onTimeout()
+		 */
+		onTimeout:           function() {
+    	ns.trace(this.typeName + '#onTimeout()');
+    	this.timeout();
+    }
 	});
 })(mr.controller);
