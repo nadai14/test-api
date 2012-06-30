@@ -4,7 +4,7 @@
 # APIテスト用データ
 # スマートフォン用
 # 動作確認用データ
-success_confirm_sp:
+success_confirm_SP:
   uuid: SuccessConfirmSPCampaginFaceID
   campaign_id: SuccessConfirmCampaignID
   face: SP
@@ -13,13 +13,13 @@ success_confirm_sp:
   description: 説明SCSP
 
 # nil動作確認用のデータ
-nullable_sp:
+nullable_SP:
   uuid: NullableSPCampaginFaceID
   campaign_id: NullableCampaignID
   face: SP
 
 # 空回答確認用
-null_answer_sp:
+null_answer_SP:
   uuid: NullAnswerSPCampaginFaceID
   campaign_id: NullAnswerCampaignID
   face: SP
@@ -29,7 +29,7 @@ null_answer_sp:
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_sp:
+first_page_null_SP:
   uuid: FirstPageNullSPCampaginFaceID
   campaign_id: FirstPageNullCampaignID
   face: SP
@@ -37,7 +37,7 @@ first_page_null_sp:
   title: タイトルFPNSP
   description: 説明FPNSP
 
-first_page_id_null_sp:
+first_page_id_null_SP:
   uuid: FirstPageIDNullSPCampaginFaceID
   campaign_id: FirstPageIDNullCampaignID
   face: SP
@@ -46,7 +46,7 @@ first_page_id_null_sp:
   description: 説明FPIDNSP
 
 # キャンペーンが終了日時を過ぎている
-camp_closed_sp:
+camp_closed_SP:
   uuid: CampaignClosedSPCampaginFaceID
   campaign_id: CampaignClosedCampaignID
   face: SP
@@ -55,7 +55,7 @@ camp_closed_sp:
   description: 説明CCSP
 
 # 設問と選択肢が矛盾している
-incons_question_sp:
+incons_question_SP:
   uuid: InconsistencyQuestionSPCampaginFaceID
   campaign_id: InconsistencyQuestionCampaignID
   face: SP
@@ -65,7 +65,7 @@ incons_question_sp:
   
 # PC用
 # 動作確認用データ
-success_confirm_pc:
+success_confirm_PC:
   uuid: SuccessConfirmPCCampaginFaceID
   campaign_id: SuccessConfirmCampaignID
   face: PC
@@ -74,13 +74,13 @@ success_confirm_pc:
   description: 説明SCPC
 
 # nil動作確認用のデータ
-nullable_pc:
+nullable_PC:
   uuid: NullablePCCampaginFaceID
   campaign_id: NullableCampaignID
   face: PC
 
 # 空回答確認用
-null_answer_pc:
+null_answer_PC:
   uuid: NullAnswerPCCampaginFaceID
   campaign_id: NullAnswerCampaignID
   face: PC
@@ -90,7 +90,7 @@ null_answer_pc:
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
-first_page_null_pc:
+first_page_null_PC:
   uuid: FirstPageNullPCCampaginFaceID
   campaign_id: FirstPageNullCampaignID
   face: PC
@@ -98,7 +98,7 @@ first_page_null_pc:
   title: タイトルFPNPC
   description: 説明FPNPC
 
-first_page_id_null_pc:
+first_page_id_null_PC:
   uuid: FirstPageIDNullPCCampaginFaceID
   campaign_id: FirstPageIDNullCampaignID
   face: PC
@@ -107,7 +107,7 @@ first_page_id_null_pc:
   description: 説明FPIDNPC
 
 # キャンペーンが終了日時を過ぎている
-camp_closed_pc:
+camp_closed_PC:
   uuid: CampaignClosedPCCampaginFaceID
   campaign_id: CampaignClosedCampaignID
   face: PC
@@ -116,7 +116,7 @@ camp_closed_pc:
   description: 説明CCPC
 
 # 設問と選択肢が矛盾している
-incons_question_pc:
+incons_question_PC:
   uuid: InconsistencyQuestionPCCampaginFaceID
   campaign_id: InconsistencyQuestionCampaignID
   face: PC
@@ -127,7 +127,7 @@ incons_question_pc:
 
 # 案件テスト用データ
 # レッグマジック
-legmagicX_sp:
+legmagicX_SP:
   uuid: LegMagicXSPCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: SP
@@ -135,7 +135,7 @@ legmagicX_sp:
   title: 
   description: 
 
-legmagicX_pc:
+legmagicX_PC:
   uuid: LegMagicXPCCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: PC
@@ -210,7 +210,7 @@ ya_man_B:
   description: 
   
 # 養命酒
-yomei_shu_sp:
+yomei_shu_SP:
   uuid: YomeiShuSPCampaginFaceID
   campaign_id: YomeiShuCampaignID
   face: SP
@@ -218,7 +218,7 @@ yomei_shu_sp:
   title: 
   description: 
 
-yomei_shu_pc:
+yomei_shu_PC:
   uuid: YomeiShuPCCampaginFaceID
   campaign_id: YomeiShuCampaignID
   face: PC
@@ -243,7 +243,7 @@ yomei_shu_B:
   description: 
 
 # プラスワン
-plus_one_sp:
+plus_one_SP:
   uuid: PlusOneSPCampaginFaceID
   campaign_id: PlusOneCampaignID
   face: SP
@@ -251,7 +251,7 @@ plus_one_sp:
   title: 
   description: 
 
-plus_one_pc:
+plus_one_PC:
   uuid: PlusOnePCCampaginFaceID
   campaign_id: PlusOneCampaignID
   face: PC
@@ -276,7 +276,7 @@ plus_one_B:
   description: 
 
 # 永谷園
-nagatanien_sp:
+nagatanien_SP:
   uuid: NagatanienSPCampaginFaceID
   campaign_id: NagatanienCampaignID
   face: SP
@@ -284,7 +284,7 @@ nagatanien_sp:
   title: 
   description: 
 
-nagatanien_pc:
+nagatanien_PC:
   uuid: NagatanienPCCampaginFaceID
   campaign_id: NagatanienCampaignID
   face: PC

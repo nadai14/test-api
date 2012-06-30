@@ -135,6 +135,64 @@ legmagicX_PC:
   first_page_id: LegMagicXPCEnqPage1
   wait_until: 
 
+legmagic_A:
+  uuid: LegMagicAEnqFaceID
+  enq_id: LegMagicEnqID
+  face: SP
+  first_page_id: LegMagicAEnqPage1
+  wait_until: 
+ 
+legmagic_B:
+  uuid: LegMagicBEnqFaceID
+  enq_id: LegMagicEnqID
+  face: SP
+  first_page_id: LegMagicBEnqPage1
+  wait_until: 
+
+# パワープランニング
+power_planning:
+  uuid: PowerPlanningEnqFaceID
+  enq_id: PowerPlanningEnqID
+  face: SP
+  first_page_id: PowerPlanningEnqPage1
+  wait_until: 
+
+power_planning_A:
+  uuid: PowerPlanningAEnqFaceID
+  enq_id: PowerPlanningEnqID
+  face: SP
+  first_page_id: PowerPlanningAEnqPage1
+  wait_until: 
+
+power_planning_B:
+  uuid: PowerPlanningBEnqFaceID
+  enq_id: PowerPlanningEnqID
+  face: SP
+  first_page_id: PowerPlanningBEnqPage1
+  wait_until: 
+
+# ヤーマン
+ya_man:
+  uuid: YaManEnqFaceID
+  enq_id: YaManEnqID
+  face: SP
+  first_page_id: YaManEnqPage1
+  wait_until: 
+
+ya_man_A:
+  uuid: YaManAEnqFaceID
+  enq_id: YaManEnqID
+  face: SP
+  first_page_id: YaManAEnqPage1
+  wait_until: 
+
+ya_man_B:
+  uuid: YaManBEnqFaceID
+  enq_id: YaManEnqID
+  face: SP
+  first_page_id: YaManBEnqPage1
+  wait_until: 
+
 # 養命酒
 yomei_shu_SP:
   uuid: YomeiShuSPEnqFaceID
@@ -150,6 +208,20 @@ yomei_shu_PC:
   first_page_id: YomeiShuPCEnqPage1
   wait_until: 30
 
+yomei_shu_A:
+  uuid: YomeiShuAEnqFaceID
+  enq_id: YomeiShuEnqID
+  face: SP
+  first_page_id: YomeiShuAEnqPage1
+  wait_until: 30
+ 
+yomei_shu_B:
+  uuid: YomeiShuBEnqFaceID
+  enq_id: YomeiShuEnqID
+  face: SP
+  first_page_id: YomeiShuBEnqPage1
+  wait_until: 30
+ 
 # プラスワン
 plus_one_SP:
   uuid: PlusOneSPEnqFaceID
@@ -157,7 +229,6 @@ plus_one_SP:
   face: SP
   first_page_id: PlusOneSPEnqPage1
   wait_until: 
-  css: /css/sp/themes/plus1/style.css
  
 plus_one_PC:
   uuid: PlusOnePCEnqFaceID
@@ -166,18 +237,46 @@ plus_one_PC:
   first_page_id: PlusOnePCEnqPage1
   wait_until: 
 
-
-# 永谷園
-nagatani_en_SP:
-  uuid: NagataniEnSPEnqFaceID
-  enq_id: NagataniEnEnqID
+plus_one_A:
+  uuid: PlusOneAEnqFaceID
+  enq_id: PlusOneEnqID
   face: SP
-  first_page_id: NagataniEnSPEnqPage1
+  first_page_id: PlusOneAEnqPage1
   wait_until: 
  
-nagatani_en_PC:
-  uuid: NagataniEnPCEnqFaceID
-  enq_id: NagataniEnEnqID
-  face: PC
-  first_page_id: NagataniEnPCEnqPage1
+plus_one_B:
+  uuid: PlusOneBEnqFaceID
+  enq_id: PlusOneEnqID
+  face: SP
+  first_page_id: PlusOneBEnqPage1
   wait_until: 
+ 
+# 永谷園
+nagatanien_SP:
+  uuid: NagatanienSPEnqFaceID
+  enq_id: NagatanienEnqID
+  face: SP
+  first_page_id: NagatanienSPEnqPage1
+  wait_until: 
+ 
+nagatanien_PC:
+  uuid: NagatanienPCEnqFaceID
+  enq_id: NagatanienEnqID
+  face: PC
+  first_page_id: NagatanienPCEnqPage1
+  wait_until: 
+
+nagatanien_A:
+  uuid: NagatanienAEnqFaceID
+  enq_id: NagatanienEnqID
+  face: SP
+  first_page_id: NagatanienAEnqPage1
+  wait_until: 
+ 
+nagatanien_B:
+  uuid: NagatanienBEnqFaceID
+  enq_id: NagatanienEnqID
+  face: SP
+  first_page_id: NagatanienBEnqPage1
+  wait_until: 
+ 

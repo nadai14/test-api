@@ -459,18 +459,18 @@ nagatanien_m3u8:
   campaign_id: NagatanienCampaignID
   mime_type: application/x-mpegURL
   src: /video/nagatanien/movie.m3u8
-  duration: 47
+  duration: 144
 
 nagatanien_flv:
   uuid: NagatanienFLVovieID
   campaign_id: NagatanienCampaignID
   mime_type: video/x-flv
   src: /video/nagatanien/movie.flv
-  duration: 47
+  duration: 144
 
 nagatanien_mp4:
   uuid: NagatanienMP4MovieID
   campaign_id: NagatanienCampaignID
   src: /video/nagatanien/movie.mp4
-  duration: 47
+  duration: 144
 
