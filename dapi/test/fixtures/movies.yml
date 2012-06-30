@@ -214,60 +214,69 @@ power_planning_m3u8:
   uuid: PowerPlanningM3U8MovieID
   campaign_id: PowerPlanningCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
   duration: 0
 
 power_planning_flv:
   uuid: PowerPlanningFLVMovieID
   campaign_id: PowerPlanningCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
   duration: 0
 
 power_planning_mp4:
   uuid: PowerPlanningMP4MovieID
   campaign_id: PowerPlanningCampaignID
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
 
 power_planning_A_m3u8:
   uuid: PowerPlanningAM3U8MovieID
   campaign_id: PowerPlanningACampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
   duration: 0
 
 power_planning_A_flv:
   uuid: PowerPlanningAFLVMovieID
   campaign_id: PowerPlanningACampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
   duration: 0
 
 power_planning_A_mp4:
   uuid: PowerPlanningAMP4MovieID
   campaign_id: PowerPlanningACampaignID
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
 
 power_planning_B_m3u8:
   uuid: PowerPlanningBM3U8MovieID
   campaign_id: PowerPlanningBCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.m3u8
   duration: 0
 
 power_planning_B_flv:
   uuid: PowerPlanningBFLVMovieID
   campaign_id: PowerPlanningBCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/powerplaning/movie.flv
   duration: 0
 
 power_planning_B_mp4:
   uuid: PowerPlanningBMP4MovieID
   campaign_id: PowerPlanningBCampaignID
-  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+# src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
 
 # ヤーマン
@@ -275,60 +284,69 @@ ya_man_m3u8:
   uuid: YaManM3U8MovieID
   campaign_id: YaManCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
   duration: 0
 
 ya_man_flv:
   uuid: YaManFLVMovieID
   campaign_id: YaManCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
   duration: 0
 
 ya_man_mp4:
   uuid: YaManFLVMP4MovieID
   campaign_id: YaManCampaignID
-  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
 
 ya_man_A_m3u8:
   uuid: YaManAM3U8MovieID
   campaign_id: YaManACampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
   duration: 0
 
 ya_man_A_flv:
   uuid: YaManAFLVMovieID
   campaign_id: YaManACampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
   duration: 0
 
 ya_man_A_mp4:
   uuid: YaManFLVAMP4MovieID
   campaign_id: YaManACampaignID
-  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
 
 ya_man_B_m3u8:
   uuid: YaManBM3U8MovieID
   campaign_id: YaManBCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.m3u8
   duration: 0
 
 ya_man_B_flv:
   uuid: YaManBFLVMovieID
   campaign_id: YaManBCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.flv
   duration: 0
 
 ya_man_B_mp4:
   uuid: YaManBMP4MovieID
   campaign_id: YaManBCampaignID
-  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
 
 # 養命酒
@@ -336,60 +354,69 @@ yomei_shu_m3u8:
   uuid: YomeiShuM3U8MovieID
   campaign_id: YomeiShuCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.m3u8
   duration: 0
 
 yomei_shu_flv:
   uuid: YomeiShuFLVovieID
   campaign_id: YomeiShuCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.flv
   duration: 0
 
 yomei_shu_mp4:
   uuid: YomeiShuMP4MovieID
   campaign_id: YomeiShuCampaignID
-  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.mp4
   duration: 0
 
 yomei_shu_A_m3u8:
   uuid: YomeiShuAM3U8MovieID
   campaign_id: YomeiShuACampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.m3u8
   duration: 0
 
 yomei_shu_A_flv:
   uuid: YomeiShuAFLVovieID
   campaign_id: YomeiShuACampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.flv
   duration: 0
 
 yomei_shu_A_mp4:
   uuid: YomeiShuAMP4MovieID
   campaign_id: YomeiShuACampaignID
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
   duration: 0
 
 yomei_shu_B_m3u8:
   uuid: YomeiShuBM3U8MovieID
   campaign_id: YomeiShuBCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.m3u8
   duration: 0
 
 yomei_shu_B_flv:
   uuid: YomeiShuBFLVovieID
   campaign_id: YomeiShuBCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.flv
   duration: 0
 
 yomei_shu_B_mp4:
   uuid: YomeiShuBMP4MovieID
   campaign_id: YomeiShuBCampaignID
-  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
   duration: 0
 
 # プラスワン
@@ -417,40 +444,46 @@ plus_one_A_m3u8:
   uuid: PlusOneAM3U8MovieID
   campaign_id: PlusOneACampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/plus1/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/plus1/movie.m3u8
   duration: 47
 
 plus_one_A_flv:
   uuid: PlusOneAFLVovieID
   campaign_id: PlusOneACampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/plus1/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/plus1/movie.flv
   duration: 47
 
 plus_one_A_mp4:
   uuid: PlusOneAMP4MovieID
   campaign_id: PlusOneACampaignID
-  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
   duration: 47
 
 plus_one_B_m3u8:
   uuid: PlusOneBM3U8MovieID
   campaign_id: PlusOneBCampaignID
   mime_type: application/x-mpegURL
-  src: http://moviereward.nadai.jp/video/plus1/movie.m3u8
+  src: http://moviereward.nadai.jp/video/plus1/plus1.m3u8
+#  src: http://moviereward.nadai.jp/video/plus1/movie.m3u8
   duration: 47
 
 plus_one_B_flv:
   uuid: PlusOneBFLVovieID
   campaign_id: PlusOneBCampaignID
   mime_type: video/x-flv
-  src: http://moviereward.nadai.jp/video/plus1/movie.flv
+  src: http://moviereward.nadai.jp/video/plus1/plus1.flv
+#  src: http://moviereward.nadai.jp/video/plus1/movie.flv
   duration: 47
 
 plus_one_B_mp4:
   uuid: PlusOneBMP4MovieID
   campaign_id: PlusOneBCampaignID
-  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
+  src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
+#  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
   duration: 47
 
 # 永谷園

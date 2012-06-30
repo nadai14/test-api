@@ -407,38 +407,38 @@ plus_one_question10:
   required: true
 
 # 永谷園
-#nagatani_en_question1:
-#  uuid: NagataniEnQuestion1
+#nagatanien_question1:
+#  uuid: NagatanienQuestion1
 #  kind: radio
 #  title: 性別を教えてください
 #  required: true
 #
-#nagatani_en_question2:
-#  uuid: NagataniEnQuestion2
+#nagatanien_question2:
+#  uuid: NagatanienQuestion2
 #  kind: radio
 #  title: 年齢をお答え下さい
 #  required: true
 
-nagatani_en_question3:
-  uuid: NagataniEnQuestion3
+nagatanien_question3:
+  uuid: NagatanienQuestion3
   kind: radio
   title: 朝、スッキリと起きられないことがありますか？
   required: true
 
-nagatani_en_question4:
-  uuid: NagataniEnQuestion4
+nagatanien_question4:
+  uuid: NagatanienQuestion4
   kind: radio
   title: しじみの中に含まれるオルニチンの健康パワーをご存じでしたか？
   required: true
 
-nagatani_en_question5:
-  uuid: NagataniEnQuestion5
+nagatanien_question5:
+  uuid: NagatanienQuestion5
   kind: radio
   title: 朝スッキリサプリ!!　オルニチンに興味がありますか？
   required: true
 
-nagatani_en_question6:
-  uuid: NagataniEnQuestion6
+nagatanien_question6:
+  uuid: NagatanienQuestion6
   kind: radio
   title: 朝スッキリサプリ！！オルニチン　半額キャンペーン ＋ mixiポイントプレゼントに申し込みたいですか？
   required: true

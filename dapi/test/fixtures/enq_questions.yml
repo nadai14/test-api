@@ -1208,7 +1208,7 @@ plus_one_A_question9:
 
 plus_one_A_question10:
   uuid: PlusOneAEnqQuestion10
-  enq_page_id: PlusOneSPEnqPage10
+  enq_page_id: PlusOneAEnqPage10
   num: 10
   seq: Q10
   question_id: PlusOneQuestion10
@@ -1373,92 +1373,3 @@ nagatanien_PC_question6:
   num: 6
   seq: Q6
   question_id: NagatanienQuestion6
-
-nagatanien_A_question1:
-  uuid: NagatanienAEnqQuestion1
-  enq_page_id: NagatanienAEnqPage1
-  num: 1
-  seq: Q1
-  question_id: QuestionSex
-#  question_id: NagatanienQuestion1
-
-nagatanien_A_question2:
-  uuid: NagatanienAEnqQuestion2
-  enq_page_id: NagatanienAEnqPage2
-  num: 2
-  seq: Q2
-  question_id: QuestionAge
-#  question_id: NagatanienQuestion2
-
-nagatanien_A_question3:
-  uuid: NagatanienAEnqQuestion3
-  enq_page_id: NagatanienAEnqPage3
-  num: 3
-  seq: Q3
-  question_id: NagatanienQuestion3
-
-nagatanien_A_question4:
-  uuid: NagatanienAEnqQuestion4
-  enq_page_id: NagatanienAEnqPage4
-  num: 4
-  seq: Q4
-  question_id: NagatanienQuestion4
-
-nagatanien_A_question5:
-  uuid: NagatanienAEnqQuestion5
-  enq_page_id: NagatanienAEnqPage5
-  num: 5
-  seq: Q5
-  question_id: NagatanienQuestion5
-
-nagatanien_A_question6:
-  uuid: NagatanienAEnqQuestion6
-  enq_page_id: NagatanienAEnqPage6
-  num: 6
-  seq: Q6
-  question_id: NagatanienQuestion6
-
-nagatanien_B_question1:
-  uuid: NagatanienBEnqQuestion1
-  enq_page_id: NagatanienBEnqPage1
-  num: 1
-  seq: Q1
-  question_id: QuestionSex
-#  question_id: NagatanienQuestion1
-
-nagatanien_B_question2:
-  uuid: NagatanienBEnqQuestion2
-  enq_page_id: NagatanienBEnqPage2
-  num: 2
-  seq: Q2
-  question_id: QuestionAge
-#  question_id: NagatanienQuestion2
-
-nagatanien_B_question3:
-  uuid: NagatanienBEnqQuestion3
-  enq_page_id: NagatanienBEnqPage3
-  num: 3
-  seq: Q3
-  question_id: NagatanienQuestion3
-
-nagatanien_B_question4:
-  uuid: NagatanienBEnqQuestion4
-  enq_page_id: NagatanienBEnqPage4
-  num: 4
-  seq: Q4
-  question_id: NagatanienQuestion4
-
-nagatanien_B_question5:
-  uuid: NagatanienBEnqQuestion5
-  enq_page_id: NagatanienBEnqPage5
-  num: 5
-  seq: Q5
-  question_id: NagatanienQuestion5
-
-nagatanien_B_question6:
-  uuid: NagatanienBEnqQuestion6
-  enq_page_id: NagatanienBEnqPage6
-  num: 6
-  seq: Q6
-  question_id: NagatanienQuestion6
-

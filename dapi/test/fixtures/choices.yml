@@ -310,19 +310,19 @@ select_Okinawa:
  
 check_choice1:
   uuid: CheckChoice1
-  question_id: QuestionCheck
+  question_id: QuestionCheckbox
   order: 1
   content: チェックボックス1
 
 check_choice2:
   uuid: CheckChoice2
-  question_id: QuestionCheck
+  question_id: QuestionCheckbox
   order: 2
   content: チェックボックス2
 
 check_choice3:
   uuid: CheckChoice3
-  question_id: QuestionCheck
+  question_id: QuestionCheckbox
   order: 3
   content: チェックボックス3
   
@@ -360,32 +360,32 @@ question_sex_female:
   content: 女性
 
 question_age_u19:
-  uuid: LegMagicNumericU19
-  question_id: LegMagicQuestion2
+  uuid: QuestionAgeU19
+  question_id: QuestionAge
   order: 1
   content: 19歳以下
 
 question_age_20:
-  uuid: LegMagicNumeric20
-  question_id: LegMagicQuestion2
+  uuid: QuestionAge20
+  question_id: QuestionAge
   order: 2
   content: 20-29歳
 
 question_age_30:
-  uuid: LegMagicNumeric30
-  question_id: LegMagicQuestion2
+  uuid: QuestionAge30
+  question_id: QuestionAge
   order: 3
   content: 30-39歳
 
 question_age_40:
-  uuid: LegMagicNumeric40
-  question_id: LegMagicQuestion2
+  uuid: QuestionAge40
+  question_id: QuestionAge
   order: 4
   content: 40-49歳
 
 question_age_50:
-  uuid: LegMagicNumeric50
-  question_id: LegMagicQuestion2
+  uuid: QuestionAge50
+  question_id: QuestionAge
   order: 5
   content: 50歳以上
 
@@ -1381,138 +1381,138 @@ plus_one_q10_3:
 # 永谷園
 #nagatanien_q1_1:
 #  uuid: NagatanienQ1-2
-#  question_id: NagataniEnQuestion1
+#  question_id: NagatanienQuestion1
 #  order: 1
 #  content: 男性
 #
 #nagatanien_q1_2:
 #  uuid: NagatanienQ1-2
-#  question_id: NagataniEnQuestion1
+#  question_id: NagatanienQuestion1
 #  order: 2
 #  content: 女性
 #
 #nagatanien_q2_1:
 #  uuid: NagatanienQ2-1
-#  question_id: NagataniEnQuestion2
+#  question_id: NagatanienQuestion2
 #  order: 1
 #  content: 19歳以下
 #
 #nagatanien_q2_2:
 #  uuid: NagatanienQ2-2
-#  question_id: NagataniEnQuestion2
+#  question_id: NagatanienQuestion2
 #  order: 2
 #  content: 20-29歳
 #
 #nagatanien_q2_3:
 #  uuid: NagatanienQ2-3
-#  question_id: NagataniEnQuestion2
+#  question_id: NagatanienQuestion2
 #  order: 3
 #  content: 30-39歳
 #
 #nagatanien_q2_4:
 #  uuid: NagatanienQ2-4
-#  question_id: NagataniEnQuestion2
+#  question_id: NagatanienQuestion2
 #  order: 4
 #  content: 40-49歳
 #
 #nagatanien_q2_5:
 #  uuid: NagatanienQ2-5
-#  question_id: NagataniEnQuestion2
+#  question_id: NagatanienQuestion2
 #  order: 5
 #  content: 50歳以上
 
 nagatanien_q3_1:
   uuid: NagatanienQ3-1
-  question_id: NagataniEnQuestion3
+  question_id: NagatanienQuestion3
   order: 1
   content: よくある
 
 nagatanien_q3_2:
   uuid: NagatanienQ3-2
-  question_id: NagataniEnQuestion3
+  question_id: NagatanienQuestion3
   order: 2
   content: たまにある
 
 nagatanien_q3_3:
   uuid: NagatanienQ3-3
-  question_id: NagataniEnQuestion3
+  question_id: NagatanienQuestion3
   order: 3
   content: どちらとも言えない
 
 nagatanien_q3_4:
   uuid: NagatanienQ3-4
-  question_id: NagataniEnQuestion3
+  question_id: NagatanienQuestion3
   order: 4
   content: あまりない
 
 nagatanien_q3_5:
   uuid: NagatanienQ3-5
-  question_id: NagataniEnQuestion3
+  question_id: NagatanienQuestion3
   order: 5
   content: 全くない
 
 nagatanien_q4_1:
   uuid: NagatanienQ4-1
-  question_id: NagataniEnQuestion4
+  question_id: NagatanienQuestion4
   order: 1
   content: よく知っていた
 
 nagatanien_q4_2:
   uuid: NagatanienQ4-2
-  question_id: NagataniEnQuestion4
+  question_id: NagatanienQuestion4
   order: 2
   content: まあ知っていた
 
 nagatanien_q4_3:
   uuid: NagatanienQ4-3
-  question_id: NagataniEnQuestion4
+  question_id: NagatanienQuestion4
   order: 3
   content: 知らなかった
 
 nagatanien_q5_1:
   uuid: NagatanienQ5-1
-  question_id: NagataniEnQuestion5
+  question_id: NagatanienQuestion5
   order: 1
   content: 非常に興味がある
 
 nagatanien_q5_2:
   uuid: NagatanienQ5-2
-  question_id: NagataniEnQuestion5
+  question_id: NagatanienQuestion5
   order: 2
   content: まあ興味がある
 
 nagatanien_q5_3:
   uuid: NagatanienQ5-3
-  question_id: NagataniEnQuestion5
+  question_id: NagatanienQuestion5
   order: 3
   content: どちらとも思わない
 
 nagatanien_q5_4:
   uuid: NagatanienQ5-4
-  question_id: NagataniEnQuestion5
+  question_id: NagatanienQuestion5
   order: 4
   content: あまり興味がない
 
 nagatanien_q5_5:
   uuid: NagatanienQ5-5
-  question_id: NagataniEnQuestion5
+  question_id: NagatanienQuestion5
   order: 5
   content: 全く興味がない
 
 nagatanien_q6_1:
   uuid: NagatanienQ6-1
-  question_id: NagataniEnQuestion6
+  question_id: NagatanienQuestion6
   order: 1
   content: 申し込みたい
 
 nagatanien_q6_2:
   uuid: NagatanienQ6-2
-  question_id: NagataniEnQuestion6
+  question_id: NagatanienQuestion6
   order: 2
   content: どちらともいえない
 
 nagatanien_q6_3:
   uuid: NagatanienQ6-3
-  question_id: NagataniEnQuestion6
+  question_id: NagatanienQuestion6
   order: 3
   content: 申込みたくない
