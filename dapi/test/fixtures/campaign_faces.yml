@@ -126,12 +126,95 @@ incons_question_pc:
 
 
 # 案件テスト用データ
+# レッグマジック
+legmagicX_sp:
+  uuid: LegMagicXSPCampaginFaceID
+  campaign_id: LegMagicXCampaignID
+  face: SP
+  css: /css/sp/themes/lgmx/style.css
+  title: 
+  description: 
+
+legmagicX_pc:
+  uuid: LegMagicXPCCampaginFaceID
+  campaign_id: LegMagicXCampaignID
+  face: PC
+  css: /css/pc/themes/lgmx/style.css
+  title: 
+  description: 
+
+legmagic_A:
+  uuid: LegMagicACampaginFaceID
+  campaign_id: LegMagicACampaignID
+  face: SP
+  css: /css/sp/themes/legmagic/style.css
+  title: 
+  description: 
+
+legmagic_B:
+  uuid: LegMagicBCampaginFaceID
+  campaign_id: LegMagicBCampaignID
+  face: SP
+  css: /css/sp/themes/legmagic/style.css
+  title: 
+  description: 
+
+# パワープランニング
+power_planning:
+  uuid: PowerPlanningCampaginFaceID
+  campaign_id: PowerPlanningCampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+power_planning_A:
+  uuid: PowerPlanningACampaginFaceID
+  campaign_id: PowerPlanningACampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+power_planning_B:
+  uuid: PowerPlanningBCampaginFaceID
+  campaign_id: PowerPlanningBCampaignID
+  face: SP
+  css: /css/sp/themes/powerplaning/style.css
+  title: 
+  description: 
+
+# ヤーマン
+ya_man:
+  uuid: YaManCampaginFaceID
+  campaign_id: YaManCampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+
+ya_man_A:
+  uuid: YaManACampaginFaceID
+  campaign_id: YaManACampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+  
+ya_man_B:
+  uuid: YaManBCampaginFaceID
+  campaign_id: YaManBCampaignID
+  face: SP
+  css: /css/sp/themes/ya-man/style.css
+  title: 
+  description: 
+  
 # 養命酒
 yomei_shu_sp:
   uuid: YomeiShuSPCampaginFaceID
   campaign_id: YomeiShuCampaignID
   face: SP
-  css: /css/sp/themes/sample-1/style.css
+  css: /css/sp/themes/yomeishu/style.css
   title: 
   description: 
 
@@ -139,7 +222,23 @@ yomei_shu_pc:
   uuid: YomeiShuPCCampaginFaceID
   campaign_id: YomeiShuCampaignID
   face: PC
-  css: /css/pc/themes/sample-1/style.css
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+yomei_shu_A:
+  uuid: YomeiShuACampaginFaceID
+  campaign_id: YomeiShuACampaignID
+  face: SP
+  css: /css/sp/themes/yomeishu/style.css
+  title: 
+  description: 
+
+yomei_shu_B:
+  uuid: YomeiShuPCCampaginFaceID
+  campaign_id: YomeiShuCampaignID
+  face: SP
+  css: /css/sp/themes/yomeishu/style.css
   title: 
   description: 
 
@@ -160,20 +259,19 @@ plus_one_pc:
   title: 
   description: 
 
-# レッグマジックX
-legmagicX_sp:
-  uuid: LegMagicXSPCampaginFaceID
-  campaign_id: LegMagicXCampaignID
+plus_one_A:
+  uuid: PlusOneSPCampaginFaceID
+  campaign_id: PlusOneCampaignID
   face: SP
-  css: /css/sp/themes/lgmx/style.css
+  css: /css/sp/themes/plus1/style.css
   title: 
   description: 
 
-legmagicX_pc:
-  uuid: LegMagicXPCCampaginFaceID
-  campaign_id: LegMagicXCampaignID
+plus_one_B:
+  uuid: PlusOnePCCampaginFaceID
+  campaign_id: PlusOneCampaignID
   face: PC
-  css: /css/pc/themes/lgmx/style.css
+  css: /css/pc/themes/plus1/style.css
   title: 
   description: 
 
@@ -193,4 +291,3 @@ nagatanien_pc:
   css: /css/pc/themes/nagatanien/style.css
   title: 
   description: 
-

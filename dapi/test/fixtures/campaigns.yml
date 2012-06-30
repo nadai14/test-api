@@ -130,12 +130,31 @@ incons_question:
   client_url: http://poncan.jp
 
 
-# レッグマジックX
-legmagicX_A:
-  mid: LegMagicXACampaignID
-  mcd: LegMagicXACampaignID
+# レッグマジック
+legmagicX:
+  mid: LegMagicXCampaignID
+  mcd: LegMagicXCampaignID
+  name: レッグマジックX
+  enq_id: LegMagicXEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /images/lgmx/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/lgmx/conversion-sp.jpg?t=#{time}' />"
+  second_picture: /images/lgmx/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1
+
+legmagic_A:
+  mid: LegMagicACampaignID
+  mcd: LegMagicACampaignID
   name: レッグマジックA
-  enq_id: LegMagicXAEnqID
+  enq_id: LegMagicAEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -150,11 +169,11 @@ legmagicX_A:
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
 
-legmagicX_B:
-  mid: LegMagicXBCampaignID
-  mcd: LegMagicXBCampaignID
+legmagic_B:
+  mid: LegMagicBCampaignID
+  mcd: LegMagicBCampaignID
   name: レッグマジックB
-  enq_id: LegMagicXBEnqID
+  enq_id: LegMagicBEnqID
   platform: gree
   point: 10
   opening_at: 
@@ -247,27 +266,101 @@ ya_man:
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/3649e845023252fee8d58c18f82c6c9494de180f/324a0bb5d1f22337abb7dc891ce22283fc6708ac
 
+ya_man_A:
+  mid: YaManACampaignID
+  mcd: YaManACampaignID
+  name: ヤーマンA
+  enq_id: YaManAEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/ya-man/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
 
+ya_man_B:
+  mid: YaManBCampaignID
+  mcd: YaManBCampaignID
+  name: ヤーマンB
+  enq_id: YaManBEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/ya-man/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
 
 # 養命酒
 yomei_shu:
   mid: YomeiShuCampaignID
   mcd: YomeiShuCampaignID
-  name: ハーブの香り
+  name: 養命酒
   enq_id: YomeiShuEnqID
   platform: mixi
   point: 13
   opening_at: 
   closing_at: 
-  thumbnail: /images/poster-sp.jpg
+  thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
   button_text: 
-  conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
-  second_picture: /images/creative-sp.jpg
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
+
+yomei_shu_A:
+  mid: YomeiShuACampaignID
+  mcd: YomeiShuACampaignID
+  name: 養命酒A
+  enq_id: YomeiShuAEnqID
+  platform: gree
+  point: 13
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/yomeishu/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+yomei_shu_B:
+  mid: YomeiShuBCampaignID
+  mcd: YomeiShuBCampaignID
+  name: 養命酒B
+  enq_id: YomeiShuBEnqID
+  platform: gree
+  point: 13
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/yomeishu/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
 
 # プラスワン
 plus_one:
@@ -289,6 +382,44 @@ plus_one:
   second_point: 
   client_url: http://www.p1-intl.com/
 
+plus_one_A:
+  mid: PlusOneACampaignID
+  mcd: PlusOneACampaignID
+  name: プラスワンA
+  enq_id: PlusOneAEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/plus1g/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
+plus_one_B:
+  mid: PlusOneBCampaignID
+  mcd: PlusOneBCampaignID
+  name: プラスワンB
+  enq_id: PlusOneBEnqID
+  platform: gree
+  point: 10
+  opening_at: 
+  closing_at: 
+  thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
+  page_button_text: 
+  message: ''
+  button_text: 
+  conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
+  second_picture: /css/sp/themes/plus1g/2nd_banne.png
+  banner_title: 
+  second_point: 
+  client_url: http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519
+
 # 永谷園
 nagatanien:
   mid: NagatanienCampaignID
@@ -308,4 +439,3 @@ nagatanien:
   banner_title: 
   second_point: 
   client_url: http://poncan.jp
-
