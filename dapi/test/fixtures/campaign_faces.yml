@@ -131,7 +131,7 @@ legmagicX_SP:
   uuid: LegMagicXSPCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: SP
-  css: /css/sp/themes/lgmx/style.css
+  css: /css/sp/themes/legmagic/style.css
   title: 
   description: 
 
@@ -139,7 +139,7 @@ legmagicX_PC:
   uuid: LegMagicXPCCampaginFaceID
   campaign_id: LegMagicXCampaignID
   face: PC
-  css: /css/pc/themes/lgmx/style.css
+  css: /css/pc/themes/legmagic/style.css
   title: 
   description: 
 

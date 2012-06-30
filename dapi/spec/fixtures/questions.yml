@@ -410,13 +410,13 @@ plus_one_question10:
 #nagatani_en_question1:
 #  uuid: NagataniEnQuestion1
 #  kind: radio
-#  title: 性別を教えてください。
+#  title: 性別を教えてください
 #  required: true
 #
 #nagatani_en_question2:
 #  uuid: NagataniEnQuestion2
 #  kind: radio
-#  title: 年齢を教えてください。
+#  title: 年齢をお答え下さい
 #  required: true
 
 nagatani_en_question3:

@@ -137,14 +137,14 @@ legmagicX_PC:
 
 legmagic_A:
   uuid: LegMagicAEnqFaceID
-  enq_id: LegMagicEnqID
+  enq_id: LegMagiAcEnqID
   face: SP
   first_page_id: LegMagicAEnqPage1
   wait_until: 
  
 legmagic_B:
   uuid: LegMagicBEnqFaceID
-  enq_id: LegMagicEnqID
+  enq_id: LegMagicBEnqID
   face: SP
   first_page_id: LegMagicBEnqPage1
   wait_until: 
@@ -159,14 +159,14 @@ power_planning:
 
 power_planning_A:
   uuid: PowerPlanningAEnqFaceID
-  enq_id: PowerPlanningEnqID
+  enq_id: PowerPlanningAEnqID
   face: SP
   first_page_id: PowerPlanningAEnqPage1
   wait_until: 
 
 power_planning_B:
   uuid: PowerPlanningBEnqFaceID
-  enq_id: PowerPlanningEnqID
+  enq_id: PowerPlanningBEnqID
   face: SP
   first_page_id: PowerPlanningBEnqPage1
   wait_until: 
@@ -181,14 +181,14 @@ ya_man:
 
 ya_man_A:
   uuid: YaManAEnqFaceID
-  enq_id: YaManEnqID
+  enq_id: YaManAEnqID
   face: SP
   first_page_id: YaManAEnqPage1
   wait_until: 
 
 ya_man_B:
   uuid: YaManBEnqFaceID
-  enq_id: YaManEnqID
+  enq_id: YaManBEnqID
   face: SP
   first_page_id: YaManBEnqPage1
   wait_until: 
@@ -210,14 +210,14 @@ yomei_shu_PC:
 
 yomei_shu_A:
   uuid: YomeiShuAEnqFaceID
-  enq_id: YomeiShuEnqID
+  enq_id: YomeiShuAEnqID
   face: SP
   first_page_id: YomeiShuAEnqPage1
   wait_until: 30
  
 yomei_shu_B:
   uuid: YomeiShuBEnqFaceID
-  enq_id: YomeiShuEnqID
+  enq_id: YomeiShuBEnqID
   face: SP
   first_page_id: YomeiShuBEnqPage1
   wait_until: 30
@@ -239,14 +239,14 @@ plus_one_PC:
 
 plus_one_A:
   uuid: PlusOneAEnqFaceID
-  enq_id: PlusOneEnqID
+  enq_id: PlusOneAEnqID
   face: SP
   first_page_id: PlusOneAEnqPage1
   wait_until: 
  
 plus_one_B:
   uuid: PlusOneBEnqFaceID
-  enq_id: PlusOneEnqID
+  enq_id: PlusOneBEnqID
   face: SP
   first_page_id: PlusOneBEnqPage1
   wait_until: 
@@ -265,18 +265,3 @@ nagatanien_PC:
   face: PC
   first_page_id: NagatanienPCEnqPage1
   wait_until: 
-
-nagatanien_A:
-  uuid: NagatanienAEnqFaceID
-  enq_id: NagatanienEnqID
-  face: SP
-  first_page_id: NagatanienAEnqPage1
-  wait_until: 
- 
-nagatanien_B:
-  uuid: NagatanienBEnqFaceID
-  enq_id: NagatanienEnqID
-  face: SP
-  first_page_id: NagatanienBEnqPage1
-  wait_until: 
- 

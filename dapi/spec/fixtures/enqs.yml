@@ -51,9 +51,29 @@ legmagic:
   message: 
   button_text: 
 
+legmagic_A:
+  uuid: LegMagicAEnqID
+  message: 
+  button_text: 
+
+legmagic_B:
+  uuid: LegMagicBEnqID
+  message: 
+  button_text: 
+
 # パワープランニング
 power_planning:
   uuid: PowerPlanningEnqID
+  message: 
+  button_text: 
+
+power_planning_A:
+  uuid: PowerPlanningAEnqID
+  message: 
+  button_text: 
+
+power_planning_B:
+  uuid: PowerPlanningBEnqID
   message: 
   button_text: 
 
@@ -63,15 +83,45 @@ ya_man:
   message: 
   button_text: 
   
+ya_man_A:
+  uuid: YaManAEnqID
+  message: 
+  button_text: 
+  
+ya_man_B:
+  uuid: YaManBEnqID
+  message: 
+  button_text: 
+  
 # 養命酒
 yomei_shu:
   uuid: YomeiShuEnqID
   message: 
   button_text: 
 
+yomei_shu_A:
+  uuid: YomeiShuAEnqID
+  message: 
+  button_text: 
+
+yomei_shu_B:
+  uuid: YomeiShuBEnqID
+  message: 
+  button_text: 
+
 # プラスワン
 plus_one:
   uuid: PlusOneEnqID
+  message: 
+  button_text: 
+
+plus_one_A:
+  uuid: PlusOneAEnqID
+  message: 
+  button_text: 
+
+plus_one_B:
+  uuid: PlusOneBEnqID
   message: 
   button_text: 
 

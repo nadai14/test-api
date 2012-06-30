@@ -991,7 +991,7 @@ yomei_shu_q3_5:
   uuid: YomeiShuKaoriQ3-5
   question_id: YomeiShuQuestion3
   order: 5
-  content: 全く興味は持たなかった
+  content: まったく興味は持たなかった
 
 yomei_shu_q4_1:
   uuid: YomeiShuQ4-1
@@ -1021,7 +1021,7 @@ yomei_shu_q4_5:
   uuid: YomeiShuQ4-5
   question_id: YomeiShuQuestion4
   order: 5
-  content: 全く飲んでみたくない
+  content: まったく飲んでみたくない
 
 yomei_shu_q5_1:
   uuid: YomeiShuQ5-1
@@ -1093,7 +1093,7 @@ yomei_shu_q8_2:
   uuid: YomeiShuQ8-2
   question_id: YomeiShuQuestion8
   order: 2
-  content: 今回はじめて知った
+  content: 今回初めて知った
 
 yomei_shu_q9_1:
   uuid: YomeiShuQ9-1
