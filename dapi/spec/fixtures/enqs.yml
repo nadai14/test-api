@@ -5,43 +5,43 @@
 success_confirm:
   uuid: SuccessConfirmEnqID
   message: SCメッセージ
-  button_text: SCボタン
+  complete_button_text: SCボタン
 
 # nil動作確認用
 nullable:
   uuid: NullableEnqID
   message: Nullableメッセージ
-  button_text: Nullableボタン
+  complete_button_text: Nullableボタン
 
 # 空回答確認用
 null_answer:
   uuid: NullAnswerEnqID
   message: NAメッセージ
-  button_text: NAボタン
+  complete_button_text: NAボタン
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
   uuid: FirstPageNullEnqID
   message: FPNメッセージ
-  button_text: FPNボタン
+  complete_button_text: FPNボタン
 
 first_page_id_null:
   uuid: FirstPageIDNullEnqID
   message: FPIDNメッセージ
-  button_text: FPIDNボタン
+  complete_button_text: FPIDNボタン
 
 # キャンペーンの状態が終了
 camp_closed:
   uuid: CampaignClosedEnqID
   message: CCメッセージ
-  button_text: CCボタン
+  complete_button_text: CCボタン
 
 # 設問と選択肢が矛盾している
 incons_question:
   uuid: InconsistencyQuestionEnqID
   message: IQメッセージ
-  button_text: IQボタン
+  complete_button_text: IQボタン
 
 
 # 案件テスト用データ
@@ -49,84 +49,84 @@ incons_question:
 legmagic:
   uuid: LegMagicEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 legmagic_A:
   uuid: LegMagicAEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 legmagic_B:
   uuid: LegMagicBEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 # パワープランニング
 power_planning:
   uuid: PowerPlanningEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 power_planning_A:
   uuid: PowerPlanningAEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 power_planning_B:
   uuid: PowerPlanningBEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 # ヤーマン
 ya_man:
   uuid: YaManEnqID
   message: 
-  button_text: 
+  complete_button_text: 
   
 ya_man_A:
   uuid: YaManAEnqID
   message: 
-  button_text: 
+  complete_button_text: 
   
 ya_man_B:
   uuid: YaManBEnqID
   message: 
-  button_text: 
+  complete_button_text: 
   
 # 養命酒
 yomei_shu:
   uuid: YomeiShuEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 yomei_shu_A:
   uuid: YomeiShuAEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 yomei_shu_B:
   uuid: YomeiShuBEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 # プラスワン
 plus_one:
   uuid: PlusOneEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 plus_one_A:
   uuid: PlusOneAEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 plus_one_B:
   uuid: PlusOneBEnqID
   message: 
-  button_text: 
+  complete_button_text: 
 
 # 永谷園
 nagatani_en:
-  uuid: NagataniEnEnqID
+  uuid: NagatanienEnqID
   message: 
-  button_text: 
+  complete_button_text: 

@@ -14,7 +14,7 @@ success_confirm:
   thumbnail: /images/poster-pc.jpg
   page_button_text: SCPageButton
   message: キャンペーンSCメッセージ
-  teanks_button_text: SCThankYouボタン
+  thanks_button_text: SCThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: SCbanner
@@ -44,7 +44,7 @@ null_answer:
   thumbnail: /images/poster-pc.jpg
   page_button_text: NAPageButton
   message: キャンペーンNAメッセージ
-  teanks_button_text: NAThankYouボタン
+  thanks_button_text: NAThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: NAbanner
@@ -66,7 +66,7 @@ first_page_null:
   thumbnail: /images/poster-pc.jpg
   page_button_text: FPNPageButton
   message: キャンペーンFPNメッセージ
-  teanks_button_text: FPNThankYouボタン
+  thanks_button_text: FPNThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: FPNbanner
@@ -86,7 +86,7 @@ first_page_id_null:
   thumbnail: /images/poster-pc.jpg
   page_button_text: FPIDNPageButton
   message: キャンペーンFPIDNメッセージ
-  teanks_button_text: FPIDNThankYouボタン
+  thanks_button_text: FPIDNThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: FPIDNbanner
@@ -107,7 +107,7 @@ camp_closed:
   thumbnail: /images/poster-pc.jpg
   page_button_text: CCPageButton
   message: キャンペーンCCメッセージ
-  teanks_button_text: CCThankYouボタン
+  thanks_button_text: CCThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: CCbanner
@@ -128,7 +128,7 @@ incons_question:
   thumbnail: /images/poster-pc.jpg
   page_button_text: IQPageButton
   message: キャンペーンIQメッセージ
-  teanks_button_text: IQThankYouボタン
+  thanks_button_text: IQThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: IQbanner
@@ -139,25 +139,25 @@ incons_question:
 
 # 案件テスト用データ
 # レッグマジック
-legmagicX:
-  mid: LegMagicXCampaignID
-  mcd: LegMagicXCampaignID
-  name: レッグマジックX
-  enq_id: LegMagicEnqID
-  platform: gree
-  point: 10
-  opening_at:
-  closing_at:
-  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
-  page_button_text:
-  message: ''
-  teanks_button_text: 
-  conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>'
-  second_picture: /css/sp/themes/legmagic/2nd_banne.png
-  banner_title:
-  second_point:
-  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
-  already_button_text: 
+#legmagic_X:
+#  mid: LegMagicXCampaignID
+#  mcd: LegMagicXCampaignID
+#  name: レッグマジックX
+#  enq_id: LegMagicEnqID
+#  platform: gree
+#  point: 10
+#  opening_at:
+#  closing_at:
+#  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
+#  page_button_text:
+#  message: ''
+#  thanks_button_text: 
+#  conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>'
+#  second_picture: /css/sp/themes/legmagic/2nd_banne.png
+#  banner_title:
+#  second_point:
+#  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+#  already_button_text: 
 
 legmagic_A:
   mid: LegMagicACampaignID
@@ -171,7 +171,7 @@ legmagic_A:
   thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
@@ -191,7 +191,7 @@ legmagic_B:
   thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
@@ -212,7 +212,7 @@ power_planning:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
@@ -232,7 +232,7 @@ power_planning_A:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
@@ -252,7 +252,7 @@ power_planning_B:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
@@ -273,7 +273,7 @@ ya_man:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
@@ -293,7 +293,7 @@ ya_man_A:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
@@ -313,7 +313,7 @@ ya_man_B:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
@@ -334,7 +334,7 @@ yomei_shu:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
@@ -354,7 +354,7 @@ yomei_shu_A:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
@@ -374,7 +374,7 @@ yomei_shu_B:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
@@ -395,7 +395,7 @@ plus_one:
   thumbnail: /images/plus1/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
   second_picture: /images/plus1/2nd_banne.png
   banner_title: 
@@ -415,7 +415,7 @@ plus_one_A:
   thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/plus1g/2nd_banne.png
   banner_title: 
@@ -435,7 +435,7 @@ plus_one_B:
   thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text:
+  thanks_button_text:
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/plus1g/2nd_banne.png
   banner_title: 
@@ -456,7 +456,7 @@ nagatanien:
   thumbnail: /images/nagatanien/thumbnail.jpg
   page_button_text: 
   message: ''
-  teanks_button_text:
+  thanks_button_text:
   conversion_tag: "<img src='//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?t=#{time}' />"
   second_picture: /images/nagatanien/2nd-banner.png
   banner_title: 

@@ -127,6 +127,6 @@ plus_one_B:
 
 # 永谷園
 nagatani_en:
-  uuid: NagataniEnEnqID
+  uuid: NagatanienEnqID
   message: 
   complete_button_text: 

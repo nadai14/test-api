@@ -47,9 +47,6 @@ camp_closed_SP:
   face: SP
   first_page_id: CampaignClosedSPEnqPageID
   wait_until: 30
-  css: /css/sp/themes/default-1/style.css
-  title: キャンペーンの状態が入稿前
-  description: キャンペーンの状態が入稿前
 
 # 設問と選択肢が矛盾している
 incons_question_SP:
@@ -106,9 +103,6 @@ camp_closed_PC:
   face: PC
   first_page_id: CampaignClosedPCEnqPageID
   wait_until: 30
-  css: /css/PC/themes/default-1/style.css
-  title: キャンペーンの状態が入稿前
-  description: キャンペーンの状態が入稿前
 
 # 設問と選択肢が矛盾している
 incons_question_PC:

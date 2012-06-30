@@ -14,12 +14,13 @@ success_confirm:
   thumbnail: /images/poster-pc.jpg
   page_button_text: SCPageButton
   message: キャンペーンSCメッセージ
-  button_text: SCButton
+  thanks_button_text: SCThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: SCbanner
   second_point: 10
   client_url: http://poncan.jp
+  already_button_text: SC視聴済みボタン
 
 # nil動作確認用のデータ
 nullable:
@@ -43,11 +44,13 @@ null_answer:
   thumbnail: /images/poster-pc.jpg
   page_button_text: NAPageButton
   message: キャンペーンNAメッセージ
-  button_text: NAButton
+  thanks_button_text: NAThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: NAbanner
   second_point: 10
+  client_url: http://poncan.jp
+  already_button_text: NA視聴済みボタン
 
 # 異常系の確認用データ
 # アンケートの最初のページがNull
@@ -63,12 +66,13 @@ first_page_null:
   thumbnail: /images/poster-pc.jpg
   page_button_text: FPNPageButton
   message: キャンペーンFPNメッセージ
-  button_text: FPNButton
+  thanks_button_text: FPNThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: FPNbanner
   second_point: 10
   client_url: http://poncan.jp
+  already_button_text: FPN視聴済みボタン
 
 first_page_id_null:
   mid: FirstPageIDNullCampaignID
@@ -82,12 +86,13 @@ first_page_id_null:
   thumbnail: /images/poster-pc.jpg
   page_button_text: FPIDNPageButton
   message: キャンペーンFPIDNメッセージ
-  button_text: FPIDNButton
+  thanks_button_text: FPIDNThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: FPIDNbanner
   second_point: 10
   client_url: http://poncan.jp
+  already_button_text: FPIDN視聴済みボタン
 
 # キャンペーンが終了日時を過ぎている
 camp_closed:
@@ -102,12 +107,13 @@ camp_closed:
   thumbnail: /images/poster-pc.jpg
   page_button_text: CCPageButton
   message: キャンペーンCCメッセージ
-  button_text: CCButton
+  thanks_button_text: CCThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: CCbanner
   second_point: 10
   client_url: http://poncan.jp
+  already_button_text: CC視聴済みボタン
 
 # 設問と選択肢が矛盾している
 incons_question:
@@ -122,34 +128,36 @@ incons_question:
   thumbnail: /images/poster-pc.jpg
   page_button_text: IQPageButton
   message: キャンペーンIQメッセージ
-  button_text: IQButton
+  thanks_button_text: IQThankYouボタン
   conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
   second_picture: /images/creative-sp.jpg
   banner_title: IQbanner
   second_point: 10
   client_url: http://poncan.jp
+  already_button_text: IQ視聴済みボタン
 
 
 # 案件テスト用データ
 # レッグマジック
-legmagicX:
-  mid: LegMagicXCampaignID
-  mcd: LegMagicXCampaignID
-  name: レッグマジックX
-  enq_id: LegMagicEnqID
-  platform: gree
-  point: 10
-  opening_at: 
-  closing_at: 
-  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
-  page_button_text: 
-  message: ''
-  button_text: 
-  conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>'
-  second_picture: /css/sp/themes/legmagic/2nd_banne.png
-  banner_title: 
-  second_point: 
-  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+#legmagic_X:
+#  mid: LegMagicXCampaignID
+#  mcd: LegMagicXCampaignID
+#  name: レッグマジックX
+#  enq_id: LegMagicEnqID
+#  platform: gree
+#  point: 10
+#  opening_at:
+#  closing_at:
+#  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
+#  page_button_text:
+#  message: ''
+#  thanks_button_text: 
+#  conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>'
+#  second_picture: /css/sp/themes/legmagic/2nd_banne.png
+#  banner_title:
+#  second_point:
+#  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+#  already_button_text: 
 
 legmagic_A:
   mid: LegMagicACampaignID
@@ -163,12 +171,13 @@ legmagic_A:
   thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 legmagic_B:
   mid: LegMagicBCampaignID
@@ -182,12 +191,13 @@ legmagic_B:
   thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 # パワープランニング
 power_planning:
@@ -202,12 +212,13 @@ power_planning:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/cbf2d8169ffbb345565e1bfe4c3beddcad472f15/324a0bb5d1f22337abb7dc891ce22283fc6708ac
+  already_button_text: 
 
 power_planning_A:
   mid: PowerPlanningACampaignID
@@ -221,12 +232,13 @@ power_planning_A:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 power_planning_B:
   mid: PowerPlanningBCampaignID
@@ -240,12 +252,13 @@ power_planning_B:
   thumbnail: /css/sp/themes/powerplaning/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/powerplaning/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 # ヤーマン
 ya_man:
@@ -260,12 +273,13 @@ ya_man:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/3649e845023252fee8d58c18f82c6c9494de180f/324a0bb5d1f22337abb7dc891ce22283fc6708ac
+  already_button_text: 
 
 ya_man_A:
   mid: YaManACampaignID
@@ -279,12 +293,13 @@ ya_man_A:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 ya_man_B:
   mid: YaManBCampaignID
@@ -298,12 +313,13 @@ ya_man_B:
   thumbnail: /css/sp/themes/ya-man/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/ya-man/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 # 養命酒
 yomei_shu:
@@ -318,12 +334,13 @@ yomei_shu:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://www.yomeishu.co.jp/megumi/kaorisu
+  already_button_text: 
 
 yomei_shu_A:
   mid: YomeiShuACampaignID
@@ -337,12 +354,13 @@ yomei_shu_A:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 yomei_shu_B:
   mid: YomeiShuBCampaignID
@@ -356,12 +374,13 @@ yomei_shu_B:
   thumbnail: /css/sp/themes/yomeishu/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/yomeishu/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 # プラスワン
 plus_one:
@@ -376,12 +395,13 @@ plus_one:
   thumbnail: /images/plus1/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
   second_picture: /images/plus1/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://www.p1-intl.com/
+  already_button_text: 
 
 plus_one_A:
   mid: PlusOneACampaignID
@@ -395,12 +415,13 @@ plus_one_A:
   thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/plus1g/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 plus_one_B:
   mid: PlusOneBCampaignID
@@ -414,12 +435,13 @@ plus_one_B:
   thumbnail: /css/sp/themes/plus1g/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text:
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
   second_picture: /css/sp/themes/plus1g/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  already_button_text: 
 
 # 永谷園
 nagatanien:
@@ -434,9 +456,10 @@ nagatanien:
   thumbnail: /images/nagatanien/thumbnail.jpg
   page_button_text: 
   message: ''
-  button_text: 
+  thanks_button_text:
   conversion_tag: "<img src='//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?t=#{time}' />"
   second_picture: /images/nagatanien/2nd-banner.png
   banner_title: 
   second_point: 
   client_url: http://poncan.jp
+  already_button_text: 
