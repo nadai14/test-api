@@ -264,17 +264,17 @@ plus_one_PC:
   description: ''
 
 plus_one_A:
-  uuid: PlusOneSPCampaginFaceID
-  campaign_id: PlusOneCampaignID
+  uuid: PlusOneACampaginFaceID
+  campaign_id: PlusOneACampaignID
   face: SP
   css: /css/sp/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
   description: ''
 
 plus_one_B:
-  uuid: PlusOnePCCampaginFaceID
-  campaign_id: PlusOneCampaignID
-  face: PC
+  uuid: PlusOneBCampaginFaceID
+  campaign_id: PlusOneBCampaignID
+  face: SP
   css: /css/pc/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
   description: ''

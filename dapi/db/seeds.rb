@@ -781,8 +781,6 @@ enq_B_q10 = EnqQuestion.create(enq_page_id: enq_B_page10.uuid, num: 10, seq: 'Q1
 # 永谷園
 enq = Enq.create()
 
-campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', enq_id: enq.uuid, status: 1, platform: 'gree', point: 10, movie: 'http://moviereward.nadai.jp/video/nagatanien/nagatanien.mp4',
-                           thumbnail: '/css/sp/themes/nagatanien/thumbnail.jpg', message: '', conversion_tag: '<img src=\'//moviereward.nadai.jp/images/nagatanien/conversion-sp.jpg?t=#{time}\' />', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: 'http://poncan.jp')
 campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', mcd: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', name: 'オルニチン', enq_id: enq.uuid, platform: 'mixi', point: 1000, thumbnail: '/css/sp/themes/nagatanien/thumbnail.jpg', message: '',
                            conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: 'http://poncan.jp')
 
