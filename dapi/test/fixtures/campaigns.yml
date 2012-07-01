@@ -15,7 +15,7 @@ success_confirm:
   page_button_text: SCPageButton
   message: キャンペーンSCメッセージ
   thanks_button_text: SCThankYouボタン
-  conversion_tag: <img src="../../images/conversion.jpg alt="サンプル">
+  conversion_tag: "<img src='//moviereward.nadai.jp/images/conversion-sp.jpg?t=#{time}' />"
   second_picture: /images/creative-sp.jpg
   banner_title: SCbanner
   second_point: 10
@@ -26,7 +26,7 @@ success_confirm:
 nullable:
   mid: NullableCampaignID
   mcd: NullableCampaignID
-  name: Nullable
+  name: 
   enq_id: NullableEnqID
   platform: gree
   point: 10 
