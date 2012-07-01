@@ -651,9 +651,9 @@ ya_man_B_page4:
 
 ya_man_B_page5:
   uuid: YaManBEnqPage5
-  enq_face_id: YaManBBEnqFaceID
+  enq_face_id: YaManBEnqFaceID
   description: 
-  next_page_id: 
+  next_page_id: YaManBEnqPage6
   wait_until: 
 
 ya_man_B_page6:

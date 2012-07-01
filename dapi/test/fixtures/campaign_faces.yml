@@ -134,7 +134,7 @@ legmagicX_SP:
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 legmagicX_PC:
   uuid: LegMagicXPCCampaginFaceID
@@ -143,7 +143,7 @@ legmagicX_PC:
 #  css: /css/pc/themes/legmagic/style.css
   css: /css/pc/themes/lgmx/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 legmagic_A:
   uuid: LegMagicACampaginFaceID
@@ -152,7 +152,7 @@ legmagic_A:
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 legmagic_B:
   uuid: LegMagicBCampaginFaceID
@@ -161,7 +161,7 @@ legmagic_B:
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 # パワープランニング
 power_planning:
@@ -170,7 +170,7 @@ power_planning:
   face: SP
   css: /css/sp/themes/powerplaning/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 power_planning_A:
   uuid: PowerPlanningACampaginFaceID
@@ -178,7 +178,7 @@ power_planning_A:
   face: SP
   css: /css/sp/themes/powerplaning/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 power_planning_B:
   uuid: PowerPlanningBCampaginFaceID
@@ -186,7 +186,7 @@ power_planning_B:
   face: SP
   css: /css/sp/themes/powerplaning/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 # ヤーマン
 ya_man:
@@ -195,7 +195,7 @@ ya_man:
   face: SP
   css: /css/sp/themes/ya-man/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 ya_man_A:
   uuid: YaManACampaginFaceID
@@ -203,7 +203,7 @@ ya_man_A:
   face: SP
   css: /css/sp/themes/ya-man/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
   
 ya_man_B:
   uuid: YaManBCampaginFaceID
@@ -211,7 +211,7 @@ ya_man_B:
   face: SP
   css: /css/sp/themes/ya-man/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
   
 # 養命酒
 yomei_shu_SP:
@@ -220,7 +220,7 @@ yomei_shu_SP:
   face: SP
   css: /css/sp/themes/yomeishu/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 yomei_shu_PC:
   uuid: YomeiShuPCCampaginFaceID
@@ -228,7 +228,7 @@ yomei_shu_PC:
   face: PC
   css: /css/sp/themes/yomeishu/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 yomei_shu_A:
   uuid: YomeiShuACampaginFaceID
@@ -236,15 +236,15 @@ yomei_shu_A:
   face: SP
   css: /css/sp/themes/yomeishu/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 yomei_shu_B:
-  uuid: YomeiShuPCCampaginFaceID
-  campaign_id: YomeiShuCampaignID
+  uuid: YomeiShuBCampaginFaceID
+  campaign_id: YomeiShuBCampaignID
   face: SP
   css: /css/sp/themes/yomeishu/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 # プラスワン
 plus_one_SP:
@@ -253,7 +253,7 @@ plus_one_SP:
   face: SP
   css: /css/sp/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 plus_one_PC:
   uuid: PlusOnePCCampaginFaceID
@@ -261,7 +261,7 @@ plus_one_PC:
   face: PC
   css: /css/pc/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 plus_one_A:
   uuid: PlusOneSPCampaginFaceID
@@ -269,7 +269,7 @@ plus_one_A:
   face: SP
   css: /css/sp/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 plus_one_B:
   uuid: PlusOnePCCampaginFaceID
@@ -277,7 +277,7 @@ plus_one_B:
   face: PC
   css: /css/pc/themes/plus1/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 # 永谷園
 nagatanien_SP:
@@ -286,7 +286,7 @@ nagatanien_SP:
   face: SP
   css: /css/sp/themes/nagatanien/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
 
 nagatanien_PC:
   uuid: NagatanienPCCampaginFaceID
@@ -294,4 +294,4 @@ nagatanien_PC:
   face: PC
   css: /css/pc/themes/nagatanien/style.css
   title: CMを見てアンケートに答えてポイントをGET!
-  description: 
+  description: ''
