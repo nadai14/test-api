@@ -8,25 +8,17 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # レッグマジック
-enq   = Enq.create()
 enq_A = Enq.create()
 enq_B = Enq.create()
 
-campaign   = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', mcd: '2F8E144A-7AB8-49D9-A49A-02D907A83ACC', name: 'レッグマジック', enq_id: enq.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
 campaign_A = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', name: 'レッグマジックA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 campaign_B = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', name: 'レッグマジックB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 
-campaign_face_sp = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
-campaign_face_pc = CampaignFace.create(campaign_id: campaign.mid, face: 'PC', css: '/css/pc/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 
-movie_m3u8   = Movie.create(campaign_id: campaign.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/legmagic/movie.m3u8', duration: 150)
-movie_flv    = Movie.create(campaign_id: campaign.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/legmagic/movie.flv', duration: 150)
-movie_mp4    = Movie.create(campaign_id: campaign.mid, src: 'http://video.poncan.jp/video/legmagic/movie.mp4', duration: 150)
 movie_A_m3u8 = Movie.create(campaign_id: campaign_A.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/legmagic/movie.m3u8', duration: 150)
 movie_A_flv  = Movie.create(campaign_id: campaign_A.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/legmagic/movie.flv', duration: 150)
 movie_A_mp4  = Movie.create(campaign_id: campaign_A.mid, src: 'http://video.poncan.jp/video/legmagic/movie.mp4', duration: 150)
@@ -34,8 +26,6 @@ movie_B_m3u8 = Movie.create(campaign_id: campaign_B.mid, mime_type: 'application
 movie_B_flv  = Movie.create(campaign_id: campaign_B.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/legmagic/movie.flv', duration: 150)
 movie_B_mp4  = Movie.create(campaign_id: campaign_B.mid, src: 'http://video.poncan.jp/video/legmagic/movie.mp4', duration: 150)
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC')
 enq_face_A  = EnqFace.create(enq_id: enq_A.uuid, face: 'SP')
 enq_face_B  = EnqFace.create(enq_id: enq_B.uuid, face: 'SP')
 
@@ -73,24 +63,6 @@ q6_c3 = Choice.create(question_id: q6.uuid, order: 3, content: 'どちらとも�
 q6_c4 = Choice.create(question_id: q6.uuid, order: 4, content: 'どちらかと言えばそう思わない')
 q6_c5 = Choice.create(question_id: q6.uuid, order: 5, content: 'そう思わない')
 
-enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
-enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
-enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
-enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
-enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
-enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
-enq_face_sp.first_page_id = enq_sp_page1.uuid
-enq_face_sp.save
-
-enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
-enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
-enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
-enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
-enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
-enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
-enq_face_pc.first_page_id = enq_pc_page1.uuid
-enq_face_pc.save
-
 enq_A_page6 = EnqPage.create(enq_face_id: enq_face_A.uuid)
 enq_A_page5 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page6.uuid)
 enq_A_page4 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page5.uuid)
@@ -108,20 +80,6 @@ enq_B_page2 = EnqPage.create(enq_face_id: enq_face_B.uuid, next_page_id: enq_B_p
 enq_B_page1 = EnqPage.create(enq_face_id: enq_face_B.uuid, next_page_id: enq_B_page2.uuid)
 enq_face_B.first_page_id = enq_B_page1.uuid
 enq_face_B.save
-
-enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-
-enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
 
 enq_A_q1 = EnqQuestion.create(enq_page_id: enq_A_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
 enq_A_q2 = EnqQuestion.create(enq_page_id: enq_A_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
@@ -403,25 +361,17 @@ enq_B_q6 = EnqQuestion.create(enq_page_id: enq_B_page6.uuid, num: 6, seq: 'Q6', 
 
 
 # 養命酒
-enq   = Enq.create()
 enq_A = Enq.create()
 enq_B = Enq.create()
 
-campaign   = Campaign.create(mid: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', mcd: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', name: '養命酒', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu ')
 campaign_A = Campaign.create(mid: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', name: '養命酒A', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 campaign_B = Campaign.create(mid: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', name: '養命酒B', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 
-campaign_face_sp = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
-campaign_face_pc = CampaignFace.create(campaign_id: campaign.mid, face: 'PC', css: '/css/pc/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 
-movie_m3u8   = Movie.create(campaign_id: campaign.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/yomeishu/movie.m3u8', duration: 0)
-movie_flv    = Movie.create(campaign_id: campaign.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/yomeishu/movie.flv', duration: 0)
-movie_mp4    = Movie.create(campaign_id: campaign.mid, src: 'http://video.poncan.jp/video/yomeishu/movie.mp4', duration: 0)
 movie_A_m3u8 = Movie.create(campaign_id: campaign_A.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/yomeishu/movie.m3u8', duration: 0)
 movie_A_flv  = Movie.create(campaign_id: campaign_A.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/yomeishu/movie.flv', duration: 0)
 movie_A_mp4  = Movie.create(campaign_id: campaign_A.mid, src: 'http://video.poncan.jp/video/yomeishu/movie.mp4', duration: 0)
@@ -429,8 +379,6 @@ movie_B_m3u8 = Movie.create(campaign_id: campaign_B.mid, mime_type: 'application
 movie_B_flv  = Movie.create(campaign_id: campaign_B.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/yomeishu/movie.flv', duration: 0)
 movie_B_mp4  = Movie.create(campaign_id: campaign_B.mid, src: 'http://video.poncan.jp/video/yomeishu/movie.mp4', duration: 0)
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC')
 enq_face_A  = EnqFace.create(enq_id: enq_A.uuid, face: 'SP')
 enq_face_B  = EnqFace.create(enq_id: enq_B.uuid, face: 'SP')
 
@@ -490,32 +438,6 @@ q10_c1 = Choice.create(question_id: q10.uuid, order: 1, content: '商品が気�
 q10_c2 = Choice.create(question_id: q10.uuid, order: 2, content: 'ポイントがついていたから')
 q10_c3 = Choice.create(question_id: q10.uuid, order: 3, content: '動画が面白そうだったから')
 
-enq_sp_page10 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
-enq_sp_page9 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page10.uuid)
-enq_sp_page8 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page9.uuid)
-enq_sp_page7 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page8.uuid)
-enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page7.uuid)
-enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
-enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
-enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
-enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
-enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
-enq_face_sp.first_page_id = enq_sp_page1.uuid
-enq_face_sp.save
-
-enq_pc_page10 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
-enq_pc_page9 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page10.uuid)
-enq_pc_page8 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page9.uuid)
-enq_pc_page7 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page8.uuid)
-enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page7.uuid)
-enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
-enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
-enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
-enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
-enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
-enq_face_pc.first_page_id = enq_pc_page1.uuid
-enq_face_pc.save
-
 enq_A_page10 = EnqPage.create(enq_face_id: enq_face_A.uuid)
 enq_A_page9 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page10.uuid)
 enq_A_page8 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page9.uuid)
@@ -542,28 +464,6 @@ enq_B_page1 = EnqPage.create(enq_face_id: enq_face_B.uuid, next_page_id: enq_B_p
 enq_face_B.first_page_id = enq_B_page1.uuid
 enq_face_B.save
 
-enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-enq_sp_q7 = EnqQuestion.create(enq_page_id: enq_sp_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
-enq_sp_q8 = EnqQuestion.create(enq_page_id: enq_sp_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
-enq_sp_q9 = EnqQuestion.create(enq_page_id: enq_sp_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
-enq_sp_q10 = EnqQuestion.create(enq_page_id: enq_sp_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
-
-enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-enq_pc_q7 = EnqQuestion.create(enq_page_id: enq_pc_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
-enq_pc_q8 = EnqQuestion.create(enq_page_id: enq_pc_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
-enq_pc_q9 = EnqQuestion.create(enq_page_id: enq_pc_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
-enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
-
 enq_A_q1 = EnqQuestion.create(enq_page_id: enq_A_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
 enq_A_q2 = EnqQuestion.create(enq_page_id: enq_A_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
 enq_A_q3 = EnqQuestion.create(enq_page_id: enq_A_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
@@ -588,25 +488,17 @@ enq_B_q10 = EnqQuestion.create(enq_page_id: enq_B_page10.uuid, num: 10, seq: 'Q1
 
 
 # プラスワン
-enq   = Enq.create()
 enq_A = Enq.create()
 enq_B = Enq.create()
 
-campaign   = Campaign.create(mid: '28080715-38D2-432A-8B7A-C08454E4BE0B', mcd: '28080715-38D2-432A-8B7A-C08454E4BE0B', name: 'プラスワン', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.p1-intl.com/')
 campaign_A = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEA', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEA', name: 'プラスワンA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 campaign_B = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEB', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEB', name: 'プラスワンB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 
-campaign_face_sp = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
-campaign_face_pc = CampaignFace.create(campaign_id: campaign.mid, face: 'PC', css: '/css/pc/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 
-movie_m3u8   = Movie.create(campaign_id: campaign.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/plus1g/movie.m3u8', duration: 47)
-movie_flv    = Movie.create(campaign_id: campaign.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/plus1g/movie.flv', duration: 47)
-movie_mp4    = Movie.create(campaign_id: campaign.mid, src: 'http://video.poncan.jp/video/plus1g/movie.mp4', duration: 47)
 movie_A_m3u8 = Movie.create(campaign_id: campaign_A.mid, mime_type: 'application/x-mpegURL', src: 'http://video.poncan.jp/video/plus1g/movie.m3u8', duration: 47)
 movie_A_flv  = Movie.create(campaign_id: campaign_A.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/plus1g/movie.flv', duration: 47)
 movie_A_mp4  = Movie.create(campaign_id: campaign_A.mid, src: 'http://video.poncan.jp/video/plus1g/movie.mp4', duration: 47)
@@ -614,8 +506,6 @@ movie_B_m3u8 = Movie.create(campaign_id: campaign_B.mid, mime_type: 'application
 movie_B_flv  = Movie.create(campaign_id: campaign_B.mid, mime_type: 'video/x-flv', src: 'http://video.poncan.jp/video/plus1g/movie.flv', duration: 47)
 movie_B_mp4  = Movie.create(campaign_id: campaign_B.mid, src: 'http://video.poncan.jp/video/plus1g/movie.mp4', duration: 47)
 
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC')
 enq_face_A  = EnqFace.create(enq_id: enq_A.uuid, face: 'SP')
 enq_face_B  = EnqFace.create(enq_id: enq_B.uuid, face: 'SP')
 
@@ -681,32 +571,6 @@ q10_c1 = Choice.create(question_id: q10.uuid, order: 1, content: 'サービス�
 q10_c2 = Choice.create(question_id: q10.uuid, order: 2, content: 'ポイントが魅力的だったから')
 q10_c3 = Choice.create(question_id: q10.uuid, order: 3, content: 'どちらも魅力的だったから')
 
-enq_sp_page10 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
-enq_sp_page9 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page10.uuid)
-enq_sp_page8 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page9.uuid)
-enq_sp_page7 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page8.uuid)
-enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page7.uuid)
-enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
-enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
-enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
-enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
-enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
-enq_face_sp.first_page_id = enq_sp_page1.uuid
-enq_face_sp.save
-
-enq_pc_page10 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
-enq_pc_page9 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page10.uuid)
-enq_pc_page8 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page9.uuid)
-enq_pc_page7 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page8.uuid)
-enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page7.uuid)
-enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
-enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
-enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
-enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
-enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
-enq_face_pc.first_page_id = enq_pc_page1.uuid
-enq_face_pc.save
-
 enq_A_page10 = EnqPage.create(enq_face_id: enq_face_A.uuid)
 enq_A_page9 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page10.uuid)
 enq_A_page8 = EnqPage.create(enq_face_id: enq_face_A.uuid, next_page_id: enq_A_page9.uuid)
@@ -733,28 +597,6 @@ enq_B_page1 = EnqPage.create(enq_face_id: enq_face_B.uuid, next_page_id: enq_B_p
 enq_face_B.first_page_id = enq_B_page1.uuid
 enq_face_B.save
 
-enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-enq_sp_q7 = EnqQuestion.create(enq_page_id: enq_sp_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
-enq_sp_q8 = EnqQuestion.create(enq_page_id: enq_sp_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
-enq_sp_q9 = EnqQuestion.create(enq_page_id: enq_sp_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
-enq_sp_q10 = EnqQuestion.create(enq_page_id: enq_sp_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
-
-enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-enq_pc_q7 = EnqQuestion.create(enq_page_id: enq_pc_page7.uuid, num: 7, seq: 'Q7', question_id: q7.uuid)
-enq_pc_q8 = EnqQuestion.create(enq_page_id: enq_pc_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
-enq_pc_q9 = EnqQuestion.create(enq_page_id: enq_pc_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
-enq_pc_q10 = EnqQuestion.create(enq_page_id: enq_pc_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
-
 enq_A_q1 = EnqQuestion.create(enq_page_id: enq_A_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
 enq_A_q2 = EnqQuestion.create(enq_page_id: enq_A_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
 enq_A_q3 = EnqQuestion.create(enq_page_id: enq_A_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
@@ -776,89 +618,4 @@ enq_B_q7 = EnqQuestion.create(enq_page_id: enq_B_page7.uuid, num: 7, seq: 'Q7', 
 enq_B_q8 = EnqQuestion.create(enq_page_id: enq_B_page8.uuid, num: 8, seq: 'Q8', question_id: q8.uuid)
 enq_B_q9 = EnqQuestion.create(enq_page_id: enq_B_page9.uuid, num: 9, seq: 'Q9', question_id: q9.uuid)
 enq_B_q10 = EnqQuestion.create(enq_page_id: enq_B_page10.uuid, num: 10, seq: 'Q10', question_id: q10.uuid)
-
-
-# 永谷園
-enq = Enq.create()
-
-campaign = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', mcd: 'D75D30FA-0B6F-4800-A8BF-DFDCADD527AF', name: 'オルニチン', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/nagatanien/thumbnail.jpg', message: '',
-                           conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/nagatanien/2nd-banner.png', client_url: 'http://poncan.jp')
-
-campaign_face_sp = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/nagatanien/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
-campaign_face_pc = CampaignFace.create(campaign_id: campaign.mid, face: 'PC', css: '/css/pc/themes/nagatanien/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
-
-movie_m3u8   = Movie.create(campaign_id: campaign.mid, mime_type: 'application/x-mpegURL', src: 'http://moviereward.nadai.jp/video/nagatanien/nagatanien.m3u8', duration: 144)
-movie_flv    = Movie.create(campaign_id: campaign.mid, mime_type: 'video/x-flv', src: 'http://moviereward.nadai.jp/video/nagatanien/nagatanien.flv', duration: 144)
-movie_mp4    = Movie.create(campaign_id: campaign.mid, src: 'http://moviereward.nadai.jp/video/nagatanien/nagatanien.mp4', duration: 144)
-
-enq_face_sp = EnqFace.create(enq_id: enq.uuid, face: 'SP')
-enq_face_pc = EnqFace.create(enq_id: enq.uuid, face: 'PC')
-
-q1 = Question.create(kind: 'radio', title: '性別を教えてください。', required: true)
-q2 = Question.create(kind: 'radio', title: '年齢を教えてください。', required: true)
-q3 = Question.create(kind: 'radio', title: '朝、スッキリと起きられないことがありますか？', required: true)
-q4 = Question.create(kind: 'radio', title: 'しじみの中に含まれるオルニチンの健康パワーをご存じでしたか？', required: true)
-q5 = Question.create(kind: 'radio', title: '朝スッキリサプリ!!　オルニチンに興味がありますか？', required: true)
-q6 = Question.create(kind: 'radio', title: '朝スッキリサプリ！！オルニチン　半額キャンペーン ＋ mixiポイントプレゼントに申し込みたいですか？', required: true)
-
-q1_c1 = Choice.create(question_id: q1.uuid, order: 1, content: '男性')
-q1_c2 = Choice.create(question_id: q1.uuid, order: 2, content: '女性')
-
-q2_c1 = Choice.create(question_id: q2.uuid, order: 1, content: '19歳以下')
-q2_c2 = Choice.create(question_id: q2.uuid, order: 2, content: '20-29歳')
-q2_c3 = Choice.create(question_id: q2.uuid, order: 3, content: '30-39歳')
-q2_c4 = Choice.create(question_id: q2.uuid, order: 4, content: '40-49歳')
-q2_c5 = Choice.create(question_id: q2.uuid, order: 5, content: '50歳以上')
-
-q3_c1 = Choice.create(question_id: q3.uuid, order: 1, content: 'よくある')
-q3_c2 = Choice.create(question_id: q3.uuid, order: 2, content: 'たまにある')
-q3_c3 = Choice.create(question_id: q3.uuid, order: 3, content: 'どちらとも言えない')
-q3_c4 = Choice.create(question_id: q3.uuid, order: 4, content: 'あまりない')
-q3_c5 = Choice.create(question_id: q3.uuid, order: 5, content: '全くない')
-
-q4_c1 = Choice.create(question_id: q4.uuid, order: 1, content: 'よく知っていた')
-q4_c2 = Choice.create(question_id: q4.uuid, order: 2, content: 'まあ知っていた')
-q4_c2 = Choice.create(question_id: q4.uuid, order: 3, content: '知らなかった')
-
-q5_c1 = Choice.create(question_id: q5.uuid, order: 1, content: '非常に興味がある')
-q5_c2 = Choice.create(question_id: q5.uuid, order: 2, content: 'まあ興味がある')
-q5_c3 = Choice.create(question_id: q5.uuid, order: 3, content: 'どちらとも思わない')
-q5_c4 = Choice.create(question_id: q5.uuid, order: 4, content: 'あまり興味がない')
-q5_c5 = Choice.create(question_id: q5.uuid, order: 5, content: '全く興味がない')
-
-q6_c1 = Choice.create(question_id: q6.uuid, order: 1, content: '申し込みたい')
-q6_c2 = Choice.create(question_id: q6.uuid, order: 2, content: 'どちらともいえない')
-q6_c3 = Choice.create(question_id: q6.uuid, order: 3, content: '申込みたくない')
-
-enq_sp_page6 = EnqPage.create(enq_face_id: enq_face_sp.uuid)
-enq_sp_page5 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page6.uuid)
-enq_sp_page4 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page5.uuid)
-enq_sp_page3 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page4.uuid)
-enq_sp_page2 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page3.uuid)
-enq_sp_page1 = EnqPage.create(enq_face_id: enq_face_sp.uuid, next_page_id: enq_sp_page2.uuid)
-enq_face_sp.first_page_id = enq_sp_page1.uuid
-enq_face_sp.save
-
-enq_pc_page6 = EnqPage.create(enq_face_id: enq_face_pc.uuid)
-enq_pc_page5 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page6.uuid)
-enq_pc_page4 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page5.uuid)
-enq_pc_page3 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page4.uuid)
-enq_pc_page2 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page3.uuid)
-enq_pc_page1 = EnqPage.create(enq_face_id: enq_face_pc.uuid, next_page_id: enq_pc_page2.uuid)
-enq_face_pc.first_page_id = enq_pc_page1.uuid
-enq_face_pc.save
-
-enq_sp_q1 = EnqQuestion.create(enq_page_id: enq_sp_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_sp_q2 = EnqQuestion.create(enq_page_id: enq_sp_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_sp_q3 = EnqQuestion.create(enq_page_id: enq_sp_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_sp_q4 = EnqQuestion.create(enq_page_id: enq_sp_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_sp_q5 = EnqQuestion.create(enq_page_id: enq_sp_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_sp_q6 = EnqQuestion.create(enq_page_id: enq_sp_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
-
-enq_pc_q1 = EnqQuestion.create(enq_page_id: enq_pc_page1.uuid, num: 1, seq: 'Q1', question_id: q1.uuid)
-enq_pc_q2 = EnqQuestion.create(enq_page_id: enq_pc_page2.uuid, num: 2, seq: 'Q2', question_id: q2.uuid)
-enq_pc_q3 = EnqQuestion.create(enq_page_id: enq_pc_page3.uuid, num: 3, seq: 'Q3', question_id: q3.uuid)
-enq_pc_q4 = EnqQuestion.create(enq_page_id: enq_pc_page4.uuid, num: 4, seq: 'Q4', question_id: q4.uuid)
-enq_pc_q5 = EnqQuestion.create(enq_page_id: enq_pc_page5.uuid, num: 5, seq: 'Q5', question_id: q5.uuid)
-enq_pc_q6 = EnqQuestion.create(enq_page_id: enq_pc_page6.uuid, num: 6, seq: 'Q6', question_id: q6.uuid)
 
