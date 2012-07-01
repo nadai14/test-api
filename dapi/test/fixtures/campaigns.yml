@@ -147,17 +147,15 @@ legmagic_X:
   point: 10
   opening_at: 
   closing_at: 
-#  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
-  thumbnail: /css/sp/themes/lgmx/thumbnail.jpg
+  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
   thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
-#  second_picture: /css/sp/themes/legmagic/2nd_banne.png
-  second_picture: /css/sp/themes/lgmx/2nd_banne.png
+  second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
   second_point: 
-  client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
+  client_url: http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1
   already_button_text: 
   
 legmagic_A:
@@ -169,14 +167,12 @@ legmagic_A:
   point: 10
   opening_at: 
   closing_at: 
-#  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
-  thumbnail: /css/sp/themes/lgmx/thumbnail.jpg
+  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
   thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
-#  second_picture: /css/sp/themes/legmagic/2nd_banne.png
-  second_picture: /css/sp/themes/lgmx/2nd_banne.png
+  second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519
@@ -191,14 +187,12 @@ legmagic_B:
   point: 10
   opening_at: 
   closing_at: 
-#  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
-  thumbnail: /css/sp/themes/lgmx/thumbnail.jpg
+  thumbnail: /css/sp/themes/legmagic/thumbnail.jpg
   page_button_text: 
   message: ''
   thanks_button_text: 
   conversion_tag: "<img src='//ad.poncan.jp/complete/image/XXXXXXX'>"
-#  second_picture: /css/sp/themes/legmagic/2nd_banne.png
-  second_picture: /css/sp/themes/lgmx/2nd_banne.png
+  second_picture: /css/sp/themes/legmagic/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519
