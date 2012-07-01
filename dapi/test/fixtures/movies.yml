@@ -19,6 +19,7 @@ sc_flv:
 sc_mp4:
   uuid: SuccessConfirmMP4MovieID
   campaign_id: SuccessConfirmCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -38,6 +39,7 @@ nullable_flv:
 nullable_mp4:
   uuid: NullableMP4MovieID
   campaign_id: NullableCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -59,6 +61,7 @@ null_answer_flv:
 null_answer_mp4:
   uuid: NullAnswerMP4MovieID
   campaign_id: NullAnswerCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -81,6 +84,7 @@ first_page_null_flv:
 first_page_null_mp4:
   uuid: FirstPageNullMP4MovieID
   campaign_id: FirstPageNullCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -101,6 +105,7 @@ first_page_id_null_flv:
 first_page_id_null_mp4:
   uuid: FirstPageIDNullMP4MovieID
   campaign_id: FirstPageIDNullCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -123,6 +128,7 @@ camp_closed_flv:
 camp_closed_mp4:
   uuid: CampaignClosedMP4MovieID
   campaign_id: CampaignClosedCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -144,6 +150,7 @@ incons_question_flv:
 incons_question_mp4:
   uuid: InconsistencyQuestionMP4MovieID
   campaign_id: InconsistencyQuestionCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -166,6 +173,7 @@ legmagicX_flv:
 legmagicX_mp4:
   uuid: LegMagicXMP4MovieID
   campaign_id: LegMagicXCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/lgmx/lgmx.mp4
   duration: 150
 
@@ -186,6 +194,7 @@ legmagic_A_flv:
 legmagic_A_mp4:
   uuid: LegMagicAMP4MovieID
   campaign_id: LegMagicXCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/lgmx/lgmx.mp4
   duration: 150
 
@@ -206,6 +215,7 @@ legmagic_B_flv:
 legmagic_B_mp4:
   uuid: LegMagicBMP4MovieID
   campaign_id: LegMagicBCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/lgmx/lgmx.mp4
   duration: 150
 
@@ -229,6 +239,7 @@ power_planning_flv:
 power_planning_mp4:
   uuid: PowerPlanningMP4MovieID
   campaign_id: PowerPlanningCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
@@ -252,6 +263,7 @@ power_planning_A_flv:
 power_planning_A_mp4:
   uuid: PowerPlanningAMP4MovieID
   campaign_id: PowerPlanningACampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
@@ -275,6 +287,7 @@ power_planning_B_flv:
 power_planning_B_mp4:
   uuid: PowerPlanningBMP4MovieID
   campaign_id: PowerPlanningBCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 # src: http://moviereward.nadai.jp/video/powerplaning/movie.mp4
   duration: 0
@@ -299,6 +312,7 @@ ya_man_flv:
 ya_man_mp4:
   uuid: YaManFLVMP4MovieID
   campaign_id: YaManCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
@@ -322,6 +336,7 @@ ya_man_A_flv:
 ya_man_A_mp4:
   uuid: YaManFLVAMP4MovieID
   campaign_id: YaManACampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
@@ -345,6 +360,7 @@ ya_man_B_flv:
 ya_man_B_mp4:
   uuid: YaManBMP4MovieID
   campaign_id: YaManBCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/ya-man/movie.mp4
   duration: 0
@@ -369,6 +385,7 @@ yomei_shu_flv:
 yomei_shu_mp4:
   uuid: YomeiShuMP4MovieID
   campaign_id: YomeiShuCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/yomeishu/yomeishu.mp4
   duration: 0
@@ -392,6 +409,7 @@ yomei_shu_A_flv:
 yomei_shu_A_mp4:
   uuid: YomeiShuAMP4MovieID
   campaign_id: YomeiShuACampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
   duration: 0
@@ -415,6 +433,7 @@ yomei_shu_B_flv:
 yomei_shu_B_mp4:
   uuid: YomeiShuBMP4MovieID
   campaign_id: YomeiShuBCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/yomeishu/movie.mp4
   duration: 0
@@ -437,6 +456,7 @@ plus_one_flv:
 plus_one_mp4:
   uuid: PlusOneMP4MovieID
   campaign_id: PlusOneCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
   duration: 47
 
@@ -459,6 +479,7 @@ plus_one_A_flv:
 plus_one_A_mp4:
   uuid: PlusOneAMP4MovieID
   campaign_id: PlusOneACampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
   duration: 47
@@ -482,6 +503,7 @@ plus_one_B_flv:
 plus_one_B_mp4:
   uuid: PlusOneBMP4MovieID
   campaign_id: PlusOneBCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/plus1/plus1.mp4
 #  src: http://moviereward.nadai.jp/video/plus1/movie.mp4
   duration: 47
@@ -504,6 +526,7 @@ nagatanien_flv:
 nagatanien_mp4:
   uuid: NagatanienMP4MovieID
   campaign_id: NagatanienCampaignID
+  mime_type: video/mp4
   src: http://moviereward.nadai.jp/video/nagatanien/nagatanien.mp4
   duration: 144
 
