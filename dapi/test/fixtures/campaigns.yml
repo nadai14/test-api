@@ -26,7 +26,6 @@ success_confirm:
 nullable:
   mid: NullableCampaignID
   mcd: NullableCampaignID
-  name: 
   enq_id: NullableEnqID
   platform: gree
   point: 10 
