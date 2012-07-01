@@ -131,7 +131,7 @@ legmagicX_PC:
 
 legmagic_A:
   uuid: LegMagicAEnqFaceID
-  enq_id: LegMagiAcEnqID
+  enq_id: LegMagicAEnqID
   face: SP
   first_page_id: LegMagicAEnqPage1
   wait_until: 

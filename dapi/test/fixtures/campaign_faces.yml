@@ -133,7 +133,7 @@ legmagicX_SP:
   face: SP
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 legmagicX_PC:
@@ -142,7 +142,7 @@ legmagicX_PC:
   face: PC
 #  css: /css/pc/themes/legmagic/style.css
   css: /css/pc/themes/lgmx/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 legmagic_A:
@@ -151,7 +151,7 @@ legmagic_A:
   face: SP
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 legmagic_B:
@@ -160,7 +160,7 @@ legmagic_B:
   face: SP
 #  css: /css/sp/themes/legmagic/style.css
   css: /css/sp/themes/lgmx/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 # パワープランニング
@@ -169,7 +169,7 @@ power_planning:
   campaign_id: PowerPlanningCampaignID
   face: SP
   css: /css/sp/themes/powerplaning/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 power_planning_A:
@@ -177,7 +177,7 @@ power_planning_A:
   campaign_id: PowerPlanningACampaignID
   face: SP
   css: /css/sp/themes/powerplaning/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 power_planning_B:
@@ -185,7 +185,7 @@ power_planning_B:
   campaign_id: PowerPlanningBCampaignID
   face: SP
   css: /css/sp/themes/powerplaning/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 # ヤーマン
@@ -194,7 +194,7 @@ ya_man:
   campaign_id: YaManCampaignID
   face: SP
   css: /css/sp/themes/ya-man/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 ya_man_A:
@@ -202,7 +202,7 @@ ya_man_A:
   campaign_id: YaManACampaignID
   face: SP
   css: /css/sp/themes/ya-man/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
   
 ya_man_B:
@@ -210,7 +210,7 @@ ya_man_B:
   campaign_id: YaManBCampaignID
   face: SP
   css: /css/sp/themes/ya-man/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
   
 # 養命酒
@@ -219,7 +219,7 @@ yomei_shu_SP:
   campaign_id: YomeiShuCampaignID
   face: SP
   css: /css/sp/themes/yomeishu/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 yomei_shu_PC:
@@ -227,7 +227,7 @@ yomei_shu_PC:
   campaign_id: YomeiShuCampaignID
   face: PC
   css: /css/sp/themes/yomeishu/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 yomei_shu_A:
@@ -235,7 +235,7 @@ yomei_shu_A:
   campaign_id: YomeiShuACampaignID
   face: SP
   css: /css/sp/themes/yomeishu/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 yomei_shu_B:
@@ -243,7 +243,7 @@ yomei_shu_B:
   campaign_id: YomeiShuCampaignID
   face: SP
   css: /css/sp/themes/yomeishu/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 # プラスワン
@@ -252,7 +252,7 @@ plus_one_SP:
   campaign_id: PlusOneCampaignID
   face: SP
   css: /css/sp/themes/plus1/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 plus_one_PC:
@@ -260,7 +260,7 @@ plus_one_PC:
   campaign_id: PlusOneCampaignID
   face: PC
   css: /css/pc/themes/plus1/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 plus_one_A:
@@ -268,7 +268,7 @@ plus_one_A:
   campaign_id: PlusOneCampaignID
   face: SP
   css: /css/sp/themes/plus1/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 plus_one_B:
@@ -276,7 +276,7 @@ plus_one_B:
   campaign_id: PlusOneCampaignID
   face: PC
   css: /css/pc/themes/plus1/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 # 永谷園
@@ -285,7 +285,7 @@ nagatanien_SP:
   campaign_id: NagatanienCampaignID
   face: SP
   css: /css/sp/themes/nagatanien/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 
 
 nagatanien_PC:
@@ -293,5 +293,5 @@ nagatanien_PC:
   campaign_id: NagatanienCampaignID
   face: PC
   css: /css/pc/themes/nagatanien/style.css
-  title: 
+  title: CMを見てアンケートに答えてポイントをGET!
   description: 

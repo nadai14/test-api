@@ -489,7 +489,7 @@ power_planning_A_page5:
 
 power_planning_A_page6:
   uuid: PowerPlanningAEnqPage6
-  enq_face_id: PowerPlanningEnqFaceID
+  enq_face_id: PowerPlanningAEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
@@ -531,7 +531,7 @@ power_planning_B_page5:
 
 power_planning_B_page6:
   uuid: PowerPlanningBEnqPage6
-  enq_face_id: PowerPlanningEnqFaceID
+  enq_face_id: PowerPlanningBEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
@@ -616,7 +616,7 @@ ya_man_A_page5:
 
 ya_man_A_page6:
   uuid: YaManAEnqPage6
-  enq_face_id: YaManEnqFaceID
+  enq_face_id: YaManAEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
@@ -658,7 +658,7 @@ ya_man_B_page5:
 
 ya_man_B_page6:
   uuid: YaManBEnqPage6
-  enq_face_id: YaManEnqFaceID
+  enq_face_id: YaManBEnqFaceID
   description: 
   next_page_id: 
   wait_until: 
