@@ -408,7 +408,7 @@ enq_A = Enq.create()
 enq_B = Enq.create()
 
 campaign   = Campaign.create(mid: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', mcd: '2CA81036-BC7A-46FE-8D15-ED670C1B00E7', name: '養命酒', enq_id: enq.uuid, platform: 'mixi', point: 1000, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.yomeishu.co.jp/megumi/kaorisu ')
 campaign_A = Campaign.create(mid: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', name: '養命酒A', enq_id: enq_A.uuid, platform: 'gree', point: 1000, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 campaign_B = Campaign.create(mid: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', name: '養命酒B', enq_id: enq_B.uuid, platform: 'gree', point: 1000, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
@@ -593,7 +593,7 @@ enq_A = Enq.create()
 enq_B = Enq.create()
 
 campaign   = Campaign.create(mid: '28080715-38D2-432A-8B7A-C08454E4BE0B', mcd: '28080715-38D2-432A-8B7A-C08454E4BE0B', name: 'プラスワン', enq_id: enq.uuid, platform: 'mixi', point: 1000, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.exabody.jp/smp-lp/lgmx/?af_id=262&s_ma=90WDRM01_md15_m1')
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://www.p1-intl.com/')
 campaign_A = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEA', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEA', name: 'プラスワンA', enq_id: enq_A.uuid, platform: 'gree', point: 1000, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
                              conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519')
 campaign_B = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEB', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEB', name: 'プラスワンB', enq_id: enq_B.uuid, platform: 'gree', point: 1000, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
