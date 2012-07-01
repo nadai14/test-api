@@ -4,44 +4,44 @@
 # 動作確認用データ
 success_confirm:
   uuid: SuccessConfirmEnqID
-  message: SCメッセージ
-  complete_button_text: SCボタン
+  message: SCCompleteメッセージ
+  complete_button_text: SCCompleteボタン
 
 # nil動作確認用
 nullable:
   uuid: NullableEnqID
-  message: Nullableメッセージ
-  complete_button_text: Nullableボタン
+  message: NullableCompleteメッセージ
+  complete_button_text: NullableCompleteボタン
 
 # 空回答確認用
 null_answer:
   uuid: NullAnswerEnqID
-  message: NAメッセージ
-  complete_button_text: NAボタン
+  message: NACompleteメッセージ
+  complete_button_text: NACompleteボタン
   
 # 異常系の確認用データ
 # アンケートの最初のページがNull
 first_page_null:
   uuid: FirstPageNullEnqID
-  message: FPNメッセージ
-  complete_button_text: FPNボタン
+  message: FPNCompleteメッセージ
+  complete_button_text: FPNCompleteボタン
 
 first_page_id_null:
   uuid: FirstPageIDNullEnqID
-  message: FPIDNメッセージ
-  complete_button_text: FPIDNボタン
+  message: FPIDNCompleteメッセージ
+  complete_button_text: FPIDNCompleteボタン
 
 # キャンペーンの状態が終了
 camp_closed:
   uuid: CampaignClosedEnqID
-  message: CCメッセージ
-  complete_button_text: CCボタン
+  message: CCCompleteメッセージ
+  complete_button_text: CCCompleteボタン
 
 # 設問と選択肢が矛盾している
 incons_question:
   uuid: InconsistencyQuestionEnqID
   message: IQメッセージ
-  complete_button_text: IQボタン
+  complete_button_text: IQCompleteボタン
 
 
 # 案件テスト用データ
