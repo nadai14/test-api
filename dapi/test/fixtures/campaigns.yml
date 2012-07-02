@@ -391,7 +391,7 @@ plus_one:
   point: 10
   opening_at: 
   closing_at: 
-  thumbnail: /images/plus1/thumbnail.jpg
+  thumbnail: /css/sp/themes/plus1/thumbnail.jpg
   page_button_text: 
   message: ''
   thanks_button_text: 
@@ -452,7 +452,7 @@ nagatanien:
   point: 10
   opening_at: 
   closing_at: 
-  thumbnail: /images/nagatanien/thumbnail.jpg
+  thumbnail: /css/sp/themes/nagatanien/thumbnail.jpg
   page_button_text: 
   message: ''
   thanks_button_text:
