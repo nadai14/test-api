@@ -8,7 +8,7 @@ json.already_button_text (@campaign.already_button_text.nil? ? default_already_b
 
 json.movies do |json|
   json.array!(@campaign.movies) do |json, movie|
-    json.(movie, :mime_type, :src)
+    json.(movie, :mime_type, :src, :duration)
   end
 end
 
