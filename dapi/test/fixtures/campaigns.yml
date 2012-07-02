@@ -396,7 +396,7 @@ plus_one:
   message: ''
   thanks_button_text: 
   conversion_tag: "<img src='//moviereward.nadai.jp/images/plus1/conversion-sp.jpg?t=#{time}' />"
-  second_picture: /images/plus1/2nd_banne.png
+  second_picture: /css/sp/themes/plus1/2nd_banne.png
   banner_title: 
   second_point: 
   client_url: http://www.p1-intl.com/
