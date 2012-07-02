@@ -7,9 +7,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: PlayerME.js 379 2012-06-29 08:36:16Z liminghua772 $
+ * @version      $Id: PlayerME.js 387 2012-07-02 01:40:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 17:36:16 +0900 (金, 29 6 2012) $ by $Author: liminghua772 $
+ * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $, ua){
@@ -37,9 +37,9 @@
 			this.controller = options.controller;
 					
 			// set event handler if model exists
-			if(this.model) {
-				this.model.on('change', this.render, this);
-			}
+			// if(this.model) {
+			// 	this.model.on('change', this.render, this);
+		// 	}
 		},
 		/**
 		 * render

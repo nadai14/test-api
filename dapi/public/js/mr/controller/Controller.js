@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 385 2012-06-29 14:28:31Z tsuru $
+ * @version			$Id: Controller.js 387 2012-07-02 01:40:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 23:28:31 +0900 (金, 29 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -17,7 +17,7 @@
 	 * timeout defualt value in mili sec
 	 * @see http://redmine.sunbi.co.jp/issues/2025
 	 */
-	var _TIMEOUT_DEFUALT = 1000 * 10;
+	var _TIMEOUT_DEFUALT = 1000 * 20;
 	/**
 	 * 
 	 */
@@ -64,7 +64,9 @@
 				"getAdDuration", 
 				"setAdDuration", 
 				"onAdDurationChanged",
+				"getDefaultWatchTimeout",
 				"startWatchTimeout",
+				"updateWatchTimeout",
 				"onTimeout",
 				"getTimeoutTimerId", 
 				"setTimeoutTimerId", 
@@ -304,12 +306,18 @@
 			// update nav
 			_self.models.nav.set({
 				// html:          'タイムアウト', 
-				html:          'もう一度CMをみて下さい' // http://redmine.sunbi.co.jp/issues/2043
+				"html":        'もう一度CMをみて下さい' // http://redmine.sunbi.co.jp/issues/2043
+			});
+			// update ad
+			_self.models.ad.set({
+				"timeout":     true
 			});
 			// content
 			_self.models.content.set({ 
 				"view":        ns.root.ui.Timeout,
-				"model":       new ns.root.ui.model.Timeout(),
+				"model":       new ns.root.ui.model.Timeout({
+					             	"description": 'もう一度CMをみて' + Math.floor(_self.getDefaultWatchTimeout() / 1000) + '秒以内にアンケートをスタートして下さい。' 
+				               }),
 				"selector":    ns.root.ui.slctr('timeout')
 			});
 			// return
@@ -506,7 +514,7 @@
 						"enabled": true
 					});
 					if(_self._page) {
-						_self.models.nav.set('html',  _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目');
+						_self.models.nav.set('html',  _self._campaign.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目');
 					}
 					_isTimePassed = true;
 				}
@@ -567,7 +575,7 @@
 							_self._page   = page;
 							/// navi
 							_self.models.nav.set({
-		    				"html": _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目'
+		    				"html": _self._campaign.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目'
 		    			});
 							// content
 							_self.models.content.set({ 
@@ -810,21 +818,49 @@
     /**
      * onIsAdEndedChanged() 
      */
-    onAdDurationChanged: function() {
+    onAdDurationChanged:    function() {
     	ns.trace(this.typeName + '#onAdDurationChanged()');
     	// nothing to do
     },
     /**
-     * 
+     * getDefaultWatchTimeout
      */
-    startWatchTimeout:   function(){
+    getDefaultWatchTimeout: function() {
+    	ns.trace(this.typeName + '#getDefaultWatchTimeout()');
+    	return _TIMEOUT_DEFUALT;
+    },
+    /**
+     * startWatchTimeout
+     */
+    startWatchTimeout:      function(){
     	ns.trace(this.typeName + '#startWatchTimeout()');
     	// keep the reference
     	var _self = this;
+    	// update
+    	_self.updateWatchTimeout(_self.getDefaultWatchTimeout());
+    	// return
+    	return this;
+    },
+    /**
+     * 
+     */
+    updateWatchTimeout:  function(timeout){
+    	ns.trace(this.typeName + '#updateWatchTimeout(' + timeout + ')');
+    	// keep the reference
+    	var _self = this;
+    	// update nav
+			_self.models.nav.set({
+				"html": Math.floor(timeout / 1000)  + ' 秒以内にスタートしてください。'
+			});
     	// set timeout
     	var timeoutTimerId = setTimeout(function(){
-    		_self.onTimeout();
-    	}, _TIMEOUT_DEFUALT);
+    		var _left = timeout - 1000; 
+    		if(_left < 1) {
+    			_self.onTimeout();	
+    		}else{
+    			_self.updateWatchTimeout(_left);
+    		}
+    	}, 1000);
     	// update id
     	this.setTimeoutTimerId(timeoutTimerId);
     	// return

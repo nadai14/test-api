@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 377 2012-06-29 03:25:02Z tsuru $
+ * @version      $Id: Ad.js 387 2012-07-02 01:40:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -42,20 +42,23 @@
 			ns.trace(this.typeName + '#render()');
 			// 
 			var _self = this;
+			
 			// show
 			if($(this.el).hasClass(ns.cls('template'))) {
 				$(this.el).removeClass(ns.cls('template'));
 			}
 			
-			// render
-			if(this.model.has('creative')) {
+			// time out
+			if((this.model.has('timeout') ? this.model.get('timeout') : false)) {
+				$(this.el).addClass(ns.cls('template'));
+			}	else if(this.model.has('creative')) {
 				$(this.el).html(
-				new ns.Creative({ 
-					controller: this.controller,
-					model:      this.model,
-					el:         $(ns.slctr('creative'), this.el)
-				}).render().el);
-			}else if(this.model.has('movie')) {
+					new ns.Creative({ 
+						controller: this.controller,
+						model:      this.model,
+						el:         $(ns.slctr('creative'), this.el)
+					}).render().el);
+			} else if(this.model.has('movie')) {
 				if((ua.OS === "iPhone/iPod") || (ua.OS === "Android" || ('PC' !== ns.terminal))) {
 					new ns.PlayerME({ 
 						controller: this.controller,

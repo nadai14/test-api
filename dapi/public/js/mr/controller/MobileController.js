@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: MobileController.js 381 2012-06-29 10:39:16Z tsuru $
+ * @version      $Id: MobileController.js 387 2012-07-02 01:40:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -78,7 +78,7 @@
 					// update nav
 					_self.models.nav.set({
 						// "html": _self._page.get('question_cnt') + ' 問中  ' + _self._page.get('questions').at(0).get('num') + ' 問目'
-						"html": '10 秒以内にスタートしてください。'
+						"html": Math.floor(_self.getDefaultWatchTimeout() / 1000)  + ' 秒以内にスタートしてください。'
 					});
 					// scrollto
 					$('html, body').animate({

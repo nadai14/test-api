@@ -5,9 +5,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Ad.js 377 2012-06-29 03:25:02Z tsuru $
+ * @version      $Id: Ad.js 387 2012-07-02 01:40:49Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $
+ * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $
  *
  */
 (function(ns){
@@ -25,6 +25,7 @@
 			"movie":      null,
 			"movies":     null,
 			"creative":   null,
+			"timeout":    null
 		},
 		/**
 		 * constructor
