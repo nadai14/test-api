@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 387 2012-07-02 01:40:49Z tsuru $
+ * @version			$Id: Controller.js 390 2012-07-02 05:19:44Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-07-02 10:40:49 +0900 (月, 02 7 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 14:19:44 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -233,6 +233,10 @@
 					// → CMのサイトから購入でさらにmixiポイントをプレゼント
 					// <プラスワン>
 					// → CMのサイトから見積依頼でさらにmixiポイントをプレゼント
+					/**
+					 * @SEE http://redmine.sunbi.co.jp/issues/2038
+					 */
+					/*
 					switch(_self.models.parameter.get('mid').toLowerCase()){
 						case 'legmagicxcampaignid':
 						case 'lgmx':
@@ -245,6 +249,7 @@
 							_model.set('title', 'CMのサイトから見積依頼でさらにmixiポイントをプレゼント。');
 							break;
 					}
+					*/
 					// content
 					_self.models.content.set({ 
 						"view":        ns.root.ui.Already,

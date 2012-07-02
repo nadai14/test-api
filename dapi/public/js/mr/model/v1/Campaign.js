@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Campaign.js 381 2012-06-29 10:39:16Z tsuru $
+ * @version      $Id: Campaign.js 390 2012-07-02 05:19:44Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 19:39:16 +0900 (金, 29 6 2012) $
+ * Last changed: $LastChangedDate: 2012-07-02 14:19:44 +0900 (月, 02 7 2012) $
  *
  */
 (function(ns, $, ua){
@@ -147,6 +147,19 @@
 							}
 						}
 					}
+					/**
+					 * @see http://redmine.sunbi.co.jp/issues/2060 
+					 */
+					if(!model.has('duration')) {
+						var _movies = model.get('movies');
+						for(var m = 0; m < _movies.length; ++m) {
+							var _movie = _movies[m];
+							if(-1 < _movie.duration) {
+								model.set('duration', _movie.duration);
+								break;	
+							}
+						}
+					}	
 					/**
 					 * @see http://redmine.sunbi.co.jp/issues/1991 
 					 */
