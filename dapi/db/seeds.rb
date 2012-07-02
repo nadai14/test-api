@@ -8,13 +8,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # レッグマジック
-enq_A = Enq.create()
-enq_B = Enq.create()
+enq_A = Enq.create(message: NULL, complete_button_text: NULL)
+enq_B = Enq.create(message: NULL, complete_button_text: NULL)
 
-campaign_A = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', name: 'レッグマジックA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519')
-campaign_B = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', name: 'レッグマジックB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519')
+campaign_A = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEAA', name: 'レッグマジックA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
+campaign_B = Campaign.create(mid: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', mcd: '2F8E144A-7AB8-49D9-A49A-LEGMAGGREEBB', name: 'レッグマジックB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/legmagic/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/legmagic/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/185c18e8b58353c4b2c6ab22dda51ed0e4e5830d/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
 
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/legmagic/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
@@ -97,16 +97,16 @@ enq_B_q6 = EnqQuestion.create(enq_page_id: enq_B_page6.uuid, num: 6, seq: 'Q6', 
 
 
 # パワープランニング
-enq   = Enq.create()
-enq_A = Enq.create()
-enq_B = Enq.create()
+enq   = Enq.create(message: NULL, complete_button_text: NULL)
+enq_A = Enq.create(message: NULL, complete_button_text: NULL)
+enq_B = Enq.create(message: NULL, complete_button_text: NULL)
 
-campaign   = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADVMIXI', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADVMIXI', name: 'パワープランニング', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/cbf2d8169ffbb345565e1bfe4c3beddcad472f15/324a0bb5d1f22337abb7dc891ce22283fc6708ac')
-campaign_A = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEA', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEA', name: 'パワープランニングA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519')
-campaign_B = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEB', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEB', name: 'パワープランニングB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519')
+campaign   = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADVMIXI', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADVMIXI', name: 'パワープランニング', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/cbf2d8169ffbb345565e1bfe4c3beddcad472f15/324a0bb5d1f22337abb7dc891ce22283fc6708ac', already_button_text: NULL)
+campaign_A = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEA', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEA', name: 'パワープランニングA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
+campaign_B = Campaign.create(mid: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEB', mcd: 'D75D30FA-0B6F-4800-A8BF-HOKENADGREEB', name: 'パワープランニングB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/powerplaning/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/powerplaning/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/259ca10d2f47626b8d0e01f69c086242342b7696/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
 
 campaign_face   = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/powerplaning/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_A = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/powerplaning/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
@@ -246,16 +246,16 @@ enq_B_q6 = EnqQuestion.create(enq_page_id: enq_B_page6.uuid, num: 6, seq: 'Q6', 
 
 
 # ヤーマン
-enq   = Enq.create()
-enq_A = Enq.create()
-enq_B = Enq.create()
+enq   = Enq.create(message: NULL, complete_button_text: NULL)
+enq_A = Enq.create(message: NULL, complete_button_text: NULL)
+enq_B = Enq.create(message: NULL, complete_button_text: NULL)
 
-campaign   = Campaign.create(mid: 'YAMANXXX-MIXI-MIXI-XXXX-YAMANMIXIXXX', mcd: 'YAMANXXX-MIXI-MIXI-XXXX-YAMANMIXIXXX', name: 'ヤーマン', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/3649e845023252fee8d58c18f82c6c9494de180f/324a0bb5d1f22337abb7dc891ce22283fc6708ac')
-campaign_A = Campaign.create(mid: 'YAMANAAA-GREE-GREE-AAAA-YAMANGREEAAA', mcd: 'YAMANAAA-GREE-GREE-AAAA-YAMANGREEAAA', name: 'ヤーマンA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
-campaign_B = Campaign.create(mid: 'YAMANBBB-GREE-GREE-BBBB-YAMANGREEBBB', mcd: 'YAMANBBB-GREE-GREE-BBBB-YAMANGREEBBB', name: 'ヤーマンB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
+campaign   = Campaign.create(mid: 'YAMANXXX-MIXI-MIXI-XXXX-YAMANMIXIXXX', mcd: 'YAMANXXX-MIXI-MIXI-XXXX-YAMANMIXIXXX', name: 'ヤーマン', enq_id: enq.uuid, platform: 'mixi', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/3649e845023252fee8d58c18f82c6c9494de180f/324a0bb5d1f22337abb7dc891ce22283fc6708ac', already_button_text: NULL)
+campaign_A = Campaign.create(mid: 'YAMANAAA-GREE-GREE-AAAA-YAMANGREEAAA', mcd: 'YAMANAAA-GREE-GREE-AAAA-YAMANGREEAAA', name: 'ヤーマンA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
+campaign_B = Campaign.create(mid: 'YAMANBBB-GREE-GREE-BBBB-YAMANGREEBBB', mcd: 'YAMANBBB-GREE-GREE-BBBB-YAMANGREEBBB', name: 'ヤーマンB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/ya-man/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/ya-man/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
 
 campaign_face   = CampaignFace.create(campaign_id: campaign.mid, face: 'SP', css: '/css/sp/themes/ya-man/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_A = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/ya-man/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
@@ -361,13 +361,13 @@ enq_B_q6 = EnqQuestion.create(enq_page_id: enq_B_page6.uuid, num: 6, seq: 'Q6', 
 
 
 # 養命酒
-enq_A = Enq.create()
-enq_B = Enq.create()
+enq_A = Enq.create(message: NULL, complete_button_text: NULL)
+enq_B = Enq.create(message: NULL, complete_button_text: NULL)
 
-campaign_A = Campaign.create(mid: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', name: '養命酒A', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
-campaign_B = Campaign.create(mid: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', name: '養命酒B', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519')
+campaign_A = Campaign.create(mid: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-AAAA-YOMEISHUGREE', name: '養命酒A', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
+campaign_B = Campaign.create(mid: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', mcd: 'YOMEISHU-GREE-GREE-BBBB-YOMEISHUGREE', name: '養命酒B', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/yomeishu/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/yomeishu/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/a5a8c77c8e0ee606960a7bb9ded88a30bb2f485f/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
 
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/yomeishu/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
@@ -488,13 +488,13 @@ enq_B_q10 = EnqQuestion.create(enq_page_id: enq_B_page10.uuid, num: 10, seq: 'Q1
 
 
 # プラスワン
-enq_A = Enq.create()
-enq_B = Enq.create()
+enq_A = Enq.create(message: NULL, complete_button_text: NULL)
+enq_B = Enq.create(message: NULL, complete_button_text: NULL)
 
-campaign_A = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEA', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEA', name: 'プラスワンA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519')
-campaign_B = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEB', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEB', name: 'プラスワンB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', message: '',
-                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519')
+campaign_A = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEA', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEA', name: 'プラスワンA', enq_id: enq_A.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
+campaign_B = Campaign.create(mid: '28080715-38D2-432A-8B7A-PLUSONEGREEB', mcd: '28080715-38D2-432A-8B7A-PLUSONEGREEB', name: 'プラスワンB', enq_id: enq_B.uuid, platform: 'gree', point: 10, thumbnail: '/css/sp/themes/plus1g/thumbnail.jpg', page_button_text: NULL, message: '', thanks_button_text: NULL,
+                             conversion_tag: '<img src=\'//ad.poncan.jp/complete/image/XXXXXXX\'>', second_picture: '/css/sp/themes/plus1g/2nd_banne.png', client_url: 'http://ad.poncan.jp/click/campaign/6a433eb5d3c0045398aaefb094d20f31641189bb/c2a4e3d058790b2d4bf321a612ae360b076a6519', already_button_text: NULL)
 
 campaign_face_A  = CampaignFace.create(campaign_id: campaign_A.mid, face: 'SP', css: '/css/sp/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
 campaign_face_B  = CampaignFace.create(campaign_id: campaign_B.mid, face: 'SP', css: '/css/sp/themes/plus1g/style.css', title: 'CMを見てアンケートに答えてポイントをGET!', description: '')
