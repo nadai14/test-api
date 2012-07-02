@@ -5,9 +5,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Landing.js 377 2012-06-29 03:25:02Z tsuru $
+ * @version      $Id: Landing.js 392 2012-07-02 07:04:48Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-29 12:25:02 +0900 (金, 29 6 2012) $
+ * Last changed: $LastChangedDate: 2012-07-02 16:04:48 +0900 (月, 02 7 2012) $
  *
  */
 (function(ns){
@@ -23,6 +23,7 @@
 		defaults: {
 			"title":       'タイトル',
 			"description": 'ディスクリプション',
+			"remarks":     '動画視聴完了後、20 秒以内にアンケート回答をスタートしないとポイントをもらえません。'
 		},
 		/**
 		 * constructor

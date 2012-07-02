@@ -7,9 +7,9 @@
  * @author			 Li Minghua
  * @author			 George Lu
  * @author			 Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version			$Id: Controller.js 390 2012-07-02 05:19:44Z tsuru $
+ * @version			$Id: Controller.js 392 2012-07-02 07:04:48Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-07-02 14:19:44 +0900 (月, 02 7 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 16:04:48 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns){
@@ -203,7 +203,8 @@
 					// landing
 					_self.models.landing.set({ 
 						"title":       campaign.get('title'),
-						"description": campaign.has('description') ? campaign.get('description') : ''
+						"description": campaign.has('description') ? campaign.get('description') : '',
+						"remarks":     '動画視聴完了後、' + Math.floor(_self.getDefaultWatchTimeout() / 1000) + ' 秒以内にアンケート回答をスタートしないとポイントをもらえません。'
 					});
 					// content
 					_self.models.content.set({ 

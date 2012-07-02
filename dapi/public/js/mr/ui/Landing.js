@@ -6,9 +6,9 @@
  * @author       Li Minghua
  * @author       George Lu
  * @author       Toshiya TSURU <t_tsuru@sunbi.co.jp>
- * @version      $Id: Landing.js 252 2012-06-20 01:33:15Z tsuru $
+ * @version      $Id: Landing.js 392 2012-07-02 07:04:48Z tsuru $
  *
- * Last changed: $LastChangedDate: 2012-06-20 10:33:15 +0900 (水, 20 6 2012) $ by $Author: tsuru $
+ * Last changed: $LastChangedDate: 2012-07-02 16:04:48 +0900 (月, 02 7 2012) $ by $Author: tsuru $
  *
  */
 (function(ns, $){
@@ -54,7 +54,8 @@
 			// render
 			$(this.el).html(this.template({
 				"title":       this.model.get('title'),
-				"description": this.model.get('description')
+				"description": this.model.get('description'),
+				"remarks":     this.model.get('remarks')
 			}));
 			// return this
 			return this;
